@@ -111,32 +111,122 @@ const testimonialCards = [
 const initialMachineCategories = ["Processing", "API", "Food", "Pharmaceutical", "Spice Processing"];
 const initialSpareCategories = ["Bottle", "Pouch", "Tube", "Wax", "End Drop"];
 
+const processingCategories = ["API", "Food", "Pharmaceutical", "Spice Processing"];
+const packagingCategories = ["Bottle", "Pouch", "Tube", "Wax", "End Drop"];
+
 const initialMachines = [
   {
     machine_id: 1,
     machine_name: "Automatic Liquid Filling Machine",
     category_id: "Processing",
+    subcategory: "Pharmaceutical",
     image_url: machineCardsImage,
-    description: "High-accuracy liquid filling system for pharmaceuticals, food and beverages.",
+    description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+    tags: ["PROCESSING / LIQUID FILLING", "PHARMACEUTICAL"],
     specifications: {
-      output: "80-120 BPM",
-      power: "440V / 3 phase",
-      capacity: "100-1000 ml"
+      heads: "4-head SS 316 Construction",
+      volumeRange: "15ml – 1000ml",
+      controlSystem: "Siemens / Delta PLC",
+      productionSpeed: "40-60 Containers/min"
     },
+    priceRange: "1.90 CRORE",
+    speed: "120 RPM",
+    capacity: "33.99L",
     status: "active"
   },
   {
     machine_id: 2,
-    machine_name: "Single-Head ROPP Capping Machine",
-    category_id: "Pharmaceutical",
-    image_url: machineCardRefImage,
-    description: "Specialized roll-on pilfer-proof capping solution for consistent sealing integrity.",
+    machine_name: "Spice Grinding Machine",
+    category_id: "Processing",
+    subcategory: "Spice Processing",
+    image_url: machineCardsImage,
+    description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+    tags: ["PROCESSING / GRINDING", "FOOD & SPICES"],
     specifications: {
-      operation: "Semi-automatic / Linear",
-      sealingHeads: "Interchangeable Torque Heads",
-      capSize: "22mm - 38mm Standard",
-      powerSupply: "440V / 3 Phase / 50Hz"
+      heads: "2-head SS 304 Construction",
+      volumeRange: "50g – 5000g",
+      controlSystem: "Delta PLC",
+      productionSpeed: "80-120 Kg/hr"
     },
+    priceRange: "1.90 CRORE",
+    speed: "120 RPM",
+    capacity: "30.5KG",
+    status: "active"
+  },
+  {
+    machine_id: 3,
+    machine_name: "Tablet Coating Machine",
+    category_id: "Processing",
+    subcategory: "Pharmaceutical",
+    image_url: machineCardsImage,
+    description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+    tags: ["PROCESSING / COATING", "PHARMACEUTICAL"],
+    specifications: {
+      heads: "Auto-spray SS 316 System",
+      volumeRange: "5mm – 25mm tablet",
+      controlSystem: "Siemens PLC",
+      productionSpeed: "60-80 tablets/min"
+    },
+    priceRange: "1.90 CRORE",
+    speed: "160 RPM",
+    capacity: "33.99L",
+    status: "active"
+  },
+  {
+    machine_id: 4,
+    machine_name: "Bottle Filling Machine",
+    category_id: "Packaging",
+    subcategory: "Bottle",
+    image_url: machineCardRefImage,
+    description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+    tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
+    specifications: {
+      heads: "6-head SS 316 Construction",
+      volumeRange: "30ml – 1000ml",
+      controlSystem: "Siemens / Delta PLC",
+      productionSpeed: "60-80 Bottles/min"
+    },
+    priceRange: "1.56 CRORE",
+    speed: "120 RPM",
+    capacity: "33.99L",
+    status: "active"
+  },
+  {
+    machine_id: 5,
+    machine_name: "Bottle Filling Machine",
+    category_id: "Packaging",
+    subcategory: "Bottle",
+    image_url: machineCardRefImage,
+    description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+    tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
+    specifications: {
+      heads: "8-head SS 316 Construction",
+      volumeRange: "15ml – 500ml",
+      controlSystem: "Delta PLC",
+      productionSpeed: "80-100 Bottles/min"
+    },
+    priceRange: "1.56 CRORE",
+    speed: "120 RPM",
+    capacity: "33.99L",
+    status: "active"
+  },
+  {
+    machine_id: 6,
+    machine_name: "Bottle Filling Machine",
+    category_id: "Packaging",
+    subcategory: "Bottle",
+    image_url: machineCardRefImage,
+    description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+    tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
+    specifications: {
+      heads: "4-head SS 304 Construction",
+      volumeRange: "50ml – 2000ml",
+      controlSystem: "Siemens PLC",
+      productionSpeed: "30-50 Bottles/min"
+    },
+    priceRange: "1.56 CRORE",
+    speed: "120 RPM",
+    capacity: "33.99L",
     status: "active"
   }
 ];
@@ -342,91 +432,252 @@ function Footer() {
   );
 }
 
-function MachineriesPage({ machines, machineCategories }) {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  const filteredMachines = useMemo(() => {
-    if (selectedCategory === "All") return machines;
-    return machines.filter((machine) => machine.category_id === selectedCategory);
-  }, [machines, selectedCategory]);
-
+function MachineDetailModal({ machine, onClose }) {
+  if (!machine) return null;
   return (
-    <section className="machineries-page">
-      <div
-        className="machinery-hero"
-        style={{ backgroundImage: `linear-gradient(rgba(9, 25, 56, 0.78), rgba(9, 25, 56, 0.78)), url(${blueMachinesImage})` }}
-      >
-        <h1>Advanced Machinery Solutions</h1>
-        <p>
-          High-performance automation and heavy-duty manufacturing systems built
-          with reliability and technical expertise.
-        </p>
-      </div>
-
-      <div className="machinery-content">
-        <aside className="filter-sidebar">
-          <h3>Categories</h3>
-          <button
-            className={selectedCategory === "All" ? "active-filter" : ""}
-            onClick={() => setSelectedCategory("All")}
-          >
-            All
-          </button>
-          {machineCategories.map((category) => (
-            <button
-              key={category}
-              className={selectedCategory === category ? "active-filter" : ""}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category}
-            </button>
-          ))}
-        </aside>
-
-        <div className="machinery-scroll-area">
-          <div className="machinery-grid">
-          {filteredMachines.map((machine) => (
-            <article key={machine.machine_id} className="machinery-card">
-              <div className="machinery-image-wrap">
-                <img src={machine.image_url || machineryLayoutImage} alt={machine.machine_name} />
-              </div>
-              <div className="machinery-card-body">
-                <div className="machine-card-tags">
-                  <span className="machine-tag">SERIES-{machine.machine_id}</span>
-                  <span className="machine-tag alt">ISO 9001 CERTIFIED</span>
-                </div>
-                <h3>{machine.machine_name}</h3>
-                <p>{machine.description}</p>
-                <h4>Technical Specifications</h4>
-                <div className="spec-row">
-                  <span>Operation</span>
-                  <strong>{machine.specifications?.operation || machine.specifications?.output || "-"}</strong>
-                </div>
-                <div className="spec-row">
-                  <span>Sealing Heads</span>
-                  <strong>{machine.specifications?.sealingHeads || "-"}</strong>
-                </div>
-                <div className="spec-row">
-                  <span>Cap Size</span>
-                  <strong>{machine.specifications?.capSize || machine.specifications?.capacity || "-"}</strong>
-                </div>
-                <div className="spec-row">
-                  <span>Power Supply</span>
-                  <strong>{machine.specifications?.powerSupply || machine.specifications?.power || "-"}</strong>
-                </div>
-                <button className="card-btn full-width">Configure This Model</button>
-              </div>
-            </article>
-          ))}
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close-btn" onClick={onClose} aria-label="Close">✕</button>
+        <div className="modal-body">
+          <div className="modal-image-wrap">
+            <img src={machine.image_url || machineryLayoutImage} alt={machine.machine_name} />
+          </div>
+          <div className="modal-info">
+            <div className="modal-tags">
+              <span className="modal-tag outline">SERIES-{machine.machine_id}</span>
+              <span className="modal-tag filled">PLC CONTROLLED</span>
+            </div>
+            <h2 className="modal-title">{machine.machine_name}</h2>
+            <p className="modal-desc">{machine.description}</p>
+            <h4 className="modal-spec-heading">Technical Specifications</h4>
+            <table className="modal-spec-table">
+              <tbody>
+                <tr><td>Heads</td><td>{machine.specifications?.heads || "-"}</td></tr>
+                <tr><td>Volume Range</td><td>{machine.specifications?.volumeRange || "-"}</td></tr>
+                <tr><td>Control System</td><td>{machine.specifications?.controlSystem || "-"}</td></tr>
+                <tr><td>Production Speed</td><td>{machine.specifications?.productionSpeed || "-"}</td></tr>
+              </tbody>
+            </table>
+            <button className="modal-cta-btn">CONFIGURE THIS MODEL</button>
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+function SpareDetailModal({ spare, onClose }) {
+  if (!spare) return null;
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-container" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close-btn" onClick={onClose} aria-label="Close">✕</button>
+        <div className="modal-body">
+          <div className="modal-image-wrap">
+            <img src={spare.image_url || machineCardsImage} alt={spare.spare_name} />
+          </div>
+          <div className="modal-info">
+            <div className="modal-tags">
+              <span className="modal-tag outline">SPARE-{spare.spare_id}</span>
+              <span className="modal-tag filled">{spare.spare_category_id}</span>
+            </div>
+            <h2 className="modal-title">{spare.spare_name}</h2>
+            <p className="modal-desc">{spare.description}</p>
+            <h4 className="modal-spec-heading">Details</h4>
+            <table className="modal-spec-table">
+              <tbody>
+                <tr><td>Category</td><td>{spare.spare_category_id}</td></tr>
+                <tr><td>Stock Available</td><td className={spare.stock_quantity > 10 ? "stock-good" : "stock-low"}>{spare.stock_quantity} units</td></tr>
+                <tr><td>Price</td><td>₹{Number(spare.price).toLocaleString("en-IN")}</td></tr>
+              </tbody>
+            </table>
+            <button className="modal-cta-btn">REQUEST QUOTE</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MachineriesPage({ machines, machineCategories }) {
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedProcessing, setSelectedProcessing] = useState([]);
+  const [selectedPackaging, setSelectedPackaging] = useState([]);
+  const [sortBy, setSortBy] = useState("default");
+  const [selectedMachine, setSelectedMachine] = useState(null);
+
+  const toggleFilter = (value, list, setter) => {
+    if (list.includes(value)) {
+      setter(list.filter((v) => v !== value));
+    } else {
+      setter([...list, value]);
+    }
+  };
+
+  const filteredMachines = useMemo(() => {
+    let results = [...machines];
+
+    if (searchQuery.trim()) {
+      const q = searchQuery.toLowerCase();
+      results = results.filter(
+        (m) =>
+          m.machine_name.toLowerCase().includes(q) ||
+          m.description.toLowerCase().includes(q)
+      );
+    }
+
+    if (selectedProcessing.length > 0) {
+      results = results.filter(
+        (m) => m.category_id === "Processing" && selectedProcessing.includes(m.subcategory)
+      );
+    }
+
+    if (selectedPackaging.length > 0) {
+      results = results.filter(
+        (m) => m.category_id === "Packaging" && selectedPackaging.includes(m.subcategory)
+      );
+    }
+
+    if (sortBy === "name-asc") {
+      results.sort((a, b) => a.machine_name.localeCompare(b.machine_name));
+    } else if (sortBy === "name-desc") {
+      results.sort((a, b) => b.machine_name.localeCompare(a.machine_name));
+    }
+
+    return results;
+  }, [machines, searchQuery, selectedProcessing, selectedPackaging, sortBy]);
+
+  return (
+    <section className="machineries-page-v2">
+      {/* ——— HERO ——— */}
+      <div
+        className="mach-hero"
+        style={{ backgroundImage: `linear-gradient(rgba(9, 25, 56, 0.82), rgba(9, 25, 56, 0.82)), url(${blueMachinesImage})` }}
+      >
+        <span className="mach-hero-badge">★ EXPLORING THE FUTURE</span>
+        <h1>Advanced Machinery<br />Solutions</h1>
+        <p>
+          Salvin Industries delivers engineered precision through high-performance
+          automation and heavy-duty manufacturing systems. We empower global
+          industrial leaders with reliability and technical expertise.
+        </p>
+        <div className="mach-hero-btns">
+          <button className="mach-hero-btn primary">EXPLORE CATALOG</button>
+          <button className="mach-hero-btn outline">OUR SHOWROOM</button>
+        </div>
+      </div>
+
+      {/* ——— SECTION HEADER ——— */}
+      <div className="mach-section-header">
+        <div className="mach-section-left">
+          <span className="mach-section-badge">← PRODUCTS</span>
+          <h2>Processing &amp; Packaging Machinery</h2>
+        </div>
+        <p className="mach-section-desc">
+          From turnkey plant setups to individual machine procurement, Salvin offers robust, low-maintenance equipment engineered for 24/7 production-line demands.
+        </p>
+      </div>
+
+      {/* ——— MAIN CONTENT ——— */}
+      <div className="mach-content">
+        {/* SIDEBAR */}
+        <aside className="mach-sidebar">
+          <h3 className="mach-sidebar-title">Categories</h3>
+
+          <h4 className="mach-sidebar-group">Processing</h4>
+          {processingCategories.map((cat) => (
+            <label key={cat} className="mach-checkbox-label">
+              <input
+                type="checkbox"
+                checked={selectedProcessing.includes(cat)}
+                onChange={() => toggleFilter(cat, selectedProcessing, setSelectedProcessing)}
+              />
+              {cat}
+            </label>
+          ))}
+
+          <h4 className="mach-sidebar-group">Packaging</h4>
+          {packagingCategories.map((cat) => (
+            <label key={cat} className="mach-checkbox-label">
+              <input
+                type="checkbox"
+                checked={selectedPackaging.includes(cat)}
+                onChange={() => toggleFilter(cat, selectedPackaging, setSelectedPackaging)}
+              />
+              {cat}
+            </label>
+          ))}
+        </aside>
+
+        {/* RESULTS */}
+        <div className="mach-results">
+          <div className="mach-toolbar">
+            <div className="mach-search-wrap">
+              <span className="mach-search-icon">🔍</span>
+              <input
+                className="mach-search"
+                type="text"
+                placeholder="Search machinery..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+            </div>
+            <div className="mach-sort-wrap">
+              <label>Sort By</label>
+              <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
+                <option value="default">Default</option>
+                <option value="name-asc">Name A–Z</option>
+                <option value="name-desc">Name Z–A</option>
+              </select>
+            </div>
+          </div>
+
+          <div className="mach-results-header">
+            <h3>Filtered Machinery <span className="mach-count">{filteredMachines.length} Results</span></h3>
+          </div>
+
+          <div className="mach-grid">
+            {filteredMachines.map((machine) => (
+              <article key={machine.machine_id} className="mach-card">
+                <div className="mach-card-img">
+                  <img src={machine.image_url || machineryLayoutImage} alt={machine.machine_name} />
+                </div>
+                <div className="mach-card-body">
+                  <div className="mach-card-tags">
+                    {machine.tags?.map((tag, i) => (
+                      <span key={i} className={"mach-tag" + (i === 0 ? " orange" : " blue")}>{tag}</span>
+                    ))}
+                  </div>
+                  <h4 className="mach-card-title">{machine.machine_name}</h4>
+                  <p className="mach-card-desc">{machine.description}</p>
+                  <div className="mach-card-specs">
+                    <div className="mach-spec-item">
+                      <span className="mach-spec-val">{machine.priceRange}</span>
+                      <span className="mach-spec-lbl">{machine.speed}</span>
+                      <span className="mach-spec-unit">{machine.capacity}</span>
+                    </div>
+                  </div>
+                  <div className="mach-card-actions">
+                    <button className="mach-btn quote">GET A QUOTE</button>
+                    <button className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {selectedMachine && (
+        <MachineDetailModal machine={selectedMachine} onClose={() => setSelectedMachine(null)} />
+      )}
     </section>
   );
 }
 
 function SparesPage({ spares, spareCategories }) {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedSpare, setSelectedSpare] = useState(null);
 
   const filteredSpares = useMemo(() => {
     if (selectedCategory === "All") return spares;
@@ -468,7 +719,7 @@ function SparesPage({ spares, spareCategories }) {
           <span>Price</span>
         </div>
         {filteredSpares.map((spare) => (
-          <div key={spare.spare_id} className="spares-row">
+          <div key={spare.spare_id} className="spares-row" onClick={() => setSelectedSpare(spare)} style={{ cursor: "pointer" }}>
             <div className="spare-name-cell">
               <img src={spare.image_url || machineCardsImage} alt={spare.spare_name} />
               <div>
@@ -482,6 +733,10 @@ function SparesPage({ spares, spareCategories }) {
           </div>
         ))}
       </div>
+
+      {selectedSpare && (
+        <SpareDetailModal spare={selectedSpare} onClose={() => setSelectedSpare(null)} />
+      )}
     </section>
   );
 }
