@@ -5,6 +5,7 @@ import machineCardsImage from "./assets/machine-cards.png";
 import machineryLayoutImage from "./assets/machinery-layout.png";
 import blueMachinesImage from "./assets/blue-machines.png";
 import machineCardRefImage from "./assets/machine-card-ref.png";
+import About from "./components/AboutSection";
 
 const serviceCards = [
   {
@@ -1251,23 +1252,7 @@ function HomePage() {
 }
 
 function AboutPage() {
-  return (
-    <section className="about page-section">
-      <span className="section-badge">About The Company</span>
-      <h1>About Us</h1>
-      <p>
-        Salvin Industries is a leading turnkey automation and packaging machinery group
-        based in Ahmedabad. We specialize in high-performance production lines.
-      </p>
-
-      <div className="timeline">
-        <div><h3>1999</h3><p>Founded in Ahmedabad</p></div>
-        <div><h3>2008</h3><p>First International Project</p></div>
-        <div><h3>2015</h3><p>Robotic Division Launch</p></div>
-        <div><h3>2024</h3><p>30+ Countries Milestone</p></div>
-      </div>
-    </section>
-  );
+  return <About/>;
 }
 
 function ContactPage() {

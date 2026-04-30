@@ -1,0 +1,104 @@
+/* team.css */
+
+.team-section {
+  padding: 80px 50px;
+  background: #ded7cf;
+  text-align: center;
+}
+
+.team-header .tag {
+  font-size: 12px;
+  background: #e9e9e9;
+  padding: 6px 14px;
+  border-radius: 20px;
+  color: #ff7a00;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.team-header h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1a2433;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* CARD */
+.team-card {
+  background: #f1f1f1;
+  border-radius: 16px;
+  overflow: hidden;
+  text-align: left;
+  transition: 0.3s;
+}
+
+
+.team-card:hover {
+  transform: translateY(-8px);
+}
+
+/* IMAGE */
+.team-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+/* CONTENT */
+.team-content {
+  padding: 20px;
+}
+
+.team-content h3 {
+  margin: 0;
+  font-size: 20px;
+  color: #1a2433;
+}
+
+.role {
+  display: block;
+  color: #ff7a00;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 5px 0 10px;
+}
+
+.team-content p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* SOCIAL ICON */
+.social {
+  margin-top: 15px;
+  color: #0077b5;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-header h2 {
+    font-size: 28px;
+  }
+}

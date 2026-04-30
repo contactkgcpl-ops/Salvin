@@ -1,0 +1,80 @@
+/* vision.css */
+
+.vision-section {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.vision-card {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+}
+
+/* LEFT SIDE */
+.vision-left {
+  flex: 1;
+  background: #0b1a2c;
+  color: white;
+  padding: 50px;
+  position: relative;
+}
+
+.vision-left h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.vision-left p {
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* RIGHT SIDE */
+.vision-right {
+  flex: 1;
+  background: #e7c39a;
+  padding: 50px;
+  position: relative;
+}
+
+.vision-right h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0b1a2c;
+}
+
+.vision-right p {
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ICON */
+.icon {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* CENTER DIVIDER SHAPE */
+.divider {
+  width: 80px;
+  background: transparent;
+  position: relative;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  background: #0b1a2c;
+  border-radius: 50%;
+}
