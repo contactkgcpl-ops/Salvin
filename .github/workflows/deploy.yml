@@ -4,6 +4,12 @@ on:
   push:
     branches:
       - main
+    workflow_dispatch:
+      inputs:
+        environment:
+          description: 'Deploy environment'
+          required: false
+          default: 'production'
 
 jobs:
   build-deploy:
@@ -35,9 +41,9 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
+          protocol: ${{ secrets.protocol }}
+          port: ${{ secrets.port }}
           local-dir: ./dist/
           server-dir: public_html/
           dangerous-clean-slate: true
-          timeout: 60000
+          timeout: 100000
