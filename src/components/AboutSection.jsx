@@ -6,7 +6,7 @@ import Journey from "../components/JourneyTimeline";
 import "../assets/HowWeWork.css";
 import "../assets/vision.css";
 import "../assets/team.css";
-import "../assets/why.css";
+import "../assets/why_us.css";
 import "../assets/JourneyTimeline.css";
 import { NavLink } from "react-router-dom";
 import { FaLinkedin } from "react-icons/fa";
