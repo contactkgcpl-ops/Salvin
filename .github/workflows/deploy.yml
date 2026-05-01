@@ -44,6 +44,6 @@ jobs:
           protocol: ${{ secrets.protocol }}
           port: ${{ secrets.port }}
           local-dir: ./dist/
-          server-dir: /
+          server-dir: public_html/
           dangerous-clean-slate: true
           timeout: 100000
