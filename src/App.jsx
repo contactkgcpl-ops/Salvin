@@ -6,6 +6,8 @@ import machineryLayoutImage from "./assets/machinery-layout.png";
 import blueMachinesImage from "./assets/blue-machines.png";
 import machineCardRefImage from "./assets/machine-card-ref.png";
 import About from "./components/AboutSection";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 const serviceCards = [
   {
@@ -19,12 +21,6 @@ const serviceCards = [
     text: "High-performance industrial machinery built for reliability and output.",
     image:
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    title: "Spares",
-    text: "Genuine spares and quick dispatch to reduce production downtime.",
-    image:
-      "https://images.unsplash.com/photo-1589792923962-537704632910?auto=format&fit=crop&w=900&q=80"
   },
   {
     title: "Consultancy",
@@ -258,67 +254,6 @@ const ADMIN_CREDENTIALS = {
   password: "admin@123"
 };
 
-function Navbar({ isAdminAuthenticated, onAdminLogout }) {
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
-  const closeServicesMenu = () => setIsServicesOpen(false);
-
-  return (
-    <header className="navbar">
-      <h2 className="font-bold text-2xl">SALVIN INDUSTRIES</h2>
-      <nav className="nav-menu">
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About Us</NavLink>
-
-        <div
-  className={`nav-dropdown ${isServicesOpen ? "open" : ""}`}
-  onMouseEnter={() => setIsServicesOpen(true)}
-  onMouseLeave={() => setIsServicesOpen(false)}
->
-  <button
-    className="nav-dropdown-trigger"
-    type="button"
-    aria-haspopup="true"
-    aria-expanded={isServicesOpen}
-  >
-    Services
-  </button>
-
-  <div
-    className="nav-dropdown-menu"
-    role="menu"
-    aria-label="Services"
-  >
-    <NavLink
-      to="/machineries"
-      role="menuitem"
-      onClick={closeServicesMenu}
-    >
-      Machine
-    </NavLink>
-
-    <NavLink
-      to="/spares"
-      role="menuitem"
-      onClick={closeServicesMenu}
-    >
-      Sparse
-    </NavLink>
-  </div>
-</div>
-
-        <NavLink to="/contact">Contact Us</NavLink>
-        {isAdminAuthenticated && (
-          <button className="nav-logout-btn" type="button" onClick={onAdminLogout}>
-            Logout
-          </button>
-        )}
-      </nav>
-      <NavLink className="nav-cta" to="/contact">Contact Us</NavLink>
-    </header>
-  );
-}
-
 function ProtectedAdminRoute({ isAdminAuthenticated, children }) {
   const location = useLocation();
   if (!isAdminAuthenticated) {
@@ -378,58 +313,6 @@ function AdminLoginPage({ onAdminLogin, isAdminAuthenticated }) {
         <button className="card-btn" type="submit">Login</button>
       </form>
     </section>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="footer">
-      <section className="footer-cta-box">
-        <h2>READY TO EQUIP YOUR PLANT?</h2>
-        <p>
-          Our team of specialists engineers is ready to help you optimize your manufacturing
-          workflow. Get a consultation and detailed quote for your project.
-        </p>
-        <NavLink className="btn" to="/contact">Contact Us</NavLink>
-      </section>
-
-      <div className="footer-inner">
-        <div className="footer-brand">
-          <h3>SALVIN INDUSTRIES</h3>
-          <p>
-            Turnkey solutions in processing and packaging. Moving your factory from daily
-            messes to a business that grows on its own.
-          </p>
-          <p>210, Arved Transcube Mall, Bandhu Nagar, Vijay Nagar, Ranip, Ahmedabad, Gujarat 382480</p>
-          <p>+91 90239 79663 | +91 97127 77034 | +91 97126 77034</p>
-          <p>info.salvinindustries@gmail.com</p>
-        </div>
-
-        <div className="footer-cols">
-          <div className="footer-col">
-            <h4>Navigation</h4>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">Journey</NavLink>
-            <NavLink to="/contact">Talk with Keval</NavLink>
-            <NavLink to="/contact">Careers</NavLink>
-            <NavLink to="/contact">Contact Us</NavLink>
-          </div>
-
-          <div className="footer-col">
-            <h4>Services</h4>
-            <NavLink to="/services">Turnkey Project</NavLink>
-            <NavLink to="/machineries">Machineries</NavLink>
-            <NavLink to="/spares">Spares & Spare Kits</NavLink>
-            <NavLink to="/contact">Preventive AMC</NavLink>
-            <NavLink to="/contact">Contract MFG & LM</NavLink>
-          </div>
-        </div>
-      </div>
-
-      <div className="footer-bottom">
-        <p className="copyright">© 2026 Salvin Industries. Engineered for Industrial Excellence.</p>
-      </div>
-    </footer>
   );
 }
 
@@ -659,7 +542,7 @@ function MachineriesPage({ machines, machineCategories }) {
                     </div>
                   </div>
                   <div className="mach-card-actions">
-                    <button className="mach-btn quote">GET A QUOTE</button>
+                    <a href="https://wa.me/919023979663" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
                     <button className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
                   </div>
                 </div>
@@ -677,14 +560,6 @@ function MachineriesPage({ machines, machineCategories }) {
 }
 
 function SparesPage({ spares, spareCategories }) {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-  const [selectedSpare, setSelectedSpare] = useState(null);
-
-  const filteredSpares = useMemo(() => {
-    if (selectedCategory === "All") return spares;
-    return spares.filter((spare) => spare.spare_category_id === selectedCategory);
-  }, [spares, selectedCategory]);
-
   return (
     <section className="spares-page page-section">
       <div className="split-header">
@@ -693,51 +568,9 @@ function SparesPage({ spares, spareCategories }) {
           <h1>Spare Parts & Consumables</h1>
         </div>
         <p className="rating-copy">
-          Fast moving inventory with transparent pricing and stock visibility for every spare category.
+          This page is currently unavailable.
         </p>
       </div>
-
-      <div className="spare-filters">
-        <button className={selectedCategory === "All" ? "active-filter" : ""} onClick={() => setSelectedCategory("All")}>
-          All
-        </button>
-        {spareCategories.map((category) => (
-          <button
-            key={category}
-            className={selectedCategory === category ? "active-filter" : ""}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category}
-          </button>
-        ))}
-      </div>
-
-      <div className="spares-table">
-        <div className="spares-head">
-          <span>Spare Name</span>
-          <span>Category</span>
-          <span>Stock</span>
-          <span>Price</span>
-        </div>
-        {filteredSpares.map((spare) => (
-          <div key={spare.spare_id} className="spares-row" onClick={() => setSelectedSpare(spare)} style={{ cursor: "pointer" }}>
-            <div className="spare-name-cell">
-              <img src={spare.image_url || machineCardsImage} alt={spare.spare_name} />
-              <div>
-                <strong>{spare.spare_name}</strong>
-                <p>{spare.description}</p>
-              </div>
-            </div>
-            <span>{spare.spare_category_id}</span>
-            <span className={spare.stock_quantity > 10 ? "stock-good" : "stock-low"}>{spare.stock_quantity}</span>
-            <span>₹{Number(spare.price).toLocaleString("en-IN")}</span>
-          </div>
-        ))}
-      </div>
-
-      {selectedSpare && (
-        <SpareDetailModal spare={selectedSpare} onClose={() => setSelectedSpare(null)} />
-      )}
     </section>
   );
 }
@@ -937,11 +770,11 @@ function HomePage() {
 
   const industryCards = [
     { title: "Turnkey Projects", text: "Complete end-to-end plant architecture, from conceptual blueprinting to installation and final commissioning.", image: serviceCards[0].image },
-    { title: "Automation & Robotics", text: "Precision-engineered automated assembly lines and seamless robotic integration for smart factory ecosystems.", image: serviceCards[4].image },
+    { title: "Automation & Robotics", text: "Precision-engineered automated assembly lines and seamless robotic integration for smart factory ecosystems.", image: serviceCards[3].image },
     { title: "Processing & Packaging Machinery", text: "Hygienic, turnkey stainless steel processing lines engineered for dairy, beverage, and solid food manufacturing.", image: serviceCards[1].image },
-    { title: "Packaging Machinery", text: "High-speed, multi-format pouch and bottle filling systems with advanced capping and labeling technologies.", image: serviceCards[7].image },
-    { title: "Pneumatic Equipment", text: "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.", image: serviceCards[5].image },
-    { title: "Maintenance & Support", text: "Proactive annual maintenance contracts and 24/7 technical support to ensure zero-downtime production cycles.", image: serviceCards[6].image }
+    { title: "Packaging Machinery", text: "High-speed, multi-format pouch and bottle filling systems with advanced capping and labeling technologies.", image: serviceCards[1].image },
+    { title: "Supply Chain", text: "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.", image: serviceCards[4].image },
+    { title: "Maintenance & Support", text: "Proactive annual maintenance contracts and 24/7 technical support to ensure zero-downtime production cycles.", image: serviceCards[5].image }
   ];
 
   const whyUsFeatures = [
@@ -1025,28 +858,7 @@ function HomePage() {
                 Our team of 200+ engineers brings together expertise in mechanical design, robotics, PLC
                 programming, and process automation.
               </p>
-              <div className="timeline">
-                <div className="t-box">
-                  <h3>2008</h3>
-                  <h4>Founded in Ahmedabad</h4>
-                  <p>Started as a precision engineering workshop.</p>
-                </div>
-                <div className="t-box">
-                  <h3>2008</h3>
-                  <h4>First International Project</h4>
-                  <p>Delivered first overseas turnkey plant in UAE.</p>
-                </div>
-                <div className="t-box">
-                  <h3>2015</h3>
-                  <h4>Robotic Division Launch</h4>
-                  <p>Established robotics integration division.</p>
-                </div>
-                <div className="t-box">
-                  <h3>2024</h3>
-                  <h4>30+ Countries Milestone</h4>
-                  <p>350+ completed projects globally.</p>
-                </div>
-              </div>
+
             </div>
             <div className="about-right">
               <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" alt="factory" />
@@ -1186,66 +998,7 @@ function HomePage() {
           <p>Explore how our legacy of precision engineering can optimize your next industrial project.</p>
           <NavLink to="/contact"><button>CONTACT US</button></NavLink>
         </div>
-        <footer className="home-footer" id="contact">
-          <div className="footer-grid">
-            <div className="footer-col">
-              <h3 className="font-bold">SALVIN INDUSTRIES</h3>
-              <p>
-                Moving your factory from daily messes to a business that grows on its own.
-              </p>
-              <ul className="contact-info">
-                <li>📧 info.salvinindustries@gmail.com</li>
-                <li>📞 +91 90239 79663 | +91 97127 77034 | +91 97126 77034</li>
-                <li>📍 210, Arved Transcube Mall, Bandhu Nagar, Vijay Nagar, Ranip, Ahmedabad, Gujarat 382480</li>
-              </ul>
-              <div className="social">
-                <span>🔗</span>
-                <span>📘</span>
-                <span>🐦</span>
-              </div>
-            </div>
-            <div className="footer-col">
-              <h4>SERVICES</h4>
-              <ul>
-                <li>Turnkey Plant Solutions</li>
-                <li>Industrial Automation</li>
-                <li>Maintenance &amp; AMC</li>
-                <li>Pneumatic Equipment</li>
-                <li>Packaging Machinery</li>
-                <li>Food Processing</li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>INDUSTRIES</h4>
-              <ul>
-                <li>Food &amp; Spices</li>
-                <li>Pharmaceutical</li>
-                <li>Chemical &amp; API</li>
-                <li>Agriculture</li>
-                <li>Cosmetics</li>
-                <li>Export Industries</li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h4>COMPANY</h4>
-              <ul>
-                <li>About Us</li>
-                <li>Projects Portfolio</li>
-                <li>Resources &amp; Blog</li>
-                <li>Contact Us</li>
-                <li>International Offices</li>
-                <li>Careers</li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-bottom">
-            <p>© 2026 <span>salvin</span> industries. all rights reserved. | ahmedabad, gujarat, india</p>
-            <div className="links">
-              <a href="#">Privacy Policy</a>
-              <a href="#">Terms &amp; Conditions</a>
-            </div>
-          </div>
-        </footer>
+
       </section>
     </div>
   );
@@ -1403,7 +1156,7 @@ export default function App() {
 
   return (
     <div className="app">
-      <Navbar isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
+      <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -1437,7 +1190,7 @@ export default function App() {
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      {location.pathname !== "/" && <Footer />}
+      <Footer />
     </div>
   );
 }
