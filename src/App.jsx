@@ -814,7 +814,7 @@ function HomePage() {
 
       {/* INDUSTRY */}
       <section className="industry" id="services">
-        <div className="container">
+        <div className="display-flex align-center industry-wrapper m-10">
           <div className="industry-header">
             <div>
               <span className="tag">SPECIALIZED VERTICALS</span>
@@ -842,7 +842,7 @@ function HomePage() {
 
       {/* ABOUT */}
       <section className="about" id="about">
-        <div className="container">
+        <div className="display-flex align-center industry-wrapper m-10">
           <div className="about-wrapper">
             <div className="about-left">
               <span className="tag">ABOUT THE COMPANY</span>
@@ -873,7 +873,7 @@ function HomePage() {
 
       {/* CLIENT VOICE */}
       <section className="client-container">
-        <section className="container">
+        <section className="display-flex align-center industry-wrapper m-10">
           <div className="section-header">
             <span className="tag">CLIENT VOICE</span>
             <div className="header-row">
@@ -900,7 +900,7 @@ function HomePage() {
 
       {/* WHY CHOOSE */}
       <section className="why-us-container">
-        <section className="container">
+        <section className="display-flex align-center industry-wrapper m-10">
           <div className="section-header mt">
             <span className="tag">OUR COMPETITIVE EDGE</span>
             <div className="header-row">
@@ -925,7 +925,7 @@ function HomePage() {
 
       {/* FAQ */}
       <section className="faq-container">
-        <section className="container">
+        <section className="display-flex align-center industry-wrapper m-10">
           <div className="faq-header">
             <span className="tag">FAQ</span>
             <h2>Frequently Asked <span>Questions</span></h2>
@@ -946,7 +946,7 @@ function HomePage() {
 
       {/* PROJECTS */}
       <section className="projects-container" id="projects">
-        <section className="container">
+        <section className="display-flex align-center industry-wrapper m-10">
           <div className="projects-header">
             <div>
               <span className="tag">SPECIALIZED VERTICALS</span>

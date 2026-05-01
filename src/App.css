@@ -3441,78 +3441,119 @@
 .tag {
   background: #FFF3E6;
   color: #ff7a00;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-size: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #ffce99;
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 12px;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 15px;
   letter-spacing: 0.5px;
+}
+
+.tag::before {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #ff7a00;
+  border-radius: 50%;
+  margin-right: 8px;
 }
 
 .desc {
   color: #555;
   line-height: 1.6;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .industry-header, .projects-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
+  width: 100%;
   margin-bottom: 40px;
   gap: 40px;
 }
+
 .industry-header > div, .projects-header > div {
   flex: 1;
+  text-align: left;
 }
+
+.industry-header h2, .projects-header h2, .section-header h2 {
+  margin: 0;
+  font-size: 34px;
+  color: #0b1c2c;
+  font-weight: 700;
+}
+
 .industry-header .desc, .projects-header .desc {
   flex: 1;
-  margin: 0;
-  max-width: 500px;
+  max-width: 450px;
   text-align: left;
+  margin: 0;
+  margin-top: 15px; /* slight push down to align visually with h2 */
 }
 
 .section-header {
   margin-bottom: 40px;
+  width: 100%;
 }
+
 .header-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
+  width: 100%;
   gap: 40px;
 }
+
 .header-row h2 {
   flex: 1;
-  margin: 0;
-}
-.header-row .desc {
-  flex: 1;
-  margin: 0;
-  max-width: 500px;
   text-align: left;
 }
+
+.header-row .desc {
+  flex: 1;
+  max-width: 450px;
+  text-align: left;
+  margin: 0;
+  margin-top: 5px;
+}
+
 .rating {
   text-align: right;
   margin: 0;
   flex: 1;
   color: #ff7a00;
-  font-weight: 700;
-  font-size: 18px;
+  font-weight: 600;
+  font-size: 15px;
 }
+
 .rating small {
-  color: #555;
-  font-size: 13px;
-  font-weight: 400;
+  color: #0b1c2c;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+  margin-top: 4px;
 }
 
 .faq-header {
-  text-align: center;
-  margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.faq-header h2 {
+  font-size: 34px;
+  color: #0b1c2c;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
