@@ -50,7 +50,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
       <nav className={`nav-links${menuOpen ? " nav-open" : ""}`}>
         <NavLink to="/" end style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>HOME</NavLink>
         <NavLink to="/about" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>JOURNEY</NavLink>
-        <NavLink to="/services" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
+        <NavLink to="/turnkey-project" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
         <NavLink to="/machineries" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
         <NavLink to="/services" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONSULTANT</NavLink>
         <NavLink to="/spares" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>SPARES & SERVICE</NavLink>

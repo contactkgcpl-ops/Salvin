@@ -6,7 +6,7 @@ import {
   FaMicrochip,
   FaRobot,
   FaShieldAlt,
-  FaUserTie
+  FaUserTie,
 } from "react-icons/fa";
 
 import img1 from "../assets/journey/d1-1.png";
@@ -23,75 +23,84 @@ const timeline = [
   {
     year: "2009",
     title: "Packaging Unit",
-    description: "Foundational entry into high-precision industrial packaging, setting the benchmark for engineering reliability.",
+    description:
+      "Foundational entry into high-precision industrial packaging, setting the benchmark for engineering reliability.",
     image: img1,
     side: "left",
-    icon: FaBoxOpen
+    icon: FaBoxOpen,
   },
   {
     year: "2011",
     title: "Fully Automatic Design",
-    description: "Pioneering zero-intervention automation systems to maximize manufacturing efficiency and performance.",
+    description:
+      "Pioneering zero-intervention automation systems to maximize manufacturing efficiency and performance.",
     image: img2,
     side: "right",
-    icon: FaRobot
+    icon: FaRobot,
   },
   {
     year: "2013",
     title: "Processing Mfg",
-    description: "Expanding into complex processing engineering for high-growth food and pharmaceutical industries.",
+    description:
+      "Expanding into complex processing engineering for high-growth food and pharmaceutical industries.",
     image: img3,
     side: "left",
-    icon: FaIndustry
+    icon: FaIndustry,
   },
   {
     year: "2015",
     title: "Reactors & Vessel Design",
-    description: "Advanced heavy-duty fabrication of chemical reactors and pressure vessels for critical applications.",
+    description:
+      "Advanced heavy-duty fabrication of chemical reactors and pressure vessels for critical applications.",
     image: img4,
     side: "right",
-    icon: FaFlask
+    icon: FaFlask,
   },
   {
     year: "2017",
     title: "Pharma Consultant",
-    description: "Launched strategic engineering consultancy, optimizing plant layouts for global regulatory standards.",
+    description:
+      "Launched strategic engineering consultancy, optimizing plant layouts for global regulatory standards.",
     image: img5,
     side: "left",
-    icon: FaUserTie
+    icon: FaUserTie,
   },
   {
     year: "2019",
     title: "GMP Plant Design",
-    description: "Implementing global GMP standards in turnkey plant architecture and facility engineering.",
+    description:
+      "Implementing global GMP standards in turnkey plant architecture and facility engineering.",
     image: img6,
     side: "right",
-    icon: FaShieldAlt
+    icon: FaShieldAlt,
   },
   {
     year: "2021",
     title: "Contract Packaging",
-    description: "Scalable, high-speed contract packaging solutions for premium global beauty and food brands.",
+    description:
+      "Scalable, high-speed contract packaging solutions for premium global beauty and food brands.",
     image: img7,
     side: "left",
-    icon: FaBoxOpen
+    icon: FaBoxOpen,
   },
   {
     year: "2023",
     title: "International Projects",
-    description: "Executing large-scale international turnkey projects, establishing a global engineering footprint.",
+    description:
+      "Executing large-scale international turnkey projects, establishing a global engineering footprint.",
     image: img8,
     side: "right",
-    icon: FaGlobeAmericas
+    icon: FaGlobeAmericas,
   },
   {
     year: "2025",
     title: "Automation 4.0 Era",
-    description: "Leading the next industrial revolution with AI-driven Automation 4.0 and smart factory solutions.",
+    description:
+      "Leading the next industrial revolution with AI-driven Automation 4.0 and smart factory solutions.",
     image: img9,
     side: "left",
-    icon: FaMicrochip
-  }
+    icon: FaMicrochip,
+  },
 ];
 
 export default function JourneyTimeline() {
@@ -111,20 +120,27 @@ export default function JourneyTimeline() {
           return (
             <div key={`${item.year}-${item.title}`} className={`row ${item.side}`}>
               <article className="card">
-                {item.side === "left" && <img src={item.image} alt={item.title} />}
+                {item.side === "left" && (
+                  <img className="timeline-image" src={item.image} alt={item.title} />
+                )}
+
                 <div className="content">
                   <span className="year">{item.year}</span>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </div>
-                <div className="event-icon">
+
+                <span className="event-icon" aria-hidden="true">
                   <Icon />
-                </div>
-                {item.side === "right" && <img src={item.image} alt={item.title} />}
+                </span>
+
+                {item.side === "right" && (
+                  <img className="timeline-image" src={item.image} alt={item.title} />
+                )}
               </article>
 
               <div className="center">
-                <div className="num">{String(index + 1).padStart(2, "0")}</div>
+                <span className="num">{String(index + 1).padStart(2, "0")}</span>
               </div>
             </div>
           );

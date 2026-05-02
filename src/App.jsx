@@ -9,6 +9,7 @@ import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TurnkeyPage from "./pages/TurnkeyPage";
+import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 
 const serviceCards = [
   {
@@ -1165,6 +1166,7 @@ function ServicesPage() {
 }
 
 export default function App() {
+  const location = useLocation();
   const [machineCategories, setMachineCategories] = useState(initialMachineCategories);
   const [spareCategories, setSpareCategories] = useState(initialSpareCategories);
   const [machines, setMachines] = useState(initialMachines);
@@ -1241,15 +1243,20 @@ export default function App() {
     setIsAdminAuthenticated(false);
   };
 
+  const isStandaloneTurnkeyProjectRoute = location.pathname === "/turnkey-project";
+
   return (
     <div className="app">
-      <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
+      {!isStandaloneTurnkeyProjectRoute && (
+        <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
+      )}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/turnkey" element={<TurnkeyPage />} />
+        <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
         <Route path="/machineries" element={<MachineriesPage machines={machines} />} />
         <Route path="/spares" element={<SparesPage />} />
         <Route
@@ -1278,7 +1285,7 @@ export default function App() {
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      <Footer />
+      {!isStandaloneTurnkeyProjectRoute && <Footer />}
     </div>
   );
 }
