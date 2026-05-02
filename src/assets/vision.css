@@ -78,3 +78,29 @@
   background: #0b1a2c;
   border-radius: 50%;
 }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .vision-section {
+    padding: 30px 16px;
+  }
+
+  .vision-card {
+    flex-direction: column;
+    border-radius: 16px;
+  }
+
+  .vision-left,
+  .vision-right {
+    padding: 30px 24px;
+  }
+
+  .vision-left h2,
+  .vision-right h2 {
+    font-size: 22px;
+  }
+
+  .divider {
+    display: none;
+  }
+}

@@ -60,8 +60,8 @@ export default function Footer() {
         <div className="footer-links-col">
           <h4>COMPANY</h4>
           <NavLink to="/about">About Us</NavLink>
-          <NavLink to="/projects">Projects Portfolio</NavLink>
-          <NavLink to="/resources">Resources & Blog</NavLink>
+          <NavLink to="/about">Projects Portfolio</NavLink>
+          <NavLink to="/services">Resources & Blog</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>
           <NavLink to="/contact">International Offices</NavLink>
           <NavLink to="/contact">Careers</NavLink>
@@ -71,8 +71,8 @@ export default function Footer() {
       <div className="footer-bottom-unified">
         <p>© 2026 <span className="highlight-salvin">salvin</span> industries. all rights reserved. | ahmedabad, gujarat, india</p>
         <div className="footer-bottom-links">
-          <NavLink to="/privacy">Privacy Policy</NavLink>
-          <NavLink to="/terms">Terms & Conditions</NavLink>
+          <NavLink to="/contact">Privacy Policy</NavLink>
+          <NavLink to="/contact">Terms & Conditions</NavLink>
         </div>
       </div>
     </footer>

@@ -8,6 +8,7 @@ import machineCardRefImage from "./assets/machine-card-ref.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import TurnkeyPage from "./pages/TurnkeyPage";
 
 const serviceCards = [
   {
@@ -29,7 +30,7 @@ const serviceCards = [
       "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
   },
   {
-    title: "Automation & Robotices",
+    title: "Automation & Robotics",
     text: "Smart automation and robotic integration for modern production lines.",
     image:
       "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80"
@@ -54,43 +55,16 @@ const serviceCards = [
   }
 ];
 
-const whyCards = [
-  {
-    title: "Decades of Expertise",
-    text: "Over 25 years delivering industrial engineering and automation solutions.",
-    image:
-      "https://images.unsplash.com/photo-1581092335397-9583eb92d232?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    title: "Innovative Technology",
-    text: "AI-driven robotics and IoT-enabled systems for future-ready operations.",
-    image:
-      "https://images.unsplash.com/photo-1581091215367-59ab6b82d16b?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    title: "Global Support",
-    text: "Dedicated technical support network serving plants across 30+ countries.",
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
-  },
-  {
-    title: "Quality Assurance",
-    text: "ISO-aligned processes with strict quality and safety standards.",
-    image:
-      "https://images.unsplash.com/photo-1581092786450-7ef25f140997?auto=format&fit=crop&w=900&q=80"
-  }
-];
-
 const testimonialCards = [
   {
-    text: "\"Turnkey solution reduced downtime by 40%. Engineering precision unmatched.\"",
+    text: "\"Salvin's turnkey solution for our packaging line reduced downtime by 40% within the first quarter. Their engineering precision is truly unmatched in the industry.\"",
     name: "Rohan Mehta",
     role: "OPERATIONS DIRECTOR, APEX FOODS",
     image:
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
   },
   {
-    text: "\"Robotic integration transformed our process. Support team was excellent.\"",
+    text: "\"he robotic integration provided by Salvin transformed our assembly process. Their support team was available 24/7 during the transition, making it seamless.\"",
     name: "Ananya Sharma",
     role: "PLANT HEAD, GLOBAL PHARMA",
     image:
@@ -383,7 +357,7 @@ function SpareDetailModal({ spare, onClose }) {
   );
 }
 
-function MachineriesPage({ machines, machineCategories }) {
+function MachineriesPage({ machines }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProcessing, setSelectedProcessing] = useState([]);
   const [selectedPackaging, setSelectedPackaging] = useState([]);
@@ -559,7 +533,7 @@ function MachineriesPage({ machines, machineCategories }) {
   );
 }
 
-function SparesPage({ spares, spareCategories }) {
+function SparesPage() {
   return (
     <section className="spares-page page-section">
       <div className="split-header">
@@ -818,7 +792,7 @@ function HomePage() {
           <div className="industry-header">
             <div>
               <span className="tag">SPECIALIZED VERTICALS</span>
-              <h2>Industrial Business Divisions</h2>
+              <h2 className="text-blue-950">Industrial Business Divisions</h2>
             </div>
             <p className="desc">
               Targeted engineering expertise across sectors with a relentless focus on operational efficiency and
@@ -851,12 +825,12 @@ function HomePage() {
                 Future Since 2008
               </h2>
               <p className="desc">
-                Salvin Industries is a leading turnkey automation and packaging machinery group headquartered in
-                Ahmedabad, Gujarat, India.
+                Salvin Industries is a leading turnkey automation and packaging machinery group headquartered in Ahmedabad, Gujarat, India. We specialize in designing, manufacturing, and deploying high-performance production lines for global manufacturers across pharmaceuticals, food processing, cosmetics, and industrial sectors.
+
               </p>
               <p className="desc">
-                Our team of 200+ engineers brings together expertise in mechanical design, robotics, PLC
-                programming, and process automation.
+               Our team of 200+ engineers brings together expertise in mechanical design, robotics, PLC programming, and process automation-ensuring every plant we build operates at peak efficiency from day one.
+
               </p>
 
             </div>
@@ -883,11 +857,16 @@ function HomePage() {
           </div>
           <div className="testimonial-wrapper">
             {testimonialCards.slice(0, 2).map((item) => (
-              <div className="card" key={item.name}>
+              <div className="card testimonial-card-home" key={item.name}>
+                <div className="quote-icon-wrap">
+                  <svg className="quote-icon-svg" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 32V19.2C0 15.7333 0.533333 12.5333 1.6 9.6C2.66667 6.66667 4.53333 3.73333 7.2 0.800003L12.8 4.00001C10.9333 6.4 9.6 8.66667 8.8 10.8C8 12.9333 7.46667 15.2 7.2 17.6H14.4V32H0ZM22.4 32V19.2C22.4 15.7333 22.9333 12.5333 24 9.6C25.0667 6.66667 26.9333 3.73333 29.6 0.800003L35.2 4.00001C33.3333 6.4 32 8.66667 31.2 10.8C30.4 12.9333 29.8667 15.2 29.6 17.6H36.8V32H22.4Z" fill="#F5A663"/>
+                  </svg>
+                </div>
                 <p className="quote">{item.text}</p>
                 <div className="user">
                   <img src={item.image} alt={item.name} />
-                  <div>
+                  <div className="user-info">
                     <h4>{item.name}</h4>
                     <span>{item.role}</span>
                   </div>
@@ -1077,7 +1056,6 @@ function ServicesPage() {
 }
 
 export default function App() {
-  const location = useLocation();
   const [machineCategories, setMachineCategories] = useState(initialMachineCategories);
   const [spareCategories, setSpareCategories] = useState(initialSpareCategories);
   const [machines, setMachines] = useState(initialMachines);
@@ -1162,8 +1140,9 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services" element={<ServicesPage />} />
-        <Route path="/machineries" element={<MachineriesPage machines={machines} machineCategories={machineCategories} />} />
-        <Route path="/spares" element={<SparesPage spares={spares} spareCategories={spareCategories} />} />
+        <Route path="/turnkey" element={<TurnkeyPage />} />
+        <Route path="/machineries" element={<MachineriesPage machines={machines} />} />
+        <Route path="/spares" element={<SparesPage />} />
         <Route
           path="/admin-login"
           element={<AdminLoginPage onAdminLogin={handleAdminLogin} isAdminAuthenticated={isAdminAuthenticated} />}

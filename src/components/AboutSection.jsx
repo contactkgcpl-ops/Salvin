@@ -1,6 +1,5 @@
 import React from "react";
-import { FaUsers, FaPencilRuler, FaCogs, FaGlobe } from "react-icons/fa";
-import { FaRocket, FaShieldAlt } from "react-icons/fa";
+import { FaUsers, FaPencilRuler, FaCogs, FaGlobe, FaRocket, FaShieldAlt, FaLinkedin } from "react-icons/fa";
 import "../assets/About.css";
 import Journey from "../components/JourneyTimeline";
 import "../assets/HowWeWork.css";
@@ -8,8 +7,6 @@ import "../assets/vision.css";
 import "../assets/team.css";
 import "../assets/why_us.css";
 import "../assets/JourneyTimeline.css";
-import { NavLink } from "react-router-dom";
-import { FaLinkedin } from "react-icons/fa";
 
 import aboutImg from "../assets/Industrial.png";
 
@@ -229,7 +226,7 @@ export default function About() {
         {/* RIGHT */}
         <div className="vision-right">
           <div className="icon target">🎯</div>
-          <h2>Our Vision</h2>
+          <h2>Our Mission</h2>
           <p>
             To empower industries through innovation, automation, and precision
             engineering while maintaining long-term partnerships and delivering
@@ -302,31 +299,6 @@ export default function About() {
       </div>
 
     </section>
-
-      {/* FOOTER */}
-      <footer className="footer">
-        <div className="footer-grid">
-
-          <div>
-            <h3>Salvin Industries</h3>
-            <p>Automation & Engineering Solutions</p>
-          </div>
-
-          <div>
-            <h4>Links</h4>
-            <p>Home</p>
-            <p>About</p>
-            <p>Services</p>
-          </div>
-
-          <div>
-            <h4>Contact</h4>
-            <p>India</p>
-            <p>info@salvin.com</p>
-          </div>
-
-        </div>
-      </footer>
 
     </div>
   );

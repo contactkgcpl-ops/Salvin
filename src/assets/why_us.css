@@ -116,4 +116,8 @@
   .why-header h2 {
     font-size: 28px;
   }
+
+  .why-section {
+    padding: 50px 16px;
+  }
 }

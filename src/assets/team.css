@@ -101,4 +101,8 @@
   .team-header h2 {
     font-size: 28px;
   }
+
+  .team-section {
+    padding: 50px 16px;
+  }
 }
