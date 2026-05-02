@@ -1390,16 +1390,7 @@ body {
     position: relative;
   }
 
-  .stat:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 60%;
-    width: 2px;
-    background: #ff7a00;
-  }
+
 
   .stats h3 {
     margin: 0;
