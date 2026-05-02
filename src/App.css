@@ -4683,3 +4683,347 @@ body {
     font-size: 20px;
   }
 }
+
+/* ============================================================
+   NEW CONTACT PAGE STYLES
+   ============================================================ */
+
+.contact-page-new {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #fcfcfd;
+}
+
+/* Hero Section */
+.contact-hero {
+  background: linear-gradient(rgba(11, 26, 44, 0.8), rgba(11, 26, 44, 0.8)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.contact-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-tag {
+  display: inline-block;
+  background: rgba(245, 130, 32, 0.2);
+  color: #f58220;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.contact-hero-content h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin: 0 0 20px;
+}
+
+.contact-hero-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e2e8f0;
+}
+
+/* Inquiry Section */
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.contact-inquiry-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: #0b1a2c;
+  margin-bottom: 40px;
+}
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+
+.inquiry-grid {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+}
+
+/* Form */
+.inquiry-form-wrapper {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: #64748b;
+  display: flex;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #1e293b;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+  border-color: #f58220;
+}
+
+.input-group input {
+  padding-left: 44px; /* Space for icon */
+}
+
+/* Email input doesn't have an icon in the design, adjusting padding */
+.input-group input[type="email"] {
+  padding-left: 16px;
+}
+
+.input-group textarea {
+  padding-left: 16px;
+  resize: vertical;
+}
+
+.submit-inquiry-btn {
+  background: #f58220;
+  color: white;
+  border: none;
+  padding: 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+  letter-spacing: 0.5px;
+}
+
+.submit-inquiry-btn:hover {
+  background: #e07010;
+}
+
+.form-disclaimer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.form-disclaimer small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+/* Info Cards */
+.inquiry-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+}
+
+.info-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff3e6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-details strong {
+  font-size: 15px;
+  color: #0b1a2c;
+}
+
+.info-details span {
+  font-size: 14px;
+  color: #475569;
+}
+
+.help-card {
+  background: #0f172a;
+  color: white;
+  padding: 32px 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.help-card strong {
+  font-size: 18px;
+}
+
+.help-card p {
+  font-size: 14px;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.support-link {
+  color: #f58220;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+/* Department Section */
+.contact-dept-section {
+  padding: 80px 0 120px;
+  background: white;
+}
+
+.dept-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.dept-card {
+  background: white;
+  border: 1px solid #f1f5f9;
+  padding: 32px 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.dept-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.dept-icon {
+  width: 48px;
+  height: 48px;
+  background: #fff3e6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dept-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dept-info strong {
+  font-size: 16px;
+  color: #0b1a2c;
+}
+
+.dept-info span {
+  font-size: 14px;
+  color: #64748b;
+}
+
+.dept-info a {
+  font-size: 13px;
+  color: #3b82f6;
+  text-decoration: none;
+  margin-top: 8px;
+  word-break: break-all;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .inquiry-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dept-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .inquiry-info-wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .info-card, .help-card {
+    flex: 1;
+    min-width: 250px;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-hero {
+    padding: 60px 16px;
+  }
+
+  .contact-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .contact-inquiry-section, .contact-dept-section {
+    padding: 50px 0;
+  }
+
+  .inquiry-form-wrapper {
+    padding: 24px;
+  }
+  
+  .dept-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .inquiry-info-wrapper {
+    flex-direction: column;
+  }
+}

@@ -989,46 +989,155 @@ function AboutPage() {
 
 function ContactPage() {
   return (
-    <section className="contact page-section">
-      <div className="split-header">
-        <div>
-          <span className="section-badge">Contact</span>
-          <h1>Contact Us</h1>
-        </div>
-        <p className="rating-copy">
-          Share your requirement and we’ll respond with a proposal, timeline, and best-fit solution.
-        </p>
-      </div>
-
-      <div className="contact-grid">
-        <div className="card contact-card">
-          <h3>Get in touch</h3>
-          <p><strong>Email:</strong> sales@salvinindustries.com</p>
-          <p><strong>Phone:</strong> +91 00000 00000</p>
-          <p><strong>Location:</strong> Ahmedabad, India</p>
-          <p className="contact-note">
-            Mention your industry, capacity, and timeline for a faster response.
+    <div className="contact-page-new">
+      {/* Hero Section */}
+      <section className="contact-hero">
+        <div className="contact-hero-content">
+          <span className="contact-tag">★ ENGINEERING EXCELLENCE</span>
+          <h1>Engineering Projects Built for Scale</h1>
+          <p>
+            Delivering high-performance turnkey processing plants and automated production
+            lines worldwide. Our engineering solutions are built for durability, efficiency, and
+            industrial-grade output. 350+ Turnkey projects across 30+ countries. We don't just build
+            machines; we build operational legacy.
           </p>
         </div>
+      </section>
 
-        <form className="card contact-card contact-form" onSubmit={(e) => e.preventDefault()}>
-          <h3>Send a message</h3>
-          <label>
-            Name
-            <input name="name" placeholder="Your full name" />
-          </label>
-          <label>
-            Email
-            <input name="email" type="email" placeholder="name@company.com" />
-          </label>
-          <label>
-            Requirement
-            <textarea name="message" rows="4" placeholder="Tell us about your project..." />
-          </label>
-          <button className="card-btn" type="submit">Request a callback</button>
-        </form>
-      </div>
-    </section>
+      {/* Inquiry Section */}
+      <section className="contact-inquiry-section">
+        <div className="contact-container">
+          <h2 className="section-title text-left">Send Inquiry</h2>
+          <div className="inquiry-grid">
+            {/* Form */}
+            <div className="inquiry-form-wrapper">
+              <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
+                <div className="input-group">
+                  <span className="input-icon">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                  </span>
+                  <input type="text" placeholder="Full Name" />
+                </div>
+                <div className="input-group">
+                  <input type="email" placeholder="Email Address" />
+                </div>
+                <div className="input-group">
+                  <span className="input-icon">
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </span>
+                  <input type="tel" placeholder="Phone Number" />
+                </div>
+                <div className="input-group">
+                  <textarea rows="4" placeholder="Describe your requirement..."></textarea>
+                </div>
+                <button type="submit" className="submit-inquiry-btn">SUBMIT INQUIRY</button>
+                <div className="form-disclaimer">
+                  <small>• We typically respond within 24 hours.</small>
+                  <small>• We respect your privacy. Your information is safe with us.</small>
+                </div>
+              </form>
+            </div>
+
+            {/* Contact Info Cards */}
+            <div className="inquiry-info-wrapper">
+              <div className="info-card">
+                <div className="info-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div className="info-details">
+                  <strong>Call Us</strong>
+                  <span>+91 98765 43210</span>
+                </div>
+              </div>
+              <div className="info-card">
+                <div className="info-icon">
+                  <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div className="info-details">
+                  <strong>Email</strong>
+                  <span>support@salvinindustries.com</span>
+                </div>
+              </div>
+              <div className="help-card">
+                <strong>Need Quick Help?</strong>
+                <p>Talk directly with our support team</p>
+                <a href="#" className="support-link">Contact Support &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Department Section */}
+      <section className="contact-dept-section">
+        <div className="contact-container">
+          <h2 className="section-title text-center">Contact by Department</h2>
+          <div className="dept-grid">
+            {/* Dept Cards */}
+            <div className="dept-card">
+              <div className="dept-icon">
+                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <div className="dept-info">
+                <strong>Managing Director</strong>
+                <span>Keval Gandhi</span>
+                <a href="mailto:md.salvinindustries@gmail.com">md.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+            <div className="dept-card">
+              <div className="dept-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <div className="dept-info">
+                <strong>Admin & Hr</strong>
+                <span>Archna Gohil</span>
+                <a href="mailto:hr.salvinindustries@gmail.com">hr.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+            <div className="dept-card">
+              <div className="dept-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <div className="dept-info">
+                <strong>CEO Office</strong>
+                <span>Purvi Rajput</span>
+                <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
+              </div>
+            </div>
+            <div className="dept-card">
+              <div className="dept-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              </div>
+              <div className="dept-info">
+                <strong>International</strong>
+                <span>Ajay Panchal</span>
+                <a href="mailto:international.salvin@gmail.com">international.salvin@gmail.com</a>
+              </div>
+            </div>
+            <div className="dept-card">
+              <div className="dept-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+              </div>
+              <div className="dept-info">
+                <strong>Corporate</strong>
+                <span>Hiyanee Gandhi</span>
+                <a href="mailto:corporate.salvinindustries@gmail.com">corporate.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+            <div className="dept-card">
+              <div className="dept-icon">
+                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+              </div>
+              <div className="dept-info">
+                <strong>Ask Me</strong>
+                <span>Shakshi Modi</span>
+                <a href="mailto:solveit.salvinindustries@gmail.com">solveit.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
 

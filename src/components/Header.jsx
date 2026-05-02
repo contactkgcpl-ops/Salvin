@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import logo from '../assets/salvin_logo.jpg';
 
 export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,10 +24,9 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   }, [menuOpen]);
 
   return (
-    <header className="navbar" style={{ background: "#FFFFE7", color: "#000" }}>
+    <header className="navbar" style={{ background: "white", color: "#000",fontWeight: "bold" }}>
       <div className="logo-container">
-        <span className="logo-salvin">S<span className="logo-a">A</span>LVIN</span>
-        <span className="logo-industries">industries</span>
+        <img src={logo} alt="SALVIN" srcset="" />
       </div>
 
       {/* Hamburger Button - visible only on mobile */}
