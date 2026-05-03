@@ -1,6 +1,6 @@
 .about-intro {
   background: #f5f7fb;
-  padding: 80px 20px;
+  padding: clamp(2.5rem, 6vw, 5rem) clamp(1rem, 4vw, 1.25rem);
 }
 
 .container {
@@ -25,8 +25,9 @@
 }
 
 .left h1 {
-  font-size: 40px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
   margin: 20px 0;
+  line-height: 1.15;
 }
 
 .left h1 span {

@@ -9,12 +9,38 @@ body {
 .app {
     min-height: 100vh;
     scroll-behavior: smooth;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    min-width: 0;
+}
+
+/* Consistent horizontal rhythm: mobile → tablet → desktop */
+.content-container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1rem, 4vw, 2.5rem);
+    padding-right: clamp(1rem, 4vw, 2.5rem);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.logo-container img {
+    display: block;
+    max-height: 52px;
+    width: auto;
+    max-width: min(200px, 42vw);
+    object-fit: contain;
 }
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 60px;
+    padding: 0 clamp(16px, 4vw, 60px);
     background: #fdfdfd;
     color: #0b2240;
     position: sticky;
@@ -118,7 +144,7 @@ body {
 /* HERO */
 .hero {
     min-height: 100vh;
-    background: url('assets/blue-machines.png') center/cover no-repeat;
+    background: url('assets/Hero_home.jpg') center/cover no-repeat;
     position: relative;
     display: flex;
     align-items: center;
@@ -194,10 +220,10 @@ body {
 /* STATS */
 .stats {
     display:flex;
-    gap: 55px;
+    gap: clamp(1rem, 3vw, 2.75rem);
     margin-top: 60px;
     justify-content: center;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 }
 
 .stat {
@@ -1378,9 +1404,9 @@ body {
   .stats {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: clamp(1rem, 3vw, 2.5rem);
     margin-top: 40px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     align-items: center;
   }
 
@@ -1552,6 +1578,11 @@ body {
 
   .page-section {
     min-height: 55vh;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-left: clamp(1rem, 4vw, 2.5rem);
+    padding-right: clamp(1rem, 4vw, 2.5rem);
   }
 
   .page-copy {
@@ -2192,8 +2223,7 @@ body {
   display: flex;
   align-items: center;
   background: linear-gradient(rgba(5, 20, 35, 0.85), rgba(5, 20, 35, 0.55)),
-    url("https://images.unsplash.com/photo-1565043589221-1a6fd9ae45c7?auto=format&fit=crop&w=1800&q=80")
-      center/cover no-repeat;
+    var(--hero-home-bg) center/cover no-repeat;
   border-bottom: 0;
 }
 
@@ -2277,6 +2307,49 @@ body {
 
 .home-template .stat p {
   color: #ff7a00;
+}
+
+/* Hero metrics: always a single row of three items */
+.home-template .hero-stats-row {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 3vw, 2.5rem);
+  align-items: start;
+  width: 100%;
+  max-width: min(960px, 100%);
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+.home-template .hero-stats-row .stat {
+  min-width: 0;
+}
+
+.home-template .hero-stats-row .stat h2 {
+  color: #fff;
+  margin: 0;
+  line-height: 1.1;
+  font-size: clamp(0.95rem, 2.6vw, 2rem);
+}
+
+.home-template .hero-stats-row .stat p {
+  margin-top: 8px;
+  font-size: clamp(0.62rem, 1.65vw, 1rem);
+  line-height: 1.25;
+}
+
+.home-template .hero-stats-row .stat::before {
+  top: 50%;
+  transform: translateY(-50%);
+  height: clamp(32px, 7vw, 56px);
+}
+
+@media (min-width: 640px) {
+  .home-template .industry-divisions-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .home-template .industry,
@@ -2863,6 +2936,24 @@ body {
   gap: 20px;
 }
 
+.home-template .projects-grid.home-projects-responsive {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+@media (max-width: 1200px) {
+  .home-template .projects-grid.home-projects-responsive {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .home-template .projects-grid.home-projects-responsive {
+    grid-template-columns: 1fr;
+  }
+}
+
 .home-template .project-card {
   background: #fff;
   border-radius: 12px;
@@ -2879,6 +2970,24 @@ body {
   width: 100%;
   height: 150px;
   object-fit: cover;
+}
+
+.home-template .project-card .project-card-image-wrap {
+  position: relative;
+  height: 160px;
+  overflow: hidden;
+  background: #e8ecf1;
+}
+
+.home-template .project-card .project-card-image-wrap img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .home-template .project-card .content {
@@ -2909,10 +3018,23 @@ body {
   background: #ff6a00;
   color: #fff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 4px;
+}
+
+.home-template .projects-grid .cta-box .cta-box-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  margin-bottom: 8px;
 }
 
 .home-template .projects-grid .cta-box h3 {
@@ -3077,8 +3199,9 @@ body {
 }
 
 .home-template .faq-answer.show {
-  max-height: 200px;
+  max-height: min(70vh, 800px);
   padding: 15px 20px;
+  overflow-y: auto;
 }
 
 .home-template .faq-toggle-icon {
@@ -3708,10 +3831,18 @@ body {
   color: #37476a;
 }
 
+.modal-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 26px;
+  max-width: 100%;
+}
+
 .modal-spec-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 26px;
+  margin-bottom: 0;
+  min-width: 260px;
 }
 
 .modal-spec-table td {
@@ -4157,8 +4288,8 @@ body {
   }
 }
 
-/* ===== MOBILE NAV: max-width 860px ===== */
-@media (max-width: 860px) {
+/* ===== TABLET & MOBILE NAV: max-width 1024px (drawer) ===== */
+@media (max-width: 1024px) {
   .hamburger-btn {
     display: flex;
   }
@@ -4578,7 +4709,8 @@ body {
 
   /* Section wrappers */
   .display-flex.align-center.industry-wrapper.m-10 {
-    padding: 0 16px;
+    padding-left: clamp(1rem, 4vw, 1.25rem);
+    padding-right: clamp(1rem, 4vw, 1.25rem);
   }
 
   .client-container,
@@ -4710,9 +4842,10 @@ body {
 }
 
 .contact-hero-content h1 {
-  font-size: 42px;
+  font-size: clamp(1.65rem, 4.5vw, 2.625rem);
   font-weight: 800;
   margin: 0 0 20px;
+  line-height: 1.15;
 }
 
 .contact-hero-content p {
@@ -4917,7 +5050,7 @@ body {
 
 .dept-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 

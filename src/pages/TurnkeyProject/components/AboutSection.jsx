@@ -7,7 +7,7 @@ function AboutSection() {
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         <div>
           <p className="mb-6 inline-flex items-center rounded-full border border-[#f47c20]/60 bg-[#fff4ea] px-4 py-1 text-xs font-bold uppercase tracking-[0.13em] text-[#f47c20]">
-            <span className="mr-2 text-sm leading-none">�</span>
+            <span className="mr-2 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-[#f47c20]" aria-hidden />
             ABOUT THE COMPANY
           </p>
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight text-[#0c2d57] sm:text-5xl">

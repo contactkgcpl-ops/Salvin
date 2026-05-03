@@ -1,15 +1,12 @@
-import Navbar from './components/Navbar'
 import HeroSection from './components/HeroSection'
 import AboutSection from './components/AboutSection'
 import ProjectsSection from './components/ProjectsSection'
 import ProcessSection from './components/ProcessSection'
 import CTASection from './components/CTASection'
-import Footer from './components/Footer'
 
 function TurnkeyProjectPage() {
   return (
-    <div className="bg-white text-slate-900">
-      <Navbar />
+    <div className="min-w-0 overflow-x-hidden bg-white text-slate-900">
       <main>
         <HeroSection />
         <AboutSection />
@@ -17,7 +14,6 @@ function TurnkeyProjectPage() {
         <ProcessSection />
         <CTASection />
       </main>
-      <Footer />
     </div>
   )
 }

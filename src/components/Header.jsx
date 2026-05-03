@@ -57,7 +57,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
 
         {isAdminAuthenticated && (
-          <button className="nav-logout-btn" type="button" onClick={() => { onAdminLogout(); setMenuOpen(false); }}>
+          <button className="nav-logout-btn font-bold" type="button" onClick={() => { onAdminLogout(); setMenuOpen(false); }}>
             LOGOUT
           </button>
         )}

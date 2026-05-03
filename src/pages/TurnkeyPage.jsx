@@ -4,7 +4,7 @@ import blueMachinesImage from "../assets/blue-machines.png";
 
 function TurnkeyPage() {
   return (
-    <div className="bg-white text-slate-900">
+    <div className="min-w-0 overflow-x-hidden bg-white text-slate-900">
       {/* Hero Section */}
       <section
         className="mach-hero"
@@ -24,7 +24,7 @@ function TurnkeyPage() {
 
       {/* About Section */}
       <section className="about" id="about">
-        <div className="display-flex align-center industry-wrapper m-10">
+        <div className="content-container">
           <div className="about-wrapper">
             <div className="about-left">
               <span className="tag">TURNKEY EXPERTISE</span>
@@ -55,7 +55,7 @@ function TurnkeyPage() {
 
       {/* Process Section */}
       <section className="industry" id="process">
-        <div className="display-flex align-center industry-wrapper m-10">
+        <div className="content-container">
           <div className="industry-header">
             <div>
               <span className="tag">OUR PROCESS</span>

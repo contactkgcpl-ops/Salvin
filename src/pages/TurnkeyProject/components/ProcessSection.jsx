@@ -37,68 +37,39 @@ const steps = [
   }
 ];
 
-export default function ImplementationProcess() {
+export default function ProcessSection() {
   return (
-    <section className="bg-white py-20">
-      <div className="max-w-7xl mx-auto px-6">
-
-        {/* Tag */}
+    <section className="bg-white py-12 sm:py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-6">
-          <span className="bg-[#fff4ea] text-[#f47c20] text-xs px-4 py-1 rounded-full font-bold">
+          <span className="inline-flex rounded-full bg-[#fff4ea] px-4 py-1 text-xs font-bold text-[#f47c20]">
             ● OUR IMPLEMENTATION PROCESS
           </span>
         </div>
 
-        {/* Heading */}
-        <h2 className="text-4xl font-extrabold text-gray-800 uppercase mb-4">
+        <h2 className="max-w-4xl text-balance text-2xl font-extrabold uppercase leading-tight tracking-tight text-gray-800 sm:text-3xl lg:text-4xl">
           FROM CONCEPT TO COMMISSIONING – WE DELIVER END TO END
         </h2>
 
-        <p className="text-gray-600 max-w-3xl mb-12">
+        <p className="mt-4 max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base">
           A structured 6-step implementation process that ensures every project is delivered with precision, performance, and peace of mind.
         </p>
 
-        {/* 🔥 FORCE 6 CARDS IN ONE ROW */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(6, 1fr)",
-            gap: "20px"
-          }}
-        >
-          {steps.map((step, index) => (
-            <div
-              key={index}
-              className="bg-[#f3f3f3] rounded-xl p-5 relative shadow-sm hover:shadow-md transition"
+        <ul className="mt-10 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-5">
+          {steps.map((step) => (
+            <li
+              key={step.number}
+              className="relative rounded-xl bg-[#f3f3f3] p-5 pb-6 shadow-sm transition-shadow hover:shadow-md"
             >
-              
-              {/* Icon */}
-              <div className="text-xl text-[#f47c20] mb-5">
-                {step.icon}
-              </div>
-
-              {/* Number */}
-              <span className="absolute top-4 right-4 text-3xl font-bold text-gray-300">
-                {step.number}
-              </span>
-
-              {/* Title */}
-              <h3 className="text-md font-bold text-gray-800 mb-2">
-                {step.title}
-              </h3>
-
-              {/* Desc */}
-              <p className="text-xs text-gray-600 leading-relaxed">
-                {step.desc}
-              </p>
-
-              {/* Bottom Line */}
-              <div className="absolute bottom-0 left-0 w-full h-[3px] bg-[#f47c20] rounded-b-xl"></div>
-            </div>
+              <div className="mb-4 text-xl text-[#f47c20]">{step.icon}</div>
+              <span className="absolute right-4 top-4 text-3xl font-bold text-gray-300">{step.number}</span>
+              <h3 className="mb-2 text-base font-bold text-gray-800">{step.title}</h3>
+              <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">{step.desc}</p>
+              <div className="absolute bottom-0 left-0 h-[3px] w-full rounded-b-xl bg-[#f47c20]" />
+            </li>
           ))}
-        </div>
-
+        </ul>
       </div>
     </section>
-  );
+  )
 }

@@ -35,7 +35,7 @@
 .journey .header h2 {
   margin: 16px 0 12px;
   color: #071a4f;
-  font-size: clamp(40px, 4vw, 66px);
+  font-size: clamp(1.65rem, 4.5vw, 4.125rem);
   line-height: 1.06;
   font-weight: 800;
 }

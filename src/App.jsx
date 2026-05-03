@@ -10,11 +10,24 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
+import Decade from "./assets/home_extra/decade_experties.png";
+import global from "./assets/home_extra/globalsupport.png";
+import innovation from "./assets/home_extra/innovation.png";
+import quality from "./assets/home_extra/quality.png";
+import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
+import industryAutomation from "./assets/industry-divisions/automation-robotics.png";
+import industryProcessing from "./assets/industry-divisions/processing-packaging.png";
+import industryConsultancy from "./assets/industry-divisions/consultancy.png";
+import industryPneumatic from "./assets/industry-divisions/pneumatic-equipment.png";
+import industryMaintenance from "./assets/industry-divisions/maintenance-support.png";
+import latestProjectsStrip from "./assets/home_projects/latest-projects-strip.png";
+import heroHomeBg from "./assets/hero-home-bg-new.jpg";
+
 
 const serviceCards = [
   {
     title: "Turnkey Projects",
-    text: "Complete end-to-end plant setup from concept to commissioning.",
+    text: "Complete end-to-end plant architecture, from conceptual blueprinting to installation and final commissioning.",
     image:
       "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=900&q=80"
   },
@@ -309,14 +322,16 @@ function MachineDetailModal({ machine, onClose }) {
             <h2 className="modal-title">{machine.machine_name}</h2>
             <p className="modal-desc">{machine.description}</p>
             <h4 className="modal-spec-heading">Technical Specifications</h4>
-            <table className="modal-spec-table">
-              <tbody>
-                <tr><td>Heads</td><td>{machine.specifications?.heads || "-"}</td></tr>
-                <tr><td>Volume Range</td><td>{machine.specifications?.volumeRange || "-"}</td></tr>
-                <tr><td>Control System</td><td>{machine.specifications?.controlSystem || "-"}</td></tr>
-                <tr><td>Production Speed</td><td>{machine.specifications?.productionSpeed || "-"}</td></tr>
-              </tbody>
-            </table>
+            <div className="modal-table-scroll">
+              <table className="modal-spec-table">
+                <tbody>
+                  <tr><td>Heads</td><td>{machine.specifications?.heads || "-"}</td></tr>
+                  <tr><td>Volume Range</td><td>{machine.specifications?.volumeRange || "-"}</td></tr>
+                  <tr><td>Control System</td><td>{machine.specifications?.controlSystem || "-"}</td></tr>
+                  <tr><td>Production Speed</td><td>{machine.specifications?.productionSpeed || "-"}</td></tr>
+                </tbody>
+              </table>
+            </div>
             <button className="modal-cta-btn">CONFIGURE THIS MODEL</button>
           </div>
         </div>
@@ -343,13 +358,15 @@ function SpareDetailModal({ spare, onClose }) {
             <h2 className="modal-title">{spare.spare_name}</h2>
             <p className="modal-desc">{spare.description}</p>
             <h4 className="modal-spec-heading">Details</h4>
-            <table className="modal-spec-table">
-              <tbody>
-                <tr><td>Category</td><td>{spare.spare_category_id}</td></tr>
-                <tr><td>Stock Available</td><td className={spare.stock_quantity > 10 ? "stock-good" : "stock-low"}>{spare.stock_quantity} units</td></tr>
-                <tr><td>Price</td><td>₹{Number(spare.price).toLocaleString("en-IN")}</td></tr>
-              </tbody>
-            </table>
+            <div className="modal-table-scroll">
+              <table className="modal-spec-table">
+                <tbody>
+                  <tr><td>Category</td><td>{spare.spare_category_id}</td></tr>
+                  <tr><td>Stock Available</td><td className={spare.stock_quantity > 10 ? "stock-good" : "stock-low"}>{spare.stock_quantity} units</td></tr>
+                  <tr><td>Price</td><td>₹{Number(spare.price).toLocaleString("en-IN")}</td></tr>
+                </tbody>
+              </table>
+            </div>
             <button className="modal-cta-btn">REQUEST QUOTE</button>
           </div>
         </div>
@@ -407,7 +424,7 @@ function MachineriesPage({ machines }) {
   }, [machines, searchQuery, selectedProcessing, selectedPackaging, sortBy]);
 
   return (
-    <section className="machineries-page-v2">
+    <section className="machineries-page-v2 min-w-0 overflow-x-hidden">
       {/* ——— HERO ——— */}
       <div
         className="mach-hero"
@@ -511,7 +528,6 @@ function MachineriesPage({ machines }) {
                   <p className="mach-card-desc">{machine.description}</p>
                   <div className="mach-card-specs">
                     <div className="mach-spec-item">
-                      <span className="mach-spec-val">{machine.priceRange}</span>
                       <span className="mach-spec-lbl">{machine.speed}</span>
                       <span className="mach-spec-unit">{machine.capacity}</span>
                     </div>
@@ -608,9 +624,9 @@ function AdminPage({
   }
 
   return (
-    <section className="admin-page page-section">
+    <section className="admin-page page-section mx-auto w-full max-w-[1200px]">
       <span className="section-badge">Admin</span>
-      <h1>Machines / Spares Management</h1>
+      <h1 className="text-2xl font-bold tracking-tight text-[#0d1b3e] sm:text-3xl lg:text-4xl">Machines / Spares Management</h1>
       <p className="page-copy">
         Add new records using your DB schema fields from the provided documentation.
       </p>
@@ -715,6 +731,23 @@ function AdminPage({
 
 function HomePage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const latestProjectsNews = [
+    {
+      title: "High-Speed Packaging Line Installed in UAE",
+      stripIndex: 0,
+    },
+    {
+      title: "Automate Food Processing Unit Delivered in India",
+      stripIndex: 1,
+    },
+    {
+      title: "Turnkey Plant Expansion for FMCG Client",
+      stripIndex: 2,
+    },
+  ];
+  const latestProjectsNewsDesc =
+    "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.";
+
   const faqItems = [
     {
       question: "What type of industries does Salvin Serve?",
@@ -743,26 +776,70 @@ function HomePage() {
     }
   ];
 
-  const industryCards = [
-    { title: "Turnkey Projects", text: "Complete end-to-end plant architecture, from conceptual blueprinting to installation and final commissioning.", image: serviceCards[0].image },
-    { title: "Automation & Robotics", text: "Precision-engineered automated assembly lines and seamless robotic integration for smart factory ecosystems.", image: serviceCards[3].image },
-    { title: "Processing & Packaging Machinery", text: "Hygienic, turnkey stainless steel processing lines engineered for dairy, beverage, and solid food manufacturing.", image: serviceCards[1].image },
-    { title: "Packaging Machinery", text: "High-speed, multi-format pouch and bottle filling systems with advanced capping and labeling technologies.", image: serviceCards[1].image },
-    { title: "Supply Chain", text: "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.", image: serviceCards[4].image },
-    { title: "Maintenance & Support", text: "Proactive annual maintenance contracts and 24/7 technical support to ensure zero-downtime production cycles.", image: serviceCards[5].image }
+  const industryDivisions = [
+    {
+      title: "Turnkey Projects",
+      text: "Complete end-to-end plant architecture, from conceptual blueprinting to installation and final commissioning.",
+      image: industryTurnkey,
+    },
+    {
+      title: "Automation & Robotics",
+      text: "Precision-engineered automated assembly lines and seamless robotic integration for smart factory ecosystems.",
+      image: industryAutomation,
+    },
+    {
+      title: "Processing & Packaging Machinery",
+      text: "Hygienic, turnkey stainless steel processing lines engineered for dairy, beverage, and solid food manufacturing.",
+      image: industryProcessing,
+    },
+    {
+      title: "Consultancy",
+      text: "High-speed, multi-format pouch and bottle filling systems with advanced capping and labeling technologies.",
+      image: industryConsultancy,
+    },
+    {
+      title: "Pneumatic Equipment",
+      text: "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.",
+      image: industryPneumatic,
+    },
+    {
+      title: "Maintenance & Support",
+      text: "Proactive annual maintenance contracts and 24/7 technical support to ensure zero-downtime production cycles.",
+      image: industryMaintenance,
+    },
   ];
 
   const whyUsFeatures = [
-    { icon: "⚙️", title: "Decades of Expertise", text: "Over 25 years of hands-on experience delivering complex industrial engineering and automation solutions." },
-    { icon: "🚀", title: "Innovative Technology", text: "Utilizing AI-driven robotics and cutting-edge IoT frameworks to build future-ready manufacturing operations." },
-    { icon: "🌍", title: "Global Support", text: "Our dedicated 24/7 technical support network and regional headquarters serve clients across 15+ countries." },
-    { icon: "⭐", title: "Quality Assurance", text: "ISO 9001:2015 certified manufacturing processes ensuring the highest standards of precision and safety." }
+    {
+      icon: <img src={Decade} alt="Decade of Expertise" className="mx-auto w-16 h-16 object-contain" />,
+      title: <h3 className="text-lg font-bold">Decades of Expertise</h3>,
+      text: "Over 25 years of hands-on experience delivering complex industrial engineering and automation solutions."
+    },
+    {
+      icon: <img src={innovation} alt="Innovative Technology" className="mx-auto w-16 h-16 object-contain" />,
+      title: <h3 className="text-lg font-bold">Innovative Technology</h3>,
+      text: "Utilizing AI-driven robotics and cutting-edge IoT frameworks to build future-ready manufacturing operations."
+    },
+    {
+      icon: <img src={global} alt="Global Support" className="mx-auto w-16 h-16 object-contain" />,
+      title: <h3 className="text-lg font-bold">Global Support</h3>,
+      text: "Our dedicated 24/7 technical support network and regional headquarters serve clients across 15+ countries."
+    },
+    {
+      icon: <img src={quality} alt="Quality Assurance" className="mx-auto w-16 h-16 object-contain" />,
+      title: <h3 className="text-lg font-bold">Quality Assurance</h3>,
+      text: "ISO 9001:2015 certified manufacturing processes ensuring the highest standards of precision and safety."
+    }
   ];
 
   return (
-    <div className="home-template">
+    <div className="home-template min-w-0 overflow-x-hidden">
       {/* HERO */}
-      <section className="hero" id="home">
+      <section
+        className="hero"
+        id="home"
+        style={{ "--hero-home-bg": `url(${heroHomeBg})` }}
+      >
         <div className="overlay" />
         <div className="hero-content">
           <span className="tag">ENGINEERING THE FUTURE</span>
@@ -779,7 +856,7 @@ function HomePage() {
             <NavLink className="primary" to="/contact">START YOUR PROJECT</NavLink>
             <NavLink className="secondary" to="/services">VIEW OUR SOLUTIONS</NavLink>
           </div>
-          <div className="stats">
+          <div className="hero-stats-row">
             <div className="stat"><h2>350+</h2><p>Completed Projects</p></div>
             <div className="stat"><h2>30+</h2><p>Countries Served</p></div>
             <div className="stat"><h2>5000+</h2><p>Products Packaged</p></div>
@@ -789,7 +866,7 @@ function HomePage() {
 
       {/* INDUSTRY */}
       <section className="industry" id="services">
-        <div className="display-flex align-center industry-wrapper m-10">
+        <div className="content-container">
           <div className="industry-header">
             <div>
               <span className="tag">SPECIALIZED VERTICALS</span>
@@ -800,16 +877,30 @@ function HomePage() {
               scalable architecture.
             </p>
           </div>
-          <div className="industry-grid">
-            {industryCards.map((item) => (
-              <div className="card" key={item.title}>
-                <img src={item.image} alt={item.title} />
-                <div className="card-body">
-                  <h3>{item.title}</h3>
-                  <p>{item.text}</p>
-                  <NavLink to="/services">VIEW SOLUTIONS →</NavLink>
+          <div className="industry-divisions-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {industryDivisions.map((item) => (
+              <article
+                key={item.title}
+                className="group flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg"
+              >
+                <div className="overflow-hidden">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-48 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                  />
                 </div>
-              </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <h3 className="text-lg font-bold leading-snug text-slate-900">{item.title}</h3>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                  <NavLink
+                    to="/services"
+                    className="mt-4 inline-flex text-xs font-bold uppercase tracking-wide text-[#ff7a00] transition hover:text-[#e56d00]"
+                  >
+                    VIEW SOLUTIONS →
+                  </NavLink>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -817,7 +908,7 @@ function HomePage() {
 
       {/* ABOUT */}
       <section className="about" id="about">
-        <div className="display-flex align-center industry-wrapper m-10">
+        <div className="content-container">
           <div className="about-wrapper">
             <div className="about-left">
               <span className="tag">ABOUT THE COMPANY</span>
@@ -830,7 +921,7 @@ function HomePage() {
 
               </p>
               <p className="desc">
-               Our team of 200+ engineers brings together expertise in mechanical design, robotics, PLC programming, and process automation-ensuring every plant we build operates at peak efficiency from day one.
+                Our team of 200+ engineers brings together expertise in mechanical design, robotics, PLC programming, and process automation-ensuring every plant we build operates at peak efficiency from day one.
 
               </p>
 
@@ -848,7 +939,7 @@ function HomePage() {
 
       {/* CLIENT VOICE */}
       <section className="client-container">
-        <section className="display-flex align-center industry-wrapper m-10">
+        <section className="content-container">
           <div className="section-header">
             <span className="tag">CLIENT VOICE</span>
             <div className="header-row">
@@ -861,7 +952,7 @@ function HomePage() {
               <div className="card testimonial-card-home" key={item.name}>
                 <div className="quote-icon-wrap">
                   <svg className="quote-icon-svg" viewBox="0 0 40 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 32V19.2C0 15.7333 0.533333 12.5333 1.6 9.6C2.66667 6.66667 4.53333 3.73333 7.2 0.800003L12.8 4.00001C10.9333 6.4 9.6 8.66667 8.8 10.8C8 12.9333 7.46667 15.2 7.2 17.6H14.4V32H0ZM22.4 32V19.2C22.4 15.7333 22.9333 12.5333 24 9.6C25.0667 6.66667 26.9333 3.73333 29.6 0.800003L35.2 4.00001C33.3333 6.4 32 8.66667 31.2 10.8C30.4 12.9333 29.8667 15.2 29.6 17.6H36.8V32H22.4Z" fill="#F5A663"/>
+                    <path d="M0 32V19.2C0 15.7333 0.533333 12.5333 1.6 9.6C2.66667 6.66667 4.53333 3.73333 7.2 0.800003L12.8 4.00001C10.9333 6.4 9.6 8.66667 8.8 10.8C8 12.9333 7.46667 15.2 7.2 17.6H14.4V32H0ZM22.4 32V19.2C22.4 15.7333 22.9333 12.5333 24 9.6C25.0667 6.66667 26.9333 3.73333 29.6 0.800003L35.2 4.00001C33.3333 6.4 32 8.66667 31.2 10.8C30.4 12.9333 29.8667 15.2 29.6 17.6H36.8V32H22.4Z" fill="#F5A663" />
                   </svg>
                 </div>
                 <p className="quote">{item.text}</p>
@@ -880,7 +971,7 @@ function HomePage() {
 
       {/* WHY CHOOSE */}
       <section className="why-us-container">
-        <section className="display-flex align-center industry-wrapper m-10">
+        <section className="content-container">
           <div className="section-header mt">
             <span className="tag">OUR COMPETITIVE EDGE</span>
             <div className="header-row">
@@ -905,7 +996,7 @@ function HomePage() {
 
       {/* FAQ */}
       <section className="faq-container">
-        <section className="display-flex align-center industry-wrapper m-10">
+        <section className="content-container">
           <div className="faq-header">
             <span className="tag">FAQ</span>
             <h2>Frequently Asked <span>Questions</span></h2>
@@ -926,7 +1017,7 @@ function HomePage() {
 
       {/* PROJECTS */}
       <section className="projects-container" id="projects">
-        <section className="display-flex align-center industry-wrapper m-10">
+        <section className="content-container">
           <div className="projects-header">
             <div>
               <span className="tag">SPECIALIZED VERTICALS</span>
@@ -937,35 +1028,34 @@ function HomePage() {
               scalable architecture.
             </p>
           </div>
-          <div className="projects-grid">
-            <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1581093458791-9d42f5e4a3c1?auto=format&fit=crop&w=600&q=80" alt="Packaging Line" />
-              <div className="content">
-                <h4>High-Speed Packaging Line Installed in UAE</h4>
-                <p>Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.</p>
-                <a href="#">READ MORE →</a>
+          <div className="projects-grid home-projects-responsive">
+            {latestProjectsNews.map((item) => (
+              <div className="project-card" key={item.title}>
+                <div className="project-card-image-wrap">
+                  <img
+                    src={latestProjectsStrip}
+                    alt=""
+                    decoding="async"
+                    style={{ left: `${-item.stripIndex * 100}%` }}
+                  />
+                </div>
+                <div className="content">
+                  <h4>{item.title}</h4>
+                  <p>{latestProjectsNewsDesc}</p>
+                  <a href="#projects">READ MORE →</a>
+                </div>
               </div>
-            </div>
-            <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1581093588401-22fcd1e2f9a2?auto=format&fit=crop&w=600&q=80" alt="Food Processing" />
-              <div className="content">
-                <h4>Automate Food Processing Unit Delivered in India</h4>
-                <p>Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.</p>
-                <a href="#">READ MORE →</a>
-              </div>
-            </div>
-            <div className="project-card">
-              <img src="https://images.unsplash.com/photo-1581092334463-f6cbb1c03c4b?auto=format&fit=crop&w=600&q=80" alt="Turnkey Plant" />
-              <div className="content">
-                <h4>Turnkey Plant Expansion for FMCG Client</h4>
-                <p>Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.</p>
-                <a href="#">READ MORE →</a>
-              </div>
-            </div>
+            ))}
             <div className="cta-box">
-              <h3>Let's Build the Future Together</h3>
+              <div className="cta-box-icon" aria-hidden>
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                </svg>
+              </div>
+              <h3>Let&apos;s Build the Future Together</h3>
               <p>Have a project in mind? Our experts are ready to help you.</p>
-              <NavLink to="/contact"><button>CONTACT US</button></NavLink>
+              <NavLink to="/contact"><button type="button">CONTACT US</button></NavLink>
             </div>
           </div>
         </section>
@@ -985,12 +1075,12 @@ function HomePage() {
 }
 
 function AboutPage() {
-  return <About/>;
+  return <About />;
 }
 
 function ContactPage() {
   return (
-    <div className="contact-page-new">
+    <div className="contact-page-new min-w-0 overflow-x-hidden">
       {/* Hero Section */}
       <section className="contact-hero">
         <div className="contact-hero-content">
@@ -1077,7 +1167,7 @@ function ContactPage() {
             {/* Dept Cards */}
             <div className="dept-card">
               <div className="dept-icon">
-                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
               </div>
               <div className="dept-info">
                 <strong>Managing Director</strong>
@@ -1127,7 +1217,7 @@ function ContactPage() {
             </div>
             <div className="dept-card">
               <div className="dept-icon">
-                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
               </div>
               <div className="dept-info">
                 <strong>Ask Me</strong>
@@ -1144,9 +1234,9 @@ function ContactPage() {
 
 function ServicesPage() {
   return (
-    <section className="services page-section">
+    <section className="services page-section mx-auto w-full max-w-[1200px]">
       <span className="section-badge">Our Services</span>
-      <h1>Services</h1>
+      <h1 className="text-3xl font-bold tracking-tight text-[#0d1b3e] sm:text-4xl lg:text-[2.75rem]">Services</h1>
       <p className="page-copy">
         End-to-end industrial solutions designed for productivity, automation, and scale.
       </p>
@@ -1243,13 +1333,9 @@ export default function App() {
     setIsAdminAuthenticated(false);
   };
 
-  const isStandaloneTurnkeyProjectRoute = location.pathname === "/turnkey-project";
-
   return (
     <div className="app">
-      {!isStandaloneTurnkeyProjectRoute && (
-        <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
-      )}
+      <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
@@ -1285,7 +1371,7 @@ export default function App() {
         />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-      {!isStandaloneTurnkeyProjectRoute && <Footer />}
+      <Footer />
     </div>
   );
 }

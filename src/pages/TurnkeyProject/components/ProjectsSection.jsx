@@ -1,127 +1,40 @@
-import chilliMachineImage from "../../../assets/turnkey/chilli-machine.png";
-import robotArmImage from "../../../assets/turnkey/robot-arm.png";
-import conveyorMachineImage from "../../../assets/turnkey/conveyor-machine.png";
-import steelTanksImage from "../../../assets/turnkey/steel-tanks.png";
-import processingPipesImage from "../../../assets/turnkey/processing-pipes.png";
-import silosImage from "../../../assets/turnkey/silos.png";
-
-const projects = [
-  {
-    category: 'FOOD PROCESSING',
-    title: 'Red Chilli Processing and Packaging Plant',
-    description: 'Complete automated line for cleaning, grinding, and moisture-controlled packaging.',
-    image: chilliMachineImage
-  },
-  {
-    category: 'SNACKS',
-    title: 'Banana and Potato Chips Processing Plant',
-    description: 'High-output frying and seasoning solutions for uniform chip quality.',
-    image: robotArmImage
-  },
-  {
-    category: 'BEVERAGE',
-    title: 'Beetroot Juice Processing and Packaging Plant',
-    description: 'Extraction and aseptic packaging line for natural health beverages.',
-    image: conveyorMachineImage
-  },
-  {
-    category: 'SPICES',
-    title: 'Turmeric Powder Processing Plant',
-    description: 'Industrial-grade pulverization and steam-sterilization system.',
-    image: steelTanksImage
-  },
-  {
-    category: 'BEVERAGE',
-    title: 'Fully Automatic Honey Processing Plant',
-    description: 'Aseptic filtration, heating, and high-precision bottle filling units.',
-    image: processingPipesImage
-  },
-  {
-    category: 'FOOD PROCESSING',
-    title: 'Dates Processing Plant',
-    description: 'Cleaning, sorting, and vacuum-sealed packaging for premium date products.',
-    image: silosImage
-  },
-];
-
-function ProjectCard({ project }) {
-  return (
-    <div className="bg-[#f6f6f6] rounded-xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
-      
-      {/* Image */}
-      <div className="relative">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="w-full h-52 object-cover"
-        />
-        <span className="absolute top-3 left-3 bg-white text-[#f47c20] text-[10px] px-3 py-1 rounded-full font-bold tracking-widest">
-          {project.category}
-        </span>
-      </div>
-
-      {/* Content */}
-      <div className="p-4 flex flex-col flex-1">
-        <h3 className="text-md font-bold text-slate-800">
-          {project.title}
-        </h3>
-
-        <p className="text-sm text-slate-600 mt-2 border-b pb-3">
-          {project.description}
-        </p>
-
-        <div className="flex gap-2 mt-4">
-          <button className="flex-1 bg-[#f47c20] text-white text-xs py-2 rounded-md font-semibold hover:bg-[#dc6e19] transition">
-            DOWNLOAD BROCHURE
-          </button>
-
-          <button className="w-9 h-9 border border-slate-300 rounded-md flex items-center justify-center hover:bg-slate-100 transition">
-            →
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
+import BrochureCard from './BrochureCard'
+import { brochureProjects } from '../data/brochureCatalog'
 
 export default function ProjectsSection() {
   return (
-    <section className="bg-white py-16">
-
-      {/* Container */}
-      <div className="mx-auto w-full max-w-[1100px] px-4">
-
-        {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-6 mb-10">
+    <section className="border-t border-slate-200/80 bg-[#f8fafc] py-14 sm:py-16 lg:py-20">
+      <div className="mx-auto w-full max-w-[1200px] px-4 sm:px-6">
+        <div className="mb-10 grid gap-6 lg:mb-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-end lg:gap-10">
           <div>
-            <span className="bg-[#fff4ea] text-[#f47c20] text-xs px-3 py-1 rounded-full font-bold">
-              • SERVICES
+            <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#f47c20] shadow-sm ring-1 ring-slate-200/80">
+              <span className="h-1.5 w-1.5 rounded-full bg-[#f47c20]" aria-hidden />
+              Brochures
             </span>
-
-            <h2 className="text-3xl font-bold text-slate-800 mt-3">
-              Our Turnkey Projects
+            <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              Turnkey project brochures
             </h2>
           </div>
-
-          <p className="text-slate-600 text-sm">
-            Our turnkey projects explore how we've helped industries globally transition from operational chaos to systematic excellence.
+          <p className="max-w-xl text-sm leading-relaxed text-slate-600 lg:text-base lg:leading-relaxed">
+            Explore Salvin&apos;s industrial processing lines—each card reflects an installed-capacity concept you can
+            scale with our engineers from blueprint through commissioning.
           </p>
         </div>
 
-        {/* GRID (FORCED 3-3) */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            gap: "20px"
-          }}
-        >
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
+        <ul className="grid grid-cols-1 gap-5 sm:grid-cols-2 sm:gap-6 xl:grid-cols-3">
+          {brochureProjects.map((project) => (
+            <li key={project.id} className="min-h-0 list-none">
+              <BrochureCard
+                title={project.title}
+                descriptionLines={project.descriptionLines}
+                imageSrc={project.imageSrc}
+                brochureHref={project.brochureHref}
+                brochureDownloadName={project.brochureDownloadName}
+              />
+            </li>
           ))}
-        </div>
-
+        </ul>
       </div>
     </section>
-  );
+  )
 }
