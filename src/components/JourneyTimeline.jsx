@@ -105,47 +105,48 @@ const timeline = [
 
 export default function JourneyTimeline() {
   return (
-    <section className="journey" id="journey">
-      <div className="header">
-        <span className="tag">SINCE 2009</span>
-        <h2>
-          Our <span>Journey</span>
-        </h2>
-        <p>An engineering roadmap of precision, innovation, and global expansion.</p>
-      </div>
+    null
+    // <section className="journey" id="journey">
+    //   <div className="header">
+    //     <span className="tag">SINCE 2009</span>
+    //     <h2>
+    //       Our <span>Journey</span>
+    //     </h2>
+    //     <p>An engineering roadmap of precision, innovation, and global expansion.</p>
+    //   </div>
 
-      <div className="timeline">
-        {timeline.map((item, index) => {
-          const Icon = item.icon;
-          return (
-            <div key={`${item.year}-${item.title}`} className={`row ${item.side}`}>
-              <article className="card">
-                {item.side === "left" && (
-                  <img className="timeline-image" src={item.image} alt={item.title} />
-                )}
+    //   <div className="timeline">
+    //     {timeline.map((item, index) => {
+    //       const Icon = item.icon;
+    //       return (
+    //         <div key={`${item.year}-${item.title}`} className={`row ${item.side}`}>
+    //           <article className="card">
+    //             {item.side === "left" && (
+    //               <img className="timeline-image" src={item.image} alt={item.title} />
+    //             )}
 
-                <div className="content">
-                  <span className="year">{item.year}</span>
-                  <h3>{item.title}</h3>
-                  <p>{item.description}</p>
-                </div>
+    //             <div className="content">
+    //               <span className="year">{item.year}</span>
+    //               <h3>{item.title}</h3>
+    //               <p>{item.description}</p>
+    //             </div>
 
-                <span className="event-icon" aria-hidden="true">
-                  <Icon />
-                </span>
+    //             <span className="event-icon" aria-hidden="true">
+    //               <Icon />
+    //             </span>
 
-                {item.side === "right" && (
-                  <img className="timeline-image" src={item.image} alt={item.title} />
-                )}
-              </article>
+    //             {item.side === "right" && (
+    //               <img className="timeline-image" src={item.image} alt={item.title} />
+    //             )}
+    //           </article>
 
-              <div className="center">
-                <span className="num">{String(index + 1).padStart(2, "0")}</span>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
+    //           <div className="center">
+    //             <span className="num">{String(index + 1).padStart(2, "0")}</span>
+    //           </div>
+    //         </div>
+    //       );
+    //     })}
+    //   </div>
+    // </section>
   );
 }

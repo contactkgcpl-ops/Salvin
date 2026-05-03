@@ -9,10 +9,10 @@ export default function ProjectsSection() {
           <div>
             <span className="inline-flex items-center gap-2 rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.2em] text-[#f47c20] shadow-sm ring-1 ring-slate-200/80">
               <span className="h-1.5 w-1.5 rounded-full bg-[#f47c20]" aria-hidden />
-              Brochures
+              Projects
             </span>
             <h2 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-              Turnkey project brochures
+              Turnkey Projects
             </h2>
           </div>
           <p className="max-w-xl text-sm leading-relaxed text-slate-600 lg:text-base lg:leading-relaxed">

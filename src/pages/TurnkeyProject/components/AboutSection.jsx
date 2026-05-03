@@ -1,5 +1,5 @@
 // src/components/AboutSection.jsx
-import indus from '../../../assets/indus.png'
+import indus from '../../../assets/turnkey_projects.png'
 
 function AboutSection() {
   return (
@@ -11,7 +11,7 @@ function AboutSection() {
             ABOUT THE COMPANY
           </p>
           <h2 className="max-w-xl text-4xl font-extrabold leading-tight text-[#0c2d57] sm:text-5xl">
-            Engineering <span className="text-[#f47c20]">India&apos;s Industrial</span> Future Since 1999
+            Engineering <span className="text-[#f47c20]">India&apos;s Industrial</span> Future Since 2008
           </h2>
           <p className="mt-8 text-lg leading-relaxed text-slate-600">
             Salvin Industries is a leading turnkey automation and packaging machinery group headquartered in Ahmedabad, Gujarat, India. We specialize in designing, manufacturing, and deploying high-performance production lines for global manufacturers across pharmaceuticals, food processing, cosmetics, and industrial sectors.

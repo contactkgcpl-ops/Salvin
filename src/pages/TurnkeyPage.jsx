@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import blueMachinesImage from "../assets/blue-machines.png";
+import foodProcessingPlant from "../assets/food-processing-plant.jpg";
 
 function TurnkeyPage() {
   return (
@@ -8,7 +8,7 @@ function TurnkeyPage() {
       {/* Hero Section */}
       <section
         className="mach-hero"
-        style={{ backgroundImage: `linear-gradient(rgba(9, 25, 56, 0.82), rgba(9, 25, 56, 0.82)), url(${blueMachinesImage})` }}
+        style={{ backgroundImage: `linear-gradient(rgba(9, 25, 56, 0.82), rgba(9, 25, 56, 0.82)), url('${foodProcessingPlant}')` }}
       >
         <span className="mach-hero-badge">★ TURNKEY SOLUTIONS</span>
         <h1>Complete Turnkey<br />Plant Solutions</h1>

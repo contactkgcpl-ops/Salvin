@@ -1357,7 +1357,7 @@ function ContactPage() {
       </section>
 
       {/* Our Journey Section */}
-      <ContactJourneySection />
+      {/* <ContactJourneySection /> */}
     </div>
   );
 }
