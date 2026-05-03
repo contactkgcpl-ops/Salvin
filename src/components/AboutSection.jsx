@@ -1,12 +1,12 @@
 import React from "react";
 import { FaUsers, FaPencilRuler, FaCogs, FaGlobe, FaRocket, FaShieldAlt, FaLinkedin } from "react-icons/fa";
 import "../assets/About.css";
-import Journey from "../components/JourneyTimeline";
+// import Journey from "../components/JourneyTimeline";
 import "../assets/HowWeWork.css";
 import "../assets/vision.css";
 import "../assets/team.css";
 import "../assets/why_us.css";
-import "../assets/JourneyTimeline.css";
+// import "../assets/JourneyTimeline.css";
 
 import aboutImg from "../assets/Industrial.png";
 
@@ -204,7 +204,7 @@ export default function About() {
     </section>
 
       {/* JOURNEY */}
-      <Journey />
+      {/* <Journey /> */}
 
      <section className="vision-section">
       <div className="vision-card">

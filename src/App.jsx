@@ -1078,6 +1078,133 @@ function AboutPage() {
   return <About />;
 }
 
+const journeyData = [
+  {
+    id: "01",
+    year: "2009",
+    title: "Packaging Unit",
+    desc: "Foundational entry into high-precision industrial packaging, setting the benchmark for engineering reliability.",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>,
+    side: "left"
+  },
+  {
+    id: "02",
+    year: "2011",
+    title: "Fully Automatic Design",
+    desc: "Pioneering zero-intervention automation systems to maximize manufacturing efficiency and performance.",
+    image: "https://images.unsplash.com/photo-1565514020179-026b92b84bb6?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>,
+    side: "right"
+  },
+  {
+    id: "03",
+    year: "2013",
+    title: "Processing Mfg",
+    desc: "Expanding into complex processing engineering for high-growth food and pharmaceutical industries.",
+    image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>,
+    side: "left"
+  },
+  {
+    id: "04",
+    year: "2015",
+    title: "Reactors & Vessel Design",
+    desc: "Advanced heavy-duty fabrication of chemical reactors and pressure vessels for critical applications.",
+    image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12" y2="22"></line><line x1="9" y1="22" x2="15" y2="22"></line></svg>,
+    side: "right"
+  },
+  {
+    id: "05",
+    year: "2017",
+    title: "Pharma Consultant",
+    desc: "Launched strategic engineering consultancy, optimizing plant layouts for global regulatory standards.",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>,
+    side: "left"
+  },
+  {
+    id: "06",
+    year: "2019",
+    title: "GMP Plant Design",
+    desc: "Implementing global GMP standards in turnkey plant architecture and facility engineering.",
+    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>,
+    side: "right"
+  },
+  {
+    id: "07",
+    year: "2021",
+    title: "Contract Packaging",
+    desc: "Scalable, high-speed contract packaging solutions for premium global beauty and food brands.",
+    image: "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>,
+    side: "left"
+  },
+  {
+    id: "08",
+    year: "2023",
+    title: "International Projects",
+    desc: "Executing large-scale international turnkey projects, establishing a global engineering footprint.",
+    image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>,
+    side: "right"
+  },
+  {
+    id: "09",
+    year: "2025",
+    title: "Automation 4.0 Era",
+    desc: "Leading the next industrial revolution with AI-driven Automation 4.0 and smart factory solutions.",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80",
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>,
+    side: "left"
+  }
+];
+
+function ContactJourneySection() {
+  return (
+    <section className="journey-timeline-section">
+      <div className="journey-header">
+        <div className="journey-badge">
+          <span></span>SINCE 2009
+        </div>
+        <h2>Our <span>Journey</span></h2>
+        <p>An engineering roadmap of precision, innovation, and global expansion.</p>
+      </div>
+
+      <div className="journey-timeline-wrapper">
+        <div className="journey-timeline-line"></div>
+        {journeyData.map((item) => (
+          <div key={item.id} className={`journey-item ${item.side}`}>
+            {/* Empty space for the opposite side */}
+            <div className="journey-spacer"></div>
+
+            {/* Center Node */}
+            <div className="journey-node">{item.id}</div>
+
+            {/* Content Wrapper */}
+            <div className="journey-content-wrapper">
+              <div className="journey-connector"></div>
+              <div className="journey-card">
+                <img src={item.image} alt={item.title} className="journey-card-img" />
+                <div className="journey-card-info">
+                  <div className="journey-year">{item.year}</div>
+                  <h4 className="journey-card-title">{item.title}</h4>
+                  <p className="journey-card-desc">{item.desc}</p>
+                </div>
+                <div className="journey-icon-wrap">
+                  {item.icon}
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ContactPage() {
   return (
     <div className="contact-page-new min-w-0 overflow-x-hidden">
@@ -1228,6 +1355,9 @@ function ContactPage() {
           </div>
         </div>
       </section>
+
+      {/* Our Journey Section */}
+      <ContactJourneySection />
     </div>
   );
 }
