@@ -6,7 +6,9 @@ import "../assets/HowWeWork.css";
 import "../assets/vision.css";
 import "../assets/team.css";
 import "../assets/why_us.css";
-// import "../assets/JourneyTimeline.css";
+import "../assets/md_section.css";
+import { FaUserTie, FaBuilding, FaVial } from "react-icons/fa";
+import mdImage from "../assets/team1.png"; // Placeholder, user to provide keval_gandhi.jpg
 
 import aboutImg from "../assets/Industrial.png";
 
@@ -39,10 +41,10 @@ const data2 = [
 ];
 const team = [
   {
-    name: "Vikas Salvin",
+    name: "Er. Keval Gandhi",
     role: "MANAGING DIRECTOR",
-    desc: "Visionary leader with 25+ years in automation and industrial solutions.",
-    img: team1
+    desc: "Founder and visionary leader with extensive expertise in turnkey industrial solutions.",
+    img: mdImage
   },
   {
     name: "Ketan Patel",
@@ -203,8 +205,57 @@ export default function About() {
 
       </section>
 
-      {/* JOURNEY */}
-      {/* <Journey /> */}
+      {/* MANAGING DIRECTOR SECTION */}
+      <section className="md-section">
+        <div className="md-container">
+          <div className="md-image-box">
+            <img src={mdImage} alt="Er. Keval Gandhi" />
+            <div className="md-name-badge">
+              <div className="icon"><FaUserTie /></div>
+              <span>Er. Keval Gandhi</span>
+            </div>
+          </div>
+
+          <div className="md-content">
+            <h2>Managing Director</h2>
+            <p className="bio">
+              Keval Gandhi is the Founder and Managing Director of Salvin Industries,
+              a leading engineering and consulting firm based in Ahmedabad, Gujarat.
+              Under his leadership since 2008, the company has grown into a global
+              provider of turnkey plant solutions and industrial consulting.
+            </p>
+
+            <div className="md-expertise-title">Professional Roles & Expertise</div>
+            <div className="expertise-list">
+              <div className="expertise-item">
+                <div className="expertise-icon"><FaUserTie /></div>
+                <div className="expertise-text">
+                  <h4>Industrial Consultant</h4>
+                  <p>He provides expert consulting for the food and pharmaceutical industries, specializing in production planning, control, and process optimization.</p>
+                </div>
+              </div>
+
+              <div className="expertise-item">
+                <div className="expertise-icon"><FaBuilding /></div>
+                <div className="expertise-text">
+                  <h4>Founder of Salvin Industries</h4>
+                  <p>He established Salvin Industries, which offers complete, sustainable, and high-output industrial solutions for startups and large corporates alike.</p>
+                </div>
+              </div>
+
+              <div className="expertise-item">
+                <div className="expertise-icon"><FaVial /></div>
+                <div className="expertise-text">
+                  <h4>Lead at Salvin Pharma</h4>
+                  <p>He is also associated with Salvin Pharma and Packaging Industries, which deals in organic spices, chocolates, and automatic packaging plants.</p>
+                </div>
+              </div>
+            </div>
+
+            <button className="md-footer-btn">For More Info..</button>
+          </div>
+        </div>
+      </section>
 
       <section className="vision-section">
         <div className="vision-card">

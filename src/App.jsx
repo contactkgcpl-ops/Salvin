@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { Navigate, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { Navigate, NavLink, Route, Routes, useLocation, useParams } from "react-router-dom";
 import "./App.css";
 import machineCardsImage from "./assets/machine-cards.png";
 import machineryLayoutImage from "./assets/machinery-layout.png";
@@ -8,6 +8,54 @@ import machineCardRefImage from "./assets/machine-card-ref.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+
+async function readJsonResponse(response) {
+  const contentType = response.headers.get("content-type") || "";
+  const bodyText = await response.text();
+
+  if (!contentType.includes("application/json")) {
+    const preview = bodyText.trim().slice(0, 80);
+    throw new Error(
+      preview.startsWith("<!DOCTYPE") || preview.startsWith("<html")
+        ? "Machine API returned the frontend HTML. Start the Express server with `npm run server` or use `npm run full-dev`."
+        : `Machine API returned a non-JSON response: ${preview || response.statusText}`
+    );
+  }
+
+  const data = bodyText ? JSON.parse(bodyText) : null;
+  if (!response.ok) {
+    throw new Error(data?.error || "Machine API request failed.");
+  }
+  return data;
+}
+
+async function fetchJson(url, options) {
+  const response = await fetch(`${API_BASE_URL}${url}`, options);
+  return readJsonResponse(response);
+}
+
+// Dynamically import all machine images from the assets/machine folder
+const machineImages = import.meta.glob("./assets/machine/*.{png,jpg,jpeg,webp,svg,gif}", { eager: true });
+
+const resolveMachineImage = (image, sessionCache = {}) => {
+  if (typeof image === "string") {
+    // 1. Check if it's a direct public path (starts with /)
+    if (image.startsWith("/")) return image;
+    
+    // 2. Check session cache (Base64)
+    if (sessionCache[image]) return sessionCache[image];
+
+    // 3. Check if it's a full URL
+    if (image.startsWith("http") || image.startsWith("data:")) return image;
+
+    // 4. Then check internal assets/machine folder (legacy)
+    const path = `./assets/machine/${image}`;
+    return machineImages[path]?.default || machineImages[path] || image;
+  }
+  return image;
+};
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import Decade from "./assets/home_extra/decade_experties.png";
@@ -15,12 +63,16 @@ import global from "./assets/home_extra/globalsupport.png";
 import innovation from "./assets/home_extra/innovation.png";
 import quality from "./assets/home_extra/quality.png";
 import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
-import industryAutomation from "./assets/industry-divisions/automation-robotics.png";
+import industryAutomation from "./assets/industry-divisions/automation-robotics.webp";
 import industryProcessing from "./assets/industry-divisions/processing-packaging.png";
-import industryConsultancy from "./assets/industry-divisions/consultancy.png";
-import industryPneumatic from "./assets/industry-divisions/pneumatic-equipment.png";
-import industryMaintenance from "./assets/industry-divisions/maintenance-support.png";
-import latestProjectsStrip from "./assets/home_projects/latest-projects-strip.png";
+import industryConsultancy from "./assets/industry-divisions/food_consultant.jpg";
+import industryPneumatic from "./assets/industry-divisions/pnuematic_spares.webp";
+import industryMaintenance from "./assets/industry-divisions/machine-maintenance.jpg";
+import projHoney from "./assets/home_projects/honey processing plant.webp";
+import projSpices from "./assets/home_projects/spices_processing.png";
+import projApi from "./assets/home_projects/APi_Plant.jpg";
+import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
+import projRice from "./assets/home_projects/puffed_rice.png";
 import heroHomeBg from "./assets/hero-home-bg-new.jpg";
 
 
@@ -93,128 +145,132 @@ const testimonialCards = [
   }
 ];
 
-const initialMachineCategories = ["Processing", "API", "Food", "Pharmaceutical", "Spice Processing"];
-const initialSpareCategories = ["Bottle", "Pouch", "Tube", "Wax", "End Drop"];
+const initialMachineCategories = ["Packaging", "Processing"];
 
-const processingCategories = ["API", "Food", "Pharmaceutical", "Spice Processing"];
-const packagingCategories = ["Bottle", "Pouch", "Tube", "Wax", "End Drop"];
+const subCategoryMap = {
+  Packaging: ["Pouch Packaging", "Vial Packaging", "Bottle Packaging", "Tube Packaging", "Eye Drop Packaging"],
+  Processing: ["Spices Processing", "API Processing", "Food Processing", "Pharmaceutical Processing"]
+};
 
-const initialMachines = [
-  {
-    machine_id: 1,
-    machine_name: "Automatic Liquid Filling Machine",
-    category_id: "Processing",
-    subcategory: "Pharmaceutical",
-    image_url: machineCardsImage,
-    description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-    tags: ["PROCESSING / LIQUID FILLING", "PHARMACEUTICAL"],
-    specifications: {
-      heads: "4-head SS 316 Construction",
-      volumeRange: "15ml – 1000ml",
-      controlSystem: "Siemens / Delta PLC",
-      productionSpeed: "40-60 Containers/min"
-    },
-    priceRange: "1.90 CRORE",
-    speed: "120 RPM",
-    capacity: "33.99L",
-    status: "active"
-  },
-  {
-    machine_id: 2,
-    machine_name: "Spice Grinding Machine",
-    category_id: "Processing",
-    subcategory: "Spice Processing",
-    image_url: machineCardsImage,
-    description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-    tags: ["PROCESSING / GRINDING", "FOOD & SPICES"],
-    specifications: {
-      heads: "2-head SS 304 Construction",
-      volumeRange: "50g – 5000g",
-      controlSystem: "Delta PLC",
-      productionSpeed: "80-120 Kg/hr"
-    },
-    priceRange: "1.90 CRORE",
-    speed: "120 RPM",
-    capacity: "30.5KG",
-    status: "active"
-  },
-  {
-    machine_id: 3,
-    machine_name: "Tablet Coating Machine",
-    category_id: "Processing",
-    subcategory: "Pharmaceutical",
-    image_url: machineCardsImage,
-    description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-    tags: ["PROCESSING / COATING", "PHARMACEUTICAL"],
-    specifications: {
-      heads: "Auto-spray SS 316 System",
-      volumeRange: "5mm – 25mm tablet",
-      controlSystem: "Siemens PLC",
-      productionSpeed: "60-80 tablets/min"
-    },
-    priceRange: "1.90 CRORE",
-    speed: "160 RPM",
-    capacity: "33.99L",
-    status: "active"
-  },
-  {
-    machine_id: 4,
-    machine_name: "Bottle Filling Machine",
-    category_id: "Packaging",
-    subcategory: "Bottle",
-    image_url: machineCardRefImage,
-    description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-    tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
-    specifications: {
-      heads: "6-head SS 316 Construction",
-      volumeRange: "30ml – 1000ml",
-      controlSystem: "Siemens / Delta PLC",
-      productionSpeed: "60-80 Bottles/min"
-    },
-    priceRange: "1.56 CRORE",
-    speed: "120 RPM",
-    capacity: "33.99L",
-    status: "active"
-  },
-  {
-    machine_id: 5,
-    machine_name: "Bottle Filling Machine",
-    category_id: "Packaging",
-    subcategory: "Bottle",
-    image_url: machineCardRefImage,
-    description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-    tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
-    specifications: {
-      heads: "8-head SS 316 Construction",
-      volumeRange: "15ml – 500ml",
-      controlSystem: "Delta PLC",
-      productionSpeed: "80-100 Bottles/min"
-    },
-    priceRange: "1.56 CRORE",
-    speed: "120 RPM",
-    capacity: "33.99L",
-    status: "active"
-  },
-  {
-    machine_id: 6,
-    machine_name: "Bottle Filling Machine",
-    category_id: "Packaging",
-    subcategory: "Bottle",
-    image_url: machineCardRefImage,
-    description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-    tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
-    specifications: {
-      heads: "4-head SS 304 Construction",
-      volumeRange: "50ml – 2000ml",
-      controlSystem: "Siemens PLC",
-      productionSpeed: "30-50 Bottles/min"
-    },
-    priceRange: "1.56 CRORE",
-    speed: "120 RPM",
-    capacity: "33.99L",
-    status: "active"
-  }
-];
+const initialMachines = [];
+const initialSpareCategories = ["Bottle", "Tube", "Pouch", "Vial"];
+
+// const initialMachines = [
+//   {
+//     machine_id: 1,
+//     machine_name: "Automatic Liquid Filling Machine",
+//     category_id: "Processing",
+//     subcategory: "Pharmaceutical",
+//     image_url: machineCardsImage,
+//     description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+//     tags: ["PROCESSING / LIQUID FILLING", "PHARMACEUTICAL"],
+//     specifications: {
+//       heads: "4-head SS 316 Construction",
+//       volumeRange: "15ml – 1000ml",
+//       controlSystem: "Siemens / Delta PLC",
+//       productionSpeed: "40-60 Containers/min"
+//     },
+//     priceRange: "1.90 CRORE",
+//     speed: "120 RPM",
+//     capacity: "33.99L",
+//     status: "active"
+//   },
+//   {
+//     machine_id: 2,
+//     machine_name: "Spice Grinding Machine",
+//     category_id: "Processing",
+//     subcategory: "Spice Processing",
+//     image_url: machineCardsImage,
+//     description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+//     tags: ["PROCESSING / GRINDING", "FOOD & SPICES"],
+//     specifications: {
+//       heads: "2-head SS 304 Construction",
+//       volumeRange: "50g – 5000g",
+//       controlSystem: "Delta PLC",
+//       productionSpeed: "80-120 Kg/hr"
+//     },
+//     priceRange: "1.90 CRORE",
+//     speed: "120 RPM",
+//     capacity: "30.5KG",
+//     status: "active"
+//   },
+//   {
+//     machine_id: 3,
+//     machine_name: "Tablet Coating Machine",
+//     category_id: "Processing",
+//     subcategory: "Pharmaceutical",
+//     image_url: machineCardsImage,
+//     description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+//     tags: ["PROCESSING / COATING", "PHARMACEUTICAL"],
+//     specifications: {
+//       heads: "Auto-spray SS 316 System",
+//       volumeRange: "5mm – 25mm tablet",
+//       controlSystem: "Siemens PLC",
+//       productionSpeed: "60-80 tablets/min"
+//     },
+//     priceRange: "1.90 CRORE",
+//     speed: "160 RPM",
+//     capacity: "33.99L",
+//     status: "active"
+//   },
+//   {
+//     machine_id: 4,
+//     machine_name: "Bottle Filling Machine",
+//     category_id: "Packaging",
+//     subcategory: "Bottle",
+//     image_url: machineCardRefImage,
+//     description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+//     tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
+//     specifications: {
+//       heads: "6-head SS 316 Construction",
+//       volumeRange: "30ml – 1000ml",
+//       controlSystem: "Siemens / Delta PLC",
+//       productionSpeed: "60-80 Bottles/min"
+//     },
+//     priceRange: "1.56 CRORE",
+//     speed: "120 RPM",
+//     capacity: "33.99L",
+//     status: "active"
+//   },
+//   {
+//     machine_id: 5,
+//     machine_name: "Bottle Filling Machine",
+//     category_id: "Packaging",
+//     subcategory: "Bottle",
+//     image_url: machineCardRefImage,
+//     description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+//     tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
+//     specifications: {
+//       heads: "8-head SS 316 Construction",
+//       volumeRange: "15ml – 500ml",
+//       controlSystem: "Delta PLC",
+//       productionSpeed: "80-100 Bottles/min"
+//     },
+//     priceRange: "1.56 CRORE",
+//     speed: "120 RPM",
+//     capacity: "33.99L",
+//     status: "active"
+//   },
+//   {
+//     machine_id: 6,
+//     machine_name: "Bottle Filling Machine",
+//     category_id: "Packaging",
+//     subcategory: "Bottle",
+//     image_url: machineCardRefImage,
+//     description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
+//     tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
+//     specifications: {
+//       heads: "4-head SS 304 Construction",
+//       volumeRange: "50ml – 2000ml",
+//       controlSystem: "Siemens PLC",
+//       productionSpeed: "30-50 Bottles/min"
+//     },
+//     priceRange: "1.56 CRORE",
+//     speed: "120 RPM",
+//     capacity: "33.99L",
+//     status: "active"
+//   }
+// ];
 
 const initialSpares = [
   {
@@ -304,35 +360,147 @@ function AdminLoginPage({ onAdminLogin, isAdminAuthenticated }) {
   );
 }
 
-function MachineDetailModal({ machine, onClose }) {
-  if (!machine) return null;
+function MachineDetailPage({ machines, sessionCache }) {
+  const { machineSlug } = useParams();
+  const [remoteMachine, setRemoteMachine] = useState(null);
+  const [isLoadingMachine, setIsLoadingMachine] = useState(false);
+  const machine = machines.find(m => (m.slug || m.machine_name.toLowerCase().replace(/\s+/g, '-')) === machineSlug) || remoteMachine;
+
+  React.useEffect(() => {
+    if (machine || !machineSlug) return;
+    setIsLoadingMachine(true);
+    fetchJson(`/api/machines/${machineSlug}`)
+      .then((data) => {
+        if (data) setRemoteMachine(data);
+      })
+      .catch((error) => console.error("Unable to load machine detail:", error))
+      .finally(() => setIsLoadingMachine(false));
+  }, [machine, machineSlug]);
+
+  React.useEffect(() => {
+    if (machine) {
+      document.title = `${machine.meta_title || machine.machine_name} | Salvin Industries`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', machine.meta_description || machine.description);
+    }
+  }, [machine]);
+
+  if (isLoadingMachine) return <div className="page-section text-center"><h2>Loading Machine...</h2></div>;
+  if (!machine) return <div className="page-section text-center"><h2>Machine Not Found</h2><NavLink to="/machineries">Back to Catalog</NavLink></div>;
+
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close-btn" onClick={onClose} aria-label="Close">✕</button>
-        <div className="modal-body">
-          <div className="modal-image-wrap">
-            <img src={machine.image_url || machineryLayoutImage} alt={machine.machine_name} />
+    <div className="machine-detail-page-v2">
+      <div className="detail-hero" style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(${resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage})` }}>
+        <div className="container">
+          <span className="badge">{machine.category_id} / {machine.subcategory}</span>
+          <h1>{machine.machine_name}</h1>
+        </div>
+      </div>
+
+      <div className="detail-content container">
+        <div className="detail-grid">
+          <div className="detail-main">
+            <div className="detail-image-card">
+              <img src={resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage} alt={machine.machine_name} />
+            </div>
+            <div className="detail-info-card">
+              <h3>Description</h3>
+              <p>{machine.description}</p>
+            </div>
           </div>
-          <div className="modal-info">
+          
+          <div className="detail-sidebar">
+            <div className="specs-card">
+              <h3>Technical Specifications</h3>
+              <table className="specs-table">
+                <tbody>
+                  {Object.entries(machine.specifications || {}).map(([k, v]) => (
+                    <tr key={k}>
+                      <td className="lbl">{k.replace(/([A-Z])/g, ' $1').toUpperCase()}</td>
+                      <td className="val">{v}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div className="contact-card-sidebar">
+              <h3>Interested?</h3>
+              <p>Get a customized quote for this model.</p>
+              <a href={`https://wa.me/919023979663?text=Inquiry for ${machine.machine_name}`} target="_blank" rel="noopener noreferrer" className="sidebar-btn">INQUIRE NOW</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MachineDetailModal({ machine, sessionCache, onClose }) {
+  React.useEffect(() => {
+    if (!machine) return undefined;
+
+    const handleKeyDown = (event) => {
+      if (event.key === "Escape") onClose();
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [machine, onClose]);
+
+  if (!machine) return null;
+
+  const imageSrc = resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage;
+  const specifications = Object.entries(machine.specifications || {});
+  const displaySpecs = specifications.length
+    ? specifications
+    : [
+        ["Category", machine.category_id || "-"],
+        ["Subcategory", machine.subcategory || "-"]
+      ];
+  const formatLabel = (label) =>
+    String(label)
+      .replace(/_/g, " ")
+      .replace(/([A-Z])/g, " $1")
+      .trim()
+      .replace(/\b\w/g, (char) => char.toUpperCase());
+
+  return (
+    <div className="modal-overlay" onClick={onClose} role="dialog" aria-modal="true" aria-labelledby="machine-modal-title">
+      <div className="modal-container machine-modal-container" onClick={(e) => e.stopPropagation()}>
+        <button className="modal-close-btn" onClick={onClose} aria-label="Close">x</button>
+        <div className="modal-body machine-modal-body">
+          <div className="modal-image-wrap machine-modal-image-wrap">
+            <img src={imageSrc} alt={machine.machine_name} />
+          </div>
+          <div className="modal-info machine-modal-info">
             <div className="modal-tags">
               <span className="modal-tag outline">SERIES-{machine.machine_id}</span>
-              <span className="modal-tag filled">PLC CONTROLLED</span>
+              <span className="modal-tag filled">{machine.category_id || "Machine"}</span>
+              {machine.subcategory && <span className="modal-tag filled">{machine.subcategory}</span>}
             </div>
-            <h2 className="modal-title">{machine.machine_name}</h2>
-            <p className="modal-desc">{machine.description}</p>
+            <h2 className="modal-title" id="machine-modal-title">{machine.machine_name}</h2>
+            <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>
             <h4 className="modal-spec-heading">Technical Specifications</h4>
             <div className="modal-table-scroll">
               <table className="modal-spec-table">
                 <tbody>
-                  <tr><td>Heads</td><td>{machine.specifications?.heads || "-"}</td></tr>
-                  <tr><td>Volume Range</td><td>{machine.specifications?.volumeRange || "-"}</td></tr>
-                  <tr><td>Control System</td><td>{machine.specifications?.controlSystem || "-"}</td></tr>
-                  <tr><td>Production Speed</td><td>{machine.specifications?.productionSpeed || "-"}</td></tr>
+                  {displaySpecs.map(([key, value]) => (
+                    <tr key={key}>
+                      <td>{formatLabel(key)}</td>
+                      <td>{value || "-"}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
-            <button className="modal-cta-btn">CONFIGURE THIS MODEL</button>
+            <a
+              href={`https://wa.me/919023979663?text=Inquiry for ${encodeURIComponent(machine.machine_name)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="modal-cta-btn"
+            >
+              Configure This Model
+            </a>
           </div>
         </div>
       </div>
@@ -375,13 +543,12 @@ function SpareDetailModal({ spare, onClose }) {
   );
 }
 
-function MachineriesPage({ machines }) {
+function MachineriesPage({ machines, sessionCache, loadError }) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedProcessing, setSelectedProcessing] = useState([]);
   const [selectedPackaging, setSelectedPackaging] = useState([]);
   const [sortBy, setSortBy] = useState("default");
   const [selectedMachine, setSelectedMachine] = useState(null);
-
   const toggleFilter = (value, list, setter) => {
     if (list.includes(value)) {
       setter(list.filter((v) => v !== value));
@@ -391,14 +558,14 @@ function MachineriesPage({ machines }) {
   };
 
   const filteredMachines = useMemo(() => {
-    let results = [...machines];
+    let results = machines.filter((machine) => machine.status !== "inactive");
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
       results = results.filter(
         (m) =>
           m.machine_name.toLowerCase().includes(q) ||
-          m.description.toLowerCase().includes(q)
+          (m.description || "").toLowerCase().includes(q)
       );
     }
 
@@ -461,7 +628,7 @@ function MachineriesPage({ machines }) {
           <h3 className="mach-sidebar-title">Categories</h3>
 
           <h4 className="mach-sidebar-group">Processing</h4>
-          {processingCategories.map((cat) => (
+          {subCategoryMap.Processing.map((cat) => (
             <label key={cat} className="mach-checkbox-label">
               <input
                 type="checkbox"
@@ -473,7 +640,7 @@ function MachineriesPage({ machines }) {
           ))}
 
           <h4 className="mach-sidebar-group">Packaging</h4>
-          {packagingCategories.map((cat) => (
+          {subCategoryMap.Packaging.map((cat) => (
             <label key={cat} className="mach-checkbox-label">
               <input
                 type="checkbox"
@@ -511,16 +678,17 @@ function MachineriesPage({ machines }) {
           <div className="mach-results-header">
             <h3>Filtered Machinery <span className="mach-count">{filteredMachines.length} Results</span></h3>
           </div>
+          {loadError && <p className="admin-error-text">{loadError}</p>}
 
           <div className="mach-grid">
             {filteredMachines.map((machine) => (
               <article key={machine.machine_id} className="mach-card">
                 <div className="mach-card-img">
-                  <img src={machine.image_url || machineryLayoutImage} alt={machine.machine_name} />
+                  <img src={resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage} alt={machine.machine_name} />
                 </div>
                 <div className="mach-card-body">
                   <div className="mach-card-tags">
-                    {machine.tags?.map((tag, i) => (
+                    {(machine.tags?.length ? machine.tags : [machine.category_id, machine.subcategory]).map((tag, i) => (
                       <span key={i} className={"mach-tag" + (i === 0 ? " orange" : " blue")}>{tag}</span>
                     ))}
                   </div>
@@ -534,7 +702,7 @@ function MachineriesPage({ machines }) {
                   </div>
                   <div className="mach-card-actions">
                     <a href="https://wa.me/919023979663" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
-                    <button className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
+                    <button type="button" className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
                   </div>
                 </div>
               </article>
@@ -544,7 +712,11 @@ function MachineriesPage({ machines }) {
       </div>
 
       {selectedMachine && (
-        <MachineDetailModal machine={selectedMachine} onClose={() => setSelectedMachine(null)} />
+        <MachineDetailModal
+          machine={selectedMachine}
+          sessionCache={sessionCache}
+          onClose={() => setSelectedMachine(null)}
+        />
       )}
     </section>
   );
@@ -580,10 +752,14 @@ function AdminPage({
 }) {
   const [machineForm, setMachineForm] = useState({
     machine_name: "",
-    category_id: machineCategories[0] || "",
+    category_id: "Packaging",
+    subcategory: "Pouch Packaging",
     image_url: "",
     description: "",
     specifications: "",
+    slug: "",
+    meta_title: "",
+    meta_description: "",
     status: "active"
   });
   const [spareForm, setSpareForm] = useState({
@@ -596,18 +772,37 @@ function AdminPage({
   });
   const [machineCategoryName, setMachineCategoryName] = useState("");
   const [spareCategoryName, setSpareCategoryName] = useState("");
+  const [imageFile, setImageFile] = useState(null);
+  const [machineSubmitError, setMachineSubmitError] = useState("");
 
-  function handleMachineSubmit(event) {
+  const handleImageChange = (e) => {
+    const file = e.target.files[0];
+    setImageFile(file || null);
+    setMachineSubmitError("");
+  };
+
+  async function handleMachineSubmit(event) {
     event.preventDefault();
-    onAddMachine(machineForm);
-    setMachineForm({
-      machine_name: "",
-      category_id: machineCategories[0] || "",
-      image_url: "",
-      description: "",
-      specifications: "",
-      status: "active"
-    });
+    setMachineSubmitError("");
+    try {
+      await onAddMachine(machineForm, imageFile);
+      setMachineForm({
+        machine_name: "",
+        category_id: "Packaging",
+        subcategory: "Pouch Packaging",
+        image_url: "",
+        description: "",
+        specifications: "",
+        slug: "",
+        meta_title: "",
+        meta_description: "",
+        status: "active"
+      });
+      setImageFile(null);
+      event.target.reset();
+    } catch (error) {
+      setMachineSubmitError(error.message || "Machine could not be saved.");
+    }
   }
 
   function handleSpareSubmit(event) {
@@ -636,19 +831,41 @@ function AdminPage({
           <h3 className="Add-title">Add Machine</h3>
           <label>Machine Name<input value={machineForm.machine_name} onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_name: e.target.value }))} required /></label>
           <label>Category
-            <select value={machineForm.category_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, category_id: e.target.value }))}>
-              {machineCategories.map((category) => <option key={category} value={category}>{category}</option>)}
+            <select value={machineForm.category_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, category_id: e.target.value, subcategory: subCategoryMap[e.target.value][0] }))}>
+              <option value="Packaging">Packaging Machineries</option>
+              <option value="Processing">Processing Machineries</option>
             </select>
           </label>
-          <label>Image URL<input value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
+          <label>Subcategory
+            <select value={machineForm.subcategory} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory: e.target.value }))}>
+              {subCategoryMap[machineForm.category_id].map(sub => (
+                <option key={sub} value={sub}>{sub}</option>
+              ))}
+            </select>
+          </label>
+          <label>Upload Machine Image
+            <input type="file" accept="image/*" onChange={handleImageChange} />
+            {imageFile && (
+              <div style={{ background: "#ebfff2", padding: "10px", borderRadius: "8px", marginTop: "10px", border: "1px solid #20f582" }}>
+                <p style={{ color: "#16a34a", margin: "0", fontSize: "13px" }}>
+                  <strong>Selected:</strong> {imageFile.name}
+                </p>
+              </div>
+            )}
+          </label>
+          <label>Existing Image Path<input placeholder="/assets/machines/image-name.jpg" value={machineForm.image_url.startsWith('data:') ? "" : machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
           <label>Description<textarea rows="3" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} /></label>
-          <label>Specifications (JSON)<textarea rows="3" placeholder='{"output":"80 BPM","power":"440V"}' value={machineForm.specifications} onChange={(e) => setMachineForm((prev) => ({ ...prev, specifications: e.target.value }))} /></label>
+          <label>URL Slug (e.g. automatic-vial-filler)<input value={machineForm.slug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: e.target.value }))} /></label>
+          <label>Meta Title<input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} /></label>
+          <label>Meta Description<textarea rows="2" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} /></label>
+          <label>Specifications (JSON)<textarea rows="3" placeholder='{"speed":"80 BPM","power":"440V"}' value={machineForm.specifications} onChange={(e) => setMachineForm((prev) => ({ ...prev, specifications: e.target.value }))} /></label>
           <label>Status
             <select value={machineForm.status} onChange={(e) => setMachineForm((prev) => ({ ...prev, status: e.target.value }))}>
               <option value="active">active</option>
               <option value="inactive">inactive</option>
             </select>
           </label>
+          {machineSubmitError && <p className="admin-error-text">{machineSubmitError}</p>}
           <button className="card-btn" type="submit">Add Machine</button>
         </form>
 
@@ -733,20 +950,31 @@ function HomePage() {
   const [openFaq, setOpenFaq] = useState(0);
   const latestProjectsNews = [
     {
-      title: "High-Speed Packaging Line Installed in UAE",
-      stripIndex: 0,
+      title: "Honey Processing Plant in Rajkot",
+      description: "Fully automated honey filtration, moisture reduction, and bottling line for premium organic honey production.",
+      image: projHoney,
     },
     {
-      title: "Automate Food Processing Unit Delivered in India",
-      stripIndex: 1,
+      title: "Spices processing and packaging in Rajkot",
+      description: "Comprehensive cleaning, grinding, and multi-track pouch packaging system for diverse spice blends.",
+      image: projSpices,
     },
     {
-      title: "Turnkey Plant Expansion for FMCG Client",
-      stripIndex: 2,
+      title: "API manufacturing plant in Vadodara",
+      description: "C-GMP compliant API reactor systems and solvent recovery modules for a leading pharmaceutical house.",
+      image: projApi,
+    },
+    {
+      title: "1000 ton per hour red chilli processing plant in Mexico",
+      description: "Massive-scale industrial cleaning, deseeded, and grinding plant with integrated climate-controlled storage.",
+      image: projChilli,
+    },
+    {
+      title: "Puffed rice processing plant in Dakor",
+      description: "Energy-efficient continuous puffing and roasting line with automatic seasoning and moisture control.",
+      image: projRice,
     },
   ];
-  const latestProjectsNewsDesc =
-    "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.";
 
   const faqItems = [
     {
@@ -917,7 +1145,7 @@ function HomePage() {
                 Future Since 2008
               </h2>
               <p className="desc">
-                Salvin Industries is a leading turnkey automation and packaging machinery group headquartered in Ahmedabad, Gujarat, India. We specialize in designing, manufacturing, and deploying high-performance production lines for global manufacturers across pharmaceuticals, food processing, cosmetics, and industrial sectors.
+                Salvin Industries is a leading turnkey solutions and processing & packaging machinery group headquartered in Ahmedabad, Gujarat, India. We specialize in designing, manufacturing, and deploying high-performance production lines for global manufacturers across pharmaceuticals, food processing, cosmetics, and industrial sectors.
 
               </p>
               <p className="desc">
@@ -927,7 +1155,7 @@ function HomePage() {
 
             </div>
             <div className="about-right">
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=900&q=80" alt="factory" />
+              <img src="src/assets/home_projects/food_plant.jpg" alt="factory" />
               <div className="badge">
                 <h3>25+</h3>
                 <p>Years of Excellence</p>
@@ -1033,15 +1261,14 @@ function HomePage() {
               <div className="project-card" key={item.title}>
                 <div className="project-card-image-wrap">
                   <img
-                    src={latestProjectsStrip}
-                    alt=""
+                    src={item.image}
+                    alt={item.title}
                     decoding="async"
-                    style={{ left: `${-item.stripIndex * 100}%` }}
                   />
                 </div>
                 <div className="content">
                   <h4>{item.title}</h4>
-                  <p>{latestProjectsNewsDesc}</p>
+                  <p>{item.description}</p>
                   <a href="#projects">READ MORE →</a>
                 </div>
               </div>
@@ -1059,6 +1286,57 @@ function HomePage() {
             </div>
           </div>
         </section>
+      </section>
+
+      {/* GLOBAL PRESENCE SECTION */}
+      <section className="global-presence-section">
+        <div className="content-container">
+          <div className="global-header">
+            <span className="tag">GLOBAL FOOTPRINT</span>
+            <h2>Our Global <span>Presence</span></h2>
+            <p>
+              Engineering excellence knows no borders. From our headquarters in India, we have expanded our reach
+              to deliver turnkey solutions and specialized machinery across 30+ nations.
+            </p>
+          </div>
+
+          <div className="global-grid">
+            <div className="global-stat-card">
+              <div className="stat-number">30+</div>
+              <div className="stat-label">Countries Served</div>
+              <p>Active installations across Asia, Africa, Middle East, and Latin America.</p>
+            </div>
+            <div className="global-stat-card">
+              <div className="stat-number">350+</div>
+              <div className="stat-label">Projects Completed</div>
+              <p>Successfully commissioned production lines for diverse industrial sectors.</p>
+            </div>
+            <div className="global-stat-card">
+              <div className="stat-number">24/7</div>
+              <div className="stat-label">Technical Support</div>
+              <p>Remote and on-site assistance for global manufacturing operations.</p>
+            </div>
+          </div>
+
+          <div className="global-regions">
+            <div className="region-box">
+              <h4>Middle East</h4>
+              <p>UAE, Saudi Arabia, Oman, Qatar</p>
+            </div>
+            <div className="region-box">
+              <h4>Africa</h4>
+              <p>Nigeria, Kenya, Ethiopia, Algeria</p>
+            </div>
+            <div className="region-box">
+              <h4>Asia</h4>
+              <p>India, Bangladesh, Vietnam, Thailand</p>
+            </div>
+            <div className="region-box">
+              <h4>Americas</h4>
+              <p>Mexico, Brazil, Colombia</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* CTA + FOOTER */}
@@ -1264,7 +1542,7 @@ function ContactPage() {
                 </div>
                 <div className="info-details">
                   <strong>Call Us</strong>
-                  <span>+91 98765 43210</span>
+                  <span>+91 90239 79663</span>
                 </div>
               </div>
               <div className="info-card">
@@ -1273,7 +1551,7 @@ function ContactPage() {
                 </div>
                 <div className="info-details">
                   <strong>Email</strong>
-                  <span>support@salvinindustries.com</span>
+                  <span>info.salvinindustries@gmail.com</span>
                 </div>
               </div>
               <div className="help-card">
@@ -1307,9 +1585,9 @@ function ContactPage() {
                 <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
               </div>
               <div className="dept-info">
-                <strong>Admin & Hr</strong>
+                <strong>General Manager</strong>
                 <span>Archna Gohil</span>
-                <a href="mailto:hr.salvinindustries@gmail.com">hr.salvinindustries@gmail.com</a>
+                <a href="mailto:gm.salvinindustries@gmail.com">gm.salvinindustries@gmail.com</a>
               </div>
             </div>
             <div className="dept-card">
@@ -1386,14 +1664,62 @@ function ServicesPage() {
 }
 
 export default function App() {
-  const location = useLocation();
-  const [machineCategories, setMachineCategories] = useState(initialMachineCategories);
-  const [spareCategories, setSpareCategories] = useState(initialSpareCategories);
   const [machines, setMachines] = useState(initialMachines);
-  const [spares, setSpares] = useState(initialSpares);
+  const [machineLoadError, setMachineLoadError] = useState("");
+
+  // Persistent state for Spares
+  const [spares, setSpares] = useState(() => {
+    const saved = localStorage.getItem("salvin_spares");
+    return saved ? JSON.parse(saved) : initialSpares;
+  });
+
+  // Persistent state for Machine Categories
+  const [machineCategories, setMachineCategories] = useState(() => {
+    const saved = localStorage.getItem("salvin_machine_categories");
+    return saved ? JSON.parse(saved) : initialMachineCategories;
+  });
+
+  // Persistent state for Spare Categories
+  const [spareCategories, setSpareCategories] = useState(() => {
+    const saved = localStorage.getItem("salvin_spare_categories");
+    return saved ? JSON.parse(saved) : initialSpareCategories;
+  });
+
+  const [sessionImageCache, setSessionImageCache] = useState({});
+
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
     () => localStorage.getItem("is_admin_authenticated") === "true"
   );
+
+  React.useEffect(() => {
+    const loadMachines = () => {
+      fetchJson("/api/machines")
+        .then((data) => {
+          setMachines(Array.isArray(data) ? data : []);
+          setMachineLoadError("");
+        })
+        .catch((error) => {
+          console.error("Unable to load machines:", error);
+          setMachineLoadError("Machine data could not be loaded from the API.");
+        });
+    };
+
+    loadMachines();
+    const refreshTimer = window.setInterval(loadMachines, 15000);
+    return () => window.clearInterval(refreshTimer);
+  }, []);
+
+  React.useEffect(() => {
+    localStorage.setItem("salvin_spares", JSON.stringify(spares));
+  }, [spares]);
+
+  React.useEffect(() => {
+    localStorage.setItem("salvin_machine_categories", JSON.stringify(machineCategories));
+  }, [machineCategories]);
+
+  React.useEffect(() => {
+    localStorage.setItem("salvin_spare_categories", JSON.stringify(spareCategories));
+  }, [spareCategories]);
 
   const addMachineCategory = (value) => {
     const normalized = value.trim();
@@ -1407,24 +1733,20 @@ export default function App() {
     setSpareCategories((prev) => [...prev, normalized]);
   };
 
-  const addMachine = (machineForm) => {
-    let specs = {};
-    try {
-      specs = machineForm.specifications ? JSON.parse(machineForm.specifications) : {};
-    } catch {
-      specs = {};
+  const addMachine = async (machineForm, imageFile) => {
+    const formData = new FormData();
+    Object.entries(machineForm).forEach(([key, value]) => {
+      formData.append(key, value ?? "");
+    });
+    if (imageFile) {
+      formData.append("image", imageFile);
     }
 
-    const newMachine = {
-      machine_id: Date.now(),
-      machine_name: machineForm.machine_name,
-      category_id: machineForm.category_id,
-      image_url: machineForm.image_url,
-      description: machineForm.description,
-      specifications: specs,
-      status: machineForm.status
-    };
-    setMachines((prev) => [newMachine, ...prev]);
+    const result = await fetchJson("/api/machines", {
+      method: "POST",
+      body: formData
+    });
+    setMachines((prev) => [result, ...prev.filter((machine) => machine.machine_id !== result.machine_id)]);
   };
 
   const addSpare = (spareForm) => {
@@ -1440,7 +1762,14 @@ export default function App() {
     setSpares((prev) => [newSpare, ...prev]);
   };
 
-  const deleteMachine = (machineId) => {
+  const deleteMachine = async (machineId) => {
+    try {
+      await fetchJson(`/api/machines/${machineId}`, {
+        method: "DELETE"
+      });
+    } catch (error) {
+      console.error("Unable to delete machine:", error);
+    }
     setMachines((prev) => prev.filter((machine) => machine.machine_id !== machineId));
   };
 
@@ -1473,7 +1802,8 @@ export default function App() {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/turnkey" element={<TurnkeyPage />} />
         <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
-        <Route path="/machineries" element={<MachineriesPage machines={machines} />} />
+        <Route path="/machineries" element={<MachineriesPage machines={machines} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
+        <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
         <Route path="/spares" element={<SparesPage />} />
         <Route
           path="/admin-login"

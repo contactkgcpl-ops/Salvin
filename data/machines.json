@@ -1,0 +1,20 @@
+[
+  {
+    "machine_id": 1778033300142,
+    "machine_name": "aaaaaaaaaaaaa",
+    "description": "ssssssssssss",
+    "category_id": "Packaging",
+    "subcategory": "Pouch Packaging",
+    "image_url": "/assets/machines/aaaaaaaaaaaaa-1778033300138.webp",
+    "slug": "aaaaaaaaaaaaa",
+    "meta_title": "aaaaaaaaaaaa",
+    "meta_description": "cccccccccc",
+    "specifications": {},
+    "status": "active",
+    "tags": [
+      "Packaging",
+      "Pouch Packaging"
+    ],
+    "created_at": "2026-05-06T02:08:20.143Z"
+  }
+]
