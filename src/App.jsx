@@ -43,7 +43,7 @@ const resolveMachineImage = (image, sessionCache = {}) => {
   if (typeof image === "string") {
     // 1. Check if it's a direct public path (starts with /)
     if (image.startsWith("/")) return image;
-    
+
     // 2. Check session cache (Base64)
     if (sessionCache[image]) return sessionCache[image];
 
@@ -58,6 +58,7 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 };
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
+import ConsultantPage from "./pages/ConsultantPage";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
 import innovation from "./assets/home_extra/innovation.png";
@@ -408,7 +409,7 @@ function MachineDetailPage({ machines, sessionCache }) {
               <p>{machine.description}</p>
             </div>
           </div>
-          
+
           <div className="detail-sidebar">
             <div className="specs-card">
               <h3>Technical Specifications</h3>
@@ -454,9 +455,9 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
   const displaySpecs = specifications.length
     ? specifications
     : [
-        ["Category", machine.category_id || "-"],
-        ["Subcategory", machine.subcategory || "-"]
-      ];
+      ["Category", machine.category_id || "-"],
+      ["Subcategory", machine.subcategory || "-"]
+    ];
   const formatLabel = (label) =>
     String(label)
       .replace(/_/g, " ")
@@ -1700,7 +1701,7 @@ export default function App() {
         })
         .catch((error) => {
           console.error("Unable to load machines:", error);
-          setMachineLoadError("Machine data could not be loaded from the API.");
+          setMachineLoadError("Machine data not found.");
         });
     };
 
@@ -1800,6 +1801,7 @@ export default function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/services" element={<ServicesPage />} />
+        <Route path="/consultant" element={<ConsultantPage />} />
         <Route path="/turnkey" element={<TurnkeyPage />} />
         <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
         <Route path="/machineries" element={<MachineriesPage machines={machines} sessionCache={sessionImageCache} loadError={machineLoadError} />} />

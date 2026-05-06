@@ -3043,7 +3043,10 @@ body {
 .machine-detail-page-v2 .detail-hero::before {
   content: "";
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: linear-gradient(rgba(11, 28, 44, 0.9), rgba(11, 28, 44, 0.4));
 }
 
@@ -3090,7 +3093,7 @@ body {
   background: #fff;
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3106,7 +3109,7 @@ body {
   background: #fff;
   border-radius: 16px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .machine-detail-page-v2 .detail-info-card h3 {
@@ -3132,7 +3135,7 @@ body {
   background: #fff;
   border-radius: 16px;
   padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .machine-detail-page-v2 .specs-card h3 {
@@ -3206,6 +3209,7 @@ body {
   .machine-detail-page-v2 .detail-grid {
     grid-template-columns: 1fr;
   }
+
   .machine-detail-page-v2 .detail-hero h1 {
     font-size: 32px;
   }
@@ -3327,7 +3331,7 @@ body {
 
 .global-stat-card:hover {
   background: #fff;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
   transform: translateY(-10px);
 }
 
@@ -3379,15 +3383,19 @@ body {
   .global-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .global-regions {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 640px) {
-  .global-grid, .global-regions {
+
+  .global-grid,
+  .global-regions {
     grid-template-columns: 1fr;
   }
+
   .global-header h2 {
     font-size: 32px;
   }
@@ -4063,6 +4071,541 @@ body {
   position: relative;
   box-shadow: 0 24px 64px rgba(0, 0, 0, 0.18);
   animation: slideUp 0.3s ease;
+}
+
+/* Consultant Page */
+.consultant-page {
+  background: #f5f6fb;
+  color: #062242;
+  overflow-x: hidden;
+}
+
+.consultant-container {
+  width: min(100%, 1080px);
+  margin: 0 auto;
+  padding: 0 clamp(18px, 5vw, 48px);
+}
+
+.consultant-narrow {
+  width: min(100%, 980px);
+}
+
+.consultant-section-header {
+  text-align: center;
+}
+
+.consultant-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 18px;
+  padding: 3px 10px;
+  border: 1px solid rgba(255, 126, 18, 0.45);
+  border-radius: 999px;
+  background: #fff4e9;
+  color: #ff7900;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.consultant-section-header h2 {
+  margin: 15px 0 0;
+  color: #082847;
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 900;
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+.consultant-section-header h2 span {
+  color: #ff7900;
+}
+
+.consultant-section-header p {
+  width: min(100%, 760px);
+  margin: 18px auto 0;
+  color: #667080;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.consultant-hero {
+  min-height: 500px;
+  display: grid;
+  place-items: center;
+  background:
+    linear-gradient(90deg, rgba(24, 27, 31, 0.9), rgba(14, 23, 30, 0.72)),
+    url("/assets/consultant/Food-Business-Consultancy.png") center / cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.consultant-hero-content {
+  width: min(100%, 900px);
+  padding: clamp(72px, 10vw, 110px) 24px;
+}
+
+.consultant-hero-badge {
+  display: inline-flex;
+  padding: 7px 13px;
+  border-radius: 999px;
+  background: rgba(255, 126, 18, 0.18);
+  color: #ff9a23;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.consultant-hero h1 {
+  margin: 24px 0 20px;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0;
+}
+
+.consultant-hero p {
+  width: min(100%, 760px);
+  margin: 0 auto;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(15px, 1.7vw, 18px);
+  line-height: 1.55;
+}
+
+.consultant-hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+}
+
+.consultant-btn {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 28px;
+  border-radius: 7px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.consultant-btn-primary {
+  background: #ff7900;
+  color: #fff;
+}
+
+.consultant-btn-outline {
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  color: #fff;
+  background: rgba(5, 28, 50, 0.22);
+}
+
+.consultant-advisory,
+.consultant-services,
+.consultant-trust,
+.consultant-request {
+  background: #f5f6fb;
+}
+
+.consultant-advisory {
+  padding: 58px 0 72px;
+}
+
+.consultant-copy-stack {
+  margin-top: 28px;
+  text-align: center;
+}
+
+.consultant-copy-stack p {
+  margin: 0 auto 22px;
+  color: #5d6876;
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.consultant-services {
+  padding: 20px 0 70px;
+}
+
+.consultant-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 54px;
+}
+
+.consultant-service-card {
+  min-height: 215px;
+  padding: 29px 28px 25px;
+  border: 1px solid #dddfe6;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 0 rgba(6, 34, 66, 0.02);
+}
+
+.consultant-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.consultant-card-icon,
+.consultant-trust-item>span {
+  display: inline-grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #fff2e6;
+  color: #ff7900;
+  flex: 0 0 auto;
+}
+
+.consultant-icon-svg {
+  width: 19px;
+  height: 19px;
+}
+
+.consultant-card-number {
+  color: #eeeeed;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 0.85;
+}
+
+.consultant-service-card h3 {
+  margin: 24px 0 12px;
+  color: #082847;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.consultant-service-card p {
+  margin: 0;
+  color: #687283;
+  font-size: 13px;
+  line-height: 1.62;
+}
+
+.consultant-service-card a {
+  display: inline-flex;
+  margin-top: 22px;
+  color: #ff7900;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.consultant-process {
+  padding: 86px 0 92px;
+  background: #f2f1ef;
+}
+
+.consultant-process-row {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 38px;
+}
+
+.consultant-process-step {
+  text-align: center;
+  min-width: 0;
+}
+
+.consultant-process-icon {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  display: inline-grid;
+  place-items: center;
+  border: 1px solid #d6dbe2;
+  border-radius: 999px;
+  background: #fff;
+  color: #082847;
+}
+
+.consultant-process-icon span {
+  position: absolute;
+  top: -8px;
+  right: -7px;
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: #ff7900;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.consultant-process-step p {
+  margin: 17px 0 0;
+  color: #082847;
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.35;
+}
+
+.consultant-trust {
+  padding: 66px 0 75px;
+}
+
+.consultant-trust-inner {
+  width: min(100%, 760px);
+}
+
+.consultant-trust-list {
+  width: min(100%, 560px);
+  margin: 42px auto 0;
+  display: grid;
+  gap: 35px;
+}
+
+.consultant-trust-item {
+  display: grid;
+  grid-template-columns: 34px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.consultant-trust-item>span {
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+}
+
+.consultant-trust-item .consultant-icon-svg {
+  width: 14px;
+  height: 14px;
+}
+
+.consultant-trust-item h3 {
+  margin: 0 0 8px;
+  color: #28384b;
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.consultant-trust-item p {
+  margin: 0;
+  color: #8b95a3;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.consultant-request {
+  padding: 12px 0 150px;
+}
+
+.consultant-request-grid {
+  width: min(100%, 920px);
+  margin: 40px auto 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.consultant-form {
+  display: grid;
+  gap: 12px;
+}
+
+.consultant-form label {
+  display: grid;
+  gap: 7px;
+  color: #667080;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.consultant-form input,
+.consultant-form textarea {
+  width: 100%;
+  border: 1px solid #dddedb;
+  border-radius: 3px;
+  background: #f3f1ee;
+  color: #24364a;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  padding: 14px 16px;
+}
+
+.consultant-form textarea {
+  min-height: 112px;
+  resize: vertical;
+}
+
+.consultant-form input:focus,
+.consultant-form textarea:focus {
+  border-color: #ff9a23;
+  background: #fff;
+}
+
+.consultant-submit {
+  margin-top: 24px;
+  min-height: 51px;
+  border: 0;
+  border-radius: 4px;
+  background: #ff840a;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.consultant-submit span {
+  margin-right: 10px;
+}
+
+.consultant-benefits {
+  padding: 21px 22px 34px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 22px 45px rgba(7, 32, 62, 0.08);
+}
+
+.consultant-response-box {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 18px 20px;
+  border: 1px solid #ffd8b8;
+  border-radius: 9px;
+  background: #fff8f0;
+}
+
+.consultant-response-box>span {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: #ff840a;
+  color: #fff;
+  font-size: 15px;
+}
+
+.consultant-response-box h3 {
+  margin: 0 0 4px;
+  color: #ff7900;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.consultant-response-box p,
+.consultant-benefit-intro,
+.consultant-benefit-item p {
+  margin: 0;
+  color: #7b8492;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.consultant-benefits h2 {
+  margin: 28px 0 12px;
+  color: #082847;
+  font-size: clamp(25px, 3vw, 32px);
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.consultant-benefit-list {
+  display: grid;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.consultant-benefit-item {
+  display: grid;
+  grid-template-columns: 26px 1fr;
+  gap: 14px;
+}
+
+.consultant-benefit-item>span {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 999px;
+  background: #ffe6cb;
+  color: #ff840a;
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.consultant-benefit-item h3 {
+  margin: 0 0 4px;
+  color: #24364a;
+  font-size: 13px;
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .consultant-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .consultant-process-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .consultant-hero {
+    min-height: 520px;
+    background-position: 56% center;
+  }
+
+  .consultant-hero-actions,
+  .consultant-btn {
+    width: 100%;
+  }
+
+  .consultant-service-grid,
+  .consultant-request-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .consultant-process-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px 22px;
+  }
+
+  .consultant-advisory,
+  .consultant-services,
+  .consultant-process,
+  .consultant-trust {
+    padding-top: 56px;
+    padding-bottom: 64px;
+  }
+
+  .consultant-request {
+    padding-bottom: 78px;
+  }
+}
+
+@media (max-width: 420px) {
+  .consultant-service-card {
+    padding: 24px 20px;
+  }
+
+  .consultant-process-row {
+    grid-template-columns: 1fr;
+  }
+
+  .consultant-trust-item,
+  .consultant-benefit-item {
+    grid-template-columns: 1fr;
+  }
 }
 
 .machine-modal-container {

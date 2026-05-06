@@ -52,7 +52,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <NavLink to="/about" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>JOURNEY</NavLink>
         <NavLink to="/turnkey-project" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
         <NavLink to="/machineries" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
-        <Link to="#" style={{ color: "#000" }} onClick={(e) => { e.preventDefault(); setMenuOpen(false); }}>CONSULTANT</Link>
+        <NavLink to="/consultant" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONSULTANT</NavLink>
         <Link to="#" style={{ color: "#000" }} onClick={(e) => { e.preventDefault(); setMenuOpen(false); }}>SPARES & SERVICE</Link>
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
 
