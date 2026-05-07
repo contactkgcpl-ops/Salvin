@@ -1012,8 +1012,8 @@ function HomePage() {
       image: industryTurnkey,
     },
     {
-      title: "Automation & Robotics",
-      text: "Precision-engineered automated assembly lines and seamless robotic integration for smart factory ecosystems.",
+      title: "Process Optimization",
+      text: "Optimize food production workflows to improve efficiency, reduce waste, and maintain consistent product quality.We help food industries streamline operations with smart process planning, automation, and performance-focused solutions.",
       image: industryAutomation,
     },
     {
@@ -1027,12 +1027,12 @@ function HomePage() {
       image: industryConsultancy,
     },
     {
-      title: "Pneumatic Equipment",
+      title: "Spares",
       text: "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.",
       image: industryPneumatic,
     },
     {
-      title: "Maintenance & Support",
+      title: "After Sales Support",
       text: "Proactive annual maintenance contracts and 24/7 technical support to ensure zero-downtime production cycles.",
       image: industryMaintenance,
     },
@@ -1073,13 +1073,11 @@ function HomePage() {
         <div className="hero-content">
           <span className="tag">ENGINEERING THE FUTURE</span>
           <h1>
-            Intelligent Automation &amp; <br />
-            <span>Robotic Integration</span>
+            Your Vision. Our Engineering. <br />
+            <span>One Complete Solution</span>
           </h1>
           <p>
-            Turnkey plant setup, machinery, automation, and consulting- all under one group. Serving 30+ countries.
-            Robust packaging lines for high-volume production. Salvin's machines handle liquids, powders and solids
-            with surgical precision
+            Salvin Industries specializes in delivering high-quality turnkey solutions and expert technical consultancy for food and pharmaceutical processing, ensuring efficiency, compliance, and innovation.
           </p>
           <div className="buttons">
             <NavLink className="primary" to="/contact">START YOUR PROJECT</NavLink>
@@ -1087,7 +1085,7 @@ function HomePage() {
           </div>
           <div className="hero-stats-row">
             <div className="stat"><h2>350+</h2><p>Completed Projects</p></div>
-            <div className="stat"><h2>30+</h2><p>Countries Served</p></div>
+            <div className="stat"><h2>8+</h2><p>Countries Served</p></div>
             <div className="stat"><h2>5000+</h2><p>Products Packaged</p></div>
           </div>
         </div>
@@ -1146,12 +1144,15 @@ function HomePage() {
                 Future Since 2008
               </h2>
               <p className="desc">
-                Salvin Industries is a leading turnkey solutions and processing & packaging machinery group headquartered in Ahmedabad, Gujarat, India. We specialize in designing, manufacturing, and deploying high-performance production lines for global manufacturers across pharmaceuticals, food processing, cosmetics, and industrial sectors.
+                Salvin Industries is a trusted name in providing turnkey solutions and technical consultancy for the food and pharmaceutical industries. We specialize in delivering end-to-end services that cover every stage of your project—from concept design and planning to execution and commissioning.
 
               </p>
               <p className="desc">
-                Our team of 200+ engineers brings together expertise in mechanical design, robotics, PLC programming, and process automation-ensuring every plant we build operates at peak efficiency from day one.
+                With a strong focus on quality, innovation, and efficiency, we help businesses build and optimize their production facilities to meet modern industry standards. Our expertise ensures smooth project execution, cost-effective solutions, and reliable performance.
 
+              </p>
+              <p className="desc">
+                At Salvin Industries, we believe in building long-term partnerships by offering customized solutions, technical excellence, and dedicated support. Whether it’s a new plant setup or upgrading an existing facility, we are committed to delivering results that drive growth and success.
               </p>
 
             </div>
@@ -1303,7 +1304,7 @@ function HomePage() {
 
           <div className="global-grid">
             <div className="global-stat-card">
-              <div className="stat-number">30+</div>
+              <div className="stat-number">3+</div>
               <div className="stat-label">Countries Served</div>
               <p>Active installations across Asia, Africa, Middle East, and Latin America.</p>
             </div>
