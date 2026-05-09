@@ -37,7 +37,6 @@ async function fetchJson(url, options) {
   return readJsonResponse(response);
 }
 
-// Dynamically import all machine images from the assets/machine folder
 const machineImages = import.meta.glob("./assets/machine/*.{png,jpg,jpeg,webp,svg,gif}", { eager: true });
 
 const resolveMachineImage = (image, sessionCache = {}) => {
