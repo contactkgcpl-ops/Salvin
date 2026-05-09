@@ -1,5 +1,6 @@
 import React from "react";
-import { FaUsers, FaPencilRuler, FaCogs, FaGlobe, FaRocket, FaShieldAlt, FaLinkedin } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { FaUsers, FaPencilRuler, FaCogs, FaGlobe, FaRocket, FaShieldAlt, FaLinkedin, FaBoxOpen, FaRobot, FaIndustry, FaFlask, FaUserCog, FaCertificate, FaEye, FaBullseye } from "react-icons/fa";
 import "../assets/About.css";
 // import Journey from "../components/JourneyTimeline";
 import "../assets/HowWeWork.css";
@@ -11,6 +12,16 @@ import { FaUserTie, FaBuilding, FaVial } from "react-icons/fa";
 import mdImage from "../assets/team1.png"; // Placeholder, user to provide keval_gandhi.jpg
 
 import aboutImg from "../assets/Industrial.png";
+import journeyHeroImage from "../assets/food-processing-plant.jpg";
+import journey1 from "../assets/journey/d1-1.png";
+import journey2 from "../assets/journey/d1-2.png";
+import journey3 from "../assets/journey/d1-3.png";
+import journey4 from "../assets/journey/d1-4.png";
+import journey5 from "../assets/journey/d1-5.png";
+import journey6 from "../assets/journey/d1-6.png";
+import journey7 from "../assets/journey/d1-7.png";
+import journey8 from "../assets/journey/d1-8.png";
+import journey9 from "../assets/journey/d1-9.png";
 
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
@@ -39,6 +50,73 @@ const data2 = [
     desc: "ISO 9001:2015 certified manufacturing processes ensuring the highest standards of precision and safety.",
   },
 ];
+
+const journeyMilestones = [
+  {
+    year: "2009",
+    title: "Packaging Unit",
+    desc: "Foundational entry into high-precision industrial packaging, setting the benchmark for engineering reliability.",
+    image: journey1,
+    icon: <FaBoxOpen />
+  },
+  {
+    year: "2011",
+    title: "Fully Automatic Design",
+    desc: "Pioneering zero-intervention automation systems to maximize manufacturing efficiency and performance.",
+    image: journey2,
+    icon: <FaRobot />
+  },
+  {
+    year: "2013",
+    title: "Processing Mfg",
+    desc: "Expanding into complex processing engineering for high-growth food and pharmaceutical industries.",
+    image: journey3,
+    icon: <FaIndustry />
+  },
+  {
+    year: "2015",
+    title: "Reactors & Vessel Design",
+    desc: "Advanced heavy-duty fabrication of chemical reactors and pressure vessels for critical applications.",
+    image: journey4,
+    icon: <FaFlask />
+  },
+  {
+    year: "2017",
+    title: "Pharma Consultant",
+    desc: "Launched strategic engineering consultancy, optimizing plant layouts for global regulatory standards.",
+    image: journey5,
+    icon: <FaUserCog />
+  },
+  {
+    year: "2019",
+    title: "GMP Plant Design",
+    desc: "Implementing global GMP standards in turnkey plant architecture and facility engineering.",
+    image: journey6,
+    icon: <FaCertificate />
+  },
+  {
+    year: "2021",
+    title: "Contract Packaging",
+    desc: "Scalable, high-speed packaging solutions for premium global beauty and food brands.",
+    image: journey7,
+    icon: <FaBoxOpen />
+  },
+  {
+    year: "2023",
+    title: "International Projects",
+    desc: "Executing large-scale international turnkey projects, establishing a global engineering footprint.",
+    image: journey8,
+    icon: <FaGlobe />
+  },
+  {
+    year: "2025",
+    title: "Automation 4.0 Era",
+    desc: "Leading the next industrial revolution with AI-driven Automation 4.0 and smart factory solutions.",
+    image: journey9,
+    icon: <FaRocket />
+  }
+];
+
 const team = [
   {
     name: "Er. Keval Gandhi",
@@ -70,6 +148,21 @@ export default function About() {
     <div className="about-page">
 
       {/* HERO */}
+      <section
+        className="journey-premium-hero"
+        style={{ backgroundImage: `linear-gradient(rgba(9, 25, 56, 0.84), rgba(9, 25, 56, 0.78)), url(${journeyHeroImage})` }}
+      >
+        <span className="mach-hero-badge">+ SALVIN JOURNEY</span>
+        <h1>Engineering Progress<br />Since 2008</h1>
+        <p>
+          From precision packaging machinery to global turnkey consultancy, Salvin Industries
+          has grown through disciplined engineering, automation expertise, and long-term client partnerships.
+        </p>
+        <div className="mach-hero-btns">
+          <NavLink className="mach-hero-btn primary" to="/contact">START YOUR PROJECT</NavLink>
+          <NavLink className="mach-hero-btn outline" to="/turnkey-project">EXPLORE TURNKEY</NavLink>
+        </div>
+      </section>
 
       {/* ABOUT */}
       <section className="about-intro">
@@ -96,35 +189,6 @@ export default function About() {
               Our team of 200+ engineers brings together expertise in mechanical design,
               robotics, PLC programming, and process automation.
             </p>
-
-            {/* TIMELINE BOXES */}
-            <div className="timeline-box">
-
-              <div className="box">
-                <h3>2008</h3>
-                <h4>Founded in Ahmedabad</h4>
-                <p>Started as a precision engineering workshop.</p>
-              </div>
-
-              <div className="box">
-                <h3>2013</h3>
-                <h4>First International Project</h4>
-                <p>Delivered first overseas turnkey plant installation.</p>
-              </div>
-
-              <div className="box">
-                <h3>2022</h3>
-                <h4>Robotic Division Launch</h4>
-                <p>Established robotics integration division.</p>
-              </div>
-
-              <div className="box">
-                <h3>2024</h3>
-                <h4>30+ Countries Milestone</h4>
-                <p>Completed projects across 30+ nations.</p>
-              </div>
-
-            </div>
 
           </div>
 
@@ -257,12 +321,38 @@ export default function About() {
         </div>
       </section>
 
+      <section className="journey-roadmap-section">
+        <div className="journey-roadmap-header">
+          <span className="tag">SINCE 2009</span>
+          <h2>Our <span>Journey</span></h2>
+          <p>An engineering roadmap of precision, innovation, and global expansion.</p>
+        </div>
+
+        <div className="journey-roadmap">
+          <div className="journey-roadmap-line" aria-hidden="true"></div>
+          {journeyMilestones.map((item, index) => (
+            <article className={`journey-roadmap-item ${index % 2 === 0 ? "left" : "right"}`} key={item.title}>
+              <div className="journey-roadmap-card">
+                <img src={item.image} alt={item.title} />
+                <div className="journey-roadmap-content">
+                  <span>{item.year}</span>
+                  <h3>{item.title}</h3>
+                  <p>{item.desc}</p>
+                </div>
+                <div className="journey-roadmap-icon">{item.icon}</div>
+              </div>
+              <div className="journey-roadmap-node">{String(index + 1).padStart(2, "0")}</div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="vision-section">
         <div className="vision-card">
 
           {/* LEFT */}
           <div className="vision-left">
-            <div className="icon">👁️</div>
+            <div className="icon"><FaEye /></div>
             <h2>Our Vision</h2>
             <p>
               To become a globally recognized engineering company delivering
@@ -276,7 +366,7 @@ export default function About() {
 
           {/* RIGHT */}
           <div className="vision-right">
-            <div className="icon target">🎯</div>
+            <div className="icon target"><FaBullseye /></div>
             <h2>Our Mission</h2>
             <p>
               To empower industries through innovation, automation, and precision

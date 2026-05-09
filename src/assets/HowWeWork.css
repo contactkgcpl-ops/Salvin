@@ -1,11 +1,16 @@
 .how-work {
   background: #f5f7fb;
-  padding: 80px 20px;
+  padding: 80px 24px;
   text-align: center;
 }
 
 /* HEADER */
-.header .tag {
+.how-work .header {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.how-work .header .tag {
   background: #ffe7d6;
   color: #ff6b00;
   padding: 6px 15px;
@@ -13,41 +18,44 @@
   font-size: 12px;
 }
 
-.header h2 {
+.how-work .header h2 {
   font-size: 40px;
   margin-top: 15px;
 }
 
-.header h2 span {
+.how-work .header h2 span {
   color: #ff6b00;
 }
 
 /* STEPS */
-.steps {
+.how-work .steps {
   position: relative;
-  margin-top: 60px;
+  max-width: 1200px;
+  margin: 60px auto 0;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 32px;
 }
 
 /* DASHED LINE */
-.line {
+.how-work .line {
   position: absolute;
   top: 60px;
-  left: 5%;
-  width: 90%;
+  left: 8%;
+  width: 84%;
   border-top: 2px dashed #cfd8e3;
   z-index: 0;
 }
 
 /* STEP */
-.step {
-  width: 22%;
+.how-work .step {
+  flex: 1 1 0;
+  max-width: 260px;
   z-index: 1;
 }
 
-.circle {
+.how-work .circle {
   width: 100px;
   height: 100px;
   border: 3px solid #ff6b00;
@@ -62,29 +70,42 @@
   box-shadow: 0 10px 25px rgba(255, 107, 0, 0.15);
 }
 
-.step h3 {
+.how-work .step h3 {
   margin-top: 20px;
   font-size: 18px;
+  color: #0b1a2c;
+  line-height: 1.35;
 }
 
-.step p {
+.how-work .step p {
   color: #666;
   margin-top: 10px;
   font-size: 14px;
+  line-height: 1.6;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .steps {
+  .how-work {
+    padding: 56px 20px;
+  }
+
+  .how-work .header h2 {
+    font-size: 32px;
+  }
+
+  .how-work .steps {
     flex-direction: column;
     gap: 40px;
+    align-items: center;
   }
 
-  .step {
+  .how-work .step {
     width: 100%;
+    max-width: 360px;
   }
 
-  .line {
+  .how-work .line {
     display: none;
   }
 }

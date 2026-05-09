@@ -1,7 +1,7 @@
 /* vision.css */
 
 .vision-section {
-  padding: 50px;
+  padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1rem, 4vw, 1.5rem);
   display: flex;
   justify-content: center;
   background: #f5f5f5;
@@ -9,74 +9,99 @@
 
 .vision-card {
   width: 100%;
-  max-width: 1200px;
+  max-width: 1240px;
+  min-height: 360px;
   display: flex;
-  border-radius: 20px;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.1);
+  background: #fff3e4;
 }
 
 /* LEFT SIDE */
 .vision-left {
   flex: 1;
-  background: #0b1a2c;
+  background: #081425;
   color: white;
-  padding: 50px;
+  padding: clamp(2.5rem, 5vw, 4rem);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .vision-left h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  font-weight: 900;
+  margin: 0 0 18px;
+  color: #ffffff;
 }
 
 .vision-left p {
-  line-height: 1.6;
-  color: #d1d5db;
+  max-width: 520px;
+  margin: 0;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: clamp(0.95rem, 1.35vw, 1.05rem);
 }
 
 /* RIGHT SIDE */
 .vision-right {
   flex: 1;
-  background: #e7c39a;
-  padding: 50px;
+  background: #fff3e4;
+  padding: clamp(2.5rem, 5vw, 4rem);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .vision-right h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #0b1a2c;
+  font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+  font-weight: 900;
+  margin: 0 0 18px;
+  color: #081425;
 }
 
 .vision-right p {
-  line-height: 1.6;
-  color: #333;
+  max-width: 520px;
+  margin: 0;
+  line-height: 1.55;
+  color: #2f3541;
+  font-size: clamp(0.95rem, 1.35vw, 1.05rem);
 }
 
 /* ICON */
 .icon {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  color: #ff7a00;
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 /* CENTER DIVIDER SHAPE */
 .divider {
-  width: 80px;
-  background: transparent;
+  width: 0;
+  background: #fff3e4;
   position: relative;
+  flex: 0 0 0;
+  overflow: visible;
 }
 
 .divider::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: -40px;
+  left: -22px;
   transform: translateY(-50%);
-  width: 80px;
-  height: 80px;
-  background: #0b1a2c;
+  width: 44px;
+  height: 44px;
+  background: #081425;
   border-radius: 50%;
+  z-index: 2;
 }
 
 /* RESPONSIVE */
@@ -88,16 +113,17 @@
   .vision-card {
     flex-direction: column;
     border-radius: 16px;
+    min-height: auto;
   }
 
   .vision-left,
   .vision-right {
-    padding: 30px 24px;
+    padding: 34px 24px;
   }
 
   .vision-left h2,
   .vision-right h2 {
-    font-size: 22px;
+    font-size: 1.25rem;
   }
 
   .divider {

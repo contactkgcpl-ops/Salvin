@@ -44,6 +44,7 @@ jobs:
           protocol: ${{ secrets.protocol }}
           port: ${{ secrets.port }}
           local-dir: ./dist/
-          server-dir: public_html/
-          dangerous-clean-slate: true
+          # FTP user already lands in /public_html, so upload dist contents there.
+          # Do not target public_html/ here, or it creates /public_html/public_html.
+          server-dir: ./
           timeout: 100000
