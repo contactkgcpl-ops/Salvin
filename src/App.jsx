@@ -86,7 +86,7 @@ import projSpices from "./assets/home_projects/spices_processing.png";
 import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
-import foodPlant from "./assets/home_projects/food_plant.jpg";
+import foodPlant from "./assets/home_projects/salvin_team.jpg";
 import sparesHeroImage from "./assets/spares hiro.jpg";
 import projectHeroImage from "./assets/project_hiro.jpg";
 import machineHeroImage from "./assets/machine_hiro.png";
@@ -1178,14 +1178,10 @@ function HomePage() {
       >
         <div className="overlay" />
         <div className="hero-content" key={activeHero.key}>
-          <span className="tag">{activeHero.eyebrow}</span>
+          <span className="hero-tag">{activeHero.eyebrow}</span>
           <h1>{activeHero.title}</h1>
           {activeHero.subtitle && <h2>{activeHero.subtitle}</h2>}
           <p>{activeHero.text}</p>
-          <div className="buttons hero-actions">
-            <NavLink className="primary" to={activeHero.to}>{activeHero.cta}</NavLink>
-            <NavLink className="secondary" to="/contact">Get Inquiry</NavLink>
-          </div>
         </div>
         <div className={`hero-preview-dock${isHeroPreviewOpen ? " open" : ""}`} aria-label="Hero image selector">
           <div className="hero-preview-track">
@@ -1280,10 +1276,7 @@ function HomePage() {
             </div>
             <div className="about-right">
               <img src={foodPlant} alt="Food processing plant" />
-              <div className="badge">
-                <h3>25+</h3>
-                <p>Years of Excellence</p>
-              </div>
+
             </div>
           </div>
         </div>

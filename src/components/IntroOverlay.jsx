@@ -67,12 +67,26 @@ function BlueprintIcon({ type }) {
 
 function IntroOverlay({ onComplete }) {
   const [isClosing, setIsClosing] = React.useState(false);
-  const [showLanguagePanel, setShowLanguagePanel] = React.useState(false);
+  const [activeScreen, setActiveScreen] = React.useState(0);
 
   React.useEffect(() => {
-    const timer = window.setTimeout(() => setShowLanguagePanel(true), 6500);
-    return () => window.clearTimeout(timer);
+    const timer = window.setInterval(() => {
+      setActiveScreen((current) => (current < 4 ? current + 1 : current));
+    }, 4000);
+    return () => window.clearInterval(timer);
   }, []);
+
+  const introScreens = [
+    <div className="intro-copy intro-screen-copy" key="vision">Your Vision</div>,
+    <div className="intro-copy intro-screen-copy intro-copy-engineering" key="engineering">Our Engineering</div>,
+    <div className="intro-copy intro-screen-copy" key="solution">Our Complete Solution</div>,
+    (
+      <React.Fragment key="brand">
+        <div className="intro-brand-text intro-screen-brand">Salvin India</div>
+        <div className="intro-loader-note intro-screen-note">Processing plants, packaging machinery, spares and turnkey projects.</div>
+      </React.Fragment>
+    ),
+  ];
 
   const finishIntro = (code) => {
     setIsClosing(true);
@@ -115,13 +129,10 @@ function IntroOverlay({ onComplete }) {
       <div className="intro-copy-wrap">
         <span className="intro-smoke intro-smoke-one" />
         <span className="intro-smoke intro-smoke-two" />
-        <div className="intro-copy intro-copy-vision">Your Vision</div>
-        <div className="intro-copy intro-copy-engineering">Our Engineering</div>
-        <div className="intro-copy intro-copy-solution">Our Complete Solution</div>
-        <div className="intro-brand-text">Salvin India</div>
+        {activeScreen < introScreens.length && introScreens[activeScreen]}
       </div>
 
-      {showLanguagePanel && (
+      {activeScreen === 4 && (
         <div className="intro-language-panel">
           <span className="intro-language-kicker">Choose your language</span>
           <h2>Continue in your preferred language</h2>
