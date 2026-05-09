@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import logo from '../assets/salvin_logo.png';
+import LanguageSelector from './LanguageSelector';
 
 export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,11 +57,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <Link to="#" style={{ color: "#000" }} onClick={(e) => { e.preventDefault(); setMenuOpen(false); }}>SPARES & SERVICE</Link>
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
 
-        {isAdminAuthenticated && (
-          <button className="nav-logout-btn font-bold" type="button" onClick={() => { onAdminLogout(); setMenuOpen(false); }}>
-            LOGOUT
-          </button>
-        )}
+        <LanguageSelector />
       </nav>
     </header>
   );

@@ -75,7 +75,9 @@ import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
 import foodPlant from "./assets/home_projects/food_plant.jpg";
-import heroHomeBg from "./assets/hero-home-bg-new.jpg";
+import sparesHeroImage from "./assets/spares hiro.jpg";
+import projectHeroImage from "./assets/project_hiro.jpg";
+import machineHeroImage from "./assets/machine_hiro.png";
 
 
 const serviceCards = [
@@ -950,6 +952,59 @@ function AdminPage({
 
 function HomePage() {
   const [openFaq, setOpenFaq] = useState(0);
+  const [activeHeroIndex, setActiveHeroIndex] = useState(0);
+  const [isHeroPreviewOpen, setIsHeroPreviewOpen] = useState(false);
+  const heroSlides = [
+    {
+      key: "spares",
+      eyebrow: "Spares & Service",
+      title: "Your Trusted Source for Machine & Industrial Spares",
+      text: "Reliable replacement parts and support to keep production lines moving with less downtime.",
+      cta: "Explore Spares",
+      to: "/spares",
+      image: sparesHeroImage
+    },
+    {
+      key: "machine",
+      eyebrow: "Machineries",
+      title: "Special Purpose Machineries for Processing & Packaging",
+      text: "Purpose-built machinery engineered for consistent output, hygienic operation, and scalable manufacturing.",
+      cta: "View Machineries",
+      to: "/machineries",
+      image: machineHeroImage
+    },
+    {
+      key: "project",
+      eyebrow: "Turnkey Projects",
+      title: "Achieve Beyond Expectations",
+      subtitle: "From Vision to Victory",
+      text: "End-to-end project execution from plant planning and engineering to commissioning and support.",
+      cta: "Start Your Project",
+      to: "/turnkey-project",
+      image: projectHeroImage
+    }
+  ];
+
+  React.useEffect(() => {
+    setIsHeroPreviewOpen(false);
+    const previewTimer = window.setTimeout(() => setIsHeroPreviewOpen(true), 3000);
+    const slideTimer = window.setTimeout(() => {
+      setActiveHeroIndex((current) => (current + 1) % heroSlides.length);
+    }, 7000);
+
+    return () => {
+      window.clearTimeout(previewTimer);
+      window.clearTimeout(slideTimer);
+    };
+  }, [activeHeroIndex, heroSlides.length]);
+
+  const goToHeroSlide = (index) => {
+    setIsHeroPreviewOpen(false);
+    setActiveHeroIndex((index + heroSlides.length) % heroSlides.length);
+  };
+
+  const activeHero = heroSlides[activeHeroIndex];
+  const nextHeroIndex = (activeHeroIndex + 1) % heroSlides.length;
   const latestProjectsNews = [
     {
       title: "Honey Processing Plant in Rajkot",
@@ -1068,26 +1123,41 @@ function HomePage() {
       <section
         className="hero"
         id="home"
-        style={{ "--hero-home-bg": `url(${heroHomeBg})` }}
+        style={{ "--hero-home-bg": `url(${activeHero.image})` }}
       >
         <div className="overlay" />
-        <div className="hero-content">
-          <span className="tag">ENGINEERING THE FUTURE</span>
-          <h1>
-            Your Vision. Our Engineering. <br />
-            <span>One Complete Solution</span>
-          </h1>
-          <p>
-            Salvin Industries specializes in delivering high-quality turnkey solutions and expert technical consultancy for food and pharmaceutical processing, ensuring efficiency, compliance, and innovation.
-          </p>
-          <div className="buttons">
-            <NavLink className="primary" to="/contact">START YOUR PROJECT</NavLink>
-            <NavLink className="secondary" to="/services">VIEW OUR SOLUTIONS</NavLink>
+        <div className="hero-content" key={activeHero.key}>
+          <span className="tag">{activeHero.eyebrow}</span>
+          <h1>{activeHero.title}</h1>
+          {activeHero.subtitle && <h2>{activeHero.subtitle}</h2>}
+          <p>{activeHero.text}</p>
+          <div className="buttons hero-actions">
+            <NavLink className="primary" to={activeHero.to}>{activeHero.cta}</NavLink>
+            <NavLink className="secondary" to="/contact">Get Inquiry</NavLink>
           </div>
-          <div className="hero-stats-row">
-            <div className="stat"><h2>350+</h2><p>Completed Projects</p></div>
-            <div className="stat"><h2>8+</h2><p>Countries Served</p></div>
-            <div className="stat"><h2>5000+</h2><p>Products Packaged</p></div>
+        </div>
+        <div className={`hero-preview-dock${isHeroPreviewOpen ? " open" : ""}`} aria-label="Hero image selector">
+          <div className="hero-preview-track">
+            {heroSlides.map((slide, index) => (
+              <button
+                type="button"
+                key={slide.key}
+                className={`hero-preview-card${index === activeHeroIndex ? " active" : ""}${index === nextHeroIndex ? " next" : ""}`}
+                onClick={() => goToHeroSlide(index)}
+                aria-label={`Show ${slide.eyebrow}`}
+              >
+                <img src={slide.image} alt="" />
+                <span>{slide.eyebrow}</span>
+              </button>
+            ))}
+          </div>
+          <div className="hero-controls">
+            <button type="button" onClick={() => goToHeroSlide(activeHeroIndex - 1)} aria-label="Previous hero">
+              <span aria-hidden="true">&lsaquo;</span>
+            </button>
+            <button type="button" onClick={() => goToHeroSlide(activeHeroIndex + 1)} aria-label="Next hero">
+              <span aria-hidden="true">&rsaquo;</span>
+            </button>
           </div>
         </div>
       </section>
