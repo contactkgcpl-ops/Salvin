@@ -8,7 +8,6 @@ import machineCardRefImage from "./assets/machine-card-ref.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import salvinLogo from "./assets/salvin_logo.jpg";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
@@ -300,21 +299,6 @@ const ADMIN_CREDENTIALS = {
   adminId: "admin",
   password: "admin@123"
 };
-
-function WebsitePreloader({ isLeaving }) {
-  return (
-    <div className={`website-preloader${isLeaving ? " is-leaving" : ""}`} role="status" aria-live="polite">
-      <div className="preloader-glow" />
-      <div className="preloader-logo-shell">
-        <img src={salvinLogo} alt="Salvin Industries" className="preloader-logo" />
-      </div>
-      <div className="preloader-progress" aria-hidden="true">
-        <span />
-      </div>
-      <span className="sr-only">Loading Salvin Industries website</span>
-    </div>
-  );
-}
 
 function ProtectedAdminRoute({ isAdminAuthenticated, children }) {
   const location = useLocation();
@@ -1683,8 +1667,6 @@ function ServicesPage() {
 }
 
 export default function App() {
-  const [showPreloader, setShowPreloader] = useState(true);
-  const [isPreloaderLeaving, setIsPreloaderLeaving] = useState(false);
   const [machines, setMachines] = useState(initialMachines);
   const [machineLoadError, setMachineLoadError] = useState("");
 
@@ -1711,58 +1693,6 @@ export default function App() {
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
     () => localStorage.getItem("is_admin_authenticated") === "true"
   );
-
-  React.useEffect(() => {
-    let pageLoaded = document.readyState === "complete";
-    let minimumDurationDone = false;
-    let exitStarted = false;
-    let exitTimer;
-
-    const beginExit = () => {
-      if (exitStarted) return;
-      exitStarted = true;
-      setIsPreloaderLeaving(true);
-      exitTimer = window.setTimeout(() => {
-        setShowPreloader(false);
-      }, 550);
-    };
-
-    const finishWhenReady = () => {
-      if (pageLoaded && minimumDurationDone) beginExit();
-    };
-
-    const handlePageLoad = () => {
-      pageLoaded = true;
-      finishWhenReady();
-    };
-
-    const minimumTimer = window.setTimeout(() => {
-      minimumDurationDone = true;
-      finishWhenReady();
-    }, 2300);
-
-    const maximumTimer = window.setTimeout(beginExit, 3000);
-
-    if (pageLoaded) {
-      finishWhenReady();
-    } else {
-      window.addEventListener("load", handlePageLoad, { once: true });
-    }
-
-    document.body.classList.add("preloader-active");
-
-    return () => {
-      window.clearTimeout(minimumTimer);
-      window.clearTimeout(maximumTimer);
-      window.clearTimeout(exitTimer);
-      window.removeEventListener("load", handlePageLoad);
-      document.body.classList.remove("preloader-active");
-    };
-  }, []);
-
-  React.useEffect(() => {
-    document.body.classList.toggle("preloader-active", showPreloader);
-  }, [showPreloader]);
 
   React.useEffect(() => {
     const loadMachines = () => {
@@ -1867,8 +1797,7 @@ export default function App() {
 
   return (
     <>
-      {showPreloader && <WebsitePreloader isLeaving={isPreloaderLeaving} />}
-      <div className={`app${showPreloader ? " app--preloading" : " app--ready"}`}>
+      <div className="app">
         <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
         <Routes>
           <Route path="/" element={<HomePage />} />
