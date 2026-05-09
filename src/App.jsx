@@ -8,6 +8,7 @@ import machineCardRefImage from "./assets/machine-card-ref.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import IntroOverlay from "./components/IntroOverlay";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
@@ -1667,6 +1668,8 @@ function ServicesPage() {
 }
 
 export default function App() {
+  const location = useLocation();
+  const [showIntro, setShowIntro] = useState(() => location.pathname === "/");
   const [machines, setMachines] = useState(initialMachines);
   const [machineLoadError, setMachineLoadError] = useState("");
 
@@ -1795,9 +1798,11 @@ export default function App() {
     setIsAdminAuthenticated(false);
   };
 
+  const isIntroVisible = showIntro && location.pathname === "/";
+
   return (
     <>
-      <div className="app">
+      <div className={`app${isIntroVisible ? " app-intro-active" : ""}`}>
         <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -1838,6 +1843,7 @@ export default function App() {
         </Routes>
         <Footer />
       </div>
+      {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
     </>
   );
 }
