@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import logo from '../assets/salvin_logo.jpg';
+import logo from '../assets/salvin_logo.png';
 
 export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
