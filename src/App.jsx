@@ -32,8 +32,20 @@ async function readJsonResponse(response) {
   return data;
 }
 
-async function fetchJson(url, options) {
-  const response = await fetch(`${API_BASE_URL}${url}`, options);
+async function fetchJson(url, options = {}) {
+  const token = typeof localStorage !== "undefined" ? localStorage.getItem("salvin_auth_token") : null;
+  const headers = { ...(options.headers || {}) };
+  if (token && !headers.Authorization) {
+    headers.Authorization = `Bearer ${token}`;
+  }
+  if (
+    options.body != null &&
+    !(options.body instanceof FormData) &&
+    !headers["Content-Type"]
+  ) {
+    headers["Content-Type"] = "application/json";
+  }
+  const response = await fetch(`${API_BASE_URL}${url}`, { ...options, headers });
   return readJsonResponse(response);
 }
 
@@ -78,6 +90,7 @@ import foodPlant from "./assets/home_projects/food_plant.jpg";
 import sparesHeroImage from "./assets/spares hiro.jpg";
 import projectHeroImage from "./assets/project_hiro.jpg";
 import machineHeroImage from "./assets/machine_hiro.png";
+import salvinLogo from "./assets/salvin_logo.png";
 
 
 const serviceCards = [
@@ -149,15 +162,12 @@ const testimonialCards = [
   }
 ];
 
-const initialMachineCategories = ["Packaging", "Processing"];
-
 const subCategoryMap = {
   Packaging: ["Pouch Packaging", "Vial Packaging", "Bottle Packaging", "Tube Packaging", "Eye Drop Packaging"],
   Processing: ["Spices Processing", "API Processing", "Food Processing", "Pharmaceutical Processing"]
 };
 
 const initialMachines = [];
-const initialSpareCategories = ["Bottle", "Tube", "Pouch", "Vial"];
 
 // const initialMachines = [
 //   {
@@ -301,6 +311,20 @@ const ADMIN_CREDENTIALS = {
   adminId: "admin",
   password: "admin@123"
 };
+function WebsitePreloader({ isLeaving }) {
+  return (
+    <div className={`website-preloader${isLeaving ? " is-leaving" : ""}`} role="status" aria-live="polite">
+      <div className="preloader-glow" />
+      <div className="preloader-logo-shell">
+        <img src={salvinLogo} alt="Salvin Industries" className="preloader-logo" />
+      </div>
+      <div className="preloader-progress" aria-hidden="true">
+        <span />
+      </div>
+      <span className="sr-only">Loading Salvin Industries website</span>
+    </div>
+  );
+}
 
 function ProtectedAdminRoute({ isAdminAuthenticated, children }) {
   const location = useLocation();
@@ -322,14 +346,18 @@ function AdminLoginPage({ onAdminLogin, isAdminAuthenticated }) {
     return <Navigate to={redirectPath} replace />;
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
-    const isValid = onAdminLogin(adminId, password);
-    if (!isValid) {
-      setErrorMessage("Invalid admin ID or password.");
-      return;
+    try {
+      const isValid = await onAdminLogin(adminId, password);
+      if (!isValid) {
+        setErrorMessage("Invalid admin ID or password.");
+        return;
+      }
+      setErrorMessage("");
+    } catch {
+      setErrorMessage("Unable to reach server. Start the API on port 5000 (npm run server).");
     }
-    setErrorMessage("");
   }
 
   return (
@@ -337,7 +365,7 @@ function AdminLoginPage({ onAdminLogin, isAdminAuthenticated }) {
       <form className="card contact-form admin-login-form" onSubmit={handleSubmit}>
         <span className="section-badge">Restricted Access</span>
         <h1>Admin Login</h1>
-        <p className="page-copy">Only authorized admin can access machine/spare management.</p>
+        <p className="page-copy">Only authorized admin can access machine/spare management. Use the credentials created for the API (default first-time: admin / admin@123).</p>
         <label>
           Admin ID
           <input
@@ -368,12 +396,21 @@ function MachineDetailPage({ machines, sessionCache }) {
   const { machineSlug } = useParams();
   const [remoteMachine, setRemoteMachine] = useState(null);
   const [isLoadingMachine, setIsLoadingMachine] = useState(false);
-  const machine = machines.find(m => (m.slug || m.machine_name.toLowerCase().replace(/\s+/g, '-')) === machineSlug) || remoteMachine;
+  const slugNorm = (s) =>
+    String(s || "")
+      .trim()
+      .toLowerCase();
+  const deriveSlugLocal = (m) =>
+    m.slug?.trim()
+      ? slugNorm(m.slug)
+      : slugNorm(m.machine_name).replace(/\s+/g, "-");
+  const machine =
+    machines.find((m) => deriveSlugLocal(m) === slugNorm(machineSlug)) || remoteMachine;
 
   React.useEffect(() => {
     if (machine || !machineSlug) return;
     setIsLoadingMachine(true);
-    fetchJson(`/api/machines/${machineSlug}`)
+    fetchJson(`/api/machines/by-slug/${encodeURIComponent(machineSlug)}`)
       .then((data) => {
         if (data) setRemoteMachine(data);
       })
@@ -778,6 +815,14 @@ function AdminPage({
   const [spareCategoryName, setSpareCategoryName] = useState("");
   const [imageFile, setImageFile] = useState(null);
   const [machineSubmitError, setMachineSubmitError] = useState("");
+  const [spareSubmitError, setSpareSubmitError] = useState("");
+
+  React.useEffect(() => {
+    setSpareForm((prev) => {
+      if (prev.spare_category_id || !spareCategories.length) return prev;
+      return { ...prev, spare_category_id: spareCategories[0] };
+    });
+  }, [spareCategories]);
 
   const handleImageChange = (e) => {
     const file = e.target.files[0];
@@ -809,17 +854,22 @@ function AdminPage({
     }
   }
 
-  function handleSpareSubmit(event) {
+  async function handleSpareSubmit(event) {
     event.preventDefault();
-    onAddSpare(spareForm);
-    setSpareForm({
-      spare_name: "",
-      spare_category_id: spareCategories[0] || "",
-      image_url: "",
-      description: "",
-      stock_quantity: "0",
-      price: ""
-    });
+    setSpareSubmitError("");
+    try {
+      await onAddSpare(spareForm);
+      setSpareForm({
+        spare_name: "",
+        spare_category_id: spareCategories[0] || "",
+        image_url: "",
+        description: "",
+        stock_quantity: "0",
+        price: "",
+      });
+    } catch (error) {
+      setSpareSubmitError(error.message || "Spare could not be saved.");
+    }
   }
 
   return (
@@ -857,7 +907,7 @@ function AdminPage({
               </div>
             )}
           </label>
-          <label>Existing Image Path<input placeholder="/assets/machines/image-name.jpg" value={machineForm.image_url.startsWith('data:') ? "" : machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
+          <label>Existing Image Path<input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url.startsWith('data:') ? "" : machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
           <label>Description<textarea rows="3" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} /></label>
           <label>URL Slug (e.g. automatic-vial-filler)<input value={machineForm.slug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: e.target.value }))} /></label>
           <label>Meta Title<input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} /></label>
@@ -885,15 +935,16 @@ function AdminPage({
           <label>Description<textarea rows="3" value={spareForm.description} onChange={(e) => setSpareForm((prev) => ({ ...prev, description: e.target.value }))} /></label>
           <label>Stock Quantity<input type="number" min="0" value={spareForm.stock_quantity} onChange={(e) => setSpareForm((prev) => ({ ...prev, stock_quantity: e.target.value }))} required /></label>
           <label>Price<input type="number" min="0" step="0.01" value={spareForm.price} onChange={(e) => setSpareForm((prev) => ({ ...prev, price: e.target.value }))} required /></label>
+          {spareSubmitError && <p className="admin-error-text">{spareSubmitError}</p>}
           <button className="card-btn" type="submit">Add Spare</button>
         </form>
 
         <div className="card admin-side-card">
           <h3>Add Categories</h3>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              onAddMachineCategory(machineCategoryName);
+              await onAddMachineCategory(machineCategoryName);
               setMachineCategoryName("");
             }}
           >
@@ -901,9 +952,9 @@ function AdminPage({
             <button className="card-btn" type="submit">Add Category</button>
           </form>
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
-              onAddSpareCategory(spareCategoryName);
+              await onAddSpareCategory(spareCategoryName);
               setSpareCategoryName("");
             }}
           >
@@ -1742,28 +1793,16 @@ export default function App() {
   const [machines, setMachines] = useState(initialMachines);
   const [machineLoadError, setMachineLoadError] = useState("");
 
-  // Persistent state for Spares
-  const [spares, setSpares] = useState(() => {
-    const saved = localStorage.getItem("salvin_spares");
-    return saved ? JSON.parse(saved) : initialSpares;
-  });
+  const [spares, setSpares] = useState([]);
 
-  // Persistent state for Machine Categories
-  const [machineCategories, setMachineCategories] = useState(() => {
-    const saved = localStorage.getItem("salvin_machine_categories");
-    return saved ? JSON.parse(saved) : initialMachineCategories;
-  });
+  const [machineCategories, setMachineCategories] = useState([]);
 
-  // Persistent state for Spare Categories
-  const [spareCategories, setSpareCategories] = useState(() => {
-    const saved = localStorage.getItem("salvin_spare_categories");
-    return saved ? JSON.parse(saved) : initialSpareCategories;
-  });
+  const [spareCategories, setSpareCategories] = useState([]);
 
   const [sessionImageCache, setSessionImageCache] = useState({});
 
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
-    () => localStorage.getItem("is_admin_authenticated") === "true"
+    () => !!localStorage.getItem("salvin_auth_token")
   );
 
   React.useEffect(() => {
@@ -1777,6 +1816,25 @@ export default function App() {
           console.error("Unable to load machines:", error);
           setMachineLoadError("Machine data not found.");
         });
+
+      fetchJson("/api/spares")
+        .then((data) => setSpares(Array.isArray(data) ? data : []))
+        .catch((error) => {
+          console.error("Unable to load spares:", error);
+          setSpares([]);
+        });
+
+      Promise.all([
+        fetchJson("/api/machines/categories/list").catch(() => []),
+        fetchJson("/api/spares/categories/list").catch(() => []),
+      ]).then(([mRows, sRows]) => {
+        setMachineCategories(
+          Array.isArray(mRows) ? mRows.map((r) => r.category_name).filter(Boolean) : []
+        );
+        setSpareCategories(
+          Array.isArray(sRows) ? sRows.map((r) => r.category_name).filter(Boolean) : []
+        );
+      });
     };
 
     loadMachines();
@@ -1784,28 +1842,38 @@ export default function App() {
     return () => window.clearInterval(refreshTimer);
   }, []);
 
-  React.useEffect(() => {
-    localStorage.setItem("salvin_spares", JSON.stringify(spares));
-  }, [spares]);
-
-  React.useEffect(() => {
-    localStorage.setItem("salvin_machine_categories", JSON.stringify(machineCategories));
-  }, [machineCategories]);
-
-  React.useEffect(() => {
-    localStorage.setItem("salvin_spare_categories", JSON.stringify(spareCategories));
-  }, [spareCategories]);
-
-  const addMachineCategory = (value) => {
+  const addMachineCategory = async (value) => {
     const normalized = value.trim();
-    if (!normalized || machineCategories.includes(normalized)) return;
-    setMachineCategories((prev) => [...prev, normalized]);
+    if (!normalized) return;
+    try {
+      await fetchJson("/api/machines/categories/add", {
+        method: "POST",
+        body: JSON.stringify({ category_name: normalized }),
+      });
+      const rows = await fetchJson("/api/machines/categories/list");
+      setMachineCategories(
+        Array.isArray(rows) ? rows.map((r) => r.category_name).filter(Boolean) : []
+      );
+    } catch (e) {
+      console.error(e);
+    }
   };
 
-  const addSpareCategory = (value) => {
+  const addSpareCategory = async (value) => {
     const normalized = value.trim();
-    if (!normalized || spareCategories.includes(normalized)) return;
-    setSpareCategories((prev) => [...prev, normalized]);
+    if (!normalized) return;
+    try {
+      await fetchJson("/api/spares/categories/add", {
+        method: "POST",
+        body: JSON.stringify({ category_name: normalized }),
+      });
+      const rows = await fetchJson("/api/spares/categories/list");
+      setSpareCategories(
+        Array.isArray(rows) ? rows.map((r) => r.category_name).filter(Boolean) : []
+      );
+    } catch (e) {
+      console.error(e);
+    }
   };
 
   const addMachine = async (machineForm, imageFile) => {
@@ -1824,17 +1892,28 @@ export default function App() {
     setMachines((prev) => [result, ...prev.filter((machine) => machine.machine_id !== result.machine_id)]);
   };
 
-  const addSpare = (spareForm) => {
-    const newSpare = {
-      spare_id: Date.now(),
-      spare_name: spareForm.spare_name,
-      spare_category_id: spareForm.spare_category_id,
-      image_url: spareForm.image_url,
-      description: spareForm.description,
-      stock_quantity: Number(spareForm.stock_quantity || 0),
-      price: Number(spareForm.price || 0)
+  const addSpare = async (spareForm) => {
+    const created = await fetchJson("/api/spares", {
+      method: "POST",
+      body: JSON.stringify({
+        spare_name: spareForm.spare_name.trim(),
+        spare_category_id: spareForm.spare_category_id,
+        image_url: String(spareForm.image_url || "").trim(),
+        description: String(spareForm.description || "").trim(),
+        stock_quantity: Number(spareForm.stock_quantity || 0),
+        price: Number(spareForm.price || 0),
+      }),
+    });
+    const row = {
+      spare_id: created.spare_id,
+      spare_name: created.spare_name,
+      spare_category_id: created.spare_category_id,
+      image_url: created.image_url,
+      description: created.description,
+      stock_quantity: created.stock_quantity,
+      price: created.price,
     };
-    setSpares((prev) => [newSpare, ...prev]);
+    setSpares((prev) => [row, ...prev.filter((s) => s.spare_id !== row.spare_id)]);
   };
 
   const deleteMachine = async (machineId) => {
@@ -1848,21 +1927,32 @@ export default function App() {
     setMachines((prev) => prev.filter((machine) => machine.machine_id !== machineId));
   };
 
-  const deleteSpare = (spareId) => {
+  const deleteSpare = async (spareId) => {
+    try {
+      await fetchJson(`/api/spares/${spareId}`, { method: "DELETE" });
+    } catch (error) {
+      console.error("Unable to delete spare:", error);
+    }
     setSpares((prev) => prev.filter((spare) => spare.spare_id !== spareId));
   };
 
-  const handleAdminLogin = (adminId, password) => {
-    const isValid =
-      adminId.trim() === ADMIN_CREDENTIALS.adminId && password === ADMIN_CREDENTIALS.password;
-    if (isValid) {
-      localStorage.setItem("is_admin_authenticated", "true");
+  const handleAdminLogin = async (adminId, password) => {
+    try {
+      const data = await fetchJson("/api/auth/login", {
+        method: "POST",
+        body: JSON.stringify({ admin_id: adminId.trim(), password }),
+      });
+      if (!data?.token) return false;
+      localStorage.setItem("salvin_auth_token", data.token);
       setIsAdminAuthenticated(true);
+      return true;
+    } catch {
+      return false;
     }
-    return isValid;
   };
 
   const handleAdminLogout = () => {
+    localStorage.removeItem("salvin_auth_token");
     localStorage.removeItem("is_admin_authenticated");
     setIsAdminAuthenticated(false);
   };
