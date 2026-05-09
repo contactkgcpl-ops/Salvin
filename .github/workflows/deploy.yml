@@ -41,8 +41,8 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ${{ secrets.protocol }}
-          port: ${{ secrets.port }}
+          protocol: ftp
+          port: 21
           local-dir: ./dist/
           # FTP user already lands in /public_html, so upload dist contents there.
           # Do not target public_html/ here, or it creates /public_html/public_html.
