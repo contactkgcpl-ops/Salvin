@@ -10,6 +10,9 @@ import IntroOverlay from "./components/IntroOverlay";
 import machinesData from "../data/machines.json";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
+const ADMIN_PASSWORD = import.meta.env.VITE_ADMIN_PASSWORD || "admin@123";
+const ADMIN_TOKEN = import.meta.env.VITE_ADMIN_TOKEN || "salvin-admin-token";
 
 async function readJsonResponse(response) {
   const contentType = response.headers.get("content-type") || "";
@@ -1792,19 +1795,14 @@ export default function App() {
   };
 
   const handleAdminLogin = async (adminId, password) => {
-    try {
-      const data = await fetchJson("/api/auth/login", {
-        method: "POST",
-        body: JSON.stringify({ admin_id: adminId.trim(), password }),
-      });
-      if (!data?.token) return false;
-      localStorage.setItem("salvin_auth_token", data.token);
-      setIsAdminAuthenticated(true);
-      window.setTimeout(() => refreshAdminData(), 0);
-      return true;
-    } catch {
+    if (adminId.trim() !== ADMIN_USERNAME || password !== ADMIN_PASSWORD) {
       return false;
     }
+
+    localStorage.setItem("salvin_auth_token", ADMIN_TOKEN);
+    setIsAdminAuthenticated(true);
+    window.setTimeout(() => refreshAdminData(), 0);
+    return true;
   };
 
   const handleAdminLogout = () => {

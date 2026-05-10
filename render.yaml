@@ -30,5 +30,13 @@ services:
         sync: false
       - key: ADMIN_PASSWORD
         sync: false
+      - key: ADMIN_TOKEN
+        sync: false
+      - key: VITE_ADMIN_USERNAME
+        sync: false
+      - key: VITE_ADMIN_PASSWORD
+        sync: false
+      - key: VITE_ADMIN_TOKEN
+        sync: false
       - key: MAX_UPLOAD_SIZE
         value: "5242880"

@@ -4,14 +4,12 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
-import authRoutes from "./routes/authRoutes.js";
 import categoryRoutes from "./routes/categoryRoutes.js";
 import subcategoryRoutes from "./routes/subcategoryRoutes.js";
 import machineRoutes from "./routes/machineRoutes.js";
 import dashboardRoutes from "./routes/dashboardRoutes.js";
 import { errorHandler } from "./middleware/errorMiddleware.js";
 import { requireAuth } from "./middleware/authMiddleware.js";
-import { ensureAdmin } from "./models/adminModel.js";
 import { getCategories } from "./models/categoryModel.js";
 import { createCategory } from "./models/categoryModel.js";
 import { categorySlugExists } from "./models/categoryModel.js";
@@ -39,7 +37,6 @@ app.get("/api/health", (req, res) => {
   res.json({ ok: true, service: "Salvin API" });
 });
 
-app.use("/api/auth", authRoutes);
 app.use("/api/dashboard", dashboardRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/subcategories", subcategoryRoutes);
@@ -92,7 +89,4 @@ app.use(errorHandler);
 
 app.listen(PORT, () => {
   console.log(`Salvin API running on http://localhost:${PORT}`);
-  ensureAdmin().catch((error) => {
-    console.error("Admin bootstrap failed. Check MySQL/.env:", error.message);
-  });
 });
