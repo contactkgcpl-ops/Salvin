@@ -1454,6 +1454,32 @@ function ContactJourneySection() {
 }
 
 function ContactPage() {
+  const [state, setState] = useState({ submitting: false, succeeded: false, error: null });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setState({ submitting: true, succeeded: false, error: null });
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formspree.io/f/mlgpkkjj", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Accept": "application/json", "Content-Type": "application/json" }
+      });
+      if (response.ok) {
+        setState({ submitting: false, succeeded: true, error: null });
+        e.target.reset();
+      } else {
+        const result = await response.json();
+        setState({ submitting: false, succeeded: false, error: result.error || "Something went wrong." });
+      }
+    } catch (err) {
+      setState({ submitting: false, succeeded: false, error: "Network error. Please try again." });
+    }
+  };
+
   return (
     <div className="contact-page-new min-w-0 overflow-x-hidden">
       {/* Hero Section */}
@@ -1477,26 +1503,30 @@ function ContactPage() {
           <div className="inquiry-grid">
             {/* Form */}
             <div className="inquiry-form-wrapper">
-              <form className="inquiry-form" onSubmit={(e) => e.preventDefault()}>
+              <form className="inquiry-form" onSubmit={handleSubmit}>
                 <div className="input-group">
                   <span className="input-icon">
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                   </span>
-                  <input type="text" placeholder="Full Name" />
+                  <input type="text" name="name" placeholder="Full Name" required />
                 </div>
                 <div className="input-group">
-                  <input type="email" placeholder="Email Address" />
+                  <input type="email" name="email" placeholder="Email Address" required />
                 </div>
                 <div className="input-group">
                   <span className="input-icon">
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                   </span>
-                  <input type="tel" placeholder="Phone Number" />
+                  <input type="tel" name="phone" placeholder="Phone Number" required />
                 </div>
                 <div className="input-group">
-                  <textarea rows="4" placeholder="Describe your requirement..."></textarea>
+                  <textarea name="message" rows="4" placeholder="Describe your requirement..." required></textarea>
                 </div>
-                <button type="submit" className="submit-inquiry-btn">SUBMIT INQUIRY</button>
+                <button type="submit" className="submit-inquiry-btn" disabled={state.submitting}>
+                  {state.submitting ? "SENDING..." : "SUBMIT INQUIRY"}
+                </button>
+                {state.succeeded && <p style={{ color: "green", marginTop: "10px", fontWeight: "bold" }}>Thanks! Your inquiry has been sent.</p>}
+                {state.error && <p style={{ color: "red", marginTop: "10px" }}>{state.error}</p>}
                 <div className="form-disclaimer">
                   <small>• We typically respond within 24 hours.</small>
                   <small>• We respect your privacy. Your information is safe with us.</small>

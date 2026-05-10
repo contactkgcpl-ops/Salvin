@@ -4700,13 +4700,13 @@ body {
 }
 
 .consultant-container {
-  width: min(100%, 1080px);
+  width: min(100%, 1440px);
   margin: 0 auto;
   padding: 0 clamp(18px, 5vw, 48px);
 }
 
 .consultant-narrow {
-  width: min(100%, 980px);
+  width: min(100%, 1280px);
 }
 
 .consultant-section-header {
@@ -4742,7 +4742,7 @@ body {
 }
 
 .consultant-section-header p {
-  width: min(100%, 760px);
+  width: min(100%, 1000px);
   margin: 18px auto 0;
   color: #667080;
   font-size: 15px;
@@ -4761,7 +4761,7 @@ body {
 }
 
 .consultant-hero-content {
-  width: min(100%, 900px);
+  width: min(100%, 1200px);
   padding: clamp(72px, 10vw, 110px) 24px;
 }
 
@@ -4976,14 +4976,15 @@ body {
 }
 
 .consultant-trust-inner {
-  width: min(100%, 760px);
+  width: min(100%, 1200px);
 }
 
 .consultant-trust-list {
-  width: min(100%, 560px);
+  width: min(100%, 1100px);
   margin: 42px auto 0;
   display: grid;
-  gap: 35px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 35px 50px;
 }
 
 .consultant-trust-item {
@@ -5023,7 +5024,7 @@ body {
 }
 
 .consultant-request-grid {
-  width: min(100%, 920px);
+  width: min(100%, 1280px);
   margin: 40px auto 0;
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
@@ -5190,7 +5191,8 @@ body {
   }
 
   .consultant-service-grid,
-  .consultant-request-grid {
+  .consultant-request-grid,
+  .consultant-trust-list {
     grid-template-columns: 1fr;
   }
 

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const serviceCards = [
@@ -249,6 +249,32 @@ function TrustSection() {
 }
 
 function ConsultationForm() {
+  const [state, setState] = useState({ submitting: false, succeeded: false, error: null });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setState({ submitting: true, succeeded: false, error: null });
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch("https://formspree.io/f/mlgpkkjj", {
+        method: "POST",
+        body: JSON.stringify(data),
+        headers: { "Accept": "application/json", "Content-Type": "application/json" }
+      });
+      if (response.ok) {
+        setState({ submitting: false, succeeded: true, error: null });
+        e.target.reset();
+      } else {
+        const result = await response.json();
+        setState({ submitting: false, succeeded: false, error: result.error || "Something went wrong." });
+      }
+    } catch (err) {
+      setState({ submitting: false, succeeded: false, error: "Network error. Please try again." });
+    }
+  };
+
   return (
     <section className="consultant-request">
       <div className="consultant-container">
@@ -259,26 +285,28 @@ function ConsultationForm() {
           text="Fill in your project requirements and our engineering experts will respond within 24 hours."
         />
         <div className="consultant-request-grid">
-          <form className="consultant-form">
+          <form className="consultant-form" onSubmit={handleSubmit}>
             <label>
               COMPANY NAME
-              <input type="text" placeholder="Your company" />
+              <input type="text" name="company" placeholder="Your company" required />
             </label>
             <label>
               EMAIL ADDRESS *
-              <input type="email" placeholder="email@company.com" />
+              <input type="email" name="email" placeholder="email@company.com" required />
             </label>
             <label>
               PHONE NUMBER *
-              <input type="tel" placeholder="+91 XXXXX XXXXX" />
+              <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required />
             </label>
             <label>
               REQUIREMENT DETAILS *
-              <textarea rows="6" placeholder="Describe your project requirements, current situation, and what you're looking to achieve..." />
+              <textarea name="message" rows="6" placeholder="Describe your project requirements, current situation, and what you're looking to achieve..." required />
             </label>
-            <button type="button" className="consultant-submit">
-              <span>!</span> Request Consultation
+            <button type="submit" className="consultant-submit" disabled={state.submitting}>
+              <span>{state.submitting ? "..." : "!"}</span> {state.submitting ? "Sending..." : "Request Consultation"}
             </button>
+            {state.succeeded && <p style={{ color: "green", marginTop: "10px", fontWeight: "bold" }}>Success! We will contact you soon.</p>}
+            {state.error && <p style={{ color: "red", marginTop: "10px" }}>{state.error}</p>}
           </form>
           <aside className="consultant-benefits">
             <div className="consultant-response-box">
