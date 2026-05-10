@@ -98,6 +98,7 @@ import projRice from "./assets/home_projects/puffed_rice.png";
 import foodPlant from "./assets/home_projects/salvin_team.jpg";
 import projectHeroImage from "./assets/project_hiro.jpg";
 import machineHeroImage from "./assets/machine_hiro.png";
+import sparesHeroImage from "./assets/spares hiro.jpg";
 import salvinLogo from "./assets/salvin_logo.png";
 
 
@@ -891,6 +892,15 @@ function HomePage() {
       cta: "Start Your Project",
       to: "/turnkey-project",
       image: projectHeroImage
+    },
+    {
+      key: "spares",
+      eyebrow: "Industrial Spares",
+      title: "Your Trusted Source for Machine & Industrial Spares",
+      text: "Premium quality industrial components and machine spares ensuring zero downtime for your production lines.",
+      cta: "Enquire Spares",
+      to: "/contact",
+      image: sparesHeroImage
     }
   ];
 
@@ -1586,7 +1596,7 @@ function ContactPage() {
               </div>
               <div className="dept-info">
                 <strong>General Manager</strong>
-                <span>Archna Gohil</span>
+                <span>Nidhi Shah</span>
                 <a href="mailto:gm.salvinindustries@gmail.com">gm.salvinindustries@gmail.com</a>
               </div>
             </div>

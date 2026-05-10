@@ -72,7 +72,7 @@ function IntroOverlay({ onComplete }) {
     (
       <React.Fragment key="brand">
         <div className="intro-brand-text intro-screen-brand">Salvin India</div>
-        <div className="intro-loader-note intro-screen-note">Processing plants, packaging machinery, automation and turnkey projects.</div>
+        <div className="intro-loader-note intro-screen-note">Processing plants, packaging machinery, spares and turnkey projects.</div>
       </React.Fragment>
     ),
   ];
