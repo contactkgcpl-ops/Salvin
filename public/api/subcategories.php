@@ -37,6 +37,13 @@ if (method() === 'POST') {
     $categoryId = (int)($data['category_id'] ?? 0);
     $name = trim((string)($data['name'] ?? $data['subcategory_name'] ?? ''));
     if (!$categoryId || !$name) json_response(['error' => 'Valid category and subcategory are required'], 400);
+
+    $stmt = $pdo->prepare('SELECT id FROM categories WHERE id = ? LIMIT 1');
+    $stmt->execute([$categoryId]);
+    if (!$stmt->fetch()) {
+        json_response(['error' => 'Selected category does not exist. Refresh admin page and select a valid category.'], 400);
+    }
+
     $slug = unique_slug('subcategories', $data['slug'] ?? $name, null, $categoryId);
     $stmt = $pdo->prepare('INSERT INTO subcategories (category_id, name, slug) VALUES (?, ?, ?)');
     $stmt->execute([$categoryId, $name, $slug]);
@@ -49,6 +56,13 @@ if (method() === 'PUT') {
     $categoryId = (int)($data['category_id'] ?? 0);
     $name = trim((string)($data['name'] ?? $data['subcategory_name'] ?? ''));
     if (!$categoryId || !$name) json_response(['error' => 'Valid category and subcategory are required'], 400);
+
+    $stmt = $pdo->prepare('SELECT id FROM categories WHERE id = ? LIMIT 1');
+    $stmt->execute([$categoryId]);
+    if (!$stmt->fetch()) {
+        json_response(['error' => 'Selected category does not exist. Refresh admin page and select a valid category.'], 400);
+    }
+
     $slug = unique_slug('subcategories', $data['slug'] ?? $name, $id, $categoryId);
     $stmt = $pdo->prepare('UPDATE subcategories SET category_id = ?, name = ?, slug = ? WHERE id = ?');
     $stmt->execute([$categoryId, $name, $slug, $id]);
