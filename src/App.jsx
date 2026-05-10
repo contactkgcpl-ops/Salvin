@@ -1768,6 +1768,7 @@ export default function App() {
 
   const updateMachine = async (machineId, machineForm, imageFile) => {
     const formData = new FormData();
+    formData.append("_method", "PUT");
     Object.entries(machineForm).forEach(([key, value]) => {
       if (key !== "id") formData.append(key, value ?? "");
     });
@@ -1776,7 +1777,7 @@ export default function App() {
     }
 
     await fetchJson(`/api/machines/${machineId}`, {
-      method: "PUT",
+      method: "POST",
       body: formData
     });
     await refreshAdminData();
