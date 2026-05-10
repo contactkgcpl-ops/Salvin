@@ -4,6 +4,18 @@ declare(strict_types=1);
 $pdo = db();
 $id = isset(route_parts()[1]) ? (int)route_parts()[1] : null;
 
+function get_subcategory(PDO $pdo, int $id): array|false {
+    $stmt = $pdo->prepare('
+        SELECT s.id, s.category_id, s.name, s.slug, s.created_at, c.name AS category_name
+        FROM subcategories s
+        JOIN categories c ON c.id = s.category_id
+        WHERE s.id = ?
+        LIMIT 1
+    ');
+    $stmt->execute([$id]);
+    return $stmt->fetch();
+}
+
 if (method() === 'GET') {
     $categoryId = isset($_GET['category_id']) ? (int)$_GET['category_id'] : null;
     $sql = '
@@ -28,9 +40,7 @@ if (method() === 'POST') {
     $slug = unique_slug('subcategories', $data['slug'] ?? $name, null, $categoryId);
     $stmt = $pdo->prepare('INSERT INTO subcategories (category_id, name, slug) VALUES (?, ?, ?)');
     $stmt->execute([$categoryId, $name, $slug]);
-    $stmt = $pdo->prepare('SELECT * FROM subcategories WHERE id = ?');
-    $stmt->execute([(int)$pdo->lastInsertId()]);
-    json_response($stmt->fetch(), 201);
+    json_response(get_subcategory($pdo, (int)$pdo->lastInsertId()), 201);
 }
 
 if (!$id) json_response(['error' => 'Subcategory id is required'], 400);
@@ -42,12 +52,12 @@ if (method() === 'PUT') {
     $slug = unique_slug('subcategories', $data['slug'] ?? $name, $id, $categoryId);
     $stmt = $pdo->prepare('UPDATE subcategories SET category_id = ?, name = ?, slug = ? WHERE id = ?');
     $stmt->execute([$categoryId, $name, $slug, $id]);
-    $stmt = $pdo->prepare('SELECT * FROM subcategories WHERE id = ?');
-    $stmt->execute([$id]);
-    json_response($stmt->fetch());
+    json_response(get_subcategory($pdo, $id));
 }
 
 if (method() === 'DELETE') {
+    $stmt = $pdo->prepare('UPDATE machines SET subcategory_id = NULL WHERE subcategory_id = ?');
+    $stmt->execute([$id]);
     $stmt = $pdo->prepare('DELETE FROM subcategories WHERE id = ?');
     $stmt->execute([$id]);
     json_response(['success' => true]);

@@ -37,6 +37,15 @@ if (method() === 'PUT') {
 }
 
 if (method() === 'DELETE') {
+    $stmt = $pdo->prepare('SELECT COUNT(*) AS count FROM machines WHERE category_id = ?');
+    $stmt->execute([$id]);
+    if ((int)$stmt->fetch()['count'] > 0) {
+        json_response(['error' => 'Move or delete machines in this category first.'], 409);
+    }
+
+    $stmt = $pdo->prepare('DELETE FROM subcategories WHERE category_id = ?');
+    $stmt->execute([$id]);
+
     $stmt = $pdo->prepare('DELETE FROM categories WHERE id = ?');
     $stmt->execute([$id]);
     json_response(['success' => true]);
