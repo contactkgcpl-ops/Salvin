@@ -15,7 +15,8 @@ const particles = [
 const blueprintItems = [
   { className: "intro-blueprint intro-food", label: "Turnkey processing plant", type: "plant" },
   { className: "intro-blueprint intro-pharma", label: "Machinery line", type: "machine" },
-  { className: "intro-blueprint intro-machine", label: "Industrial spares", type: "spares" },
+  { className: "intro-blueprint intro-machine", label: "Packaging machinery", type: "machine" },
+  { className: "intro-blueprint intro-machine", label: "Processing machinery", type: "machine" },
   { className: "intro-blueprint intro-gear", label: "Automation project", type: "automation" }
 ];
 
@@ -38,18 +39,6 @@ function BlueprintIcon({ type }) {
         <path d="M42 42V28h36v14M50 28v-8h20v8" />
         <circle cx="36" cy="98" r="5" />
         <circle cx="84" cy="98" r="5" />
-      </svg>
-    );
-  }
-
-  if (type === "spares") {
-    return (
-      <svg viewBox="0 0 120 120" aria-hidden="true">
-        <circle cx="44" cy="48" r="18" />
-        <circle cx="44" cy="48" r="7" />
-        <path d="M44 24v8M44 64v8M20 48h8M60 48h8M27 31l6 6M55 59l6 6M61 31l-6 6M33 59l-6 6" />
-        <path d="M68 72l24-24 12 12-24 24H68V72Z" />
-        <path d="M82 58l12 12" />
       </svg>
     );
   }
@@ -79,11 +68,11 @@ function IntroOverlay({ onComplete }) {
   const introScreens = [
     <div className="intro-copy intro-screen-copy" key="vision">Your Vision</div>,
     <div className="intro-copy intro-screen-copy intro-copy-engineering" key="engineering">Our Engineering</div>,
-    <div className="intro-copy intro-screen-copy" key="solution">Our Complete Solution</div>,
+    <div className="intro-copy intro-screen-copy" key="solution">One Complete Solution</div>,
     (
       <React.Fragment key="brand">
         <div className="intro-brand-text intro-screen-brand">Salvin India</div>
-        <div className="intro-loader-note intro-screen-note">Processing plants, packaging machinery, spares and turnkey projects.</div>
+        <div className="intro-loader-note intro-screen-note">Processing plants, packaging machinery, automation and turnkey projects.</div>
       </React.Fragment>
     ),
   ];

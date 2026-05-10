@@ -1,14 +1,13 @@
 import React, { useMemo, useState } from "react";
 import { Navigate, NavLink, Route, Routes, useLocation, useParams } from "react-router-dom";
 import "./App.css";
-import machineCardsImage from "./assets/machine-cards.png";
 import machineryLayoutImage from "./assets/machinery-layout.png";
 import blueMachinesImage from "./assets/blue-machines.png";
-import machineCardRefImage from "./assets/machine-card-ref.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import IntroOverlay from "./components/IntroOverlay";
+import machinesData from "../data/machines.json";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 
@@ -27,7 +26,15 @@ async function readJsonResponse(response) {
 
   const data = bodyText ? JSON.parse(bodyText) : null;
   if (!response.ok) {
-    throw new Error(data?.error || "Machine API request failed.");
+    if (response.status === 401 && typeof localStorage !== "undefined") {
+      localStorage.removeItem("salvin_auth_token");
+      localStorage.removeItem("is_admin_authenticated");
+    }
+    throw new Error(
+      response.status === 401
+        ? "Login expired. Please login again."
+        : data?.error || "Machine API request failed."
+    );
   }
   return data;
 }
@@ -79,7 +86,6 @@ import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
 import industryAutomation from "./assets/industry-divisions/automation-robotics.webp";
 import industryProcessing from "./assets/industry-divisions/processing-packaging.png";
 import industryConsultancy from "./assets/industry-divisions/food_consultant.jpg";
-import industryPneumatic from "./assets/industry-divisions/pnuematic_spares.webp";
 import industryMaintenance from "./assets/industry-divisions/machine-maintenance.jpg";
 import projHoney from "./assets/home_projects/honey processing plant.webp";
 import projSpices from "./assets/home_projects/spices_processing.png";
@@ -87,7 +93,6 @@ import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
 import foodPlant from "./assets/home_projects/salvin_team.jpg";
-import sparesHeroImage from "./assets/spares hiro.jpg";
 import projectHeroImage from "./assets/project_hiro.jpg";
 import machineHeroImage from "./assets/machine_hiro.png";
 import salvinLogo from "./assets/salvin_logo.png";
@@ -162,155 +167,22 @@ const testimonialCards = [
   }
 ];
 
-const subCategoryMap = {
-  Packaging: ["Pouch Packaging", "Vial Packaging", "Bottle Packaging", "Tube Packaging", "Eye Drop Packaging"],
-  Processing: ["Spices Processing", "API Processing", "Food Processing", "Pharmaceutical Processing"]
-};
+const initialMachines = Array.isArray(machinesData) ? machinesData : [];
 
-const initialMachines = [];
 
-// const initialMachines = [
-//   {
-//     machine_id: 1,
-//     machine_name: "Automatic Liquid Filling Machine",
-//     category_id: "Processing",
-//     subcategory: "Pharmaceutical",
-//     image_url: machineCardsImage,
-//     description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-//     tags: ["PROCESSING / LIQUID FILLING", "PHARMACEUTICAL"],
-//     specifications: {
-//       heads: "4-head SS 316 Construction",
-//       volumeRange: "15ml – 1000ml",
-//       controlSystem: "Siemens / Delta PLC",
-//       productionSpeed: "40-60 Containers/min"
-//     },
-//     priceRange: "1.90 CRORE",
-//     speed: "120 RPM",
-//     capacity: "33.99L",
-//     status: "active"
-//   },
-//   {
-//     machine_id: 2,
-//     machine_name: "Spice Grinding Machine",
-//     category_id: "Processing",
-//     subcategory: "Spice Processing",
-//     image_url: machineCardsImage,
-//     description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-//     tags: ["PROCESSING / GRINDING", "FOOD & SPICES"],
-//     specifications: {
-//       heads: "2-head SS 304 Construction",
-//       volumeRange: "50g – 5000g",
-//       controlSystem: "Delta PLC",
-//       productionSpeed: "80-120 Kg/hr"
-//     },
-//     priceRange: "1.90 CRORE",
-//     speed: "120 RPM",
-//     capacity: "30.5KG",
-//     status: "active"
-//   },
-//   {
-//     machine_id: 3,
-//     machine_name: "Tablet Coating Machine",
-//     category_id: "Processing",
-//     subcategory: "Pharmaceutical",
-//     image_url: machineCardsImage,
-//     description: "High-speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-//     tags: ["PROCESSING / COATING", "PHARMACEUTICAL"],
-//     specifications: {
-//       heads: "Auto-spray SS 316 System",
-//       volumeRange: "5mm – 25mm tablet",
-//       controlSystem: "Siemens PLC",
-//       productionSpeed: "60-80 tablets/min"
-//     },
-//     priceRange: "1.90 CRORE",
-//     speed: "160 RPM",
-//     capacity: "33.99L",
-//     status: "active"
-//   },
-//   {
-//     machine_id: 4,
-//     machine_name: "Bottle Filling Machine",
-//     category_id: "Packaging",
-//     subcategory: "Bottle",
-//     image_url: machineCardRefImage,
-//     description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-//     tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
-//     specifications: {
-//       heads: "6-head SS 316 Construction",
-//       volumeRange: "30ml – 1000ml",
-//       controlSystem: "Siemens / Delta PLC",
-//       productionSpeed: "60-80 Bottles/min"
-//     },
-//     priceRange: "1.56 CRORE",
-//     speed: "120 RPM",
-//     capacity: "33.99L",
-//     status: "active"
-//   },
-//   {
-//     machine_id: 5,
-//     machine_name: "Bottle Filling Machine",
-//     category_id: "Packaging",
-//     subcategory: "Bottle",
-//     image_url: machineCardRefImage,
-//     description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-//     tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
-//     specifications: {
-//       heads: "8-head SS 316 Construction",
-//       volumeRange: "15ml – 500ml",
-//       controlSystem: "Delta PLC",
-//       productionSpeed: "80-100 Bottles/min"
-//     },
-//     priceRange: "1.56 CRORE",
-//     speed: "120 RPM",
-//     capacity: "33.99L",
-//     status: "active"
-//   },
-//   {
-//     machine_id: 6,
-//     machine_name: "Bottle Filling Machine",
-//     category_id: "Packaging",
-//     subcategory: "Bottle",
-//     image_url: machineCardRefImage,
-//     description: "High speed volumetric filling machine for liquids, oils, and free-flowing products. Suitable for bottles, jars, and pouches with servo-driven accuracy.",
-//     tags: ["PROCESSING / FILLING", "PHARMACEUTICAL"],
-//     specifications: {
-//       heads: "4-head SS 304 Construction",
-//       volumeRange: "50ml – 2000ml",
-//       controlSystem: "Siemens PLC",
-//       productionSpeed: "30-50 Bottles/min"
-//     },
-//     priceRange: "1.56 CRORE",
-//     speed: "120 RPM",
-//     capacity: "33.99L",
-//     status: "active"
-//   }
-// ];
+const emptySpecification = { title: "", value: "" };
 
-const initialSpares = [
-  {
-    spare_id: 1,
-    spare_name: "Capping Chuck Set",
-    spare_category_id: "Bottle",
-    image_url: machineCardsImage,
-    description: "Stainless steel capping chuck with high wear resistance.",
-    stock_quantity: 24,
-    price: 3500
-  },
-  {
-    spare_id: 2,
-    spare_name: "Nozzle Assembly Kit",
-    spare_category_id: "Tube",
-    image_url: machineryLayoutImage,
-    description: "Precision nozzle kit for filling station replacement.",
-    stock_quantity: 12,
-    price: 6200
+function formatSpecs(specifications) {
+  if (Array.isArray(specifications)) {
+    return specifications
+      .filter((item) => item && (item.title || item.value))
+      .map((item) => [item.title || "-", item.value || "-"]);
   }
-];
-
-const ADMIN_CREDENTIALS = {
-  adminId: "admin",
-  password: "admin@123"
-};
+  if (specifications && typeof specifications === "object") {
+    return Object.entries(specifications);
+  }
+  return [];
+}
 function WebsitePreloader({ isLeaving }) {
   return (
     <div className={`website-preloader${isLeaving ? " is-leaving" : ""}`} role="status" aria-live="polite">
@@ -365,7 +237,7 @@ function AdminLoginPage({ onAdminLogin, isAdminAuthenticated }) {
       <form className="card contact-form admin-login-form" onSubmit={handleSubmit}>
         <span className="section-badge">Restricted Access</span>
         <h1>Admin Login</h1>
-        <p className="page-copy">Only authorized admin can access machine/spare management. Use the credentials created for the API (default first-time: admin / admin@123).</p>
+        <p className="page-copy">Only authorized admin can access machine management. Use the credentials configured in the API environment.</p>
         <label>
           Admin ID
           <input
@@ -394,8 +266,6 @@ function AdminLoginPage({ onAdminLogin, isAdminAuthenticated }) {
 
 function MachineDetailPage({ machines, sessionCache }) {
   const { machineSlug } = useParams();
-  const [remoteMachine, setRemoteMachine] = useState(null);
-  const [isLoadingMachine, setIsLoadingMachine] = useState(false);
   const slugNorm = (s) =>
     String(s || "")
       .trim()
@@ -405,18 +275,7 @@ function MachineDetailPage({ machines, sessionCache }) {
       ? slugNorm(m.slug)
       : slugNorm(m.machine_name).replace(/\s+/g, "-");
   const machine =
-    machines.find((m) => deriveSlugLocal(m) === slugNorm(machineSlug)) || remoteMachine;
-
-  React.useEffect(() => {
-    if (machine || !machineSlug) return;
-    setIsLoadingMachine(true);
-    fetchJson(`/api/machines/by-slug/${encodeURIComponent(machineSlug)}`)
-      .then((data) => {
-        if (data) setRemoteMachine(data);
-      })
-      .catch((error) => console.error("Unable to load machine detail:", error))
-      .finally(() => setIsLoadingMachine(false));
-  }, [machine, machineSlug]);
+    machines.find((m) => deriveSlugLocal(m) === slugNorm(machineSlug));
 
   React.useEffect(() => {
     if (machine) {
@@ -426,7 +285,6 @@ function MachineDetailPage({ machines, sessionCache }) {
     }
   }, [machine]);
 
-  if (isLoadingMachine) return <div className="page-section text-center"><h2>Loading Machine...</h2></div>;
   if (!machine) return <div className="page-section text-center"><h2>Machine Not Found</h2><NavLink to="/machineries">Back to Catalog</NavLink></div>;
 
   return (
@@ -455,7 +313,7 @@ function MachineDetailPage({ machines, sessionCache }) {
               <h3>Technical Specifications</h3>
               <table className="specs-table">
                 <tbody>
-                  {Object.entries(machine.specifications || {}).map(([k, v]) => (
+                  {formatSpecs(machine.specifications).map(([k, v]) => (
                     <tr key={k}>
                       <td className="lbl">{k.replace(/([A-Z])/g, ' $1').toUpperCase()}</td>
                       <td className="val">{v}</td>
@@ -491,7 +349,7 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
   if (!machine) return null;
 
   const imageSrc = resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage;
-  const specifications = Object.entries(machine.specifications || {});
+  const specifications = formatSpecs(machine.specifications);
   const displaySpecs = specifications.length
     ? specifications
     : [
@@ -549,45 +407,9 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
   );
 }
 
-function SpareDetailModal({ spare, onClose }) {
-  if (!spare) return null;
-  return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-container" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close-btn" onClick={onClose} aria-label="Close">✕</button>
-        <div className="modal-body">
-          <div className="modal-image-wrap">
-            <img src={spare.image_url || machineCardsImage} alt={spare.spare_name} />
-          </div>
-          <div className="modal-info">
-            <div className="modal-tags">
-              <span className="modal-tag outline">SPARE-{spare.spare_id}</span>
-              <span className="modal-tag filled">{spare.spare_category_id}</span>
-            </div>
-            <h2 className="modal-title">{spare.spare_name}</h2>
-            <p className="modal-desc">{spare.description}</p>
-            <h4 className="modal-spec-heading">Details</h4>
-            <div className="modal-table-scroll">
-              <table className="modal-spec-table">
-                <tbody>
-                  <tr><td>Category</td><td>{spare.spare_category_id}</td></tr>
-                  <tr><td>Stock Available</td><td className={spare.stock_quantity > 10 ? "stock-good" : "stock-low"}>{spare.stock_quantity} units</td></tr>
-                  <tr><td>Price</td><td>₹{Number(spare.price).toLocaleString("en-IN")}</td></tr>
-                </tbody>
-              </table>
-            </div>
-            <button className="modal-cta-btn">REQUEST QUOTE</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function MachineriesPage({ machines, sessionCache, loadError }) {
+function MachineriesPage({ machines, categories, subcategories, sessionCache, loadError }) {
   const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProcessing, setSelectedProcessing] = useState([]);
-  const [selectedPackaging, setSelectedPackaging] = useState([]);
+  const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [sortBy, setSortBy] = useState("default");
   const [selectedMachine, setSelectedMachine] = useState(null);
   const toggleFilter = (value, list, setter) => {
@@ -610,16 +432,8 @@ function MachineriesPage({ machines, sessionCache, loadError }) {
       );
     }
 
-    if (selectedProcessing.length > 0) {
-      results = results.filter(
-        (m) => m.category_id === "Processing" && selectedProcessing.includes(m.subcategory)
-      );
-    }
-
-    if (selectedPackaging.length > 0) {
-      results = results.filter(
-        (m) => m.category_id === "Packaging" && selectedPackaging.includes(m.subcategory)
-      );
+    if (selectedSubcategories.length > 0) {
+      results = results.filter((m) => selectedSubcategories.includes(m.subcategory));
     }
 
     if (sortBy === "name-asc") {
@@ -629,7 +443,12 @@ function MachineriesPage({ machines, sessionCache, loadError }) {
     }
 
     return results;
-  }, [machines, searchQuery, selectedProcessing, selectedPackaging, sortBy]);
+  }, [machines, searchQuery, selectedSubcategories, sortBy]);
+
+  const categoryGroups = categories.map((category) => ({
+    ...category,
+    subcategories: subcategories.filter((item) => Number(item.category_id) === Number(category.id))
+  }));
 
   return (
     <section className="machineries-page-v2 min-w-0 overflow-x-hidden">
@@ -668,28 +487,20 @@ function MachineriesPage({ machines, sessionCache, loadError }) {
         <aside className="mach-sidebar">
           <h3 className="mach-sidebar-title">Categories</h3>
 
-          <h4 className="mach-sidebar-group">Processing</h4>
-          {subCategoryMap.Processing.map((cat) => (
-            <label key={cat} className="mach-checkbox-label">
-              <input
-                type="checkbox"
-                checked={selectedProcessing.includes(cat)}
-                onChange={() => toggleFilter(cat, selectedProcessing, setSelectedProcessing)}
-              />
-              {cat}
-            </label>
-          ))}
-
-          <h4 className="mach-sidebar-group">Packaging</h4>
-          {subCategoryMap.Packaging.map((cat) => (
-            <label key={cat} className="mach-checkbox-label">
-              <input
-                type="checkbox"
-                checked={selectedPackaging.includes(cat)}
-                onChange={() => toggleFilter(cat, selectedPackaging, setSelectedPackaging)}
-              />
-              {cat}
-            </label>
+          {categoryGroups.map((category) => (
+            <React.Fragment key={category.id}>
+              <h4 className="mach-sidebar-group">{category.name}</h4>
+              {category.subcategories.map((subcategory) => (
+                <label key={subcategory.id} className="mach-checkbox-label">
+                  <input
+                    type="checkbox"
+                    checked={selectedSubcategories.includes(subcategory.name)}
+                    onChange={() => toggleFilter(subcategory.name, selectedSubcategories, setSelectedSubcategories)}
+                  />
+                  {subcategory.name}
+                </label>
+              ))}
+            </React.Fragment>
           ))}
         </aside>
 
@@ -763,235 +574,288 @@ function MachineriesPage({ machines, sessionCache, loadError }) {
   );
 }
 
-function SparesPage() {
-  return (
-    <section className="spares-page page-section">
-      <div className="split-header">
-        <div>
-          <span className="section-badge">Spare Management</span>
-          <h1>Spare Parts & Consumables</h1>
-        </div>
-        <p className="rating-copy">
-          This page is currently unavailable.
-        </p>
-      </div>
-    </section>
-  );
-}
-
 function AdminPage({
-  machineCategories,
-  spareCategories,
-  onAddMachineCategory,
-  onAddSpareCategory,
+  dashboard,
+  categories,
+  subcategories,
+  onAddCategory,
+  onUpdateCategory,
+  onDeleteCategory,
+  onAddSubcategory,
+  onUpdateSubcategory,
+  onDeleteSubcategory,
   onAddMachine,
-  onAddSpare,
+  onUpdateMachine,
   machines,
-  spares,
-  onDeleteMachine,
-  onDeleteSpare
+  onDeleteMachine
 }) {
+  const firstCategoryId = categories[0]?.id || "";
+  const firstSubcategoryId = subcategories.find((item) => Number(item.category_id) === Number(firstCategoryId))?.id || "";
   const [machineForm, setMachineForm] = useState({
+    id: "",
     machine_name: "",
-    category_id: "Packaging",
-    subcategory: "Pouch Packaging",
+    category_id: firstCategoryId,
+    subcategory_id: firstSubcategoryId,
     image_url: "",
     description: "",
-    specifications: "",
+    specifications: [{ ...emptySpecification }],
     slug: "",
     meta_title: "",
-    meta_description: "",
-    status: "active"
+    meta_description: ""
   });
-  const [spareForm, setSpareForm] = useState({
-    spare_name: "",
-    spare_category_id: spareCategories[0] || "",
-    image_url: "",
-    description: "",
-    stock_quantity: "0",
-    price: ""
-  });
-  const [machineCategoryName, setMachineCategoryName] = useState("");
-  const [spareCategoryName, setSpareCategoryName] = useState("");
+  const [categoryForm, setCategoryForm] = useState({ id: "", name: "" });
+  const [subcategoryForm, setSubcategoryForm] = useState({ id: "", category_id: firstCategoryId, name: "" });
   const [imageFile, setImageFile] = useState(null);
+  const [imagePreview, setImagePreview] = useState("");
   const [machineSubmitError, setMachineSubmitError] = useState("");
-  const [spareSubmitError, setSpareSubmitError] = useState("");
+  const [categorySubmitError, setCategorySubmitError] = useState("");
 
   React.useEffect(() => {
-    setSpareForm((prev) => {
-      if (prev.spare_category_id || !spareCategories.length) return prev;
-      return { ...prev, spare_category_id: spareCategories[0] };
-    });
-  }, [spareCategories]);
+    if (!machineForm.category_id && firstCategoryId) {
+      setMachineForm((prev) => ({
+        ...prev,
+        category_id: firstCategoryId,
+        subcategory_id: firstSubcategoryId
+      }));
+    }
+    if (!subcategoryForm.category_id && firstCategoryId) {
+      setSubcategoryForm((prev) => ({ ...prev, category_id: firstCategoryId }));
+    }
+  }, [firstCategoryId, firstSubcategoryId, machineForm.category_id, subcategoryForm.category_id]);
 
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
+  const filteredSubcategories = subcategories.filter(
+    (item) => Number(item.category_id) === Number(machineForm.category_id)
+  );
+  const subcategoryFormOptions = subcategories.filter(
+    (item) => Number(item.category_id) === Number(subcategoryForm.category_id)
+  );
+
+  const resetMachineForm = () => {
+    setMachineForm({
+      id: "",
+      machine_name: "",
+      category_id: firstCategoryId,
+      subcategory_id: firstSubcategoryId,
+      image_url: "",
+      description: "",
+      specifications: [{ ...emptySpecification }],
+      slug: "",
+      meta_title: "",
+      meta_description: ""
+    });
+    setImageFile(null);
+    setImagePreview("");
+  };
+
+  const handleImageChange = (event) => {
+    const file = event.target.files[0];
     setImageFile(file || null);
+    setImagePreview(file ? URL.createObjectURL(file) : "");
     setMachineSubmitError("");
+  };
+
+  const updateSpecification = (index, key, value) => {
+    setMachineForm((prev) => ({
+      ...prev,
+      specifications: prev.specifications.map((spec, specIndex) =>
+        specIndex === index ? { ...spec, [key]: value } : spec
+      )
+    }));
+  };
+
+  const addSpecificationRow = () => {
+    setMachineForm((prev) => ({
+      ...prev,
+      specifications: [...prev.specifications, { ...emptySpecification }]
+    }));
+  };
+
+  const removeSpecificationRow = (index) => {
+    setMachineForm((prev) => ({
+      ...prev,
+      specifications: prev.specifications.filter((_, specIndex) => specIndex !== index)
+    }));
+  };
+
+  const editMachine = (machine) => {
+    setMachineForm({
+      id: machine.id || machine.machine_id,
+      machine_name: machine.machine_name || "",
+      category_id: machine.category_db_id || "",
+      subcategory_id: machine.subcategory_db_id || "",
+      image_url: machine.image_url || "",
+      description: machine.description || "",
+      specifications: Array.isArray(machine.specifications) && machine.specifications.length
+        ? machine.specifications
+        : [{ ...emptySpecification }],
+      slug: machine.slug || "",
+      meta_title: machine.meta_title || "",
+      meta_description: machine.meta_description || ""
+    });
+    setImagePreview(machine.image_url || "");
+    setImageFile(null);
   };
 
   async function handleMachineSubmit(event) {
     event.preventDefault();
     setMachineSubmitError("");
     try {
-      await onAddMachine(machineForm, imageFile);
-      setMachineForm({
-        machine_name: "",
-        category_id: "Packaging",
-        subcategory: "Pouch Packaging",
-        image_url: "",
-        description: "",
-        specifications: "",
-        slug: "",
-        meta_title: "",
-        meta_description: "",
-        status: "active"
-      });
-      setImageFile(null);
+      const payload = {
+        ...machineForm,
+        specifications: JSON.stringify(
+          machineForm.specifications.filter((item) => item.title.trim() || item.value.trim())
+        )
+      };
+      if (machineForm.id) {
+        await onUpdateMachine(machineForm.id, payload, imageFile);
+      } else {
+        await onAddMachine(payload, imageFile);
+      }
+      resetMachineForm();
       event.target.reset();
     } catch (error) {
       setMachineSubmitError(error.message || "Machine could not be saved.");
     }
   }
 
-  async function handleSpareSubmit(event) {
+  async function handleCategorySubmit(event) {
     event.preventDefault();
-    setSpareSubmitError("");
+    setCategorySubmitError("");
     try {
-      await onAddSpare(spareForm);
-      setSpareForm({
-        spare_name: "",
-        spare_category_id: spareCategories[0] || "",
-        image_url: "",
-        description: "",
-        stock_quantity: "0",
-        price: "",
-      });
+      if (categoryForm.id) {
+        await onUpdateCategory(categoryForm.id, categoryForm.name);
+      } else {
+        await onAddCategory(categoryForm.name);
+      }
+      setCategoryForm({ id: "", name: "" });
     } catch (error) {
-      setSpareSubmitError(error.message || "Spare could not be saved.");
+      setCategorySubmitError(error.message || "Category could not be saved.");
+    }
+  }
+
+  async function handleSubcategorySubmit(event) {
+    event.preventDefault();
+    setCategorySubmitError("");
+    try {
+      if (subcategoryForm.id) {
+        await onUpdateSubcategory(subcategoryForm.id, subcategoryForm);
+      } else {
+        await onAddSubcategory(subcategoryForm);
+      }
+      setSubcategoryForm({ id: "", category_id: firstCategoryId, name: "" });
+    } catch (error) {
+      setCategorySubmitError(error.message || "Subcategory could not be saved.");
     }
   }
 
   return (
     <section className="admin-page page-section mx-auto w-full max-w-[1200px]">
       <span className="section-badge">Admin</span>
-      <h1 className="text-2xl font-bold tracking-tight text-[#0d1b3e] sm:text-3xl lg:text-4xl">Machines / Spares Management</h1>
-      <p className="page-copy">
-        Add new records using your DB schema fields from the provided documentation.
-      </p>
+      <h1 className="text-2xl font-bold tracking-tight text-[#0d1b3e] sm:text-3xl lg:text-4xl">Machine Management</h1>
+      <p className="page-copy">Manage machines, categories, subcategories, images, and SEO metadata.</p>
 
       <div className="admin-grid">
+        <div className="card admin-side-card">
+          <h3>Dashboard</h3>
+          <div className="admin-list">
+            <div className="admin-list-row"><strong>Total Machines</strong><p>{dashboard?.total_machines ?? machines.length}</p></div>
+            <div className="admin-list-row"><strong>Total Categories</strong><p>{dashboard?.total_categories ?? categories.length}</p></div>
+            <div className="admin-list-row"><strong>Total Subcategories</strong><p>{dashboard?.total_subcategories ?? subcategories.length}</p></div>
+          </div>
+        </div>
+
         <form className="card contact-form admin-form" onSubmit={handleMachineSubmit}>
-          <h3 className="Add-title">Add Machine</h3>
+          <h3 className="Add-title">{machineForm.id ? "Edit Machine" : "Add Machine"}</h3>
           <label>Machine Name<input value={machineForm.machine_name} onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_name: e.target.value }))} required /></label>
           <label>Category
-            <select value={machineForm.category_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, category_id: e.target.value, subcategory: subCategoryMap[e.target.value][0] }))}>
-              <option value="Packaging">Packaging Machineries</option>
-              <option value="Processing">Processing Machineries</option>
+            <select value={machineForm.category_id} onChange={(e) => {
+              const categoryId = e.target.value;
+              const nextSubcategory = subcategories.find((item) => Number(item.category_id) === Number(categoryId));
+              setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
+            }}>
+              {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
             </select>
           </label>
           <label>Subcategory
-            <select value={machineForm.subcategory} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory: e.target.value }))}>
-              {subCategoryMap[machineForm.category_id].map(sub => (
-                <option key={sub} value={sub}>{sub}</option>
-              ))}
+            <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
+              <option value="">No subcategory</option>
+              {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
             </select>
           </label>
           <label>Upload Machine Image
-            <input type="file" accept="image/*" onChange={handleImageChange} />
-            {imageFile && (
-              <div style={{ background: "#ebfff2", padding: "10px", borderRadius: "8px", marginTop: "10px", border: "1px solid #20f582" }}>
-                <p style={{ color: "#16a34a", margin: "0", fontSize: "13px" }}>
-                  <strong>Selected:</strong> {imageFile.name}
-                </p>
+            <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
+            {(imagePreview || machineForm.image_url) && (
+              <div style={{ marginTop: "10px" }}>
+                <img src={imagePreview || machineForm.image_url} alt="Machine preview" style={{ maxWidth: "180px", borderRadius: "8px" }} />
               </div>
             )}
           </label>
-          <label>Existing Image Path<input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url.startsWith('data:') ? "" : machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
-          <label>Description<textarea rows="3" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} /></label>
-          <label>URL Slug (e.g. automatic-vial-filler)<input value={machineForm.slug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: e.target.value }))} /></label>
+          <label>Existing Image Path<input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
+          <label>Description<textarea rows="3" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} required /></label>
+          <label>URL Slug<input value={machineForm.slug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: e.target.value }))} /></label>
           <label>Meta Title<input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} /></label>
           <label>Meta Description<textarea rows="2" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} /></label>
-          <label>Specifications (JSON)<textarea rows="3" placeholder='{"speed":"80 BPM","power":"440V"}' value={machineForm.specifications} onChange={(e) => setMachineForm((prev) => ({ ...prev, specifications: e.target.value }))} /></label>
-          <label>Status
-            <select value={machineForm.status} onChange={(e) => setMachineForm((prev) => ({ ...prev, status: e.target.value }))}>
-              <option value="active">active</option>
-              <option value="inactive">inactive</option>
-            </select>
-          </label>
+          <div>
+            <h3 className="Add-title">Specifications</h3>
+            {machineForm.specifications.map((spec, index) => (
+              <div key={index} className="admin-list-row">
+                <input placeholder="Title" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
+                <input placeholder="Value" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
+                <button className="delete-btn" type="button" onClick={() => removeSpecificationRow(index)}>Remove</button>
+              </div>
+            ))}
+            <button className="card-btn" type="button" onClick={addSpecificationRow}>Add Specification</button>
+          </div>
           {machineSubmitError && <p className="admin-error-text">{machineSubmitError}</p>}
-          <button className="card-btn" type="submit">Add Machine</button>
-        </form>
-
-        <form className="card contact-form admin-form" onSubmit={handleSpareSubmit}>
-          <h3 className="Add-title">Add Spare</h3>
-          <label>Spare Name<input value={spareForm.spare_name} onChange={(e) => setSpareForm((prev) => ({ ...prev, spare_name: e.target.value }))} required /></label>
-          <label>Spare Category
-            <select value={spareForm.spare_category_id} onChange={(e) => setSpareForm((prev) => ({ ...prev, spare_category_id: e.target.value }))}>
-              {spareCategories.map((category) => <option key={category} value={category}>{category}</option>)}
-            </select>
-          </label>
-          <label>Image URL<input value={spareForm.image_url} onChange={(e) => setSpareForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
-          <label>Description<textarea rows="3" value={spareForm.description} onChange={(e) => setSpareForm((prev) => ({ ...prev, description: e.target.value }))} /></label>
-          <label>Stock Quantity<input type="number" min="0" value={spareForm.stock_quantity} onChange={(e) => setSpareForm((prev) => ({ ...prev, stock_quantity: e.target.value }))} required /></label>
-          <label>Price<input type="number" min="0" step="0.01" value={spareForm.price} onChange={(e) => setSpareForm((prev) => ({ ...prev, price: e.target.value }))} required /></label>
-          {spareSubmitError && <p className="admin-error-text">{spareSubmitError}</p>}
-          <button className="card-btn" type="submit">Add Spare</button>
+          <button className="card-btn" type="submit">{machineForm.id ? "Update Machine" : "Add Machine"}</button>
+          {machineForm.id && <button className="card-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
         </form>
 
         <div className="card admin-side-card">
-          <h3>Add Categories</h3>
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              await onAddMachineCategory(machineCategoryName);
-              setMachineCategoryName("");
-            }}
-          >
-            <label>Machine Category<input value={machineCategoryName} onChange={(e) => setMachineCategoryName(e.target.value)} /></label>
-            <button className="card-btn" type="submit">Add Category</button>
+          <h3>Category Management</h3>
+          <form onSubmit={handleCategorySubmit}>
+            <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
+            <button className="card-btn" type="submit">{categoryForm.id ? "Update Category" : "Add Category"}</button>
           </form>
-          <form
-            onSubmit={async (e) => {
-              e.preventDefault();
-              await onAddSpareCategory(spareCategoryName);
-              setSpareCategoryName("");
-            }}
-          >
-            <label>Spare Category<input value={spareCategoryName} onChange={(e) => setSpareCategoryName(e.target.value)} /></label>
-            <button className="card-btn" type="submit">Add Category</button>
+          <form onSubmit={handleSubcategorySubmit}>
+            <label>Parent Category
+              <select value={subcategoryForm.category_id} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, category_id: e.target.value }))}>
+                {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+              </select>
+            </label>
+            <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
+            <button className="card-btn" type="submit">{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
           </form>
-        </div>
-
-        <div className="card admin-side-card">
-          <h3>Manage Machines ({machines.length})</h3>
+          {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
           <div className="admin-list">
-            {machines.map((machine) => (
-              <div key={machine.machine_id} className="admin-list-row">
-                <div>
-                  <strong>{machine.machine_name}</strong>
-                  <p>{machine.category_id} | {machine.status}</p>
-                </div>
-                <button className="delete-btn" type="button" onClick={() => onDeleteMachine(machine.machine_id)}>
-                  Remove
-                </button>
+            {categories.map((category) => (
+              <div key={category.id} className="admin-list-row">
+                <div><strong>{category.name}</strong><p>{category.slug}</p></div>
+                <button className="card-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })}>Edit</button>
+                <button className="delete-btn" type="button" onClick={() => onDeleteCategory(category.id)}>Remove</button>
+              </div>
+            ))}
+            {subcategoryFormOptions.map((subcategory) => (
+              <div key={subcategory.id} className="admin-list-row">
+                <div><strong>{subcategory.name}</strong><p>{subcategory.category_name}</p></div>
+                <button className="card-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })}>Edit</button>
+                <button className="delete-btn" type="button" onClick={() => onDeleteSubcategory(subcategory.id)}>Remove</button>
               </div>
             ))}
           </div>
         </div>
 
         <div className="card admin-side-card">
-          <h3>Manage Spares ({spares.length})</h3>
+          <h3>Recent Machines</h3>
           <div className="admin-list">
-            {spares.map((spare) => (
-              <div key={spare.spare_id} className="admin-list-row">
+            {(dashboard?.recent_machines || machines.slice(0, 5)).map((machine) => (
+              <div key={machine.id || machine.machine_id} className="admin-list-row">
                 <div>
-                  <strong>{spare.spare_name}</strong>
-                  <p>{spare.spare_category_id} | Stock: {spare.stock_quantity} | ₹{Number(spare.price).toLocaleString("en-IN")}</p>
+                  <strong>{machine.machine_name}</strong>
+                  <p>{machine.category_id} | {machine.subcategory}</p>
                 </div>
-                <button className="delete-btn" type="button" onClick={() => onDeleteSpare(spare.spare_id)}>
-                  Remove
-                </button>
+                <button className="card-btn" type="button" onClick={() => editMachine(machine)}>Edit</button>
+                <button className="delete-btn" type="button" onClick={() => onDeleteMachine(machine.id || machine.machine_id)}>Remove</button>
               </div>
             ))}
           </div>
@@ -1006,15 +870,6 @@ function HomePage() {
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const [isHeroPreviewOpen, setIsHeroPreviewOpen] = useState(false);
   const heroSlides = [
-    {
-      key: "spares",
-      eyebrow: "Spares & Service",
-      title: "Your Trusted Source for Machine & Industrial Spares",
-      text: "Reliable replacement parts and support to keep production lines moving with less downtime.",
-      cta: "Explore Spares",
-      to: "/spares",
-      image: sparesHeroImage
-    },
     {
       key: "machine",
       eyebrow: "Machineries",
@@ -1132,11 +987,6 @@ function HomePage() {
       title: "Consultancy",
       text: "High-speed, multi-format pouch and bottle filling systems with advanced capping and labeling technologies.",
       image: industryConsultancy,
-    },
-    {
-      title: "Spares",
-      text: "Advanced motion control components including precision cylinders, valves, and specialized air treatment systems.",
-      image: industryPneumatic,
     },
     {
       title: "After Sales Support",
@@ -1786,11 +1636,9 @@ export default function App() {
   const [machines, setMachines] = useState(initialMachines);
   const [machineLoadError, setMachineLoadError] = useState("");
 
-  const [spares, setSpares] = useState([]);
-
-  const [machineCategories, setMachineCategories] = useState([]);
-
-  const [spareCategories, setSpareCategories] = useState([]);
+  const [categories, setCategories] = useState([]);
+  const [subcategories, setSubcategories] = useState([]);
+  const [dashboard, setDashboard] = useState(null);
 
   const [sessionImageCache, setSessionImageCache] = useState({});
 
@@ -1799,74 +1647,103 @@ export default function App() {
   );
 
   React.useEffect(() => {
-    const loadMachines = () => {
+    const isCatalogPage =
+      location.pathname === "/machineries" || location.pathname.startsWith("/machineries/");
+    const isAdminPage = location.pathname === "/admin-panel" && isAdminAuthenticated;
+
+    if (!isCatalogPage && !isAdminPage) return;
+
+    const loadData = () => {
       fetchJson("/api/machines")
         .then((data) => {
           setMachines(Array.isArray(data) ? data : []);
           setMachineLoadError("");
         })
         .catch((error) => {
-          console.error("Unable to load machines:", error);
-          setMachineLoadError("Machine data not found.");
-        });
-
-      fetchJson("/api/spares")
-        .then((data) => setSpares(Array.isArray(data) ? data : []))
-        .catch((error) => {
-          console.error("Unable to load spares:", error);
-          setSpares([]);
+          if (isAdminPage) {
+            console.error("Unable to load machines:", error);
+            setMachineLoadError("Machine data not found.");
+          }
         });
 
       Promise.all([
-        fetchJson("/api/machines/categories/list").catch(() => []),
-        fetchJson("/api/spares/categories/list").catch(() => []),
-      ]).then(([mRows, sRows]) => {
-        setMachineCategories(
-          Array.isArray(mRows) ? mRows.map((r) => r.category_name).filter(Boolean) : []
-        );
-        setSpareCategories(
-          Array.isArray(sRows) ? sRows.map((r) => r.category_name).filter(Boolean) : []
-        );
+        fetchJson("/api/categories").catch(() => []),
+        fetchJson("/api/subcategories").catch(() => []),
+      ]).then(([categoryRows, subcategoryRows]) => {
+        setCategories(Array.isArray(categoryRows) ? categoryRows : []);
+        setSubcategories(Array.isArray(subcategoryRows) ? subcategoryRows : []);
       });
+
+      if (isAdminPage) {
+        fetchJson("/api/dashboard")
+          .then((data) => setDashboard(data))
+          .catch(() => setDashboard(null));
+      }
     };
 
-    loadMachines();
-    const refreshTimer = window.setInterval(loadMachines, 15000);
-    return () => window.clearInterval(refreshTimer);
-  }, []);
+    loadData();
+    if (!isAdminPage) return;
 
-  const addMachineCategory = async (value) => {
-    const normalized = value.trim();
-    if (!normalized) return;
-    try {
-      await fetchJson("/api/machines/categories/add", {
-        method: "POST",
-        body: JSON.stringify({ category_name: normalized }),
-      });
-      const rows = await fetchJson("/api/machines/categories/list");
-      setMachineCategories(
-        Array.isArray(rows) ? rows.map((r) => r.category_name).filter(Boolean) : []
-      );
-    } catch (e) {
-      console.error(e);
+    const refreshTimer = window.setInterval(loadData, 15000);
+    return () => window.clearInterval(refreshTimer);
+  }, [isAdminAuthenticated, location.pathname]);
+
+  const refreshAdminData = async () => {
+    const [machineRows, categoryRows, subcategoryRows] = await Promise.all([
+      fetchJson("/api/machines").catch(() => []),
+      fetchJson("/api/categories").catch(() => []),
+      fetchJson("/api/subcategories").catch(() => []),
+    ]);
+    setMachines(Array.isArray(machineRows) ? machineRows : []);
+    setCategories(Array.isArray(categoryRows) ? categoryRows : []);
+    setSubcategories(Array.isArray(subcategoryRows) ? subcategoryRows : []);
+    if (localStorage.getItem("salvin_auth_token")) {
+      setDashboard(await fetchJson("/api/dashboard").catch(() => null));
     }
   };
 
-  const addSpareCategory = async (value) => {
+  const addCategory = async (value) => {
     const normalized = value.trim();
     if (!normalized) return;
-    try {
-      await fetchJson("/api/spares/categories/add", {
-        method: "POST",
-        body: JSON.stringify({ category_name: normalized }),
-      });
-      const rows = await fetchJson("/api/spares/categories/list");
-      setSpareCategories(
-        Array.isArray(rows) ? rows.map((r) => r.category_name).filter(Boolean) : []
-      );
-    } catch (e) {
-      console.error(e);
-    }
+    await fetchJson("/api/categories", {
+      method: "POST",
+      body: JSON.stringify({ name: normalized }),
+    });
+    await refreshAdminData();
+  };
+
+  const updateCategory = async (id, value) => {
+    await fetchJson(`/api/categories/${id}`, {
+      method: "PUT",
+      body: JSON.stringify({ name: value.trim() }),
+    });
+    await refreshAdminData();
+  };
+
+  const deleteCategory = async (id) => {
+    await fetchJson(`/api/categories/${id}`, { method: "DELETE" });
+    await refreshAdminData();
+  };
+
+  const addSubcategory = async (form) => {
+    await fetchJson("/api/subcategories", {
+      method: "POST",
+      body: JSON.stringify({ category_id: form.category_id, name: form.name.trim() }),
+    });
+    await refreshAdminData();
+  };
+
+  const updateSubcategory = async (id, form) => {
+    await fetchJson(`/api/subcategories/${id}`, {
+      method: "PUT",
+      body: JSON.stringify({ category_id: form.category_id, name: form.name.trim() }),
+    });
+    await refreshAdminData();
+  };
+
+  const deleteSubcategory = async (id) => {
+    await fetchJson(`/api/subcategories/${id}`, { method: "DELETE" });
+    await refreshAdminData();
   };
 
   const addMachine = async (machineForm, imageFile) => {
@@ -1883,30 +1760,23 @@ export default function App() {
       body: formData
     });
     setMachines((prev) => [result, ...prev.filter((machine) => machine.machine_id !== result.machine_id)]);
+    await refreshAdminData();
   };
 
-  const addSpare = async (spareForm) => {
-    const created = await fetchJson("/api/spares", {
-      method: "POST",
-      body: JSON.stringify({
-        spare_name: spareForm.spare_name.trim(),
-        spare_category_id: spareForm.spare_category_id,
-        image_url: String(spareForm.image_url || "").trim(),
-        description: String(spareForm.description || "").trim(),
-        stock_quantity: Number(spareForm.stock_quantity || 0),
-        price: Number(spareForm.price || 0),
-      }),
+  const updateMachine = async (machineId, machineForm, imageFile) => {
+    const formData = new FormData();
+    Object.entries(machineForm).forEach(([key, value]) => {
+      if (key !== "id") formData.append(key, value ?? "");
     });
-    const row = {
-      spare_id: created.spare_id,
-      spare_name: created.spare_name,
-      spare_category_id: created.spare_category_id,
-      image_url: created.image_url,
-      description: created.description,
-      stock_quantity: created.stock_quantity,
-      price: created.price,
-    };
-    setSpares((prev) => [row, ...prev.filter((s) => s.spare_id !== row.spare_id)]);
+    if (imageFile) {
+      formData.append("image", imageFile);
+    }
+
+    await fetchJson(`/api/machines/${machineId}`, {
+      method: "PUT",
+      body: formData
+    });
+    await refreshAdminData();
   };
 
   const deleteMachine = async (machineId) => {
@@ -1918,15 +1788,7 @@ export default function App() {
       console.error("Unable to delete machine:", error);
     }
     setMachines((prev) => prev.filter((machine) => machine.machine_id !== machineId));
-  };
-
-  const deleteSpare = async (spareId) => {
-    try {
-      await fetchJson(`/api/spares/${spareId}`, { method: "DELETE" });
-    } catch (error) {
-      console.error("Unable to delete spare:", error);
-    }
-    setSpares((prev) => prev.filter((spare) => spare.spare_id !== spareId));
+    await refreshAdminData();
   };
 
   const handleAdminLogin = async (adminId, password) => {
@@ -1938,6 +1800,7 @@ export default function App() {
       if (!data?.token) return false;
       localStorage.setItem("salvin_auth_token", data.token);
       setIsAdminAuthenticated(true);
+      window.setTimeout(() => refreshAdminData(), 0);
       return true;
     } catch {
       return false;
@@ -1964,9 +1827,8 @@ export default function App() {
           <Route path="/consultant" element={<ConsultantPage />} />
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
-          <Route path="/machineries" element={<MachineriesPage machines={machines} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
+          <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
-          <Route path="/spares" element={<SparesPage />} />
           <Route
             path="/admin-login"
             element={<AdminLoginPage onAdminLogin={handleAdminLogin} isAdminAuthenticated={isAdminAuthenticated} />}
@@ -1977,16 +1839,19 @@ export default function App() {
             element={
               <ProtectedAdminRoute isAdminAuthenticated={isAdminAuthenticated}>
                 <AdminPage
-                  machineCategories={machineCategories}
-                  spareCategories={spareCategories}
-                  onAddMachineCategory={addMachineCategory}
-                  onAddSpareCategory={addSpareCategory}
+                  dashboard={dashboard}
+                  categories={categories}
+                  subcategories={subcategories}
+                  onAddCategory={addCategory}
+                  onUpdateCategory={updateCategory}
+                  onDeleteCategory={deleteCategory}
+                  onAddSubcategory={addSubcategory}
+                  onUpdateSubcategory={updateSubcategory}
+                  onDeleteSubcategory={deleteSubcategory}
                   onAddMachine={addMachine}
-                  onAddSpare={addSpare}
+                  onUpdateMachine={updateMachine}
                   machines={machines}
-                  spares={spares}
                   onDeleteMachine={deleteMachine}
-                  onDeleteSpare={deleteSpare}
                 />
               </ProtectedAdminRoute>
             }
@@ -1999,3 +1864,5 @@ export default function App() {
     </>
   );
 }
+
+
