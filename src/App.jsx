@@ -96,9 +96,9 @@ import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
 import foodPlant from "./assets/home_projects/salvin_team.jpg";
-import projectHeroImage from "./assets/project_hiro.jpg";
-import machineHeroImage from "./assets/machine_hiro.png";
-import sparesHeroImage from "./assets/spares hiro.jpg";
+import projectHeroImage from "./assets/hero/machine.png";
+import machineHeroImage from "./assets/hero/heromachine.jpg";
+import sparesHeroImage from "./assets/hero/heroparts.png";
 import salvinLogo from "./assets/salvin_logo.png";
 
 

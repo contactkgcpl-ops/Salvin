@@ -27,7 +27,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   return (
     <header className="navbar" style={{ background: "white", color: "#000", fontWeight: "bold" }}>
       <div className="logo-container">
-        <img src={logo} alt="SALVIN" srcset="" />
+        <img src={logo} alt="SALVIN" srcSet="" />
       </div>
 
       {/* Hamburger Button - visible only on mobile */}
@@ -54,9 +54,9 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <NavLink to="/turnkey-project" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
         <NavLink to="/machineries" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
         <NavLink to="/consultant" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONSULTANT</NavLink>
-        <Link to="#" style={{ color: "#000" }} onClick={(e) => { e.preventDefault(); setMenuOpen(false); }}>SPARES & SERVICE</Link>
+        <a href="https://spares.salvinindia.com/" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>SPARES & SERVICE</a>
+        <a href="https://salvinindustries.blogspot.com/" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>BLOGSPOT</a>
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
-
         <LanguageSelector />
       </nav>
     </header>
