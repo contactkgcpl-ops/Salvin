@@ -1,6 +1,8 @@
 import React, { useMemo, useState } from "react";
 import { Navigate, NavLink, Route, Routes, useLocation, useParams } from "react-router-dom";
+import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
 import "./App.css";
+import Cropper from "react-easy-crop";
 import machineryLayoutImage from "./assets/machinery-layout.png";
 import blueMachinesImage from "./assets/blue-machines.png";
 import About from "./components/AboutSection";
@@ -98,7 +100,7 @@ import projRice from "./assets/home_projects/puffed_rice.png";
 import foodPlant from "./assets/home_projects/salvin_team.jpg";
 import projectHeroImage from "./assets/hero/machine.png";
 import machineHeroImage from "./assets/hero/heromachine.jpg";
-import sparesHeroImage from "./assets/hero/heroparts.png";
+import sparesHeroImage from "./assets/hero/sparse02.png";
 import salvinLogo from "./assets/salvin_logo.png";
 
 
@@ -175,6 +177,65 @@ const initialMachines = Array.isArray(machinesData) ? machinesData : [];
 
 
 const emptySpecification = { title: "", value: "" };
+
+function sameId(a, b) {
+  return String(a ?? "") === String(b ?? "");
+}
+
+function clampNumber(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+async function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("Unable to read file."));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function createImageFromUrl(url) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.addEventListener("load", () => resolve(image));
+    image.addEventListener("error", () => reject(new Error("Unable to load image.")));
+    image.setAttribute("crossOrigin", "anonymous");
+    image.src = url;
+  });
+}
+
+async function getCroppedImageBlob(imageSrc, cropPixels, outputType = "image/jpeg", quality = 0.92) {
+  const image = await createImageFromUrl(imageSrc);
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Canvas not supported.");
+
+  const safeWidth = clampNumber(Math.round(cropPixels.width), 1, image.naturalWidth);
+  const safeHeight = clampNumber(Math.round(cropPixels.height), 1, image.naturalHeight);
+  const safeX = clampNumber(Math.round(cropPixels.x), 0, Math.max(0, image.naturalWidth - safeWidth));
+  const safeY = clampNumber(Math.round(cropPixels.y), 0, Math.max(0, image.naturalHeight - safeHeight));
+
+  canvas.width = safeWidth;
+  canvas.height = safeHeight;
+  ctx.drawImage(image, safeX, safeY, safeWidth, safeHeight, 0, 0, safeWidth, safeHeight);
+
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => (blob ? resolve(blob) : reject(new Error("Unable to crop image."))),
+      outputType,
+      quality
+    );
+  });
+}
+
+function createSlug(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 function formatSpecs(specifications) {
   if (Array.isArray(specifications)) {
@@ -451,7 +512,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
 
   const categoryGroups = categories.map((category) => ({
     ...category,
-    subcategories: subcategories.filter((item) => Number(item.category_id) === Number(category.id))
+    subcategories: subcategories.filter((item) => sameId(item.category_id, category.id))
   }));
 
   return (
@@ -594,7 +655,7 @@ function AdminPage({
   onDeleteMachine
 }) {
   const firstCategoryId = categories[0]?.id || "";
-  const firstSubcategoryId = subcategories.find((item) => Number(item.category_id) === Number(firstCategoryId))?.id || "";
+  const firstSubcategoryId = subcategories.find((item) => sameId(item.category_id, firstCategoryId))?.id || "";
   const [machineForm, setMachineForm] = useState({
     id: "",
     machine_name: "",
@@ -611,8 +672,18 @@ function AdminPage({
   const [subcategoryForm, setSubcategoryForm] = useState({ id: "", category_id: firstCategoryId, name: "" });
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState("");
+  const [isCroppingImage, setIsCroppingImage] = useState(false);
+  const [cropImageSrc, setCropImageSrc] = useState("");
+  const [crop, setCrop] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
+  const [cropError, setCropError] = useState("");
   const [machineSubmitError, setMachineSubmitError] = useState("");
   const [categorySubmitError, setCategorySubmitError] = useState("");
+  const [adminActionError, setAdminActionError] = useState("");
+  const [isBusy, setIsBusy] = useState(false);
+  const [machineSearch, setMachineSearch] = useState("");
+  const [draftMessage, setDraftMessage] = useState("");
 
   React.useEffect(() => {
     if (!machineForm.category_id && firstCategoryId) {
@@ -627,12 +698,38 @@ function AdminPage({
     }
   }, [firstCategoryId, firstSubcategoryId, machineForm.category_id, subcategoryForm.category_id]);
 
-  const filteredSubcategories = subcategories.filter(
-    (item) => Number(item.category_id) === Number(machineForm.category_id)
-  );
-  const subcategoryFormOptions = subcategories.filter(
-    (item) => Number(item.category_id) === Number(subcategoryForm.category_id)
-  );
+  React.useEffect(() => {
+    return () => {
+      if (imagePreview.startsWith("blob:")) URL.revokeObjectURL(imagePreview);
+    };
+  }, [imagePreview]);
+
+  const closeCropper = () => {
+    setIsCroppingImage(false);
+    setCropImageSrc("");
+    setCrop({ x: 0, y: 0 });
+    setZoom(1);
+    setCroppedAreaPixels(null);
+    setCropError("");
+  };
+
+  const filteredSubcategories = subcategories.filter((item) => sameId(item.category_id, machineForm.category_id));
+  const subcategoryFormOptions = subcategories.filter((item) => sameId(item.category_id, subcategoryForm.category_id));
+  const machineSlug = machineForm.slug || createSlug(machineForm.machine_name);
+  const visibleMachines = useMemo(() => {
+    const query = machineSearch.trim().toLowerCase();
+    if (!query) return machines;
+    return machines.filter((machine) => {
+      const searchable = [
+        machine.machine_name,
+        machine.category_id,
+        machine.subcategory,
+        machine.description,
+        machine.slug
+      ].filter(Boolean).join(" ").toLowerCase();
+      return searchable.includes(query);
+    });
+  }, [machineSearch, machines]);
 
   const resetMachineForm = () => {
     setMachineForm({
@@ -649,13 +746,48 @@ function AdminPage({
     });
     setImageFile(null);
     setImagePreview("");
+    closeCropper();
+    setDraftMessage("");
   };
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    setImageFile(file || null);
-    setImagePreview(file ? URL.createObjectURL(file) : "");
-    setMachineSubmitError("");
+  const handleImageChange = async (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    try {
+      setMachineSubmitError("");
+      setCropError("");
+      const dataUrl = await readFileAsDataUrl(file);
+      setCropImageSrc(String(dataUrl || ""));
+      setIsCroppingImage(true);
+    } catch (err) {
+      setMachineSubmitError(err?.message || "Unable to read image.");
+    }
+  };
+
+  const applyCrop = async () => {
+    if (!cropImageSrc || !croppedAreaPixels) return;
+    try {
+      setCropError("");
+      const blob = await getCroppedImageBlob(cropImageSrc, croppedAreaPixels);
+      const file = new File([blob], `machine-${Date.now()}.jpg`, { type: blob.type || "image/jpeg" });
+      setImageFile(file);
+      setImagePreview(URL.createObjectURL(file));
+      closeCropper();
+    } catch (err) {
+      setCropError(err?.message || "Unable to crop image.");
+    }
+  };
+
+  const handleMachineNameChange = (value) => {
+    setMachineForm((prev) => {
+      const previousAutoSlug = createSlug(prev.machine_name);
+      const shouldAutoUpdateSlug = !prev.slug || prev.slug === previousAutoSlug;
+      return {
+        ...prev,
+        machine_name: value,
+        slug: shouldAutoUpdateSlug ? createSlug(value) : prev.slug
+      };
+    });
   };
 
   const updateSpecification = (index, key, value) => {
@@ -682,6 +814,9 @@ function AdminPage({
   };
 
   const editMachine = (machine) => {
+    const machineSpecs = Array.isArray(machine.specifications)
+      ? machine.specifications
+      : Object.entries(machine.specifications || {}).map(([title, value]) => ({ title, value: String(value ?? "") }));
     setMachineForm({
       id: machine.id || machine.machine_id,
       machine_name: machine.machine_name || "",
@@ -689,8 +824,8 @@ function AdminPage({
       subcategory_id: machine.subcategory_db_id || "",
       image_url: machine.image_url || "",
       description: machine.description || "",
-      specifications: Array.isArray(machine.specifications) && machine.specifications.length
-        ? machine.specifications
+      specifications: machineSpecs.length
+        ? machineSpecs
         : [{ ...emptySpecification }],
       slug: machine.slug || "",
       meta_title: machine.meta_title || "",
@@ -698,14 +833,34 @@ function AdminPage({
     });
     setImagePreview(machine.image_url || "");
     setImageFile(null);
+    setDraftMessage("");
+  };
+
+  const saveMachineDraft = () => {
+    localStorage.setItem("salvin_machine_draft", JSON.stringify({
+      ...machineForm,
+      slug: machineSlug
+    }));
+    setDraftMessage("Draft saved in this browser.");
   };
 
   async function handleMachineSubmit(event) {
     event.preventDefault();
     setMachineSubmitError("");
+    setAdminActionError("");
+    if (!machineForm.machine_name.trim()) {
+      setMachineSubmitError("Machine name is required.");
+      return;
+    }
+    if (!machineForm.category_id) {
+      setMachineSubmitError("Select a category before publishing.");
+      return;
+    }
     try {
+      setIsBusy(true);
       const payload = {
         ...machineForm,
+        slug: machineSlug,
         specifications: JSON.stringify(
           machineForm.specifications.filter((item) => item.title.trim() || item.value.trim())
         )
@@ -717,15 +872,20 @@ function AdminPage({
       }
       resetMachineForm();
       event.target.reset();
+      localStorage.removeItem("salvin_machine_draft");
     } catch (error) {
       setMachineSubmitError(error.message || "Machine could not be saved.");
+    } finally {
+      setIsBusy(false);
     }
   }
 
   async function handleCategorySubmit(event) {
     event.preventDefault();
     setCategorySubmitError("");
+    setAdminActionError("");
     try {
+      setIsBusy(true);
       if (categoryForm.id) {
         await onUpdateCategory(categoryForm.id, categoryForm.name);
       } else {
@@ -734,13 +894,17 @@ function AdminPage({
       setCategoryForm({ id: "", name: "" });
     } catch (error) {
       setCategorySubmitError(error.message || "Category could not be saved.");
+    } finally {
+      setIsBusy(false);
     }
   }
 
   async function handleSubcategorySubmit(event) {
     event.preventDefault();
     setCategorySubmitError("");
+    setAdminActionError("");
     try {
+      setIsBusy(true);
       if (subcategoryForm.id) {
         await onUpdateSubcategory(subcategoryForm.id, subcategoryForm);
       } else {
@@ -749,77 +913,175 @@ function AdminPage({
       setSubcategoryForm({ id: "", category_id: firstCategoryId, name: "" });
     } catch (error) {
       setCategorySubmitError(error.message || "Subcategory could not be saved.");
+    } finally {
+      setIsBusy(false);
     }
   }
 
   return (
-    <section className="admin-page page-section mx-auto w-full max-w-[1200px]">
-      <span className="section-badge">Admin</span>
-      <h1 className="text-2xl font-bold tracking-tight text-[#0d1b3e] sm:text-3xl lg:text-4xl">Machine Management</h1>
-      <p className="page-copy">Manage machines, categories, subcategories, images, and SEO metadata.</p>
+    <section className="admin-page">
+      {isCroppingImage && cropImageSrc && (
+        <ImageCropModal
+          src={cropImageSrc}
+          crop={crop}
+          zoom={zoom}
+          setCrop={setCrop}
+          setZoom={setZoom}
+          onCropComplete={setCroppedAreaPixels}
+          onCancel={closeCropper}
+          onApply={applyCrop}
+          error={cropError}
+        />
+      )}
+      <div className="admin-shell">
+        <header className="admin-hero">
+          <div>
+            <span className="admin-eyebrow">Admin Panel</span>
+            <h1>Machine Management</h1>
+            <p>Manage machines, media, categories, specifications, and SEO metadata from one clean workspace.</p>
+          </div>
+          <div className="admin-hero-count">
+            <strong>{dashboard?.total_machines ?? machines.length}</strong>
+            <span>Total Machines</span>
+          </div>
+        </header>
 
-      <div className="admin-grid">
-        <div className="card admin-side-card">
-          <h3>Dashboard</h3>
-          <div className="admin-list">
-            <div className="admin-list-row"><strong>Total Machines</strong><p>{dashboard?.total_machines ?? machines.length}</p></div>
-            <div className="admin-list-row"><strong>Total Categories</strong><p>{dashboard?.total_categories ?? categories.length}</p></div>
-            <div className="admin-list-row"><strong>Total Subcategories</strong><p>{dashboard?.total_subcategories ?? subcategories.length}</p></div>
+        <div className="admin-stat-grid" aria-label="Dashboard summary">
+          <div className="admin-stat-card">
+            <FaBoxOpen aria-hidden="true" />
+            <div><span>Machines</span><strong>{dashboard?.total_machines ?? machines.length}</strong></div>
+          </div>
+          <div className="admin-stat-card">
+            <FaLayerGroup aria-hidden="true" />
+            <div><span>Categories</span><strong>{dashboard?.total_categories ?? categories.length}</strong></div>
+          </div>
+          <div className="admin-stat-card">
+            <FaSitemap aria-hidden="true" />
+            <div><span>Subcategories</span><strong>{dashboard?.total_subcategories ?? subcategories.length}</strong></div>
           </div>
         </div>
 
-        <form className="card contact-form admin-form" onSubmit={handleMachineSubmit}>
-          <h3 className="Add-title">{machineForm.id ? "Edit Machine" : "Add Machine"}</h3>
-          <label>Machine Name<input value={machineForm.machine_name} onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_name: e.target.value }))} required /></label>
-          <label>Category
-            <select value={machineForm.category_id} onChange={(e) => {
-              const categoryId = e.target.value;
-              const nextSubcategory = subcategories.find((item) => Number(item.category_id) === Number(categoryId));
-              setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
-            }}>
-              {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
-            </select>
-          </label>
-          <label>Subcategory
-            <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
-              <option value="">No subcategory</option>
-              {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
-            </select>
-          </label>
-          <label>Upload Machine Image
-            <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
-            {(imagePreview || machineForm.image_url) && (
-              <div style={{ marginTop: "10px" }}>
-                <img src={imagePreview || machineForm.image_url} alt="Machine preview" style={{ maxWidth: "180px", borderRadius: "8px" }} />
+        <div className="admin-layout">
+          <form className="admin-form-panel" onSubmit={handleMachineSubmit}>
+            <div className="admin-panel-header">
+              <div>
+                <span className="admin-eyebrow">{machineForm.id ? "Update Entry" : "New Entry"}</span>
+                <h2>{machineForm.id ? "Edit Machine" : "Add New Machine"}</h2>
               </div>
-            )}
-          </label>
-          <label>Existing Image Path<input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
-          <label>Description<textarea rows="3" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} required /></label>
-          <label>URL Slug<input value={machineForm.slug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: e.target.value }))} /></label>
-          <label>Meta Title<input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} /></label>
-          <label>Meta Description<textarea rows="2" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} /></label>
-          <div>
-            <h3 className="Add-title">Specifications</h3>
-            {machineForm.specifications.map((spec, index) => (
-              <div key={index} className="admin-list-row">
-                <input placeholder="Title" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
-                <input placeholder="Value" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
-                <button className="delete-btn" type="button" onClick={() => removeSpecificationRow(index)}>Remove</button>
-              </div>
-            ))}
-            <button className="card-btn" type="button" onClick={addSpecificationRow}>Add Specification</button>
-          </div>
-          {machineSubmitError && <p className="admin-error-text">{machineSubmitError}</p>}
-          <button className="card-btn" type="submit">{machineForm.id ? "Update Machine" : "Add Machine"}</button>
-          {machineForm.id && <button className="card-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
-        </form>
+              {machineForm.id && <button className="admin-secondary-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
+            </div>
 
-        <div className="card admin-side-card">
-          <h3>Category Management</h3>
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaRegEdit aria-hidden="true" />
+                <div><h3>Basic Information</h3><p>Name, category, URL, and customer-facing description.</p></div>
+              </div>
+              <div className="admin-field-grid">
+                <label>Machine Name
+                  <input value={machineForm.machine_name} onChange={(e) => handleMachineNameChange(e.target.value)} placeholder="Example: Automatic Bottle Filling Machine" required />
+                </label>
+                <label>Category
+                  <select value={machineForm.category_id} onChange={(e) => {
+                    const categoryId = e.target.value;
+                    const nextSubcategory = subcategories.find((item) => sameId(item.category_id, categoryId));
+                    setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
+                  }} required>
+                    <option value="">Select category</option>
+                    {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+                  </select>
+                </label>
+                <label>Subcategory
+                  <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
+                    <option value="">No subcategory</option>
+                    {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
+                  </select>
+                </label>
+                <label>URL Slug
+                  <input value={machineSlug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: createSlug(e.target.value) }))} placeholder="auto-generated-from-machine-name" />
+                  <small>Auto-created from the machine name. You can edit it if needed.</small>
+                </label>
+              </div>
+              <label>Description
+                <textarea rows="4" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} placeholder="Briefly describe what this machine does and where it is used." required />
+              </label>
+            </div>
+
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaImage aria-hidden="true" />
+                <div><h3>Images</h3><p>Upload a new image or keep an existing path/URL.</p></div>
+              </div>
+              <div className="admin-image-grid">
+                <label className="admin-upload-box">Upload Machine Image
+                  <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
+                  <span>PNG, JPG, or WEBP</span>
+                </label>
+                <div className="admin-preview-box">
+                  {(imagePreview || machineForm.image_url) ? (
+                    <img src={imagePreview || machineForm.image_url} alt="Machine preview" loading="lazy" />
+                  ) : (
+                    <span>No image selected</span>
+                  )}
+                </div>
+              </div>
+              <label>Existing Image Path
+                <input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} />
+                <small>Use this when the image is already uploaded or hosted externally.</small>
+              </label>
+            </div>
+
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaTags aria-hidden="true" />
+                <div><h3>Specifications & Additional Details</h3><p>Add any technical specs, features, capacity details, or custom metadata.</p></div>
+              </div>
+              <div className="admin-spec-list">
+                {machineForm.specifications.map((spec, index) => (
+                  <div key={index} className="admin-spec-row">
+                    <input placeholder="Specification title, e.g. Capacity" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
+                    <input placeholder="Value, e.g. 500 kg/hr" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
+                    <button className="admin-icon-btn danger" type="button" onClick={() => removeSpecificationRow(index)} aria-label="Remove specification"><FaTrashAlt aria-hidden="true" /></button>
+                  </div>
+                ))}
+              </div>
+              <button className="admin-secondary-btn" type="button" onClick={addSpecificationRow}><FaPlus aria-hidden="true" /> Add Specification</button>
+            </div>
+
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaSearch aria-hidden="true" />
+                <div><h3>SEO Information</h3><p>Search preview title and description for this machine page.</p></div>
+              </div>
+              <label>Meta Title
+                <input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} placeholder="SEO title for search results" />
+              </label>
+              <label>Meta Description
+                <textarea rows="3" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} placeholder="Short summary shown in search results." />
+              </label>
+            </div>
+
+            {(machineSubmitError || draftMessage || adminActionError) && (
+              <p className={(machineSubmitError || adminActionError) ? "admin-error-text" : "admin-success-text"}>
+                {machineSubmitError || adminActionError || draftMessage}
+              </p>
+            )}
+            <div className="admin-form-actions">
+              <button className="admin-secondary-btn" type="button" onClick={saveMachineDraft}><FaRegSave aria-hidden="true" /> Save Draft</button>
+              <button className="admin-primary-btn" type="submit" disabled={isBusy}>{machineForm.id ? "Update Machine" : "Publish Machine"}</button>
+            </div>
+          </form>
+
+          <aside className="admin-sidebar">
+            <div className="admin-card">
+              <div className="admin-panel-header compact">
+                <div>
+                  <span className="admin-eyebrow">Categories</span>
+                  <h2>Structure</h2>
+                </div>
+              </div>
           <form onSubmit={handleCategorySubmit}>
             <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
-            <button className="card-btn" type="submit">{categoryForm.id ? "Update Category" : "Add Category"}</button>
+                <button className="admin-primary-btn" type="submit" disabled={isBusy}>{categoryForm.id ? "Update Category" : "Add Category"}</button>
           </form>
           <form onSubmit={handleSubcategorySubmit}>
             <label>Parent Category
@@ -828,44 +1090,130 @@ function AdminPage({
               </select>
             </label>
             <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
-            <button className="card-btn" type="submit">{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
+                <button className="admin-secondary-btn" type="submit" disabled={isBusy}>{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
           </form>
           {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
-          <div className="admin-list">
+              <div className="admin-list compact-list">
             {categories.map((category) => (
               <div key={category.id} className="admin-list-row">
                 <div><strong>{category.name}</strong><p>{category.slug}</p></div>
-                <button className="card-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })}>Edit</button>
-                <button className="delete-btn" type="button" onClick={() => onDeleteCategory(category.id)}>Remove</button>
+                    <div className="admin-row-actions">
+                      <button className="admin-icon-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })} aria-label={`Edit ${category.name}`}><FaRegEdit aria-hidden="true" /></button>
+                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                        setAdminActionError("");
+                        try {
+                          setIsBusy(true);
+                          await onDeleteCategory(category.id);
+                        } catch (err) {
+                          setAdminActionError(err?.message || "Category could not be deleted.");
+                        } finally {
+                          setIsBusy(false);
+                        }
+                      }} aria-label={`Remove ${category.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                    </div>
               </div>
             ))}
             {subcategoryFormOptions.map((subcategory) => (
               <div key={subcategory.id} className="admin-list-row">
                 <div><strong>{subcategory.name}</strong><p>{subcategory.category_name}</p></div>
-                <button className="card-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })}>Edit</button>
-                <button className="delete-btn" type="button" onClick={() => onDeleteSubcategory(subcategory.id)}>Remove</button>
+                    <div className="admin-row-actions">
+                      <button className="admin-icon-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })} aria-label={`Edit ${subcategory.name}`}><FaRegEdit aria-hidden="true" /></button>
+                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                        setAdminActionError("");
+                        try {
+                          setIsBusy(true);
+                          await onDeleteSubcategory(subcategory.id);
+                        } catch (err) {
+                          setAdminActionError(err?.message || "Subcategory could not be deleted.");
+                        } finally {
+                          setIsBusy(false);
+                        }
+                      }} aria-label={`Remove ${subcategory.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                    </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="card admin-side-card">
-          <h3>Recent Machines</h3>
-          <div className="admin-list">
-            {(dashboard?.recent_machines || machines.slice(0, 5)).map((machine) => (
+            <div className="admin-card">
+              <div className="admin-panel-header compact">
+                <div>
+                  <span className="admin-eyebrow">Newest First</span>
+                  <h2>All Machines</h2>
+                </div>
+                <strong>{visibleMachines.length}</strong>
+              </div>
+              <label className="admin-search-field">
+                <FaSearch aria-hidden="true" />
+                <input value={machineSearch} onChange={(e) => setMachineSearch(e.target.value)} placeholder="Search machines..." />
+              </label>
+              <div className="admin-list machine-list">
+            {visibleMachines.map((machine) => (
               <div key={machine.id || machine.machine_id} className="admin-list-row">
                 <div>
                   <strong>{machine.machine_name}</strong>
                   <p>{machine.category_id} | {machine.subcategory}</p>
                 </div>
-                <button className="card-btn" type="button" onClick={() => editMachine(machine)}>Edit</button>
-                <button className="delete-btn" type="button" onClick={() => onDeleteMachine(machine.id || machine.machine_id)}>Remove</button>
+                    <div className="admin-row-actions">
+                      <button className="admin-icon-btn" type="button" onClick={() => editMachine(machine)} aria-label={`Edit ${machine.machine_name}`}><FaRegEdit aria-hidden="true" /></button>
+                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                        setAdminActionError("");
+                        try {
+                          setIsBusy(true);
+                          await onDeleteMachine(machine.id || machine.machine_id);
+                        } catch (err) {
+                          setAdminActionError(err?.message || "Machine could not be deleted.");
+                        } finally {
+                          setIsBusy(false);
+                        }
+                      }} aria-label={`Remove ${machine.machine_name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                    </div>
               </div>
             ))}
+                {!visibleMachines.length && <p className="admin-empty-state">No machines match your search.</p>}
           </div>
+        </div>
+          </aside>
         </div>
       </div>
     </section>
+  );
+}
+
+function ImageCropModal({ src, crop, zoom, setCrop, setZoom, onCropComplete, onCancel, onApply, error }) {
+  return (
+    <div className="modal-overlay" onClick={onCancel} role="dialog" aria-modal="true" aria-label="Crop image">
+      <div className="modal-container cropper-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="cropper-header">
+          <h3>Crop Image</h3>
+          <button type="button" className="admin-icon-btn" onClick={onCancel} aria-label="Close cropper">x</button>
+        </div>
+        <div className="cropper-body">
+          <div className="cropper-stage">
+            <Cropper
+              image={src}
+              crop={crop}
+              zoom={zoom}
+              aspect={4 / 3}
+              onCropChange={setCrop}
+              onZoomChange={setZoom}
+              onCropComplete={(_area, areaPixels) => onCropComplete(areaPixels)}
+            />
+          </div>
+          <div className="cropper-controls">
+            <label className="cropper-zoom">
+              Zoom
+              <input type="range" min="1" max="3" step="0.01" value={zoom} onChange={(e) => setZoom(Number(e.target.value))} />
+            </label>
+            {error && <p className="admin-error-text">{error}</p>}
+            <div className="cropper-actions">
+              <button type="button" className="admin-secondary-btn" onClick={onCancel}>Cancel</button>
+              <button type="button" className="admin-primary-btn" onClick={onApply}>Use Cropped</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
