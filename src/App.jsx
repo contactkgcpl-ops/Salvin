@@ -2249,6 +2249,7 @@ export default function App() {
       </div>
       {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
     </>
+    // comment
   );
 }
 
