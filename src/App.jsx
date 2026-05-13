@@ -248,6 +248,35 @@ function formatSpecs(specifications) {
   }
   return [];
 }
+
+function toSpecEntries(source) {
+  if (Array.isArray(source)) {
+    return source
+      .filter((item) => item && (item.title || item.value))
+      .map((item) => [item.title || "-", item.value || "-"]);
+  }
+  if (source && typeof source === "object") {
+    return Object.entries(source).filter(([, value]) => value != null && value !== "");
+  }
+  return [];
+}
+
+function normalizeMachineDetails(specifications) {
+  if (specifications && typeof specifications === "object" && !Array.isArray(specifications)) {
+    if ("meta" in specifications || "specifications" in specifications || "data" in specifications) {
+      return {
+        meta: specifications.meta && typeof specifications.meta === "object" ? specifications.meta : {},
+        specifications:
+          specifications.specifications && typeof specifications.specifications === "object"
+            ? specifications.specifications
+            : {},
+        data: specifications.data && typeof specifications.data === "object" ? specifications.data : {}
+      };
+    }
+    return { meta: {}, specifications, data: {} };
+  }
+  return { meta: {}, specifications: {}, data: {} };
+}
 function WebsitePreloader({ isLeaving }) {
   return (
     <div className={`website-preloader${isLeaving ? " is-leaving" : ""}`} role="status" aria-live="polite">
@@ -341,6 +370,10 @@ function MachineDetailPage({ machines, sessionCache }) {
       : slugNorm(m.machine_name).replace(/\s+/g, "-");
   const machine =
     machines.find((m) => deriveSlugLocal(m) === slugNorm(machineSlug));
+  const machineDetails = normalizeMachineDetails(machine?.specifications);
+  const specificationRows = toSpecEntries(machineDetails.specifications);
+  const detailRows = toSpecEntries(machineDetails.data);
+  const metaRows = toSpecEntries(machineDetails.meta);
 
   React.useEffect(() => {
     if (machine) {
@@ -371,6 +404,36 @@ function MachineDetailPage({ machines, sessionCache }) {
               <h3>Description</h3>
               <p>{machine.description}</p>
             </div>
+            {!!metaRows.length && (
+              <div className="detail-info-card">
+                <h3>Meta</h3>
+                <table className="specs-table">
+                  <tbody>
+                    {metaRows.map(([key, value]) => (
+                      <tr key={key}>
+                        <td className="lbl">{String(key)}</td>
+                        <td className="val">{String(value)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {!!detailRows.length && (
+              <div className="detail-info-card">
+                <h3>Additional Details</h3>
+                <table className="specs-table">
+                  <tbody>
+                    {detailRows.map(([key, value]) => (
+                      <tr key={key}>
+                        <td className="lbl">{String(key)}</td>
+                        <td className="val">{String(value)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
 
           <div className="detail-sidebar">
@@ -378,7 +441,7 @@ function MachineDetailPage({ machines, sessionCache }) {
               <h3>Technical Specifications</h3>
               <table className="specs-table">
                 <tbody>
-                  {formatSpecs(machine.specifications).map(([k, v]) => (
+                  {specificationRows.map(([k, v]) => (
                     <tr key={k}>
                       <td className="lbl">{k.replace(/([A-Z])/g, ' $1').toUpperCase()}</td>
                       <td className="val">{v}</td>
@@ -414,7 +477,10 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
   if (!machine) return null;
 
   const imageSrc = resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage;
-  const specifications = formatSpecs(machine.specifications);
+  const details = normalizeMachineDetails(machine.specifications);
+  const specifications = toSpecEntries(details.specifications);
+  const additionalData = toSpecEntries(details.data);
+  const metaDetails = toSpecEntries(details.meta);
   const displaySpecs = specifications.length
     ? specifications
     : [
@@ -444,6 +510,23 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
             </div>
             <h2 className="modal-title" id="machine-modal-title">{machine.machine_name}</h2>
             <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>
+            {!!metaDetails.length && (
+              <>
+                <h4 className="modal-spec-heading">Meta</h4>
+                <div className="modal-table-scroll">
+                  <table className="modal-spec-table">
+                    <tbody>
+                      {metaDetails.map(([key, value]) => (
+                        <tr key={key}>
+                          <td>{formatLabel(key)}</td>
+                          <td>{value || "-"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
             <h4 className="modal-spec-heading">Technical Specifications</h4>
             <div className="modal-table-scroll">
               <table className="modal-spec-table">
@@ -457,6 +540,23 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
                 </tbody>
               </table>
             </div>
+            {!!additionalData.length && (
+              <>
+                <h4 className="modal-spec-heading">Additional Details</h4>
+                <div className="modal-table-scroll">
+                  <table className="modal-spec-table">
+                    <tbody>
+                      {additionalData.map(([key, value]) => (
+                        <tr key={key}>
+                          <td>{formatLabel(key)}</td>
+                          <td>{value || "-"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
             <a
               href={`https://wa.me/919023979663?text=Inquiry for ${encodeURIComponent(machine.machine_name)}`}
               target="_blank"
@@ -666,7 +766,8 @@ function AdminPage({
     specifications: [{ ...emptySpecification }],
     slug: "",
     meta_title: "",
-    meta_description: ""
+    meta_description: "",
+    machine_json: ""
   });
   const [categoryForm, setCategoryForm] = useState({ id: "", name: "" });
   const [subcategoryForm, setSubcategoryForm] = useState({ id: "", category_id: firstCategoryId, name: "" });
@@ -742,7 +843,8 @@ function AdminPage({
       specifications: [{ ...emptySpecification }],
       slug: "",
       meta_title: "",
-      meta_description: ""
+      meta_description: "",
+      machine_json: ""
     });
     setImageFile(null);
     setImagePreview("");
@@ -817,6 +919,11 @@ function AdminPage({
     const machineSpecs = Array.isArray(machine.specifications)
       ? machine.specifications
       : Object.entries(machine.specifications || {}).map(([title, value]) => ({ title, value: String(value ?? "") }));
+    const details = normalizeMachineDetails(machine.specifications);
+    const flatSpecs = toSpecEntries(details.specifications).map(([title, value]) => ({
+      title: String(title),
+      value: String(value ?? "")
+    }));
     setMachineForm({
       id: machine.id || machine.machine_id,
       machine_name: machine.machine_name || "",
@@ -824,12 +931,18 @@ function AdminPage({
       subcategory_id: machine.subcategory_db_id || "",
       image_url: machine.image_url || "",
       description: machine.description || "",
-      specifications: machineSpecs.length
-        ? machineSpecs
+      specifications: flatSpecs.length
+        ? flatSpecs
+        : machineSpecs.length
+          ? machineSpecs
         : [{ ...emptySpecification }],
       slug: machine.slug || "",
       meta_title: machine.meta_title || "",
-      meta_description: machine.meta_description || ""
+      meta_description: machine.meta_description || "",
+      machine_json:
+        details.meta && Object.keys(details.meta).length + Object.keys(details.specifications).length + Object.keys(details.data).length
+          ? JSON.stringify(details, null, 2)
+          : ""
     });
     setImagePreview(machine.image_url || "");
     setImageFile(null);
@@ -858,13 +971,35 @@ function AdminPage({
     }
     try {
       setIsBusy(true);
+      let detailsJson = null;
+      if (machineForm.machine_json.trim()) {
+        try {
+          detailsJson = JSON.parse(machineForm.machine_json);
+        } catch {
+          setMachineSubmitError("Machine JSON is invalid. Use valid JSON format.");
+          setIsBusy(false);
+          return;
+        }
+      }
+      const parsedDetails = detailsJson ? normalizeMachineDetails(detailsJson) : null;
+      const machineNameFromMeta =
+        parsedDetails?.meta?.name && String(parsedDetails.meta.name).trim()
+          ? String(parsedDetails.meta.name).trim()
+          : "";
       const payload = {
         ...machineForm,
+        machine_name: machineForm.machine_name.trim() || machineNameFromMeta,
+        meta_title: machineForm.meta_title.trim() || machineNameFromMeta || machineForm.machine_name.trim(),
         slug: machineSlug,
         specifications: JSON.stringify(
-          machineForm.specifications.filter((item) => item.title.trim() || item.value.trim())
+          parsedDetails || machineForm.specifications.filter((item) => item.title.trim() || item.value.trim())
         )
       };
+      if (!payload.machine_name) {
+        setMachineSubmitError("Machine name is required.");
+        setIsBusy(false);
+        return;
+      }
       if (machineForm.id) {
         await onUpdateMachine(machineForm.id, payload, imageFile);
       } else {
@@ -1045,6 +1180,15 @@ function AdminPage({
                 ))}
               </div>
               <button className="admin-secondary-btn" type="button" onClick={addSpecificationRow}><FaPlus aria-hidden="true" /> Add Specification</button>
+              <label>Machine JSON (Optional)
+                <textarea
+                  rows="10"
+                  value={machineForm.machine_json}
+                  onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_json: e.target.value }))}
+                  placeholder={`{\n  "meta": { "brand": "SALVIN", "name": "Machine Name" },\n  "specifications": { "Voltage": "220 V" },\n  "data": { "Driven Type": "Electric" }\n}`}
+                />
+                <small>If provided, JSON `meta/specifications/data` overrides spec rows and appears in machine detail card.</small>
+              </label>
             </div>
 
             <div className="admin-form-section">
