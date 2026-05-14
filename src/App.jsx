@@ -516,7 +516,7 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
                 try { JSON.parse(desc); return "Machine details will be updated soon."; } 
                 catch { return desc || "Machine details will be updated soon."; }
               })()}
-            </p>
+            </p > 
             {!!metaDetails.length && (
               <>
                 <h4 className="modal-spec-heading">Machine Overview</h4>
