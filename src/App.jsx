@@ -1185,7 +1185,7 @@ function AdminPage({
                   rows="10"
                   value={machineForm.machine_json}
                   onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_json: e.target.value }))}
-                  placeholder={`{\n  "meta": { "brand": "SALVIN", "name": "Machine Name" },\n  "specifications": { "Voltage": "220 V" },\n  "data": { "Driven Type": "Electric" }\n}`}
+                  placeholder={`{\n  "Machine Overview": { "brand": "SALVIN", "name": "Machine Name" },\n  "specifications": { "Voltage": "220 V" },\n  "data": { "Driven Type": "Electric" }\n}`}
                 />
                 <small>If provided, JSON `meta/specifications/data` overrides spec rows and appears in machine detail card.</small>
               </label>
