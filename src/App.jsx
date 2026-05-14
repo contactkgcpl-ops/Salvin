@@ -509,7 +509,14 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
               {machine.subcategory && <span className="modal-tag filled">{machine.subcategory}</span>}
             </div>
             <h2 className="modal-title" id="machine-modal-title">{machine.machine_name}</h2>
-            <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>
+            {/* <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>// */}
+            <p className="modal-desc">
+              {(() => {
+                const desc = machine.description || "";
+                try { JSON.parse(desc); return "Machine details will be updated soon."; } 
+                catch { return desc || "Machine details will be updated soon."; }
+              })()}
+            </p>
             {!!metaDetails.length && (
               <>
                 <h4 className="modal-spec-heading">Machine Overview</h4>
