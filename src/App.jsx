@@ -718,12 +718,18 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
                   </div>
                   <h4 className="mach-card-title">{machine.machine_name}</h4>
                   <p className="mach-card-desc">{machine.description}</p>
-                  <div className="mach-card-specs">
-                    <div className="mach-spec-item">
-                      <span className="mach-spec-lbl">{machine.speed}</span>
-                      <span className="mach-spec-unit">{machine.capacity}</span>
+                  {(String(machine.speed ?? "").trim() || String(machine.capacity ?? "").trim()) ? (
+                    <div className="mach-card-specs">
+                      <div className="mach-spec-item">
+                        {String(machine.speed ?? "").trim() ? (
+                          <span className="mach-spec-lbl">{machine.speed}</span>
+                        ) : null}
+                        {String(machine.capacity ?? "").trim() ? (
+                          <span className="mach-spec-unit">{machine.capacity}</span>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
+                  ) : null}
                   <div className="mach-card-actions">
                     <a href="https://wa.me/919023979663" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
                     <button type="button" className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
