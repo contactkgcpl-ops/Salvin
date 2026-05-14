@@ -406,7 +406,7 @@ function MachineDetailPage({ machines, sessionCache }) {
             </div>
             {!!metaRows.length && (
               <div className="detail-info-card">
-                <h3>Meta</h3>
+                <h3>Machine Overview</h3>
                 <table className="specs-table">
                   <tbody>
                     {metaRows.map(([key, value]) => (
@@ -512,7 +512,7 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
             <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>
             {!!metaDetails.length && (
               <>
-                <h4 className="modal-spec-heading">Meta</h4>
+                <h4 className="modal-spec-heading">Machine Overview</h4>
                 <div className="modal-table-scroll">
                   <table className="modal-spec-table">
                     <tbody>
