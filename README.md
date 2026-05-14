@@ -1,5 +1,17 @@
 # React + Vite
 
+## Cursor: Agentic SEO skill (project)
+
+This repo vendors [Agentic-SEO-Skill](https://github.com/Bhanunamikaze/Agentic-SEO-Skill) as a git submodule at `.cursor/skills/agentic-seo`. Cursor loads it as a project skill for audits, schema, sitemaps, CWV, etc.
+
+After clone: `git submodule update --init .cursor/skills/agentic-seo`
+
+Optional Python deps for bundled scripts: `pip install -r requirements-seo-skill.txt` (see upstream README for Playwright).
+
+**Home AI chat:** Floating widget on Home only. Backend `POST /api/chat` (Express) needs `OPENAI_API_KEY` in `backend/.env`. Vite dev proxies `/api` to port 5000.
+
+---
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

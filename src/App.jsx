@@ -83,6 +83,7 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import ConsultantPage from "./pages/ConsultantPage";
+import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
 import innovation from "./assets/home_extra/innovation.png";
@@ -2363,6 +2364,7 @@ export default function App() {
     <>
       <div className={`app${isIntroVisible ? " app-intro-active" : ""}`}>
         <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
+        {/* Public paths: also list in scripts/generate-sitemap.mjs (sitemap + SEO) */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -2405,8 +2407,8 @@ export default function App() {
         <Footer />
       </div>
       {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
+      <SalvinChatbot machines={machines} />
     </>
-    // comment
   );
 }
 
