@@ -10,6 +10,16 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import IntroOverlay from "./components/IntroOverlay";
 import machinesData from "../data/machines.json";
+import contactArpitImage from "./assets/contact/arpit.jpeg";
+import contactDigeshImage from "./assets/contact/digesh.jpeg";
+import contactIshaImage from "./assets/contact/isha.jpeg";
+import contactKevalGandhiImage from "./assets/contact/kevalgandhi.png";
+import contactNishaImage from "./assets/contact/nisha.jpeg";
+import contactRituImage from "./assets/contact/ritu.jpeg";
+import contactParulImage from "./assets/contact/parul.jpeg";
+import contactMansiImage from "./assets/contact/mansi.jpeg";
+import contactNidhiImage from "./assets/contact/nidhi.jpeg";
+
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
@@ -86,6 +96,7 @@ import ConsultantPage from "./pages/ConsultantPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
+import  salvinTeam from "./assets/home_extra/salvinTeam.jpeg";
 import innovation from "./assets/home_extra/innovation.png";
 import quality from "./assets/home_extra/quality.png";
 import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
@@ -98,7 +109,6 @@ import projSpices from "./assets/home_projects/spices_processing.png";
 import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
-import foodPlant from "./assets/home_projects/salvin_team.jpg";
 import projectHeroImage from "./assets/hero/turkey_proj.png";
 import machineHeroImage from "./assets/hero/heromachine.jpg";
 import sparesHeroImage from "./assets/hero/sparse02.png";
@@ -1644,7 +1654,7 @@ function HomePage() {
 
             </div>
             <div className="about-right">
-              <img src={foodPlant} alt="Food processing plant" />
+              <img src={salvinTeam} alt="Salvin Team" />
 
             </div>
           </div>
@@ -2085,64 +2095,111 @@ function ContactPage() {
         <div className="contact-container">
           <h2 className="section-title text-center">Contact by Department</h2>
           <div className="dept-grid">
+
             {/* Dept Cards */}
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              </div>
+              <img className="dept-photo" src={contactKevalGandhiImage} alt="Keval Gandhi" 
+                 style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
                 <strong>Managing Director</strong>
                 <span>Keval Gandhi</span>
-                <a href="mailto:md.salvinindustries@gmail.com">md.salvinindustries@gmail.com</a>
+                <a href="mailto:keval.projectindia@gmail.com">keval.projectindia@gmail.com</a>
               </div>
             </div>
-            <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-              </div>
+
+             <div className="dept-card">
+              <img className="dept-photo" src={contactNidhiImage} alt="Nidhi Shah" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
                 <strong>General Manager</strong>
                 <span>Nidhi Shah</span>
-                <a href="mailto:gm.salvinindustries@gmail.com">gm.salvinindustries@gmail.com</a>
+                <a href="mailto:gm.salvinindustrirs@outlook.com">gm.salvinindustrirs@outlook.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              </div>
+              <img className="dept-photo" src={contactParulImage} alt="Parul Domadiya" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
-                <strong>CEO Office</strong>
-                <span>Purvi Rajput</span>
-                <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
+                <strong>HRA</strong>
+                <span>Parul  Domadia</span>
+                <a href="mailto:hr.salvinindustries@gmail.com">hr.salvinindustries@gmail.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              </div>
+              <img className="dept-photo" src={contactMansiImage} alt="Mansi Gajera" />
               <div className="dept-info">
-                <strong>International</strong>
-                <span>Ajay Panchal</span>
-                <a href="mailto:international.salvin@gmail.com">international.salvin@gmail.com</a>
+                <strong>Automation Head</strong>
+                <span>Mansi Gajera </span>
+                <a href="mailto:info.salvinindustries@gmail.com">info.salvinindustries@gmail.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-              </div>
+              <img className="dept-photo" src={contactRituImage} alt="Ritu Vaishnav" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+
               <div className="dept-info">
-                <strong>Corporate</strong>
-                <span>Hiyanee Gandhi</span>
-                <a href="mailto:corporate.salvinindustries@gmail.com">corporate.salvinindustries@gmail.com</a>
+                <strong>Marketing & sales Head</strong>
+                <span>Ritu Vaishnav </span>
+                <a href="mailto:salvin.projects@hotmail.com">salvin.projects@hotmail.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              </div>
+              <img className="dept-photo" src={contactIshaImage} alt="Isha Delvadiya" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
-                <strong>Ask Me</strong>
-                <span>Shakshi Modi</span>
+                <strong>System Developer</strong>
+                <span>Isha Delvadiya </span>
+                <a href="mailto:salvin.projects@hotmail.com">salvin.projects@hotmail.com</a>
+              </div>
+            </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactNishaImage} alt="Nisha Parmar" />
+              <div className="dept-info">
+                <strong>sales coordinator</strong>
+                <span>Nisha Parmar</span>
+                <a href="mailto:sales@salvinindia.com">sales@salvinindia.com</a>
+              </div>
+            </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactArpitImage} alt="Arpit Chudasama" />
+              <div className="dept-info">
+                <strong>IT Support</strong>
+                <span>Arpit Chudasama</span>
+                <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactDigeshImage} alt="Digesh Prajapati" />
+              <div className="dept-info">
+                <strong>IT Support</strong>
+                <span>Digesh Prajapati</span>
                 <a href="mailto:solveit.salvinindustries@gmail.com">solveit.salvinindustries@gmail.com</a>
               </div>
             </div>
