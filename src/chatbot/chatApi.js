@@ -25,3 +25,12 @@ export async function sendChatMessages(messages) {
   if (typeof data?.reply === "string") return { reply: data.reply };
   return { error: "no_reply", message: "Unexpected response from server." };
 }
+
+export async function fetchLiveMachines() {
+  const res = await fetch(`${API_BASE}/api/machines`);
+  if (!res.ok) {
+    throw new Error("Machine database not available.");
+  }
+  const data = await res.json();
+  return Array.isArray(data) ? data : [];
+}
