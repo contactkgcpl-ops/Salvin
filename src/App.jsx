@@ -2114,7 +2114,7 @@ function ContactPage() {
               </div>
             </div>
             
-             <div className="dept-card">
+             {/* <div className="dept-card">
               <img className="dept-photo" src={contactPriyaImage} alt="Priya Rajput" 
                  style={{
                   objectFit: "cover",
@@ -2126,7 +2126,7 @@ function ContactPage() {
                 <span>Priya Rajput</span>
                 <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
               </div>
-            </div>
+            </div> */}
 
              <div className="dept-card">
               <img className="dept-photo" src={contactNidhiImage} alt="Nidhi Shah" 
