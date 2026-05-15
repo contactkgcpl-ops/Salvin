@@ -14,11 +14,14 @@ import contactArpitImage from "./assets/contact/arpit.jpeg";
 import contactDigeshImage from "./assets/contact/digesh.jpeg";
 import contactIshaImage from "./assets/contact/isha.jpeg";
 import contactKevalGandhiImage from "./assets/contact/kevalgandhi.png";
-import contactNishaImage from "./assets/contact/nisha.jpeg";
+import contactNishaImage from "./assets/contact/nisha.png";
 import contactRituImage from "./assets/contact/ritu.jpeg";
 import contactParulImage from "./assets/contact/parul.jpeg";
 import contactMansiImage from "./assets/contact/mansi.jpeg";
 import contactNidhiImage from "./assets/contact/nidhi.jpeg";
+import contactPriyaImage from "./assets/contact/priya.jpeg";
+import contactAvneesImage from "./assets/contact/avnees.jpeg";
+import contactSumitImage from "./assets/contact/sumit.jpeg";
 
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
@@ -2093,7 +2096,7 @@ function ContactPage() {
       {/* Department Section */}
       <section className="contact-dept-section">
         <div className="contact-container">
-          <h2 className="section-title text-center">Contact by Department</h2>
+                <h2 className="section-title text-center">Salvin Family</h2>
           <div className="dept-grid">
 
             {/* Dept Cards */}
@@ -2108,6 +2111,20 @@ function ContactPage() {
                 <strong>Managing Director</strong>
                 <span>Keval Gandhi</span>
                 <a href="mailto:keval.projectindia@gmail.com">keval.projectindia@gmail.com</a>
+              </div>
+            </div>
+            
+             <div className="dept-card">
+              <img className="dept-photo" src={contactPriyaImage} alt="Priya Rajput" 
+                 style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>CEO</strong>
+                <span>Priya Rajput</span>
+                <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
               </div>
             </div>
 
@@ -2178,7 +2195,12 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactNishaImage} alt="Nisha Parmar" />
+              <img className="dept-photo" src={contactNishaImage} alt="Nisha Parmar" 
+              style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
                 <strong>sales coordinator</strong>
                 <span>Nisha Parmar</span>
@@ -2203,6 +2225,35 @@ function ContactPage() {
                 <a href="mailto:solveit.salvinindustries@gmail.com">solveit.salvinindustries@gmail.com</a>
               </div>
             </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactAvneesImage} alt="Avnees Sadhu" 
+              style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>Service incharge</strong>
+                <span>Avnees Sadhu</span>
+                <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
+              </div>
+            </div>
+            
+            <div className="dept-card">
+              <img className="dept-photo" src={contactSumitImage} alt="Sumit Pandya" 
+              style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>Service incharge</strong>
+                <span>Sumit Pandya</span>
+                <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
