@@ -73,7 +73,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         onClick={() => {
           setMenuOpen(false);
           window.open("https://salvinindustries.blogspot.com/", "_blank");
-        }}>BLOGSPOT</a>
+        }}>BLOGS</a>
         
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
         <LanguageSelector />

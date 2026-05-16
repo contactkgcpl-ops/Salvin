@@ -3,7 +3,7 @@ import { brochureProjects } from '../data/brochureCatalog'
 
 export default function ProjectsSection() {
   return (
-    <section className="border-t border-slate-100 bg-[#f8fafc] py-20 lg:py-28">
+    <section id="brochures" className="border-t border-slate-100 bg-[#f8fafc] py-20 lg:py-28">
       <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
         <div className="mb-16 flex flex-col items-center text-center lg:mb-20">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#f47c20]/10 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.25em] text-[#f47c20] ring-1 ring-inset ring-[#f47c20]/20">

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaPaperPlane, FaRobot, FaSearch, FaTimes } from "react-icons/fa";
-import { fetchLiveMachines, sendChatMessages } from "./chatApi";
+import { fetchLiveMachines, trackChatbotEvent } from "./chatApi";
 import "./chatbot.css";
 
 const WELCOME =
@@ -27,16 +27,23 @@ const COMPANY_INFO = {
 };
 
 const QUICK_PROMPTS = [
-  "Know about company",
-  "Our service",
-  "Our journey",
-  "Want machine",
+  { id: "question_company", label: "Know about company" },
+  { id: "question_service", label: "Our service" },
+  { id: "question_journey", label: "Explore Our Journey" },
+  { id: "question_machine", label: "Want machine" },
+];
+
+const SERVICE_OPTIONS = [
+  { label: "Consultancy", to: "/contact" },
+  { label: "Projects", to: "/turnkey-project#brochures" },
+  { label: "Machines", value: "show-machine-subcategories" },
+  { label: "Spares", href: "https://spares.salvinindia.com" },
 ];
 
 const WELCOME_MESSAGE = {
   role: "assistant",
   content: WELCOME,
-  actions: QUICK_PROMPTS.map((prompt) => ({ label: prompt, prompt })),
+  actions: QUICK_PROMPTS.map((prompt) => ({ label: prompt.label, prompt })),
 };
 
 const WHATSAPP_URL =
@@ -56,6 +63,28 @@ function createSlug(value) {
 
 function getMachineSlug(machine) {
   return machine?.slug?.trim() || createSlug(machine?.machine_name) || String(machine?.machine_id || machine?.id || "");
+}
+
+function getMachineAnalyticsId(machine) {
+  return machine?.analytics_id || `machine_${machine?.machine_id || machine?.id || getMachineSlug(machine)}`;
+}
+
+function getSubcategoryName(value) {
+  if (typeof value === "string") return value.trim();
+  return String(value?.name || value?.subcategory || value?.subcategory_name || "").trim();
+}
+
+function getMachineSubcategories(machines = [], subcategories = []) {
+  const names = new Set();
+  subcategories.forEach((subcategory) => {
+    const name = getSubcategoryName(subcategory);
+    if (name) names.add(name);
+  });
+  machines.forEach((machine) => {
+    const name = getSubcategoryName(machine.subcategory || machine.subcategory_name);
+    if (name && machine.status !== "inactive") names.add(name);
+  });
+  return Array.from(names).sort((a, b) => a.localeCompare(b));
 }
 
 function getMachineHaystack(machine) {
@@ -120,7 +149,10 @@ function getLocalReply(text) {
   }
 
   if (wantsServices) {
-    return { content: COMPANY_INFO.services, actions: [{ label: "Open Services", to: "/services" }] };
+    return {
+      content: "Select service:",
+      actions: SERVICE_OPTIONS,
+    };
   }
 
   if (wantsJourney) {
@@ -142,7 +174,7 @@ function getLocalReply(text) {
   return null;
 }
 
-function SalvinChatbot({ machines = [] }) {
+function SalvinChatbot({ machines = [], subcategories = [] }) {
   const navigate = useNavigate();
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
@@ -179,6 +211,24 @@ function SalvinChatbot({ machines = [] }) {
     window.location.href = WHATSAPP_URL;
   }
 
+  function showMachineSubcategories() {
+    const names = getMachineSubcategories(machines, subcategories);
+    if (!names.length) {
+      addAssistantMessage({
+        content: "Machine subcategories not loaded. Contact team on WhatsApp.",
+        actions: [{ label: "Open WhatsApp", href: WHATSAPP_URL }],
+      });
+      return;
+    }
+    addAssistantMessage({
+      content: "Select machine subcategory:",
+      actions: names.map((name) => ({
+        label: name,
+        to: `/machineries?subcategory=${encodeURIComponent(name)}`,
+      })),
+    });
+  }
+
   async function getMachineRows() {
     try {
       const liveMachines = await fetchLiveMachines();
@@ -197,6 +247,11 @@ function SalvinChatbot({ machines = [] }) {
     const match = findMachineByName(text, liveMachines);
     if (match) {
       const to = `/machineries/${getMachineSlug(match)}`;
+      trackChatbotEvent({
+        event_type: "machine_search",
+        target_id: getMachineAnalyticsId(match),
+        label: match.machine_name,
+      });
       addAssistantMessage({
         content: `Yes, ${match.machine_name} is available. Opening machine page now.`,
         actions: [{ label: "Open Machine", to }],
@@ -246,30 +301,11 @@ function SalvinChatbot({ machines = [] }) {
       return;
     }
 
-    setLoading(true);
-    const apiMessages = nextThread.filter(
-      (m) =>
-        (m.role === "user" || m.role === "assistant") &&
-        !m.isError &&
-        String(m.content || "").trim()
-    );
-    const result = await sendChatMessages(apiMessages);
-    setLoading(false);
-    if (result.reply) {
-      setMessages((prev) => [...prev, { role: "assistant", content: result.reply }]);
-    } else {
-      const hint =
-        result.error === "service_unconfigured"
-          ? `${result.message || "AI not configured."} `
-          : result.message || "Something went wrong.";
-      setMessages((prev) => [
-        ...prev,
-        {
-          isError: true,
-          errorText: hint,
-        },
-      ]);
-    }
+    addAssistantMessage({
+      content: "This detail is not available in website data. Connecting you with Salvin team on WhatsApp.",
+      actions: [{ label: "Open WhatsApp", href: WHATSAPP_URL }],
+    });
+    window.setTimeout(() => redirectToWhatsApp(), 900);
   }
 
   async function handleSubmit(e) {
@@ -279,12 +315,24 @@ function SalvinChatbot({ machines = [] }) {
 
   function handleQuickPrompt(text) {
     if (loading) return;
-    submitMessage(text);
+    const prompt = typeof text === "string" ? QUICK_PROMPTS.find((item) => item.label === text) : text;
+    if (!prompt) return;
+    trackChatbotEvent({
+      event_type: "question_click",
+      target_id: prompt.id,
+      label: prompt.label,
+    });
+    submitMessage(prompt.label);
   }
 
   function handleMessageAction(action) {
     if (action.prompt) {
-      submitMessage(action.prompt);
+      trackChatbotEvent({
+        event_type: "question_click",
+        target_id: action.prompt.id,
+        label: action.prompt.label,
+      });
+      submitMessage(action.prompt.label);
       return;
     }
     if (action.to) {
@@ -293,6 +341,10 @@ function SalvinChatbot({ machines = [] }) {
     }
     if (action.href) {
       window.location.href = action.href;
+      return;
+    }
+    if (action.value === "show-machine-subcategories") {
+      showMachineSubcategories();
       return;
     }
     if (action.value === "continue") {
@@ -330,9 +382,9 @@ function SalvinChatbot({ machines = [] }) {
           </div>
           <div className="salvin-chat-tools" aria-label="Suggested questions">
             {QUICK_PROMPTS.map((prompt) => (
-              <button key={prompt} type="button" onClick={() => handleQuickPrompt(prompt)}>
+              <button key={prompt.id} type="button" onClick={() => handleQuickPrompt(prompt)}>
                 <FaSearch size={10} aria-hidden />
-                {prompt}
+                {prompt.label}
               </button>
             ))}
           </div>

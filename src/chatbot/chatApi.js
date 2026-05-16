@@ -34,3 +34,15 @@ export async function fetchLiveMachines() {
   const data = await res.json();
   return Array.isArray(data) ? data : [];
 }
+
+export async function trackChatbotEvent(event) {
+  try {
+    await fetch(`${API_BASE}/api/chatbot-analytics`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(event),
+    });
+  } catch {
+    // Analytics must never block chat UX.
+  }
+}

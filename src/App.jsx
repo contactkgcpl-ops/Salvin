@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
-import { Navigate, NavLink, Route, Routes, useLocation, useParams } from "react-router-dom";
-import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
+import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from "react-router-dom";
+import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
 import "./App.css";
 import Cropper from "react-easy-crop";
 import machineryLayoutImage from "./assets/machinery-layout.png";
@@ -594,10 +594,21 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
 }
 
 function MachineriesPage({ machines, categories, subcategories, sessionCache, loadError }) {
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [sortBy, setSortBy] = useState("default");
   const [selectedMachine, setSelectedMachine] = useState(null);
+  const subcategoryParam = searchParams.get("subcategory") || "";
+
+  React.useEffect(() => {
+    const nextSubcategory = subcategoryParam.trim();
+    if (!nextSubcategory) return;
+    setSelectedSubcategories((current) =>
+      current.includes(nextSubcategory) ? current : [nextSubcategory]
+    );
+  }, [subcategoryParam]);
+
   const toggleFilter = (value, list, setter) => {
     if (list.includes(value)) {
       setter(list.filter((v) => v !== value));
@@ -768,6 +779,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
 
 function AdminPage({
   dashboard,
+  chatbotAnalytics,
   categories,
   subcategories,
   onAddCategory,
@@ -858,6 +870,15 @@ function AdminPage({
       return searchable.includes(query);
     });
   }, [machineSearch, machines]);
+  const questionAnalytics = useMemo(
+    () => (chatbotAnalytics || []).filter((item) => item.event_type === "question_click"),
+    [chatbotAnalytics]
+  );
+  const machineAnalytics = useMemo(
+    () => (chatbotAnalytics || []).filter((item) => item.event_type === "machine_search"),
+    [chatbotAnalytics]
+  );
+  const topQuestionCount = questionAnalytics[0]?.count || 0;
 
   const resetMachineForm = () => {
     setMachineForm({
@@ -1121,6 +1142,10 @@ function AdminPage({
             <FaSitemap aria-hidden="true" />
             <div><span>Subcategories</span><strong>{dashboard?.total_subcategories ?? subcategories.length}</strong></div>
           </div>
+          <div className="admin-stat-card">
+            <FaRobot aria-hidden="true" />
+            <div><span>Top Chat Question</span><strong>{topQuestionCount}</strong></div>
+          </div>
         </div>
 
         <div className="admin-layout">
@@ -1305,6 +1330,48 @@ function AdminPage({
             ))}
           </div>
         </div>
+
+            <div className="admin-card">
+              <div className="admin-panel-header compact">
+                <div>
+                  <span className="admin-eyebrow">Chatbot Analytics</span>
+                  <h2>Question Counts</h2>
+                </div>
+              </div>
+              <div className="admin-analytics-list">
+                {questionAnalytics.map((item) => (
+                  <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
+                    <div>
+                      <strong>{item.label}</strong>
+                      <p>{item.target_id}</p>
+                    </div>
+                    <span>{item.count}</span>
+                  </div>
+                ))}
+                {!questionAnalytics.length && <p className="admin-empty-state">No chatbot question clicks yet.</p>}
+              </div>
+              {!!machineAnalytics.length && (
+                <>
+                  <div className="admin-panel-header compact analytics-subhead">
+                    <div>
+                      <span className="admin-eyebrow">Machine Interest</span>
+                      <h2>Machine Searches</h2>
+                    </div>
+                  </div>
+                  <div className="admin-analytics-list">
+                    {machineAnalytics.map((item) => (
+                      <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
+                        <div>
+                          <strong>{item.label}</strong>
+                          <p>{item.target_id}</p>
+                        </div>
+                        <span>{item.count}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
 
             <div className="admin-card">
               <div className="admin-panel-header compact">
@@ -2296,6 +2363,7 @@ export default function App() {
   const [categories, setCategories] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
   const [dashboard, setDashboard] = useState(null);
+  const [chatbotAnalytics, setChatbotAnalytics] = useState([]);
 
   const [sessionImageCache, setSessionImageCache] = useState({});
 
@@ -2335,6 +2403,9 @@ export default function App() {
         fetchJson("/api/dashboard")
           .then((data) => setDashboard(data))
           .catch(() => setDashboard(null));
+        fetchJson("/api/chatbot-analytics")
+          .then((data) => setChatbotAnalytics(Array.isArray(data) ? data : []))
+          .catch(() => setChatbotAnalytics([]));
       }
     };
 
@@ -2356,6 +2427,8 @@ export default function App() {
     setSubcategories(Array.isArray(subcategoryRows) ? subcategoryRows : []);
     if (localStorage.getItem("salvin_auth_token")) {
       setDashboard(await fetchJson("/api/dashboard").catch(() => null));
+      const analyticsRows = await fetchJson("/api/chatbot-analytics").catch(() => []);
+      setChatbotAnalytics(Array.isArray(analyticsRows) ? analyticsRows : []);
     }
   };
 
@@ -2494,6 +2567,7 @@ export default function App() {
               <ProtectedAdminRoute isAdminAuthenticated={isAdminAuthenticated}>
                 <AdminPage
                   dashboard={dashboard}
+                  chatbotAnalytics={chatbotAnalytics}
                   categories={categories}
                   subcategories={subcategories}
                   onAddCategory={addCategory}
@@ -2515,7 +2589,7 @@ export default function App() {
         <Footer />
       </div>
       {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
-      <SalvinChatbot machines={machines} />
+      <SalvinChatbot machines={machines} subcategories={subcategories} />
     </>
   );
 }
