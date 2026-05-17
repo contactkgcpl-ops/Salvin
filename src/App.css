@@ -6389,7 +6389,7 @@ body {
 /* ===== TABLET & MOBILE NAV: max-width 1024px (drawer) ===== */
 @media (max-width: 1024px) {
   .hamburger-btn {
-    display: flex;
+    display: flex !important;
   }
 
   .nav-overlay {

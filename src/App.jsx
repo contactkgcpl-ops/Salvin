@@ -1462,11 +1462,11 @@ function HomePage() {
   const heroSlides = [
     {
       key: "machine",
-      eyebrow: "Machineries",
-      title: "Special Purpose Machineries for Processing & Packaging",
-      text: "Purpose-built machinery engineered for consistent output, hygienic operation, and scalable manufacturing.",
-      cta: "View Machineries",
-      to: "/machineries",
+      eyebrow: "Salvin CRM",
+      title: "Streamline Turnkey Projects & Machinery Sales",
+      text: "Manage client relations, track industrial equipment orders, and oversee turnkey processing plants seamlessly within the Salvin CRM ecosystem.",
+      cta: "Access Dashboard",
+      to: "/admin-panel",
       image: machineHeroImage
     },
     {
@@ -2289,7 +2289,7 @@ function ContactPage() {
               <div className="dept-info">
                 <strong>IT Support</strong>
                 <span>Digesh Prajapati</span>
-                <a href="mailto:solveit.salvinindustries@gmail.com">solveit.salvinindustries@gmail.com</a>
+                <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
               </div>
             </div>
 
