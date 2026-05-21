@@ -188,6 +188,7 @@ const testimonialCards = [
 ];
 
 const initialMachines = Array.isArray(machinesData) ? machinesData : [];
+const MACHINES_PER_PAGE = 18;
 
 
 const emptySpecification = { title: "", value: "" };
@@ -598,6 +599,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [sortBy, setSortBy] = useState("default");
+  const [currentPage, setCurrentPage] = useState(1);
   const [selectedMachine, setSelectedMachine] = useState(null);
   const subcategoryParam = searchParams.get("subcategory") || "";
 
@@ -641,6 +643,20 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
 
     return results;
   }, [machines, searchQuery, selectedSubcategories, sortBy]);
+
+  const totalPages = Math.max(1, Math.ceil(filteredMachines.length / MACHINES_PER_PAGE));
+  const visibleMachines = filteredMachines.slice(
+    (currentPage - 1) * MACHINES_PER_PAGE,
+    currentPage * MACHINES_PER_PAGE
+  );
+
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedSubcategories, sortBy]);
+
+  React.useEffect(() => {
+    setCurrentPage((page) => Math.min(page, totalPages));
+  }, [totalPages]);
 
   const categoryGroups = categories.map((category) => ({
     ...category,
@@ -725,12 +741,17 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
           </div>
 
           <div className="mach-results-header">
-            <h3>Filtered Machinery <span className="mach-count">{filteredMachines.length} Results</span></h3>
+            <h3>
+              Filtered Machinery <span className="mach-count">{filteredMachines.length} Results</span>
+            </h3>
+            <span className="mach-page-count">
+              Page {currentPage} of {totalPages}
+            </span>
           </div>
           {loadError && <p className="admin-error-text">{loadError}</p>}
 
           <div className="mach-grid">
-            {filteredMachines.map((machine) => (
+            {visibleMachines.map((machine) => (
               <article key={machine.machine_id} className="mach-card">
                 <div className="mach-card-img">
                   <img src={resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage} alt={machine.machine_name} />
@@ -763,6 +784,37 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
               </article>
             ))}
           </div>
+          {totalPages > 1 && (
+            <nav className="mach-pagination" aria-label="Machinery pages">
+              <button
+                type="button"
+                className="mach-page-btn"
+                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  className={`mach-page-num${page === currentPage ? " active" : ""}`}
+                  onClick={() => setCurrentPage(page)}
+                  aria-current={page === currentPage ? "page" : undefined}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                type="button"
+                className="mach-page-btn"
+                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </nav>
+          )}
         </div>
       </div>
 

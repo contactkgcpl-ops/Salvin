@@ -4855,6 +4855,11 @@ body {
 /* --- RESULTS HEADER --- */
 .mach-results-header {
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .mach-results-header h3 {
@@ -4869,6 +4874,12 @@ body {
   font-size: 15px;
   font-weight: 600;
   margin-left: 10px;
+}
+
+.mach-page-count {
+  color: #596684;
+  font-size: 13px;
+  font-weight: 700;
 }
 
 /* --- GRID --- */
@@ -5028,6 +5039,47 @@ body {
 .mach-btn.view:hover {
   border-color: #0d1b3e;
   background: #f5f6fa;
+}
+
+.mach-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.mach-page-btn,
+.mach-page-num {
+  min-width: 42px;
+  height: 42px;
+  border: 1px solid #d0d6e0;
+  background: #fff;
+  color: #0d1b3e;
+  border-radius: 8px;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.mach-page-btn {
+  padding: 0 14px;
+}
+
+.mach-page-btn:hover:not(:disabled),
+.mach-page-num:hover,
+.mach-page-num.active {
+  background: #ff7a00;
+  border-color: #ff7a00;
+  color: #fff;
+}
+
+.mach-page-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.45;
 }
 
 /* --- RESPONSIVE --- */
