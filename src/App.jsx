@@ -113,7 +113,7 @@ import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
 import projectHeroImage from "./assets/hero/turkey_proj.png";
-import machineHeroImage from "./assets/hero/heromachine.jpg";
+import machineHeroImage from "./assets/hero/salvinhero2.png";
 import sparesHeroImage from "./assets/hero/sparse02.png";
 import salvinLogo from "./assets/salvin_logo.png";
 
@@ -1514,8 +1514,8 @@ function HomePage() {
   const heroSlides = [
     {
       key: "machine",
-      eyebrow: "Salvin CRM",
-      title: "Streamline Turnkey Projects & Machinery Sales",
+      eyebrow: "Salvin",
+      title: "Our Special purpose Machine ",
       text: "Manage client relations, track industrial equipment orders, and oversee turnkey processing plants seamlessly within the Salvin CRM ecosystem.",
       cta: "Access Dashboard",
       to: "/admin-panel",
