@@ -22,7 +22,7 @@ import contactNidhiImage from "./assets/contact/nidhi.jpeg";
 import contactPriyaImage from "./assets/contact/priya.jpeg";
 import contactAvneesImage from "./assets/contact/avnees.jpeg";
 import contactSumitImage from "./assets/contact/sumit.jpeg";
-
+import searchIcon from './assets/search.png'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
@@ -721,7 +721,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
         <div className="mach-results">
           <div className="mach-toolbar">
             <div className="mach-search-wrap">
-              <span className="mach-search-icon">🔍</span>
+              <span className="mach-search-icon"><img src={searchIcon} alt="🔍" style={{ width: '20px', height: '20px'}} /></span>
               <input
                 className="mach-search"
                 type="text"
@@ -1534,7 +1534,7 @@ function HomePage() {
     {
       key: "spares",
       eyebrow: "Industrial Spares",
-      title: "Your Trusted Source for Machine & Industrial Spares",
+      title: "Trusted Partner for Industrial & Machine Spares",
       text: "Premium quality industrial components and machine spares ensuring zero downtime for your production lines.",
       cta: "Enquire Spares",
       to: "/contact",
