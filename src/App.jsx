@@ -1,6 +1,8 @@
 import React, { useMemo, useState } from "react";
-import { Navigate, NavLink, Route, Routes, useLocation, useParams } from "react-router-dom";
+import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from "react-router-dom";
+import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
 import "./App.css";
+import Cropper from "react-easy-crop";
 import machineryLayoutImage from "./assets/machinery-layout.png";
 import blueMachinesImage from "./assets/blue-machines.png";
 import About from "./components/AboutSection";
@@ -8,6 +10,19 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import IntroOverlay from "./components/IntroOverlay";
 import machinesData from "../data/machines.json";
+import contactArpitImage from "./assets/contact/arpit.jpeg";
+import contactDigeshImage from "./assets/contact/digesh.jpeg";
+import contactIshaImage from "./assets/contact/isha.jpeg";
+import contactKevalGandhiImage from "./assets/contact/kevalgandhi.png";
+import contactNishaImage from "./assets/contact/nisha.png";
+import contactRituImage from "./assets/contact/ritu.jpeg";
+import contactParulImage from "./assets/contact/parul.jpeg";
+import contactMansiImage from "./assets/contact/mansi.jpeg";
+import contactNidhiImage from "./assets/contact/nidhi.jpeg";
+import contactPriyaImage from "./assets/contact/priya.jpeg";
+import contactAvneesImage from "./assets/contact/avnees.jpeg";
+import contactSumitImage from "./assets/contact/sumit.jpeg";
+import searchIcon from './assets/search.png'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
@@ -81,8 +96,10 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import ConsultantPage from "./pages/ConsultantPage";
+import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
+import  salvinTeam from "./assets/home_extra/salvinTeam.jpeg";
 import innovation from "./assets/home_extra/innovation.png";
 import quality from "./assets/home_extra/quality.png";
 import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
@@ -95,10 +112,9 @@ import projSpices from "./assets/home_projects/spices_processing.png";
 import projApi from "./assets/home_projects/APi_Plant.jpg";
 import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
 import projRice from "./assets/home_projects/puffed_rice.png";
-import foodPlant from "./assets/home_projects/salvin_team.jpg";
-import projectHeroImage from "./assets/project_hiro.jpg";
-import machineHeroImage from "./assets/machine_hiro.png";
-import sparesHeroImage from "./assets/spares hiro.jpg";
+import projectHeroImage from "./assets/hero/turkey_proj.png";
+import machineHeroImage from "./assets/hero/salvinhero2.png";
+import sparesHeroImage from "./assets/hero/sparse02.png";
 import salvinLogo from "./assets/salvin_logo.png";
 
 
@@ -172,9 +188,69 @@ const testimonialCards = [
 ];
 
 const initialMachines = Array.isArray(machinesData) ? machinesData : [];
+const MACHINES_PER_PAGE = 18;
 
 
 const emptySpecification = { title: "", value: "" };
+
+function sameId(a, b) {
+  return String(a ?? "") === String(b ?? "");
+}
+
+function clampNumber(value, min, max) {
+  return Math.min(Math.max(value, min), max);
+}
+
+async function readFileAsDataUrl(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = () => reject(new Error("Unable to read file."));
+    reader.readAsDataURL(file);
+  });
+}
+
+async function createImageFromUrl(url) {
+  return new Promise((resolve, reject) => {
+    const image = new Image();
+    image.addEventListener("load", () => resolve(image));
+    image.addEventListener("error", () => reject(new Error("Unable to load image.")));
+    image.setAttribute("crossOrigin", "anonymous");
+    image.src = url;
+  });
+}
+
+async function getCroppedImageBlob(imageSrc, cropPixels, outputType = "image/jpeg", quality = 0.92) {
+  const image = await createImageFromUrl(imageSrc);
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Canvas not supported.");
+
+  const safeWidth = clampNumber(Math.round(cropPixels.width), 1, image.naturalWidth);
+  const safeHeight = clampNumber(Math.round(cropPixels.height), 1, image.naturalHeight);
+  const safeX = clampNumber(Math.round(cropPixels.x), 0, Math.max(0, image.naturalWidth - safeWidth));
+  const safeY = clampNumber(Math.round(cropPixels.y), 0, Math.max(0, image.naturalHeight - safeHeight));
+
+  canvas.width = safeWidth;
+  canvas.height = safeHeight;
+  ctx.drawImage(image, safeX, safeY, safeWidth, safeHeight, 0, 0, safeWidth, safeHeight);
+
+  return new Promise((resolve, reject) => {
+    canvas.toBlob(
+      (blob) => (blob ? resolve(blob) : reject(new Error("Unable to crop image."))),
+      outputType,
+      quality
+    );
+  });
+}
+
+function createSlug(value) {
+  return String(value || "")
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}
 
 function formatSpecs(specifications) {
   if (Array.isArray(specifications)) {
@@ -186,6 +262,35 @@ function formatSpecs(specifications) {
     return Object.entries(specifications);
   }
   return [];
+}
+
+function toSpecEntries(source) {
+  if (Array.isArray(source)) {
+    return source
+      .filter((item) => item && (item.title || item.value))
+      .map((item) => [item.title || "-", item.value || "-"]);
+  }
+  if (source && typeof source === "object") {
+    return Object.entries(source).filter(([, value]) => value != null && value !== "");
+  }
+  return [];
+}
+
+function normalizeMachineDetails(specifications) {
+  if (specifications && typeof specifications === "object" && !Array.isArray(specifications)) {
+    if ("meta" in specifications || "specifications" in specifications || "data" in specifications) {
+      return {
+        meta: specifications.meta && typeof specifications.meta === "object" ? specifications.meta : {},
+        specifications:
+          specifications.specifications && typeof specifications.specifications === "object"
+            ? specifications.specifications
+            : {},
+        data: specifications.data && typeof specifications.data === "object" ? specifications.data : {}
+      };
+    }
+    return { meta: {}, specifications, data: {} };
+  }
+  return { meta: {}, specifications: {}, data: {} };
 }
 function WebsitePreloader({ isLeaving }) {
   return (
@@ -280,6 +385,10 @@ function MachineDetailPage({ machines, sessionCache }) {
       : slugNorm(m.machine_name).replace(/\s+/g, "-");
   const machine =
     machines.find((m) => deriveSlugLocal(m) === slugNorm(machineSlug));
+  const machineDetails = normalizeMachineDetails(machine?.specifications);
+  const specificationRows = toSpecEntries(machineDetails.specifications);
+  const detailRows = toSpecEntries(machineDetails.data);
+  const metaRows = toSpecEntries(machineDetails.meta);
 
   React.useEffect(() => {
     if (machine) {
@@ -310,6 +419,36 @@ function MachineDetailPage({ machines, sessionCache }) {
               <h3>Description</h3>
               <p>{machine.description}</p>
             </div>
+            {!!metaRows.length && (
+              <div className="detail-info-card">
+                <h3>Machine Overview</h3>
+                <table className="specs-table">
+                  <tbody>
+                    {metaRows.map(([key, value]) => (
+                      <tr key={key}>
+                        <td className="lbl">{String(key)}</td>
+                        <td className="val">{String(value)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
+            {!!detailRows.length && (
+              <div className="detail-info-card">
+                <h3>Additional Details</h3>
+                <table className="specs-table">
+                  <tbody>
+                    {detailRows.map(([key, value]) => (
+                      <tr key={key}>
+                        <td className="lbl">{String(key)}</td>
+                        <td className="val">{String(value)}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            )}
           </div>
 
           <div className="detail-sidebar">
@@ -317,7 +456,7 @@ function MachineDetailPage({ machines, sessionCache }) {
               <h3>Technical Specifications</h3>
               <table className="specs-table">
                 <tbody>
-                  {formatSpecs(machine.specifications).map(([k, v]) => (
+                  {specificationRows.map(([k, v]) => (
                     <tr key={k}>
                       <td className="lbl">{k.replace(/([A-Z])/g, ' $1').toUpperCase()}</td>
                       <td className="val">{v}</td>
@@ -353,7 +492,10 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
   if (!machine) return null;
 
   const imageSrc = resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage;
-  const specifications = formatSpecs(machine.specifications);
+  const details = normalizeMachineDetails(machine.specifications);
+  const specifications = toSpecEntries(details.specifications);
+  const additionalData = toSpecEntries(details.data);
+  const metaDetails = toSpecEntries(details.meta);
   const displaySpecs = specifications.length
     ? specifications
     : [
@@ -382,7 +524,31 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
               {machine.subcategory && <span className="modal-tag filled">{machine.subcategory}</span>}
             </div>
             <h2 className="modal-title" id="machine-modal-title">{machine.machine_name}</h2>
-            <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>
+            {/* <p className="modal-desc">{machine.description || "Machine details will be updated soon."}</p>// */}
+            <p className="modal-desc">
+              {(() => {
+                const desc = machine.description || "";
+                try { JSON.parse(desc); return "Machine details will be updated soon."; } 
+                catch { return desc || "Machine details will be updated soon."; }
+              })()}
+            </p > 
+            {!!metaDetails.length && (
+              <>
+                <h4 className="modal-spec-heading">Machine Overview</h4>
+                <div className="modal-table-scroll">
+                  <table className="modal-spec-table">
+                    <tbody>
+                      {metaDetails.map(([key, value]) => (
+                        <tr key={key}>
+                          <td>{formatLabel(key)}</td>
+                          <td>{value || "-"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
             <h4 className="modal-spec-heading">Technical Specifications</h4>
             <div className="modal-table-scroll">
               <table className="modal-spec-table">
@@ -396,6 +562,23 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
                 </tbody>
               </table>
             </div>
+            {!!additionalData.length && (
+              <>
+                <h4 className="modal-spec-heading">Additional Details</h4>
+                <div className="modal-table-scroll">
+                  <table className="modal-spec-table">
+                    <tbody>
+                      {additionalData.map(([key, value]) => (
+                        <tr key={key}>
+                          <td>{formatLabel(key)}</td>
+                          <td>{value || "-"}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </>
+            )}
             <a
               href={`https://wa.me/919023979663?text=Inquiry for ${encodeURIComponent(machine.machine_name)}`}
               target="_blank"
@@ -412,10 +595,22 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
 }
 
 function MachineriesPage({ machines, categories, subcategories, sessionCache, loadError }) {
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [sortBy, setSortBy] = useState("default");
+  const [currentPage, setCurrentPage] = useState(1);
   const [selectedMachine, setSelectedMachine] = useState(null);
+  const subcategoryParam = searchParams.get("subcategory") || "";
+
+  React.useEffect(() => {
+    const nextSubcategory = subcategoryParam.trim();
+    if (!nextSubcategory) return;
+    setSelectedSubcategories((current) =>
+      current.includes(nextSubcategory) ? current : [nextSubcategory]
+    );
+  }, [subcategoryParam]);
+
   const toggleFilter = (value, list, setter) => {
     if (list.includes(value)) {
       setter(list.filter((v) => v !== value));
@@ -449,9 +644,23 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
     return results;
   }, [machines, searchQuery, selectedSubcategories, sortBy]);
 
+  const totalPages = Math.max(1, Math.ceil(filteredMachines.length / MACHINES_PER_PAGE));
+  const visibleMachines = filteredMachines.slice(
+    (currentPage - 1) * MACHINES_PER_PAGE,
+    currentPage * MACHINES_PER_PAGE
+  );
+
+  React.useEffect(() => {
+    setCurrentPage(1);
+  }, [searchQuery, selectedSubcategories, sortBy]);
+
+  React.useEffect(() => {
+    setCurrentPage((page) => Math.min(page, totalPages));
+  }, [totalPages]);
+
   const categoryGroups = categories.map((category) => ({
     ...category,
-    subcategories: subcategories.filter((item) => Number(item.category_id) === Number(category.id))
+    subcategories: subcategories.filter((item) => sameId(item.category_id, category.id))
   }));
 
   return (
@@ -512,7 +721,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
         <div className="mach-results">
           <div className="mach-toolbar">
             <div className="mach-search-wrap">
-              <span className="mach-search-icon">🔍</span>
+              <span className="mach-search-icon"><img src={searchIcon} alt="🔍" style={{ width: '20px', height: '20px'}} /></span>
               <input
                 className="mach-search"
                 type="text"
@@ -532,12 +741,17 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
           </div>
 
           <div className="mach-results-header">
-            <h3>Filtered Machinery <span className="mach-count">{filteredMachines.length} Results</span></h3>
+            <h3>
+              Filtered Machinery <span className="mach-count">{filteredMachines.length} Results</span>
+            </h3>
+            <span className="mach-page-count">
+              Page {currentPage} of {totalPages}
+            </span>
           </div>
           {loadError && <p className="admin-error-text">{loadError}</p>}
 
           <div className="mach-grid">
-            {filteredMachines.map((machine) => (
+            {visibleMachines.map((machine) => (
               <article key={machine.machine_id} className="mach-card">
                 <div className="mach-card-img">
                   <img src={resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage} alt={machine.machine_name} />
@@ -550,12 +764,18 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
                   </div>
                   <h4 className="mach-card-title">{machine.machine_name}</h4>
                   <p className="mach-card-desc">{machine.description}</p>
-                  <div className="mach-card-specs">
-                    <div className="mach-spec-item">
-                      <span className="mach-spec-lbl">{machine.speed}</span>
-                      <span className="mach-spec-unit">{machine.capacity}</span>
+                  {(String(machine.speed ?? "").trim() || String(machine.capacity ?? "").trim()) ? (
+                    <div className="mach-card-specs">
+                      <div className="mach-spec-item">
+                        {String(machine.speed ?? "").trim() ? (
+                          <span className="mach-spec-lbl">{machine.speed}</span>
+                        ) : null}
+                        {String(machine.capacity ?? "").trim() ? (
+                          <span className="mach-spec-unit">{machine.capacity}</span>
+                        ) : null}
+                      </div>
                     </div>
-                  </div>
+                  ) : null}
                   <div className="mach-card-actions">
                     <a href="https://wa.me/919023979663" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
                     <button type="button" className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
@@ -564,6 +784,37 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
               </article>
             ))}
           </div>
+          {totalPages > 1 && (
+            <nav className="mach-pagination" aria-label="Machinery pages">
+              <button
+                type="button"
+                className="mach-page-btn"
+                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                disabled={currentPage === 1}
+              >
+                Previous
+              </button>
+              {Array.from({ length: totalPages }, (_, index) => index + 1).map((page) => (
+                <button
+                  key={page}
+                  type="button"
+                  className={`mach-page-num${page === currentPage ? " active" : ""}`}
+                  onClick={() => setCurrentPage(page)}
+                  aria-current={page === currentPage ? "page" : undefined}
+                >
+                  {page}
+                </button>
+              ))}
+              <button
+                type="button"
+                className="mach-page-btn"
+                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                disabled={currentPage === totalPages}
+              >
+                Next
+              </button>
+            </nav>
+          )}
         </div>
       </div>
 
@@ -580,6 +831,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
 
 function AdminPage({
   dashboard,
+  chatbotAnalytics,
   categories,
   subcategories,
   onAddCategory,
@@ -594,7 +846,7 @@ function AdminPage({
   onDeleteMachine
 }) {
   const firstCategoryId = categories[0]?.id || "";
-  const firstSubcategoryId = subcategories.find((item) => Number(item.category_id) === Number(firstCategoryId))?.id || "";
+  const firstSubcategoryId = subcategories.find((item) => sameId(item.category_id, firstCategoryId))?.id || "";
   const [machineForm, setMachineForm] = useState({
     id: "",
     machine_name: "",
@@ -605,14 +857,25 @@ function AdminPage({
     specifications: [{ ...emptySpecification }],
     slug: "",
     meta_title: "",
-    meta_description: ""
+    meta_description: "",
+    machine_json: ""
   });
   const [categoryForm, setCategoryForm] = useState({ id: "", name: "" });
   const [subcategoryForm, setSubcategoryForm] = useState({ id: "", category_id: firstCategoryId, name: "" });
   const [imageFile, setImageFile] = useState(null);
   const [imagePreview, setImagePreview] = useState("");
+  const [isCroppingImage, setIsCroppingImage] = useState(false);
+  const [cropImageSrc, setCropImageSrc] = useState("");
+  const [crop, setCrop] = useState({ x: 0, y: 0 });
+  const [zoom, setZoom] = useState(1);
+  const [croppedAreaPixels, setCroppedAreaPixels] = useState(null);
+  const [cropError, setCropError] = useState("");
   const [machineSubmitError, setMachineSubmitError] = useState("");
   const [categorySubmitError, setCategorySubmitError] = useState("");
+  const [adminActionError, setAdminActionError] = useState("");
+  const [isBusy, setIsBusy] = useState(false);
+  const [machineSearch, setMachineSearch] = useState("");
+  const [draftMessage, setDraftMessage] = useState("");
 
   React.useEffect(() => {
     if (!machineForm.category_id && firstCategoryId) {
@@ -627,12 +890,47 @@ function AdminPage({
     }
   }, [firstCategoryId, firstSubcategoryId, machineForm.category_id, subcategoryForm.category_id]);
 
-  const filteredSubcategories = subcategories.filter(
-    (item) => Number(item.category_id) === Number(machineForm.category_id)
+  React.useEffect(() => {
+    return () => {
+      if (imagePreview.startsWith("blob:")) URL.revokeObjectURL(imagePreview);
+    };
+  }, [imagePreview]);
+
+  const closeCropper = () => {
+    setIsCroppingImage(false);
+    setCropImageSrc("");
+    setCrop({ x: 0, y: 0 });
+    setZoom(1);
+    setCroppedAreaPixels(null);
+    setCropError("");
+  };
+
+  const filteredSubcategories = subcategories.filter((item) => sameId(item.category_id, machineForm.category_id));
+  const subcategoryFormOptions = subcategories.filter((item) => sameId(item.category_id, subcategoryForm.category_id));
+  const machineSlug = machineForm.slug || createSlug(machineForm.machine_name);
+  const visibleMachines = useMemo(() => {
+    const query = machineSearch.trim().toLowerCase();
+    if (!query) return machines;
+    return machines.filter((machine) => {
+      const searchable = [
+        machine.machine_name,
+        machine.category_id,
+        machine.subcategory,
+        machine.description,
+        machine.slug
+      ].filter(Boolean).join(" ").toLowerCase();
+      return searchable.includes(query);
+    });
+  }, [machineSearch, machines]);
+  const questionAnalytics = useMemo(
+    () => (chatbotAnalytics || []).filter((item) => item.event_type === "question_click"),
+    [chatbotAnalytics]
   );
-  const subcategoryFormOptions = subcategories.filter(
-    (item) => Number(item.category_id) === Number(subcategoryForm.category_id)
+  const machineAnalytics = useMemo(
+    () => (chatbotAnalytics || []).filter((item) => item.event_type === "machine_search"),
+    [chatbotAnalytics]
   );
+  const topQuestionCount = questionAnalytics[0]?.count || 0;
 
   const resetMachineForm = () => {
     setMachineForm({
@@ -645,17 +943,53 @@ function AdminPage({
       specifications: [{ ...emptySpecification }],
       slug: "",
       meta_title: "",
-      meta_description: ""
+      meta_description: "",
+      machine_json: ""
     });
     setImageFile(null);
     setImagePreview("");
+    closeCropper();
+    setDraftMessage("");
   };
 
-  const handleImageChange = (event) => {
-    const file = event.target.files[0];
-    setImageFile(file || null);
-    setImagePreview(file ? URL.createObjectURL(file) : "");
-    setMachineSubmitError("");
+  const handleImageChange = async (event) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+    try {
+      setMachineSubmitError("");
+      setCropError("");
+      const dataUrl = await readFileAsDataUrl(file);
+      setCropImageSrc(String(dataUrl || ""));
+      setIsCroppingImage(true);
+    } catch (err) {
+      setMachineSubmitError(err?.message || "Unable to read image.");
+    }
+  };
+
+  const applyCrop = async () => {
+    if (!cropImageSrc || !croppedAreaPixels) return;
+    try {
+      setCropError("");
+      const blob = await getCroppedImageBlob(cropImageSrc, croppedAreaPixels);
+      const file = new File([blob], `machine-${Date.now()}.jpg`, { type: blob.type || "image/jpeg" });
+      setImageFile(file);
+      setImagePreview(URL.createObjectURL(file));
+      closeCropper();
+    } catch (err) {
+      setCropError(err?.message || "Unable to crop image.");
+    }
+  };
+
+  const handleMachineNameChange = (value) => {
+    setMachineForm((prev) => {
+      const previousAutoSlug = createSlug(prev.machine_name);
+      const shouldAutoUpdateSlug = !prev.slug || prev.slug === previousAutoSlug;
+      return {
+        ...prev,
+        machine_name: value,
+        slug: shouldAutoUpdateSlug ? createSlug(value) : prev.slug
+      };
+    });
   };
 
   const updateSpecification = (index, key, value) => {
@@ -682,6 +1016,14 @@ function AdminPage({
   };
 
   const editMachine = (machine) => {
+    const machineSpecs = Array.isArray(machine.specifications)
+      ? machine.specifications
+      : Object.entries(machine.specifications || {}).map(([title, value]) => ({ title, value: String(value ?? "") }));
+    const details = normalizeMachineDetails(machine.specifications);
+    const flatSpecs = toSpecEntries(details.specifications).map(([title, value]) => ({
+      title: String(title),
+      value: String(value ?? "")
+    }));
     setMachineForm({
       id: machine.id || machine.machine_id,
       machine_name: machine.machine_name || "",
@@ -689,27 +1031,75 @@ function AdminPage({
       subcategory_id: machine.subcategory_db_id || "",
       image_url: machine.image_url || "",
       description: machine.description || "",
-      specifications: Array.isArray(machine.specifications) && machine.specifications.length
-        ? machine.specifications
+      specifications: flatSpecs.length
+        ? flatSpecs
+        : machineSpecs.length
+          ? machineSpecs
         : [{ ...emptySpecification }],
       slug: machine.slug || "",
       meta_title: machine.meta_title || "",
-      meta_description: machine.meta_description || ""
+      meta_description: machine.meta_description || "",
+      machine_json:
+        details.meta && Object.keys(details.meta).length + Object.keys(details.specifications).length + Object.keys(details.data).length
+          ? JSON.stringify(details, null, 2)
+          : ""
     });
     setImagePreview(machine.image_url || "");
     setImageFile(null);
+    setDraftMessage("");
+  };
+
+  const saveMachineDraft = () => {
+    localStorage.setItem("salvin_machine_draft", JSON.stringify({
+      ...machineForm,
+      slug: machineSlug
+    }));
+    setDraftMessage("Draft saved in this browser.");
   };
 
   async function handleMachineSubmit(event) {
     event.preventDefault();
     setMachineSubmitError("");
+    setAdminActionError("");
+    if (!machineForm.machine_name.trim()) {
+      setMachineSubmitError("Machine name is required.");
+      return;
+    }
+    if (!machineForm.category_id) {
+      setMachineSubmitError("Select a category before publishing.");
+      return;
+    }
     try {
+      setIsBusy(true);
+      let detailsJson = null;
+      if (machineForm.machine_json.trim()) {
+        try {
+          detailsJson = JSON.parse(machineForm.machine_json);
+        } catch {
+          setMachineSubmitError("Machine JSON is invalid. Use valid JSON format.");
+          setIsBusy(false);
+          return;
+        }
+      }
+      const parsedDetails = detailsJson ? normalizeMachineDetails(detailsJson) : null;
+      const machineNameFromMeta =
+        parsedDetails?.meta?.name && String(parsedDetails.meta.name).trim()
+          ? String(parsedDetails.meta.name).trim()
+          : "";
       const payload = {
         ...machineForm,
+        machine_name: machineForm.machine_name.trim() || machineNameFromMeta,
+        meta_title: machineForm.meta_title.trim() || machineNameFromMeta || machineForm.machine_name.trim(),
+        slug: machineSlug,
         specifications: JSON.stringify(
-          machineForm.specifications.filter((item) => item.title.trim() || item.value.trim())
+          parsedDetails || machineForm.specifications.filter((item) => item.title.trim() || item.value.trim())
         )
       };
+      if (!payload.machine_name) {
+        setMachineSubmitError("Machine name is required.");
+        setIsBusy(false);
+        return;
+      }
       if (machineForm.id) {
         await onUpdateMachine(machineForm.id, payload, imageFile);
       } else {
@@ -717,15 +1107,20 @@ function AdminPage({
       }
       resetMachineForm();
       event.target.reset();
+      localStorage.removeItem("salvin_machine_draft");
     } catch (error) {
       setMachineSubmitError(error.message || "Machine could not be saved.");
+    } finally {
+      setIsBusy(false);
     }
   }
 
   async function handleCategorySubmit(event) {
     event.preventDefault();
     setCategorySubmitError("");
+    setAdminActionError("");
     try {
+      setIsBusy(true);
       if (categoryForm.id) {
         await onUpdateCategory(categoryForm.id, categoryForm.name);
       } else {
@@ -734,13 +1129,17 @@ function AdminPage({
       setCategoryForm({ id: "", name: "" });
     } catch (error) {
       setCategorySubmitError(error.message || "Category could not be saved.");
+    } finally {
+      setIsBusy(false);
     }
   }
 
   async function handleSubcategorySubmit(event) {
     event.preventDefault();
     setCategorySubmitError("");
+    setAdminActionError("");
     try {
+      setIsBusy(true);
       if (subcategoryForm.id) {
         await onUpdateSubcategory(subcategoryForm.id, subcategoryForm);
       } else {
@@ -749,77 +1148,188 @@ function AdminPage({
       setSubcategoryForm({ id: "", category_id: firstCategoryId, name: "" });
     } catch (error) {
       setCategorySubmitError(error.message || "Subcategory could not be saved.");
+    } finally {
+      setIsBusy(false);
     }
   }
 
   return (
-    <section className="admin-page page-section mx-auto w-full max-w-[1200px]">
-      <span className="section-badge">Admin</span>
-      <h1 className="text-2xl font-bold tracking-tight text-[#0d1b3e] sm:text-3xl lg:text-4xl">Machine Management</h1>
-      <p className="page-copy">Manage machines, categories, subcategories, images, and SEO metadata.</p>
+    <section className="admin-page">
+      {isCroppingImage && cropImageSrc && (
+        <ImageCropModal
+          src={cropImageSrc}
+          crop={crop}
+          zoom={zoom}
+          setCrop={setCrop}
+          setZoom={setZoom}
+          onCropComplete={setCroppedAreaPixels}
+          onCancel={closeCropper}
+          onApply={applyCrop}
+          error={cropError}
+        />
+      )}
+      <div className="admin-shell">
+        <header className="admin-hero">
+          <div>
+            <span className="admin-eyebrow">Admin Panel</span>
+            <h1>Machine Management</h1>
+            <p>Manage machines, media, categories, specifications, and SEO metadata from one clean workspace.</p>
+          </div>
+          <div className="admin-hero-count">
+            <strong>{dashboard?.total_machines ?? machines.length}</strong>
+            <span>Total Machines</span>
+          </div>
+        </header>
 
-      <div className="admin-grid">
-        <div className="card admin-side-card">
-          <h3>Dashboard</h3>
-          <div className="admin-list">
-            <div className="admin-list-row"><strong>Total Machines</strong><p>{dashboard?.total_machines ?? machines.length}</p></div>
-            <div className="admin-list-row"><strong>Total Categories</strong><p>{dashboard?.total_categories ?? categories.length}</p></div>
-            <div className="admin-list-row"><strong>Total Subcategories</strong><p>{dashboard?.total_subcategories ?? subcategories.length}</p></div>
+        <div className="admin-stat-grid" aria-label="Dashboard summary">
+          <div className="admin-stat-card">
+            <FaBoxOpen aria-hidden="true" />
+            <div><span>Machines</span><strong>{dashboard?.total_machines ?? machines.length}</strong></div>
+          </div>
+          <div className="admin-stat-card">
+            <FaLayerGroup aria-hidden="true" />
+            <div><span>Categories</span><strong>{dashboard?.total_categories ?? categories.length}</strong></div>
+          </div>
+          <div className="admin-stat-card">
+            <FaSitemap aria-hidden="true" />
+            <div><span>Subcategories</span><strong>{dashboard?.total_subcategories ?? subcategories.length}</strong></div>
+          </div>
+          <div className="admin-stat-card">
+            <FaRobot aria-hidden="true" />
+            <div><span>Top Chat Question</span><strong>{topQuestionCount}</strong></div>
           </div>
         </div>
 
-        <form className="card contact-form admin-form" onSubmit={handleMachineSubmit}>
-          <h3 className="Add-title">{machineForm.id ? "Edit Machine" : "Add Machine"}</h3>
-          <label>Machine Name<input value={machineForm.machine_name} onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_name: e.target.value }))} required /></label>
-          <label>Category
-            <select value={machineForm.category_id} onChange={(e) => {
-              const categoryId = e.target.value;
-              const nextSubcategory = subcategories.find((item) => Number(item.category_id) === Number(categoryId));
-              setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
-            }}>
-              {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
-            </select>
-          </label>
-          <label>Subcategory
-            <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
-              <option value="">No subcategory</option>
-              {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
-            </select>
-          </label>
-          <label>Upload Machine Image
-            <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
-            {(imagePreview || machineForm.image_url) && (
-              <div style={{ marginTop: "10px" }}>
-                <img src={imagePreview || machineForm.image_url} alt="Machine preview" style={{ maxWidth: "180px", borderRadius: "8px" }} />
+        <div className="admin-layout">
+          <form className="admin-form-panel" onSubmit={handleMachineSubmit}>
+            <div className="admin-panel-header">
+              <div>
+                <span className="admin-eyebrow">{machineForm.id ? "Update Entry" : "New Entry"}</span>
+                <h2>{machineForm.id ? "Edit Machine" : "Add New Machine"}</h2>
               </div>
-            )}
-          </label>
-          <label>Existing Image Path<input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} /></label>
-          <label>Description<textarea rows="3" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} required /></label>
-          <label>URL Slug<input value={machineForm.slug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: e.target.value }))} /></label>
-          <label>Meta Title<input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} /></label>
-          <label>Meta Description<textarea rows="2" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} /></label>
-          <div>
-            <h3 className="Add-title">Specifications</h3>
-            {machineForm.specifications.map((spec, index) => (
-              <div key={index} className="admin-list-row">
-                <input placeholder="Title" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
-                <input placeholder="Value" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
-                <button className="delete-btn" type="button" onClick={() => removeSpecificationRow(index)}>Remove</button>
-              </div>
-            ))}
-            <button className="card-btn" type="button" onClick={addSpecificationRow}>Add Specification</button>
-          </div>
-          {machineSubmitError && <p className="admin-error-text">{machineSubmitError}</p>}
-          <button className="card-btn" type="submit">{machineForm.id ? "Update Machine" : "Add Machine"}</button>
-          {machineForm.id && <button className="card-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
-        </form>
+              {machineForm.id && <button className="admin-secondary-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
+            </div>
 
-        <div className="card admin-side-card">
-          <h3>Category Management</h3>
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaRegEdit aria-hidden="true" />
+                <div><h3>Basic Information</h3><p>Name, category, URL, and customer-facing description.</p></div>
+              </div>
+              <div className="admin-field-grid">
+                <label>Machine Name
+                  <input value={machineForm.machine_name} onChange={(e) => handleMachineNameChange(e.target.value)} placeholder="Example: Automatic Bottle Filling Machine" required />
+                </label>
+                <label>Category
+                  <select value={machineForm.category_id} onChange={(e) => {
+                    const categoryId = e.target.value;
+                    const nextSubcategory = subcategories.find((item) => sameId(item.category_id, categoryId));
+                    setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
+                  }} required>
+                    <option value="">Select category</option>
+                    {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+                  </select>
+                </label>
+                <label>Subcategory
+                  <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
+                    <option value="">No subcategory</option>
+                    {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
+                  </select>
+                </label>
+                <label>URL Slug
+                  <input value={machineSlug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: createSlug(e.target.value) }))} placeholder="auto-generated-from-machine-name" />
+                  <small>Auto-created from the machine name. You can edit it if needed.</small>
+                </label>
+              </div>
+              <label>Description
+                <textarea rows="4" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} placeholder="Briefly describe what this machine does and where it is used." required />
+              </label>
+            </div>
+
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaImage aria-hidden="true" />
+                <div><h3>Images</h3><p>Upload a new image or keep an existing path/URL.</p></div>
+              </div>
+              <div className="admin-image-grid">
+                <label className="admin-upload-box">Upload Machine Image
+                  <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
+                  <span>PNG, JPG, or WEBP</span>
+                </label>
+                <div className="admin-preview-box">
+                  {(imagePreview || machineForm.image_url) ? (
+                    <img src={imagePreview || machineForm.image_url} alt="Machine preview" loading="lazy" />
+                  ) : (
+                    <span>No image selected</span>
+                  )}
+                </div>
+              </div>
+              <label>Existing Image Path
+                <input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} />
+                <small>Use this when the image is already uploaded or hosted externally.</small>
+              </label>
+            </div>
+
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaTags aria-hidden="true" />
+                <div><h3>Specifications & Additional Details</h3><p>Add any technical specs, features, capacity details, or custom metadata.</p></div>
+              </div>
+              <div className="admin-spec-list">
+                {machineForm.specifications.map((spec, index) => (
+                  <div key={index} className="admin-spec-row">
+                    <input placeholder="Specification title, e.g. Capacity" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
+                    <input placeholder="Value, e.g. 500 kg/hr" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
+                    <button className="admin-icon-btn danger" type="button" onClick={() => removeSpecificationRow(index)} aria-label="Remove specification"><FaTrashAlt aria-hidden="true" /></button>
+                  </div>
+                ))}
+              </div>
+              <button className="admin-secondary-btn" type="button" onClick={addSpecificationRow}><FaPlus aria-hidden="true" /> Add Specification</button>
+              <label>Machine JSON (Optional)
+                <textarea
+                  rows="10"
+                  value={machineForm.machine_json}
+                  onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_json: e.target.value }))}
+                  placeholder={`{\n  "Machine Overview": { "brand": "SALVIN", "name": "Machine Name" },\n  "specifications": { "Voltage": "220 V" },\n  "data": { "Driven Type": "Electric" }\n}`}
+                />
+                <small>If provided, JSON `meta/specifications/data` overrides spec rows and appears in machine detail card.</small>
+              </label>
+            </div>
+
+            <div className="admin-form-section">
+              <div className="admin-section-title">
+                <FaSearch aria-hidden="true" />
+                <div><h3>SEO Information</h3><p>Search preview title and description for this machine page.</p></div>
+              </div>
+              <label>Meta Title
+                <input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} placeholder="SEO title for search results" />
+              </label>
+              <label>Meta Description
+                <textarea rows="3" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} placeholder="Short summary shown in search results." />
+              </label>
+            </div>
+
+            {(machineSubmitError || draftMessage || adminActionError) && (
+              <p className={(machineSubmitError || adminActionError) ? "admin-error-text" : "admin-success-text"}>
+                {machineSubmitError || adminActionError || draftMessage}
+              </p>
+            )}
+            <div className="admin-form-actions">
+              <button className="admin-secondary-btn" type="button" onClick={saveMachineDraft}><FaRegSave aria-hidden="true" /> Save Draft</button>
+              <button className="admin-primary-btn" type="submit" disabled={isBusy}>{machineForm.id ? "Update Machine" : "Publish Machine"}</button>
+            </div>
+          </form>
+
+          <aside className="admin-sidebar">
+            <div className="admin-card">
+              <div className="admin-panel-header compact">
+                <div>
+                  <span className="admin-eyebrow">Categories</span>
+                  <h2>Structure</h2>
+                </div>
+              </div>
           <form onSubmit={handleCategorySubmit}>
             <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
-            <button className="card-btn" type="submit">{categoryForm.id ? "Update Category" : "Add Category"}</button>
+                <button className="admin-primary-btn" type="submit" disabled={isBusy}>{categoryForm.id ? "Update Category" : "Add Category"}</button>
           </form>
           <form onSubmit={handleSubcategorySubmit}>
             <label>Parent Category
@@ -828,44 +1338,172 @@ function AdminPage({
               </select>
             </label>
             <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
-            <button className="card-btn" type="submit">{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
+                <button className="admin-secondary-btn" type="submit" disabled={isBusy}>{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
           </form>
           {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
-          <div className="admin-list">
+              <div className="admin-list compact-list">
             {categories.map((category) => (
               <div key={category.id} className="admin-list-row">
                 <div><strong>{category.name}</strong><p>{category.slug}</p></div>
-                <button className="card-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })}>Edit</button>
-                <button className="delete-btn" type="button" onClick={() => onDeleteCategory(category.id)}>Remove</button>
+                    <div className="admin-row-actions">
+                      <button className="admin-icon-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })} aria-label={`Edit ${category.name}`}><FaRegEdit aria-hidden="true" /></button>
+                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                        setAdminActionError("");
+                        try {
+                          setIsBusy(true);
+                          await onDeleteCategory(category.id);
+                        } catch (err) {
+                          setAdminActionError(err?.message || "Category could not be deleted.");
+                        } finally {
+                          setIsBusy(false);
+                        }
+                      }} aria-label={`Remove ${category.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                    </div>
               </div>
             ))}
             {subcategoryFormOptions.map((subcategory) => (
               <div key={subcategory.id} className="admin-list-row">
                 <div><strong>{subcategory.name}</strong><p>{subcategory.category_name}</p></div>
-                <button className="card-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })}>Edit</button>
-                <button className="delete-btn" type="button" onClick={() => onDeleteSubcategory(subcategory.id)}>Remove</button>
+                    <div className="admin-row-actions">
+                      <button className="admin-icon-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })} aria-label={`Edit ${subcategory.name}`}><FaRegEdit aria-hidden="true" /></button>
+                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                        setAdminActionError("");
+                        try {
+                          setIsBusy(true);
+                          await onDeleteSubcategory(subcategory.id);
+                        } catch (err) {
+                          setAdminActionError(err?.message || "Subcategory could not be deleted.");
+                        } finally {
+                          setIsBusy(false);
+                        }
+                      }} aria-label={`Remove ${subcategory.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                    </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="card admin-side-card">
-          <h3>Recent Machines</h3>
-          <div className="admin-list">
-            {(dashboard?.recent_machines || machines.slice(0, 5)).map((machine) => (
+            <div className="admin-card">
+              <div className="admin-panel-header compact">
+                <div>
+                  <span className="admin-eyebrow">Chatbot Analytics</span>
+                  <h2>Question Counts</h2>
+                </div>
+              </div>
+              <div className="admin-analytics-list">
+                {questionAnalytics.map((item) => (
+                  <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
+                    <div>
+                      <strong>{item.label}</strong>
+                      <p>{item.target_id}</p>
+                    </div>
+                    <span>{item.count}</span>
+                  </div>
+                ))}
+                {!questionAnalytics.length && <p className="admin-empty-state">No chatbot question clicks yet.</p>}
+              </div>
+              {!!machineAnalytics.length && (
+                <>
+                  <div className="admin-panel-header compact analytics-subhead">
+                    <div>
+                      <span className="admin-eyebrow">Machine Interest</span>
+                      <h2>Machine Searches</h2>
+                    </div>
+                  </div>
+                  <div className="admin-analytics-list">
+                    {machineAnalytics.map((item) => (
+                      <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
+                        <div>
+                          <strong>{item.label}</strong>
+                          <p>{item.target_id}</p>
+                        </div>
+                        <span>{item.count}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+            </div>
+
+            <div className="admin-card">
+              <div className="admin-panel-header compact">
+                <div>
+                  <span className="admin-eyebrow">Newest First</span>
+                  <h2>All Machines</h2>
+                </div>
+                <strong>{visibleMachines.length}</strong>
+              </div>
+              <label className="admin-search-field">
+                <FaSearch aria-hidden="true" />
+                <input value={machineSearch} onChange={(e) => setMachineSearch(e.target.value)} placeholder="Search machines..." />
+              </label>
+              <div className="admin-list machine-list">
+            {visibleMachines.map((machine) => (
               <div key={machine.id || machine.machine_id} className="admin-list-row">
                 <div>
                   <strong>{machine.machine_name}</strong>
                   <p>{machine.category_id} | {machine.subcategory}</p>
                 </div>
-                <button className="card-btn" type="button" onClick={() => editMachine(machine)}>Edit</button>
-                <button className="delete-btn" type="button" onClick={() => onDeleteMachine(machine.id || machine.machine_id)}>Remove</button>
+                    <div className="admin-row-actions">
+                      <button className="admin-icon-btn" type="button" onClick={() => editMachine(machine)} aria-label={`Edit ${machine.machine_name}`}><FaRegEdit aria-hidden="true" /></button>
+                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                        setAdminActionError("");
+                        try {
+                          setIsBusy(true);
+                          await onDeleteMachine(machine.id || machine.machine_id);
+                        } catch (err) {
+                          setAdminActionError(err?.message || "Machine could not be deleted.");
+                        } finally {
+                          setIsBusy(false);
+                        }
+                      }} aria-label={`Remove ${machine.machine_name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                    </div>
               </div>
             ))}
+                {!visibleMachines.length && <p className="admin-empty-state">No machines match your search.</p>}
           </div>
+        </div>
+          </aside>
         </div>
       </div>
     </section>
+  );
+}
+
+function ImageCropModal({ src, crop, zoom, setCrop, setZoom, onCropComplete, onCancel, onApply, error }) {
+  return (
+    <div className="modal-overlay" onClick={onCancel} role="dialog" aria-modal="true" aria-label="Crop image">
+      <div className="modal-container cropper-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="cropper-header">
+          <h3>Crop Image</h3>
+          <button type="button" className="admin-icon-btn" onClick={onCancel} aria-label="Close cropper">x</button>
+        </div>
+        <div className="cropper-body">
+          <div className="cropper-stage">
+            <Cropper
+              image={src}
+              crop={crop}
+              zoom={zoom}
+              aspect={4 / 3}
+              onCropChange={setCrop}
+              onZoomChange={setZoom}
+              onCropComplete={(_area, areaPixels) => onCropComplete(areaPixels)}
+            />
+          </div>
+          <div className="cropper-controls">
+            <label className="cropper-zoom">
+              Zoom
+              <input type="range" min="1" max="3" step="0.01" value={zoom} onChange={(e) => setZoom(Number(e.target.value))} />
+            </label>
+            {error && <p className="admin-error-text">{error}</p>}
+            <div className="cropper-actions">
+              <button type="button" className="admin-secondary-btn" onClick={onCancel}>Cancel</button>
+              <button type="button" className="admin-primary-btn" onClick={onApply}>Use Cropped</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -876,11 +1514,11 @@ function HomePage() {
   const heroSlides = [
     {
       key: "machine",
-      eyebrow: "Machineries",
-      title: "Special Purpose Machineries for Processing & Packaging",
-      text: "Purpose-built machinery engineered for consistent output, hygienic operation, and scalable manufacturing.",
-      cta: "View Machineries",
-      to: "/machineries",
+      eyebrow: "Salvin",
+      title: "Our Special purpose Machine ",
+      text: "Manage client relations, track industrial equipment orders, and oversee turnkey processing plants seamlessly within the Salvin CRM ecosystem.",
+      cta: "Access Dashboard",
+      to: "/admin-panel",
       image: machineHeroImage
     },
     {
@@ -896,7 +1534,7 @@ function HomePage() {
     {
       key: "spares",
       eyebrow: "Industrial Spares",
-      title: "Your Trusted Source for Machine & Industrial Spares",
+      title: "Trusted Partner for Industrial & Machine Spares",
       text: "Premium quality industrial components and machine spares ensuring zero downtime for your production lines.",
       cta: "Enquire Spares",
       to: "/contact",
@@ -1138,7 +1776,7 @@ function HomePage() {
 
             </div>
             <div className="about-right">
-              <img src={foodPlant} alt="Food processing plant" />
+              <img src={salvinTeam} alt="Salvin Team" />
 
             </div>
           </div>
@@ -1580,69 +2218,164 @@ function ContactPage() {
       {/* Department Section */}
       <section className="contact-dept-section">
         <div className="contact-container">
-          <h2 className="section-title text-center">Contact by Department</h2>
+                <h2 className="section-title text-center">Salvin Family</h2>
           <div className="dept-grid">
+
             {/* Dept Cards */}
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
-              </div>
+              <img className="dept-photo" src={contactKevalGandhiImage} alt="Keval Gandhi" 
+                 style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
                 <strong>Managing Director</strong>
                 <span>Keval Gandhi</span>
-                <a href="mailto:md.salvinindustries@gmail.com">md.salvinindustries@gmail.com</a>
+                <a href="mailto:keval.projectindia@gmail.com">keval.projectindia@gmail.com</a>
               </div>
             </div>
-            <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            
+             {/* <div className="dept-card">
+              <img className="dept-photo" src={contactPriyaImage} alt="Priya Rajput" 
+                 style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>CEO</strong>
+                <span>Priya Rajput</span>
+                <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
               </div>
+            </div> */}
+
+             <div className="dept-card">
+              <img className="dept-photo" src={contactNidhiImage} alt="Nidhi Shah" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
                 <strong>General Manager</strong>
                 <span>Nidhi Shah</span>
-                <a href="mailto:gm.salvinindustries@gmail.com">gm.salvinindustries@gmail.com</a>
+                <a href="mailto:gm.salvinindustrirs@outlook.com">gm.salvinindustrirs@outlook.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-              </div>
+              <img className="dept-photo" src={contactParulImage} alt="Parul Domadiya" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
-                <strong>CEO Office</strong>
-                <span>Purvi Rajput</span>
-                <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
+                <strong>HRA</strong>
+                <span>Parul  Domadia</span>
+                <a href="mailto:hr.salvinindustries@gmail.com">hr.salvinindustries@gmail.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-              </div>
+              <img className="dept-photo" src={contactMansiImage} alt="Mansi Gajera" />
               <div className="dept-info">
-                <strong>International</strong>
-                <span>Ajay Panchal</span>
-                <a href="mailto:international.salvin@gmail.com">international.salvin@gmail.com</a>
+                <strong>Automation Head</strong>
+                <span>Mansi Gajera </span>
+                <a href="mailto:info.salvinindustries@gmail.com">info.salvinindustries@gmail.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
-              </div>
+              <img className="dept-photo" src={contactRituImage} alt="Ritu Vaishnav" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+
               <div className="dept-info">
-                <strong>Corporate</strong>
-                <span>Hiyanee Gandhi</span>
-                <a href="mailto:corporate.salvinindustries@gmail.com">corporate.salvinindustries@gmail.com</a>
+                <strong>Marketing & sales Head</strong>
+                <span>Ritu Vaishnav </span>
+                <a href="mailto:salvin.projects@hotmail.com">salvin.projects@hotmail.com</a>
               </div>
             </div>
+
             <div className="dept-card">
-              <div className="dept-icon">
-                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#f58220" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
-              </div>
+              <img className="dept-photo" src={contactIshaImage} alt="Isha Delvadiya" 
+               style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
               <div className="dept-info">
-                <strong>Ask Me</strong>
-                <span>Shakshi Modi</span>
-                <a href="mailto:solveit.salvinindustries@gmail.com">solveit.salvinindustries@gmail.com</a>
+                <strong>System Developer</strong>
+                <span>Isha Delvadiya </span>
+                <a href="mailto:salvin.projects@hotmail.com">salvin.projects@hotmail.com</a>
               </div>
             </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactNishaImage} alt="Nisha Parmar" 
+              style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>sales coordinator</strong>
+                <span>Nisha Parmar</span>
+                <a href="mailto:sales@salvinindia.com">sales@salvinindia.com</a>
+              </div>
+            </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactArpitImage} alt="Arpit Chudasama" />
+              <div className="dept-info">
+                <strong>IT Support</strong>
+                <span>Arpit Chudasama</span>
+                <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactDigeshImage} alt="Digesh Prajapati" />
+              <div className="dept-info">
+                <strong>IT Support</strong>
+                <span>Digesh Prajapati</span>
+                <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
+              </div>
+            </div>
+
+            <div className="dept-card">
+              <img className="dept-photo" src={contactAvneesImage} alt="Avnees Sadhu" 
+              style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>Service incharge</strong>
+                <span>Avnees Sadhu</span>
+                <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
+              </div>
+            </div>
+            
+            <div className="dept-card">
+              <img className="dept-photo" src={contactSumitImage} alt="Sumit Pandya" 
+              style={{
+                  objectFit: "cover",
+                  objectPosition: "top center",
+                  display: "block"
+                }}/>
+              <div className="dept-info">
+                <strong>Service incharge</strong>
+                <span>Sumit Pandya</span>
+                <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
@@ -1685,6 +2418,7 @@ export default function App() {
   const [categories, setCategories] = useState([]);
   const [subcategories, setSubcategories] = useState([]);
   const [dashboard, setDashboard] = useState(null);
+  const [chatbotAnalytics, setChatbotAnalytics] = useState([]);
 
   const [sessionImageCache, setSessionImageCache] = useState({});
 
@@ -1724,6 +2458,9 @@ export default function App() {
         fetchJson("/api/dashboard")
           .then((data) => setDashboard(data))
           .catch(() => setDashboard(null));
+        fetchJson("/api/chatbot-analytics")
+          .then((data) => setChatbotAnalytics(Array.isArray(data) ? data : []))
+          .catch(() => setChatbotAnalytics([]));
       }
     };
 
@@ -1745,6 +2482,8 @@ export default function App() {
     setSubcategories(Array.isArray(subcategoryRows) ? subcategoryRows : []);
     if (localStorage.getItem("salvin_auth_token")) {
       setDashboard(await fetchJson("/api/dashboard").catch(() => null));
+      const analyticsRows = await fetchJson("/api/chatbot-analytics").catch(() => []);
+      setChatbotAnalytics(Array.isArray(analyticsRows) ? analyticsRows : []);
     }
   };
 
@@ -1861,6 +2600,7 @@ export default function App() {
     <>
       <div className={`app${isIntroVisible ? " app-intro-active" : ""}`}>
         <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
+        {/* Public paths: also list in scripts/generate-sitemap.mjs (sitemap + SEO) */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
@@ -1882,6 +2622,7 @@ export default function App() {
               <ProtectedAdminRoute isAdminAuthenticated={isAdminAuthenticated}>
                 <AdminPage
                   dashboard={dashboard}
+                  chatbotAnalytics={chatbotAnalytics}
                   categories={categories}
                   subcategories={subcategories}
                   onAddCategory={addCategory}
@@ -1903,6 +2644,7 @@ export default function App() {
         <Footer />
       </div>
       {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
+      <SalvinChatbot machines={machines} subcategories={subcategories} />
     </>
   );
 }

@@ -9,7 +9,7 @@ import "../assets/team.css";
 import "../assets/why_us.css";
 import "../assets/md_section.css";
 import { FaUserTie, FaBuilding, FaVial } from "react-icons/fa";
-import mdImage from "../assets/team1.png"; // Placeholder, user to provide keval_gandhi.jpg
+import mdImage from "../assets/contact/kevalgandhi.png"; // Placeholder, user to provide keval_gandhi.jpg
 
 import aboutImg from "../assets/Industrial.png";
 import journeyHeroImage from "../assets/food-processing-plant.jpg";
