@@ -1568,6 +1568,9 @@ function ContactPage() {
                 <strong>Need Quick Help?</strong>
                 <p>Talk directly with our support team</p>
                 <a href="#" className="support-link">Contact Support &rarr;</a>
+                <div style={{ marginTop: "1rem" }}>
+                  <a href="http://72.60.108.5/" target="_blank" rel="noopener noreferrer" className="support-link" style={{ color: "#666", fontSize: "0.85rem" }}>for corporate Use Only &rarr;</a>
+                </div>
               </div>
             </div>
           </div>
