@@ -8,7 +8,7 @@ const WELCOME =
   "Hi, I am Salvin assistant. What do you want to know?";
 
 const CONTACT_LINES = [
-  "Phone/WhatsApp: +91 90239 79663",
+  "Phone/WhatsApp: +91 9898727796",
   "Email: info.salvinindustries@gmail.com",
   "Managing Director: Keval Gandhi (md.salvinindustries@gmail.com)",
 ];
@@ -23,7 +23,7 @@ const COMPANY_INFO = {
   journey:
     "Salvin journey began with precision packaging machinery and expanded into automatic design, processing manufacturing, reactors and vessels, pharma consulting, GMP plant design, contract packaging, international turnkey projects, and Automation 4.0 smart-factory solutions.",
   support:
-    "Salvin supports installed systems with maintenance, AMC, troubleshooting, spares guidance, and engineering support. For urgent help, call or WhatsApp +91 90239 79663.",
+    "Salvin supports installed systems with maintenance, AMC, troubleshooting, spares guidance, and engineering support. For urgent help, call or WhatsApp +91 9898727796.",
 };
 
 const QUICK_PROMPTS = [
@@ -46,8 +46,8 @@ const WELCOME_MESSAGE = {
   actions: QUICK_PROMPTS.map((prompt) => ({ label: prompt.label, prompt })),
 };
 
-const WHATSAPP_URL =
-  "https://wa.me/919023979663?text=Hello%20Salvin%20Industries%2C%20I%20want%20to%20ask%20about%20a%20machine.";
+  const WHATSAPP_URL =
+  "https://wa.me/919898727796?text=Hello%20Salvin%20Industries%2C%20I%20want%20to%20ask%20about%20a%20machine.";
 
 function normalizeText(value) {
   return String(value || "").toLowerCase();

@@ -468,7 +468,7 @@ function MachineDetailPage({ machines, sessionCache }) {
             <div className="contact-card-sidebar">
               <h3>Interested?</h3>
               <p>Get a customized quote for this model.</p>
-              <a href={`https://wa.me/919023979663?text=Inquiry for ${machine.machine_name}`} target="_blank" rel="noopener noreferrer" className="sidebar-btn">INQUIRE NOW</a>
+              <a href={`https://wa.me/919898727796?text=Inquiry for ${machine.machine_name}`} target="_blank" rel="noopener noreferrer" className="sidebar-btn">INQUIRE NOW</a>
             </div>
           </div>
         </div>
@@ -580,7 +580,7 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
               </>
             )}
             <a
-              href={`https://wa.me/919023979663?text=Inquiry for ${encodeURIComponent(machine.machine_name)}`}
+              href={`https://wa.me/919898727796?text=Inquiry for ${encodeURIComponent(machine.machine_name)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="modal-cta-btn"
@@ -777,7 +777,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
                     </div>
                   ) : null}
                   <div className="mach-card-actions">
-                    <a href="https://wa.me/919023979663" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
+                    <a href="https://wa.me/919898727796" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
                     <button type="button" className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
                   </div>
                 </div>
@@ -2190,7 +2190,7 @@ function ContactPage() {
                 </div>
                 <div className="info-details">
                   <strong>Call Us</strong>
-                  <span>+91 90239 79663</span>
+                  <span>+91 9898727796</span>
                 </div>
               </div>
               <div className="info-card">
