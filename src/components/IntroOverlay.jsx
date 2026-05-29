@@ -57,6 +57,7 @@ function BlueprintIcon({ type }) {
 function IntroOverlay({ onComplete }) {
   const [isClosing, setIsClosing] = React.useState(false);
   const [activeScreen, setActiveScreen] = React.useState(0);
+  const [selectedLanguageCode, setSelectedLanguageCode] = React.useState("");
 
   React.useEffect(() => {
     const timer = window.setInterval(() => {
@@ -77,15 +78,20 @@ function IntroOverlay({ onComplete }) {
     ),
   ];
 
-  const finishIntro = (code) => {
+  const selectLanguage = (code) => {
+    setSelectedLanguageCode(code);
+    window.dispatchEvent(new CustomEvent(LANGUAGE_CHANGE_EVENT, { detail: { code } }));
+    setActiveScreen(5);
+  };
+
+  const openCorporatePortal = () => {
+    window.location.href = "http://72.60.108.5/";
+  };
+
+  const finishIntro = () => {
     setIsClosing(true);
     window.setTimeout(() => {
       onComplete();
-      if (code) {
-        window.setTimeout(() => {
-          window.dispatchEvent(new CustomEvent(LANGUAGE_CHANGE_EVENT, { detail: { code } }));
-        }, 150);
-      }
     }, 360);
   };
 
@@ -111,10 +117,6 @@ function IntroOverlay({ onComplete }) {
         />
       ))}
 
-      <button className="intro-skip" type="button" onClick={() => finishIntro()}>
-        Skip Intro
-      </button>
-
       <div className="intro-copy-wrap">
         <span className="intro-smoke intro-smoke-one" />
         <span className="intro-smoke intro-smoke-two" />
@@ -131,12 +133,30 @@ function IntroOverlay({ onComplete }) {
                 className="intro-language-option"
                 type="button"
                 key={language.code}
-                onClick={() => finishIntro(language.code)}
+                onClick={() => selectLanguage(language.code)}
               >
                 {language.name}
               </button>
             ))}
           </div>
+        </div>
+      )}
+
+      {activeScreen === 5 && (
+        <div className="intro-role-panel">
+          <span className="intro-language-kicker">Select your role</span>
+          <h2>How would you like to continue?</h2>
+          <div className="intro-role-grid">
+            <button className="intro-role-option intro-role-corporate" type="button" onClick={openCorporatePortal}>
+              <span>Corporate</span>
+              <small>Open corporate portal</small>
+            </button>
+            <button className="intro-role-option intro-role-visitor" type="button" onClick={finishIntro}>
+              <span>Visitor</span>
+              <small>Enter website</small>
+            </button>
+          </div>
+          {selectedLanguageCode && <p className="intro-role-note">Language selected. Continue as visitor or corporate.</p>}
         </div>
       )}
     </div>

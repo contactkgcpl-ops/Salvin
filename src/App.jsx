@@ -8,7 +8,7 @@ import blueMachinesImage from "./assets/blue-machines.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import LoginGate from "./login/LoginGate";
+import IntroOverlay from "./components/IntroOverlay";
 import machinesData from "../data/machines.json";
 import contactArpitImage from "./assets/contact/arpit.jpeg";
 import contactDigeshImage from "./assets/contact/digesh.jpeg";
@@ -2411,6 +2411,10 @@ function ServicesPage() {
 
 export default function App() {
   const location = useLocation();
+  const isAdminRoute = location.pathname === "/admin" ||
+    location.pathname === "/admin-login" ||
+    location.pathname === "/admin-panel";
+  const [showIntro, setShowIntro] = useState(() => !isAdminRoute);
   const [machines, setMachines] = useState(initialMachines);
   const [machineLoadError, setMachineLoadError] = useState("");
 
@@ -2423,9 +2427,6 @@ export default function App() {
 
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
     () => !!localStorage.getItem("salvin_auth_token")
-  );
-  const [isVisitorAuthenticated, setIsVisitorAuthenticated] = useState(
-    () => !!sessionStorage.getItem("salvin_visitor_access")
   );
 
   React.useEffect(() => {
@@ -2596,22 +2597,11 @@ export default function App() {
     setIsAdminAuthenticated(false);
   };
 
-  const handleVisitorEnter = (visitorDetails) => {
-    sessionStorage.setItem("salvin_visitor_access", JSON.stringify(visitorDetails));
-    setIsVisitorAuthenticated(true);
-  };
-
-  const isAdminRoute = location.pathname === "/admin" ||
-    location.pathname === "/admin-login" ||
-    location.pathname === "/admin-panel";
-
-  if (!isVisitorAuthenticated && !isAdminRoute) {
-    return <LoginGate onVisitorEnter={handleVisitorEnter} />;
-  }
+  const isIntroVisible = showIntro && !isAdminRoute;
 
   return (
     <>
-      <div className="app">
+      <div className={`app${isIntroVisible ? " app-intro-active" : ""}`}>
         <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
         {/* Public paths: also list in scripts/generate-sitemap.mjs (sitemap + SEO) */}
         <Routes>
@@ -2656,6 +2646,7 @@ export default function App() {
         </Routes>
         <Footer />
       </div>
+      {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
       <SalvinChatbot machines={machines} subcategories={subcategories} />
     </>
   );
