@@ -10,18 +10,6 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import IntroOverlay from "./components/IntroOverlay";
 import machinesData from "../data/machines.json";
-import contactArpitImage from "./assets/contact/arpit.jpeg";
-import contactDigeshImage from "./assets/contact/digesh.jpeg";
-import contactIshaImage from "./assets/contact/isha.jpeg";
-import contactKevalGandhiImage from "./assets/contact/kevalgandhi.png";
-import contactNishaImage from "./assets/contact/nisha.png";
-import contactRituImage from "./assets/contact/ritu.jpeg";
-import contactParulImage from "./assets/contact/parul.jpeg";
-import contactMansiImage from "./assets/contact/mansi.jpeg";
-import contactNidhiImage from "./assets/contact/nidhi.jpeg";
-import contactPriyaImage from "./assets/contact/priya.jpeg";
-import contactAvneesImage from "./assets/contact/avnees.jpeg";
-import contactSumitImage from "./assets/contact/sumit.jpeg";
 import searchIcon from './assets/search.png'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
@@ -103,6 +91,7 @@ import  salvinTeam from "./assets/home_extra/salvinTeam.jpeg";
 import innovation from "./assets/home_extra/innovation.png";
 import quality from "./assets/home_extra/quality.png";
 import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
+import projproteinbar from "./assets/industry-divisions/proteinbar.png";
 import industryAutomation from "./assets/industry-divisions/automation-robotics.webp";
 import industryProcessing from "./assets/industry-divisions/processing-packaging.png";
 import industryConsultancy from "./assets/industry-divisions/food_consultant.jpg";
@@ -1510,6 +1499,7 @@ function ImageCropModal({ src, crop, zoom, setCrop, setZoom, onCropComplete, onC
 function HomePage() {
   const [openFaq, setOpenFaq] = useState(0);
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
+  const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [isHeroPreviewOpen, setIsHeroPreviewOpen] = useState(false);
   const heroSlides = [
     {
@@ -1588,7 +1578,33 @@ function HomePage() {
       description: "Energy-efficient continuous puffing and roasting line with automatic seasoning and moisture control.",
       image: projRice,
     },
+    {
+      title: "Protein Bar Processing Line",
+      description: "Integrated mixing, slab forming, cooling, cutting, and flow-wrap packaging line for high-output protein bar production.",
+      image: projproteinbar,
+    },
   ];
+
+  React.useEffect(() => {
+    const projectTimer = window.setInterval(() => {
+      setActiveProjectIndex((current) => (current + 1) % latestProjectsNews.length);
+    }, 4200);
+    return () => window.clearInterval(projectTimer);
+  }, [latestProjectsNews.length]);
+
+  const goToProjectSlide = (index) => {
+    setActiveProjectIndex((index + latestProjectsNews.length) % latestProjectsNews.length);
+  };
+
+  const getProjectSlideClass = (index) => {
+    const previousIndex = (activeProjectIndex - 1 + latestProjectsNews.length) % latestProjectsNews.length;
+    const nextIndex = (activeProjectIndex + 1) % latestProjectsNews.length;
+
+    if (index === activeProjectIndex) return "active";
+    if (index === previousIndex) return "prev";
+    if (index === nextIndex) return "next";
+    return "hidden";
+  };
 
   const faqItems = [
     {
@@ -1874,23 +1890,50 @@ function HomePage() {
               scalable architecture.
             </p>
           </div>
-          <div className="projects-grid home-projects-responsive">
-            {latestProjectsNews.map((item) => (
-              <div className="project-card" key={item.title}>
-                <div className="project-card-image-wrap">
-                  <img
-                    src={item.image}
-                    alt={item.title}
-                    decoding="async"
+          <div className="projects-slider" aria-label="Latest projects carousel">
+            <div className="projects-slider-stage">
+              {latestProjectsNews.map((item, index) => (
+                <article
+                  className={`project-card project-slide ${getProjectSlideClass(index)}`}
+                  key={item.title}
+                  aria-hidden={index !== activeProjectIndex}
+                >
+                  <div className="project-card-image-wrap">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      decoding="async"
+                    />
+                  </div>
+                  <div className="content">
+                    <h4>{item.title}</h4>
+                    <p>{item.description}</p>
+                    <a href="#projects">READ MORE →</a>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <div className="projects-slider-nav" aria-label="Project slider controls">
+              <button type="button" onClick={() => goToProjectSlide(activeProjectIndex - 1)} aria-label="Previous project">
+                ‹
+              </button>
+              <div className="projects-slider-dots">
+                {latestProjectsNews.map((item, index) => (
+                  <button
+                    type="button"
+                    key={item.title}
+                    className={index === activeProjectIndex ? "active" : ""}
+                    onClick={() => goToProjectSlide(index)}
+                    aria-label={`Show ${item.title}`}
                   />
-                </div>
-                <div className="content">
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
-                  <a href="#projects">READ MORE →</a>
-                </div>
+                ))}
               </div>
-            ))}
+              <button type="button" onClick={() => goToProjectSlide(activeProjectIndex + 1)} aria-label="Next project">
+                ›
+              </button>
+            </div>
+          </div>
+          <div className="projects-action-row">
             <div className="cta-box">
               <div className="cta-box-icon" aria-hidden>
                 <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5">
@@ -2223,12 +2266,6 @@ function ContactPage() {
 
             {/* Dept Cards */}
             <div className="dept-card">
-              <img className="dept-photo" src={contactKevalGandhiImage} alt="Keval Gandhi" 
-                 style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>Managing Director</strong>
                 <span>Keval Gandhi</span>
@@ -2237,12 +2274,6 @@ function ContactPage() {
             </div>
             
              {/* <div className="dept-card">
-              <img className="dept-photo" src={contactPriyaImage} alt="Priya Rajput" 
-                 style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>CEO</strong>
                 <span>Priya Rajput</span>
@@ -2251,12 +2282,6 @@ function ContactPage() {
             </div> */}
 
              <div className="dept-card">
-              <img className="dept-photo" src={contactNidhiImage} alt="Nidhi Shah" 
-               style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>General Manager</strong>
                 <span>Nidhi Shah</span>
@@ -2265,12 +2290,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactParulImage} alt="Parul Domadiya" 
-               style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>HRA</strong>
                 <span>Parul  Domadia</span>
@@ -2279,7 +2298,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactMansiImage} alt="Mansi Gajera" />
               <div className="dept-info">
                 <strong>Automation Head</strong>
                 <span>Mansi Gajera </span>
@@ -2288,13 +2306,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactRituImage} alt="Ritu Vaishnav" 
-               style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
-
               <div className="dept-info">
                 <strong>Marketing & sales Head</strong>
                 <span>Ritu Vaishnav </span>
@@ -2303,12 +2314,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactIshaImage} alt="Isha Delvadiya" 
-               style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>System Developer</strong>
                 <span>Isha Delvadiya </span>
@@ -2317,12 +2322,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactNishaImage} alt="Nisha Parmar" 
-              style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>sales coordinator</strong>
                 <span>Nisha Parmar</span>
@@ -2331,7 +2330,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactArpitImage} alt="Arpit Chudasama" />
               <div className="dept-info">
                 <strong>IT Support</strong>
                 <span>Arpit Chudasama</span>
@@ -2340,7 +2338,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactDigeshImage} alt="Digesh Prajapati" />
               <div className="dept-info">
                 <strong>IT Support</strong>
                 <span>Digesh Prajapati</span>
@@ -2349,12 +2346,6 @@ function ContactPage() {
             </div>
 
             <div className="dept-card">
-              <img className="dept-photo" src={contactAvneesImage} alt="Avnees Sadhu" 
-              style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>Service incharge</strong>
                 <span>Avnees Sadhu</span>
@@ -2363,12 +2354,6 @@ function ContactPage() {
             </div>
             
             <div className="dept-card">
-              <img className="dept-photo" src={contactSumitImage} alt="Sumit Pandya" 
-              style={{
-                  objectFit: "cover",
-                  objectPosition: "top center",
-                  display: "block"
-                }}/>
               <div className="dept-info">
                 <strong>Service incharge</strong>
                 <span>Sumit Pandya</span>

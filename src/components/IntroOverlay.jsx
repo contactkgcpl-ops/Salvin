@@ -85,6 +85,10 @@ function IntroOverlay({ onComplete }) {
   };
 
   const openCorporatePortal = () => {
+    window.location.href = "http://72.60.108.5/";
+  };
+
+  const openVendorPortal = () => {
     window.location.href = "https://www.salvinindustires.com/";
   };
 
@@ -151,12 +155,16 @@ function IntroOverlay({ onComplete }) {
               <span>Corporate</span>
               <small>Open corporate portal</small>
             </button>
+            <button className="intro-role-option intro-role-vendor" type="button" onClick={openVendorPortal}>
+              <span>Vendor</span>
+              <small>Open vendor portal</small>
+            </button>
             <button className="intro-role-option intro-role-visitor" type="button" onClick={finishIntro}>
               <span>Visitor</span>
               <small>Enter website</small>
             </button>
           </div>
-          {selectedLanguageCode && <p className="intro-role-note">Language selected. Continue as visitor or corporate.</p>}
+          {selectedLanguageCode && <p className="intro-role-note">Language selected. Continue as visitor, vendor, or corporate.</p>}
         </div>
       )}
     </div>
