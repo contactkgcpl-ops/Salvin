@@ -85,7 +85,7 @@ function IntroOverlay({ onComplete }) {
   };
 
   const openCorporatePortal = () => {
-    window.location.href = "http://72.60.108.5/";
+    window.location.href = "https://www.salvinindustires.com/";
   };
 
   const openVendorPortal = () => {
