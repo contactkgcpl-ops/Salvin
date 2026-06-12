@@ -256,7 +256,6 @@ export default function RedChilliDetailPage() {
             {PROCESS_STEPS.map((step, i) => (
               <React.Fragment key={step.id}>
                 <div className="rcp-process-card">
-                  <div className="rcp-process-card__number">{String(step.id).padStart(2, '0')}</div>
                   <div className="rcp-process-card__icon">
                     {step.id === 1 && (
                       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">

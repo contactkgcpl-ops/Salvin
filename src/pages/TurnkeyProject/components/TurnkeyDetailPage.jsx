@@ -319,7 +319,6 @@ export default function TurnkeyDetailPage() {
               {processSteps.map((step, i) => (
                 <React.Fragment key={step.id}>
                   <div className="rcp-process-card">
-                    <div className="rcp-process-card__number">{String(step.id).padStart(2, '0')}</div>
                     <div className="rcp-process-card__icon">
                       {getStepIcon(step.title, step.id)}
                     </div>
