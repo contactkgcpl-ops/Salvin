@@ -3,18 +3,146 @@ import { useParams, NavLink } from 'react-router-dom'
 import { getProjectDetails } from '../data/turnkeyProjectsData'
 import './RedChilliDetailPage.css' // Reuse the master layout stylesheet
 
+/* Helper to dynamically resolve clean SVG icons for process stages without emojis */
+function getStepIcon(title, id) {
+  const t = (title || '').toLowerCase()
+  if (t.includes('receiving') || t.includes('feeding') || t.includes('intake') || t.includes('ingestion')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+        <path d="m3.3 7 8.7 5 8.7-5" />
+        <path d="M12 22V12" />
+      </svg>
+    )
+  }
+  if (t.includes('washing') || t.includes('cleaning') || t.includes('destoning') || t.includes('bubble') || t.includes('aspiration') || t.includes('separation')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z" />
+      </svg>
+    )
+  }
+  if (t.includes('drying') || t.includes('dry') || t.includes('roasting') || t.includes('curing') || t.includes('boiler')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+      </svg>
+    )
+  }
+  if (t.includes('crushing') || t.includes('crush') || t.includes('cutting') || t.includes('cut') || t.includes('peeling') || t.includes('peel') || t.includes('slicing') || t.includes('slice')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M6 12h12M6 8h12M6 16h12" />
+        <rect x="2" y="4" width="20" height="16" rx="2" />
+      </svg>
+    )
+  }
+  if (t.includes('grinding') || t.includes('grind') || t.includes('milling') || t.includes('mill') || t.includes('pulveris') || t.includes('refining')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+      </svg>
+    )
+  }
+  if (t.includes('sieving') || t.includes('sieve') || t.includes('sifting') || t.includes('filtration') || t.includes('filter') || t.includes('clarif') || t.includes('separa') || t.includes('de-seeding') || t.includes('centrifug')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
+      </svg>
+    )
+  }
+  if (t.includes('blend') || t.includes('homogen') || t.includes('mix') || t.includes('dissolut') || t.includes('pulp')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M19 22H5a2 2 0 0 1-2-2V4h18v16a2 2 0 0 1-2 2z" />
+        <path d="M12 4v10" />
+        <path d="M9 11l3 3 3-3" />
+      </svg>
+    )
+  }
+  if (t.includes('pack') || t.includes('bag') || t.includes('fill') || t.includes('seam') || t.includes('cap') || t.includes('label') || t.includes('dosing') || t.includes('wrapping')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22V12M3 12h18M12 2l9 5-9 5-9-5 9-5z" />
+        <path d="M3 7v10l9 5 9-5V7" />
+      </svg>
+    )
+  }
+  if (t.includes('pasteur') || t.includes('retort') || t.includes('autoclave') || t.includes('steril')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+        <path d="M12 8v8M9 12h6" />
+      </svg>
+    )
+  }
+  if (t.includes('storage') || t.includes('warehous') || t.includes('cool') || t.includes('temper') || t.includes('settl')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+        <polyline points="9 22 9 12 15 12 15 22" />
+      </svg>
+    )
+  }
+  // Generic fallback based on ID
+  const fallbackIcons = [
+    <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 22v-9m-9 0h18M12 2l9 5-9 5-9-5 9-5z" />
+    </svg>,
+    <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <circle cx="12" cy="12" r="3" />
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82" />
+    </svg>
+  ]
+  return fallbackIcons[id % fallbackIcons.length]
+}
+
+/* Helper to resolve dynamic FAQs when not explicitly defined in data layer */
+function getFAQsForProject(details) {
+  if (details.faqs && details.faqs.length > 0) {
+    return details.faqs
+  }
+  const title = details.title
+  const isLiquidOrPaste = title.toLowerCase().includes('juice') || title.toLowerCase().includes('honey') || title.toLowerCase().includes('paste') || title.toLowerCase().includes('sauce') || title.toLowerCase().includes('ketchup') || title.toLowerCase().includes('jelly') || title.toLowerCase().includes('oil')
+
+  return [
+    {
+      question: `What is the processing capacity of the ${title}?`,
+      answer: `Our plants are available in custom configurations from ${isLiquidOrPaste ? '500 Ltr/Hr to 5,000 Ltr/Hr' : '500 Kg/Hr to 5 Ton/Hr'} capacities to match your target production requirements.`
+    },
+    {
+      question: `Can the plant process different varieties or grades of raw material?`,
+      answer: `Yes. The system is engineered with adjustable settings and variable speed drives to handle diverse product grades while maintaining consistent color, flavor, and texture.`
+    },
+    {
+      question: `Is the plant fully automatic?`,
+      answer: `Yes. We offer semi-automatic and fully automatic turnkey solutions featuring centralized PLC automation and touch-screen HMI control systems.`
+    },
+    {
+      question: `Does SALVIN provide installation and training support?`,
+      answer: `Yes. SALVIN provides complete turnkey services including site planning, machinery manufacture, installation, dry runs, commissioning, and on-site operator training.`
+    },
+    {
+      question: `Why choose SALVIN for the ${title}?`,
+      answer: `SALVIN is a trusted name offering food-grade SS304/SS316L construction, energy-efficient thermal loops, modular expansion designs, and dedicated engineering support.`
+    }
+  ]
+}
+
 export default function TurnkeyDetailPage() {
   const { projectSlug } = useParams()
-  const [activeStep, setActiveStep] = useState(0)
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
+  const [activeFaq, setActiveFaq] = useState(null)
 
   const details = useMemo(() => getProjectDetails(projectSlug), [projectSlug])
 
-  // Reset active step and gallery index on route change
+  // Reset gallery index on route change
   useEffect(() => {
-    setActiveStep(0)
     setGalleryIndex(0)
+    setActiveFaq(null)
   }, [projectSlug])
 
   // Scroll to top only when navigating to a different project route
@@ -22,7 +150,7 @@ export default function TurnkeyDetailPage() {
     window.scrollTo(0, 0)
   }, [projectSlug])
 
-  // SEO meta (no scroll — avoids jump on re-renders from scroll animations / gallery)
+  // SEO meta
   useEffect(() => {
     if (!details) return
     document.title = `${details.title} | Turnkey Solutions | Salvin Industries`
@@ -79,8 +207,10 @@ export default function TurnkeyDetailPage() {
     )
   }
 
+  // Cap process steps at 7 to match Red Chilli master template (7-stage workflow)
   const hasSteps = details.processSteps && details.processSteps.length > 0
-  const activeStepDetail = hasSteps ? details.processSteps[activeStep] : null
+  const processSteps = hasSteps ? details.processSteps.slice(0, 7) : []
+  const projectFaqs = getFAQsForProject(details)
 
   return (
     <div className="rcp-page">
@@ -117,20 +247,6 @@ export default function TurnkeyDetailPage() {
               Enquire Now
             </a>
           </div>
-          <div className="rcp-hero__stats">
-            <div className="rcp-hero__stat">
-              <span className="rcp-hero__stat-value">{details.stats.capacity}</span>
-              <span className="rcp-hero__stat-label">Capacity Options</span>
-            </div>
-            <div className="rcp-hero__stat">
-              <span className="rcp-hero__stat-value">{details.stats.stages}</span>
-              <span className="rcp-hero__stat-label">Process Flow</span>
-            </div>
-            <div className="rcp-hero__stat">
-              <span className="rcp-hero__stat-value">{details.stats.retention}</span>
-              <span className="rcp-hero__stat-label">Quality Index</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -138,118 +254,87 @@ export default function TurnkeyDetailPage() {
       <section className="rcp-section rcp-overview" id="overview" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['overview'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">Plant Overview</div>
-          <h2 className="rcp-section-title">Complete <span className="rcp-accent">Turnkey Plant</span></h2>
+          <h2 className="rcp-section-title">Complete <span className="rcp-accent">Processing Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
               <p>{details.overview.p1}</p>
               <p>{details.overview.p2}</p>
-              <div className="rcp-overview__highlights">
-                {details.overview.highlights.map((hl, i) => (
-                  <div key={i} className="rcp-highlight-item">
-                    <span className="rcp-highlight-icon">{hl.icon}</span>
-                    <div>
-                      <strong>{hl.title}</strong>
-                      <p>{hl.desc}</p>
+              <div className="rcp-overview__features">
+                {(details.overview.features4 || [
+                  { title: 'High Yield', desc: 'Maximum product recovery per batch' },
+                  { title: 'Hygienic Process', desc: 'Food grade SS304/SS316L construction' },
+                  { title: 'Consistent Quality', desc: 'Uniform product output every cycle' },
+                  { title: 'Energy Efficient', desc: 'Optimised power consumption per ton' }
+                ]).map((f, i) => (
+                  <div key={i} className="rcp-overview__feature">
+                    <div className="rcp-overview__feature-icon">
+                      {i === 0 && (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                          <polyline points="16 7 22 7 22 13" />
+                        </svg>
+                      )}
+                      {i === 1 && (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                          <path d="m9 12 2 2 4-4" />
+                        </svg>
+                      )}
+                      {i === 2 && (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                          <circle cx="12" cy="12" r="3" />
+                          <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
+                        </svg>
+                      )}
+                      {i === 3 && (
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg>
+                      )}
+                    </div>
+                    <div className="rcp-overview__feature-body">
+                      <p className="rcp-overview__feature-title">{f.title}</p>
+                      <p className="rcp-overview__feature-desc">{f.desc}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="rcp-overview__image">
-              <img src={details.overview.image} alt={`${details.title} by Salvin Industries`} loading="lazy" />
-              <div className="rcp-overview__image-badge">
-                <span>Since 2008</span>
-                <p>350+ Projects Delivered Worldwide</p>
-              </div>
+            <div className="rcp-overview__image rcp-overview__image--photo">
+              <img src={details.overview.photoImage || details.overview.image} alt={`${details.title} by Salvin Industries`} loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* ═══ CAPACITY OPTIONS ═══ */}
-      <section className="rcp-section rcp-capacity" id="capacity" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['capacity'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Capacity Options</div>
-          <h2 className="rcp-section-title">Choose Your <span className="rcp-accent">Plant Scale</span></h2>
-          <p className="rcp-section-subtitle">From startup configurations to industrial-scale processing plants — we scale to your target OEE.</p>
-          <div className="rcp-capacity__grid">
-            {details.capacities.map((opt, i) => (
-              <div key={i} className="rcp-capacity__card" style={{ '--accent': opt.color }}>
-                <div className="rcp-capacity__card-top" style={{ background: `linear-gradient(135deg, ${opt.color}, ${opt.color}dd)` }}>
-                  <span className="rcp-capacity__value">{opt.capacity}</span>
-                  <span className="rcp-capacity__type">{opt.type}</span>
-                </div>
-                <div className="rcp-capacity__card-body">
-                  <p className="rcp-capacity__ideal">
-                    <strong>Ideal For:</strong> {opt.ideal}
-                  </p>
-                  <a href="#enquiry" className="rcp-btn rcp-btn--sm">Get Quote</a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ KEY FEATURES ═══ */}
-      <section className="rcp-section rcp-features" id="features" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['features'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Key Features</div>
-          <h2 className="rcp-section-title">Engineered <span className="rcp-accent">Advantages</span></h2>
-          <div className="rcp-features__grid">
-            {details.features.map((feat, i) => (
-              <div key={i} className="rcp-feature-card">
-                <div className="rcp-feature-card__icon">{feat.icon}</div>
-                <h3>{feat.title}</h3>
-                <p>{feat.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ═══ PROCESS FLOW ═══ */}
+      {/* ═══ PROCESS WORKFLOW ═══ */}
       {hasSteps && (
-        <section className="rcp-section rcp-process" id="process-flow" data-animate>
+        <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['process-flow'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">Complete Process Flow</div>
-            <h2 className="rcp-section-title">{details.processSteps.length}-Stage <span className="rcp-accent">Processing Line</span></h2>
-            <p className="rcp-section-subtitle">Traceable process sequence engineered for clean product recovery and maximum output quality.</p>
+            <div className="rcp-section-badge">Process Flow</div>
+            <h2 className="rcp-section-title">{details.title} <span className="rcp-accent">Processing Workflow</span></h2>
+            <p className="rcp-section-subtitle">A streamlined and fully integrated processing workflow designed to transform raw materials into premium-quality finished products while ensuring maximum efficiency, product consistency and superior output quality.</p>
 
-            {/* Process Flow Diagram */}
-            <div className="rcp-process-flow-diagram">
-              {details.processSteps.map((step, i) => (
+            <div className="rcp-process-flow-container">
+              {processSteps.map((step, i) => (
                 <React.Fragment key={step.id}>
-                  <button
-                    className={`rcp-flow-node ${activeStep === i ? 'rcp-flow-node--active' : ''}`}
-                    onClick={() => setActiveStep(i)}
-                    type="button"
-                  >
-                    <span className="rcp-flow-node__number">{String(step.id).padStart(2, '0')}</span>
-                    <span className="rcp-flow-node__icon">{step.icon}</span>
-                    <span className="rcp-flow-node__title">{step.title}</span>
-                  </button>
-                  {i < details.processSteps.length - 1 && (
-                    <div className="rcp-flow-arrow">
-                      <svg viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 6h20M16 1l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <div className="rcp-process-card">
+                    <div className="rcp-process-card__number">{String(step.id).padStart(2, '0')}</div>
+                    <div className="rcp-process-card__icon">
+                      {getStepIcon(step.title, step.id)}
+                    </div>
+                    <div className="rcp-process-card__label">{step.title}</div>
+                  </div>
+                  {i < processSteps.length - 1 && (
+                    <div className="rcp-process-arrow">
+                      <svg className="rcp-process-flow-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                        <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </div>
                   )}
                 </React.Fragment>
               ))}
             </div>
-
-            {/* Active Step Detail */}
-            {activeStepDetail && (
-              <div className="rcp-process-detail">
-                <div className="rcp-process-detail__number">{String(activeStepDetail.id).padStart(2, '0')}</div>
-                <div className="rcp-process-detail__content">
-                  <h3>{activeStepDetail.icon} {activeStepDetail.title}</h3>
-                  <p>{activeStepDetail.desc}</p>
-                </div>
-              </div>
-            )}
           </div>
         </section>
       )}
@@ -278,24 +363,48 @@ export default function TurnkeyDetailPage() {
         </section>
       )}
 
-      {/* ═══ APPLICATIONS ═══ */}
-      {details.applications && details.applications.length > 0 && (
-        <section className="rcp-section rcp-applications" id="applications" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['applications'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">Applications</div>
-            <h2 className="rcp-section-title">Industry <span className="rcp-accent">Applications</span></h2>
-            <div className="rcp-applications__grid">
-              {details.applications.map((app, i) => (
-                <div key={i} className="rcp-application-card">
-                  <div className="rcp-application-card__icon">{app.icon}</div>
-                  <h3>{app.title}</h3>
-                  <p>{app.desc}</p>
+      {/* ═══ FAQ SECTION ═══ */}
+      <section className="rcp-section rcp-faq-section" id="faq" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">FAQs</div>
+          <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
+          <p className="rcp-section-subtitle">Everything you need to know about our {details.title}.</p>
+
+          <div className="rcp-faq__list">
+            {projectFaqs.map((faq, index) => {
+              const isOpen = activeFaq === index;
+              return (
+                <div key={index} className={`rcp-faq__item ${isOpen ? 'rcp-faq__item--open' : ''}`}>
+                  <button
+                    className="rcp-faq__question-btn"
+                    onClick={() => setActiveFaq(isOpen ? null : index)}
+                    type="button"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="rcp-faq__question-text">{faq.question}</span>
+                    <span className="rcp-faq__icon-toggle">
+                      {isOpen ? (
+                        <svg className="rcp-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M5 12h14" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      ) : (
+                        <svg className="rcp-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M12 5v14M5 12h14" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      )}
+                    </span>
+                  </button>
+                  <div className="rcp-faq__answer-wrapper">
+                    <div className="rcp-faq__answer-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
                 </div>
-              ))}
-            </div>
+              );
+            })}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* ═══ INDUSTRIAL GALLERY ═══ */}
       {details.gallery && details.gallery.length > 0 && (
@@ -329,13 +438,92 @@ export default function TurnkeyDetailPage() {
         </section>
       )}
 
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <section className="rcp-section rcp-why-salvin" id="why-salvin" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['why-salvin'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">Our Advantage</div>
+          <h2 className="rcp-section-title">Why Choose <span className="rcp-accent">SALVIN</span></h2>
+          <div className="rcp-why-salvin__grid">
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 20h20M4 20V10l8-7 8 7v10M10 20v-6h4v6" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Turnkey Solutions</p>
+                <p className="rcp-why-salvin__desc">End-to-end processing solutions from design and manufacturing to installation and commissioning.</p>
+              </div>
+            </div>
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Food Grade Design</p>
+                <p className="rcp-why-salvin__desc">SS304/SS316 contact parts with hygienic construction for food-safe processing.</p>
+              </div>
+            </div>
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Energy Efficient</p>
+                <p className="rcp-why-salvin__desc">Optimized systems designed to reduce power consumption and improve productivity.</p>
+              </div>
+            </div>
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Low Maintenance</p>
+                <p className="rcp-why-salvin__desc">Robust industrial construction ensuring long service life and minimal maintenance.</p>
+              </div>
+            </div>
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                  <path d="M7 8h.01M12 8h.01M17 8h.01M7 12h10" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Automation Ready</p>
+                <p className="rcp-why-salvin__desc">PLC-based automation and intelligent controls for consistent production.</p>
+              </div>
+            </div>
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">After Sales Support</p>
+                <p className="rcp-why-salvin__desc">Dedicated technical support, spare parts assistance and service guidance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['enquiry'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-cta__box">
             <h2>Ready to Build Your {details.title}?</h2>
             <p>
-              Get a customised project proposal with capacity recommendations, plant layout, equipment list, 
+              Get a customised project proposal with capacity recommendations, plant layout, equipment list,
               timeline, and investment estimate — all tailored to your specific requirements.
             </p>
             <div className="rcp-cta__actions">
@@ -345,10 +533,17 @@ export default function TurnkeyDetailPage() {
                 rel="noopener noreferrer"
                 className="rcp-btn rcp-btn--primary rcp-btn--lg"
               >
-                💬 WhatsApp Enquiry
+                <svg className="rcp-cta-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', marginRight: '8px' }}>
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                WhatsApp Enquiry
               </a>
               <NavLink to="/contact" className="rcp-btn rcp-btn--outline rcp-btn--lg">
-                📧 Contact Us
+                <svg className="rcp-cta-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', marginRight: '8px' }}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                Contact Us
               </NavLink>
             </div>
             <p className="rcp-cta__phone">
@@ -361,7 +556,11 @@ export default function TurnkeyDetailPage() {
       {/* ═══ BACK NAVIGATION ═══ */}
       <div className="rcp-back-nav">
         <NavLink to="/turnkey-project" className="rcp-btn rcp-btn--outline">
-          ← Back to Project Portfolio
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '14px', height: '14px', marginRight: '6px', verticalAlign: 'middle', display: 'inline-block' }}>
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Project Portfolio
         </NavLink>
       </div>
     </div>

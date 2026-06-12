@@ -180,59 +180,67 @@ export default function RedChilliDetailPage() {
                 Whether you're producing retail packs, bulk institutional supply, or export-grade chilli powder, our systems deliver
                 the colour retention, pungency preservation, and microbial safety your buyers expect.
               </p>
-              <div className="rcp-overview__highlights">
-                <div className="rcp-highlight-item">
-                  <span className="rcp-highlight-icon">
-                    <svg className="rcp-highlight-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 20V9l-7 3-5-3-6 3v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" />
-                      <path d="M17 18h1" />
-                      <path d="M12 18h1" />
-                      <path d="M7 18h1" />
+              <div className="rcp-overview__features">
+                {/* Feature 1 */}
+                <div className="rcp-overview__feature">
+                  <div className="rcp-overview__feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                      <polyline points="22 7 13.5 15.5 8.5 10.5 2 17" />
+                      <polyline points="16 7 22 7 22 13" />
                     </svg>
-                  </span>
-                  <div>
-                    <strong>Turnkey Delivery</strong>
-                    <p>Design → Manufacture → Install → Commission → Train</p>
+                  </div>
+                  <div className="rcp-overview__feature-body">
+                    <p className="rcp-overview__feature-title">High Yield</p>
+                    <p className="rcp-overview__feature-desc">Maximum chilli powder recovery per batch</p>
                   </div>
                 </div>
-                <div className="rcp-highlight-item">
-                  <span className="rcp-highlight-icon">
-                    <svg className="rcp-highlight-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="18" y1="20" x2="18" y2="10" />
-                      <line x1="12" y1="20" x2="12" y2="4" />
-                      <line x1="6" y1="20" x2="6" y2="14" />
+                {/* Feature 2 */}
+                <div className="rcp-overview__feature">
+                  <div className="rcp-overview__feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      <path d="m9 12 2 2 4-4" />
                     </svg>
-                  </span>
-                  <div>
-                    <strong>OEE Optimised</strong>
-                    <p>85%+ Overall Equipment Effectiveness target</p>
+                  </div>
+                  <div className="rcp-overview__feature-body">
+                    <p className="rcp-overview__feature-title">Hygienic Process</p>
+                    <p className="rcp-overview__feature-desc">Food grade SS304/SS316L construction</p>
                   </div>
                 </div>
-                <div className="rcp-highlight-item">
-                  <span className="rcp-highlight-icon">
-                    <svg className="rcp-highlight-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                      <path d="M2 12h20" />
+                {/* Feature 3 */}
+                <div className="rcp-overview__feature">
+                  <div className="rcp-overview__feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="3" />
+                      <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
                     </svg>
-                  </span>
-                  <div>
-                    <strong>Global Standards</strong>
-                    <p>FSSAI, FDA, CE, ISO 22000 compliant designs</p>
+                  </div>
+                  <div className="rcp-overview__feature-body">
+                    <p className="rcp-overview__feature-title">Consistent Quality</p>
+                    <p className="rcp-overview__feature-desc">Uniform ASTA colour and SHU output</p>
+                  </div>
+                </div>
+                {/* Feature 4 */}
+                <div className="rcp-overview__feature">
+                  <div className="rcp-overview__feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                    </svg>
+                  </div>
+                  <div className="rcp-overview__feature-body">
+                    <p className="rcp-overview__feature-title">Energy Efficient</p>
+                    <p className="rcp-overview__feature-desc">Optimised power consumption per ton</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="rcp-overview__image">
-              <img src="/turnkey-brochures/images/1_red_chilli.png" alt="Red Chilli Processing Plant by Salvin Industries" loading="lazy" />
-              <div className="rcp-overview__image-badge">
-                <span>Since 2008</span>
-                <p>350+ Projects Delivered Worldwide</p>
-              </div>
+            <div className="rcp-overview__image rcp-overview__image--photo">
+              <img src="/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.png" alt="Red Chilli Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
+
 
 
 
@@ -405,6 +413,91 @@ export default function RedChilliDetailPage() {
         </div>
       </section>
 
+
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <section className="rcp-section rcp-why-salvin" id="why-salvin" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['why-salvin'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">Our Advantage</div>
+          <h2 className="rcp-section-title">Why Choose <span className="rcp-accent">SALVIN</span></h2>
+          <div className="rcp-why-salvin__grid">
+            {/* Card 1 — Turnkey Solutions */}
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M2 20h20M4 20V10l8-7 8 7v10M10 20v-6h4v6" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Turnkey Solutions</p>
+                <p className="rcp-why-salvin__desc">End-to-end processing solutions from design and manufacturing to installation and commissioning.</p>
+              </div>
+            </div>
+            {/* Card 2 — Food Grade Design */}
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                  <path d="m9 12 2 2 4-4" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Food Grade Design</p>
+                <p className="rcp-why-salvin__desc">SS304/SS316 contact parts with hygienic construction for food-safe processing.</p>
+              </div>
+            </div>
+            {/* Card 3 — Energy Efficient */}
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Energy Efficient</p>
+                <p className="rcp-why-salvin__desc">Optimized systems designed to reduce power consumption and improve productivity.</p>
+              </div>
+            </div>
+            {/* Card 4 — Low Maintenance */}
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Low Maintenance</p>
+                <p className="rcp-why-salvin__desc">Robust industrial construction ensuring long service life and minimal maintenance.</p>
+              </div>
+            </div>
+            {/* Card 5 — Automation Ready */}
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8M12 17v4" />
+                  <path d="M7 8h.01M12 8h.01M17 8h.01M7 12h10" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">Automation Ready</p>
+                <p className="rcp-why-salvin__desc">PLC-based automation and intelligent controls for consistent production.</p>
+              </div>
+            </div>
+            {/* Card 6 — After Sales Support */}
+            <div className="rcp-why-salvin__card">
+              <div className="rcp-why-salvin__icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+              </div>
+              <div>
+                <p className="rcp-why-salvin__title">After Sales Support</p>
+                <p className="rcp-why-salvin__desc">Dedicated technical support, spare parts assistance and service guidance.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>

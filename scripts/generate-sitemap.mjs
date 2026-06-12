@@ -5,6 +5,7 @@
 import { readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { brochureProjects } from "../src/pages/TurnkeyProject/data/brochureCatalog.js";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const projectRoot = join(__dirname, "..");
@@ -23,6 +24,7 @@ const STATIC_PATHS = [
   "/consultant",
   "/turnkey",
   "/turnkey-project",
+  ...brochureProjects.map((p) => p.detailsPath),
   "/machineries",
 ];
 

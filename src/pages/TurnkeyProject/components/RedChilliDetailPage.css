@@ -325,31 +325,31 @@
    ══════════════════════════════════════════ */
 .rcp-overview__grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 36px;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
   align-items: center;
-  margin-top: 28px;
+  margin-top: 24px;
 }
 
 .rcp-overview__text p {
   font-size: 14px;
-  line-height: 1.7;
+  line-height: 1.6;
   color: var(--rcp-slate-600);
-  margin: 0 0 14px;
+  margin: 0 0 10px;
 }
 
 .rcp-overview__highlights {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 20px;
+  gap: 8px;
+  margin-top: 14px;
 }
 
 .rcp-highlight-item {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   align-items: flex-start;
-  padding: 12px 16px;
+  padding: 9px 13px;
   background: var(--rcp-slate-50);
   border-radius: var(--rcp-radius-sm);
   border: 1px solid var(--rcp-slate-200);
@@ -368,7 +368,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0B2A5B; /* Single-color navy blue */
+  color: #0B2A5B;
+  /* Single-color navy blue */
   transition: color var(--rcp-transition);
 }
 
@@ -378,7 +379,8 @@
 }
 
 .rcp-highlight-item:hover .rcp-highlight-icon {
-  color: #F58220; /* Orange hover/accent */
+  color: #F58220;
+  /* Orange hover/accent */
 }
 
 .rcp-highlight-item strong {
@@ -393,49 +395,113 @@
 }
 
 .rcp-overview__image {
-  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
   border-radius: var(--rcp-radius);
   overflow: hidden;
   box-shadow: var(--rcp-shadow-lg);
-  aspect-ratio: 16/9;
+  border: 1px solid var(--rcp-slate-100);
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  margin: 0 auto;
+  transition: box-shadow var(--rcp-transition), transform var(--rcp-transition);
+}
+
+.rcp-overview__image:hover {
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .12);
+  transform: translateY(-3px);
 }
 
 .rcp-overview__image img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
+  object-position: center;
   display: block;
-  transition: transform 0.7s ease;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .rcp-overview__image:hover img {
   transform: scale(1.03);
 }
 
-.rcp-overview__image-badge {
-  position: absolute;
-  bottom: 14px;
-  left: 14px;
-  background: rgba(8, 37, 77, .85);
-  backdrop-filter: blur(8px);
-  color: #fff;
-  padding: 10px 16px;
+/* ── Overview 4-Feature Points ── */
+.rcp-overview__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  margin-top: 20px;
+}
+
+.rcp-overview__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  background: var(--rcp-slate-50);
   border-radius: var(--rcp-radius-sm);
-  border: 1px solid rgba(255, 255, 255, .08);
+  border: 1px solid var(--rcp-slate-200);
+  transition: all var(--rcp-transition);
 }
 
-.rcp-overview__image-badge span {
-  display: block;
-  font-size: 15px;
-  font-weight: 800;
+.rcp-overview__feature:hover {
+  border-color: rgba(245, 130, 32, 0.28);
+  box-shadow: 0 3px 12px rgba(245, 130, 32, 0.07);
+  transform: translateY(-1px);
+}
+
+.rcp-overview__feature-icon {
+  width: 30px;
+  height: 30px;
+  background: rgba(245, 130, 32, 0.09);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--rcp-orange);
+  flex-shrink: 0;
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
-.rcp-overview__image-badge p {
-  margin: 1px 0 0;
-  font-size: 11px;
-  color: rgba(255, 255, 255, .65);
+.rcp-overview__feature:hover .rcp-overview__feature-icon {
+  background: var(--rcp-orange);
+  color: #fff;
 }
+
+.rcp-overview__feature-icon svg {
+  width: 15px;
+  height: 15px;
+  stroke-width: 2;
+}
+
+.rcp-overview__feature-body {}
+
+.rcp-overview__feature-title {
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--rcp-slate-800);
+  line-height: 1.25;
+  margin: 0 0 2px;
+}
+
+.rcp-overview__feature-desc {
+  font-size: 11px;
+  color: var(--rcp-slate-400);
+  line-height: 1.35;
+  margin: 0;
+}
+
+/* Make overview image use cover (for real plant photos) */
+.rcp-overview__image--photo img {
+  object-fit: cover;
+  height: 380px;
+  width: 100%;
+  border-radius: var(--rcp-radius);
+}
+
 
 /* ══════════════════════════════════════════
    ABOUT
@@ -579,8 +645,10 @@
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: rgba(11, 42, 91, 0.08); /* Light navy blue background */
-  color: #0B2A5B; /* Single-color navy blue */
+  background: rgba(11, 42, 91, 0.08);
+  /* Light navy blue background */
+  color: #0B2A5B;
+  /* Single-color navy blue */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -590,7 +658,8 @@
 }
 
 .rcp-process-faq__point:hover .rcp-process-faq__check-icon {
-  background: #F58220; /* Orange hover/accent background */
+  background: #F58220;
+  /* Orange hover/accent background */
   color: #ffffff;
 }
 
@@ -684,7 +753,8 @@
 }
 
 .rcp-process-card__icon {
-  color: #0B2A5B; /* Single-color navy blue */
+  color: #0B2A5B;
+  /* Single-color navy blue */
   margin-bottom: 12px;
   display: flex;
   align-items: center;
@@ -693,7 +763,8 @@
 }
 
 .rcp-process-card:hover .rcp-process-card__icon {
-  color: #F58220; /* Orange hover/accent */
+  color: #F58220;
+  /* Orange hover/accent */
 }
 
 .rcp-process-card__icon-svg {
@@ -1159,6 +1230,116 @@
 }
 
 /* ══════════════════════════════════════════
+   WHY CHOOSE SALVIN
+   ══════════════════════════════════════════ */
+.rcp-why-salvin {
+  background: #fff !important;
+}
+
+.rcp-why-salvin__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+
+.rcp-why-salvin__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 22px 18px 20px;
+  background: #fff;
+  border: 1px solid var(--rcp-slate-200);
+  border-radius: var(--rcp-radius);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+  transition: all var(--rcp-transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.rcp-why-salvin__card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--rcp-orange), var(--rcp-orange-dark));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--rcp-transition);
+}
+
+.rcp-why-salvin__card:hover::before {
+  transform: scaleX(1);
+}
+
+.rcp-why-salvin__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(244, 124, 32, .10);
+  border-color: rgba(244, 124, 32, .25);
+}
+
+.rcp-why-salvin__icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(245, 130, 32, .08);
+  border-radius: var(--rcp-radius-sm);
+  color: var(--rcp-orange);
+  flex-shrink: 0;
+  transition: background var(--rcp-transition), color var(--rcp-transition);
+}
+
+.rcp-why-salvin__card:hover .rcp-why-salvin__icon {
+  background: var(--rcp-orange);
+  color: #fff;
+}
+
+.rcp-why-salvin__icon svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 1.75;
+}
+
+.rcp-why-salvin__title {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--rcp-slate-800);
+  margin: 0 0 4px;
+  line-height: 1.3;
+}
+
+.rcp-why-salvin__desc {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--rcp-slate-500);
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .rcp-why-salvin__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .rcp-why-salvin__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .rcp-why-salvin__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ══════════════════════════════════════════
    FAQ SECTION
    ══════════════════════════════════════════ */
 .rcp-faq-section {
@@ -1232,18 +1413,21 @@
   height: 28px;
   border-radius: 50%;
   background: var(--rcp-slate-100);
-  color: #0B2A5B; /* Single-color navy blue */
+  color: #0B2A5B;
+  /* Single-color navy blue */
   transition: all var(--rcp-transition);
   flex-shrink: 0;
 }
 
 .rcp-faq__question-btn:hover .rcp-faq__icon-toggle {
-  background: #F58220; /* Orange hover/accent background */
+  background: #F58220;
+  /* Orange hover/accent background */
   color: #ffffff;
 }
 
 .rcp-faq__item--open .rcp-faq__icon-toggle {
-  background: #F58220; /* Orange hover/accent background */
+  background: #F58220;
+  /* Orange hover/accent background */
   color: #ffffff;
   transform: rotate(180deg);
 }
