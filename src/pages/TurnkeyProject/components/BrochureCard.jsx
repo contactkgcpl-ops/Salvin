@@ -1,4 +1,6 @@
-function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochureDownloadName, hasBrochure }) {
+import { NavLink } from 'react-router-dom'
+
+function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochureDownloadName, hasBrochure, detailsPath }) {
   const blurb = `${descriptionLines[0]} ${descriptionLines[1]}`
 
   return (
@@ -32,7 +34,7 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
           </p>
         </div>
 
-        <div className="mt-8">
+        <div className="mt-8 flex flex-col gap-3">
           {hasBrochure ? (
             <a
               href={brochureHref}
@@ -51,6 +53,18 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
             >
               Request Information
             </a>
+          )}
+
+          {detailsPath && (
+            <NavLink
+              to={detailsPath}
+              className="inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 border-[#f47c20] bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-[#f47c20] transition-all duration-300 hover:bg-[#f47c20] hover:text-white hover:shadow-lg hover:shadow-[#f47c20]/20 active:scale-[0.97]"
+            >
+              <svg className="h-5 w-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden>
+                <path d="M15 12H3m12 0l-4-4m4 4l-4 4M21 4v16" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              More Details
+            </NavLink>
           )}
         </div>
       </div>

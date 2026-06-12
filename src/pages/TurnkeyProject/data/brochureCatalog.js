@@ -11,8 +11,8 @@ function pdfHref(filename) {
 
 /** @type {readonly { imageFile: string, pdfFile: string, title: string, lines: [string, string] }[]} */
 const RAW = [
-  ['1_red_chilli.png', 'salvin food powder processing machinaries.pdf', 'Red Chilli Processing Plant', ['High-volume cleaning, grinding, and controlled-atmosphere packaging for chilli commodities.', 'Built for food-grade hygiene, energy efficiency, and dependable OEE on your line.']],
-  ['3_beetroot.png', 'fruit_juice_salvin.pdf', 'Beetroot Juice Processing Plant', ['Cold extraction, clarification, and aseptic-ready packaging for vibrant juices.', 'Supports nutrient retention while scaling to industrial filling speeds you can commission fast.']],
+  ['1_red_chilli.png', 'salvin food powder processing machinaries.pdf', 'Red Chilli Processing Plant', ['High-volume cleaning, grinding, and controlled-atmosphere packaging for chilli commodities.', 'Built for food-grade hygiene, energy efficiency, and dependable OEE on your line.'], '/turnkey-project/red-chilli-processing-plant'],
+  ['3_beetroot.png', 'fruit_juice_salvin.pdf', 'Beetroot Juice Processing Plant', ['Cold extraction, clarification, and aseptic-ready packaging for vibrant juices.', 'Supports nutrient retention while scaling to industrial filling speeds you can commission fast.'], '/turnkey-project/beetroot-juice-processing-plant'],
   ['4_turmeric.png', 'salvin food powder processing machinaries.pdf', 'Turmeric Powder Processing Plant', ['Cleaning, pulverisation, and sterilisation paths suited for premium powders.', 'Metal detection–friendly layouts help you ship audit-ready batches every shift.']],
   ['5_honey.png', 'honey_processing.pdf', 'Honey Processing & Bottling Plant', ['Filtration, warming, and precision dosing across jars and retail packs.', 'Preserves intrinsic viscosity and clarity while meeting export-ready sanitary design.']],
   ['6_dates.png', 'date_processing_salvin.pdf', 'Dates Processing & Packing Plant', ['Wash, grade, pitting options, and vacuum-ready sealing for premium fruit.', 'Ideal where shelf-life extension must pair with gentle handling of fragile produce.']],
@@ -44,12 +44,17 @@ const RAW = [
   ['2_banna_chips.png', '', 'Banana Chips Processing Line', ['Continuous frying, seasoning, and sorting tailored for snack processors.', 'Delivers uniform moisture, colour, and throughput without sacrificing operator safety.']],
 ]
 
-export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines], index) => ({
-  id: `brochure-${index + 1}-${imageFile.replace(/\W+/g, '-')}`,
-  imageSrc: `${IMG}/${imageFile}`,
-  brochureHref: pdfFile ? pdfHref(pdfFile) : null,
-  brochureDownloadName: pdfFile ? pdfFile.replace(/\s+/g, '_') : null,
-  hasBrochure: !!pdfFile,
-  title,
-  descriptionLines: lines,
-}))
+export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {
+  const slug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  const computedDetailsPath = detailsPath || `/turnkey-project/${slug}`;
+  return {
+    id: `brochure-${index + 1}-${imageFile.replace(/\W+/g, '-')}`,
+    imageSrc: `${IMG}/${imageFile}`,
+    brochureHref: pdfFile ? pdfHref(pdfFile) : null,
+    brochureDownloadName: pdfFile ? pdfFile.replace(/\s+/g, '_') : null,
+    hasBrochure: !!pdfFile,
+    title,
+    descriptionLines: lines,
+    detailsPath: computedDetailsPath,
+  };
+})

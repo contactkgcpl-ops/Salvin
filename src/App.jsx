@@ -83,6 +83,9 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 };
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
+import RedChilliDetailPage from "./pages/TurnkeyProject/components/RedChilliDetailPage";
+import BeetrootJuiceDetailPage from "./pages/TurnkeyProject/components/BeetrootJuiceDetailPage";
+import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
@@ -2597,6 +2600,9 @@ export default function App() {
           <Route path="/consultant" element={<ConsultantPage />} />
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
+          <Route path="/turnkey-project/red-chilli-processing-plant" element={<RedChilliDetailPage />} />
+          <Route path="/turnkey-project/beetroot-juice-processing-plant" element={<BeetrootJuiceDetailPage />} />
+          <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
           <Route

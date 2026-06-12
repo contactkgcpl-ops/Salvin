@@ -29,6 +29,7 @@ export default function ProjectsSection() {
                 brochureHref={project.brochureHref}
                 brochureDownloadName={project.brochureDownloadName}
                 hasBrochure={project.hasBrochure}
+                detailsPath={project.detailsPath}
               />
             </li>
           ))}
