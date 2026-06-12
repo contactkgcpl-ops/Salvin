@@ -138,7 +138,13 @@ export default function LanguageSelector() {
         aria-haspopup="listbox"
         aria-expanded={isOpen}
       >
-        <span className="lang-icon">🌐</span>
+        <span className="lang-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '15px', height: '15px', display: 'block' }}>
+            <circle cx="12" cy="12" r="10" />
+            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+            <path d="M2 12h20" />
+          </svg>
+        </span>
         <span className="lang-text">{currentLangName}</span>
         <span className="lang-caret">▼</span>
       </button>

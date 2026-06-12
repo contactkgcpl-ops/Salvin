@@ -4,36 +4,17 @@ import './RedChilliDetailPage.css'
 
 /* ─── Process Flow Steps ─── */
 const PROCESS_STEPS = [
-  { id: 1, title: 'Raw Chilli Receiving', icon: '📦', desc: 'Incoming raw red chillies are weighed, inspected for quality and moisture content, and logged into the batch tracking system before entering the processing line.' },
-  { id: 2, title: 'Cleaning', icon: '🧹', desc: 'Multi-stage dry and wet cleaning removes dust, sand, stems, and foreign matter using air classifiers, vibrating screens, and washing drums.' },
-  { id: 3, title: 'Destoning', icon: '🪨', desc: 'Precision destoners use gravity separation and air-flow technology to eliminate stones, metal fragments, and heavy impurities from the clean chilli stream.' },
-  { id: 4, title: 'Sorting', icon: '🔍', desc: 'Optical color sorters and manual inspection belts classify chillies by grade, color intensity, and size—rejecting defective or discolored units automatically.' },
-  { id: 5, title: 'Drying', icon: '☀️', desc: 'Controlled-atmosphere tray or tunnel dryers reduce moisture to the target 8–10% level while preserving color, pungency, and essential oils.' },
-  { id: 6, title: 'Crushing', icon: '⚙️', desc: 'Pre-crushing breakers reduce dried whole chillies into coarse flakes, preparing them for the fine grinding stage with uniform particle input.' },
-  { id: 7, title: 'Grinding', icon: '🔧', desc: 'Hammer mills and pin mills pulverise chilli flakes into fine powder with cryogenic or ambient temperature control to preserve volatile capsaicin content.' },
-  { id: 8, title: 'Sieving', icon: '🔬', desc: 'Vibratory and rotary sifters classify ground powder into consistent mesh sizes (40–120 mesh), removing oversize particles for re-grinding.' },
-  { id: 9, title: 'Quality Check', icon: '✅', desc: 'Laboratory testing for moisture, color value (ASTA), pungency (SHU), microbial load, heavy metals, and aflatoxin levels ensures compliance with FSSAI/FDA standards.' },
-  { id: 10, title: 'Packaging', icon: '📦', desc: 'Automatic multi-head weighers and FFS machines pack powder into pouches, jars, or bulk bags under nitrogen-flushed or vacuum-sealed conditions.' },
-  { id: 11, title: 'Storage', icon: '🏭', desc: 'Finished goods are stored in temperature-controlled warehouses with FIFO inventory management and full batch traceability from intake to dispatch.' },
+  { id: 1, title: 'Raw Chilli Reception' },
+  { id: 2, title: 'Cleaning & Sorting' },
+  { id: 3, title: 'Drying' },
+  { id: 4, title: 'Grinding' },
+  { id: 5, title: 'Sieving' },
+  { id: 6, title: 'Blending' },
+  { id: 7, title: 'Packaging' },
 ]
 
-/* ─── Capacity Options ─── */
-const CAPACITY_OPTIONS = [
-  { capacity: '500 Kg/Hr', type: 'Small Scale', ideal: 'Startups & Small Processors', color: '#f47c20' },
-  { capacity: '1 Ton/Hr', type: 'Medium Scale', ideal: 'Regional Distributors', color: '#dc6e19' },
-  { capacity: '2 Ton/Hr', type: 'Large Scale', ideal: 'Export-Grade Facilities', color: '#c45a10' },
-  { capacity: '5 Ton/Hr', type: 'Industrial Scale', ideal: 'Mass Production Units', color: '#a34a0d' },
-]
 
-/* ─── Key Features ─── */
-const KEY_FEATURES = [
-  { title: 'Food-Grade Hygiene', desc: 'All contact surfaces are SS304/SS316L stainless steel with CIP (Clean-In-Place) systems for zero-contamination processing.', icon: '🛡️' },
-  { title: 'Energy Efficient', desc: 'Heat recovery systems, VFD-driven motors, and optimised airflow reduce energy consumption by up to 30% compared to conventional plants.', icon: '⚡' },
-  { title: 'Dust-Free Operation', desc: 'Enclosed conveying, cyclone separators, and bag filters maintain a dust-free processing environment meeting OSHA standards.', icon: '💨' },
-  { title: 'Modular Design', desc: 'Scalable modular architecture allows capacity expansion from 500 Kg/Hr to 5 Ton/Hr without major structural modifications.', icon: '🧱' },
-  { title: 'PLC Automation', desc: 'Siemens/Allen-Bradley PLC with SCADA HMI provides real-time monitoring, recipe management, and data logging for every batch.', icon: '🤖' },
-  { title: 'Colour Preservation', desc: 'Cryogenic grinding and controlled drying preserve the vibrant red ASTA colour value, maximising market premium for your output.', icon: '🎨' },
-]
+
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
@@ -69,14 +50,28 @@ const MACHINERY_LIST = [
   }
 ]
 
-/* ─── Applications ─── */
-const APPLICATIONS = [
-  { title: 'Spice Manufacturing', desc: 'Large-scale production of retail and bulk red chilli powder for domestic and export markets.', icon: '🌶️' },
-  { title: 'Food Processing', desc: 'Ingredient supply for snack seasonings, ready meals, sauces, and instant food formulations.', icon: '🍜' },
-  { title: 'Pharmaceutical & Nutraceutical', desc: 'Capsaicin extraction and standardised chilli oleoresin for pharma and supplement industries.', icon: '💊' },
-  { title: 'Export & Trading', desc: 'Premium export-grade chilli powder meeting international quality certifications and colour standards.', icon: '🌍' },
-  { title: 'Contract Manufacturing', desc: 'White-label and private-label chilli powder processing for brand owners and retailers.', icon: '🏷️' },
-  { title: 'Paste & Sauce Production', desc: 'Upstream processing for chilli paste, hot sauce, and condiment manufacturing lines.', icon: '🫙' },
+/* ─── FAQs ─── */
+const FAQS = [
+  {
+    question: "What is the processing capacity of the Red Chilli Processing Plant?",
+    answer: "Our plants are available from 500 KG/HR to 5 TON/HR capacities and can be customized based on production requirements."
+  },
+  {
+    question: "Can the plant process different types of red chillies?",
+    answer: "Yes. The plant is designed to handle various chilli varieties while maintaining product quality, color, and consistency."
+  },
+  {
+    question: "Is the plant fully automatic?",
+    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced control systems for efficient operation."
+  },
+  {
+    question: "Does SALVIN provide installation and support?",
+    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+  },
+  {
+    question: "Why choose SALVIN for Red Chilli Processing Plants?",
+    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized solutions, reliable performance, and complete engineering support."
+  }
 ]
 
 /* ─── Gallery Images (Red Chilli Processing Plant only) ─── */
@@ -93,9 +88,9 @@ const GALLERY_IMAGES = [
    MAIN COMPONENT
    ════════════════════════════════════════════════════════════════════ */
 export default function RedChilliDetailPage() {
-  const [activeStep, setActiveStep] = useState(0)
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
+  const [activeFaq, setActiveFaq] = useState(null)
 
   // Scroll to top only on initial page entry
   useEffect(() => {
@@ -165,20 +160,6 @@ export default function RedChilliDetailPage() {
               Enquire Now
             </a>
           </div>
-          <div className="rcp-hero__stats">
-            <div className="rcp-hero__stat">
-              <span className="rcp-hero__stat-value">500 Kg–5 Ton</span>
-              <span className="rcp-hero__stat-label">Per Hour Capacity</span>
-            </div>
-            <div className="rcp-hero__stat">
-              <span className="rcp-hero__stat-value">11 Stage</span>
-              <span className="rcp-hero__stat-label">Process Flow</span>
-            </div>
-            <div className="rcp-hero__stat">
-              <span className="rcp-hero__stat-value">120+ ASTA</span>
-              <span className="rcp-hero__stat-label">Colour Retention</span>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -190,32 +171,51 @@ export default function RedChilliDetailPage() {
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
               <p>
-                Salvin Industries' Red Chilli Processing Plant is a turnkey industrial solution designed for processors who demand 
-                consistent quality, high throughput, and full regulatory compliance. Our integrated processing line handles every stage 
+                Salvin Industries' Red Chilli Processing Plant is a turnkey industrial solution designed for processors who demand
+                consistent quality, high throughput, and full regulatory compliance. Our integrated processing line handles every stage
                 — from incoming raw chilli inspection through final packaged product — in a single, automated, dust-free facility.
               </p>
               <p>
-                Each plant is custom-engineered to match your specific capacity requirements, product grades, and market standards. 
-                Whether you're producing retail packs, bulk institutional supply, or export-grade chilli powder, our systems deliver 
+                Each plant is custom-engineered to match your specific capacity requirements, product grades, and market standards.
+                Whether you're producing retail packs, bulk institutional supply, or export-grade chilli powder, our systems deliver
                 the colour retention, pungency preservation, and microbial safety your buyers expect.
               </p>
               <div className="rcp-overview__highlights">
                 <div className="rcp-highlight-item">
-                  <span className="rcp-highlight-icon">🏭</span>
+                  <span className="rcp-highlight-icon">
+                    <svg className="rcp-highlight-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M22 20V9l-7 3-5-3-6 3v8a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2z" />
+                      <path d="M17 18h1" />
+                      <path d="M12 18h1" />
+                      <path d="M7 18h1" />
+                    </svg>
+                  </span>
                   <div>
                     <strong>Turnkey Delivery</strong>
                     <p>Design → Manufacture → Install → Commission → Train</p>
                   </div>
                 </div>
                 <div className="rcp-highlight-item">
-                  <span className="rcp-highlight-icon">📊</span>
+                  <span className="rcp-highlight-icon">
+                    <svg className="rcp-highlight-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <line x1="18" y1="20" x2="18" y2="10" />
+                      <line x1="12" y1="20" x2="12" y2="4" />
+                      <line x1="6" y1="20" x2="6" y2="14" />
+                    </svg>
+                  </span>
                   <div>
                     <strong>OEE Optimised</strong>
                     <p>85%+ Overall Equipment Effectiveness target</p>
                   </div>
                 </div>
                 <div className="rcp-highlight-item">
-                  <span className="rcp-highlight-icon">🌍</span>
+                  <span className="rcp-highlight-icon">
+                    <svg className="rcp-highlight-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                      <path d="M2 12h20" />
+                    </svg>
+                  </span>
                   <div>
                     <strong>Global Standards</strong>
                     <p>FSSAI, FDA, CE, ISO 22000 compliant designs</p>
@@ -234,86 +234,77 @@ export default function RedChilliDetailPage() {
         </div>
       </section>
 
-      {/* ═══ CAPACITY OPTIONS ═══ */}
-      <section className="rcp-section rcp-capacity" id="capacity" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['capacity'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Capacity Options</div>
-          <h2 className="rcp-section-title">Choose Your <span className="rcp-accent">Plant Scale</span></h2>
-          <p className="rcp-section-subtitle">From startup-scale to industrial mega-plants — we engineer the right capacity for your market and growth trajectory.</p>
-          <div className="rcp-capacity__grid">
-            {CAPACITY_OPTIONS.map((opt, i) => (
-              <div key={i} className="rcp-capacity__card" style={{ '--accent': opt.color }}>
-                <div className="rcp-capacity__card-top" style={{ background: `linear-gradient(135deg, ${opt.color}, ${opt.color}dd)` }}>
-                  <span className="rcp-capacity__value">{opt.capacity}</span>
-                  <span className="rcp-capacity__type">{opt.type}</span>
-                </div>
-                <div className="rcp-capacity__card-body">
-                  <p className="rcp-capacity__ideal">
-                    <strong>Ideal For:</strong> {opt.ideal}
-                  </p>
-                  <a href="#enquiry" className="rcp-btn rcp-btn--sm">Get Quote</a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* ═══ KEY FEATURES ═══ */}
-      <section className="rcp-section rcp-features" id="features" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['features'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Key Features</div>
-          <h2 className="rcp-section-title">Engineered <span className="rcp-accent">Advantages</span></h2>
-          <div className="rcp-features__grid">
-            {KEY_FEATURES.map((feat, i) => (
-              <div key={i} className="rcp-feature-card">
-                <div className="rcp-feature-card__icon">{feat.icon}</div>
-                <h3>{feat.title}</h3>
-                <p>{feat.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* ═══ PROCESS FLOW ═══ */}
-      <section className="rcp-section rcp-process" id="process-flow" data-animate>
+      <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['process-flow'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Complete Process Flow</div>
-          <h2 className="rcp-section-title">11-Stage <span className="rcp-accent">Processing Line</span></h2>
-          <p className="rcp-section-subtitle">Each stage is engineered for maximum efficiency, minimal product loss, and full traceability.</p>
+          <div className="rcp-section-badge">Process Flow</div>
+          <h2 className="rcp-section-title">Red Chilli <span className="rcp-accent">Processing Workflow</span></h2>
+          <p className="rcp-section-subtitle">A streamlined and fully integrated processing workflow designed to transform raw red chillies into premium-quality chilli powder while ensuring maximum efficiency, product consistency and superior output quality.</p>
 
-          {/* Process Flow Diagram */}
-          <div className="rcp-process-flow-diagram">
+          <div className="rcp-process-flow-container">
             {PROCESS_STEPS.map((step, i) => (
               <React.Fragment key={step.id}>
-                <button
-                  className={`rcp-flow-node ${activeStep === i ? 'rcp-flow-node--active' : ''}`}
-                  onClick={() => setActiveStep(i)}
-                  type="button"
-                >
-                  <span className="rcp-flow-node__number">{String(step.id).padStart(2, '0')}</span>
-                  <span className="rcp-flow-node__icon">{step.icon}</span>
-                  <span className="rcp-flow-node__title">{step.title}</span>
-                </button>
+                <div className="rcp-process-card">
+                  <div className="rcp-process-card__number">{String(step.id).padStart(2, '0')}</div>
+                  <div className="rcp-process-card__icon">
+                    {step.id === 1 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                        <path d="m3.3 7 8.7 5 8.7-5" />
+                        <path d="M12 22V12" />
+                      </svg>
+                    )}
+                    {step.id === 2 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
+                      </svg>
+                    )}
+                    {step.id === 3 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="4" />
+                        <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+                      </svg>
+                    )}
+                    {step.id === 4 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                      </svg>
+                    )}
+                    {step.id === 5 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 3v18M3 12h18M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18z" />
+                        <path d="M7.5 7.5l9 9M7.5 16.5l9-9" />
+                      </svg>
+                    )}
+                    {step.id === 6 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M19 22H5a2 2 0 0 1-2-2V4h18v16a2 2 0 0 1-2 2z" />
+                        <path d="M12 4v10" />
+                        <path d="M9 11l3 3 3-3" />
+                      </svg>
+                    )}
+                    {step.id === 7 && (
+                      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                        <path d="M12 22V12M3 12h18M12 2l9 5-9 5-9-5 9-5z" />
+                        <path d="M3 7v10l9 5 9-5V7" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="rcp-process-card__label">{step.title}</div>
+                </div>
                 {i < PROCESS_STEPS.length - 1 && (
-                  <div className="rcp-flow-arrow">
-                    <svg viewBox="0 0 24 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M0 6h20M16 1l5 5-5 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <div className="rcp-process-arrow">
+                    <svg className="rcp-process-flow-arrow-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+                      <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                 )}
               </React.Fragment>
             ))}
-          </div>
-
-          {/* Active Step Detail */}
-          <div className="rcp-process-detail">
-            <div className="rcp-process-detail__number">{String(PROCESS_STEPS[activeStep].id).padStart(2, '0')}</div>
-            <div className="rcp-process-detail__content">
-              <h3>{PROCESS_STEPS[activeStep].icon} {PROCESS_STEPS[activeStep].title}</h3>
-              <p>{PROCESS_STEPS[activeStep].desc}</p>
-            </div>
           </div>
         </div>
       </section>
@@ -341,19 +332,45 @@ export default function RedChilliDetailPage() {
       </section>
 
 
-      {/* ═══ APPLICATIONS ═══ */}
-      <section className="rcp-section rcp-applications" id="applications" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['applications'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Applications</div>
-          <h2 className="rcp-section-title">Industry <span className="rcp-accent">Applications</span></h2>
-          <div className="rcp-applications__grid">
-            {APPLICATIONS.map((app, i) => (
-              <div key={i} className="rcp-application-card">
-                <div className="rcp-application-card__icon">{app.icon}</div>
-                <h3>{app.title}</h3>
-                <p>{app.desc}</p>
-              </div>
-            ))}
+      {/* ═══ FAQ SECTION ═══ */}
+      <section className="rcp-section rcp-faq-section" id="faq" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">FAQs</div>
+          <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
+          <p className="rcp-section-subtitle">Everything you need to know about our Red Chilli Processing Plant.</p>
+
+          <div className="rcp-faq__list">
+            {FAQS.map((faq, index) => {
+              const isOpen = activeFaq === index;
+              return (
+                <div key={index} className={`rcp-faq__item ${isOpen ? 'rcp-faq__item--open' : ''}`}>
+                  <button
+                    className="rcp-faq__question-btn"
+                    onClick={() => setActiveFaq(isOpen ? null : index)}
+                    type="button"
+                    aria-expanded={isOpen}
+                  >
+                    <span className="rcp-faq__question-text">{faq.question}</span>
+                    <span className="rcp-faq__icon-toggle">
+                      {isOpen ? (
+                        <svg className="rcp-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M5 12h14" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      ) : (
+                        <svg className="rcp-faq__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                          <path d="M12 5v14M5 12h14" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      )}
+                    </span>
+                  </button>
+                  <div className="rcp-faq__answer-wrapper">
+                    <div className="rcp-faq__answer-content">
+                      <p>{faq.answer}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -395,7 +412,7 @@ export default function RedChilliDetailPage() {
           <div className="rcp-cta__box">
             <h2>Ready to Build Your Red Chilli Processing Plant?</h2>
             <p>
-              Get a customised project proposal with capacity recommendations, plant layout, equipment list, 
+              Get a customised project proposal with capacity recommendations, plant layout, equipment list,
               timeline, and investment estimate — all tailored to your specific requirements.
             </p>
             <div className="rcp-cta__actions">
@@ -405,10 +422,17 @@ export default function RedChilliDetailPage() {
                 rel="noopener noreferrer"
                 className="rcp-btn rcp-btn--primary rcp-btn--lg"
               >
-                💬 WhatsApp Enquiry
+                <svg className="rcp-cta-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', marginRight: '8px' }}>
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+                </svg>
+                WhatsApp Enquiry
               </a>
               <NavLink to="/contact" className="rcp-btn rcp-btn--outline rcp-btn--lg">
-                📧 Contact Us
+                <svg className="rcp-cta-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '16px', height: '16px', marginRight: '8px' }}>
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+                Contact Us
               </NavLink>
             </div>
             <p className="rcp-cta__phone">
@@ -421,7 +445,11 @@ export default function RedChilliDetailPage() {
       {/* ═══ BACK NAVIGATION ═══ */}
       <div className="rcp-back-nav">
         <NavLink to="/turnkey-project" className="rcp-btn rcp-btn--outline">
-          ← Back to Project Portfolio
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: '14px', height: '14px', marginRight: '6px', verticalAlign: 'middle', display: 'inline-block' }}>
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Project Portfolio
         </NavLink>
       </div>
     </div>

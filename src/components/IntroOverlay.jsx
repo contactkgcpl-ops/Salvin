@@ -13,11 +13,11 @@ const particles = [
 ];
 
 const blueprintItems = [
-  { className: "intro-blueprint intro-food", label: "Turnkey processing plant", type: "plant" },
-  { className: "intro-blueprint intro-pharma", label: "Machinery line", type: "machine" },
-  { className: "intro-blueprint intro-machine", label: "Packaging machinery", type: "machine" },
-  { className: "intro-blueprint intro-machine", label: "Processing machinery", type: "machine" },
-  { className: "intro-blueprint intro-gear", label: "Automation project", type: "automation" }
+  { id: "intro-food", className: "intro-blueprint intro-food", label: "Turnkey processing plant", type: "plant" },
+  { id: "intro-pharma", className: "intro-blueprint intro-pharma", label: "Machinery line", type: "machine" },
+  { id: "intro-pack-machine", className: "intro-blueprint intro-machine", label: "Packaging machinery", type: "machine" },
+  { id: "intro-proc-machine", className: "intro-blueprint intro-machine", label: "Processing machinery", type: "machine" },
+  { id: "intro-gear", className: "intro-blueprint intro-gear", label: "Automation project", type: "automation" }
 ];
 
 function BlueprintIcon({ type }) {
@@ -108,7 +108,7 @@ function IntroOverlay({ onComplete }) {
       <div className="intro-streak intro-streak-two" />
 
       {blueprintItems.map((item) => (
-        <div className={item.className} key={item.className} aria-label={item.label}>
+        <div className={item.className} key={item.id} aria-label={item.label}>
           <BlueprintIcon type={item.type} />
         </div>
       ))}
