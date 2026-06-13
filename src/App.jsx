@@ -84,12 +84,13 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import RedChilliDetailPage from "./pages/TurnkeyProject/components/RedChilliDetailPage";
+import PetroleumJellyDetailPage from "./pages/TurnkeyProject/components/PetroleumJellyDetailPage";
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
-import  salvinTeam from "./assets/home_extra/salvinTeam.jpeg";
+import salvinTeam from "./assets/home_extra/salvinTeam.jpeg";
 import innovation from "./assets/home_extra/innovation.png";
 import quality from "./assets/home_extra/quality.png";
 import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
@@ -519,10 +520,10 @@ function MachineDetailModal({ machine, sessionCache, onClose }) {
             <p className="modal-desc">
               {(() => {
                 const desc = machine.description || "";
-                try { JSON.parse(desc); return "Machine details will be updated soon."; } 
+                try { JSON.parse(desc); return "Machine details will be updated soon."; }
                 catch { return desc || "Machine details will be updated soon."; }
               })()}
-            </p > 
+            </p >
             {!!metaDetails.length && (
               <>
                 <h4 className="modal-spec-heading">Machine Overview</h4>
@@ -712,7 +713,7 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
         <div className="mach-results">
           <div className="mach-toolbar">
             <div className="mach-search-wrap">
-              <span className="mach-search-icon"><img src={searchIcon} alt="🔍" style={{ width: '20px', height: '20px'}} /></span>
+              <span className="mach-search-icon"><img src={searchIcon} alt="🔍" style={{ width: '20px', height: '20px' }} /></span>
               <input
                 className="mach-search"
                 type="text"
@@ -1026,7 +1027,7 @@ function AdminPage({
         ? flatSpecs
         : machineSpecs.length
           ? machineSpecs
-        : [{ ...emptySpecification }],
+          : [{ ...emptySpecification }],
       slug: machine.slug || "",
       meta_title: machine.meta_title || "",
       meta_description: machine.meta_description || "",
@@ -1318,24 +1319,24 @@ function AdminPage({
                   <h2>Structure</h2>
                 </div>
               </div>
-          <form onSubmit={handleCategorySubmit}>
-            <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
+              <form onSubmit={handleCategorySubmit}>
+                <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
                 <button className="admin-primary-btn" type="submit" disabled={isBusy}>{categoryForm.id ? "Update Category" : "Add Category"}</button>
-          </form>
-          <form onSubmit={handleSubcategorySubmit}>
-            <label>Parent Category
-              <select value={subcategoryForm.category_id} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, category_id: e.target.value }))}>
-                {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
-              </select>
-            </label>
-            <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
+              </form>
+              <form onSubmit={handleSubcategorySubmit}>
+                <label>Parent Category
+                  <select value={subcategoryForm.category_id} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, category_id: e.target.value }))}>
+                    {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+                  </select>
+                </label>
+                <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
                 <button className="admin-secondary-btn" type="submit" disabled={isBusy}>{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
-          </form>
-          {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
+              </form>
+              {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
               <div className="admin-list compact-list">
-            {categories.map((category) => (
-              <div key={category.id} className="admin-list-row">
-                <div><strong>{category.name}</strong><p>{category.slug}</p></div>
+                {categories.map((category) => (
+                  <div key={category.id} className="admin-list-row">
+                    <div><strong>{category.name}</strong><p>{category.slug}</p></div>
                     <div className="admin-row-actions">
                       <button className="admin-icon-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })} aria-label={`Edit ${category.name}`}><FaRegEdit aria-hidden="true" /></button>
                       <button className="admin-icon-btn danger" type="button" onClick={async () => {
@@ -1350,11 +1351,11 @@ function AdminPage({
                         }
                       }} aria-label={`Remove ${category.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
                     </div>
-              </div>
-            ))}
-            {subcategoryFormOptions.map((subcategory) => (
-              <div key={subcategory.id} className="admin-list-row">
-                <div><strong>{subcategory.name}</strong><p>{subcategory.category_name}</p></div>
+                  </div>
+                ))}
+                {subcategoryFormOptions.map((subcategory) => (
+                  <div key={subcategory.id} className="admin-list-row">
+                    <div><strong>{subcategory.name}</strong><p>{subcategory.category_name}</p></div>
                     <div className="admin-row-actions">
                       <button className="admin-icon-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })} aria-label={`Edit ${subcategory.name}`}><FaRegEdit aria-hidden="true" /></button>
                       <button className="admin-icon-btn danger" type="button" onClick={async () => {
@@ -1369,10 +1370,10 @@ function AdminPage({
                         }
                       }} aria-label={`Remove ${subcategory.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
                     </div>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
             <div className="admin-card">
               <div className="admin-panel-header compact">
@@ -1429,12 +1430,12 @@ function AdminPage({
                 <input value={machineSearch} onChange={(e) => setMachineSearch(e.target.value)} placeholder="Search machines..." />
               </label>
               <div className="admin-list machine-list">
-            {visibleMachines.map((machine) => (
-              <div key={machine.id || machine.machine_id} className="admin-list-row">
-                <div>
-                  <strong>{machine.machine_name}</strong>
-                  <p>{machine.category_id} | {machine.subcategory}</p>
-                </div>
+                {visibleMachines.map((machine) => (
+                  <div key={machine.id || machine.machine_id} className="admin-list-row">
+                    <div>
+                      <strong>{machine.machine_name}</strong>
+                      <p>{machine.category_id} | {machine.subcategory}</p>
+                    </div>
                     <div className="admin-row-actions">
                       <button className="admin-icon-btn" type="button" onClick={() => editMachine(machine)} aria-label={`Edit ${machine.machine_name}`}><FaRegEdit aria-hidden="true" /></button>
                       <button className="admin-icon-btn danger" type="button" onClick={async () => {
@@ -1449,11 +1450,11 @@ function AdminPage({
                         }
                       }} aria-label={`Remove ${machine.machine_name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
                     </div>
-              </div>
-            ))}
+                  </div>
+                ))}
                 {!visibleMachines.length && <p className="admin-empty-state">No machines match your search.</p>}
-          </div>
-        </div>
+              </div>
+            </div>
           </aside>
         </div>
       </div>
@@ -2263,7 +2264,7 @@ function ContactPage() {
       {/* Department Section */}
       <section className="contact-dept-section">
         <div className="contact-container">
-                <h2 className="section-title text-center">Salvin Family</h2>
+          <h2 className="section-title text-center">Salvin Family</h2>
           <div className="dept-grid">
 
             {/* Dept Cards */}
@@ -2274,8 +2275,8 @@ function ContactPage() {
                 <a href="mailto:keval.projectindia@gmail.com">keval.projectindia@gmail.com</a>
               </div>
             </div>
-            
-             {/* <div className="dept-card">
+
+            {/* <div className="dept-card">
               <div className="dept-info">
                 <strong>CEO</strong>
                 <span>Priya Rajput</span>
@@ -2283,7 +2284,7 @@ function ContactPage() {
               </div>
             </div> */}
 
-             <div className="dept-card">
+            <div className="dept-card">
               <div className="dept-info">
                 <strong>General Manager</strong>
                 <span>Nidhi Shah</span>
@@ -2354,7 +2355,7 @@ function ContactPage() {
                 <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
               </div>
             </div>
-            
+
             <div className="dept-card">
               <div className="dept-info">
                 <strong>Service incharge</strong>
@@ -2600,6 +2601,7 @@ export default function App() {
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
           <Route path="/turnkey-project/red-chilli-processing-plant" element={<RedChilliDetailPage />} />
+          <Route path="/turnkey-project/petroleum-jelly-manufacturing-plant" element={<PetroleumJellyDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

@@ -3,26 +3,116 @@ import { useParams, NavLink } from 'react-router-dom'
 import { getProjectDetails } from '../data/turnkeyProjectsData'
 import './RedChilliDetailPage.css' // Reuse the master layout stylesheet
 
-/* Helper to dynamically resolve clean SVG icons for process stages without emojis */
+/* Helper to dynamically resolve unique SVG icons for each process stage.
+   Priority: most-specific keyword first to prevent duplicate assignments. */
 function getStepIcon(title, id) {
   const t = (title || '').toLowerCase()
-  if (t.includes('receiving') || t.includes('feeding') || t.includes('intake') || t.includes('ingestion')) {
+
+  // ── RAW MATERIAL INTAKE ──
+  if (t.includes('receiving') || t.includes('intake') || t.includes('ingestion') || t.includes('feeding')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-        <path d="m3.3 7 8.7 5 8.7-5" />
-        <path d="M12 22V12" />
+        <path d="m3.3 7 8.7 5 8.7-5" /><path d="M12 22V12" />
       </svg>
     )
   }
-  if (t.includes('washing') || t.includes('cleaning') || t.includes('destoning') || t.includes('bubble') || t.includes('aspiration') || t.includes('separation')) {
+
+  // ── WASHING / CLEANING / BUBBLE WASH ──
+  if (t.includes('bubble wash') || t.includes('spray wash') || t.includes('jet wash') || t.includes('latex spray') || t.includes('latex') || t.includes('pre-aspiration')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z" />
+        <path d="M9.5 15a2.5 2.5 0 0 1 5 0" />
+      </svg>
+    )
+  }
+
+  // ── GENERAL WASHING / CLEANING ──
+  if (t.includes('washing') || t.includes('cleaning') || t.includes('sanitiz') || t.includes('rinsing') || t.includes('shower')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 22a7 7 0 0 0 7-7c0-4.3-7-11-7-11S5 10.7 5 15a7 7 0 0 0 7 7z" />
       </svg>
     )
   }
-  if (t.includes('drying') || t.includes('dry') || t.includes('roasting') || t.includes('curing') || t.includes('boiler')) {
+
+  // ── DUST / ASPIRATION / SEPARATION (not filtration) ──
+  if (t.includes('aspiration') || t.includes('dust') || t.includes('winnow') || t.includes('de-husk')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2" />
+      </svg>
+    )
+  }
+
+  // ── SORTING / GRADING / INSPECTION ──
+  if (t.includes('sorting') || t.includes('grading') || t.includes('inspection') || t.includes('optical') || t.includes('colour sort') || t.includes('color sort') || t.includes('vibrating screen') || t.includes('vibrat')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <line x1="8" y1="6" x2="21" y2="6" /><line x1="8" y1="12" x2="21" y2="12" /><line x1="8" y1="18" x2="21" y2="18" />
+        <line x1="3" y1="6" x2="3.01" y2="6" /><line x1="3" y1="12" x2="3.01" y2="12" /><line x1="3" y1="18" x2="3.01" y2="18" />
+      </svg>
+    )
+  }
+
+  // ── PEELING / BLANCHING / SKIN REMOVAL ──
+  if (t.includes('peel') || t.includes('blanch') || t.includes('abrasive') || t.includes('skin') || t.includes('bulb') || t.includes('de-seed')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+      </svg>
+    )
+  }
+
+  // ── DESTONING / GRAVITY SEPARATION ──
+  if (t.includes('deston') || t.includes('gravity') || t.includes('stone') || t.includes('heavy') || t.includes('separator')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" />
+      </svg>
+    )
+  }
+
+  // ── CUTTING / SLICING / DICING / CRUSHING (pre-mill) ──
+  if (t.includes('cutting') || t.includes('slicing') || t.includes('dicing') || t.includes('chopping') || t.includes('coarse crush') || t.includes('pre-crush') || t.includes('impact')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M6 12h12M6 8h12M6 16h12" /><rect x="2" y="4" width="20" height="16" rx="2" />
+      </svg>
+    )
+  }
+
+  // ── CRUSHING / DISINTEGRATION (general) ──
+  if (t.includes('crush') || t.includes('disintegrat') || t.includes('breaker') || t.includes('break')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+      </svg>
+    )
+  }
+
+  // ── FINE GRINDING / MILLING / PULVERISING ──
+  if (t.includes('grinding') || t.includes('grind') || t.includes('milling') || t.includes('mill') || t.includes('pulveris') || t.includes('cryogenic') || t.includes('pin mill') || t.includes('colloid') || t.includes('micron')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <circle cx="12" cy="12" r="3" />
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9" />
+      </svg>
+    )
+  }
+
+  // ── ROASTING / HOT-AIR ROASTING ──
+  if (t.includes('roasting') || t.includes('roast')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
+      </svg>
+    )
+  }
+
+  // ── DRYING / DEHYDRATING ──
+  if (t.includes('drying') || t.includes('dryer') || t.includes('dehydrat') || t.includes('moisture')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <circle cx="12" cy="12" r="4" />
@@ -30,46 +120,124 @@ function getStepIcon(title, id) {
       </svg>
     )
   }
-  if (t.includes('crushing') || t.includes('crush') || t.includes('cutting') || t.includes('cut') || t.includes('peeling') || t.includes('peel') || t.includes('slicing') || t.includes('slice')) {
+
+  // ── BOILING / STEAM CURING / COOKING ──
+  if (t.includes('boiling') || t.includes('curing') || t.includes('steam') || t.includes('cooking') || t.includes('kettle') || t.includes('thermal')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M6 12h12M6 8h12M6 16h12" />
-        <rect x="2" y="4" width="20" height="16" rx="2" />
+        <path d="M9 12h.01M15 12h.01M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z" />
+        <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32" />
       </svg>
     )
   }
-  if (t.includes('grinding') || t.includes('grind') || t.includes('milling') || t.includes('mill') || t.includes('pulveris') || t.includes('refining')) {
+
+  // ── PULPING / EXTRACTION / PRESSING ──
+  if (t.includes('pulping') || t.includes('extraction') || t.includes('extract') || t.includes('pressing') || t.includes('press') || t.includes('juice extract')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <circle cx="12" cy="12" r="3" />
-        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 7.19 7 5c-.71 2.65-.57 4.86.42 6.28C8.43 12.7 11 13.23 11 16.3c0 2.21-1.79 4-4 4S3 18.51 3 16.3h4" />
+        <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97" />
       </svg>
     )
   }
-  if (t.includes('sieving') || t.includes('sieve') || t.includes('sifting') || t.includes('filtration') || t.includes('filter') || t.includes('clarif') || t.includes('separa') || t.includes('de-seeding') || t.includes('centrifug')) {
+
+  // ── MICRO FILTRATION / FINE FILTRATION ──
+  if (t.includes('micro filter') || t.includes('micro filtration') || t.includes('fine filter') || t.includes('fine filtration') || t.includes('duplex filter') || t.includes('cartridge') || t.includes('clarif')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M3 6h18M7 12h10M11 18h2" />
+      </svg>
+    )
+  }
+
+  // ── COARSE FILTRATION / STRAINING ──
+  if (t.includes('coarse filter') || t.includes('coarse filtration') || t.includes('strainer') || t.includes('pre-filter') || t.includes('primary filter')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
       </svg>
     )
   }
-  if (t.includes('blend') || t.includes('homogen') || t.includes('mix') || t.includes('dissolut') || t.includes('pulp')) {
+
+  // ── GENERAL FILTRATION / SIEVING / SIFTING ──
+  if (t.includes('filtration') || t.includes('filter') || t.includes('sieving') || t.includes('sieve') || t.includes('sifting') || t.includes('rotary siev') || t.includes('screen') || t.includes('centrifug')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="3" width="20" height="4" rx="1" />
+        <path d="M6 7v14M10 7v10M14 7v12M18 7v8" />
+      </svg>
+    )
+  }
+
+  // ── VACUUM / DEAERATION / EVAPORATION / CONCENTRATION ──
+  if (t.includes('vacuum') || t.includes('deaerat') || t.includes('evaporat') || t.includes('concentrat')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16z" />
+        <path d="M12 6v6l4 2" /><path d="M2 12h2M20 12h2M12 2v2M12 20v2" />
+      </svg>
+    )
+  }
+
+  // ── PRE-HEATING / HEATING / WARMING ──
+  if (t.includes('pre-heat') || t.includes('preheat') || t.includes('pre heat') || t.includes('heating') || t.includes('warming') || t.includes('warm') || t.includes('melting') || t.includes('melt') || t.includes('liquif')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
+      </svg>
+    )
+  }
+
+  // ── HOMOGENIZATION / AGITATION ──
+  if (t.includes('homogen') || t.includes('agitat')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22V12" /><path d="M5 17H2a10 10 0 0 1 20 0h-3" />
+        <circle cx="12" cy="12" r="2" />
+      </svg>
+    )
+  }
+
+  // ── BLENDING / MIXING / DOSING (ingredient) ──
+  if (t.includes('blend') || t.includes('mixing') || t.includes('ingredient') || t.includes('dissolut') || t.includes('stirr')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M19 22H5a2 2 0 0 1-2-2V4h18v16a2 2 0 0 1-2 2z" />
-        <path d="M12 4v10" />
-        <path d="M9 11l3 3 3-3" />
+        <path d="M12 4v10" /><path d="M9 11l3 3 3-3" />
       </svg>
     )
   }
-  if (t.includes('pack') || t.includes('bag') || t.includes('fill') || t.includes('seam') || t.includes('cap') || t.includes('label') || t.includes('dosing') || t.includes('wrapping')) {
+
+  // ── POLISHING / BRUSHING / GLAZING ──
+  if (t.includes('polish') || t.includes('brush') || t.includes('glaz') || t.includes('paraffin') || t.includes('shining')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M12 22V12M3 12h18M12 2l9 5-9 5-9-5 9-5z" />
-        <path d="M3 7v10l9 5 9-5V7" />
+        <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
       </svg>
     )
   }
+
+  // ── COOLING / CHILLING / SETTLING / TEMPERING ──
+  if (t.includes('cooling') || t.includes('chilling') || t.includes('cool') || t.includes('chill') || t.includes('settl') || t.includes('temper')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <line x1="12" y1="2" x2="12" y2="22" /><path d="m17 5-5 5-5-5" /><path d="m17 19-5-5-5 5" />
+        <path d="m2 12 5-3 5 3 5-3 5 3" />
+      </svg>
+    )
+  }
+
+  // ── PITTING / DE-SEEDING ──
+  if (t.includes('pitting') || t.includes('pit') || t.includes('seeding') || t.includes('de-seed') || t.includes('deseeding') || t.includes('stone remov') || t.includes('stuffed')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22c6.23-.05 7.87-5.57 7.5-10-.36-4.34-3.95-9.96-7.5-10-3.55.04-7.14 5.66-7.5 10-.37 4.43 1.27 9.95 7.5 10z" />
+        <path d="M12 12v4" /><circle cx="12" cy="9" r="1" />
+      </svg>
+    )
+  }
+
+  // ── PASTEURIZATION / STERILIZATION / RETORT / AUTOCLAVE ──
   if (t.includes('pasteur') || t.includes('retort') || t.includes('autoclave') || t.includes('steril')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -78,26 +246,141 @@ function getStepIcon(title, id) {
       </svg>
     )
   }
-  if (t.includes('storage') || t.includes('warehous') || t.includes('cool') || t.includes('temper') || t.includes('settl')) {
+
+  // ── CAN FILLING / SYRUP DOSING / VOLUMETRIC FILLING ──
+  if (t.includes('can fill') || t.includes('volumetric') || t.includes('syrup') || t.includes('brine') || t.includes('dosing')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-        <polyline points="9 22 9 12 15 12 15 22" />
+        <path d="M8 2h8l1 5H7z" /><rect x="5" y="7" width="14" height="15" rx="2" />
+        <path d="M12 11v5M9.5 13.5h5" />
       </svg>
     )
   }
-  // Generic fallback based on ID
-  const fallbackIcons = [
-    <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <path d="M12 22v-9m-9 0h18M12 2l9 5-9 5-9-5 9-5z" />
-    </svg>,
-    <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-      <circle cx="12" cy="12" r="3" />
-      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82" />
-    </svg>
+
+  // ── SEAMING / DOUBLE SEAM / AIR EXHAUSTING ──
+  if (t.includes('seam') || t.includes('double seam') || t.includes('exhausting') || t.includes('exhaust') || t.includes('sealing') || t.includes('seal') || t.includes('induction')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z" />
+        <path d="M8 12l3 3 5-5" />
+      </svg>
+    )
+  }
+
+  // ── FILLING / BOTTLING / JAR FILLING ──
+  if (t.includes('filling') || t.includes('fill') || t.includes('bottling') || t.includes('bottle') || t.includes('jar') || t.includes('hot fill')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M8 2h8l1 5H7z" /><rect x="6" y="7" width="12" height="14" rx="2" />
+        <path d="M12 11v6" />
+      </svg>
+    )
+  }
+
+  // ── CAPPING / LIDDING ──
+  if (t.includes('capping') || t.includes('cap') || t.includes('lid') || t.includes('lidding') || t.includes('closure') || t.includes('closing')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="4" y="2" width="16" height="4" rx="1" />
+        <rect x="6" y="6" width="12" height="16" rx="2" />
+        <path d="M10 10h4M10 14h4" />
+      </svg>
+    )
+  }
+
+  // ── LABELING / TAGGING ──
+  if (t.includes('label') || t.includes('tag') || t.includes('sticker') || t.includes('print') || t.includes('marking')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" />
+        <line x1="7" y1="7" x2="7.01" y2="7" />
+      </svg>
+    )
+  }
+
+  // ── PACKAGING / BOXING / CARTON ──
+  if (t.includes('packing') || t.includes('boxing') || t.includes('carton') || t.includes('cartoning') || t.includes('dispatch') || t.includes('shipment') || t.includes('warehousing') || t.includes('warehous') || t.includes('storage')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 22V12M3 12h18M12 2l9 5-9 5-9-5 9-5z" /><path d="M3 7v10l9 5 9-5V7" />
+      </svg>
+    )
+  }
+
+  // ── BAGGING / FFS / FLOW WRAPPING / WRAPPING ──
+  if (t.includes('bagging') || t.includes('bag') || t.includes('ffs') || t.includes('flow wrap') || t.includes('wrapping') || t.includes('pouch') || t.includes('sachet')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+        <line x1="3" y1="6" x2="21" y2="6" /><path d="M16 10a4 4 0 0 1-8 0" />
+      </svg>
+    )
+  }
+
+  // ── METAL DETECTION / QUALITY CHECK ──
+  if (t.includes('metal detect') || t.includes('quality') || t.includes('inspection') || t.includes('testing') || t.includes('assurance') || t.includes('check')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polyline points="9 11 12 14 22 4" /><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </svg>
+    )
+  }
+
+  // ── MAGNETIC SEPARATION ──
+  if (t.includes('magnetic') || t.includes('magnet')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M6 15V9a6 6 0 0 1 12 0v6" /><path d="M4 15h4v4a2 2 0 0 1-4 0v-4z" />
+        <path d="M16 15h4v4a2 2 0 0 1-4 0v-4z" />
+      </svg>
+    )
+  }
+
+  // ── CONDITIONING / MOISTURE CONTROL ──
+  if (t.includes('condition') || t.includes('humidity')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25" />
+        <line x1="8" y1="16" x2="8.01" y2="16" /><line x1="8" y1="20" x2="8.01" y2="20" />
+        <line x1="12" y1="18" x2="12.01" y2="18" /><line x1="12" y1="22" x2="12.01" y2="22" />
+        <line x1="16" y1="16" x2="16.01" y2="16" /><line x1="16" y1="20" x2="16.01" y2="20" />
+      </svg>
+    )
+  }
+
+  // ── CONVEYOR / TRANSPORT / TRANSFER ──
+  if (t.includes('convey') || t.includes('transfer') || t.includes('transport') || t.includes('elevator') || t.includes('feeding')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <rect x="2" y="7" width="20" height="10" rx="2" />
+        <circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" />
+        <path d="M7 7V5M17 7V5" />
+      </svg>
+    )
+  }
+
+  // ── WEIGHING / BATCHING / MULTI-HEAD WEIGHER ──
+  if (t.includes('weigh') || t.includes('batch') || t.includes('multi-head') || t.includes('combination scale') || t.includes('scale')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M12 3a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H6a5 5 0 1 0 0 10h12a5 5 0 1 0 0-10h-2" />
+        <path d="M12 3 9 6l3 3" />
+      </svg>
+    )
+  }
+
+  // ── Fallback — unique icons per numeric id ──
+  const FALLBACKS = [
+    <svg key="f0" className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>,
+    <svg key="f1" className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>,
+    <svg key="f2" className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>,
+    <svg key="f3" className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>,
+    <svg key="f4" className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>,
+    <svg key="f5" className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22V12M3 12h18M12 2l9 5-9 5-9-5 9-5z"/><path d="M3 7v10l9 5 9-5V7"/></svg>,
   ]
-  return fallbackIcons[id % fallbackIcons.length]
+  return FALLBACKS[id % FALLBACKS.length]
 }
+
 
 /* Helper to resolve dynamic FAQs when not explicitly defined in data layer */
 function getFAQsForProject(details) {
