@@ -60,8 +60,7 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
             'Beetroot Juice Processing Plant',
             'Turmeric Powder Processing Plant',
             'Honey Processing & Bottling Plant',
-            'Dates Processing & Packing Plant',
-            'Petroleum Jelly Manufacturing Plant'
+            'Dates Processing & Packing Plant'
           ].includes(title) && (
               <NavLink
                 to={detailsPath}
