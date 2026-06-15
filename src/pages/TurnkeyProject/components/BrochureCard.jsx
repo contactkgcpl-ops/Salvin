@@ -60,7 +60,16 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
             'Beetroot Juice Processing Plant',
             'Turmeric Powder Processing Plant',
             'Honey Processing & Bottling Plant',
-            'Dates Processing & Packing Plant'
+            'Dates Processing & Packing Plant',
+            'Petroleum Jelly Manufacturing Plant',
+            'Jackfruit Canning & Retort Line',
+            'Pasta & Noodles Production Plant',
+            'Peanut Butter Processing Plant',
+            'Ginger Garlic Paste Plant',
+            'Black Pepper Powder Line',
+            'Seed Cleaning & Sorting Line',
+            'Cocoa Powder Processing System',
+            'Liquid Glucose Manufacturing Plant'
           ].includes(title) && (
               <NavLink
                 to={detailsPath}

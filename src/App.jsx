@@ -84,7 +84,15 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import RedChilliDetailPage from "./pages/TurnkeyProject/components/RedChilliDetailPage";
+import PastaNoodlesDetailPage from "./pages/TurnkeyProject/components/PastaNoodlesDetailPage";
+import PeanutButterDetailPage from "./pages/TurnkeyProject/components/PeanutButterDetailPage";
 import PetroleumJellyDetailPage from "./pages/TurnkeyProject/components/PetroleumJellyDetailPage";
+import JackfruitDetailPage from "./pages/TurnkeyProject/components/JackfruitDetailPage";
+import GingerGarlicPasteDetailPage from "./pages/TurnkeyProject/components/GingerGarlicPasteDetailPage";
+import BlackPepperDetailPage from "./pages/TurnkeyProject/components/BlackPepperDetailPage";
+import SeedCleaningSortingDetailPage from "./pages/TurnkeyProject/components/SeedCleaningSortingDetailPage";
+import CocoaPowderProcessingDetailPage from "./pages/TurnkeyProject/components/CocoaPowderProcessingDetailPage";
+import LiquidGlucoseDetailPage from "./pages/TurnkeyProject/components/LiquidGlucoseDetailPage";
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
@@ -2601,7 +2609,15 @@ export default function App() {
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
           <Route path="/turnkey-project/red-chilli-processing-plant" element={<RedChilliDetailPage />} />
+          <Route path="/turnkey-project/pasta-noodles-production-plant" element={<PastaNoodlesDetailPage />} />
+          <Route path="/turnkey-project/peanut-butter-processing-plant" element={<PeanutButterDetailPage />} />
           <Route path="/turnkey-project/petroleum-jelly-manufacturing-plant" element={<PetroleumJellyDetailPage />} />
+          <Route path="/turnkey-project/jackfruit-canning-retort-line" element={<JackfruitDetailPage />} />
+          <Route path="/turnkey-project/ginger-garlic-paste-plant" element={<GingerGarlicPasteDetailPage />} />
+          <Route path="/turnkey-project/black-pepper-powder-line-plant" element={<BlackPepperDetailPage />} />
+          <Route path="/turnkey-project/seed-cleaning-sorting-line-plant" element={<SeedCleaningSortingDetailPage />} />
+          <Route path="/turnkey-project/cocoa-powder-processing-system-plant" element={<CocoaPowderProcessingDetailPage />} />
+          <Route path="/turnkey-project/liquid-glucose-manufacturing-plant" element={<LiquidGlucoseDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
