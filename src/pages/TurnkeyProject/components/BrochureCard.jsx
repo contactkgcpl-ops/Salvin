@@ -69,7 +69,17 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
             'Black Pepper Powder Line',
             'Seed Cleaning & Sorting Line',
             'Cocoa Powder Processing System',
-            'Liquid Glucose Manufacturing Plant'
+            'Liquid Glucose Manufacturing Plant',
+            'Pizza Sauce Processing Plant',
+            'Tomato Ketchup Manufacturing Plant',
+            'Coffee Processing Plant',
+            'Green Tea Processing Plant',
+            'Potato Powder Dehydration Plant',
+            'Industrial Flour Milling Plant',
+            'Peanut Oil Mill Plant',
+            'Edible Oil Processing Plant',
+            'Wheat Flour Processing Plant',
+            'Coriander Powder Plant'
           ].includes(title) && (
               <NavLink
                 to={detailsPath}

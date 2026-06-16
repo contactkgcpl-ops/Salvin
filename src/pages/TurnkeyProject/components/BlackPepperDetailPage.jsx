@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './BlackPepperDetailPage.css'
+import WhyChooseSalvin from './WhyChooseSalvin'
 
 /* ─── Process Flow Steps ─── */
 const PROCESS_STEPS = [
@@ -383,96 +384,11 @@ export default function BlackPepperDetailPage() {
         </div>
       </section>
 
-      {/* ═══ BENEFITS / ADVANTAGES ═══ */}
-      <section className="bpp-section bpp-why-salvin" id="why-salvin" data-animate>
-        <div className={`bpp-container bpp-animate ${isVisible['why-salvin'] ? 'bpp-animate--in' : ''}`}>
-          <div className="bpp-section-badge">Key Benefits</div>
-          <h2 className="bpp-section-title">Plant <span className="bpp-accent">Advantages</span></h2>
-          <div className="bpp-why-salvin__grid">
-            {/* Card 1 */}
-            <div className="bpp-why-salvin__card">
-              <div className="bpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-                </svg>
-              </div>
-              <div>
-                <p className="bpp-why-salvin__title">Consistent Quality</p>
-                <p className="bpp-why-salvin__desc">Ensures uniform texture and aroma retention throughout the processing.</p>
-              </div>
-            </div>
-            {/* Card 2 */}
-            <div className="bpp-why-salvin__card">
-              <div className="bpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </div>
-              <div>
-                <p className="bpp-why-salvin__title">Hygienic Production</p>
-                <p className="bpp-why-salvin__desc">Constructed with high-grade stainless steel to ensure food safety.</p>
-              </div>
-            </div>
-            {/* Card 3 */}
-            <div className="bpp-why-salvin__card">
-              <div className="bpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-              </div>
-              <div>
-                <p className="bpp-why-salvin__title">Energy Efficient</p>
-                <p className="bpp-why-salvin__desc">Designed to minimize energy consumption while maximizing output.</p>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="bpp-why-salvin__card">
-              <div className="bpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-              </div>
-              <div>
-                <p className="bpp-why-salvin__title">High Capacity</p>
-                <p className="bpp-why-salvin__desc">Efficient workflow supports high volume processing with minimal downtime.</p>
-              </div>
-            </div>
-            {/* Card 5 */}
-            <div className="bpp-why-salvin__card">
-              <div className="bpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <div>
-                <p className="bpp-why-salvin__title">Uniform Fineness</p>
-                <p className="bpp-why-salvin__desc">Advanced sieving guarantees desired mesh grade with consistent purity.</p>
-              </div>
-            </div>
-            {/* Card 6 */}
-            <div className="bpp-why-salvin__card">
-              <div className="bpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
-                  <path d="M7 8h.01M12 8h.01M17 8h.01M7 12h10" />
-                </svg>
-              </div>
-              <div>
-                <p className="bpp-why-salvin__title">Easy Plant Operation</p>
-                <p className="bpp-why-salvin__desc">User-friendly controls and automated systems ensure smooth functioning.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <WhyChooseSalvin prefix="bpp" isVisible={isVisible['why-salvin']} />
 
-      {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
+{/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="bpp-section bpp-cta" id="enquiry" data-animate>
         <div className={`bpp-container bpp-animate ${isVisible['enquiry'] ? 'bpp-animate--in' : ''}`}>
           <div className="bpp-cta__box">

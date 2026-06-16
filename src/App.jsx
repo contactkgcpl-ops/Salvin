@@ -84,6 +84,16 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import RedChilliDetailPage from "./pages/TurnkeyProject/components/RedChilliDetailPage";
+import PizzaSauceProcessingDetailPage from "./pages/TurnkeyProject/components/PizzaSauceProcessingDetailPage";
+import TomatoKetchupManufacturingDetailPage from "./pages/TurnkeyProject/components/TomatoKetchupManufacturingDetailPage";
+import CoffeeProcessingDetailPage from "./pages/TurnkeyProject/components/CoffeeProcessingDetailPage";
+import GreenTeaProcessingDetailPage from "./pages/TurnkeyProject/components/GreenTeaProcessingDetailPage";
+import PotatoPowderDehydrationDetailPage from "./pages/TurnkeyProject/components/PotatoPowderDehydrationDetailPage";
+import IndustrialFlourMillingDetailPage from "./pages/TurnkeyProject/components/IndustrialFlourMillingDetailPage";
+import PeanutOilMillDetailPage from "./pages/TurnkeyProject/components/PeanutOilMillDetailPage";
+import CorianderPowderDetailPage from "./pages/TurnkeyProject/components/CorianderPowderDetailPage";
+import WheatFlourProcessingDetailPage from "./pages/TurnkeyProject/components/WheatFlourProcessingDetailPage";
+import EdibleOilProcessingDetailPage from "./pages/TurnkeyProject/components/EdibleOilProcessingDetailPage";
 import PastaNoodlesDetailPage from "./pages/TurnkeyProject/components/PastaNoodlesDetailPage";
 import PeanutButterDetailPage from "./pages/TurnkeyProject/components/PeanutButterDetailPage";
 import PetroleumJellyDetailPage from "./pages/TurnkeyProject/components/PetroleumJellyDetailPage";
@@ -2609,6 +2619,16 @@ export default function App() {
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
           <Route path="/turnkey-project/red-chilli-processing-plant" element={<RedChilliDetailPage />} />
+          <Route path="/turnkey-project/pizza-sauce-processing-plant" element={<PizzaSauceProcessingDetailPage />} />
+          <Route path="/turnkey-project/tomato-ketchup-manufacturing-plant" element={<TomatoKetchupManufacturingDetailPage />} />
+          <Route path="/turnkey-project/coffee-processing-plant" element={<CoffeeProcessingDetailPage />} />
+          <Route path="/turnkey-project/green-tea-processing-plant" element={<GreenTeaProcessingDetailPage />} />
+          <Route path="/turnkey-project/potato-powder-dehydration-plant" element={<PotatoPowderDehydrationDetailPage />} />
+          <Route path="/turnkey-project/industrial-flour-milling-plant" element={<IndustrialFlourMillingDetailPage />} />
+          <Route path="/turnkey-project/peanut-oil-mill-plant" element={<PeanutOilMillDetailPage />} />
+          <Route path="/turnkey-project/edible-oil-processing-plant" element={<EdibleOilProcessingDetailPage />} />
+          <Route path="/turnkey-project/wheat-flour-processing-plant" element={<WheatFlourProcessingDetailPage />} />
+          <Route path="/turnkey-project/coriander-powder-plant" element={<CorianderPowderDetailPage />} />
           <Route path="/turnkey-project/pasta-noodles-production-plant" element={<PastaNoodlesDetailPage />} />
           <Route path="/turnkey-project/peanut-butter-processing-plant" element={<PeanutButterDetailPage />} />
           <Route path="/turnkey-project/petroleum-jelly-manufacturing-plant" element={<PetroleumJellyDetailPage />} />

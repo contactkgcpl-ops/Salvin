@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './SeedCleaningSortingDetailPage.css'
+import WhyChooseSalvin from './WhyChooseSalvin'
 
 /* ─── Process Flow Steps ─── */
 const PROCESS_STEPS = [
@@ -383,96 +384,11 @@ export default function SeedCleaningSortingDetailPage() {
         </div>
       </section>
 
-      {/* ═══ BENEFITS / ADVANTAGES ═══ */}
-      <section className="scs-section scs-why-salvin" id="why-salvin" data-animate>
-        <div className={`scs-container scs-animate ${isVisible['why-salvin'] ? 'scs-animate--in' : ''}`}>
-          <div className="scs-section-badge">Key Benefits</div>
-          <h2 className="scs-section-title">Plant <span className="scs-accent">Advantages</span></h2>
-          <div className="scs-why-salvin__grid">
-            {/* Card 1 */}
-            <div className="scs-why-salvin__card">
-              <div className="scs-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-                </svg>
-              </div>
-              <div>
-                <p className="scs-why-salvin__title">High Seed Purity</p>
-                <p className="scs-why-salvin__desc">Multi-stage cleaning effectively removes dust, chaff, and oversized impurities.</p>
-              </div>
-            </div>
-            {/* Card 2 */}
-            <div className="scs-why-salvin__card">
-              <div className="scs-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </div>
-              <div>
-                <p className="scs-why-salvin__title">Accurate Grading</p>
-                <p className="scs-why-salvin__desc">Precision screening ensures uniformly sized seeds for better market value.</p>
-              </div>
-            </div>
-            {/* Card 3 */}
-            <div className="scs-why-salvin__card">
-              <div className="scs-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-              </div>
-              <div>
-                <p className="scs-why-salvin__title">Increased Germination</p>
-                <p className="scs-why-salvin__desc">Gravity separation isolates heavy, viable seeds for improved germination rates.</p>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="scs-why-salvin__card">
-              <div className="scs-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-              </div>
-              <div>
-                <p className="scs-why-salvin__title">High Processing Capacity</p>
-                <p className="scs-why-salvin__desc">Continuous operation designed for high throughput and industrial demands.</p>
-              </div>
-            </div>
-            {/* Card 5 */}
-            <div className="scs-why-salvin__card">
-              <div className="scs-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <div>
-                <p className="scs-why-salvin__title">Robust Construction</p>
-                <p className="scs-why-salvin__desc">Built with durable components ensuring longevity and reliable performance.</p>
-              </div>
-            </div>
-            {/* Card 6 */}
-            <div className="scs-why-salvin__card">
-              <div className="scs-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
-                  <path d="M7 8h.01M12 8h.01M17 8h.01M7 12h10" />
-                </svg>
-              </div>
-              <div>
-                <p className="scs-why-salvin__title">Easy Operation</p>
-                <p className="scs-why-salvin__desc">Intuitive controls make adjustment and monitoring straightforward for operators.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <WhyChooseSalvin prefix="scs" isVisible={isVisible['why-salvin']} />
 
-      {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
+{/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="scs-section scs-cta" id="enquiry" data-animate>
         <div className={`scs-container scs-animate ${isVisible['enquiry'] ? 'scs-animate--in' : ''}`}>
           <div className="scs-cta__box">

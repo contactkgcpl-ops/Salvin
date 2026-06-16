@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './CocoaPowderProcessingDetailPage.css'
+import WhyChooseSalvin from './WhyChooseSalvin'
 
 /* ─── Process Flow Steps ─── */
 const PROCESS_STEPS = [
@@ -383,96 +384,11 @@ export default function CocoaPowderProcessingDetailPage() {
         </div>
       </section>
 
-      {/* ═══ BENEFITS / ADVANTAGES ═══ */}
-      <section className="cpp-section cpp-why-salvin" id="why-salvin" data-animate>
-        <div className={`cpp-container cpp-animate ${isVisible['why-salvin'] ? 'cpp-animate--in' : ''}`}>
-          <div className="cpp-section-badge">Key Benefits</div>
-          <h2 className="cpp-section-title">Plant <span className="cpp-accent">Advantages</span></h2>
-          <div className="cpp-why-salvin__grid">
-            {/* Card 1 */}
-            <div className="cpp-why-salvin__card">
-              <div className="cpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="3" />
-                  <path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-                </svg>
-              </div>
-              <div>
-                <p className="cpp-why-salvin__title">Premium Output</p>
-                <p className="cpp-why-salvin__desc">Yields exceptionally fine cocoa powder with optimal flavor profiles.</p>
-              </div>
-            </div>
-            {/* Card 2 */}
-            <div className="cpp-why-salvin__card">
-              <div className="cpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                  <path d="m9 12 2 2 4-4" />
-                </svg>
-              </div>
-              <div>
-                <p className="cpp-why-salvin__title">Consistent Roasting</p>
-                <p className="cpp-why-salvin__desc">Even heat distribution guarantees perfectly roasted beans every time.</p>
-              </div>
-            </div>
-            {/* Card 3 */}
-            <div className="cpp-why-salvin__card">
-              <div className="cpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z" />
-                </svg>
-              </div>
-              <div>
-                <p className="cpp-why-salvin__title">Advanced Winnowing</p>
-                <p className="cpp-why-salvin__desc">Flawless separation of shell and nib ensures highest purity of liquor.</p>
-              </div>
-            </div>
-            {/* Card 4 */}
-            <div className="cpp-why-salvin__card">
-              <div className="cpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                </svg>
-              </div>
-              <div>
-                <p className="cpp-why-salvin__title">Uniform Grinding</p>
-                <p className="cpp-why-salvin__desc">Liquor mill operates efficiently, generating consistent fluidity for press.</p>
-              </div>
-            </div>
-            {/* Card 5 */}
-            <div className="cpp-why-salvin__card">
-              <div className="cpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" />
-                  <line x1="8" y1="2" x2="8" y2="6" />
-                  <line x1="3" y1="10" x2="21" y2="10" />
-                </svg>
-              </div>
-              <div>
-                <p className="cpp-why-salvin__title">Hygienic Design</p>
-                <p className="cpp-why-salvin__desc">Food-grade steel and CIP elements safeguard the process against contamination.</p>
-              </div>
-            </div>
-            {/* Card 6 */}
-            <div className="cpp-why-salvin__card">
-              <div className="cpp-why-salvin__icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <path d="M8 21h8M12 17v4" />
-                  <path d="M7 8h.01M12 8h.01M17 8h.01M7 12h10" />
-                </svg>
-              </div>
-              <div>
-                <p className="cpp-why-salvin__title">Fully Integrated</p>
-                <p className="cpp-why-salvin__desc">One continuous line translates to maximized OEE and reduced labor cost.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <WhyChooseSalvin prefix="cpp" isVisible={isVisible['why-salvin']} />
 
-      {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
+{/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="cpp-section cpp-cta" id="enquiry" data-animate>
         <div className={`cpp-container cpp-animate ${isVisible['enquiry'] ? 'cpp-animate--in' : ''}`}>
           <div className="cpp-cta__box">
