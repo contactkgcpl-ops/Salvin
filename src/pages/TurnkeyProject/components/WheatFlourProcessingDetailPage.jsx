@@ -146,6 +146,14 @@ export default function WheatFlourProcessingDetailPage() {
             The Wheat Flour Processing Plant is a complete turnkey solution for producing premium-quality wheat flour products. The plant integrates cleaning, conditioning, milling, grading, blending, storage, and automated packaging systems to ensure maximum flour yield, consistent quality, and efficient production.
           </p>
           <div className="wfp-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/wheat_flour.pdf"
+              download="wheat_flour.pdf"
+              className="wfp-btn wfp-btn--primary wfp-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="wfp-btn wfp-btn--primary wfp-btn--lg">
               Enquire Now
             </a>

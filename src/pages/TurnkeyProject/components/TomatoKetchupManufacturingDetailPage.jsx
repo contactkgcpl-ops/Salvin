@@ -146,6 +146,14 @@ export default function TomatoKetchupManufacturingDetailPage() {
             Advanced turnkey solution for tomato washing, inspection, pulping, cooking, homogenization, filling, and packaging to produce premium quality tomato ketchup with high efficiency and consistent product quality.
           </p>
           <div className="tkm-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/tomato_ketchup_plant.pdf"
+              download="tomato_ketchup_plant.pdf"
+              className="tkm-btn tkm-btn--primary tkm-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="tkm-btn tkm-btn--primary tkm-btn--lg">
               Enquire Now
             </a>

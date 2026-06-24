@@ -146,6 +146,10 @@ export default function BlackPepperDetailPage() {
             Advanced turnkey solution for cleaning, sorting, roasting, pulverizing, sieving, and packaging black pepper powder with consistent quality and high production efficiency.
           </p>
           <div className="bpp-hero__actions">
+            <NavLink to="/contact" className="bpp-btn bpp-btn--primary bpp-btn--lg">
+              Request Information
+            </NavLink>
+
             <a href="#enquiry" className="bpp-btn bpp-btn--primary">
               Enquire Now
             </a>

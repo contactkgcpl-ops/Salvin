@@ -146,6 +146,10 @@ export default function CorianderPowderDetailPage() {
             The Coriander Powder Plant is a complete turnkey solution for producing premium-quality coriander powder. The plant integrates cleaning, roasting, pulverizing, sieving, blending, storage and automated packaging systems to ensure consistent product quality, superior aroma retention and efficient production.
           </p>
           <div className="cpp-hero__actions">
+            <NavLink to="/contact" className="cpp-btn cpp-btn--primary cpp-btn--lg">
+              Request Information
+            </NavLink>
+
             <a href="#enquiry" className="cpp-btn cpp-btn--primary cpp-btn--lg">
               Enquire Now
             </a>

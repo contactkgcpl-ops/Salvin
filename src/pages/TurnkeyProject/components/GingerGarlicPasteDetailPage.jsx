@@ -147,6 +147,14 @@ export default function GingerGarlicPasteDetailPage() {
             Fully integrated turnkey solution designed for hygienic processing of fresh ginger and garlic into premium quality paste.
           </p>
           <div className="ggp-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/ginger_garlic_plant.pdf"
+              download="ginger_garlic_plant.pdf"
+              className="ggp-btn ggp-btn--primary ggp-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="ggp-btn ggp-btn--primary">
               Enquire Now
             </a>

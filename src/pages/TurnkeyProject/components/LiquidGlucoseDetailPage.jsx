@@ -151,12 +151,14 @@ export default function LiquidGlucoseDetailPage() {
           </p>
           <div className="lgp-hero__actions">
             <a
-              href="/turnkey-brochures/Liquid Glucose manufacturing Plant.pdf"
-              download="Liquid Glucose manufacturing Plant.pdf"
-              className="lgp-btn lgp-btn--primary"
+              href="/turnkey-brochures/pdfs/liquid_glucose_manufacturing_plant.pdf"
+              download="liquid_glucose_manufacturing_plant.pdf"
+              className="lgp-btn lgp-btn--primary lgp-btn--lg"
             >
               Download Brochure
             </a>
+
+            
             <a href="#enquiry" className="lgp-btn lgp-btn--outline">
               Enquire Now
             </a>

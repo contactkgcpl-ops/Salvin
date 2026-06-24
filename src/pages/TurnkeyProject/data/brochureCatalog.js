@@ -42,6 +42,9 @@ const RAW = [
   ['30_groundnut_chikki.png', '', 'Groundnut Chikki Manufacturing Line', ['Cooking pans, slab forming, and guillotine cutting with ergonomic guarding.', 'Balances caramelisation windows so brittle bars retain snap without sticking wrappers.']],
   ['31_biskuit_plant.png', '', 'Biscuit Baking Turnkey', ['Dough feeding, rotary moulding or wire-cut, travelling ovens, and cream sandwich modules.', 'Supports laminated or hard dough portfolios with hygiene zoning baked into line layouts.']],
   ['2_banna_chips.png', '', 'Banana Chips Processing Line', ['Continuous frying, seasoning, and sorting tailored for snack processors.', 'Delivers uniform moisture, colour, and throughput without sacrificing operator safety.']],
+  ['protein_bar_hero.jpg', 'protein_bar.pdf', 'Protein Bar Manufacturing Plant', ['Complete Turnkey solutions for protein bar processing and packaging.', 'High-quality nutritional bars through a controlled and automated process.'], '/turnkey-project/protein-bar-manufacturing-plant'],
+  ['instant_mix_frozen_food_hero.jpg', 'instant_mix_and_frozen_food.pdf', 'Instant Mix & Frozen Food Processing Plant', ['End-to-end processing solutions for instant mixes and frozen food products.', 'Hygienic and automated systems ensuring consistent quality and extended shelf life.'], '/turnkey-project/instant-mix-frozen-food-processing-plant'],
+  ['mayonnaise/mayonnaise_card.jpg', 'mayonnaise.pdf', 'Mayonnaise Processing Plant', ['High-shear emulsification and homogenization units for perfectly stable mayonnaise and sauces.', 'Food-grade stainless steel construction ensures hygiene, efficiency, and consistent product quality.'], '/turnkey-project/mayonnaise-processing-plant'],
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

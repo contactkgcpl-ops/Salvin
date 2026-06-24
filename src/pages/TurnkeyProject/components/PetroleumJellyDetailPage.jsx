@@ -160,12 +160,14 @@ export default function PetroleumJellyDetailPage() {
           </p>
           <div className="pjp-hero__actions">
             <a
-              href="/turnkey-brochures/petrolium_jelly_plant.pdf"
+              href="/turnkey-brochures/pdfs/petrolium_jelly_plant.pdf"
               download="petrolium_jelly_plant.pdf"
-              className="pjp-btn pjp-btn--primary"
+              className="pjp-btn pjp-btn--primary pjp-btn--lg"
             >
               Download Brochure
             </a>
+
+            
             <a href="#enquiry" className="pjp-btn pjp-btn--outline">
               Enquire Now
             </a>

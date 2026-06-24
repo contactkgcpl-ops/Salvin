@@ -146,6 +146,14 @@ export default function CoffeeProcessingDetailPage() {
             Advanced turnkey solution for coffee bean cleaning, roasting, cooling, grinding, blending, storage, and packaging to produce premium quality coffee powder with consistent flavor, aroma, and high production efficiency.
           </p>
           <div className="cp-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/instant_coffee_processing.pdf"
+              download="instant_coffee_processing.pdf"
+              className="cp-btn cp-btn--primary cp-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="cp-btn cp-btn--primary cp-btn--lg">
               Enquire Now
             </a>

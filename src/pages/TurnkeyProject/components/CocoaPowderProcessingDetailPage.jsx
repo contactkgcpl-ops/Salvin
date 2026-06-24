@@ -146,6 +146,14 @@ export default function CocoaPowderProcessingDetailPage() {
             Advanced turnkey solution for cocoa bean roasting, winnowing, grinding, pulverizing, sieving, and packaging to produce premium quality cocoa powder with high efficiency and consistent output.
           </p>
           <div className="cpp-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/instant_coffee_processing.pdf"
+              download="instant_coffee_processing.pdf"
+              className="cpp-btn cpp-btn--primary cpp-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="cpp-btn cpp-btn--primary">
               Enquire Now
             </a>

@@ -146,6 +146,14 @@ export default function GreenTeaProcessingDetailPage() {
             Advanced turnkey solution for green tea leaf sorting, withering, steaming, rolling, drying, and packaging to produce premium quality green tea with excellent aroma, color retention, and shelf life.
           </p>
           <div className="gtp-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/instant_coffee_processing.pdf"
+              download="instant_coffee_processing.pdf"
+              className="gtp-btn gtp-btn--primary gtp-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="gtp-btn gtp-btn--primary gtp-btn--lg">
               Enquire Now
             </a>

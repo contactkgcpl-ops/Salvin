@@ -150,13 +150,11 @@ export default function RedChilliDetailPage() {
             Complete Turnkey Solution For Cleaning, Drying, Grinding, Pulverizing And Packaging Of Red Chilli
           </p>
           <div className="rcp-hero__actions">
-            <a
-              href="/turnkey-brochures/salvin food powder processing machinaries.pdf"
-              download="salvin food powder processing machinaries.pdf"
-              className="rcp-btn rcp-btn--primary"
-            >
-              Download Brochure
-            </a>
+            <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
+              Request Information
+            </NavLink>
+
+            
             <a href="#enquiry" className="rcp-btn rcp-btn--outline">
               Enquire Now
             </a>

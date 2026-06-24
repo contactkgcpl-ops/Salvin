@@ -151,12 +151,14 @@ export default function JackfruitDetailPage() {
           </p>
           <div className="jcp-hero__actions">
             <a
-              href="/turnkey-brochures/jecked_fruit_canned_line.pdf"
+              href="/turnkey-brochures/pdfs/jecked_fruit_canned_line.pdf"
               download="jecked_fruit_canned_line.pdf"
-              className="jcp-btn jcp-btn--primary"
+              className="jcp-btn jcp-btn--primary jcp-btn--lg"
             >
               Download Brochure
             </a>
+
+            
             <a href="#enquiry" className="jcp-btn jcp-btn--outline">
               Enquire Now
             </a>

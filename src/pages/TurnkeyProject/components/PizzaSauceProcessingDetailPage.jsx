@@ -146,6 +146,14 @@ export default function PizzaSauceProcessingDetailPage() {
             Advanced turnkey solution for ingredient inspection, tomato dicing, pulp refining, homogenization, blending, seasoning, filling, capping, and labelling to produce premium quality pizza sauce with high efficiency and consistent product quality.
           </p>
           <div className="psp-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/pasta_pizza_source_making_plant.pdf"
+              download="pasta_pizza_source_making_plant.pdf"
+              className="psp-btn psp-btn--primary psp-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="psp-btn psp-btn--primary psp-btn--lg">
               Enquire Now
             </a>

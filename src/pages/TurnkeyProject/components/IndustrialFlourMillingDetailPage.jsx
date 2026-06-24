@@ -146,6 +146,14 @@ export default function IndustrialFlourMillingDetailPage() {
             Our Industrial Flour Milling Plant is engineered for efficient wheat processing and premium flour production. The plant integrates cleaning, conditioning, roller milling, plansifting, grading and automatic packaging systems to deliver consistent flour quality with high extraction rates.
           </p>
           <div className="ifm-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/wheat_flour.pdf"
+              download="wheat_flour.pdf"
+              className="ifm-btn ifm-btn--primary ifm-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="ifm-btn ifm-btn--primary ifm-btn--lg">
               Enquire Now
             </a>

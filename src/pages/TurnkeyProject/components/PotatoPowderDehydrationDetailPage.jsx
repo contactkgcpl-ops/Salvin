@@ -146,6 +146,14 @@ export default function PotatoPowderDehydrationDetailPage() {
             Advanced turnkey solution for potato washing, peeling, slicing, dehydration, pulverizing, sieving, and packaging to produce premium quality potato powder with excellent consistency, color, and shelf life.
           </p>
           <div className="ppd-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/potato_powder_plant.pdf"
+              download="potato_powder_plant.pdf"
+              className="ppd-btn ppd-btn--primary ppd-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="ppd-btn ppd-btn--primary ppd-btn--lg">
               Enquire Now
             </a>

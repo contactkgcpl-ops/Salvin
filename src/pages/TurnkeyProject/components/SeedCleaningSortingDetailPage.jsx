@@ -146,6 +146,14 @@ export default function SeedCleaningSortingDetailPage() {
             Advanced turnkey solution for seed pre-cleaning, sorting, destoning, gravity separation, grading, and packaging to ensure premium seed quality and high processing efficiency.
           </p>
           <div className="scs-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/spices_seeds_cleaning_line.pdf"
+              download="spices_seeds_cleaning_line.pdf"
+              className="scs-btn scs-btn--primary scs-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="scs-btn scs-btn--primary">
               Enquire Now
             </a>

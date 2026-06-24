@@ -79,7 +79,10 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
             'Peanut Oil Mill Plant',
             'Edible Oil Processing Plant',
             'Wheat Flour Processing Plant',
-            'Coriander Powder Plant'
+            'Coriander Powder Plant',
+            'Protein Bar Manufacturing Plant',
+            'Instant Mix & Frozen Food Processing Plant',
+            'Mayonnaise Processing Plant'
           ].includes(title) && (
               <NavLink
                 to={detailsPath}

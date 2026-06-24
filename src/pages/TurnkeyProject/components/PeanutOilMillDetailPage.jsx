@@ -146,6 +146,14 @@ export default function PeanutOilMillDetailPage() {
             The Peanut Oil Mill Plant is a complete turnkey solution for producing high-quality edible peanut oil. The plant integrates cleaning, shelling, roasting, oil expelling, filtration and automatic packaging systems to ensure maximum oil recovery, premium quality and efficient production.
           </p>
           <div className="pom-hero__actions">
+            <a
+              href="/turnkey-brochures/pdfs/peanut_oil.pdf"
+              download="peanut_oil.pdf"
+              className="pom-btn pom-btn--primary pom-btn--lg"
+            >
+              Download Brochure
+            </a>
+
             <a href="#enquiry" className="pom-btn pom-btn--primary pom-btn--lg">
               Enquire Now
             </a>

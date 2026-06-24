@@ -8,8 +8,8 @@ const CORE_PROJECTS = {
     title: 'Beetroot Juice Processing Plant',
     badge: 'TURNKEY BEETROOT JUICE PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solution For Cleaning, Washing, Crushing, Juice Extraction, Clarification, Pasteurization and Packaging of Beetroot',
-    heroImage: '/turnkey-brochures/images/beetroot_hero.png',
-    pdfFile: 'fruit_juice_salvin.pdf',
+    heroImage: '/turnkey-brochures/images/33_instant_mix.png',
+    pdfFile: 'instant_mix_and_frozen_food.pdf',
     stats: {
       capacity: '500–5,000 Ltr',
       stages: '11 Stage',
@@ -91,7 +91,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY TURMERIC POWDER PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Washing, Boiling, Drying, Cryogenic Grinding, Sieving And Packaging Of Turmeric',
     heroImage: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.jpg',
-    pdfFile: 'salvin food powder processing machinaries.pdf',
     stats: {
       capacity: '500 Kg–5 Ton',
       stages: '11 Stage',
@@ -254,7 +253,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY DATES PROCESSING SOLUTION',
     subtitle: 'Industrial Lines For Cleaning, Washing, Pitting, De-Seeding, Drying, Grading And Vacuum Packing of Dates',
     heroImage: '/turnkey-brochures/images/dates-gallery/dates_hero.png',
-    pdfFile: 'date_processing_salvin.pdf',
     stats: {
       capacity: '500 Kg–4 Ton',
       stages: '11 Stage',
@@ -494,6 +492,33 @@ const CORE_PROJECTS = {
       { src: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.png', caption: 'Latex Spray Washer' }
     ]
   },
+  'mayonnaise-processing-plant': {
+    title: 'Mayonnaise Processing Plant',
+    badge: 'TURNKEY MAYONNAISE PROCESSING SOLUTION',
+    subtitle: 'Complete Turnkey Solutions for Industrial Mayonnaise Manufacturing, Processing & Packaging',
+    heroImage: '/turnkey-brochures/images/mayonnaise_card.jpg',
+    pdfFile: 'mayonnaise.pdf',
+    stats: {
+      capacity: '500 Ltr–3,000 Ltr',
+      stages: '7 Stage',
+      retention: 'Consistent Emulsion'
+    },
+    overview: {
+      title: 'Complete Mayonnaise Processing Plant',
+      p1: 'High capacity production with hygienic stainless steel design and PLC based automation.',
+      p2: 'Ensures consistent emulsion quality, reduced production losses, and food-grade processing standards.',
+      highlights: [],
+      image: '/turnkey-brochures/images/mayonnaise_card.jpg',
+      photoImage: '/turnkey-brochures/images/mayonnaise_card.jpg',
+      features4: []
+    },
+    capacities: [],
+    features: [],
+    processSteps: [],
+    machinery: [],
+    applications: [],
+    gallery: []
+  },
   'pasta-noodles-production-plant': {
     title: 'Pasta & Noodles Production Plant',
     badge: 'TURNKEY EXTENSION & DRYING SOLUTION',
@@ -710,7 +735,7 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY BLACK PEPPER POWDER SOLUTION',
     subtitle: 'Complete Turnkey Line For Cleaning, Drying, Cryogenic Grinding, Sieving And Packaging Of Black Pepper Powder',
     heroImage: '/turnkey-brochures/images/12_blank_pepper_powder.png',
-    pdfFile: 'salvin food powder processing machinaries.pdf',
+    pdfFile: 'salvin_food_powder_processing_machinaries.pdf',
     overview: {
       title: 'Complete Black Pepper Processing Solution',
       p1: 'Salvin Industries\' Black Pepper Powder Line is a premium turnkey solution engineered to preserve the volatile piperine content, aroma, and distinctive colour of black pepper throughout the milling process. Our integrated lines take raw cleaned berries through controlled drying, cryogenic grinding, and air-classified sieving.',
@@ -916,7 +941,7 @@ export function getProjectDetails(slug, title = '') {
     title: cleanTitle,
     badge: `TURNKEY ${cleanTitle.toUpperCase()} SOLUTION`,
     subtitle: `Complete Turnkey Processing, Refining And Packaging Lines For ${cleanTitle}`,
-    pdfFile: isPowder ? 'salvin food powder processing machinaries.pdf' : 'fruit_juice_salvin.pdf',
+    pdfFile: isPowder ? 'salvin_food_powder_processing_machinaries.pdf' : 'fruit_juice_salvin.pdf',
     stats,
     overview: {
       title: `Complete ${cleanTitle}`,

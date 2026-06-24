@@ -151,12 +151,14 @@ export default function PastaNoodlesDetailPage() {
           </p>
           <div className="pnp-hero__actions">
             <a
-              href="/turnkey-brochures/salvin food powder processing machinaries.pdf"
-              download="salvin food powder processing machinaries.pdf"
-              className="pnp-btn pnp-btn--primary"
+              href="/turnkey-brochures/pdfs/noodles_pasta_making_plant.pdf"
+              download="noodles_pasta_making_plant.pdf"
+              className="pnp-btn pnp-btn--primary pnp-btn--lg"
             >
               Download Brochure
             </a>
+
+            
             <a href="#enquiry" className="pnp-btn pnp-btn--outline">
               Enquire Now
             </a>

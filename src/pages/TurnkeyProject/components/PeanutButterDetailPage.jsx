@@ -152,12 +152,14 @@ export default function PeanutButterDetailPage() {
           </p>
           <div className="pbp-hero__actions">
             <a
-              href="/turnkey-brochures/peanut_butter_processing.pdf"
+              href="/turnkey-brochures/pdfs/peanut_butter_processing.pdf"
               download="peanut_butter_processing.pdf"
-              className="pbp-btn pbp-btn--primary"
+              className="pbp-btn pbp-btn--primary pbp-btn--lg"
             >
               Download Brochure
             </a>
+
+            
             <a href="#enquiry" className="pbp-btn pbp-btn--outline">
               Enquire Now
             </a>
