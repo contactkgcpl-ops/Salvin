@@ -404,7 +404,7 @@ export default function GingerGarlicPasteDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="ggp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="ggp" isVisible={isVisible['why-salvin']} projectKey="GingerGarlicPasteDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="ggp-section ggp-cta" id="enquiry" data-animate>

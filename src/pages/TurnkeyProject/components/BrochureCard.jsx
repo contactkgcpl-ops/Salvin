@@ -55,35 +55,7 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
             </a>
           )}
 
-          {detailsPath && [
-            'Red Chilli Processing Plant',
-            'Beetroot Juice Processing Plant',
-            'Turmeric Powder Processing Plant',
-            'Honey Processing & Bottling Plant',
-            'Dates Processing & Packing Plant',
-            'Petroleum Jelly Manufacturing Plant',
-            'Jackfruit Canning & Retort Line',
-            'Pasta & Noodles Production Plant',
-            'Peanut Butter Processing Plant',
-            'Ginger Garlic Paste Plant',
-            'Black Pepper Powder Line',
-            'Seed Cleaning & Sorting Line',
-            'Cocoa Powder Processing System',
-            'Liquid Glucose Manufacturing Plant',
-            'Pizza Sauce Processing Plant',
-            'Tomato Ketchup Manufacturing Plant',
-            'Coffee Processing Plant',
-            'Green Tea Processing Plant',
-            'Potato Powder Dehydration Plant',
-            'Industrial Flour Milling Plant',
-            'Peanut Oil Mill Plant',
-            'Edible Oil Processing Plant',
-            'Wheat Flour Processing Plant',
-            'Coriander Powder Plant',
-            'Protein Bar Manufacturing Plant',
-            'Instant Mix & Frozen Food Processing Plant',
-            'Mayonnaise Processing Plant'
-          ].includes(title) && (
+          {detailsPath && (
               <NavLink
                 to={detailsPath}
                 className="inline-flex w-full items-center justify-center gap-3 rounded-xl border-2 border-[#f47c20] bg-white px-6 py-3.5 text-sm font-bold uppercase tracking-wider text-[#f47c20] transition-all duration-300 hover:bg-[#f47c20] hover:text-white hover:shadow-lg hover:shadow-[#f47c20]/20 active:scale-[0.97]"

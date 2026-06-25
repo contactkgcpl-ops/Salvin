@@ -414,7 +414,7 @@ export default function JackfruitDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="jcp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="jcp" isVisible={isVisible['why-salvin']} projectKey="JackfruitDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="jcp-section jcp-cta" id="enquiry" data-animate>

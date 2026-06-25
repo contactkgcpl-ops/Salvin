@@ -394,7 +394,7 @@ export default function SeedCleaningSortingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="scs" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="scs" isVisible={isVisible['why-salvin']} projectKey="SeedCleaningSortingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="scs-section scs-cta" id="enquiry" data-animate>

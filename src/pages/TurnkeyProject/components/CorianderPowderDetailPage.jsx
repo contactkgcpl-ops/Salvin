@@ -391,7 +391,7 @@ export default function CorianderPowderDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="cpp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="cpp" isVisible={isVisible['why-salvin']} projectKey="CorianderPowderDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="cpp-section cpp-cta" id="enquiry" data-animate>

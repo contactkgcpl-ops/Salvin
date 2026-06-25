@@ -413,7 +413,7 @@ export default function LiquidGlucoseDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="lgp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="lgp" isVisible={isVisible['why-salvin']} projectKey="LiquidGlucoseDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="lgp-section lgp-cta" id="enquiry" data-animate>

@@ -1,3 +1,4 @@
+import WhyChooseSalvin from './WhyChooseSalvin';
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './ProteinBarManufacturingDetailPage.css'
@@ -333,6 +334,8 @@ export default function ProteinBarManufacturingDetailPage() {
           </div>
         </div>
       </section>
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <WhyChooseSalvin prefix="pbm" isVisible={isVisible['why-salvin']} projectKey="ProteinBarManufacturingDetailPage" />
 
       {/* ═══ FAQ SECTION ═══ */}
       <section className="pbm-section pbm-faq-section" id="faq" data-animate>

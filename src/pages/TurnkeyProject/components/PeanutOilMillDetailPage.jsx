@@ -395,7 +395,7 @@ export default function PeanutOilMillDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="pom" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="pom" isVisible={isVisible['why-salvin']} projectKey="PeanutOilMillDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="pom-section pom-cta" id="enquiry" data-animate>

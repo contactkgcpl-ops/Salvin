@@ -418,7 +418,7 @@ export default function PastaNoodlesDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="pnp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="pnp" isVisible={isVisible['why-salvin']} projectKey="PastaNoodlesDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="pnp-section pnp-cta" id="enquiry" data-animate>

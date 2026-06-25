@@ -1,3 +1,4 @@
+import WhyChooseSalvin from './WhyChooseSalvin';
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './InstantMixFrozenFoodDetailPage.css'
@@ -329,6 +330,8 @@ export default function InstantMixFrozenFoodDetailPage() {
           </div>
         </div>
       </section>
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <WhyChooseSalvin prefix="imff" isVisible={isVisible['why-salvin']} projectKey="InstantMixFrozenFoodDetailPage" />
 
       {/* ═══ FAQ SECTION ═══ */}
       <section className="imff-section imff-faq-section" id="faq" data-animate>

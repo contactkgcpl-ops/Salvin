@@ -399,7 +399,7 @@ export default function PizzaSauceProcessingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="psp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="psp" isVisible={isVisible['why-salvin']} projectKey="PizzaSauceProcessingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="psp-section psp-cta" id="enquiry" data-animate>

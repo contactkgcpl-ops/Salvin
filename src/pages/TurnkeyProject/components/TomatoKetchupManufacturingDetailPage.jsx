@@ -399,7 +399,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="tkm" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="tkm" isVisible={isVisible['why-salvin']} projectKey="TomatoKetchupManufacturingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="tkm-section tkm-cta" id="enquiry" data-animate>

@@ -394,7 +394,7 @@ export default function CocoaPowderProcessingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="cpp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="cpp" isVisible={isVisible['why-salvin']} projectKey="CocoaPowderProcessingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="cpp-section cpp-cta" id="enquiry" data-animate>

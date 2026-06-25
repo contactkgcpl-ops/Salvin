@@ -398,7 +398,7 @@ export default function CoffeeProcessingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="cp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="cp" isVisible={isVisible['why-salvin']} projectKey="CoffeeProcessingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="cp-section cp-cta" id="enquiry" data-animate>

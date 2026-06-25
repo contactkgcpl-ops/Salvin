@@ -398,7 +398,7 @@ export default function PotatoPowderDehydrationDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="ppd" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="ppd" isVisible={isVisible['why-salvin']} projectKey="PotatoPowderDehydrationDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="ppd-section ppd-cta" id="enquiry" data-animate>

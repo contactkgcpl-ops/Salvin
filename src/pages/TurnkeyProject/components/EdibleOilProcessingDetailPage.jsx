@@ -395,7 +395,7 @@ export default function EdibleOilProcessingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="eop" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="eop" isVisible={isVisible['why-salvin']} projectKey="EdibleOilProcessingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="eop-section eop-cta" id="enquiry" data-animate>

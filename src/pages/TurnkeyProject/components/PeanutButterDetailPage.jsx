@@ -419,7 +419,7 @@ export default function PeanutButterDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="pbp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="pbp" isVisible={isVisible['why-salvin']} projectKey="PeanutButterDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="pbp-section pbp-cta" id="enquiry" data-animate>

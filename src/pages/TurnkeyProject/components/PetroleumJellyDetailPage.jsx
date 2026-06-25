@@ -427,7 +427,7 @@ export default function PetroleumJellyDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="pjp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="pjp" isVisible={isVisible['why-salvin']} projectKey="PetroleumJellyDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="pjp-section pjp-cta" id="enquiry" data-animate>

@@ -398,7 +398,7 @@ export default function GreenTeaProcessingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="gtp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="gtp" isVisible={isVisible['why-salvin']} projectKey="GreenTeaProcessingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="gtp-section gtp-cta" id="enquiry" data-animate>

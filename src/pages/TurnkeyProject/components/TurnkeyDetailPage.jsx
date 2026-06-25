@@ -499,9 +499,9 @@ export default function TurnkeyDetailPage() {
   return (
     <div className="rcp-page">
       {/* ═══ HERO BANNER ═══ */}
-      <section className="rcp-hero">
+      <section className="rcp-hero" style={{ minHeight: details.heroMinHeight || '72vh' }}>
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('${details.heroImage || details.overview.image}')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('${details.heroImage || details.overview.image}')`, ...(details.heroStyle || {}) }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -723,7 +723,7 @@ export default function TurnkeyDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey={projectSlug} />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>

@@ -8,8 +8,10 @@ const CORE_PROJECTS = {
     title: 'Beetroot Juice Processing Plant',
     badge: 'TURNKEY BEETROOT JUICE PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solution For Cleaning, Washing, Crushing, Juice Extraction, Clarification, Pasteurization and Packaging of Beetroot',
-    heroImage: '/turnkey-brochures/images/33_instant_mix.png',
-    pdfFile: 'instant_mix_and_frozen_food.pdf',
+    heroImage: '/turnkey-brochures/images/beetroot-gallery/beetroot_juice_hero_banner.png',
+    heroMinHeight: '600px',
+    heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'fruit_juice_salvin.pdf',
     stats: {
       capacity: '500–5,000 Ltr',
       stages: '11 Stage',
@@ -414,7 +416,9 @@ const CORE_PROJECTS = {
     title: 'Jackfruit Canning & Retort Line',
     badge: 'TURNKEY FRUIT CANNING SOLUTION',
     subtitle: 'Peeling, Slicing, Syrup Staging, Can Filling, Seaming And Retort Sterilization Lines For Jackfruit',
-    heroImage: '/turnkey-brochures/images/jackfruit-gallery/jackfruit_hero.png',
+    heroImage: '/turnkey-brochures/images/jackfruit-gallery/jackfruit_canning_hero_banner.png',
+    heroMinHeight: '600px',
+    heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'jecked_fruit_canned_line.pdf',
     stats: {
       capacity: '500 Kg–3 Ton',
@@ -829,6 +833,295 @@ const CORE_PROJECTS = {
       { src: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.png', caption: 'Gravity Destoner Unit' },
       { src: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.png', caption: 'Optical Colour Sorting Machine' },
       { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.png', caption: 'Automated Seed Bagging & Packaging' }
+    ]
+  },
+  'automatic-masala-packing-plant': {
+    title: 'Automatic Masala Packing Plant',
+    badge: 'TURNKEY MASALA PACKING SOLUTION',
+    subtitle: 'Complete Turnkey Solution for Masala Processing, Blending & Packaging',
+    heroImage: '/turnkey-brochures/images/automatic-masala-packing-plant/spice_hopper_screw_conveyor.jpg',
+    pdfFile: 'AMC-30_plant.pdf',
+    stats: {
+      capacity: '500 Kg–3 Ton',
+      stages: '7 Stage',
+      retention: 'High Precision'
+    },
+    overview: {
+      title: 'Complete Processing Solution',
+      p1: 'Salvin Industries offers a state-of-the-art Automatic Masala Packing Plant designed to meet the rigorous demands of the modern spice industry. Our fully automated turnkey solution ensures hygienic, efficient, and precise processing of various masala blends, maintaining flavor consistency from mixing to final pouch packing.',
+      p2: 'Engineered with high-quality stainless steel and integrated with advanced PLC-based controls, this plant eliminates human error and optimizes production throughput. From seamless material feeding and precise ribbon blending to accurate multihead weighing and high-speed packaging, our system delivers unmatched reliability and product integrity.',
+      highlights: [
+        { title: 'Turnkey Delivery', desc: 'Design → Manufacture → Install → Commission → Train' },
+        { title: 'OEE Optimised', desc: 'High operational equipment effectiveness target' },
+        { title: 'Global Standards', desc: 'GMP and food safety compliant designs' }
+      ],
+      image: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.jpg',
+      photoImage: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.jpg',
+      features4: [
+        { title: 'Hygienic Design', desc: 'Food-grade stainless steel construction for maximum safety' },
+        { title: 'PLC Automation', desc: 'Advanced control systems for seamless and efficient operation' },
+        { title: 'High Mixing Accuracy', desc: 'Uniform blending ensuring consistent flavor in every batch' },
+        { title: 'Easy Operation & Maintenance', desc: 'User-friendly interface and simple cleaning procedures' }
+      ]
+    },
+    capacities: [
+      { capacity: '500 Kg/Hr', type: 'Small Scale', ideal: 'Spice Startups & Boutique Brands', color: '#f47c20' },
+      { capacity: '1 Ton/Hr', type: 'Medium Scale', ideal: 'Regional Masala Distributors', color: '#dc6e19' },
+      { capacity: '2 Ton/Hr', type: 'Large Scale', ideal: 'National Processing Plants', color: '#c45a10' },
+      { capacity: '3 Ton/Hr', type: 'Industrial Scale', ideal: 'Mass Production & Exports', color: '#a34a0d' }
+    ],
+    features: [
+      { title: 'Hygienic Design', desc: 'Food-grade stainless steel construction for maximum safety' },
+      { title: 'PLC Automation', desc: 'Advanced control systems for seamless and efficient operation' },
+      { title: 'High Mixing Accuracy', desc: 'Uniform blending ensuring consistent flavor in every batch' },
+      { title: 'Easy Operation & Maintenance', desc: 'User-friendly interface and simple cleaning procedures' },
+      { title: 'Precision Weighing', desc: 'High-precision multihead weighing system ensuring accurate filling weight' },
+      { title: 'High-Speed Packaging', desc: 'Fully automated Form-Fill-Seal (FFS) packaging machine for rapid packing' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Material Feeding', desc: 'Incoming spices and ingredients are fed into the system.' },
+      { id: 2, title: 'Mixing & Blending', desc: 'High-efficiency ribbon blender mixes various spices and masala powders precisely.' },
+      { id: 3, title: 'Screening', desc: 'Vibro sifter screens and removes oversized particles from the blended masala.' },
+      { id: 4, title: 'Storage Hopper', desc: 'Stainless steel storage hopper holds processed powder before final packaging.' },
+      { id: 5, title: 'Automatic Weighing', desc: 'High-precision multihead weighing system ensures accurate filling weight.' },
+      { id: 6, title: 'Pouch Packaging', desc: 'Fully automated Form-Fill-Seal (FFS) packaging machine packs into pouches.' },
+      { id: 7, title: 'Finished Product Dispatch', desc: 'Packaged masala pouches are readied for dispatch and distribution.' }
+    ],
+    machinery: [
+      { name: 'Ribbon Blender', image: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.jpg', desc: 'High-efficiency ribbon blender for precise mixing of various spices and masala powders.' },
+      { name: 'Screw Conveyor', image: '/turnkey-brochures/images/automatic-masala-packing-plant/spice_hopper_screw_conveyor.jpg', desc: 'Automated screw conveyor for dust-free and hygienic material transfer between processing stages.' },
+      { name: 'Vibro Sifter', image: '/turnkey-brochures/images/automatic-masala-packing-plant/vibro_sifter.jpg', desc: 'High-capacity vibro sifter for screening and removing oversized particles from the blended masala.' },
+      { name: 'Storage Hopper', image: '/turnkey-brochures/images/automatic-masala-packing-plant/transfer_hopper.jpg', desc: 'Stainless steel storage hopper designed to safely hold processed powder before final packaging.' },
+      { name: 'Multihead Weigher', image: '/turnkey-brochures/images/automatic-masala-packing-plant/weighing_dosing.jpg', desc: 'High-precision multihead weighing system ensuring accurate filling weight for every pouch.' },
+      { name: 'Automatic Packaging Machine', image: '/turnkey-brochures/images/automatic-masala-packing-plant/packaging_machine.jpg', desc: 'Fully automated Form-Fill-Seal (FFS) packaging machine for high-speed packing into pouches.' }
+    ],
+    applications: [
+      { title: 'Blended Masalas', desc: 'Garam masala, chicken masala, chaat masala, etc.' },
+      { title: 'Ground Spices', desc: 'Chilli powder, turmeric powder, coriander powder, etc.' },
+      { title: 'Seasoning Powders', desc: 'Flavored seasoning blends for snacks and namkeen.' },
+      { title: 'Herbal Powders', desc: 'Ayurvedic and herbal powder supplements.' },
+      { title: 'Beverage Mixes', desc: 'Instant premixes, tea masala, and coffee blends.' },
+      { title: 'Baking Ingredients', desc: 'Baking powder, cocoa powder, and custard powder.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/spice_hopper_screw_conveyor.jpg', caption: 'Spice Hopper Bin & Screw Conveyor' },
+      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/transfer_hopper.jpg', caption: 'Transfer Hopper' },
+      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.jpg', caption: 'Ribbon Blender Mixing System' },
+      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/vibro_sifter.jpg', caption: 'Vibro Sifter Screening System' },
+      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/weighing_dosing.jpg', caption: 'Automatic Weighing & Dosing System' },
+      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/packaging_machine.jpg', caption: 'Automatic Masala Packaging Machine' }
+    ]
+  },
+  'fully-automated-ors-plant': {
+    title: 'ORS Processing Plant',
+    badge: 'TURNKEY ORS PROCESSING SOLUTION',
+    subtitle: 'Complete Turnkey Solution for Processing, Blending & Packaging Oral Rehydration Salts',
+    heroImage: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.jpg',
+    pdfFile: 'ORS.pdf',
+    stats: {
+      capacity: '500 Kg–3 Ton',
+      stages: '7 Stage',
+      retention: 'WHO Compliant'
+    },
+    overview: {
+      title: 'Complete ORS Processing Solution',
+      p1: 'Salvin Industries offers a state-of-the-art ORS Processing Plant designed to meet WHO formulation guidelines. Our complete turnkey solution ensures precise blending, homogeneous mixing, and contamination-free packaging of Oral Rehydration Salts.',
+      p2: 'Constructed from premium SS316L pharmaceutical-grade stainless steel, the plant integrates multi-stage ingredient dosing, high-shear blending, and precision sachet packaging. Advanced PLC and SCADA automation guarantee strict recipe management and compliance with global GMP and HACCP standards.',
+      highlights: [
+        { title: 'WHO Compliant', desc: 'Engineered for precise WHO-recommended formulas' },
+        { title: 'GMP Certified', desc: 'Pharmaceutical-grade SS316L sanitary construction' },
+        { title: 'High Precision', desc: 'Automated dosing and highly accurate sachet filling' }
+      ],
+      image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.jpg',
+      photoImage: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.jpg',
+      features4: [
+        { title: 'Hygienic Design', desc: 'Pharmaceutical-grade stainless steel construction' },
+        { title: 'PLC Automation', desc: 'Strict recipe control and batch traceability' },
+        { title: 'High Mixing Accuracy', desc: 'Uniform blending for critical electrolytes' },
+        { title: 'Precision Packaging', desc: 'Accurate form-fill-seal sachet packaging' }
+      ]
+    },
+    capacities: [
+      { capacity: '500 Kg/Hr', type: 'Small Scale', ideal: 'Regional Pharma Units', color: '#f47c20' },
+      { capacity: '1 Ton/Hr', type: 'Medium Scale', ideal: 'National Health Programs', color: '#dc6e19' },
+      { capacity: '2 Ton/Hr', type: 'Large Scale', ideal: 'Global Relief Suppliers', color: '#c45a10' },
+      { capacity: '3 Ton/Hr', type: 'Industrial Scale', ideal: 'Mass Export Operations', color: '#a34a0d' }
+    ],
+    features: [
+      { title: 'Pharmaceutical Grade', desc: 'All contact surfaces are SS316L to ensure zero-contamination processing.' },
+      { title: 'Precision Dosing', desc: 'Automated ingredient feeding for strict adherence to WHO formulation (Sodium Chloride IP 2.60g, Potassium Chloride IP 1.50g, Trisodium Citrate IP 2.90g, Glucose Anhydrous IP 13.50g).' },
+      { title: 'Homogeneous Blending', desc: 'Advanced blending geometry ensures uniform distribution of active electrolytes.' },
+      { title: 'Zero-Dust Transfer', desc: 'Vacuum transfer and enclosed conveying systems prevent airborne cross-contamination.' },
+      { title: 'High-Speed Sachet Packing', desc: 'Multi-lane VFFS lines guarantee airtight seals to preserve powder stability.' },
+      { title: 'SCADA Integration', desc: 'Real-time batch logging, audit trails, and 21 CFR Part 11 compliant reporting.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Material Dispensing', desc: 'Ingredients are weighed according to the WHO formula in a controlled environment.' },
+      { id: 2, title: 'Sifting & Milling', desc: 'Raw powders pass through vibro-sifters and mills to ensure uniform particle size.' },
+      { id: 3, title: 'Vacuum Transfer', desc: 'Ingredients are pneumatically conveyed to the blender to eliminate dust exposure.' },
+      { id: 4, title: 'Homogeneous Blending', desc: 'High-shear blenders mix the salts and glucose into a perfectly uniform batch.' },
+      { id: 5, title: 'Intermediate Storage', desc: 'Blended ORS powder is stored in intermediate bulk containers (IBC) under controlled humidity.' },
+      { id: 6, title: 'Automatic Sachet Filling', desc: 'Multi-lane Form-Fill-Seal machines dose exact 21.8g portions into foil laminates.' },
+      { id: 7, title: 'Quality Inspection', desc: 'Checkweighers and metal detectors verify each sachet before final cartoning.' }
+    ],
+    machinery: [
+      { name: 'Raw Material Receiving & Storage System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.jpg', desc: 'Hygienic SS316L bulk receiving and storage tanks for primary ingredients.' },
+      { name: 'Automatic Weighing & Ingredient Dosing System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_dosing.jpg', desc: 'Precision load-cell dosing ensures exact WHO formulation ratios.' },
+      { name: 'Ribbon Blender Mixing System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_blender.jpg', desc: 'High-efficiency ribbon blender designed for homogeneous mixing of delicate crystals.' },
+      { name: 'Powder Homogenizer', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_homogenizer.jpg', desc: 'Advanced homogenizer to maintain uniform particle distribution before packing.' },
+      { name: 'Quality Inspection & Testing System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_inspection.jpg', desc: 'Integrated laboratory and end-of-line inspection to ensure product safety.' },
+      { name: 'Automatic ORS Sachet Packaging Machine', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_packaging.jpg', desc: 'High-speed VFFS machine optimized for 21.8g ORS sachet filling.' }
+    ],
+    applications: [
+      { title: 'WHO ORS Packets', desc: 'Standard 21.8g powder sachets for 1L water dilution.' },
+      { title: 'Flavored ORS', desc: 'Orange, lemon, or apple flavored rehydration powders.' },
+      { title: 'Sports Hydration', desc: 'Electrolyte drink mixes for athletic recovery.' },
+      { title: 'Veterinary ORS', desc: 'Bulk oral rehydration formulas for livestock.' },
+      { title: 'Clinical Powders', desc: 'Specialized nutrient and salt complexes for medical use.' },
+      { title: 'Zinc Enriched', desc: 'ORS formulations fortified with Zinc supplements.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.jpg', caption: 'Raw Material Receiving & Storage' },
+      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_dosing.jpg', caption: 'Automatic Weighing & Dosing System' },
+      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_blender.jpg', caption: 'Ribbon Blender Mixing System' },
+      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_homogenizer.jpg', caption: 'Powder Homogenizer' },
+      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_inspection.jpg', caption: 'Quality Inspection & Testing' },
+      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_packaging.jpg', caption: 'Automatic ORS Sachet Packaging' }
+    ]
+  },
+  'pickle-processing-and-packaging-plant': {
+    title: 'Pickle Processing & Packaging Plant',
+    badge: 'TURNKEY PICKLE PROCESSING SOLUTION',
+    subtitle: 'Complete Turnkey Solution for Fruit & Vegetable Pickle Processing, Brining, and Packaging',
+    heroImage: '/turnkey-brochures/images/pickle-processing-plant/pickle_brining.jpg',
+    pdfFile: 'PICKLE.pdf',
+    stats: {
+      capacity: '500 Kg–5 Ton/Hr',
+      stages: '17 Stage',
+      retention: 'High Yield'
+    },
+    overview: {
+      title: 'Complete Pickle Processing Solution',
+      p1: 'Salvin Industries offers a state-of-the-art Pickle Processing & Packaging Plant engineered for producing premium quality fruit and vegetable pickles. Our fully automated turnkey solution ensures precise processing from raw material reception to final packaging.',
+      p2: 'Constructed entirely from SS304/SS316L food-grade stainless steel, the plant integrates advanced washing, precision cutting, uniform spice blending, and automated filling lines. The PLC-controlled brining and mixing systems guarantee consistent flavor profiles, superior hygiene, and strict compliance with GMP standards.',
+      highlights: [
+        { title: 'GMP Compliant', desc: 'Engineered for sanitary food production' },
+        { title: 'Fully Automated', desc: 'Continuous processing from washing to packing' },
+        { title: 'High Precision', desc: 'Accurate cutting, slicing, and ingredient dosing' }
+      ],
+      image: '/turnkey-brochures/images/pickle-processing-plant/pickle_infographic.jpg',
+      photoImage: '/turnkey-brochures/images/pickle-processing-plant/pickle_infographic.jpg',
+      features4: [
+        { title: 'Hygienic Design', desc: 'Food-grade stainless steel construction' },
+        { title: 'PLC Automation', desc: 'Strict recipe control and batch traceability' },
+        { title: 'Versatile Production', desc: 'Handles mango, lime, mixed veg, and garlic' },
+        { title: 'High Speed Filling', desc: 'Accurate jar and pouch filling systems' }
+      ]
+    },
+    features: [
+      { title: 'Food Grade Material', desc: 'All contact parts are manufactured in high-grade SS304/SS316L stainless steel.' },
+      { title: 'Automated Washing', desc: 'High-pressure air bubble and spray washing for complete soil removal.' },
+      { title: 'Uniform Slicing', desc: 'Precision cutting blades ensure consistent piece sizes for perfect curing.' },
+      { title: 'Advanced Maturation', desc: 'Temperature-controlled brining tanks optimize the pickling process.' },
+      { title: 'Homogeneous Blending', desc: 'Specialized mixers gently coat ingredients with spices without bruising.' },
+      { title: 'Integrated Packaging', desc: 'Seamless transition from filling to capping, labeling, and carton packing.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Material Reception', desc: 'Fresh fruits and vegetables are received and loaded onto the line.' },
+      { id: 2, title: 'Washing Machine', desc: 'Thorough cleaning to remove dirt, pesticides, and impurities.' },
+      { id: 3, title: 'Sorting & Inspection', desc: 'Manual or optical sorting to remove defective or unripe produce.' },
+      { id: 4, title: 'Cutting / Chopping', desc: 'Automated machines slice or dice the produce uniformly.' },
+      { id: 5, title: 'Mixing Tank', desc: 'Initial blending with salt or pre-treatments.' },
+      { id: 6, title: 'Pickling (Brine Tank)', desc: 'Maturation process in controlled brining tanks.' },
+      { id: 7, title: 'Draining & Washing', desc: 'Removal of excess brine and final washing of cured pieces.' },
+      { id: 8, title: 'Dewatering Centrifuge', desc: 'Centrifugal force removes surface moisture.' },
+      { id: 9, title: 'Drying System', desc: 'Controlled drying prepares pieces for spice coating.' },
+      { id: 10, title: 'Final Mixing', desc: 'Spices, oils, and preservatives are blended with the pieces.' },
+      { id: 11, title: 'Pickle Filling Machine', desc: 'Automated volumetric filling into jars or pouches.' },
+      { id: 12, title: 'Bottle Capping', desc: 'Secure capping to ensure leak-proof seals.' },
+      { id: 13, title: 'Sticker Labeling', desc: 'Application of wrap-around or front/back labels.' },
+      { id: 14, title: 'Jar Inspection Conveyor', desc: 'Final visual or automated check of the sealed jars.' },
+      { id: 15, title: 'Shrink Tunnel (Optional)', desc: 'Heat shrinking for tamper-evident neck bands.' },
+      { id: 16, title: 'Carton Packing', desc: 'Jars are loaded into corrugated shipping cartons.' },
+      { id: 17, title: 'Palletizing', desc: 'Cartons are stacked on pallets for dispatch.' }
+    ],
+    machinery: [
+      { name: 'Raw Material Washing Machine', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_washing.jpg', desc: 'High-efficiency fruit and vegetable washing system with water jets.' },
+      { name: 'Sorting & Inspection Conveyor', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_sorting.jpg', desc: 'Ergonomic conveyor system for manual grading and defect removal.' },
+      { name: 'Automatic Cutting / Slicing Machine', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_cutting.jpg', desc: 'High-capacity dicer and slicer for uniform produce preparation.' },
+      { name: 'Spice Mixing & Blending System', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_mixing.jpg', desc: 'Ribbon or paddle blenders for homogeneous spice and oil coating.' },
+      { name: 'Pickle Maturation & Brining Tank System', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_brining.jpg', desc: 'SS316L tanks for controlled curing and brine maturation.' },
+      { name: 'Automatic Pickle Filling & Packaging Machine', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_packaging.jpg', desc: 'Accurate and hygienic filling lines for glass jars or PET bottles.' }
+    ],
+    applications: [
+      { title: 'Mango Pickle', desc: 'Traditional diced and sliced raw mango pickles.' },
+      { title: 'Mixed Vegetable Pickle', desc: 'Carrot, cauliflower, and chili combinations.' },
+      { title: 'Lime & Lemon Pickle', desc: 'Whole or quartered citrus pickles.' },
+      { title: 'Garlic & Ginger Pickle', desc: 'Peeled clove and julienne paste varieties.' },
+      { title: 'Green Chili Pickle', desc: 'Slit or chopped chili processing.' },
+      { title: 'Meat & Seafood Pickles', desc: 'Specialized lines for non-veg pickle variants.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_washing.jpg', caption: 'Raw Material Washing Machine' },
+      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_sorting.jpg', caption: 'Sorting & Inspection Conveyor' },
+      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_cutting.jpg', caption: 'Automatic Cutting / Slicing Machine' },
+      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_mixing.jpg', caption: 'Spice Mixing & Blending System' },
+      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_brining.jpg', caption: 'Pickle Maturation & Brining Tank System' },
+      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_packaging.jpg', caption: 'Automatic Pickle Filling & Packaging Machine' }
+    ]
+  },
+  'milk-powder-processing-packaging-plant': {
+    title: 'Milk Powder Processing & Packaging Plant',
+    badge: 'TURNKEY MILK POWDER SOLUTION',
+    subtitle: 'Complete Turnkey Line From Raw Milk Reception To Spray Drying And Powder Packaging',
+    heroImage: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_hero_banner.png',
+    heroMinHeight: '600px',
+    heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'milk powder.pdf',
+    overview: {
+      title: 'Complete Milk Powder Plant',
+      p1: 'Salvin Industries\' Milk Powder Processing & Packaging Plant is an advanced, fully automated turnkey solution engineered for producing high-quality milk powder. Our integrated lines handle everything from raw milk reception and standardization to evaporation, spray drying, and aseptic packaging.',
+      p2: 'Built in compliance with international food safety and dairy standards, our systems ensure precise temperature control, optimal moisture content, and high solubility of the final powder while maximizing energy efficiency and product yield.',
+      image: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_infographic.jpg',
+      photoImage: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_infographic.jpg',
+      benefits: [
+        { title: 'Consistent Quality', desc: 'Advanced evaporation and spray drying ensures uniform particle size and solubility.' },
+        { title: 'Hygienic Design', desc: 'Fully CIP-able stainless steel construction meets strict dairy industry standards.' },
+        { title: 'Energy Efficient', desc: 'Multi-effect evaporators and heat recovery systems minimize operational costs.' },
+        { title: 'Automated Control', desc: 'Centralized PLC and SCADA systems for seamless process monitoring.' }
+      ]
+    },
+    process: [
+      { id: 1, title: 'Raw Milk Reception', desc: 'Weighing, chilling, and storing raw milk upon arrival.' },
+      { id: 2, title: 'Filtration & Clarification', desc: 'Centrifugal clarifiers remove impurities and somatic cells.' },
+      { id: 3, title: 'Standardization', desc: 'Adjusting fat content to meet specific product requirements.' },
+      { id: 4, title: 'Pasteurization', desc: 'HTST pasteurization eliminates pathogens and ensures safety.' },
+      { id: 5, title: 'Evaporation', desc: 'Multi-effect falling film evaporators concentrate the milk.' },
+      { id: 6, title: 'Spray Drying', desc: 'High-pressure atomization transforms concentrate into powder.' },
+      { id: 7, title: 'Cooling & Sifting', desc: 'Fluid bed cooling and vibro sifting for uniform powder.' },
+      { id: 8, title: 'Powder Packing', desc: 'Hygienic filling into bulk bags or retail pouches.' }
+    ],
+    machinery: [
+      { name: 'Raw Milk Storage Tank', image: '/turnkey-brochures/images/milk-powder-processing-plant/raw_milk_storage.jpg', desc: 'Insulated stainless steel silos for maintaining raw milk quality.' },
+      { name: 'Filtration & Clarification System', image: '/turnkey-brochures/images/milk-powder-processing-plant/filtration_clarification.jpg', desc: 'Advanced centrifugal clarification to remove physical impurities.' },
+      { name: 'Milk Standardization System', image: '/turnkey-brochures/images/milk-powder-processing-plant/milk_standardization.jpg', desc: 'Precise inline fat standardization for consistent product composition.' },
+      { name: 'Pasteurization Unit', image: '/turnkey-brochures/images/milk-powder-processing-plant/pasteurization_system.jpg', desc: 'High-Temperature Short-Time (HTST) pasteurizer with heat recovery.' },
+      { name: 'Evaporation & Spray Drying', image: '/turnkey-brochures/images/milk-powder-processing-plant/evaporation_spray_drying.jpg', desc: 'Multi-effect falling film evaporator and highly efficient spray dryer.' },
+      { name: 'Automatic Powder Packing Machine', image: '/turnkey-brochures/images/milk-powder-processing-plant/automatic_powder_packing.jpg', desc: 'Hygienic and accurate form-fill-seal packaging for milk powder.' }
+    ],
+    applications: [
+      { title: 'Whole Milk Powder', desc: 'Full-fat powder for direct consumption and culinary use.' },
+      { title: 'Skimmed Milk Powder', desc: 'Low-fat powder ideal for bakery, confectionery, and beverages.' },
+      { title: 'Infant Formula', desc: 'Highly specialized nutritional powder for infant consumption.' },
+      { title: 'Dairy Ingredients', desc: 'Base powders for chocolates, ice creams, and processed foods.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/milk-powder-processing-plant/raw_milk_storage.jpg', caption: 'Raw Milk Reception & Storage Tank' },
+      { src: '/turnkey-brochures/images/milk-powder-processing-plant/filtration_clarification.jpg', caption: 'Filtration & Clarification Unit' },
+      { src: '/turnkey-brochures/images/milk-powder-processing-plant/milk_standardization.jpg', caption: 'Milk Standardization System' },
+      { src: '/turnkey-brochures/images/milk-powder-processing-plant/pasteurization_system.jpg', caption: 'Pasteurization System' },
+      { src: '/turnkey-brochures/images/milk-powder-processing-plant/evaporation_spray_drying.jpg', caption: 'Multi-Effect Evaporator & Spray Dryer' },
+      { src: '/turnkey-brochures/images/milk-powder-processing-plant/automatic_powder_packing.jpg', caption: 'Automatic Powder Packing Machine' }
     ]
   }
 };

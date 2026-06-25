@@ -395,7 +395,7 @@ export default function WheatFlourProcessingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="wfp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="wfp" isVisible={isVisible['why-salvin']} projectKey="WheatFlourProcessingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="wfp-section wfp-cta" id="enquiry" data-animate>

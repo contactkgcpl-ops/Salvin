@@ -106,6 +106,7 @@ import LiquidGlucoseDetailPage from "./pages/TurnkeyProject/components/LiquidGlu
 import ProteinBarManufacturingDetailPage from "./pages/TurnkeyProject/components/ProteinBarManufacturingDetailPage";
 import MayonnaiseProcessingDetailPage from "./pages/TurnkeyProject/components/MayonnaiseProcessingDetailPage";
 import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/InstantMixFrozenFoodDetailPage";
+import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
@@ -2644,6 +2645,7 @@ export default function App() {
           <Route path="/turnkey-project/protein-bar-manufacturing-plant" element={<ProteinBarManufacturingDetailPage />} />
           <Route path="/turnkey-project/mayonnaise-processing-plant" element={<MayonnaiseProcessingDetailPage />} />
           <Route path="/turnkey-project/instant-mix-frozen-food-processing-plant" element={<InstantMixFrozenFoodDetailPage />} />
+          <Route path="/turnkey-project/instant-noodles-processing-plant" element={<InstantNoodlesDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

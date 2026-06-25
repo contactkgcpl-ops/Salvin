@@ -1,3 +1,4 @@
+import WhyChooseSalvin from './WhyChooseSalvin';
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './MayonnaiseProcessingDetailPage.css'
@@ -367,6 +368,8 @@ export default function MayonnaiseProcessingDetailPage() {
           </div>
         </div>
       </section>
+      {/* ═══ WHY CHOOSE SALVIN ═══ */}
+      <WhyChooseSalvin prefix="mpp" isVisible={isVisible['why-salvin']} projectKey="MayonnaiseProcessingDetailPage" />
 
       {/* ═══ FAQ SECTION ═══ */}
       <section className="mpp-section mpp-faq-section" id="faq" data-animate>

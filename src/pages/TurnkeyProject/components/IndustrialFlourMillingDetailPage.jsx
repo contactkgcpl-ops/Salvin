@@ -395,7 +395,7 @@ export default function IndustrialFlourMillingDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="ifm" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="ifm" isVisible={isVisible['why-salvin']} projectKey="IndustrialFlourMillingDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="ifm-section ifm-cta" id="enquiry" data-animate>

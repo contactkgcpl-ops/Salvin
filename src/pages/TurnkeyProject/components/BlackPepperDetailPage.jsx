@@ -390,7 +390,7 @@ export default function BlackPepperDetailPage() {
 
       
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="bpp" isVisible={isVisible['why-salvin']} />
+      <WhyChooseSalvin prefix="bpp" isVisible={isVisible['why-salvin']} projectKey="BlackPepperDetailPage" />
 
 {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="bpp-section bpp-cta" id="enquiry" data-animate>
