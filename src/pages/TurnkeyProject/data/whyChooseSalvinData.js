@@ -114,14 +114,7 @@ const whyChooseSalvinData = {
     { title: 'Versatile Filling', desc: 'Piston fillers handle hot sauce filling into cans, jars, or pouches.' },
     { title: 'Recipe Automation', desc: 'PLC systems store and precisely execute complex spice addition sequences.' }
   ],
-  'PetroleumJellyDetailPage': [
-    { title: 'Thermal Melting & Blending', desc: 'Heated mixing vessels perfectly homogenize waxes and mineral oils.' },
-    { title: 'Vacuum De-Gassing', desc: 'Removes air bubbles from the hot jelly for a crystal-clear final product.' },
-    { title: 'Filtration Systems', desc: 'Inline heated filters remove impurities to ensure pharmaceutical-grade purity.' },
-    { title: 'Heated Piston Filling', desc: 'Jacketed filling nozzles prevent jelly solidification during packaging.' },
-    { title: 'Cooling Tunnels', desc: 'Controlled forced-air cooling rapidly sets the jelly for capping.' },
-    { title: 'Explosion-Proof Design', desc: 'ATEX-certified components ensure safety when handling volatile materials.' }
-  ],
+
   'PeanutOilMillDetailPage': [
     { title: 'High-Yield Expelling', desc: 'Heavy-duty screw presses extract maximum oil while preserving quality.' },
     { title: 'Efficient Decortication', desc: 'Automated shelling and winnowing separates kernels from husks cleanly.' },

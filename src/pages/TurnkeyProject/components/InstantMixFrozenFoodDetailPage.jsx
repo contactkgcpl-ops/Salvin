@@ -230,8 +230,8 @@ export default function InstantMixFrozenFoodDetailPage() {
                 </div>
               </div>
             </div>
-            <div className="imff-overview__image imff-overview__image--photo">
-              <img src="/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.jpg" alt="Instant Mix & Frozen Food Processing Plant by Salvin Industries" loading="lazy" />
+            <div className="imff-overview__image imff-overview__image--brochure">
+              <img src="/turnkey-brochures/images/instant-mix-frozen-food-processing-plant/instant-mix-frozen-food-brochure.jpg" alt="Instant Mix & Frozen Food Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

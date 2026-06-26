@@ -9,6 +9,7 @@ import eq3 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-
 import eq4 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/vacuum_homogenizer.jpg';
 import eq5 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/quality_inspection.jpg';
 import eq6 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/automatic_filling.jpg';
+import mayoHero from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/mayonnaise_hero.jpg';
 
 
 /* ─── Process Flow Steps ─── */
@@ -142,7 +143,7 @@ export default function MayonnaiseProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="mpp-hero">
         <div className="mpp-hero__overlay" />
-        <div className="mpp-hero__bg" style={{ backgroundImage: `url(${eq6})` }} />
+        <div className="mpp-hero__bg" style={{ backgroundImage: `url(${mayoHero})` }} />
         <div className="mpp-hero__content">
           <span className="mpp-hero__badge">
             <span className="mpp-hero__badge-dot" />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useParams, NavLink } from 'react-router-dom'
 import { getProjectDetails } from '../data/turnkeyProjectsData'
+import { PackageSearch, CookingPot, Factory, Stamp, Flame, Snowflake, Package } from 'lucide-react'
 import './RedChilliDetailPage.css' // Reuse the master layout stylesheet
 import WhyChooseSalvin from './WhyChooseSalvin'
 
@@ -8,6 +9,16 @@ import WhyChooseSalvin from './WhyChooseSalvin'
    Priority: most-specific keyword first to prevent duplicate assignments. */
 function getStepIcon(title, id) {
   const t = (title || '').toLowerCase()
+
+  // ── LUCIDE ICONS FOR BISCUIT PROJECT ──
+  if (t === 'raw material handling') return <PackageSearch className="rcp-process-card__icon-svg" />
+  if (t === 'dough mixing') return <CookingPot className="rcp-process-card__icon-svg" />
+  if (t === 'dough forming') return <Factory className="rcp-process-card__icon-svg" />
+  if (t === 'biscuit molding') return <Stamp className="rcp-process-card__icon-svg" />
+  if (t === 'baking') return <Flame className="rcp-process-card__icon-svg" />
+  if (t === 'cooling') return <Snowflake className="rcp-process-card__icon-svg" />
+  if (t === 'packaging') return <Package className="rcp-process-card__icon-svg" />
+
 
   // ── RAW MATERIAL INTAKE ──
   if (t.includes('receiving') || t.includes('intake') || t.includes('ingestion') || t.includes('feeding')) {
@@ -103,8 +114,8 @@ function getStepIcon(title, id) {
     )
   }
 
-  // ── ROASTING / HOT-AIR ROASTING ──
-  if (t.includes('roasting') || t.includes('roast')) {
+  // ── ROASTING / HOT-AIR ROASTING / FRYING ──
+  if (t.includes('roasting') || t.includes('roast') || t.includes('frying') || t.includes('fryer')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z" />
@@ -180,8 +191,8 @@ function getStepIcon(title, id) {
     )
   }
 
-  // ── PRE-HEATING / HEATING / WARMING ──
-  if (t.includes('pre-heat') || t.includes('preheat') || t.includes('pre heat') || t.includes('heating') || t.includes('warming') || t.includes('warm') || t.includes('melting') || t.includes('melt') || t.includes('liquif')) {
+  // ── PRE-HEATING / HEATING / WARMING / BAKING ──
+  if (t.includes('pre-heat') || t.includes('preheat') || t.includes('pre heat') || t.includes('heating') || t.includes('warming') || t.includes('warm') || t.includes('melting') || t.includes('melt') || t.includes('liquif') || t.includes('bak') || t.includes('baking')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z" />
@@ -199,8 +210,8 @@ function getStepIcon(title, id) {
     )
   }
 
-  // ── BLENDING / MIXING / DOSING (ingredient) ──
-  if (t.includes('blend') || t.includes('mixing') || t.includes('ingredient') || t.includes('dissolut') || t.includes('stirr')) {
+  // ── BLENDING / MIXING / DOSING (ingredient) / SEASONING ──
+  if (t.includes('blend') || t.includes('mixing') || t.includes('ingredient') || t.includes('dissolut') || t.includes('stirr') || t.includes('seasoning')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M19 22H5a2 2 0 0 1-2-2V4h18v16a2 2 0 0 1-2 2z" />
@@ -300,7 +311,7 @@ function getStepIcon(title, id) {
   }
 
   // ── PACKAGING / BOXING / CARTON ──
-  if (t.includes('packing') || t.includes('boxing') || t.includes('carton') || t.includes('cartoning') || t.includes('dispatch') || t.includes('shipment') || t.includes('warehousing') || t.includes('warehous') || t.includes('storage')) {
+  if (t.includes('packing') || t.includes('packaging') || t.includes('boxing') || t.includes('carton') || t.includes('cartoning') || t.includes('dispatch') || t.includes('shipment') || t.includes('warehousing') || t.includes('warehous') || t.includes('storage')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <path d="M12 22V12M3 12h18M12 2l9 5-9 5-9-5 9-5z" /><path d="M3 7v10l9 5 9-5V7" />
@@ -349,13 +360,23 @@ function getStepIcon(title, id) {
     )
   }
 
-  // ── CONVEYOR / TRANSPORT / TRANSFER ──
-  if (t.includes('convey') || t.includes('transfer') || t.includes('transport') || t.includes('elevator') || t.includes('feeding')) {
+  // ── CONVEYOR / TRANSPORT / TRANSFER / RAW MATERIAL ──
+  if (t.includes('convey') || t.includes('transfer') || t.includes('transport') || t.includes('elevator') || t.includes('feeding') || t.includes('raw material')) {
     return (
       <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
         <rect x="2" y="7" width="20" height="10" rx="2" />
         <circle cx="7" cy="17" r="2" /><circle cx="17" cy="17" r="2" />
         <path d="M7 7V5M17 7V5" />
+      </svg>
+    )
+  }
+
+  // ── FORMING / MOLDING / EXTRUSION ──
+  if (t.includes('form') || t.includes('mold') || t.includes('extrusion') || t.includes('extrud')) {
+    return (
+      <svg className="rcp-process-card__icon-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M5 5v14M19 5v14M5 12h14" />
+        <rect x="9" y="8" width="6" height="8" rx="2" />
       </svg>
     )
   }
@@ -520,7 +541,10 @@ export default function TurnkeyDetailPage() {
                 download={details.pdfFile}
                 className="rcp-btn rcp-btn--primary"
               >
-                Download Brochure
+                <svg className="rcp-btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" aria-hidden="true" style={{ width: '20px', height: '20px', marginRight: '8px' }}>
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                DOWNLOAD BROCHURE
               </a>
             ) : (
               <NavLink to="/contact" className="rcp-btn rcp-btn--primary">
@@ -584,8 +608,8 @@ export default function TurnkeyDetailPage() {
                 ))}
               </div>
             </div>
-            <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src={details.overview.photoImage || details.overview.image} alt={`${details.title} by Salvin Industries`} loading="lazy" />
+            <div className={`rcp-overview__image ${details.overview?.isBrochure ? 'rcp-overview__image--brochure' : 'rcp-overview__image--photo'}`}>
+              <img src={details.overview.photoImage || details.overview.image} alt={`${details.title} by Salvin Industries`} loading="lazy" style={details.overview?.isBrochure ? { objectFit: 'contain', background: '#fff' } : undefined} />
             </div>
           </div>
         </div>
@@ -596,7 +620,7 @@ export default function TurnkeyDetailPage() {
         <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['process-flow'] ? 'rcp-animate--in' : ''}`}>
             <div className="rcp-section-badge">Process Flow</div>
-            <h2 className="rcp-section-title">{details.title} <span className="rcp-accent">Processing Workflow</span></h2>
+            <h2 className="rcp-section-title">{details.workflowTitle || details.title.replace(/\sProcessing\s(?:Line|Plant)$/i, '')} <span className="rcp-accent">{details.workflowAccentTitle || 'Processing Workflow'}</span></h2>
             <p className="rcp-section-subtitle">A streamlined and fully integrated processing workflow designed to transform raw materials into premium-quality finished products while ensuring maximum efficiency, product consistency and superior output quality.</p>
 
             <div className="rcp-process-flow-container">

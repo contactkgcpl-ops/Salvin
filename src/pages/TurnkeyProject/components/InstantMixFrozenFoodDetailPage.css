@@ -505,7 +505,16 @@
   object-fit: cover;
   height: 380px;
   width: 100%;
-  border-radius: var(--pbm-radius);
+  border-radius: var(--imff-radius);
+}
+
+/* Brochure preview style */
+.imff-overview__image--brochure img {
+  object-fit: contain;
+  height: 400px;
+  width: 100%;
+  border-radius: var(--imff-radius);
+  background: #ffffff;
 }
 
 

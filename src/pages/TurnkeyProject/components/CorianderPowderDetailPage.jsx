@@ -133,7 +133,7 @@ export default function CorianderPowderDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coriander-powder-gallery/6_packaging.jpg')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coriander-powder/coriander_powder_hero.png')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />

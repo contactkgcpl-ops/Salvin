@@ -96,7 +96,6 @@ import WheatFlourProcessingDetailPage from "./pages/TurnkeyProject/components/Wh
 import EdibleOilProcessingDetailPage from "./pages/TurnkeyProject/components/EdibleOilProcessingDetailPage";
 import PastaNoodlesDetailPage from "./pages/TurnkeyProject/components/PastaNoodlesDetailPage";
 import PeanutButterDetailPage from "./pages/TurnkeyProject/components/PeanutButterDetailPage";
-import PetroleumJellyDetailPage from "./pages/TurnkeyProject/components/PetroleumJellyDetailPage";
 import JackfruitDetailPage from "./pages/TurnkeyProject/components/JackfruitDetailPage";
 import GingerGarlicPasteDetailPage from "./pages/TurnkeyProject/components/GingerGarlicPasteDetailPage";
 import BlackPepperDetailPage from "./pages/TurnkeyProject/components/BlackPepperDetailPage";
@@ -2635,7 +2634,6 @@ export default function App() {
           <Route path="/turnkey-project/coriander-powder-plant" element={<CorianderPowderDetailPage />} />
           <Route path="/turnkey-project/pasta-noodles-production-plant" element={<PastaNoodlesDetailPage />} />
           <Route path="/turnkey-project/peanut-butter-processing-plant" element={<PeanutButterDetailPage />} />
-          <Route path="/turnkey-project/petroleum-jelly-manufacturing-plant" element={<PetroleumJellyDetailPage />} />
           <Route path="/turnkey-project/jackfruit-canning-retort-line" element={<JackfruitDetailPage />} />
           <Route path="/turnkey-project/ginger-garlic-paste-plant" element={<GingerGarlicPasteDetailPage />} />
           <Route path="/turnkey-project/black-pepper-powder-line-plant" element={<BlackPepperDetailPage />} />

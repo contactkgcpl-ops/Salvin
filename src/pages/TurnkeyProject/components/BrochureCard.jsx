@@ -11,7 +11,7 @@ function BrochureCard({ title, descriptionLines, imageSrc, brochureHref, brochur
       <div className="pointer-events-none absolute inset-x-0 top-0 h-1.5 origin-left scale-x-0 bg-gradient-to-r from-[#f47c20] to-[#dc6e19] transition-transform duration-500 ease-out group-hover:scale-x-100" />
 
       {/* Image Container: object-contain with padding to avoid cropping */}
-      <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#f8fafc] p-6 sm:p-8">
+      <div className="relative flex aspect-[4/3] w-full items-center justify-center overflow-hidden bg-[#fff] p-6 sm:p-8">
         <img
           src={imageSrc}
           alt={title}

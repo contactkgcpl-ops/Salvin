@@ -502,6 +502,15 @@
   border-radius: var(--rcp-radius);
 }
 
+/* Make overview image contain (for brochure preview) */
+.rcp-overview__image--brochure img {
+  object-fit: contain;
+  height: 400px;
+  width: 100%;
+  border-radius: var(--rcp-radius);
+  background: #fff;
+}
+
 
 /* ══════════════════════════════════════════
    ABOUT
