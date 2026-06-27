@@ -138,7 +138,7 @@ export default function PeanutButterDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pbp-hero">
         <div className="pbp-hero__overlay" />
-        <div className="pbp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/peanut-butter-gallery/hero.jpg')` }} />
+        <div className="pbp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/peanut_butter_hero.png')` }} />
         <div className="pbp-hero__content">
           <span className="pbp-hero__badge">
             <span className="pbp-hero__badge-dot" />

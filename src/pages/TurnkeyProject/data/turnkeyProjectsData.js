@@ -4,12 +4,67 @@
  */
 
 const CORE_PROJECTS = {
+
+  'ctc-tea-processing-packaging-plant': {
+    title: 'CTC Tea Processing & Packaging Plant',
+    badge: 'TURNKEY CTC TEA PROCESSING SOLUTION',
+    subtitle: 'Complete Turnkey Solutions for CTC Tea Manufacturing & Packaging',
+    heroImage: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.jpg',
+    heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'ctc_tea_processing.pdf',
+    stats: {
+      capacity: '500 - 2,000 Kg/Hr',
+      stages: '9 Stage',
+      retention: 'Premium Quality'
+    },
+    overview: {
+      title: 'Complete CTC Tea Processing Solution',
+      p1: 'Salvin Industries provides complete turnkey solutions for CTC Tea Processing Plants, offering advanced systems for tea leaf handling, withering, rolling, fermentation, drying, sorting, and packaging. Our solutions are designed to maximize productivity while maintaining tea quality and consistency.',
+      p2: 'Our modern processing technologies ensure efficient manufacturing, uniform granule formation, and preservation of tea aroma, flavor, and color. Advanced automation improves operational efficiency while maintaining stringent quality standards.',
+      image: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.jpg',
+      photoImage: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.jpg',
+      features4: [
+        { title: 'Hygienic Processing', desc: 'Food grade construction for safe tea production' },
+        { title: 'Uniform Granules', desc: 'Advanced CTC technology for consistent size' },
+        { title: 'Premium Quality', desc: 'Preserves natural tea aroma and flavor' },
+        { title: 'High-Speed Packaging', desc: 'Automated filling and sealing systems' }
+      ]
+    },
+    processSteps: [
+      { id: 1, title: 'Fresh Tea Leaf Receiving' },
+      { id: 2, title: 'Withering' },
+      { id: 3, title: 'CTC Crushing, Tearing & Curling' },
+      { id: 4, title: 'Fermentation / Oxidation' },
+      { id: 5, title: 'Drying' },
+      { id: 6, title: 'Sorting & Grading' },
+      { id: 7, title: 'Blending' },
+      { id: 8, title: 'Packaging & Sealing' },
+      { id: 9, title: 'Finished Product Dispatch' }
+    ],
+    machinery: [
+      { name: 'Fresh Tea Leaf Receiving', desc: 'Freshly harvested tea leaves are received and inspected for quality. Proper selection ensures high-quality tea production.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_leaf_receiving.jpg' },
+      { name: 'Tea Leaf Withering Trough', desc: 'Tea leaves are spread in withering troughs where moisture content is reduced under controlled airflow. This prepares the leaves for efficient processing.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/withering_trough.jpg' },
+      { name: 'CTC Crushing Tearing & Curling Machine', desc: 'Leaves pass through specialized CTC machines that crush, tear, and curl them into characteristic tea granules. This step develops the tea structure required for strong liquor.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/ctc_machine.jpg' },
+      { name: 'Fermentation / Oxidation Conveyor System', desc: 'Processed leaves undergo controlled oxidation to develop color, aroma, flavor, and strength. This is a critical stage in black tea manufacturing.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/fermentation.jpg' },
+      { name: 'Continuous Tea Dryer', desc: 'Fermented tea is dried using hot-air dryers to stop oxidation and achieve the required moisture level. Proper drying ensures shelf stability and quality retention.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_dryer.jpg' },
+      { name: 'Automatic Tea Packaging Machine', desc: 'Tea is packed into pouches, cartons, tea bags, or bulk packs using automated filling and sealing systems. Packaging protects freshness and aroma.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/packaging.jpg' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.jpg', caption: 'Fully Automated CTC Tea Processing Plant' },
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_leaf_receiving.jpg', caption: 'Tea Leaf Receiving & Feeding System' },
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/withering_trough.jpg', caption: 'Tea Leaf Withering Trough' },
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/ctc_machine.jpg', caption: 'CTC Crushing Tearing & Curling Machine' },
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/fermentation.jpg', caption: 'Fermentation / Oxidation Conveyor System' },
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_dryer.jpg', caption: 'Continuous Tea Dryer' },
+      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/packaging.jpg', caption: 'Automatic Tea Packaging Machine' }
+    ]
+  },
+
   'beetroot-juice-processing-plant': {
     title: 'Beetroot Juice Processing Plant',
     badge: 'TURNKEY BEETROOT JUICE PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solution For Cleaning, Washing, Crushing, Juice Extraction, Clarification, Pasteurization and Packaging of Beetroot',
     heroImage: '/turnkey-brochures/images/beetroot-gallery/beetroot_juice_hero_banner.png',
-    heroMinHeight: '600px',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'fruit_juice_salvin.pdf',
     stats: {
@@ -92,7 +147,7 @@ const CORE_PROJECTS = {
     title: 'Turmeric Powder Processing Plant',
     badge: 'TURNKEY TURMERIC POWDER PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Washing, Boiling, Drying, Cryogenic Grinding, Sieving And Packaging Of Turmeric',
-    heroImage: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.jpg',
+    heroImage: '/turnkey-brochures/images/hero-banners/turmeric_powder_hero.png',
     stats: {
       capacity: '500 Kg–5 Ton',
       stages: '11 Stage',
@@ -417,7 +472,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY FRUIT CANNING SOLUTION',
     subtitle: 'Peeling, Slicing, Syrup Staging, Can Filling, Seaming And Retort Sterilization Lines For Jackfruit',
     heroImage: '/turnkey-brochures/images/jackfruit-gallery/jackfruit_canning_hero_banner.png',
-    heroMinHeight: '600px',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'jecked_fruit_canned_line.pdf',
     stats: {
@@ -839,7 +893,7 @@ const CORE_PROJECTS = {
     title: 'Automatic Masala Packing Plant',
     badge: 'TURNKEY MASALA PACKING SOLUTION',
     subtitle: 'Complete Turnkey Solution for Masala Processing, Blending & Packaging',
-    heroImage: '/turnkey-brochures/images/automatic-masala-packing-plant/spice_hopper_screw_conveyor.jpg',
+    heroImage: '/turnkey-brochures/images/hero-banners/automatic_masala_hero.png',
     pdfFile: 'AMC-30_plant.pdf',
     stats: {
       capacity: '500 Kg–3 Ton',
@@ -1075,7 +1129,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY MILK POWDER SOLUTION',
     subtitle: 'Complete Turnkey Line From Raw Milk Reception To Spray Drying And Powder Packaging',
     heroImage: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_hero_banner.png',
-    heroMinHeight: '600px',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'milk powder.pdf',
     overview: {
@@ -1131,8 +1184,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Economical Kurkure Plant',
     workflowAccentTitle: 'Workflow',
     pdfFile: 'Economical_Kurkure_Plant.pdf',
-    heroImage: '/turnkey-brochures/images/economical-kurkure-making-plant/kurkure-hero.jpg',
-    heroMinHeight: '600px',
+    heroImage: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: { capacity: '100 Kg–500 Kg', stages: '7 Stage', efficiency: '98%', support: '24/7' },
     overview: {
@@ -1145,8 +1197,8 @@ const CORE_PROJECTS = {
         { title: 'Hygienic Operation', desc: 'Food-grade stainless steel construction.' }
       ],
       isBrochure: true,
-      image: '/turnkey-brochures/images/economical-kurkure-making-plant/kurkure-hero.jpg',
-      photoImage: '/turnkey-brochures/images/economical-kurkure-making-plant/kurkure-hero.jpg',
+      image: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg',
+      photoImage: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg',
       features4: [
         { title: 'Food Grade', desc: 'SS304/SS316 material' },
         { title: 'Cost Effective', desc: 'Economical design' },
@@ -1177,12 +1229,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Packaging', desc: 'Automated packing machines weigh and seal the pouches.' }
     ],
     machinery: [
-      { name: 'Raw Material Storage & Feeding System', image: '/turnkey-brochures/images/economical-kurkure-making-plant/raw-material-storage-feeding-system.jpg', desc: 'Automated silos and feeders for continuous raw material supply.' },
-      { name: 'Continuous Dough Mixer', image: '/turnkey-brochures/images/economical-kurkure-making-plant/continuous-dough-mixer.jpg', desc: 'High-speed mixer for uniform hydration of corn meal.' },
-      { name: 'Kurkure Extruder Machine', image: '/turnkey-brochures/images/economical-kurkure-making-plant/kurkure-extruder-machine.jpg', desc: 'Precision extruder for shaping and expanding the snack.' },
-      { name: 'Continuous Frying System', image: '/turnkey-brochures/images/economical-kurkure-making-plant/continuous-frying-system.jpg', desc: 'Advanced fryer with continuous oil filtration and temperature control.' },
-      { name: 'Flavoring & Seasoning Drum', image: '/turnkey-brochures/images/economical-kurkure-making-plant/flavoring-seasoning-drum.jpg', desc: 'Rotary drum with automated powder applicator for even coating.' },
-      { name: 'Automatic Pouch Packing Machine', image: '/turnkey-brochures/images/economical-kurkure-making-plant/automatic-pouch-packing-machine.jpg', desc: 'High-speed vertical FFS machine with multi-head weighers.' }
+      { name: 'Raw Material Storage & Feeding System', image: '/turnkey-brochures/images/economical-kurkure-plant/raw_material_feeding.jpg', desc: 'Automated silos and feeders for continuous raw material supply.' },
+      { name: 'Continuous Dough Mixer', image: '/turnkey-brochures/images/economical-kurkure-plant/dough_mixer.jpg', desc: 'High-speed mixer for uniform hydration of corn meal.' },
+      { name: 'Kurkure Extruder Machine', image: '/turnkey-brochures/images/economical-kurkure-plant/extrusion_forming.jpg', desc: 'Precision extruder for shaping and expanding the snack.' },
+      { name: 'Continuous Frying System', image: '/turnkey-brochures/images/economical-kurkure-plant/continuous_fryer.jpg', desc: 'Advanced fryer with continuous oil filtration and temperature control.' },
+      { name: 'Flavoring & Seasoning Drum', image: '/turnkey-brochures/images/economical-kurkure-plant/seasoning_drum.jpg', desc: 'Rotary drum with automated powder applicator for even coating.' },
+      { name: 'Automatic Pouch Packing Machine', image: '/turnkey-brochures/images/economical-kurkure-plant/packing_machine.jpg', desc: 'High-speed vertical FFS machine with multi-head weighers.' }
     ],
     applications: [
       { title: 'Masala Kurkure', desc: 'Spicy Indian flavored extruded snacks.' },
@@ -1190,13 +1242,13 @@ const CORE_PROJECTS = {
       { title: 'Cheese Puffs', desc: 'Cheese flavored extruded snacks.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/kurkure-hero.jpg', caption: 'Economical Kurkure Making Plant' },
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/raw-material-storage-feeding-system.jpg', caption: 'Raw Material Storage & Feeding System' },
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/continuous-dough-mixer.jpg', caption: 'Continuous Dough Mixer' },
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/kurkure-extruder-machine.jpg', caption: 'Kurkure Extruder Machine' },
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/continuous-frying-system.jpg', caption: 'Continuous Frying System' },
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/flavoring-seasoning-drum.jpg', caption: 'Flavoring & Seasoning Drum' },
-      { src: '/turnkey-brochures/images/economical-kurkure-making-plant/automatic-pouch-packing-machine.jpg', caption: 'Automatic Pouch Packing Machine' }
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg', caption: 'Economical Kurkure Making Plant' },
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/raw_material_feeding.jpg', caption: 'Raw Material Storage & Feeding System' },
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/dough_mixer.jpg', caption: 'Continuous Dough Mixer' },
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/extrusion_forming.jpg', caption: 'Kurkure Extruder Machine' },
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/continuous_fryer.jpg', caption: 'Continuous Frying System' },
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/seasoning_drum.jpg', caption: 'Flavoring & Seasoning Drum' },
+      { src: '/turnkey-brochures/images/economical-kurkure-plant/packing_machine.jpg', caption: 'Automatic Pouch Packing Machine' }
     ]
   },
   'protein-powder-production-plant': {
@@ -1204,7 +1256,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY POWDER PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Protein Powder Manufacturing',
     heroImage: '/turnkey-brochures/images/protein-powder-production-plant/protein-powder-hero.jpg',
-    heroMinHeight: '600px',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     workflowTitle: 'Protein Powder Plant',
     workflowAccentTitle: 'Workflow',
@@ -1290,7 +1341,6 @@ const CORE_PROJECTS = {
     workflowAccentTitle: 'Workflow',
     pdfFile: 'biscuit_baking_turnkey.pdf',
     heroImage: '/turnkey-brochures/images/biscuit-baking-turnkey/biscuit-hero-banner.png',
-    heroMinHeight: '600px',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
       capacity: '500 Kg–5 Ton',
@@ -1360,8 +1410,399 @@ const CORE_PROJECTS = {
       { src: '/turnkey-brochures/images/biscuit-baking-turnkey/cooling-conveyor-system.jpg', caption: 'Cooling Conveyor System' },
       { src: '/turnkey-brochures/images/biscuit-baking-turnkey/automatic-flow-wrap-packing-machine.jpg', caption: 'Automatic Flow Wrap Packing Machine' }
     ]
+  },
+  'groundnut-chikki-processing-plant': {
+    title: 'Groundnut Chikki Processing Plant',
+    badge: 'TURNKEY GROUNDNUT CHIKKI PROCESSING SOLUTION',
+    subtitle: 'Complete Turnkey Line For Groundnut Cleaning, Roasting, Jaggery Preparation, Chikki Mixing, Sheet Forming, Cutting & Packaging',
+    workflowTitle: 'Groundnut Chikki Processing Plant',
+    workflowAccentTitle: 'Workflow',
+    pdfFile: 'groundnut_chikki_processing_plant.pdf',
+    heroImage: '/turnkey-brochures/images/hero-banners/groundnut_chikki_hero.png',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    stats: {
+      capacity: '100–500 Kg/Hr',
+      stages: '7 Stage',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Groundnut Chikki Processing Solution',
+      p1: "Salvin Industries' Groundnut Chikki Processing Plant is a fully integrated, high-efficiency turnkey solution engineered for large-scale chikki production. The plant covers the complete process — from raw groundnut receiving, cleaning and grading, through continuous roasting, jaggery syrup preparation, automated mixing, slab sheet forming, precision cutting, cooling and final automated packaging.",
+      p2: 'Built with food-grade stainless steel SS304/SS316L throughout, our plant delivers precise caramelisation control, consistent bar weight and dimensions, and high OEE on every shift. Whether you are producing traditional groundnut chikki, sesame chikki or mixed nut brittle, our scalable turnkey solutions are engineered for consistent quality, minimum wastage and full compliance with FSSAI and export market food safety standards.',
+      highlights: [
+        { title: 'Precise Caramelisation Control', desc: 'Temperature-controlled jaggery syrup ensures perfect snap and texture.' },
+        { title: 'High Throughput', desc: 'Continuous automated line from roasting to packaging with minimal downtime.' },
+        { title: 'Food-Grade Construction', desc: 'Full SS304/SS316L contact surfaces with CIP-ready design.' }
+      ],
+      isBrochure: false,
+      image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.jpg',
+      photoImage: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.jpg',
+      features4: [
+        { title: 'Hygienic Design', desc: 'Food-grade SS304/SS316L enclosed construction throughout' },
+        { title: 'Precise Temperature Control', desc: 'Consistent caramelisation for perfect chikki snap and texture' },
+        { title: 'Uniform Bar Dimensions', desc: 'Precision sheet forming and cutting for consistent product size' },
+        { title: 'Automated Packaging', desc: 'High-speed flow-wrap sealing for retail-ready chikki bars' }
+      ]
+    },
+    capacities: [
+      { size: '100 Kg/Hr', desc: 'Ideal for artisan and small-scale regional producers.' },
+      { size: '200 Kg/Hr', desc: 'Standard capacity for established chikki brands.' },
+      { size: '500 Kg/Hr', desc: 'High-volume industrial-scale production for exports.' }
+    ],
+    features: [
+      { title: 'Food Grade Stainless Steel', desc: 'All product contact parts fabricated from SS304/SS316L ensuring strict food hygiene compliance.' },
+      { title: 'Precise Jaggery Control', desc: 'Automated temperature and Brix monitoring for consistent syrup concentration and caramelisation.' },
+      { title: 'Continuous Roasting System', desc: 'Multi-zone tunnel roaster delivers uniform colour, flavour and moisture removal across every batch.' },
+      { title: 'Precision Sheet Forming', desc: 'Automated slab forming and guillotine cutting ensures consistent bar size, weight and appearance.' },
+      { title: 'Automated Packaging', desc: 'High-speed flow-wrap or pouch packing machines with date coding for retail-ready output.' },
+      { title: 'PLC Automation', desc: 'Centralised HMI control panel with recipe management and real-time process monitoring.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Material Receiving & Cleaning', desc: 'Incoming raw groundnuts are weighed, inspected and fed through vibratory cleaners and air aspirators to remove stones, dust, and foreign matter.' },
+      { id: 2, title: 'Groundnut Roasting', desc: 'Cleaned groundnuts pass through a continuous multi-zone tunnel roaster for uniform hot-air roasting to achieve perfect colour, crunch and flavour.' },
+      { id: 3, title: 'Jaggery Syrup Preparation', desc: 'Jaggery blocks are dissolved, filtered and cooked in steam-jacketed kettles with precise temperature and Brix control for consistent caramelisation.' },
+      { id: 4, title: 'Chikki Mixing & Blending', desc: 'Roasted groundnuts and hot jaggery syrup are combined in automated mixing kettles to achieve even coating and optimal caramel binding.' },
+      { id: 5, title: 'Sheet Forming & Cutting', desc: 'The hot chikki mass is spread into uniform slabs using forming rollers and then precision-cut into bars or squares using automatic guillotine cutting machines.' },
+      { id: 6, title: 'Cooling & Setting', desc: 'Cut chikki bars move through controlled cooling conveyors to allow the jaggery to set firmly, achieving the characteristic brittle snap texture.' },
+      { id: 7, title: 'Packaging', desc: 'Cooled chikki bars are fed into high-speed flow-wrap or pillow-pack machines for airtight sealing, date coding and retail-ready packaging.' }
+    ],
+    machinery: [
+      { name: 'Groundnut Cleaning & Grading System', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/groundnut-cleaning-grading-system.jpg', desc: 'Vibratory cleaning screens and air aspirators remove dust, stones and foreign matter, followed by grading conveyors to size-classify raw groundnuts.' },
+      { name: 'Continuous Groundnut Roaster', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/continuous-groundnut-roaster.jpg', desc: 'Multi-zone continuous tunnel roaster with precise hot-air temperature control for uniform roasting, consistent colour development and flavour retention.' },
+      { name: 'Jaggery Melting & Syrup Preparation System', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/jaggery-melting-syrup-preparation-system.jpg', desc: 'Steam-jacketed jaggery melting vessels with automated Brix control and filtration to produce clean, consistent syrup for perfect caramelisation.' },
+      { name: 'Chikki Mixing Kettle', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.jpg', desc: 'Heavy-duty tilting mixing kettles with motorised agitators uniformly coat roasted groundnuts with hot jaggery syrup for consistent binding.' },
+      { name: 'Chikki Forming & Cutting Machine', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-forming-cutting-machine.jpg', desc: 'Automated slab forming rollers and precision guillotine cutting blades produce uniform chikki bars and squares with consistent dimensions and weight.' },
+      { name: 'Automatic Packaging Machine', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/automatic-packaging-machine.jpg', desc: 'High-speed flow-wrap and pillow-pack machines with automatic date coding for airtight, retail-ready chikki bar packaging at high throughput.' }
+    ],
+    applications: [
+      { title: 'Groundnut Chikki', desc: 'Traditional hard-brittle groundnut and jaggery bars in various sizes.' },
+      { title: 'Sesame Chikki', desc: 'Sesame seed and jaggery brittle for health food and traditional markets.' },
+      { title: 'Mixed Nut Brittle', desc: 'Premium mixed nut and seed brittle for retail and export brands.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/groundnut-cleaning-grading-system.jpg', caption: 'Groundnut Cleaning & Grading System' },
+      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/continuous-groundnut-roaster.jpg', caption: 'Continuous Groundnut Roaster' },
+      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/jaggery-melting-syrup-preparation-system.jpg', caption: 'Jaggery Melting & Syrup Preparation System' },
+      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.jpg', caption: 'Chikki Mixing Kettle' },
+      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-forming-cutting-machine.jpg', caption: 'Chikki Forming & Cutting Machine' },
+      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/automatic-packaging-machine.jpg', caption: 'Automatic Packaging Machine' }
+    ]
+  },
+  'cashew-nut-processing-plant': {
+    title: 'Cashew Nut Processing Plant',
+    badge: 'TURNKEY CASHEW NUT PROCESSING SOLUTION',
+    subtitle: 'Complete Turnkey Line For Raw Cashew Cleaning, Roasting, Shelling, Drying, Peeling, Grading & Automatic Packaging',
+    workflowTitle: 'Cashew Nut Processing Plant',
+    workflowAccentTitle: 'Workflow',
+    pdfFile: 'cashew_nut_processing_plant.pdf',
+    heroImage: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-nut-hero-banner.jpg',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    stats: {
+      capacity: '200 Kg–2 Ton/Hr',
+      stages: '7 Stage',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Cashew Nut Processing Solution',
+      p1: "Salvin Industries' Cashew Nut Processing Plant is a fully integrated, high-efficiency turnkey solution engineered for commercial-scale cashew kernel production. The plant covers the complete process — from raw cashew receiving, cleaning and destoning, through continuous roasting or steam cooking, automated shelling, kernel drying, testa peeling, size grading and automated packaging into retail-ready pouches.",
+      p2: 'Built with food-grade stainless steel SS304/SS316L throughout, our plant delivers high kernel recovery, minimal breakage, and consistent grade output on every shift. Whether you are producing W240, W320, W450 or mixed grades, our scalable turnkey solutions are engineered for maximum yield, minimum wastage and full compliance with FSSAI, HACCP and export market food safety standards.',
+      highlights: [
+        { title: 'Maximum Kernel Recovery', desc: 'Precision shelling and drying minimise breakage for high-grade whole kernel output.' },
+        { title: 'Multi-Grade Sorting', desc: 'Automated grading produces W240, W320, W450, W600, W700 and mixed grade streams.' },
+        { title: 'Export-Ready Quality', desc: 'Full SS304/SS316L food-grade construction with HACCP and FSSAI compliant design.' }
+      ],
+      isBrochure: false,
+      image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.jpg',
+      photoImage: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.jpg',
+      features4: [
+        { title: 'High Kernel Recovery', desc: 'Precision shelling for maximum whole kernel yield with minimum breakage' },
+        { title: 'Automated Grading', desc: 'Multi-grade separation for W240, W320, W450, W600 and mixed grades' },
+        { title: 'Food-Grade Construction', desc: 'Full SS304/SS316L enclosed construction for HACCP compliance' },
+        { title: 'Automated Packaging', desc: 'High-speed pouch and bag filling for export-ready kernel packaging' }
+      ]
+    },
+    capacities: [
+      { size: '200 Kg/Hr', desc: 'Ideal for small and artisan cashew processing units.' },
+      { size: '500 Kg/Hr', desc: 'Standard capacity for established commercial processors.' },
+      { size: '2 Ton/Hr', desc: 'High-volume industrial-scale export-grade production.' }
+    ],
+    features: [
+      { title: 'Food Grade Stainless Steel', desc: 'All product contact surfaces fabricated from SS304/SS316L for strict food hygiene and HACCP compliance.' },
+      { title: 'High Kernel Recovery', desc: 'Precision shelling mechanisms minimise breakage to deliver maximum whole, half and split kernel recovery.' },
+      { title: 'Continuous Roasting / Steam Cooking', desc: 'Multi-zone tunnel roaster or steam retort softens cashew shells for efficient shelling with minimal kernel damage.' },
+      { title: 'Automated Multi-Grade Sorting', desc: 'Motorised grading systems separate kernels into W240, W320, W450, W600, W700 and mixed grade streams simultaneously.' },
+      { title: 'Automated Packaging', desc: 'High-speed pouch, stand-up zipper bag or bulk carton packing lines for retail and export-ready output.' },
+      { title: 'PLC Automation', desc: 'Centralised HMI control panel with recipe management, motor speed control and real-time process monitoring.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Cashew Receiving & Cleaning', desc: 'Incoming raw cashew nuts are weighed, inspected and fed through vibratory cleaners and destoners to remove dust, stones and foreign matter.' },
+      { id: 2, title: 'Roasting / Steam Cooking', desc: 'Clean raw cashews pass through a continuous multi-zone tunnel roaster or steam retort system to soften the outer shell for efficient shelling.' },
+      { id: 3, title: 'Cashew Shelling', desc: 'Softened cashews are fed into high-speed automated shelling machines that crack and separate the shell from the kernel with minimal breakage.' },
+      { id: 4, title: 'Kernel Drying', desc: 'Shelled cashew kernels pass through a continuous belt dryer to reduce moisture content, making the testa skin brittle and easy to peel.' },
+      { id: 5, title: 'Peeling & Grading', desc: 'Dried kernels are fed into automated peeling machines to remove the testa skin, then size-graded into W240, W320, W450, W600 and W700 grades.' },
+      { id: 6, title: 'Quality Inspection', desc: 'Graded kernels pass through optical sorters and manual inspection conveyors to remove defects, discoloured and broken kernels before packaging.' },
+      { id: 7, title: 'Automatic Packaging', desc: 'Premium graded cashew kernels are dosed by multi-head weigher and sealed into pouches, stand-up bags or cartons with nitrogen flushing for extended shelf life.' }
+    ],
+    machinery: [
+      { name: 'Raw Cashew Receiving & Cleaning System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/raw-cashew-receiving-cleaning-system.jpg', desc: 'Automated receiving hopper with inclined elevator, vibratory cleaning screens and destoner to remove stones, dust and foreign matter from raw cashews.' },
+      { name: 'Continuous Cashew Roasting / Steam Cooking System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-roasting-steam-cooking-system.jpg', desc: 'Multi-zone continuous tunnel roaster or steam retort system with precise temperature and time control for uniform shell softening with minimal kernel browning.' },
+      { name: 'Cashew Shelling Machine', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.jpg', desc: 'High-speed automated multi-head shelling machine that cracks and separates cashew shells from kernels with minimal whole kernel breakage and high throughput.' },
+      { name: 'Cashew Kernel Drying System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-kernel-drying-system.jpg', desc: 'Continuous belt dryer with precise hot-air temperature control to reduce kernel moisture and make testa skin brittle for efficient automated peeling.' },
+      { name: 'Cashew Peeling & Grading System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-peeling-grading-system.jpg', desc: 'Automated peeling machines remove the testa skin to reveal white kernels, followed by motorised grading conveyors that classify kernels into W240–W700 export grades.' },
+      { name: 'Automatic Cashew Packaging Machine', image: '/turnkey-brochures/images/cashew-nut-processing-plant/automatic-cashew-packaging-machine.jpg', desc: 'High-speed multi-head weigher and pouch or stand-up bag packing line with nitrogen flushing for airtight, retail-ready export-grade cashew kernel packaging.' }
+    ],
+    applications: [
+      { title: 'Premium Cashew Kernels', desc: 'Export-grade W240, W320, W450 whole white cashew kernels for retail and bulk markets.' },
+      { title: 'Mixed Grade Cashews', desc: 'Mixed grade broken and split kernels for confectionery, bakery and food ingredient industries.' },
+      { title: 'Roasted & Salted Cashews', desc: 'Value-added flavoured cashew processing for retail snack brands and food service.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/raw-cashew-receiving-cleaning-system.jpg', caption: 'Raw Cashew Receiving & Cleaning System' },
+      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-roasting-steam-cooking-system.jpg', caption: 'Continuous Cashew Roasting / Steam Cooking System' },
+      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.jpg', caption: 'Cashew Shelling Machine' },
+      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-kernel-drying-system.jpg', caption: 'Cashew Kernel Drying System' },
+      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-peeling-grading-system.jpg', caption: 'Cashew Peeling & Grading System' },
+      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/automatic-cashew-packaging-machine.jpg', caption: 'Automatic Cashew Packaging Machine' }
+    ]
+  },
+  'industry-4-automation-food-plant': {
+    title: 'Industry 4.0 Automation for Food Plant',
+    badge: 'INDUSTRY 4.0 SMART AUTOMATION SOLUTIONS',
+    subtitle: 'Complete Industry 4.0 Automation — PLC/SCADA, Industrial IoT, Robotics, Vision Inspection, Smart Material Handling & Digital Traceability for Food Processing Plants',
+    workflowTitle: 'Industry 4.0 Automation',
+    workflowAccentTitle: 'Workflow',
+    pdfFile: 'industry_4_automation_food_plant.pdf',
+    heroImage: '/turnkey-brochures/images/industry-4-automation-food-plant/industry-4-hero-banner.jpg',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    stats: {
+      capacity: 'Any Scale',
+      stages: '7 Layer',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Industry 4.0 Automation Solution',
+      p1: "Salvin Industries' Industry 4.0 Automation solution transforms conventional food processing plants into smart, connected, data-driven facilities. Our end-to-end automation platform integrates PLC & SCADA control systems, Industrial IoT (IIoT) monitoring, robotic pick & place systems, machine vision inspection, automated material handling and smart packaging with full digital traceability — all managed from a centralised data analytics dashboard.",
+      p2: 'Whether you are upgrading an existing plant or commissioning a new greenfield facility, our modular Industry 4.0 solutions are engineered for maximum Overall Equipment Effectiveness (OEE), predictive maintenance, zero-defect quality control, and complete supply chain traceability — in full compliance with FSSAI, HACCP, ISO 22000 and global food safety standards.',
+      highlights: [
+        { title: 'Maximum OEE', desc: 'Real-time PLC/SCADA and IoT monitoring deliver 99%+ Overall Equipment Effectiveness.' },
+        { title: 'Zero-Defect Quality', desc: 'AI-powered vision inspection rejects defects automatically with sub-millimetre precision.' },
+        { title: 'Full Digital Traceability', desc: 'End-to-end batch and product traceability with QR/barcode and blockchain-ready data.' }
+      ],
+      isBrochure: false,
+      image: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.jpg',
+      photoImage: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.jpg',
+      features4: [
+        { title: 'PLC & SCADA Control', desc: 'Centralised recipe management and real-time process control across all plant equipment' },
+        { title: 'Industrial IoT Monitoring', desc: 'Live OEE, energy and machine health dashboards on web and mobile' },
+        { title: 'Robotic Automation', desc: 'Flexible robotic pick & place for hygienic, high-speed product handling' },
+        { title: 'Vision Inspection', desc: 'AI-powered camera inspection for 100% in-line quality and defect rejection' }
+      ]
+    },
+    capacities: [
+      { size: 'Small Plant', desc: 'Up to 10 machines — entry-level PLC/SCADA and IoT monitoring package.' },
+      { size: 'Mid-Scale Plant', desc: '10–50 machines — full PLC, SCADA, IIoT, vision and robotic integration.' },
+      { size: 'Large Plant', desc: '50+ machines — enterprise MES, ERP integration and centralised analytics.' }
+    ],
+    features: [
+      { title: 'PLC & SCADA Control', desc: 'Centralised PLC-based automation with SCADA HMI for recipe management, real-time parameter monitoring and remote access across all plant equipment.' },
+      { title: 'Industrial IoT (IIoT) Monitoring', desc: 'Wireless sensors and IoT gateways deliver live OEE, energy consumption, machine health and real-time alarm dashboards on web and mobile platforms.' },
+      { title: 'Robotic Pick & Place', desc: 'High-speed delta and SCARA robots handle product picking, placing, sorting and palletising with consistent precision and zero contamination risk.' },
+      { title: 'Vision Inspection & Quality Control', desc: 'AI-powered multi-camera vision systems perform 100% in-line inspection for size, shape, colour and defect detection with automatic rejection.' },
+      { title: 'Smart Packaging & Traceability', desc: 'Integrated auto-coding, QR/barcode labelling and blockchain-ready batch traceability from raw material to retail shelf.' },
+      { title: 'Centralised Data Analytics', desc: 'Cloud or on-premise MES/analytics dashboard aggregating production data for predictive maintenance, yield optimisation and regulatory reporting.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'PLC & SCADA Control System', desc: 'Centralised PLC controllers and SCADA HMI panels automate all critical plant processes with recipe management, interlock safety and remote monitoring capability.' },
+      { id: 2, title: 'Industrial IoT Monitoring', desc: 'IIoT sensors and gateways collect real-time data from every machine — motor currents, temperatures, pressures and speeds — displayed on live web and mobile dashboards.' },
+      { id: 3, title: 'Robotic Pick & Place System', desc: 'Delta and SCARA robots perform high-speed, hygienic product picking, placing, sorting and palletising with vision-guided precision and contamination-free operation.' },
+      { id: 4, title: 'Vision Inspection & Quality Control', desc: 'Multi-camera AI vision systems inspect 100% of products in-line for size, shape, colour, foreign matter and defects — with automatic rejection of non-conforming items.' },
+      { id: 5, title: 'Automated Material Handling', desc: 'AMR robots, powered conveyors and automatic guided vehicles (AGVs) move raw materials, WIP and finished goods through the plant without manual intervention.' },
+      { id: 6, title: 'Smart Packaging & Traceability', desc: 'Integrated auto-coding machines, QR/barcode printers and RFID tagging systems create complete batch traceability records from raw material receipt to finished goods dispatch.' },
+      { id: 7, title: 'Centralized Data Analytics', desc: 'Cloud or on-premise analytics platform aggregates all plant data for real-time OEE reporting, predictive maintenance alerts, yield analysis and regulatory compliance dashboards.' }
+    ],
+    machinery: [
+      { name: 'Smart PLC & SCADA Control System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.jpg', desc: 'Industrial-grade PLC controllers with colour SCADA HMI panels for centralised recipe management, interlock control, alarm management and remote access across all production equipment.' },
+      { name: 'Industrial IoT Monitoring System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/industrial-iot-monitoring-system.jpg', desc: 'IIoT sensors, edge gateways and cloud dashboards delivering real-time OEE, energy, machine health, production counts and alarm notifications on web and mobile platforms.' },
+      { name: 'Robotic Pick & Place System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/robotic-pick-place-system.jpg', desc: 'High-speed delta and articulated robots with vision-guided grippers for hygienic, precise product picking, placing, sorting and palletising at line speed.' },
+      { name: 'Vision Inspection & Quality Control System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/vision-inspection-quality-control-system.jpg', desc: 'Multi-camera AI-powered vision inspection systems performing 100% in-line product inspection for colour, size, shape, defects and foreign matter with automatic reject.' },
+      { name: 'Automated Material Handling System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/automated-material-handling-system.jpg', desc: 'AMR robots, AGVs and smart conveyor networks that autonomously transport raw materials, in-process goods and finished products through the plant with zero manual handling.' },
+      { name: 'Smart Packaging & Traceability System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/smart-packaging-traceability-system.jpg', desc: 'Integrated auto-coding, QR/barcode and RFID labelling systems with MES connectivity for complete batch traceability, expiry date coding and retail-ready compliant packaging.' }
+    ],
+    applications: [
+      { title: 'Food Processing Automation', desc: 'PLC/SCADA and IoT automation for snack, beverage, dairy and packaged food plants.' },
+      { title: 'Quality Control Automation', desc: 'Vision inspection and AI-based defect rejection for zero-defect food manufacturing.' },
+      { title: 'Supply Chain Traceability', desc: 'End-to-end digital traceability for FSSAI, HACCP and export regulatory compliance.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.jpg', caption: 'Smart PLC & SCADA Control System' },
+      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/industrial-iot-monitoring-system.jpg', caption: 'Industrial IoT Monitoring System' },
+      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/robotic-pick-place-system.jpg', caption: 'Robotic Pick & Place System' },
+      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/vision-inspection-quality-control-system.jpg', caption: 'Vision Inspection & Quality Control System' },
+      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/automated-material-handling-system.jpg', caption: 'Automated Material Handling System' },
+      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/smart-packaging-traceability-system.jpg', caption: 'Smart Packaging & Traceability System' }
+    ]
+  },
+  'roasted-nuts-snacks-making-plant': {
+    title: 'ROASTED NUTS SNACKS MAKING PLANT',
+    badge: 'TURNKEY ROASTED NUTS PROCESSING SOLUTIONS',
+    subtitle: 'Complete processing line for roasting, cooling, flavouring and packaging of peanuts, almonds, cashews and other nuts.',
+    workflowTitle: 'Roasted Nuts Processing',
+    workflowAccentTitle: 'Workflow',
+    pdfFile: 'roasted_nuts_snacks_making_plant.pdf',
+    heroImage: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.jpg',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    stats: {
+      capacity: 'Any Scale',
+      stages: '6 Layer',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Roasted Nuts Processing Solution',
+      p1: "Salvin Industries' Roasted Nuts Snacks Making Plant provides a fully automated, high-efficiency solution for processing premium roasted nuts. From raw nut receiving and precision roasting to automated flavouring and protective packaging, our turnkey lines ensure consistent crunch, flavour, and extended shelf life.",
+      p2: 'Whether you are producing salted peanuts, honey-roasted almonds, or spiced cashews, our continuous roasting and coating systems are engineered for maximum productivity, hygienic operation, and full compliance with global food safety standards including FSSAI, HACCP, and ISO 22000.',
+      highlights: [
+        { title: 'Consistent Roasting', desc: 'Advanced continuous roasters ensure uniform heat distribution for perfect crunch and colour.' },
+        { title: 'Even Flavour Coating', desc: 'Precision seasoning drums provide consistent flavour application with minimal waste.' },
+        { title: 'High-Speed Packaging', desc: 'Automated FFS machines with nitrogen flushing preserve freshness and extend shelf life.' }
+      ],
+      isBrochure: false,
+      image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.jpg',
+      photoImage: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.jpg',
+      features4: [
+        { title: 'Automated Cleaning', desc: 'Efficiently removes stones, dust, and foreign materials from raw nuts.' },
+        { title: 'Continuous Roasting', desc: 'Precise temperature control for optimal roasting and flavour development.' },
+        { title: 'Seasoning & Flavouring', desc: 'Uniform coating of salt, spices, or sweet glazes in continuous drums.' },
+        { title: 'Nitrogen Packaging', desc: 'Automated bagging with modified atmosphere to prevent oxidation.' }
+      ]
+    },
+    capacities: [
+      { size: 'Small Scale', desc: 'Up to 200 kg/hr — Ideal for boutique snack brands and startups.' },
+      { size: 'Medium Scale', desc: '200–500 kg/hr — Perfect for regional snack distributors and growing markets.' },
+      { size: 'Large Scale', desc: '500+ kg/hr — High-volume continuous lines for national retail distribution.' }
+    ],
+    features: [
+      { title: 'Raw Nuts Receiving & Cleaning', desc: 'Automated intake hoppers and vibratory cleaners remove impurities, dust, and stones to ensure only clean nuts enter the process.' },
+      { title: 'Continuous Nuts Roasting', desc: 'High-efficiency continuous roasters with precise multi-zone temperature controls deliver uniform roasting and develop optimal flavour profiles.' },
+      { title: 'Rapid Cooling Conveyors', desc: 'Integrated ambient or forced-air cooling conveyors quickly reduce nut temperatures to stop the roasting process and lock in the crunch.' },
+      { title: 'Flavouring & Seasoning', desc: 'Continuous rotary seasoning drums with automated spray and powder dosing systems ensure even coating of oil, salt, and spices.' },
+      { title: 'Quality Inspection & Sorting', desc: 'Automated optical sorting and manual inspection stations remove discoloured, broken, or defective nuts before packaging.' },
+      { title: 'Automatic Packaging', desc: 'High-speed vertical form-fill-seal (VFFS) machines package the finished nuts with optional nitrogen flushing to extend shelf life.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Nuts Receiving & Cleaning System', desc: 'Bulk hoppers and multi-deck vibratory screeners efficiently remove stones, twigs, dust, and under-sized nuts from the incoming raw material.' },
+      { id: 2, title: 'Continuous Nuts Roasting System', desc: 'Thermal roasting ovens utilize forced hot air or radiant heat to achieve consistent roasting, ensuring uniform colour and optimal moisture reduction.' },
+      { id: 3, title: 'Cooling Conveyor System', desc: 'Specialized cooling belts immediately reduce the temperature of roasted nuts, preventing over-roasting and preparing them for seasoning.' },
+      { id: 4, title: 'Flavoring & Seasoning Drum System', desc: 'Rotary tumbling drums gently mix the nuts while automated applicators accurately dose liquid binders and dry seasonings for a perfect coating.' },
+      { id: 5, title: 'Quality Inspection & Sorting System', desc: 'Advanced sorting belts allow for the rigorous removal of any remaining defective or off-spec nuts to guarantee a premium final product.' },
+      { id: 6, title: 'Automatic Nuts Packaging Machine', desc: 'State-of-the-art packaging systems accurately weigh and seal the roasted snacks into attractive retail pouches, utilizing nitrogen flushing for maximum freshness.' }
+    ],
+    machinery: [
+      { name: 'Raw Nuts Receiving & Cleaning System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/raw-nuts-receiving-cleaning-system.jpg', desc: 'Heavy-duty stainless steel hoppers and vibratory destoners designed for high-capacity, gentle cleaning of delicate raw nuts.' },
+      { name: 'Continuous Nuts Roasting System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/continuous-nuts-roasting-system.jpg', desc: 'Advanced continuous roasting ovens featuring multi-zone temperature control and variable speed conveyors for precise thermal processing.' },
+      { name: 'Cooling Conveyor System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/cooling-conveyor-system.jpg', desc: 'High-volume cooling conveyors equipped with powerful ambient air fans to rapidly stabilize nut temperatures post-roasting.' },
+      { name: 'Flavoring & Seasoning Drum System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/flavoring-seasoning-drum-system.jpg', desc: 'Continuous rotary seasoning drums with integrated liquid sprayers and dry powder dispensers for uniform flavour application.' },
+      { name: 'Quality Inspection & Sorting System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/quality-inspection-sorting-system.jpg', desc: 'Hygienic inspection conveyors providing optimal lighting and ergonomic design for visual quality control and defect removal.' },
+      { name: 'Automatic Nuts Packaging Machine', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/automatic-nuts-packaging-machine.jpg', desc: 'High-speed VFFS packaging machines with multi-head weighers, date coders, and modified atmosphere packaging (MAP) capabilities.' }
+    ],
+    applications: [
+      { title: 'Salted & Spiced Peanuts', desc: 'Complete processing for classic roasted and salted or masala-coated peanuts.' },
+      { title: 'Premium Tree Nuts', desc: 'Gentle roasting and processing for high-value almonds, cashews, and macadamias.' },
+      { title: 'Coated & Glazed Snacks', desc: 'Systems capable of handling honey-roasted or heavily coated nut snacks.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/raw-nuts-receiving-cleaning-system.jpg', caption: 'Raw Nuts Receiving & Cleaning System' },
+      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/continuous-nuts-roasting-system.jpg', caption: 'Continuous Nuts Roasting System' },
+      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/cooling-conveyor-system.jpg', caption: 'Cooling Conveyor System' },
+      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/flavoring-seasoning-drum-system.jpg', caption: 'Flavoring & Seasoning Drum System' },
+      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/quality-inspection-sorting-system.jpg', caption: 'Quality Inspection & Sorting System' },
+      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/automatic-nuts-packaging-machine.jpg', caption: 'Automatic Nuts Packaging Machine' }
+    ]
+  },
+  'fruit-powder-processing-plant': {
+    title: 'Fruit Powder Processing Plant',
+    badge: 'TURNKEY FRUIT POWDER SOLUTIONS',
+    subtitle: 'Complete processing line for washing, pulping, drying, and milling fruits into premium fruit powders.',
+    workflowTitle: 'Fruit Powder Processing',
+    workflowAccentTitle: 'Workflow',
+    pdfFile: 'fruit_powder_processing_plant.pdf',
+    heroImage: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-hero-banner.jpg',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    stats: {
+      capacity: 'Customizable',
+      stages: '6 Layer',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Fruit Powder Processing Solution',
+      p1: "Salvin Industries' Fruit Powder Processing Plant provides a fully automated, high-efficiency solution for processing premium fruit powders. From raw fruit receiving and precision pulping to advanced spray/freeze drying and fine milling, our turnkey lines ensure maximum retention of natural flavours, colours, and nutrients.",
+      p2: 'Whether you are producing mango, strawberry, or banana powders, our advanced drying and milling systems are engineered for maximum productivity, hygienic operation, and full compliance with global food safety standards including FSSAI, HACCP, and ISO 22000.',
+      highlights: [
+        { title: 'Nutrient Retention', desc: 'Advanced low-temperature drying preserves vitamins and natural fruit profiles.' },
+        { title: 'Fine Milling', desc: 'Precision milling ensures uniform particle size and excellent solubility.' },
+        { title: 'Hygienic Design', desc: 'Fully enclosed processing lines prevent contamination and ensure food safety.' }
+      ],
+      isBrochure: false,
+      image: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-brochure.jpg',
+      photoImage: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-brochure.jpg',
+      features4: [
+        { title: 'Automated Cleaning', desc: 'Efficiently removes dirt and foreign materials from raw fruits.' },
+        { title: 'Precision Pulping', desc: 'High-yield pulping systems for maximum extraction.' },
+        { title: 'Advanced Drying', desc: 'Spray or vacuum drying for optimal moisture reduction.' },
+        { title: 'Fine Grinding', desc: 'Uniform milling for perfect powder consistency.' }
+      ]
+    },
+    capacities: [
+      { size: 'Small Scale', desc: 'Up to 200 kg/hr — Ideal for boutique brands and startups.' },
+      { size: 'Medium Scale', desc: '200–500 kg/hr — Perfect for regional distributors and growing markets.' },
+      { size: 'Large Scale', desc: '500+ kg/hr — High-volume continuous lines for national distribution.' }
+    ],
+    features: [
+      { title: 'Raw Fruit Receiving & Washing', desc: 'Automated intake hoppers and multi-stage washers remove dirt and pesticide residues.' },
+      { title: 'Sorting & Pulping', desc: 'Optical sorting removes defective fruits, followed by high-yield pulping to extract pure fruit puree.' },
+      { title: 'Pasteurization & Concentration', desc: 'Thermal pasteurization ensures safety, while vacuum evaporators concentrate the pulp for efficient drying.' },
+      { title: 'Advanced Drying System', desc: 'State-of-the-art spray drying or freeze drying technology reduces moisture while preserving essential nutrients.' },
+      { title: 'Milling & Blending', desc: 'Precision mills grind the dried flakes into ultra-fine powder, ready for blending with anti-caking agents.' },
+      { title: 'Automatic Packaging', desc: 'High-speed vertical form-fill-seal (VFFS) machines package the finished powder with optional nitrogen flushing.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Fruit Receiving & Washing System', desc: 'Bubble washers and high-pressure sprays gently yet effectively clean delicate fruits.' },
+      { id: 2, title: 'Fruit Pulping & Extraction System', desc: 'Advanced pulpers separate seeds and skin, yielding smooth, high-quality fruit puree.' },
+      { id: 3, title: 'Pasteurization System', desc: 'Tubular heat exchangers rapidly pasteurize the pulp to eliminate pathogens without degrading flavour.' },
+      { id: 4, title: 'Spray Drying System', desc: 'Atomizers and hot air streams instantly convert the concentrated puree into dry powder particles.' },
+      { id: 5, title: 'Milling & Sieving System', desc: 'Pin mills and vibratory sifters ensure the final powder has a uniform, fine particle size.' },
+      { id: 6, title: 'Automatic Powder Packaging Machine', desc: 'Auger fillers and VFFS machines accurately dispense and seal the powder into moisture-proof pouches.' }
+    ],
+    machinery: [
+      { name: 'Raw Fruit Receiving & Washing System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/raw-fruit-receiving-washing-system-new.jpg', desc: 'Food-grade stainless steel washing lines designed for high-capacity, gentle cleaning of raw fruits.' },
+      { name: 'Fruit Pulping & Extraction System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-pulping-extraction-system-new.jpg', desc: 'High-efficiency pulping machines featuring specialized screens for maximum yield and pure extraction.' },
+      { name: 'Pasteurization System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/pasteurization-system-new.jpg', desc: 'Advanced pasteurizers providing precise temperature control for optimal microbial safety.' },
+      { name: 'Spray Drying System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/spray-drying-system-new.jpg', desc: 'Industrial spray dryers engineered for continuous operation and superior powder quality.' },
+      { name: 'Milling & Sieving System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/milling-sieving-system-new.jpg', desc: 'Hygienic milling systems ensuring consistent particle size distribution for excellent solubility.' },
+      { name: 'Automatic Powder Packaging Machine', image: '/turnkey-brochures/images/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.jpg', desc: 'High-speed auger filling packaging machines with modified atmosphere packaging (MAP) capabilities.' }
+    ],
+    applications: [
+      { title: 'Beverage Powders', desc: 'Complete processing for instant fruit drinks and smoothies.' },
+      { title: 'Baking & Confectionery', desc: 'Natural fruit powders for flavouring cakes, chocolates, and sweets.' },
+      { title: 'Nutritional Supplements', desc: 'High-nutrient fruit powders for health and wellness products.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/raw-fruit-receiving-washing-system-new.jpg', caption: 'Raw Fruit Receiving & Washing System' },
+      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-pulping-extraction-system-new.jpg', caption: 'Fruit Pulping & Extraction System' },
+      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/pasteurization-system-new.jpg', caption: 'Pasteurization System' },
+      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/spray-drying-system-new.jpg', caption: 'Spray Drying System' },
+      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/milling-sieving-system-new.jpg', caption: 'Milling & Sieving System' },
+      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.jpg', caption: 'Automatic Powder Packaging Machine' }
+    ]
   }
 };
+
+
+
 
 const dynamicProjectCache = {};
 

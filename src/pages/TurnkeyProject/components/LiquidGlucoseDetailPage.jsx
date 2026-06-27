@@ -137,7 +137,7 @@ export default function LiquidGlucoseDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="lgp-hero">
         <div className="lgp-hero__overlay" />
-        <div className="lgp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/15_liquid_glucose.png')` }} />
+        <div className="lgp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/liquid_glucose_hero.png')` }} />
         <div className="lgp-hero__content">
           <span className="lgp-hero__badge">
             <span className="lgp-hero__badge-dot" />

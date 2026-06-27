@@ -133,7 +133,7 @@ export default function BlackPepperDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="bpp-hero">
         <div className="bpp-hero__overlay" />
-        <div className="bpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/black-pepper-gallery/machine4.jpg')` }} />
+        <div className="bpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/black_pepper_hero.png')` }} />
         <div className="bpp-hero__content">
           <span className="bpp-hero__badge">
             <span className="bpp-hero__badge-dot" />

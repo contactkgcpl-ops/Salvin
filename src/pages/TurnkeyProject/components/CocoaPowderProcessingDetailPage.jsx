@@ -133,7 +133,7 @@ export default function CocoaPowderProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.jpg')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/cocoa_powder_hero.png')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />

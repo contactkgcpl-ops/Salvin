@@ -133,7 +133,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="tkm-hero">
         <div className="tkm-hero__overlay" />
-        <div className="tkm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.jpg')` }} />
+        <div className="tkm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_ketchup_hero.png')` }} />
         <div className="tkm-hero__content">
           <span className="tkm-hero__badge">
             <span className="tkm-hero__badge-dot" />

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { useParams, NavLink } from 'react-router-dom'
 import { getProjectDetails } from '../data/turnkeyProjectsData'
-import { PackageSearch, CookingPot, Factory, Stamp, Flame, Snowflake, Package } from 'lucide-react'
+import { PackageSearch, CookingPot, Factory, Stamp, Flame, Snowflake, Package, FlaskConical, Utensils, Scissors, Hammer, Wind, Layers, ScanSearch, Cpu, Wifi, Bot, Eye, QrCode, BarChart3 } from 'lucide-react'
 import './RedChilliDetailPage.css' // Reuse the master layout stylesheet
 import WhyChooseSalvin from './WhyChooseSalvin'
 
@@ -18,6 +18,48 @@ function getStepIcon(title, id) {
   if (t === 'baking') return <Flame className="rcp-process-card__icon-svg" />
   if (t === 'cooling') return <Snowflake className="rcp-process-card__icon-svg" />
   if (t === 'packaging') return <Package className="rcp-process-card__icon-svg" />
+
+  // ── LUCIDE ICONS FOR GROUNDNUT CHIKKI PROJECT ──
+  if (t === 'raw material receiving & cleaning') return <PackageSearch className="rcp-process-card__icon-svg" />
+  if (t === 'groundnut roasting') return <Flame className="rcp-process-card__icon-svg" />
+  if (t === 'jaggery syrup preparation') return <FlaskConical className="rcp-process-card__icon-svg" />
+  if (t === 'chikki mixing & blending') return <Utensils className="rcp-process-card__icon-svg" />
+  if (t === 'sheet forming & cutting') return <Scissors className="rcp-process-card__icon-svg" />
+  if (t === 'cooling & setting') return <Snowflake className="rcp-process-card__icon-svg" />
+
+  // ── LUCIDE ICONS FOR CASHEW NUT PROJECT ──
+  if (t === 'raw cashew receiving & cleaning') return <PackageSearch className="rcp-process-card__icon-svg" />
+  if (t === 'roasting / steam cooking') return <Flame className="rcp-process-card__icon-svg" />
+  if (t === 'cashew shelling') return <Hammer className="rcp-process-card__icon-svg" />
+  if (t === 'kernel drying') return <Wind className="rcp-process-card__icon-svg" />
+  if (t === 'peeling & grading') return <Layers className="rcp-process-card__icon-svg" />
+  if (t === 'quality inspection') return <ScanSearch className="rcp-process-card__icon-svg" />
+  if (t === 'automatic packaging') return <Package className="rcp-process-card__icon-svg" />
+
+  // ── LUCIDE ICONS FOR INDUSTRY 4.0 PROJECT ──
+  if (t === 'plc & scada control system') return <Cpu className="rcp-process-card__icon-svg" />
+  if (t === 'industrial iot monitoring') return <Wifi className="rcp-process-card__icon-svg" />
+  if (t === 'robotic pick & place system') return <Bot className="rcp-process-card__icon-svg" />
+  if (t === 'vision inspection & quality control') return <Eye className="rcp-process-card__icon-svg" />
+  if (t === 'automated material handling') return <Layers className="rcp-process-card__icon-svg" />
+  if (t === 'smart packaging & traceability') return <QrCode className="rcp-process-card__icon-svg" />
+  if (t === 'centralized data analytics') return <BarChart3 className="rcp-process-card__icon-svg" />
+
+  // ── LUCIDE ICONS FOR ROASTED NUTS PROJECT ──
+  if (t === 'raw nuts receiving & cleaning system') return <PackageSearch className="rcp-process-card__icon-svg" />
+  if (t === 'continuous nuts roasting system') return <Flame className="rcp-process-card__icon-svg" />
+  if (t === 'cooling conveyor system') return <Snowflake className="rcp-process-card__icon-svg" />
+  if (t === 'flavoring & seasoning drum system') return <Utensils className="rcp-process-card__icon-svg" />
+  if (t === 'quality inspection & sorting system') return <ScanSearch className="rcp-process-card__icon-svg" />
+  if (t === 'automatic nuts packaging machine') return <Package className="rcp-process-card__icon-svg" />
+
+  // ── LUCIDE ICONS FOR FRUIT POWDER PROJECT ──
+  if (t === 'raw fruit receiving & washing system') return <PackageSearch className="rcp-process-card__icon-svg" />
+  if (t === 'fruit pulping & extraction system') return <Utensils className="rcp-process-card__icon-svg" />
+  if (t === 'pasteurization system') return <Flame className="rcp-process-card__icon-svg" />
+  if (t === 'spray drying system') return <Wind className="rcp-process-card__icon-svg" />
+  if (t === 'milling & sieving system') return <Hammer className="rcp-process-card__icon-svg" />
+  if (t === 'automatic powder packaging machine') return <Package className="rcp-process-card__icon-svg" />
 
 
   // ── RAW MATERIAL INTAKE ──
@@ -520,7 +562,7 @@ export default function TurnkeyDetailPage() {
   return (
     <div className="rcp-page">
       {/* ═══ HERO BANNER ═══ */}
-      <section className="rcp-hero" style={{ minHeight: details.heroMinHeight || '72vh' }}>
+      <section className="rcp-hero" >
         <div className="rcp-hero__overlay" />
         <div className="rcp-hero__bg" style={{ backgroundImage: `url('${details.heroImage || details.overview.image}')`, ...(details.heroStyle || {}) }} />
         <div className="rcp-hero__content">

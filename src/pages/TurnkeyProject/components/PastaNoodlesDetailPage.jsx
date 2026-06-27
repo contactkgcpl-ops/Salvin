@@ -137,7 +137,7 @@ export default function PastaNoodlesDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pnp-hero">
         <div className="pnp-hero__overlay" />
-        <div className="pnp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/pasta-noodles-gallery/hero.jpg')` }} />
+        <div className="pnp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pasta_noodles_hero.png')` }} />
         <div className="pnp-hero__content">
           <span className="pnp-hero__badge">
             <span className="pnp-hero__badge-dot" />

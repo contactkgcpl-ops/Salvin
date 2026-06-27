@@ -133,7 +133,7 @@ export default function SeedCleaningSortingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="scs-hero">
         <div className="scs-hero__overlay" />
-        <div className="scs-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.jpg')` }} />
+        <div className="scs-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/seed_cleaning_hero.png')` }} />
         <div className="scs-hero__content">
           <span className="scs-hero__badge">
             <span className="scs-hero__badge-dot" />

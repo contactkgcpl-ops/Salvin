@@ -133,7 +133,7 @@ export default function PeanutOilMillDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pom-hero">
         <div className="pom-hero__overlay" />
-        <div className="pom-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/peanut-oil-mill-gallery/6_oil_packaging.jpg')` }} />
+        <div className="pom-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/peanut_oil_hero.png')` }} />
         <div className="pom-hero__content">
           <span className="pom-hero__badge">
             <span className="pom-hero__badge-dot" />

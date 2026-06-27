@@ -133,7 +133,7 @@ export default function WheatFlourProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="wfp-hero">
         <div className="wfp-hero__overlay" />
-        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg')` }} />
+        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/wheat_flour_hero.png')` }} />
         <div className="wfp-hero__content">
           <span className="wfp-hero__badge">
             <span className="wfp-hero__badge-dot" />

@@ -166,7 +166,7 @@
    ══════════════════════════════════════════ */
 .imff-hero {
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -204,7 +204,7 @@
   z-index: 2;
   max-width: 1000px;
   margin: 0 auto;
-  padding: 80px clamp(1rem, 4vw, 2.5rem) 56px;
+  padding: 0 clamp(1rem, 4vw, 2.5rem);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1730,12 +1730,12 @@
     padding: 40px 0;
   }
 
-  .imff-hero {
-    min-height: 65vh;
+  .-hero {
+    min-height: 45vh;
   }
 
-  .imff-hero__content {
-    padding: 70px 20px 44px;
+  .-hero__content {
+    padding: 0 20px;
   }
 
   .imff-hero__stats {
@@ -1834,8 +1834,8 @@
 }
 
 @media (max-width: 480px) {
-  .imff-hero {
-    min-height: 60vh;
+  .-hero {
+    min-height: 45vh;
   }
 
   .imff-hero__actions {

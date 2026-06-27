@@ -133,7 +133,7 @@ export default function PizzaSauceProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="psp-hero">
         <div className="psp-hero__overlay" />
-        <div className="psp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.jpg')` }} />
+        <div className="psp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pizza_sauce_hero.png')` }} />
         <div className="psp-hero__content">
           <span className="psp-hero__badge">
             <span className="psp-hero__badge-dot" />

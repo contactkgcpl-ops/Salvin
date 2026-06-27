@@ -133,7 +133,7 @@ export default function IndustrialFlourMillingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ifm-hero">
         <div className="ifm-hero__overlay" />
-        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg')` }} />
+        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/industrial_flour_milling_hero.png')` }} />
         <div className="ifm-hero__content">
           <span className="ifm-hero__badge">
             <span className="ifm-hero__badge-dot" />

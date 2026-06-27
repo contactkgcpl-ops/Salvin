@@ -134,7 +134,7 @@ export default function GingerGarlicPasteDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ggp-hero">
         <div className="ggp-hero__overlay" />
-        <div className="ggp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/ginger-garlic-gallery/machine6.jpg')` }} />
+        <div className="ggp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/ginger_garlic_hero.png')` }} />
         <div className="ggp-hero__content">
           <span className="ggp-hero__badge">
             <span className="ggp-hero__badge-dot" />
