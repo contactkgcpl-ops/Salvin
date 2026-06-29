@@ -391,7 +391,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY CHEMICAL & PHARMA SOLUTION',
     subtitle: 'Melting, Blending, Micro-filtration And Jar Filling Lines For Cosmetic and Pharmaceutical Grade Petroleum Jelly',
     heroImage: '/turnkey-brochures/images/petrojelly-gallery/petrojelly_hero.png',
-    pdfFile: 'petrolium_jelly_plant.pdf',
     stats: {
       capacity: '500 Ltr–3,000 Ltr',
       stages: '10 Stage',
@@ -793,7 +792,6 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY BLACK PEPPER POWDER SOLUTION',
     subtitle: 'Complete Turnkey Line For Cleaning, Drying, Cryogenic Grinding, Sieving And Packaging Of Black Pepper Powder',
     heroImage: '/turnkey-brochures/images/12_blank_pepper_powder.png',
-    pdfFile: 'salvin_food_powder_processing_machinaries.pdf',
     overview: {
       title: 'Complete Black Pepper Processing Solution',
       p1: 'Salvin Industries\' Black Pepper Powder Line is a premium turnkey solution engineered to preserve the volatile piperine content, aroma, and distinctive colour of black pepper throughout the milling process. Our integrated lines take raw cleaned berries through controlled drying, cryogenic grinding, and air-classified sieving.',
@@ -1183,7 +1181,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete Turnkey Line For Economical Kurkure Production',
     workflowTitle: 'Economical Kurkure Plant',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'Economical_Kurkure_Plant.pdf',
+
     heroImage: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: { capacity: '100 Kg–500 Kg', stages: '7 Stage', efficiency: '98%', support: '24/7' },
@@ -1259,7 +1257,7 @@ const CORE_PROJECTS = {
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     workflowTitle: 'Protein Powder Plant',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'protein_powder_production_plant.pdf',
+
     stats: { capacity: '500 Kg–5 Ton', stages: '7 Stage', efficiency: '99%', support: '24/7' },
     overview: {
       title: 'Complete Protein Powder Production Plant',
@@ -1339,7 +1337,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete Turnkey Line For Biscuit Baking Production',
     workflowTitle: 'Biscuit Processing & Packaging Plant',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'biscuit_baking_turnkey.pdf',
+
     heroImage: '/turnkey-brochures/images/biscuit-baking-turnkey/biscuit-hero-banner.png',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
@@ -1417,7 +1415,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete Turnkey Line For Groundnut Cleaning, Roasting, Jaggery Preparation, Chikki Mixing, Sheet Forming, Cutting & Packaging',
     workflowTitle: 'Groundnut Chikki Processing Plant',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'groundnut_chikki_processing_plant.pdf',
+
     heroImage: '/turnkey-brochures/images/hero-banners/groundnut_chikki_hero.png',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
@@ -1495,7 +1493,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete Turnkey Line For Raw Cashew Cleaning, Roasting, Shelling, Drying, Peeling, Grading & Automatic Packaging',
     workflowTitle: 'Cashew Nut Processing Plant',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'cashew_nut_processing_plant.pdf',
+
     heroImage: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-nut-hero-banner.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
@@ -1573,7 +1571,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete Industry 4.0 Automation — PLC/SCADA, Industrial IoT, Robotics, Vision Inspection, Smart Material Handling & Digital Traceability for Food Processing Plants',
     workflowTitle: 'Industry 4.0 Automation',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'industry_4_automation_food_plant.pdf',
+
     heroImage: '/turnkey-brochures/images/industry-4-automation-food-plant/industry-4-hero-banner.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
@@ -1651,7 +1649,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete processing line for roasting, cooling, flavouring and packaging of peanuts, almonds, cashews and other nuts.',
     workflowTitle: 'Roasted Nuts Processing',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'roasted_nuts_snacks_making_plant.pdf',
+
     heroImage: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
@@ -1728,7 +1726,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete processing line for washing, pulping, drying, and milling fruits into premium fruit powders.',
     workflowTitle: 'Fruit Powder Processing',
     workflowAccentTitle: 'Workflow',
-    pdfFile: 'fruit_powder_processing_plant.pdf',
+
     heroImage: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-hero-banner.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
@@ -1908,7 +1906,7 @@ export function getProjectDetails(slug, title = '') {
     title: cleanTitle,
     badge: `TURNKEY ${cleanTitle.toUpperCase()} SOLUTION`,
     subtitle: `Complete Turnkey Processing, Refining And Packaging Lines For ${cleanTitle}`,
-    pdfFile: isPowder ? 'salvin_food_powder_processing_machinaries.pdf' : 'fruit_juice_salvin.pdf',
+    pdfFile: isPowder ? null : 'fruit_juice_salvin.pdf',
     stats,
     overview: {
       title: `Complete ${cleanTitle}`,
