@@ -1184,6 +1184,7 @@ const CORE_PROJECTS = {
 
     heroImage: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'kurkure.pdf',
     stats: { capacity: '100 Kg–500 Kg', stages: '7 Stage', efficiency: '98%', support: '24/7' },
     overview: {
       title: 'Complete Economical Kurkure Plant',
@@ -1729,6 +1730,7 @@ const CORE_PROJECTS = {
 
     heroImage: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-hero-banner.jpg',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'fruit powder.pdf',
     stats: {
       capacity: 'Customizable',
       stages: '6 Layer',
@@ -1795,6 +1797,177 @@ const CORE_PROJECTS = {
       { src: '/turnkey-brochures/images/fruit-powder-processing-plant/spray-drying-system-new.jpg', caption: 'Spray Drying System' },
       { src: '/turnkey-brochures/images/fruit-powder-processing-plant/milling-sieving-system-new.jpg', caption: 'Milling & Sieving System' },
       { src: '/turnkey-brochures/images/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.jpg', caption: 'Automatic Powder Packaging Machine' }
+    ]
+  },
+  'fry-onions-processing-packaging-plant': {
+    title: 'FRY ONIONS PROCESSING & PACKAGING PLANT',
+    badge: 'TURNKEY FRY ONIONS SOLUTIONS',
+    subtitle: 'Complete processing line for peeling, washing, slicing, frying, de-oiling, and packaging of fry onions.',
+    workflowTitle: 'Fry Onions Processing',
+    workflowAccentTitle: 'Workflow',
+    heroImage: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-hero.jpg',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'FRY ONIONS.pdf',
+    stats: {
+      capacity: 'Customizable',
+      stages: '6 Layer',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Fry Onions Processing Solution',
+      p1: "Salvin Industries' Fry Onions Processing & Packaging Plant provides a fully automated, high-efficiency solution for processing premium fried onions. From raw onion receiving and peeling to continuous frying, de-oiling, and packaging, our turnkey lines ensure maximum retention of natural flavours, crunchiness, and quality.",
+      p2: 'Whether you are producing fried onions for biryani, snacks, or culinary applications, our advanced processing systems are engineered for maximum productivity, hygienic operation, and full compliance with global food safety standards including FSSAI, HACCP, and ISO 22000.',
+      highlights: [
+        { title: 'Crispy Texture', desc: 'Advanced continuous frying and de-oiling systems preserve crispiness and quality.' },
+        { title: 'Uniform Slicing', desc: 'Precision slicing ensures uniform thickness for even frying.' },
+        { title: 'Hygienic Design', desc: 'Fully enclosed processing lines prevent contamination and ensure food safety.' }
+      ],
+      isBrochure: false,
+      image: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-brochure.jpg',
+      photoImage: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-brochure.jpg',
+      features4: [
+        { title: 'Automated Peeling', desc: 'Efficiently removes skin and roots from raw onions.' },
+        { title: 'Precision Slicing', desc: 'High-speed slicers for uniform onion rings or flakes.' },
+        { title: 'Continuous Frying', desc: 'Temperature-controlled continuous fryers for perfect browning.' },
+        { title: 'Advanced De-oiling', desc: 'Centrifugal de-oiling for healthier, crispy fried onions.' }
+      ]
+    },
+    capacities: [
+      { size: 'Small Scale', desc: 'Up to 200 kg/hr — Ideal for boutique brands and startups.' },
+      { size: 'Medium Scale', desc: '200–500 kg/hr — Perfect for regional distributors and growing markets.' },
+      { size: 'Large Scale', desc: '500+ kg/hr — High-volume continuous lines for national distribution.' }
+    ],
+    features: [
+      { title: 'Raw Onion Receiving & Peeling', desc: 'Automated intake hoppers and peeling systems safely remove onion skins and root bases.' },
+      { title: 'Washing & Slicing', desc: 'High-pressure washers clean the peeled onions, followed by precision slicing machines for uniform thickness.' },
+      { title: 'De-watering & Drying', desc: 'Vibratory de-watering conveyors and air knives remove excess surface moisture before frying.' },
+      { title: 'Continuous Frying System', desc: 'State-of-the-art continuous fryers with oil filtration ensure perfectly golden and crispy fried onions.' },
+      { title: 'De-oiling & Cooling', desc: 'Centrifugal de-oiling systems remove excess oil, followed by cooling conveyors to set the crispness.' },
+      { title: 'Automatic Packaging', desc: 'High-speed vertical form-fill-seal (VFFS) machines package the finished fry onions with optional nitrogen flushing.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Onion Receiving & Peeling System', desc: 'Automated systems gently yet effectively peel raw onions and prepare them for processing.' },
+      { id: 2, title: 'Onion Washing & Slicing System', desc: 'High-speed slicing equipment creates perfectly uniform rings or strips for even frying.' },
+      { id: 3, title: 'Sliced Onion De-watering System', desc: 'Air knives and vibratory screens remove surface moisture to optimize frying efficiency.' },
+      { id: 4, title: 'Continuous Onion Frying System', desc: 'Advanced thermal fluid heated fryers ensure consistent temperature control and perfect product color.' },
+      { id: 5, title: 'De-oiling & Cooling System', desc: 'Centrifugal force removes excess oil, and ambient air cooling ensures the fried onions stay crispy.' },
+      { id: 6, title: 'Automatic Onion Packaging Machine', desc: 'Multi-head weighers and VFFS machines accurately dispense and seal the fried onions into moisture-proof pouches.' }
+    ],
+    machinery: [
+      { name: 'Raw Onion Receiving & Peeling System', image: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicing-machine.webp', desc: 'Food-grade stainless steel peeling lines designed for high-capacity, automated skin removal.' },
+      { name: 'Onion Washing & Slicing System', image: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicer-output.webp', desc: 'High-efficiency slicers featuring specialized blades for maximum yield and uniform cuts.' },
+      { name: 'Sliced Onion De-watering System', image: '/turnkey-brochures/images/fry-onions-processing-plant/continuous-frying-system.webp', desc: 'Advanced vibratory and air-blow de-watering systems to prepare onions for the fryer.' },
+      { name: 'Continuous Onion Frying System', image: '/turnkey-brochures/images/fry-onions-processing-plant/de-oiling-cooling-conveyor.webp', desc: 'Industrial continuous fryers engineered for uniform frying and superior product quality.' },
+      { name: 'De-oiling & Cooling System', image: '/turnkey-brochures/images/fry-onions-processing-plant/seasoning-drum-system.webp', desc: 'Hygienic de-oiling centrifuges and cooling tunnels ensuring consistent crispness and texture.' },
+      { name: 'Automatic Onion Packaging Machine', image: '/turnkey-brochures/images/fry-onions-processing-plant/automatic-packaging-machine.webp', desc: 'High-speed weighing and packaging machines with modified atmosphere packaging (MAP) capabilities.' }
+    ],
+    applications: [
+      { title: 'Culinary Ingredients', desc: 'Complete processing for biryani garnishes, curries, and culinary uses.' },
+      { title: 'Snacks & Savories', desc: 'Crispy fried onions used as a standalone snack or savory topping.' },
+      { title: 'Instant Foods', desc: 'High-quality fried onions for instant noodle seasonings and ready-to-eat meals.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-hero.jpg', caption: 'Fry Onions Processing & Packaging Plant' },
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicing-machine.webp', caption: 'Raw Onion Receiving & Peeling System' },
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicer-output.webp', caption: 'Onion Washing & Slicing System' },
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/continuous-frying-system.webp', caption: 'Sliced Onion De-watering System' },
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/de-oiling-cooling-conveyor.webp', caption: 'Continuous Onion Frying System' },
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/seasoning-drum-system.webp', caption: 'De-oiling & Cooling System' },
+      { src: '/turnkey-brochures/images/fry-onions-processing-plant/automatic-packaging-machine.webp', caption: 'Automatic Onion Packaging Machine' }
+    ]
+  },
+
+  'nutrition-powder-making-production-plant': {
+    title: 'Nutrition Powder Making Production Plant',
+    badge: 'TURNKEY NUTRITION POWDER SOLUTION',
+    subtitle: 'Complete Turnkey Solution for Manufacturing Nutrition Powders, Health Supplements, Protein Blends, and Nutraceutical Formulations with Hygienic Processing and Automated Packaging.',
+    workflowTitle: 'Nutrition Powder Processing',
+    workflowAccentTitle: 'Workflow',
+    heroImage: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-hero.jpg',
+    heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
+    pdfFile: 'nutrition_powder.pdf',
+    stats: {
+      capacity: 'Customizable',
+      stages: '7 Stage',
+      efficiency: '99%',
+      support: '24/7'
+    },
+    overview: {
+      title: 'Complete Nutrition Powder Manufacturing Solution',
+      p1: "Salvin Industries' Nutrition Powder Making Production Plant is a comprehensive turnkey solution engineered for the large-scale manufacturing of high-quality nutrition powders. From raw material receiving and precision ingredient blending to nutrient fortification, quality testing, and fully automated packaging, our systems are designed to maximise yield, hygiene, and production consistency.",
+      p2: 'Whether you are producing protein blends, meal replacement powders, infant nutrition formulas, or sports nutrition products, our advanced processing systems comply with global food safety standards including FSSAI, HACCP, GMP, and ISO 22000. All contact surfaces are constructed from SS304/SS316 food-grade stainless steel with integrated CIP systems.',
+      highlights: [
+        { title: 'Precision Blending', desc: 'Advanced ribbon blenders and twin-cone mixers ensure perfectly homogeneous ingredient blending.' },
+        { title: 'Nutrient Fortification', desc: 'Controlled micro-dosing systems add vitamins, minerals, and active ingredients at exact quantities.' },
+        { title: 'Hygienic Design', desc: 'Fully enclosed dust-free processing lines prevent contamination and ensure food safety compliance.' }
+      ],
+      isBrochure: true,
+      image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-brochure.jpg',
+      photoImage: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-brochure.jpg',
+      features4: [
+        { title: 'SS304/SS316 Construction', desc: 'Food-grade hygienic construction for safe powder manufacturing.' },
+        { title: 'Automated Batch Control', desc: 'PLC-controlled processing with recipe management and traceability.' },
+        { title: 'Precision Mixing', desc: 'Ribbon blenders ensure uniform particle distribution and consistency.' },
+        { title: 'Dust-Free Packaging', desc: 'Enclosed auger filling systems for contamination-free packaging.' }
+      ]
+    },
+    capacities: [
+      { size: '100–500 Kg/Hr', desc: 'Small scale — Ideal for boutique nutrition brands and startups.' },
+      { size: '500 Kg–1 Ton/Hr', desc: 'Medium scale — Perfect for regional supplement manufacturers.' },
+      { size: '1–5 Ton/Hr', desc: 'Large scale — High-volume continuous production for national brands.' }
+    ],
+    features: [
+      { title: 'SS304/SS316 Food-Grade Construction', desc: 'All contact surfaces are built from SS304/SS316 stainless steel ensuring maximum hygiene and compliance with international food safety standards.' },
+      { title: 'Automated Batch Control', desc: 'Siemens/Allen-Bradley PLC systems with SCADA HMI provide precise control over ingredient dosing, blending times, and batch traceability from raw material to packaging.' },
+      { title: 'Precision Mixing Technology', desc: 'Heavy-duty ribbon blenders and twin-cone mixers ensure perfectly homogeneous mixing of proteins, carbohydrates, vitamins, and mineral premixes.' },
+      { title: 'Nutrient Fortification System', desc: 'Precision micro-dosing units for vitamins, minerals, probiotics, and active ingredients with accurate weight verification at every stage.' },
+      { title: 'Energy Efficient Design', desc: 'Heat recovery systems on fluid bed dryers and optimised motor drives reduce energy consumption while maintaining maximum throughput.' },
+      { title: 'Hygienic Manufacturing', desc: 'Fully enclosed dust-controlled processing with integrated aspiration systems and CIP/SIP capabilities for contamination-free production.' },
+      { title: 'International Food Safety Compliance', desc: 'Designed and built to meet FSSAI, HACCP, GMP, ISO 22000, and CE standards for domestic and export markets.' },
+      { title: 'Automated Packaging Integration', desc: 'High-speed auger fillers and VFFS/canister filling machines with nitrogen flushing ensure accurate dosing into pouches, jars, tubs, and sachets.' }
+    ],
+    processSteps: [
+      { id: 1, title: 'Raw Material Receiving & Inspection', desc: 'Raw ingredients are received, weighed, sampled for quality testing, and stored in designated food-grade silos and hoppers.' },
+      { id: 2, title: 'Ingredient Sifting & Screening', desc: 'Vibratory sifters remove lumps, foreign particles, and oversize material to ensure ingredient purity before blending.' },
+      { id: 3, title: 'Precision Blending & Mixing', desc: 'Ribbon blenders and twin-cone mixers combine base powders, proteins, carbohydrates, and flavours into a homogeneous blend.' },
+      { id: 4, title: 'Nutrient Fortification & Micro-dosing', desc: 'Controlled micro-dosing systems accurately add vitamins, minerals, amino acids, and functional ingredients at precise quantities.' },
+      { id: 5, title: 'Quality Control & Testing', desc: 'Inline sampling and laboratory analysis verify particle size, moisture content, nutritional profile, and microbiological safety.' },
+      { id: 6, title: 'Fluid Bed Drying & Granulation', desc: 'Continuous fluid bed dryers control moisture levels to target specifications for optimal shelf stability and flow characteristics.' },
+      { id: 7, title: 'Automated Filling & Packaging', desc: 'High-speed auger fillers accurately dose powder into pouches, sachets, canisters, or jars with nitrogen flushing and sealed dispatch.' }
+    ],
+    machinery: [
+      { name: 'Raw Material Receiving & Sieving System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/raw-material-sieving-system.jpg', desc: 'Automated ingredient intake hoppers with screw conveyor and vibro sifter equipped with precise load cells and dust filters for safe material transfer.' },
+      { name: 'Ribbon Blender Mixing System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/ribbon-blender-mixing-system.jpg', desc: 'Heavy-duty SS316 ribbon blender with open-top inspection, pneumatic discharge valve, and motor drive for perfectly homogeneous dry powder blending.' },
+      { name: 'Homogenization & Nutrient Dispersion System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/homogenization-unit.jpg', desc: 'High-pressure homogenizer with jacketed vessel, pressure gauges, and PLC touch-screen control panel for nutrient dispersion and clump-free consistency.' },
+      { name: 'Spray Drying & Milling System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/spray-drying-milling-system.jpg', desc: 'Industrial spray dryer tower with cyclone separator and pin mill pulveriser for converting concentrated blends into fine, shelf-stable nutrition powder.' },
+      { name: 'Vibro Sifter & Quality Inspection System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/vibro-sifter-quality-inspection.jpg', desc: 'Multi-deck vibro sifter with HMI quality control panel and vision inspection conveyor ensuring powder purity and correct particle size distribution.' },
+      { name: 'Automatic Nutrition Powder Filling & Packaging Machine', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/automatic-packaging-machine.jpg', desc: 'High-speed auger filling and VFFS sealing machine with canister conveyor for accurate powder dosing into pouches, sachets, and nutrition powder containers.' }
+    ],
+    applications: [
+      { title: 'Protein Powder', desc: 'Whey, casein, soy, pea, and rice protein blends for sports and clinical nutrition.' },
+      { title: 'Health Supplements', desc: 'Vitamin-mineral blends, antioxidant formulas, and functional nutraceutical powders.' },
+      { title: 'Nutritional Blends', desc: 'Multi-ingredient formulations for general wellness and clinical dietary support.' },
+      { title: 'Meal Replacement Powders', desc: 'Nutritionally complete meal replacement shakes for weight management and daily wellness.' },
+      { title: 'Infant Nutrition Products', desc: 'Hygienic, GMP-compliant processing for infant formula and follow-on nutrition products.' },
+      { title: 'Sports Nutrition Products', desc: 'Pre-workout, recovery, and performance blends with precise macro-nutrient ratios.' },
+      { title: 'Fortified Food Powders', desc: 'Micronutrient-fortified powders for government and commercial food fortification programs.' },
+      { title: 'Functional Nutrition Products', desc: 'Probiotic, prebiotic, and adaptogen-enriched functional nutrition powder formulations.' }
+    ],
+    faqs: [
+      { question: 'What types of nutrition powders can this plant manufacture?', answer: 'Our turnkey plants are versatile and can produce Whey Protein, Plant-Based Proteins, Mass Gainers, Meal Replacement Powders, Infant Formula, Sports Nutrition blends, and vitamin-mineral fortified powders for retail and institutional markets.' },
+      { question: 'Is the plant GMP and food safety compliant?', answer: 'Yes. The entire plant is designed with GMP, HACCP, ISO 22000, and FSSAI compliance, using food-grade SS304/SS316 stainless steel for all product-contact parts with integrated CIP systems.' },
+      { question: 'Does the packaging line handle multiple formats?', answer: 'Absolutely. Our packaging systems support pouches, sachets, wide-mouth jars, canisters, tubs, and bulk bags. Nitrogen flushing and modified atmosphere packaging (MAP) options are available.' },
+      { question: 'Can the plant handle sensitive micronutrients and probiotics?', answer: 'Yes. Our precision micro-dosing systems and controlled processing environments handle heat-sensitive vitamins, probiotics, and bioactive ingredients while maintaining their potency and stability.' }
+    ],
+    gallery: [
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-hero.jpg', caption: 'Nutrition Powder Making Production Plant' },
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/raw-material-sieving-system.jpg', caption: 'Raw Material Receiving & Sieving System' },
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/ribbon-blender-mixing-system.jpg', caption: 'Ribbon Blender Mixing System' },
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/homogenization-unit.jpg', caption: 'Homogenization & Nutrient Dispersion System' },
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/spray-drying-milling-system.jpg', caption: 'Spray Drying & Milling System' },
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/vibro-sifter-quality-inspection.jpg', caption: 'Vibro Sifter & Quality Inspection System' },
+      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/automatic-packaging-machine.jpg', caption: 'Automatic Nutrition Powder Filling & Packaging Machine' }
     ]
   }
 };

@@ -404,7 +404,7 @@
   box-shadow: var(--rcp-shadow-lg);
   border: 1px solid var(--rcp-slate-100);
   width: 100%;
-  max-width: 440px;
+  max-width: 520px;
   height: auto;
   margin: 0 auto;
   transition: box-shadow var(--rcp-transition), transform var(--rcp-transition);
@@ -497,7 +497,8 @@
 /* Make overview image use cover (for real plant photos) */
 .rcp-overview__image--photo img {
   object-fit: cover;
-  height: 380px;
+  object-position: center;
+  height: 480px;
   width: 100%;
   border-radius: var(--rcp-radius);
 }
@@ -505,10 +506,9 @@
 /* Make overview image contain (for brochure preview) */
 .rcp-overview__image--brochure img {
   object-fit: contain;
-  height: 400px;
+  height: auto;
   width: 100%;
   border-radius: var(--rcp-radius);
-  background: #fff;
 }
 
 

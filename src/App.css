@@ -7781,9 +7781,9 @@ body {
 .home-template .industry-divisions-grid,
 .home-template .features,
 .home-template .testimonial-wrapper,
-  .home-template .projects-grid.home-projects-responsive,
-  .home-template .global-grid,
-  .home-template .global-regions {
+.home-template .projects-grid.home-projects-responsive,
+.home-template .global-grid,
+.home-template .global-regions {
   gap: 20px;
 }
 
@@ -8470,7 +8470,49 @@ body {
 }
 
 .intro-role-visitor {
-  color: #f58220;
+  color: #08243d;
+}
+
+.intro-role-highlighted {
+  border: 2px solid rgba(245, 130, 32, 0.6);
+  box-shadow: 0 16px 36px rgba(245, 130, 32, 0.25);
+  transform: scale(1.04);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 246, 238, 0.95));
+  position: relative;
+  overflow: hidden;
+}
+
+.intro-role-highlighted::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  transform: skewX(-25deg);
+  animation: visitorHighlightShine 3s infinite;
+}
+
+@keyframes visitorHighlightShine {
+  0% {
+    left: -100%;
+  }
+
+  20% {
+    left: 200%;
+  }
+
+  100% {
+    left: 200%;
+  }
+}
+
+.intro-role-option.intro-role-highlighted:hover,
+.intro-role-option.intro-role-highlighted:focus-visible {
+  transform: scale(1.06) translateY(-2px);
+  border-color: rgba(245, 130, 32, 0.8);
+  box-shadow: 0 20px 48px rgba(245, 130, 32, 0.35);
 }
 
 .intro-role-note {
@@ -8769,4 +8811,3 @@ body {
     animation-delay: 0ms !important;
   }
 }
-

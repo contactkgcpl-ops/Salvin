@@ -150,12 +150,8 @@ export default function LiquidGlucoseDetailPage() {
             Advanced turnkey solution for starch slurry preparation, liquefaction, saccharification, filtration, evaporation, and packaging for high-quality liquid glucose production.
           </p>
           <div className="lgp-hero__actions">
-            <a
-              href="/turnkey-brochures/pdfs/liquid_glucose_manufacturing_plant.pdf"
-              download="liquid_glucose_manufacturing_plant.pdf"
-              className="lgp-btn lgp-btn--primary lgp-btn--lg"
-            >
-              Download Brochure
+            <a href="/contact" className="lgp-btn lgp-btn--primary lgp-btn--lg">
+              Request Information
             </a>
 
             

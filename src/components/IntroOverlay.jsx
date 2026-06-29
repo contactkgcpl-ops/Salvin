@@ -151,6 +151,10 @@ function IntroOverlay({ onComplete }) {
           <span className="intro-language-kicker">Select your role</span>
           <h2>How would you like to continue?</h2>
           <div className="intro-role-grid">
+            <button className="intro-role-option intro-role-visitor intro-role-highlighted" type="button" onClick={finishIntro}>
+              <span>Visitor</span>
+              <small>Enter website</small>
+            </button>
             <button className="intro-role-option intro-role-corporate" type="button" onClick={openCorporatePortal}>
               <span>Corporate</span>
               <small>Open corporate portal</small>
@@ -158,10 +162,6 @@ function IntroOverlay({ onComplete }) {
             <button className="intro-role-option intro-role-vendor" type="button" onClick={openVendorPortal}>
               <span>Vendor</span>
               <small>Open vendor portal</small>
-            </button>
-            <button className="intro-role-option intro-role-visitor" type="button" onClick={finishIntro}>
-              <span>Visitor</span>
-              <small>Enter website</small>
             </button>
           </div>
           {selectedLanguageCode && <p className="intro-role-note">Language selected. Continue as visitor, vendor, or corporate.</p>}
