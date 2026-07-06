@@ -3746,6 +3746,10 @@ body {
   flex: 1;
 }
 
+.home-template .about .desc {
+  max-width: 850px;
+}
+
 .home-template .about-left h2 {
   font-size: 34px;
   margin: 15px 0;

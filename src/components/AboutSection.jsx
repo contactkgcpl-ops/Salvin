@@ -119,7 +119,7 @@ const journeyMilestones = [
 
 const team = [
   {
-    name: "Er. Keval Gandhi",
+    name: "Thomas Richardson",
     role: "MANAGING DIRECTOR",
     desc: "Founder and visionary leader with extensive expertise in turnkey industrial solutions.",
     img: mdImage
@@ -272,18 +272,10 @@ export default function About() {
       {/* MANAGING DIRECTOR SECTION */}
       <section className="md-section">
         <div className="md-container">
-          <div className="md-image-box">
-            <img src={mdImage} alt="Er. Keval Gandhi" />
-            <div className="md-name-badge">
-              <div className="icon"><FaUserTie /></div>
-              <span>Er. Keval Gandhi</span>
-            </div>
-          </div>
-
           <div className="md-content">
             <h2>Managing Director</h2>
             <p className="bio">
-              Keval Gandhi is the Founder and Managing Director of Salvin Industries,
+              Thomas Richardson is the Founder and Managing Director of Salvin Industries,
               a leading engineering and consulting firm based in Ahmedabad, Gujarat.
               Under his leadership since 2008, the company has grown into a global
               provider of turnkey plant solutions and industrial consulting.

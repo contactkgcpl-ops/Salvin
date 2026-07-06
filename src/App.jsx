@@ -111,7 +111,6 @@ import ConsultantPage from "./pages/ConsultantPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
-import salvinTeam from "./assets/home_extra/salvinTeam.jpeg";
 import innovation from "./assets/home_extra/innovation.png";
 import quality from "./assets/home_extra/quality.png";
 import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
@@ -1815,10 +1814,6 @@ function HomePage() {
               </p>
 
             </div>
-            <div className="about-right">
-              <img src={salvinTeam} alt="Salvin Team" />
-
-            </div>
           </div>
         </div>
       </section>
@@ -2292,8 +2287,8 @@ function ContactPage() {
             <div className="dept-card">
               <div className="dept-info">
                 <strong>Managing Director</strong>
-                <span>Keval Gandhi</span>
-                <a href="mailto:keval.projectindia@gmail.com">keval.projectindia@gmail.com</a>
+                <span>Thomas Richardson</span>
+                <a href="mailto:md.salvinindustries@gmail.com">md.salvinindustries@gmail.com</a>
               </div>
             </div>
 
