@@ -2311,14 +2311,6 @@ function ContactPage() {
 
             <div className="dept-card">
               <div className="dept-info">
-                <strong>HRA</strong>
-                <span>Parul  Domadia</span>
-                <a href="mailto:hr.salvinindustries@gmail.com">hr.salvinindustries@gmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
                 <strong>Automation Head</strong>
                 <span>Mansi Gajera </span>
                 <a href="mailto:info.salvinindustries@gmail.com">info.salvinindustries@gmail.com</a>
@@ -2327,57 +2319,9 @@ function ContactPage() {
 
             <div className="dept-card">
               <div className="dept-info">
-                <strong>Marketing & sales Head</strong>
-                <span>Ritu Vaishnav </span>
-                <a href="mailto:salvin.projects@hotmail.com">salvin.projects@hotmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>System Developer</strong>
-                <span>Isha Delvadiya </span>
-                <a href="mailto:salvin.projects@hotmail.com">salvin.projects@hotmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>sales coordinator</strong>
-                <span>Nisha Parmar</span>
-                <a href="mailto:sales@salvinindia.com">sales@salvinindia.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>IT Support</strong>
-                <span>Arpit Chudasama</span>
-                <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
                 <strong>IT Support</strong>
                 <span>Digesh Prajapati</span>
                 <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>Service incharge</strong>
-                <span>Avnees Sadhu</span>
-                <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>Service incharge</strong>
-                <span>Sumit Pandya</span>
-                <a href="mailto:info.salvinengineers@gmail.com">info.salvinengineers@gmail.com</a>
               </div>
             </div>
 
