@@ -108,6 +108,7 @@ import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/In
 import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
+import ServicesPage from "./pages/ServicesPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 import Decade from "./assets/home_extra/decade_experties.png";
 import global from "./assets/home_extra/globalsupport.png";
@@ -2252,7 +2253,7 @@ function ContactPage() {
                 </div>
                 <div className="info-details">
                   <strong>Call Us</strong>
-                  <span>+91 9898727796</span>
+                  <span>+91 9898727796 / +91 9023979663 / +91 9712777034</span>
                 </div>
               </div>
               <div className="info-card">
@@ -2390,28 +2391,7 @@ function ContactPage() {
   );
 }
 
-function ServicesPage() {
-  return (
-    <section className="services page-section mx-auto w-full max-w-[1200px]">
-      <span className="section-badge">Our Services</span>
-      <h1 className="text-3xl font-bold tracking-tight text-[#0d1b3e] sm:text-4xl lg:text-[2.75rem]">Services</h1>
-      <p className="page-copy">
-        End-to-end industrial solutions designed for productivity, automation, and scale.
-      </p>
 
-      <div className="grid three-col-grid">
-        {serviceCards.map((item) => (
-          <div key={item.title} className="card feature-card">
-            <img src={item.image} alt={item.title} className="card-media" />
-            <h3>{item.title}</h3>
-            <p>{item.text}</p>
-            <NavLink className="card-btn" to="/contact">Get Quote</NavLink>
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-}
 
 export default function App() {
   const location = useLocation();
