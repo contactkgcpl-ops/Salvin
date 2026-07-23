@@ -53,7 +53,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <NavLink to="/about" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>JOURNEY</NavLink>
         <NavLink to="/turnkey-project" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
         <NavLink to="/machineries" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
-        <NavLink to="/services" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>SERVICES</NavLink>
+        <NavLink to="/services" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>FOOD CONSULTANT</NavLink>
         <NavLink to="/consultant" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONSULTANT</NavLink>
         {/* <a href="https://spares.salvinindia.com/" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>SPARES & SERVICE</a> */}
         <a

@@ -581,7 +581,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 16px;
   height: 100%;
 }
 
@@ -597,6 +597,7 @@ body {
   border-bottom: 2px solid transparent;
   transition: color 0.3s, border-bottom-color 0.3s;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
