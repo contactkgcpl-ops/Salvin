@@ -106,6 +106,13 @@ import ProteinBarManufacturingDetailPage from "./pages/TurnkeyProject/components
 import MayonnaiseProcessingDetailPage from "./pages/TurnkeyProject/components/MayonnaiseProcessingDetailPage";
 import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/InstantMixFrozenFoodDetailPage";
 import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
+import ChikkiPluckingDetailPage from "./pages/TurnkeyProject/components/ChikkiPluckingDetailPage";
+import DryFruitChikkiDetailPage from "./pages/TurnkeyProject/components/DryFruitChikkiDetailPage";
+import MamraPauvaDetailPage from "./pages/TurnkeyProject/components/MamraPauvaDetailPage";
+import TomatoPureeDetailPage from "./pages/TurnkeyProject/components/TomatoPureeDetailPage";
+import TomatoPasteDetailPage from "./pages/TurnkeyProject/components/TomatoPasteDetailPage";
+import MangoPulpDetailPage from "./pages/TurnkeyProject/components/MangoPulpDetailPage";
+import GuavaPulpDetailPage from "./pages/TurnkeyProject/components/GuavaPulpDetailPage";
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -2563,6 +2570,13 @@ export default function App() {
           <Route path="/turnkey-project/mayonnaise-processing-plant" element={<MayonnaiseProcessingDetailPage />} />
           <Route path="/turnkey-project/instant-mix-frozen-food-processing-plant" element={<InstantMixFrozenFoodDetailPage />} />
           <Route path="/turnkey-project/instant-noodles-processing-plant" element={<InstantNoodlesDetailPage />} />
+          <Route path="/turnkey-project/chikki-plucking-plant" element={<ChikkiPluckingDetailPage />} />
+          <Route path="/turnkey-project/dry-fruit-chikki-plant" element={<DryFruitChikkiDetailPage />} />
+          <Route path="/turnkey-project/mamra-pauva-plant" element={<MamraPauvaDetailPage />} />
+          <Route path="/turnkey-project/tomato-puree-plant" element={<TomatoPureeDetailPage />} />
+          <Route path="/turnkey-project/tomato-paste-plant" element={<TomatoPasteDetailPage />} />
+          <Route path="/turnkey-project/mango-pulp-plant" element={<MangoPulpDetailPage />} />
+          <Route path="/turnkey-project/guava-pulp-plant" element={<GuavaPulpDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

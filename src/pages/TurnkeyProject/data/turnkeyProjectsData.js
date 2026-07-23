@@ -2134,5 +2134,32 @@ export function getProjectDetails(slug, title = '') {
 
   dynamicProjectCache[slug] = project;
 
+  const customGalleries = {
+    'chikki-plucking-plant': { hero: 'chikki-plucking-plant.jpg', images: ['chikki_plucking_1.jpg', 'chikki_plucking_2.jpg', 'chikki_plucking_3.jpg', 'chikki_plucking_4.jpg', 'chikki_plucking_5.jpg', 'chikki_plucking_6.jpg'] },
+    'dry-fruit-chikki-plant': { hero: 'dry-fruit-chikki-plant.jpg', images: ['dry_fruit_1.jpg', 'dry_fruit_2.jpg', 'dry_fruit_3.jpg', 'dry_fruit_4.jpg', 'dry_fruit_5.jpg', 'dry_fruit_6.jpg'] },
+    'mamra-pauva-plant': { hero: 'mamra-pauva-plant.jpg', images: ['mamra_pauva_1.jpg', 'mamra_pauva_2.jpg', 'mamra_pauva_3.jpg', 'mamra_pauva_4.jpg', 'mamra_pauva_5.jpg', 'mamra_pauva_6.jpg'] },
+    'tomato-puree-plant': { hero: 'tomato-puree-plant.jpg', images: ['tomato_puree_1.jpg', 'tomato_puree_2.jpg', 'tomato_puree_3.jpg', 'tomato_puree_4.jpg', 'tomato_puree_5.jpg', 'tomato_puree_6.jpg'] },
+    'tomato-paste-plant': { hero: 'tomato-paste-plant.jpg', images: ['tomato_paste_1.jpg', 'tomato_paste_2.jpg', 'tomato_paste_3.jpg', 'tomato_paste_4.jpg', 'tomato_paste_5.jpg', 'tomato_paste_6.jpg'] },
+    'mango-pulp-plant': { hero: 'mango-pulp-plant.jpg', images: ['mango_pulp_1.jpg', 'mango_pulp_2.jpg', 'mango_pulp_3.jpg', 'mango_pulp_4.jpg', 'mango_pulp_5.jpg', 'mango_pulp_6.jpg'] },
+    'guava-pulp-plant': { hero: 'guava-pulp-plant.jpg', images: ['guava_pulp_1.jpg', 'guava_pulp_2.jpg', 'guava_pulp_3.jpg', 'guava_pulp_4.jpg', 'guava_pulp_5.jpg', 'guava_pulp_6.jpg'] }
+  };
+
+  if (customGalleries[slug]) {
+    const cg = customGalleries[slug];
+    const galleryDir = `/turnkey-brochures/images/${slug.replace('-plant', '')}-gallery`;
+    project.heroImage = `/turnkey-brochures/images/${cg.hero}`;
+    project.overview.image = `${galleryDir}/${cg.images[0]}`;
+    if (project.overview.photoImage) project.overview.photoImage = `${galleryDir}/${cg.images[0]}`;
+    
+    project.machinery.forEach((m, i) => {
+      if (cg.images[i]) m.image = `${galleryDir}/${cg.images[i]}`;
+    });
+
+    project.gallery = cg.images.map((img, i) => ({
+      src: `${galleryDir}/${img}`,
+      caption: project.gallery[i] ? project.gallery[i].caption : `${cleanTitle} Image ${i+1}`
+    }));
+  }
+
   return project;
 }
