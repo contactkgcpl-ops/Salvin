@@ -138,7 +138,7 @@ export default function FullyAutomaticSpicePackagingLineDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/spice_packaging_line.jpg" alt="Fully Automatic Spice Packaging Line Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/spice-packaging-gallery/vffs_pouch.jpg" alt="Fully Automatic Spice Packaging Line Overview" loading="lazy" />
             </div>
           </div>
         </div>
