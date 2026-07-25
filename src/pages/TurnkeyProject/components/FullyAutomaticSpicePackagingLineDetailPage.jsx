@@ -5,92 +5,44 @@ import WhyChooseSalvin from "./WhyChooseSalvin";
 
 /* ─── Process Flow Steps ─── */
 const PROCESS_STEPS = [
-  {
-    "id": 1,
-    "title": "Raw Spice Cleaning & Destoning"
-  },
-  {
-    "id": 2,
-    "title": "Automated Proportionate Batching"
-  },
-  {
-    "id": 3,
-    "title": "Continuous Spice Roasting"
-  },
-  {
-    "id": 4,
-    "title": "Cooling & Conditioning"
-  },
-  {
-    "id": 5,
-    "title": "Low-Temperature Grinding"
-  },
-  {
-    "id": 6,
-    "title": "Homogeneous Ribbon Blending"
-  },
-  {
-    "id": 7,
-    "title": "Automated Form-Fill-Seal Packaging"
-  }
+  { id: "1", title: "Raw Material Receiving" },
+  { id: "2", title: "Cleaning & Sieving" },
+  { id: "3", title: "Storage Bin" },
+  { id: "4", title: "Screw Feeder" },
+  { id: "5", title: "Grinding (Pulverizing)" },
+  { id: "6", title: "Vibro Sifter" },
+  { id: "7", title: "Ribbon Blender (Mixing)" },
+  { id: "8", title: "Weighing System" },
+  { id: "9", title: "Automatic Pouch Form Fill Seal Machine" },
+  { id: "10", title: "Check Weigher" },
+  { id: "11", title: "Metal Detector" },
+  { id: "12", title: "Accumulation Table" },
+  { id: "13", title: "Labeling Machine" },
+  { id: "14", title: "Date Coder (Printing)" },
+  { id: "15", title: "Take Off Conveyor" },
+  { id: "16", title: "Carton Packing Machine" },
+  { id: "17", title: "Carton Sealing Machine" },
+  { id: "18", title: "Case Labeling Machine" },
+  { id: "19", title: "Palletizing System" },
+  { id: "20", title: "Stretch Wrapping Machine" },
+  { id: "21", title: "Packed & Ready for Dispatch" }
 ];
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  {
-    "name": "Raw Spice Cleaning & Destoning Machine",
-    "image": "/turnkey-brochures/images/spice_packaging_line.jpg",
-    "desc": "Vibratory cleaning and destoning unit that removes stones, dust, and foreign particles from raw whole spices."
-  },
-  {
-    "name": "Automatic Spice Roasting Machine",
-    "image": "/turnkey-brochures/images/spice_packaging_line.jpg",
-    "desc": "Temperature-controlled rotary roaster that precisely heats spices to release essential oils and enhance rich aromas."
-  },
-  {
-    "name": "Hammer Mill / Pulverizer Grinding Machine",
-    "image": "/turnkey-brochures/images/spice_packaging_line.jpg",
-    "desc": "Heavy-duty pulverizer equipped with cooling technology to grind roasted spices into fine powder without losing flavor."
-  },
-  {
-    "name": "Masala Blending Ribbon Mixer",
-    "image": "/turnkey-brochures/images/spice_packaging_line.jpg",
-    "desc": "Homogenous ribbon blender that perfectly mixes different spice powders to achieve a consistent, uniform Garam Masala blend."
-  },
-  {
-    "name": "Vibro Sieving & Fine Mesh Screening Machine",
-    "image": "/turnkey-brochures/images/spice_packaging_line.jpg",
-    "desc": "High-frequency vibrating screen that filters out oversized particles, ensuring a perfectly smooth and fine masala powder."
-  },
-  {
-    "name": "Automatic Garam Masala Pouch Filling & Packing Machine",
-    "image": "/turnkey-brochures/images/spice_packaging_line.jpg",
-    "desc": "High-speed auger filler and pouch packaging machine that seals masala powder in airtight packets to retain freshness."
-  }
+  { name: "Raw Material Receiving", desc: "High efficiency, industrial-grade equipment for raw material receiving." },
+  { name: "Cleaning & Sieving", desc: "High efficiency, industrial-grade equipment for cleaning & sieving." },
+  { name: "Storage Bin", desc: "High efficiency, industrial-grade equipment for storage bin." },
+  { name: "Screw Feeder", desc: "High efficiency, industrial-grade equipment for screw feeder." },
+  { name: "Grinding (Pulverizing)", desc: "High efficiency, industrial-grade equipment for grinding (pulverizing)." },
+  { name: "Vibro Sifter", desc: "High efficiency, industrial-grade equipment for vibro sifter." }
 ];
 
 /* ─── FAQs ─── */
 const FAQS = [
-  {
-    "question": "Does the high-speed grinding process cause aroma loss?",
-    "answer": "No. Our pulverizers are either water-jacketed or integrated with cryogenic (liquid nitrogen) grinding technology to maintain ultra-low temperatures, preventing the volatilization of essential spice oils."
-  },
-  {
-    "question": "Can the plant automatically handle complex customized spice formulations?",
-    "answer": "Yes, the centralized PLC/SCADA batching system allows you to save hundreds of recipes. It will automatically weigh and convey the exact proportions of up to 15 different whole spices per batch."
-  },
-  {
-    "question": "How is dust controlled in the spice processing facility?",
-    "answer": "The entire plant is fully enclosed and integrated with centralized pulse-jet dust collection systems. This ensures a dust-free working environment and prevents cross-contamination between batches."
-  },
-  {
-    "question": "What type of packaging machines are provided for Garam Masala?",
-    "answer": "We integrate fully automated VFFS (Vertical Form-Fill-Seal) machines capable of handling stand-up pouches, center-seal bags, and jars, optionally equipped with nitrogen flushing for extended shelf life."
-  },
-  {
-    "question": "Can the same plant be used for single spices like Turmeric or Chilli?",
-    "answer": "Yes, the grinding and packaging modules are highly versatile. With proper cleaning procedures, you can run single spices like coriander, turmeric, and chilli powder on the same line."
-  }
+  { question: "What is the production capacity of the Fully Automatic Spice Packaging Line?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
+  { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
+  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." }
 ];
 
 /* ─── Gallery Images ─── */
@@ -149,7 +101,7 @@ export default function FullyAutomaticSpicePackagingLineDetailPage() {
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Spice Packaging Line</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Garam Masala</p>
+          <p className="rcp-hero__subtitle">High-speed, highly accurate turnkey spice packaging line designed for flawless pouch and carton packaging.</p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,14 +112,9 @@ export default function FullyAutomaticSpicePackagingLineDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Spice Packaging Line</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity spice cleaning, roasting, pulverizing, and blending. Engineered to meet global food safety standards, our robust production line seamlessly processes raw whole spices into premium-grade, highly aromatic Garam Masala powder.</p>
-              <p>From automated destoning and precision temperature-controlled roasting to hammer mill grinding and homogenous ribbon blending, our machinery ensures absolute zero contamination. Experience maximum volatile oil retention, vibrant natural color, and unmatched flavor consistency. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
-              <div className="rcp-overview__features">
-                <div className="rcp-overview__feature">
-                  <div className="rcp-overview__feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg>
-                  </div>
-                  <div className="rcp-overview__feature-body"><p className="rcp-overview__feature-title">High Yield</p><p className="rcp-overview__feature-desc">Maximum extraction</p></div>
+              <p><strong>Salvin Industries' Fully Automatic Spice Packaging Line</strong> is a state-of-the-art turnkey solution engineered for maximum efficiency and uncompromised quality. We provide an end-to-end processing ecosystem that adheres to the strictest global food safety and hygiene standards.</p>
+              <p>With our advanced machinery and PLC-controlled automation, you can achieve continuous, high-yield production while minimizing labor costs and downtime. Partner with Salvin Industries for an industry-leading processing line tailored to your specific requirements.</p>
+            </div>
                 </div>
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
