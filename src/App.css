@@ -5042,6 +5042,11 @@ body {
   box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
 }
 
+.mach-card a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .mach-card-img {
   background: #f0f2f7;
   height: 200px;

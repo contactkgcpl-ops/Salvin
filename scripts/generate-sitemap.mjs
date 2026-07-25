@@ -27,9 +27,7 @@ const STATIC_PATHS = [
   ...brochureProjects.map((p) => p.detailsPath),
   "/machineries",
 ];
-
-const MACHINES_JSON_PATH = process.env.SITEMAP_MACHINES_JSON || join(projectRoot, "data", "machines.json");
-const MACHINES_FETCH_URL = process.env.SITEMAP_MACHINES_JSON_URL;
+const MACHINES_FETCH_URL = process.env.SITEMAP_MACHINES_JSON_URL || `${SITE_URL}/api/machines`;
 
 function slugNorm(s) {
   return String(s ?? "")
@@ -51,15 +49,10 @@ function escapeXml(s) {
     .replace(/"/g, "&quot;")
     .replace(/'/g, "&apos;");
 }
-
 async function loadMachines() {
-  if (MACHINES_FETCH_URL) {
-    const res = await fetch(MACHINES_FETCH_URL, { signal: AbortSignal.timeout(60_000) });
-    if (!res.ok) throw new Error(`SITEMAP_MACHINES_JSON_URL fetch failed: ${res.status}`);
-    return res.json();
-  }
-  const raw = await readFile(MACHINES_JSON_PATH, "utf8");
-  return JSON.parse(raw);
+  const res = await fetch(MACHINES_FETCH_URL, { signal: AbortSignal.timeout(60_000) });
+  if (!res.ok) throw new Error(`Fetch failed: ${res.status}`);
+  return res.json();
 }
 
 function isActiveMachine(m) {

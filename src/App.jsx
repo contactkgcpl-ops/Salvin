@@ -9,7 +9,6 @@ import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import IntroOverlay from "./components/IntroOverlay";
-import machinesData from "../data/machines.json";
 import searchIcon from './assets/search.png'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
@@ -207,7 +206,7 @@ const testimonialCards = [
   }
 ];
 
-const initialMachines = Array.isArray(machinesData) ? machinesData : [];
+const initialMachines = [];
 const MACHINES_PER_PAGE = 18;
 
 
@@ -620,7 +619,6 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
   const [selectedSubcategories, setSelectedSubcategories] = useState([]);
   const [sortBy, setSortBy] = useState("default");
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedMachine, setSelectedMachine] = useState(null);
   const subcategoryParam = searchParams.get("subcategory") || "";
 
   React.useEffect(() => {
@@ -771,38 +769,44 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
           {loadError && <p className="admin-error-text">{loadError}</p>}
 
           <div className="mach-grid">
-            {visibleMachines.map((machine) => (
-              <article key={machine.machine_id} className="mach-card">
-                <div className="mach-card-img">
-                  <img src={resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage} alt={machine.machine_name} />
-                </div>
-                <div className="mach-card-body">
-                  <div className="mach-card-tags">
-                    {(machine.tags?.length ? machine.tags : [machine.category_id, machine.subcategory]).map((tag, i) => (
-                      <span key={i} className={"mach-tag" + (i === 0 ? " orange" : " blue")}>{tag}</span>
-                    ))}
-                  </div>
-                  <h4 className="mach-card-title">{machine.machine_name}</h4>
-                  <p className="mach-card-desc">{machine.description}</p>
-                  {(String(machine.speed ?? "").trim() || String(machine.capacity ?? "").trim()) ? (
-                    <div className="mach-card-specs">
-                      <div className="mach-spec-item">
-                        {String(machine.speed ?? "").trim() ? (
-                          <span className="mach-spec-lbl">{machine.speed}</span>
-                        ) : null}
-                        {String(machine.capacity ?? "").trim() ? (
-                          <span className="mach-spec-unit">{machine.capacity}</span>
-                        ) : null}
-                      </div>
+            {visibleMachines.map((machine) => {
+              const slugNorm = (s) => String(s || "").trim().toLowerCase();
+              const slug = machine.slug?.trim() ? slugNorm(machine.slug) : slugNorm(machine.machine_name).replace(/\s+/g, "-");
+              return (
+                <article key={machine.machine_id} className="mach-card">
+                  <NavLink to={`/machineries/${slug}`} className="mach-card-img">
+                    <img src={resolveMachineImage(machine.image_url, sessionCache) || machineryLayoutImage} alt={machine.machine_name} />
+                  </NavLink>
+                  <div className="mach-card-body">
+                    <div className="mach-card-tags">
+                      {(machine.tags?.length ? machine.tags : [machine.category_id, machine.subcategory]).map((tag, i) => (
+                        <span key={i} className={"mach-tag" + (i === 0 ? " orange" : " blue")}>{tag}</span>
+                      ))}
                     </div>
-                  ) : null}
-                  <div className="mach-card-actions">
-                    <a href="https://wa.me/919898727796" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
-                    <button type="button" className="mach-btn view" onClick={() => setSelectedMachine(machine)}>VIEW MORE</button>
+                    <NavLink to={`/machineries/${slug}`}>
+                      <h4 className="mach-card-title">{machine.machine_name}</h4>
+                    </NavLink>
+                    <p className="mach-card-desc">{machine.description}</p>
+                    {(String(machine.speed ?? "").trim() || String(machine.capacity ?? "").trim()) ? (
+                      <div className="mach-card-specs">
+                        <div className="mach-spec-item">
+                          {String(machine.speed ?? "").trim() ? (
+                            <span className="mach-spec-lbl">{machine.speed}</span>
+                          ) : null}
+                          {String(machine.capacity ?? "").trim() ? (
+                            <span className="mach-spec-unit">{machine.capacity}</span>
+                          ) : null}
+                        </div>
+                      </div>
+                    ) : null}
+                    <div className="mach-card-actions">
+                      <a href="https://wa.me/919898727796" target="_blank" rel="noopener noreferrer" className="mach-btn quote">GET A QUOTE</a>
+                      <NavLink to={`/machineries/${slug}`} className="mach-btn view">VIEW MORE</NavLink>
+                    </div>
                   </div>
-                </div>
-              </article>
-            ))}
+                </article>
+              );
+            })}
           </div>
           {totalPages > 1 && (
             <nav className="mach-pagination" aria-label="Machinery pages">
@@ -837,14 +841,6 @@ function MachineriesPage({ machines, categories, subcategories, sessionCache, lo
           )}
         </div>
       </div>
-
-      {selectedMachine && (
-        <MachineDetailModal
-          machine={selectedMachine}
-          sessionCache={sessionCache}
-          onClose={() => setSelectedMachine(null)}
-        />
-      )}
     </section>
   );
 }
