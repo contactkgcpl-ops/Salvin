@@ -2367,8 +2367,13 @@ export default function App() {
     const updateMetaTags = (title, description, path) => {
       document.title = `${title} | Salvin Industries`;
 
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) canonical.setAttribute("href", `https://salvinindia.com${path}`);
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute("href", `https://salvinindia.com${path}`);
 
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute("content", description);
@@ -2440,8 +2445,13 @@ export default function App() {
         path
       );
     } else {
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) canonical.setAttribute("href", `https://salvinindia.com${path}`);
+      let canonical = document.querySelector('link[rel="canonical"]');
+      if (!canonical) {
+        canonical = document.createElement('link');
+        canonical.setAttribute('rel', 'canonical');
+        document.head.appendChild(canonical);
+      }
+      canonical.setAttribute("href", `https://salvinindia.com${path}`);
 
       const ogUrl = document.querySelector('meta[property="og:url"]');
       if (ogUrl) ogUrl.setAttribute("content", `https://salvinindia.com${path}`);
