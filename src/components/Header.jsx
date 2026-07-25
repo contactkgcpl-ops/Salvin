@@ -57,25 +57,25 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <NavLink to="/consultant" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONSULTANT</NavLink>
         {/* <a href="https://spares.salvinindia.com/" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>SPARES & SERVICE</a> */}
         <a
-        href="https://spares.salvinindia.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "#000" }}
-        onClick={() => {
-          setMenuOpen(false);
-          window.open("https://spares.salvinindia.com/", "_blank");
-        }}>SPARES & SERVICE</a>
+          href="https://spares.salvinindia.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#000" }}
+          onClick={() => {
+            setMenuOpen(false);
+            window.open("https://spares.salvinindia.com/", "_blank");
+          }}>SPARES & SERVICE</a>
 
         <a
-        href="https://salvinindustries.blogspot.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "#000" }}
-        onClick={() => {
-          setMenuOpen(false);
-          window.open("https://salvinindustries.blogspot.com/", "_blank");
-        }}>BLOGS</a>
-        
+          href="https://salvinindustries.blogspot.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#000" }}
+          onClick={() => {
+            setMenuOpen(false);
+            window.open("https://salvinindustries.blogspot.com/", "_blank");
+          }}>BLOGS</a>
+
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
         <LanguageSelector />
       </nav>

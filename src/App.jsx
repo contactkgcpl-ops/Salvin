@@ -8,7 +8,7 @@ import blueMachinesImage from "./assets/blue-machines.png";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import IntroOverlay from "./components/IntroOverlay";
+// import IntroOverlay from "./components/IntroOverlay";
 import machinesData from "../data/machines.json";
 import searchIcon from './assets/search.png'
 
@@ -1683,7 +1683,7 @@ function HomePage() {
     },
     {
       title: "Consultancy",
-      text: "High-speed, multi-format pouch and bottle filling systems with advanced capping and labeling technologies.",
+      text: "Expert engineering consultation, project feasibility studies, process design, plant layout planning, and step-by-step guidance for setting up new manufacturing units.",
       image: industryConsultancy,
     },
     {
@@ -2349,7 +2349,7 @@ export default function App() {
   const isAdminRoute = location.pathname === "/admin" ||
     location.pathname === "/admin-login" ||
     location.pathname === "/admin-panel";
-  const [showIntro, setShowIntro] = useState(() => !isAdminRoute);
+  const [showIntro, setShowIntro] = useState(false);
   const [machines, setMachines] = useState(initialMachines);
   const [machineLoadError, setMachineLoadError] = useState("");
 
@@ -2363,6 +2363,94 @@ export default function App() {
   const [isAdminAuthenticated, setIsAdminAuthenticated] = useState(
     () => !!localStorage.getItem("salvin_auth_token")
   );
+
+  // Dynamic SEO metadata update on path change
+  React.useEffect(() => {
+    if (isAdminRoute) return;
+
+    const updateMetaTags = (title, description, path) => {
+      document.title = `${title} | Salvin Industries`;
+
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute("href", `https://salvinindia.com${path}`);
+
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute("content", description);
+
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      if (ogTitle) ogTitle.setAttribute("content", `${title} | Salvin Industries`);
+
+      const ogDesc = document.querySelector('meta[property="og:description"]');
+      if (ogDesc) ogDesc.setAttribute("content", description);
+
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute("content", `https://salvinindia.com${path}`);
+
+      const twitterTitle = document.querySelector('meta[property="twitter:title"]');
+      if (twitterTitle) twitterTitle.setAttribute("content", `${title} | Salvin Industries`);
+
+      const twitterDesc = document.querySelector('meta[property="twitter:description"]');
+      if (twitterDesc) twitterDesc.setAttribute("content", description);
+    };
+
+    const path = location.pathname;
+
+    if (path === "/") {
+      updateMetaTags(
+        "Processing Plants, Packaging Machinery & Turnkey Projects",
+        "Salvin Industries is a leading manufacturer of high-performance food processing plants, packaging machinery, spares, and turnkey projects.",
+        path
+      );
+    } else if (path === "/about") {
+      updateMetaTags(
+        "Our Journey & Engineering Expertise",
+        "Learn about Salvin Industries' journey since 2008 in engineering India's industrial future with high-quality process lines and machinery.",
+        path
+      );
+    } else if (path === "/contact") {
+      updateMetaTags(
+        "Contact Us for Turnkey Projects & Machinery",
+        "Get in touch with Salvin Industries for quotes, consultation, and support on industrial machineries, turnkey projects, and spares.",
+        path
+      );
+    } else if (path === "/services") {
+      updateMetaTags(
+        "Our Core Services & Solutions",
+        "Explore Salvin Industries' services including turnkey projects, process optimization, industrial automation, and custom packaging systems.",
+        path
+      );
+    } else if (path === "/consultant") {
+      updateMetaTags(
+        "Food & Industrial Project Consultancy",
+        "Get expert industrial planning, plant layout design, feasibility analysis, and technical guidance for greenfield & brownfield food processing setups.",
+        path
+      );
+    } else if (path === "/turnkey") {
+      updateMetaTags(
+        "Turnkey Plant Architectural & Commissioning",
+        "End-to-end plant design, equipment sizing, manufacturing, installation, and commissioning of turnkey processing and packaging lines.",
+        path
+      );
+    } else if (path === "/turnkey-project") {
+      updateMetaTags(
+        "Our Successful Turnkey Projects Portfolio",
+        "Browse our turnkey project portfolio including spices grinding lines, honey filtration units, edible oil mills, and tomato paste plants.",
+        path
+      );
+    } else if (path === "/machineries") {
+      updateMetaTags(
+        "Industrial Processing & Packaging Machinery Catalog",
+        "Explore our wide range of robust, heavy-duty machinery for filling, capping, labeling, processing, and packaging food and pharma products.",
+        path
+      );
+    } else {
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) canonical.setAttribute("href", `https://salvinindia.com${path}`);
+
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) ogUrl.setAttribute("content", `https://salvinindia.com${path}`);
+    }
+  }, [location.pathname, isAdminRoute]);
 
   React.useEffect(() => {
     const isCatalogPage =
@@ -2612,7 +2700,6 @@ export default function App() {
         </Routes>
         <Footer />
       </div>
-      {isIntroVisible && <IntroOverlay onComplete={() => setShowIntro(false)} />}
       <SalvinChatbot machines={machines} subcategories={subcategories} />
     </>
   );

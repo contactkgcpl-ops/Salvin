@@ -1,3 +1,0 @@
-# For .cursor/skills/agentic-seo/scripts (Agentic-SEO-Skill)
-requests
-beautifulsoup4
