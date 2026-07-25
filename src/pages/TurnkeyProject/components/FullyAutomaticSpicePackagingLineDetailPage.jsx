@@ -30,12 +30,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Material Receiving", desc: "High efficiency, industrial-grade equipment for raw material receiving." },
-  { name: "Cleaning & Sieving", desc: "High efficiency, industrial-grade equipment for cleaning & sieving." },
-  { name: "Storage Bin", desc: "High efficiency, industrial-grade equipment for storage bin." },
-  { name: "Screw Feeder", desc: "High efficiency, industrial-grade equipment for screw feeder." },
-  { name: "Grinding (Pulverizing)", desc: "High efficiency, industrial-grade equipment for grinding (pulverizing)." },
-  { name: "Vibro Sifter", desc: "High efficiency, industrial-grade equipment for vibro sifter." }
+  { name: "Bulk Storage & Feeding", desc: "High-capacity stainless steel silo and screw feeder system for continuous product supply.", image: "/turnkey-brochures/images/spice-packaging-gallery/silo_feeder.jpg" },
+  { name: "Auger Filling Machine", desc: "Servo-driven automatic auger filler for highly accurate dosing into jars and bottles.", image: "/turnkey-brochures/images/spice-packaging-gallery/auger_filler.jpg" },
+  { name: "VFFS Pouch Packing", desc: "High-speed Vertical Form Fill Seal (VFFS) machine for continuous pouch packaging.", image: "/turnkey-brochures/images/spice-packaging-gallery/vffs_pouch.jpg" },
+  { name: "Check Weigher & Metal Detector", desc: "Integrated quality control system to ensure exact weight and zero metal contamination.", image: "/turnkey-brochures/images/spice-packaging-gallery/check_weigher.jpg" },
+  { name: "Carton Sealing Machine", desc: "Automatic case erecting, packing, and tape sealing system for secondary packaging.", image: "/turnkey-brochures/images/spice-packaging-gallery/carton_sealing.jpg" },
+  { name: "Robotic Palletizing", desc: "Advanced robotic palletizing system for high-speed, automated end-of-line stacking.", image: "/turnkey-brochures/images/spice-packaging-gallery/robotic_palletizer.jpg" }
 ];
 
 /* ─── FAQs ─── */
@@ -49,12 +49,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/spice_packaging_line.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/spice_packaging_line.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/spice_packaging_line.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/spice_packaging_line.jpg", caption: "Masala Blending Ribbon Mixer" },
-  { src: "/turnkey-brochures/images/spice_packaging_line.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/spice_packaging_line.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/spice-packaging-gallery/silo_feeder.jpg", caption: "Bulk Storage Silo & Screw Feeder System" },
+  { src: "/turnkey-brochures/images/spice-packaging-gallery/auger_filler.jpg", caption: "Automatic Auger Filling Machine for Jars" },
+  { src: "/turnkey-brochures/images/spice-packaging-gallery/vffs_pouch.jpg", caption: "High-Speed VFFS Pouch Packing Machine" },
+  { src: "/turnkey-brochures/images/spice-packaging-gallery/check_weigher.jpg", caption: "Integrated Check Weigher & Metal Detector" },
+  { src: "/turnkey-brochures/images/spice-packaging-gallery/carton_sealing.jpg", caption: "Automatic Carton Packing & Sealing Machine" },
+  { src: "/turnkey-brochures/images/spice-packaging-gallery/robotic_palletizer.jpg", caption: "Robotic Palletizing System" }
 ];
 
 export default function FullyAutomaticSpicePackagingLineDetailPage() {
@@ -117,6 +117,12 @@ export default function FullyAutomaticSpicePackagingLineDetailPage() {
               <p><strong>Salvin Industries' Fully Automatic Spice Packaging Line</strong> is a state-of-the-art turnkey solution engineered for maximum efficiency and uncompromised quality. We provide an end-to-end processing ecosystem that adheres to the strictest global food safety and hygiene standards.</p>
               <p>With our advanced machinery and PLC-controlled automation, you can achieve continuous, high-yield production while minimizing labor costs and downtime. Partner with Salvin Industries for an industry-leading processing line tailored to your specific requirements.</p>
               <div className="rcp-overview__features">
+                <div className="rcp-overview__feature">
+                  <div className="rcp-overview__feature-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg>
+                  </div>
+                  <div className="rcp-overview__feature-body"><p className="rcp-overview__feature-title">High Yield</p><p className="rcp-overview__feature-desc">Maximum product yield</p></div>
+                </div>
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
