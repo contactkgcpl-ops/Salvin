@@ -122,11 +122,6 @@ import FullyAutomaticPasteurizedMilkPlantDetailPage from './pages/TurnkeyProject
 import FullyAutomaticSpicePackagingLineDetailPage from './pages/TurnkeyProject/components/FullyAutomaticSpicePackagingLineDetailPage';
 import SpiceBlendingPlantDetailPage from './pages/TurnkeyProject/components/SpiceBlendingPlantDetailPage';
 import FullyAutomatedCurryPowderProcessingPlantDetailPage from './pages/TurnkeyProject/components/FullyAutomatedCurryPowderProcessingPlantDetailPage';
-import FullyAutomaticMixedSpicePlantDetailPage from './pages/TurnkeyProject/components/FullyAutomaticMixedSpicePlantDetailPage';
-import FullyAutomaticPasteurizedMilkPlantDetailPage from './pages/TurnkeyProject/components/FullyAutomaticPasteurizedMilkPlantDetailPage';
-import FullyAutomaticSpicePackagingLineDetailPage from './pages/TurnkeyProject/components/FullyAutomaticSpicePackagingLineDetailPage';
-import SpiceBlendingPlantDetailPage from './pages/TurnkeyProject/components/SpiceBlendingPlantDetailPage';
-import FullyAutomatedCurryPowderProcessingPlantDetailPage from './pages/TurnkeyProject/components/FullyAutomatedCurryPowderProcessingPlantDetailPage';
 import FullyAutomatedFrozenVegetableProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedFrozenVegetableProcessingPlantDetailPage";
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
@@ -2692,11 +2687,6 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-dehydrated-garlic-processing-plant" element={<FullyAutomaticDehydratedGarlicPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-vegetable-drying-plant" element={<FullyAutomaticVegetableDryingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-garam-masala-processing-plant" element={<FullyAutomatedGaramMasalaProcessingPlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automatic-mixed-spice-plant" element={<FullyAutomaticMixedSpicePlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automatic-pasteurized-milk-plant" element={<FullyAutomaticPasteurizedMilkPlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automatic-spice-packaging-line" element={<FullyAutomaticSpicePackagingLineDetailPage />} />
-        <Route path="/turnkey-project/spice-blending-plant" element={<SpiceBlendingPlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automated-curry-powder-processing-plant" element={<FullyAutomatedCurryPowderProcessingPlantDetailPage />} />
         <Route path="/turnkey-project/fully-automatic-mixed-spice-plant" element={<FullyAutomaticMixedSpicePlantDetailPage />} />
         <Route path="/turnkey-project/fully-automatic-pasteurized-milk-plant" element={<FullyAutomaticPasteurizedMilkPlantDetailPage />} />
         <Route path="/turnkey-project/fully-automatic-spice-packaging-line" element={<FullyAutomaticSpicePackagingLineDetailPage />} />
