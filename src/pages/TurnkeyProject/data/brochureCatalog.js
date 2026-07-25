@@ -67,7 +67,8 @@ const RAW = [
   ['garlic.jpeg', null, 'Fully Automatic Dehydrated Garlic Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-dehydrated-garlic-processing-plant'],
   ['vegetable-drying.jpeg', null, 'Fully Automatic Vegetable Drying Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-vegetable-drying-plant'],
   ['garam-masala.jpeg', null, 'Fully Automated Garam Masala Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-garam-masala-processing-plant'],
-  ['frozen-vegetable.jpeg', null, 'Fully Automated Frozen Vegetable Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-frozen-vegetable-processing-plant']
+  ['frozen-vegetable.jpeg', null, 'Fully Automated Frozen Vegetable Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-frozen-vegetable-processing-plant'],
+  ['fruit-juice.jpeg', null, 'Fully Automated Fruit Juice Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-fruit-juice-processing-plant']
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {
