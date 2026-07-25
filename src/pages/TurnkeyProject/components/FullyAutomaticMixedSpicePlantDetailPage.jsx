@@ -28,12 +28,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Material Receiving & Inspection", desc: "High efficiency, industrial-grade equipment for raw material receiving & inspection." },
-  { name: "Cleaning System", desc: "High efficiency, industrial-grade equipment for cleaning system." },
-  { name: "Sorting & Grading", desc: "High efficiency, industrial-grade equipment for sorting & grading." },
-  { name: "Drying System", desc: "High efficiency, industrial-grade equipment for drying system." },
-  { name: "Destoning System", desc: "High efficiency, industrial-grade equipment for destoning system." },
-  { name: "Roasting (If Required)", desc: "High efficiency, industrial-grade equipment for roasting (if required)." }
+  { name: "Cleaning & Destoning", desc: "Raw spice cleaning and destoning machine to remove impurities and foreign materials.", image: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.jpg" },
+  { name: "Spice Roasting", desc: "Automatic spice roasting machine for consistent flavor development.", image: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.jpg" },
+  { name: "Grinding System", desc: "Hammer mill pulverizer grinding machine for perfect particle size reduction.", image: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.jpg" },
+  { name: "Ribbon Blending", desc: "Industrial ribbon blender & spice mixing machine for homogeneous spice blends.", image: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.jpg" },
+  { name: "Vibro Sieving", desc: "Vibro sieving and fine mesh screening machine to ensure uniform product.", image: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.jpg" },
+  { name: "Weighing & Packing", desc: "Automatic spice weighing, packing and sealing machine for perfect packaging.", image: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.jpg" }
 ];
 
 /* ─── FAQs ─── */
@@ -45,12 +45,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/mixed_spice_plant.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/mixed_spice_plant.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/mixed_spice_plant.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/mixed_spice_plant.jpg", caption: "Masala Blending Ribbon Mixer" },
-  { src: "/turnkey-brochures/images/mixed_spice_plant.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/mixed_spice_plant.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.jpg", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.jpg", caption: "Ribbon Blender & Spice Mixing Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.jpg", caption: "Automatic Spice Weighing, Packing & Sealing Machine" }
 ];
 
 export default function FullyAutomaticMixedSpicePlantDetailPage() {
@@ -135,7 +135,7 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mixed_spice_plant.jpg" alt="Fully Automatic Mixed Spice Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.jpg" alt="Fully Automatic Mixed Spice Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
