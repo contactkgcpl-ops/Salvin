@@ -29,12 +29,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Material Inspection & Sorting", desc: "High efficiency, industrial-grade equipment for raw material inspection & sorting." },
-  { name: "Vibro Sifter (Pre-Cleaning)", desc: "High efficiency, industrial-grade equipment for vibro sifter (pre-cleaning)." },
-  { name: "Magnet Separator (Metal Removal)", desc: "High efficiency, industrial-grade equipment for magnet separator (metal removal)." },
-  { name: "Pulverizer / Grinder", desc: "High efficiency, industrial-grade equipment for pulverizer / grinder." },
-  { name: "Dust Collection System", desc: "High efficiency, industrial-grade equipment for dust collection system." },
-  { name: "Sifter (Post Grinding)", desc: "High efficiency, industrial-grade equipment for sifter (post grinding)." }
+  { name: "Raw Spice Cleaning & Destoning", desc: "Advanced cleaning machine to efficiently remove stones, dust, and impurities from raw spices.", image: "/turnkey-brochures/images/spice-blending/cleaning_destoning.jpg" },
+  { name: "Automatic Spice Roaster", desc: "Industrial rotary roaster with precise temperature control to enhance aroma and remove moisture.", image: "/turnkey-brochures/images/spice-blending/spice_roaster.jpg" },
+  { name: "Hammer Mill / Pulverizer", desc: "Heavy-duty grinding machine designed to pulverize roasted spices into uniform fine powder.", image: "/turnkey-brochures/images/spice-blending/hammer_mill.jpg" },
+  { name: "Ribbon Blender Mixer", desc: "High-capacity ribbon blending system ensuring 100% homogeneous mixing of ground spices.", image: "/turnkey-brochures/images/spice-blending/ribbon_blender.jpg" },
+  { name: "Vibro Sieving & Screening", desc: "Fine mesh vibro sifter to guarantee consistent powder size and remove any oversized particles.", image: "/turnkey-brochures/images/spice-blending/vibro_sieving.jpg" },
+  { name: "Automatic Pouch Packing", desc: "High-speed multi-head weigher and VFFS packing machine for highly accurate pouch filling.", image: "/turnkey-brochures/images/spice-blending/pouch_packing.jpg" }
 ];
 
 /* ─── FAQs ─── */
@@ -48,12 +48,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/spice_blending_plant.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/spice_blending_plant.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/spice_blending_plant.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/spice_blending_plant.jpg", caption: "Masala Blending Ribbon Mixer" },
-  { src: "/turnkey-brochures/images/spice_blending_plant.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/spice_blending_plant.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/spice-blending/cleaning_destoning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/spice-blending/spice_roaster.jpg", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/spice-blending/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/spice-blending/ribbon_blender.jpg", caption: "Ribbon Blender Spice Mixing Machine" },
+  { src: "/turnkey-brochures/images/spice-blending/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/spice-blending/pouch_packing.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
 ];
 
 export default function SpiceBlendingPlantDetailPage() {
@@ -116,34 +116,6 @@ export default function SpiceBlendingPlantDetailPage() {
               <p><strong>Salvin Industries' Spice Blending Plant</strong> is a state-of-the-art turnkey solution engineered for maximum efficiency and uncompromised quality. We provide an end-to-end processing ecosystem that adheres to the strictest global food safety and hygiene standards.</p>
               <p>With our advanced machinery and PLC-controlled automation, you can achieve continuous, high-yield production while minimizing labor costs and downtime. Partner with Salvin Industries for an industry-leading processing line tailored to your specific requirements.</p>
               <div className="rcp-overview__features">
-                <div className="rcp-overview__feature">
-                  <div className="rcp-overview__feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="m9 12 2 2 4-4" /></svg>
-                  </div>
-                  <div className="rcp-overview__feature-body"><p className="rcp-overview__feature-title">Hygienic Process</p><p className="rcp-overview__feature-desc">Food-grade contact parts</p></div>
-                </div>
-                <div className="rcp-overview__feature">
-                  <div className="rcp-overview__feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="3" /><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" /></svg>
-                  </div>
-                  <div className="rcp-overview__feature-body"><p className="rcp-overview__feature-title">Perfect Output</p><p className="rcp-overview__feature-desc">Advanced refining tech</p></div>
-                </div>
-                <div className="rcp-overview__feature">
-                  <div className="rcp-overview__feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-                  </div>
-                  <div className="rcp-overview__feature-body"><p className="rcp-overview__feature-title">PLC Control</p><p className="rcp-overview__feature-desc">Fully automatic operation</p></div>
-                </div>
-              </div>
-            </div>
-            <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/spice-blending-gallery/ribbon_blender.jpg" alt="Spice Blending Plant Overview" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
           <div className="rcp-section-badge">Comprehensive Guide</div>
           <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Garam Masala Processing</span></h2>
