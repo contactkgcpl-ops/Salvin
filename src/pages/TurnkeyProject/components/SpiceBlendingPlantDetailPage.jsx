@@ -137,7 +137,7 @@ export default function SpiceBlendingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/spice-blending-gallery/ribbon_blender.jpg" alt="Spice Blending Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/spice-blending/ribbon_blender.jpg" alt="Spice Blending Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
