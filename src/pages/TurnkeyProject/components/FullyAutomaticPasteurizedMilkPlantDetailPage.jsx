@@ -37,9 +37,11 @@ const MACHINERY_LIST = [
 
 /* ─── FAQs ─── */
 const FAQS = [
-  { question: "What is the production capacity of the Fully Automatic Pasteurized Milk Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
+  { question: "What is the production capacity of the Pasteurized Milk Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
   { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." }
+  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
+  { question: "What is the shelf life of the milk processed in this plant?", answer: "Through our highly precise pasteurization and rapid cooling processes, the milk achieves a significantly extended shelf life while retaining its natural nutritional value." },
+  { question: "Do you supply the CIP (Clean-In-Place) system with the milk plant?", answer: "Yes, our milk processing plants come integrated with advanced automatic CIP systems to ensure thorough cleaning and zero bacterial contamination between batches." }
 ];
 
 /* ─── Gallery Images ─── */

@@ -40,9 +40,11 @@ const MACHINERY_LIST = [
 
 /* ─── FAQs ─── */
 const FAQS = [
-  { question: "What is the production capacity of the Fully Automatic Spice Packaging Line?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
+  { question: "What is the production capacity of the Spice Packaging Line?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
   { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." }
+  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
+  { question: "What packaging formats are supported by this line?", answer: "Our packaging lines can be flexibly configured for pillow pouches, stand-up pouches, jars, cartons, and bulk bags, providing maximum versatility for retail or industrial needs." },
+  { question: "How accurate is the weighing system?", answer: "We utilize highly precise multi-head weighers and servo-driven auger fillers that guarantee exact product weights, significantly reducing product giveaway and boosting profitability." }
 ];
 
 /* ─── Gallery Images ─── */

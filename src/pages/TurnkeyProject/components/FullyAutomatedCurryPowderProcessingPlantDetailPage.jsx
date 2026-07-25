@@ -37,9 +37,11 @@ const MACHINERY_LIST = [
 
 /* ─── FAQs ─── */
 const FAQS = [
-  { question: "What is the production capacity of the Fully Automated Curry Powder Processing Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
+  { question: "What is the production capacity of the Curry Powder Processing Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
   { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." }
+  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
+  { question: "How do you prevent flavor loss during grinding?", answer: "Our heavy-duty pulverizers are equipped with specialized water-cooling jackets that maintain low grinding temperatures, perfectly preserving the essential volatile oils." },
+  { question: "Is the curry powder plant suitable for exporting products?", answer: "Yes, our equipment ensures 100% homogeneous blending and airtight packaging, strictly meeting international export standards for quality and hygiene." }
 ];
 
 /* ─── Gallery Images ─── */

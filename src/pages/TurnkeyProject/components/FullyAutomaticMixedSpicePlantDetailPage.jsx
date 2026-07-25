@@ -40,7 +40,9 @@ const MACHINERY_LIST = [
 const FAQS = [
   { question: "What is the production capacity of the Fully Automatic Mixed Spice Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
   { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." }
+  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
+  { question: "What materials are used in the construction of the mixed spice plant?", answer: "All product contact parts are manufactured using high-grade stainless steel (SS 304 / SS 316) to ensure strict hygiene and food safety compliance." },
+  { question: "Can the plant handle different types of spices?", answer: "Yes, our versatile systems are designed to process, grind, and blend a wide variety of whole and powdered spices with minimal changeover time." }
 ];
 
 /* ─── Gallery Images ─── */

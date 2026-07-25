@@ -41,7 +41,9 @@ const MACHINERY_LIST = [
 const FAQS = [
   { question: "What is the production capacity of the Spice Blending Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
   { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." }
+  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
+  { question: "How do you ensure a perfectly uniform spice blend?", answer: "We use advanced industrial ribbon blenders and paddle mixers with optimized agitator designs that ensure 100% homogeneous mixing of even trace ingredients." },
+  { question: "Can the blending plant handle liquid flavor additions?", answer: "Absolutely. Our blenders can be equipped with customized liquid spray systems for infusing oils, oleoresins, or liquid flavors evenly during the mixing process." }
 ];
 
 /* ─── Gallery Images ─── */
