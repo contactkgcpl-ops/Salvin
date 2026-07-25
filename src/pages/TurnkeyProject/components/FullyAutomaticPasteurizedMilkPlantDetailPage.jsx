@@ -27,12 +27,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Milk Reception & Inspection", desc: "High efficiency, industrial-grade equipment for raw milk reception & inspection." },
-  { name: "Milk Cooling Tank", desc: "High efficiency, industrial-grade equipment for milk cooling tank." },
-  { name: "Centrifugal Clarifier", desc: "High efficiency, industrial-grade equipment for centrifugal clarifier." },
-  { name: "Standardization Tank", desc: "High efficiency, industrial-grade equipment for standardization tank." },
-  { name: "Homogenizer", desc: "High efficiency, industrial-grade equipment for homogenizer." },
-  { name: "Pasteurizer (Plate Heat Exchanger)", desc: "High efficiency, industrial-grade equipment for pasteurizer (plate heat exchanger)." }
+  { name: "Raw Milk Reception & Chilling", desc: "Advanced raw milk reception tank, filtration, and chilling unit for immediate temperature reduction.", image: "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg" },
+  { name: "Clarification & Standardization", desc: "High-speed centrifugal milk clarifier and standardization system for consistent fat content.", image: "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg" },
+  { name: "Milk Pasteurization Unit", desc: "Energy-efficient HTST (High Temperature Short Time) pasteurizer with precision controls.", image: "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg" },
+  { name: "High-Pressure Homogenizer", desc: "Industrial high-pressure homogenizer to prevent cream separation and improve milk texture.", image: "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg" },
+  { name: "Pasteurized Milk Storage", desc: "Insulated and hygienic stainless steel storage tank for holding pasteurized milk before packing.", image: "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg" },
+  { name: "Automatic Pouch Packing", desc: "High-speed automatic milk pouch filling and sealing machine for hygienic packaging.", image: "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg" }
 ];
 
 /* ─── FAQs ─── */
@@ -46,12 +46,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/pasteurized_milk_plant.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/pasteurized_milk_plant.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/pasteurized_milk_plant.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/pasteurized_milk_plant.jpg", caption: "Masala Blending Ribbon Mixer" },
-  { src: "/turnkey-brochures/images/pasteurized_milk_plant.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/pasteurized_milk_plant.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg", caption: "Raw Milk Reception, Filtration & Chilling System" },
+  { src: "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg", caption: "Milk Clarifier & Standardization System" },
+  { src: "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg", caption: "HTST Milk Pasteurization Unit" },
+  { src: "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg", caption: "Industrial High-Pressure Homogenizer" },
+  { src: "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg", caption: "Pasteurized Milk Storage Tank" },
+  { src: "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg", caption: "Automatic Milk Pouch Filling & Sealing Machine" }
 ];
 
 export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
@@ -135,7 +135,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasteurized_milk_plant.jpg" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
