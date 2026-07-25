@@ -27,12 +27,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Material Receiving", desc: "High efficiency, industrial-grade equipment for raw material receiving." },
-  { name: "Cleaning & Pre-Sorting", desc: "High efficiency, industrial-grade equipment for cleaning & pre-sorting." },
-  { name: "Drying (If Required)", desc: "High efficiency, industrial-grade equipment for drying (if required)." },
-  { name: "Roasting (Optional)", desc: "High efficiency, industrial-grade equipment for roasting (optional)." },
-  { name: "Cooling (Optional)", desc: "High efficiency, industrial-grade equipment for cooling (optional)." },
-  { name: "De-stoning & Sorting", desc: "High efficiency, industrial-grade equipment for de-stoning & sorting." }
+  { name: "Raw Spice Cleaning & Destoning", desc: "Advanced cleaning machine to efficiently remove stones, dust, and impurities from raw spices.", image: "/turnkey-brochures/images/curry-powder/cleaning_destoning.jpg" },
+  { name: "Automatic Spice Roaster", desc: "Industrial rotary roaster with precise temperature control to enhance aroma and remove moisture.", image: "/turnkey-brochures/images/curry-powder/spice_roaster.jpg" },
+  { name: "Hammer Mill / Pulverizer", desc: "Heavy-duty grinding machine designed to pulverize roasted spices into uniform fine powder.", image: "/turnkey-brochures/images/curry-powder/hammer_mill.jpg" },
+  { name: "Ribbon Blender Mixer", desc: "High-capacity ribbon blending system ensuring 100% homogeneous mixing of ground spices.", image: "/turnkey-brochures/images/curry-powder/ribbon_blender.jpg" },
+  { name: "Vibro Sieving & Screening", desc: "Fine mesh vibro sifter to guarantee consistent powder size and remove any oversized particles.", image: "/turnkey-brochures/images/curry-powder/vibro_sieving.jpg" },
+  { name: "Automatic Pouch Packing", desc: "High-speed multi-head weigher and VFFS packing machine for highly accurate pouch filling.", image: "/turnkey-brochures/images/curry-powder/pouch_packing.jpg" }
 ];
 
 /* ─── FAQs ─── */
@@ -46,12 +46,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/curry_powder_plant.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/curry_powder_plant.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/curry_powder_plant.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/curry_powder_plant.jpg", caption: "Masala Blending Ribbon Mixer" },
-  { src: "/turnkey-brochures/images/curry_powder_plant.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/curry_powder_plant.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/curry-powder/cleaning_destoning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/spice_roaster.jpg", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/ribbon_blender.jpg", caption: "Ribbon Blender Spice Mixing Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/pouch_packing.jpg", caption: "Automatic Pouch Filling & Packing Machine" }
 ];
 
 export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
@@ -135,7 +135,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/curry_powder_plant.jpg" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/curry-powder/ribbon_blender.jpg" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
