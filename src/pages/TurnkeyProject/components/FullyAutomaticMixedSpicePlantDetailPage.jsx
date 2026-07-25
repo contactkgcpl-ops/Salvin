@@ -109,11 +109,11 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
       <section className="rcp-section rcp-overview" id="overview" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["overview"] ? "rcp-animate--in" : ""}`}>
           <div className="rcp-section-badge">Plant Overview</div>
-          <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
+          <h2 className="rcp-section-title">Complete <span className="rcp-accent">Mixed Spice Processing</span> Solution</h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Mixed Spice Plant</strong> is a state-of-the-art turnkey solution engineered for maximum efficiency and uncompromised quality. We provide an end-to-end processing ecosystem that adheres to the strictest global food safety and hygiene standards.</p>
-              <p>With our advanced machinery and PLC-controlled automation, you can achieve continuous, high-yield production while minimizing labor costs and downtime. Partner with Salvin Industries for an industry-leading processing line tailored to your specific requirements.</p>
+              <p><strong>Salvin Industries' Fully Automatic Mixed Spice Processing Plant</strong> is an advanced turnkey solution designed to handle a variety of spices efficiently. From pre-cleaning and sorting to precision grinding and hygienic blending, our fully automated system ensures maximum product yield and zero flavor loss.</p>
+              <p>Built with food-grade SS304/316 stainless steel, this plant features PLC-controlled automation to reduce manual labor and ensure every batch meets the highest global food safety standards. It is the perfect choice for scaling up mixed spice production with consistent quality.</p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -151,7 +151,7 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
           <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Garam Masala Processing</span></h2>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Mixed Spice Processing</span></h2>
           <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
           <div className="rcp-seo-content__body">
             <h3>Why Start a Garam Masala Business?</h3>

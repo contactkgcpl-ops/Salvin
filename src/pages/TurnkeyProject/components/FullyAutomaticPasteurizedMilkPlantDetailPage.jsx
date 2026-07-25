@@ -108,11 +108,11 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       <section className="rcp-section rcp-overview" id="overview" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["overview"] ? "rcp-animate--in" : ""}`}>
           <div className="rcp-section-badge">Plant Overview</div>
-          <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
+          <h2 className="rcp-section-title">Complete <span className="rcp-accent">Pasteurized Milk Processing</span> Solution</h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Pasteurized Milk Plant</strong> is a state-of-the-art turnkey solution engineered for maximum efficiency and uncompromised quality. We provide an end-to-end processing ecosystem that adheres to the strictest global food safety and hygiene standards.</p>
-              <p>With our advanced machinery and PLC-controlled automation, you can achieve continuous, high-yield production while minimizing labor costs and downtime. Partner with Salvin Industries for an industry-leading processing line tailored to your specific requirements.</p>
+              <p><strong>Salvin Industries' Fully Automatic Pasteurized Milk Plant</strong> is a state-of-the-art turnkey solution engineered for dairy processing. We provide an end-to-end processing ecosystem that rapidly pasteurizes, homogenizes, and packages milk while maintaining its natural nutrients and freshness.</p>
+              <p>With our advanced machinery and PLC-controlled automation, you can achieve continuous, high-yield milk processing. Our food-grade stainless steel systems adhere strictly to global dairy safety and hygiene standards, ensuring an extended shelf life for your milk products.</p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -150,8 +150,8 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
           <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Garam Masala Processing</span></h2>
-          <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Milk Pasteurization</span></h2>
+          <p className="rcp-section-subtitle">Understanding the dairy processing steps, benefits, and market growth.</p>
           <div className="rcp-seo-content__body">
             <h3>Why Start a Garam Masala Business?</h3>
             <p>Garam Masala is the heart of Indian and South Asian cooking. The demand for branded, high-quality, and hygienically packed blended spices is skyrocketing. By manufacturing a perfectly balanced and highly aromatic Garam Masala, you can build a highly profitable and recurring FMCG business.</p>
