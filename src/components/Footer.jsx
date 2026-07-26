@@ -40,29 +40,29 @@ export default function Footer() {
 
         <div className="footer-links-col">
           <h4>SERVICES</h4>
-          <NavLink to="/services">Turnkey Plant Solutions</NavLink>
-          <NavLink to="/services">Industrial Automation</NavLink>
-          <NavLink to="/services">Maintenance & AMC</NavLink>
-          <NavLink to="/services">Pneumatic Equipment</NavLink>
-          <NavLink to="/services">Packaging Machinery</NavLink>
-          <NavLink to="/services">Food Processing</NavLink>
+          <NavLink to="/food-consultant">Turnkey Plant Solutions</NavLink>
+          <NavLink to="/food-consultant">Industrial Automation</NavLink>
+          <NavLink to="/food-consultant">Maintenance & AMC</NavLink>
+          <NavLink to="/food-consultant">Pneumatic Equipment</NavLink>
+          <NavLink to="/food-consultant">Packaging Machinery</NavLink>
+          <NavLink to="/food-consultant">Food Processing</NavLink>
         </div>
 
         <div className="footer-links-col">
           <h4>INDUSTRIES</h4>
-          <NavLink to="/services">Food & Spices</NavLink>
-          <NavLink to="/services">Pharmaceutical</NavLink>
-          <NavLink to="/services">Chemical & API</NavLink>
-          <NavLink to="/services">Agriculture</NavLink>
-          <NavLink to="/services">Cosmetics</NavLink>
-          <NavLink to="/services">Export Industries</NavLink>
+          <NavLink to="/food-consultant">Food & Spices</NavLink>
+          <NavLink to="/food-consultant">Pharmaceutical</NavLink>
+          <NavLink to="/food-consultant">Chemical & API</NavLink>
+          <NavLink to="/food-consultant">Agriculture</NavLink>
+          <NavLink to="/food-consultant">Cosmetics</NavLink>
+          <NavLink to="/food-consultant">Export Industries</NavLink>
         </div>
 
         <div className="footer-links-col">
           <h4>COMPANY</h4>
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/about">Projects Portfolio</NavLink>
-          <NavLink to="/services">Resources & Blog</NavLink>
+          <NavLink to="/food-consultant">Resources & Blog</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>
           <NavLink to="/contact">International Offices</NavLink>
           <NavLink to="/contact">Careers</NavLink>

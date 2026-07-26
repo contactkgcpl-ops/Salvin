@@ -1902,6 +1902,7 @@ body {
   transition: all 0.25s ease;
 }
 
+.nav-dropdown:hover .nav-dropdown-menu,
 .nav-dropdown.open .nav-dropdown-menu {
   opacity: 1;
   visibility: visible;

@@ -197,7 +197,7 @@ const testimonialCards = [
       "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
   },
   {
-    text: "\"he robotic integration provided by Salvin transformed our assembly process. Their support team was available 24/7 during the transition, making it seamless.\"",
+    text: "\"The robotic integration provided by Salvin transformed our assembly process. Their support team was available 24/7 during the transition, making it seamless.\"",
     name: "Ananya Sharma",
     role: "PLANT HEAD, GLOBAL PHARMA",
     image:
@@ -1537,11 +1537,11 @@ function HomePage() {
   const heroSlides = [
     {
       key: "machine",
-      eyebrow: "Salvin",
-      title: "Our Special purpose Machine ",
-      text: "Manage client relations, track industrial equipment orders, and oversee turnkey processing plants seamlessly within the Salvin CRM ecosystem.",
-      cta: "Access Dashboard",
-      to: "/admin-panel",
+      eyebrow: "Salvin Industries",
+      title: "Food Processing Plant & Packaging Machinery",
+      text: "Leading manufacturer of high-performance food processing plants, packaging machinery, industrial automation, and turnkey projects in India & worldwide.",
+      cta: "Explore Turnkey Projects",
+      to: "/turnkey-project",
       image: machineHeroImage
     },
     {
@@ -1789,7 +1789,7 @@ function HomePage() {
                   <h3 className="text-lg font-bold leading-snug text-slate-900">{item.title}</h3>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">{item.text}</p>
                   <NavLink
-                    to="/services"
+                    to="/food-consultant"
                     className="mt-4 inline-flex text-xs font-bold uppercase tracking-wide text-[#ff7a00] transition hover:text-[#e56d00]"
                   >
                     VIEW SOLUTIONS →
@@ -2404,8 +2404,8 @@ export default function App() {
 
     if (path === "/") {
       updateMetaTags(
-        "Processing Plants, Packaging Machinery & Turnkey Projects",
-        "Salvin Industries is a leading manufacturer of high-performance food processing plants, packaging machinery, spares, and turnkey projects.",
+        "Turnkey Solution & Consultant For Food Industries",
+        "Salvin Industries is a leading engineering, consultancy, automation, and turnkey project company specializing in the Food, Beverage, Nutraceutical, and Pharmaceutical sectors.",
         path
       );
     } else if (path === "/about") {
@@ -2420,10 +2420,10 @@ export default function App() {
         "Get in touch with Salvin Industries for quotes, consultation, and support on industrial machineries, turnkey projects, and spares.",
         path
       );
-    } else if (path === "/services") {
+    } else if (path === "/food-consultant" || path === "/services") {
       updateMetaTags(
-        "Our Core Services & Solutions",
-        "Explore Salvin Industries' services including turnkey projects, process optimization, industrial automation, and custom packaging systems.",
+        "Food Processing Plant & Project Consultant | Salvin Industries",
+        "Top food processing plant consultants in India by Salvin Industries. Complete turnkey solutions, factory layouts, DPR reports, and FSSAI guidance.",
         path
       );
     } else if (path === "/consultant") {
@@ -2643,7 +2643,8 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
-          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/food-consultant" element={<ServicesPage />} />
+          <Route path="/services" element={<Navigate to="/food-consultant" replace />} />
           <Route path="/consultant" element={<ConsultantPage />} />
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />

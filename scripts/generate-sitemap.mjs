@@ -20,7 +20,7 @@ const STATIC_PATHS = [
   "/",
   "/about",
   "/contact",
-  "/services",
+  "/food-consultant",
   "/consultant",
   "/turnkey",
   "/turnkey-project",

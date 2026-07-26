@@ -13,7 +13,7 @@ const STATIC_PATHS = [
   "/",
   "/about",
   "/contact",
-  "/services",
+  "/food-consultant",
   "/consultant",
   "/turnkey",
   "/turnkey-project",
@@ -56,8 +56,8 @@ async function loadMachinePaths() {
 
 const META_MAP = {
   "/": {
-    title: "Turnkey Food Processing Plant Consultant & Machinery Manufacturer | Salvin Industries",
-    desc: "Salvin Industries provides turnkey food processing plant setup, packaging machinery, industrial automation, plant layout design, and food project consultancy in India and worldwide.",
+    title: "Turnkey Solution & Consultant For Food Industries | Salvin Industries",
+    desc: "Salvin Industries is a leading engineering, consultancy, automation, and turnkey project company specializing in the Food, Beverage, Nutraceutical, and Pharmaceutical sectors.",
   },
   "/about": {
     title: "Our Journey & Engineering Expertise | Salvin Industries",
@@ -67,9 +67,9 @@ const META_MAP = {
     title: "Contact Us for Turnkey Projects & Machinery | Salvin Industries",
     desc: "Get in touch with Salvin Industries for quotes, consultation, and support on industrial machineries, turnkey projects, and spares.",
   },
-  "/services": {
-    title: "Our Core Services & Solutions | Salvin Industries",
-    desc: "Explore Salvin Industries' services including turnkey projects, process optimization, industrial automation, and custom packaging systems.",
+  "/food-consultant": {
+    title: "Food Processing Plant & Project Consultant | Salvin Industries",
+    desc: "Top food processing plant consultants in India by Salvin Industries. Complete turnkey solutions, factory layouts, DPR reports, and FSSAI guidance.",
   },
   "/consultant": {
     title: "Food & Industrial Project Consultancy | Salvin Industries",
