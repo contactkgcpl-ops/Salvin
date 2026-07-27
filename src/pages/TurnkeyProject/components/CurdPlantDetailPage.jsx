@@ -7,27 +7,27 @@ import WhyChooseSalvin from './WhyChooseSalvin'
 const PROCESS_STEPS = [
   {
     id: 1,
-    "title": "Raw Milk Reception"
+    "title": "Milk Pre-Heating"
   },
   {
     id: 2,
-    "title": "Clarification"
-  },
-  {
-    id: 3,
-    "title": "Standardization"
-  },
-  {
-    id: 4,
-    "title": "Homogenization"
-  },
-  {
-    id: 5,
     "title": "HTST Pasteurization"
   },
   {
+    id: 3,
+    "title": "Cooling to Incubation Temp"
+  },
+  {
+    id: 4,
+    "title": "Culture Inoculation"
+  },
+  {
+    id: 5,
+    "title": "Incubation"
+  },
+  {
     id: 6,
-    "title": "Storage Silo"
+    "title": "Curd Cooling"
   },
   {
     id: 7,
@@ -38,93 +38,89 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    "name": "Milk Reception & Chilling",
-    "desc": "Rapid cooling of raw milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg"
+    "name": "Raw Milk Reception & Filtration",
+    "desc": "Initial processing and purification of raw milk.",
+    "image": "/turnkey-brochures/images/curd-gallery/1_reception.jpg"
   },
   {
-    "name": "Centrifugal Clarifier",
-    "desc": "Removes impurities effectively.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg"
+    "name": "Pasteurization & Homogenization",
+    "desc": "Ensures pathogen-free milk and uniform texture.",
+    "image": "/turnkey-brochures/images/curd-gallery/2_pasteurization.jpg"
   },
   {
-    "name": "Homogenizer",
-    "desc": "Uniform fat distribution.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg"
+    "name": "Cooling & Starter Culture",
+    "desc": "Temperature adjustment and precise culture dosing.",
+    "image": "/turnkey-brochures/images/curd-gallery/3_cooling.jpg"
   },
   {
-    "name": "HTST Pasteurizer",
-    "desc": "Highly efficient heat transfer.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg"
+    "name": "Incubation & Fermentation",
+    "desc": "Temperature-controlled chamber for perfect setting.",
+    "image": "/turnkey-brochures/images/curd-gallery/4_incubation.jpg"
   },
   {
-    "name": "Storage Silo",
-    "desc": "Insulated storage for processed milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg"
+    "name": "Automatic Cup Filling",
+    "desc": "High-speed filling, foil sealing, and lid capping.",
+    "image": "/turnkey-brochures/images/curd-gallery/5_filling.jpg"
   },
   {
-    "name": "Pouch Packing Machine",
-    "desc": "High speed milk pouch filling.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg"
+    "name": "Cold Storage & Dispatch",
+    "desc": "Carton packing and final refrigerated storage.",
+    "image": "/turnkey-brochures/images/curd-gallery/6_storage.jpg"
   }
 ];
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the processing capacity?",
-    "answer": "We offer plants tailored to handle any volume of milk intake efficiently."
+    "question": "How does the cup-incubation method work?",
+    "answer": "In this method, the milk is inoculated with cultures and immediately filled into cups. The cups are then moved to a large incubation chamber where the curd sets directly in its final packaging, resulting in a firm, thick texture."
   },
   {
-    "question": "Does the plant maintain natural taste?",
-    "answer": "Yes, precision HTST heating ensures safety without altering the fresh taste."
+    "question": "Can we control the sourness of the curd?",
+    "answer": "Yes. By strictly controlling the temperature in our incubation chambers and rapidly transferring the set curd to blast cooling rooms, we completely halt fermentation, locking in the perfect sweet taste."
   },
   {
-    "question": "Do you provide pouch packing machines?",
-    "answer": "Yes, we integrate reliable, high-speed VFFS machines for liquid packaging."
+    "question": "What capacity ranges are available?",
+    "answer": "We offer Curd plants ranging from 500 liters per day for small-scale dairy startups up to 50,000+ liters per day for large industrial operations."
   },
   {
-    "question": "What types of packaging does it support?",
-    "answer": "Primarily LDPE pouches, but bottle filling is also fully supported."
-  },
-  {
-    "question": "Does SALVIN provide complete installation?",
-    "answer": "Absolutely. We are an end-to-end turnkey solution provider."
+    "question": "Does the machinery prevent cream from rising to the top?",
+    "answer": "Yes, our high-pressure homogenizers break down fat globules so evenly that the cream remains perfectly distributed throughout the curd, rather than forming a layer on top."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg",
-    "caption": "Milk Reception & Chilling"
+    "src": "/turnkey-brochures/images/curd-gallery/1_reception.jpg",
+    "caption": "Raw Milk Reception & Filtration"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg",
-    "caption": "Centrifugal Clarifier"
+    "src": "/turnkey-brochures/images/curd-gallery/2_pasteurization.jpg",
+    "caption": "Pasteurization & Homogenization"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg",
-    "caption": "Homogenizer"
+    "src": "/turnkey-brochures/images/curd-gallery/3_cooling.jpg",
+    "caption": "Cooling & Starter Culture"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg",
-    "caption": "HTST Pasteurizer"
+    "src": "/turnkey-brochures/images/curd-gallery/4_incubation.jpg",
+    "caption": "Incubation & Fermentation Chamber"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg",
-    "caption": "Storage Silo"
+    "src": "/turnkey-brochures/images/curd-gallery/5_filling.jpg",
+    "caption": "Automatic Cup Filling & Sealing"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg",
-    "caption": "Pouch Packing Machine"
+    "src": "/turnkey-brochures/images/curd-gallery/6_storage.jpg",
+    "caption": "Cold Storage & Carton Packing"
   }
 ];
 
 /* ════════════════════════════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════════════════════════════ */
-export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
+export default function CurdPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
   const [activeFaq, setActiveFaq] = useState(null)
@@ -166,17 +162,17 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/curd_hero.png')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
             TURNKEY PROCESSING SOLUTION
           </span>
           <h1 className="rcp-hero__title">
-            Fully Automatic Pasteurized Milk Plant
+            Curd Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Complete pasteurization line designed for efficient milk processing with HTST pasteurizers, high-efficiency separators, and flexible pouch/bottle filling.
+            End-to-end curd processing line with advanced inoculation, incubation, and curd setting technologies for consistent texture and taste.
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -196,8 +192,9 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Pasteurized Milk Plant</strong> is the cornerstone of fresh dairy processing, ensuring safety while maintaining the natural taste of milk.</p>
-              <p>Featuring state-of-the-art HTST (High Temperature Short Time) pasteurizers and precise standardization systems, we deliver maximum efficiency for dairy operations.</p>
+              <p><strong>Salvin Industries' Curd (Dahi) Processing Plant</strong> makes it very easy to produce thick, sweet, and perfectly set Dahi in large quantities. The market for clean, packed Dahi is growing very fast, and our machine helps you start a profitable business.</p>
+              <p>Our machine first cleans and boils the milk to make it safe. Then we add the Dahi culture and fill it into cups. The cups are kept in a special warm room where the Dahi sets perfectly. We control the temperature so well that water never separates from the Dahi.</p>
+              <p>After setting, the cups go to a cold room. This stops the Dahi from becoming too sour. You get 100% thick, creamy, and very tasty Dahi in every batch. Our fully automatic machine is very easy to use and saves your labor cost.</p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -255,7 +252,44 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasteurized_milk_overview.jpg" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/curd-gallery/6_storage.jpg" alt="Curd Plant Overview" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SEO GUIDE ═══ */}
+      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">Comprehensive Guide</div>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Curd (Dahi) Production</span></h2>
+          <p className="rcp-section-subtitle">A simple way to start a commercial Dahi business.</p>
+          <div className="rcp-seo-content__body">
+            <div className="rcp-seo-content__block">
+              <h3>Why Start This Business?</h3>
+              <ul>
+                <li><strong>Used in Every Home:</strong> Dahi (Curd) is eaten daily in almost every house.</li>
+                <li><strong>Packed Dahi Demand:</strong> People now prefer clean, packed Dahi over loose open Dahi.</li>
+                <li><strong>High Sales:</strong> If your Dahi is thick and sweet, customers will buy it every single day.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>How Do We Make It?</h3>
+              <ul>
+                <li><strong>Step 1: Preparing Milk.</strong> First, we boil (pasteurize) the milk to make it safe.</li>
+                <li><strong>Step 2: Packing in Cups.</strong> We add Dahi culture and immediately fill the milk into plastic cups.</li>
+                <li><strong>Step 3: Warm & Cold Rooms.</strong> Cups go to a warm room to set the Dahi. Then they go to a cold room to stop the sour taste.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>Why Choose Salvin Machine?</h3>
+              <ul>
+                <li><strong>No Water Separation:</strong> The biggest problem in Dahi is water coming on top. Our machine solves this 100%.</li>
+                <li><strong>Perfect Thickness:</strong> Your Dahi will be very thick and creamy.</li>
+                <li><strong>Complete Setup:</strong> We provide everything from milk processing to cup packing and cold rooms.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -354,7 +388,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
         <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">FAQs</div>
           <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
-          <p className="rcp-section-subtitle">Everything you need to know about our Fully Automatic Pasteurized Milk Plant.</p>
+          <p className="rcp-section-subtitle">Everything you need to know about our Curd Plant.</p>
 
           <div className="rcp-faq__list">
             {FAQS.map((faq, index) => {
@@ -423,20 +457,20 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       </section>
 
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="FullyAutomaticPasteurizedMilkPlantDetailPage" />
+      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="CurdPlantDetailPage" />
 
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['enquiry'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-cta__box">
-            <h2>Ready to Build Your Pasteurized Milk Plant?</h2>
+            <h2>Ready to Build Your Curd Processing Plant?</h2>
             <p>
               Get a customised project proposal with capacity recommendations, plant layout, equipment list,
               timeline, and investment estimate — all tailored to your specific requirements.
             </p>
             <div className="rcp-cta__actions">
               <a
-                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully Automatic Pasteurized Milk Plant.%20Please%20share%20details.`}
+                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Curd Plant.%20Please%20share%20details.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rcp-btn rcp-btn--primary rcp-btn--lg"

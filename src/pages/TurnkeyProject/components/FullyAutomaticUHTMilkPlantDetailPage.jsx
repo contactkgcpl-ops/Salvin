@@ -11,11 +11,11 @@ const PROCESS_STEPS = [
   },
   {
     id: 2,
-    "title": "Clarification"
+    "title": "Standardization"
   },
   {
     id: 3,
-    "title": "Standardization"
+    "title": "Preheating"
   },
   {
     id: 4,
@@ -23,108 +23,104 @@ const PROCESS_STEPS = [
   },
   {
     id: 5,
-    "title": "HTST Pasteurization"
+    "title": "UHT Sterilizer (135°C)"
   },
   {
     id: 6,
-    "title": "Storage Silo"
+    "title": "Aseptic Holding"
   },
   {
     id: 7,
-    "title": "Automatic Filling"
+    "title": "Aseptic Filling"
   }
 ];
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    "name": "Milk Reception & Chilling",
-    "desc": "Rapid cooling of raw milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg"
+    "name": "Raw Milk Reception Unit",
+    "desc": "Initial reception, filtration, and chilling.",
+    "image": "/turnkey-brochures/images/uht-milk-gallery/1_reception.jpg"
   },
   {
-    "name": "Centrifugal Clarifier",
-    "desc": "Removes impurities effectively.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg"
+    "name": "Clarifier & Standardization",
+    "desc": "Precise inline fat adjustment.",
+    "image": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.jpg"
   },
   {
-    "name": "Homogenizer",
-    "desc": "Uniform fat distribution.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg"
+    "name": "Homogenizer & Sterilizer",
+    "desc": "Advanced UHT heating up to 135°C for 2-4 seconds.",
+    "image": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.jpg"
   },
   {
-    "name": "HTST Pasteurizer",
-    "desc": "Highly efficient heat transfer.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg"
+    "name": "Aseptic Holding Tanks",
+    "desc": "Sterile buffering before filling.",
+    "image": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.jpg"
   },
   {
-    "name": "Storage Silo",
-    "desc": "Insulated storage for processed milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg"
+    "name": "Aseptic Pouch Filling",
+    "desc": "Sterile pouch packaging environment.",
+    "image": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.jpg"
   },
   {
-    "name": "Pouch Packing Machine",
-    "desc": "High speed milk pouch filling.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg"
+    "name": "Carton Packing Machine",
+    "desc": "Automated end-of-line carton packaging.",
+    "image": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.jpg"
   }
 ];
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the processing capacity?",
-    "answer": "We offer plants tailored to handle any volume of milk intake efficiently."
+    "question": "Does UHT sterilization affect the taste of the milk?",
+    "answer": "Because we use ultra-fast flash heating (over 135°C for just seconds) and immediate cooling, the natural flavor and nutritional value of the milk are highly preserved without any burnt taste."
   },
   {
-    "question": "Does the plant maintain natural taste?",
-    "answer": "Yes, precision HTST heating ensures safety without altering the fresh taste."
+    "question": "What is the shelf life of the milk produced?",
+    "answer": "When paired with our aseptic packaging machines, the UHT milk can achieve a shelf life of 6 to 9 months without any refrigeration or chemical preservatives."
   },
   {
-    "question": "Do you provide pouch packing machines?",
-    "answer": "Yes, we integrate reliable, high-speed VFFS machines for liquid packaging."
+    "question": "Is this plant suitable for flavored milk or juices?",
+    "answer": "Yes, our UHT sterilizers are highly versatile and can process flavored milk, soya milk, juices, and other liquid beverages with minor configuration changes."
   },
   {
-    "question": "What types of packaging does it support?",
-    "answer": "Primarily LDPE pouches, but bottle filling is also fully supported."
-  },
-  {
-    "question": "Does SALVIN provide complete installation?",
-    "answer": "Absolutely. We are an end-to-end turnkey solution provider."
+    "question": "How is the aseptic condition maintained during packaging?",
+    "answer": "The milk is transferred from the sterilizer to the aseptic filling machine through a completely closed, sterile piping loop, preventing any exposure to ambient air."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg",
-    "caption": "Milk Reception & Chilling"
+    "src": "/turnkey-brochures/images/uht-milk-gallery/1_reception.jpg",
+    "caption": "Raw Milk Reception Unit"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg",
-    "caption": "Centrifugal Clarifier"
+    "src": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.jpg",
+    "caption": "Clarifier & Standardization"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg",
-    "caption": "Homogenizer"
+    "src": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.jpg",
+    "caption": "Homogenizer & Sterilizer"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg",
-    "caption": "HTST Pasteurizer"
+    "src": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.jpg",
+    "caption": "Aseptic Holding Tanks"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg",
-    "caption": "Storage Silo"
+    "src": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.jpg",
+    "caption": "Aseptic Pouch Filling"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg",
-    "caption": "Pouch Packing Machine"
+    "src": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.jpg",
+    "caption": "Carton Packing Machine"
   }
 ];
 
 /* ════════════════════════════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════════════════════════════ */
-export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
+export default function FullyAutomaticUHTMilkPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
   const [activeFaq, setActiveFaq] = useState(null)
@@ -166,17 +162,17 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/uht_milk_hero.png')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
             TURNKEY PROCESSING SOLUTION
           </span>
           <h1 className="rcp-hero__title">
-            Fully Automatic Pasteurized Milk Plant
+            Fully Automatic UHT Milk Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Complete pasteurization line designed for efficient milk processing with HTST pasteurizers, high-efficiency separators, and flexible pouch/bottle filling.
+            Complete processing line for UHT milk production with advanced aseptic sterilization (135°C), homogenization, and carton packing.
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -196,8 +192,9 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Pasteurized Milk Plant</strong> is the cornerstone of fresh dairy processing, ensuring safety while maintaining the natural taste of milk.</p>
-              <p>Featuring state-of-the-art HTST (High Temperature Short Time) pasteurizers and precise standardization systems, we deliver maximum efficiency for dairy operations.</p>
+              <p><strong>Salvin Industries' UHT Milk Plant</strong> makes special milk that stays fresh for 6 months without any fridge. This means you can easily sell your milk in faraway villages and cities without worrying about it going bad.</p>
+              <p>The machine heats the milk very fast to 135 degrees and then cools it down immediately. This kills all germs instantly but keeps the fresh taste of the milk. It does not taste burnt.</p>
+              <p>After heating, the milk is packed in special boxes so no outside air can enter. The whole machine cleans itself automatically, making it very safe, clean, and extremely easy for anyone to run.</p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -255,7 +252,44 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasteurized_milk_overview.jpg" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.jpg" alt="Fully Automatic UHT Milk Plant Overview" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SEO GUIDE ═══ */}
+      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">Comprehensive Guide</div>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">UHT Milk Processing</span></h2>
+          <p className="rcp-section-subtitle">How to make milk that stays fresh for 6 months without a fridge.</p>
+          <div className="rcp-seo-content__body">
+            <div className="rcp-seo-content__block">
+              <h3>Why Start This Business?</h3>
+              <ul>
+                <li><strong>No Fridge Needed:</strong> UHT milk does not go bad outside. You don't need a cold room.</li>
+                <li><strong>Long Life:</strong> It stays fresh for 6 to 9 months.</li>
+                <li><strong>Sell Anywhere:</strong> Because it doesn't spoil quickly, you can sell it in faraway villages and cities.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>How Do We Make It?</h3>
+              <ul>
+                <li><strong>Step 1: Super Fast Heating.</strong> We heat the milk very fast to 135 degrees. This kills all germs.</li>
+                <li><strong>Step 2: Super Fast Cooling.</strong> We cool it down immediately so the taste stays good.</li>
+                <li><strong>Step 3: Safe Packing.</strong> We pack it in special closed boxes so outside air cannot go in.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>Why Choose Salvin Machine?</h3>
+              <ul>
+                <li><strong>Good Taste:</strong> Our machine does not burn the milk. The taste remains fresh and natural.</li>
+                <li><strong>100% Safe:</strong> The pipes are completely sterile. No bacteria can enter.</li>
+                <li><strong>Automatic Cleaning:</strong> The machine cleans itself automatically (CIP system).</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -354,7 +388,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
         <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">FAQs</div>
           <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
-          <p className="rcp-section-subtitle">Everything you need to know about our Fully Automatic Pasteurized Milk Plant.</p>
+          <p className="rcp-section-subtitle">Everything you need to know about our Fully Automatic UHT Milk Plant.</p>
 
           <div className="rcp-faq__list">
             {FAQS.map((faq, index) => {
@@ -423,20 +457,20 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       </section>
 
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="FullyAutomaticPasteurizedMilkPlantDetailPage" />
+      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="FullyAutomaticUHTMilkPlantDetailPage" />
 
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['enquiry'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-cta__box">
-            <h2>Ready to Build Your Pasteurized Milk Plant?</h2>
+            <h2>Ready to Build Your UHT Milk Processing Plant?</h2>
             <p>
               Get a customised project proposal with capacity recommendations, plant layout, equipment list,
               timeline, and investment estimate — all tailored to your specific requirements.
             </p>
             <div className="rcp-cta__actions">
               <a
-                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully Automatic Pasteurized Milk Plant.%20Please%20share%20details.`}
+                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully Automatic UHT Milk Plant.%20Please%20share%20details.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rcp-btn rcp-btn--primary rcp-btn--lg"

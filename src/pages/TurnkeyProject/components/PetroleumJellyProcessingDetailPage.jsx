@@ -7,27 +7,27 @@ import WhyChooseSalvin from './WhyChooseSalvin'
 const PROCESS_STEPS = [
   {
     id: 1,
-    "title": "Raw Milk Reception"
+    "title": "Raw Material Melting"
   },
   {
     id: 2,
-    "title": "Clarification"
+    "title": "Wax and Oil Heating"
   },
   {
     id: 3,
-    "title": "Standardization"
-  },
-  {
-    id: 4,
     "title": "Homogenization"
   },
   {
+    id: 4,
+    "title": "Micro Filtration"
+  },
+  {
     id: 5,
-    "title": "HTST Pasteurization"
+    "title": "Vacuum Deaeration"
   },
   {
     id: 6,
-    "title": "Storage Silo"
+    "title": "Cooling Tunnel"
   },
   {
     id: 7,
@@ -38,93 +38,89 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    "name": "Milk Reception & Chilling",
-    "desc": "Rapid cooling of raw milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg"
+    "name": "Raw Material Melting Tank",
+    "desc": "High-efficiency jacketed melting tank.",
+    "image": "/turnkey-brochures/images/petrojelly-gallery/melting_tank.jpg"
   },
   {
-    "name": "Centrifugal Clarifier",
-    "desc": "Removes impurities effectively.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg"
+    "name": "Vacuum Mixing Kettle",
+    "desc": "Advanced vacuum kettle for precise blending.",
+    "image": "/turnkey-brochures/images/petrojelly-gallery/vacuum_mixing.jpg"
   },
   {
-    "name": "Homogenizer",
-    "desc": "Uniform fat distribution.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg"
+    "name": "Filtration System",
+    "desc": "Precision filtration for maximum purity.",
+    "image": "/turnkey-brochures/images/petrojelly-gallery/filtration_system.jpg"
   },
   {
-    "name": "HTST Pasteurizer",
-    "desc": "Highly efficient heat transfer.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg"
+    "name": "Cooling & Holding Tank",
+    "desc": "Temperature-controlled holding and cooling.",
+    "image": "/turnkey-brochures/images/petrojelly-gallery/cooling_holding.jpg"
   },
   {
-    "name": "Storage Silo",
-    "desc": "Insulated storage for processed milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg"
+    "name": "Automatic Jar Filling",
+    "desc": "High-speed volumetric filling and sealing.",
+    "image": "/turnkey-brochures/images/petrojelly-gallery/jar_filling.jpg"
   },
   {
-    "name": "Pouch Packing Machine",
-    "desc": "High speed milk pouch filling.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg"
+    "name": "Robotic Packaging",
+    "desc": "Automated robotic arm for case packing.",
+    "image": "/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.jpg"
   }
 ];
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the processing capacity?",
-    "answer": "We offer plants tailored to handle any volume of milk intake efficiently."
+    "question": "What grades of petroleum jelly can this plant produce?",
+    "answer": "Our plants are designed to produce all grades, including cosmetic, pharmaceutical (medical), and industrial-grade petroleum jelly, by precisely controlling the homogenization and cooling processes."
   },
   {
-    "question": "Does the plant maintain natural taste?",
-    "answer": "Yes, precision HTST heating ensures safety without altering the fresh taste."
+    "question": "Does the plant maintain uniform blending without lump formation?",
+    "answer": "Yes, our high-shear vacuum homogenizers ensure perfectly smooth, lump-free, and air-bubble-free jelly, which is critical for cosmetic and medical applications."
   },
   {
-    "question": "Do you provide pouch packing machines?",
-    "answer": "Yes, we integrate reliable, high-speed VFFS machines for liquid packaging."
+    "question": "Is the filling process fully automated?",
+    "answer": "Absolutely. The plant integrates seamlessly with automatic tube and jar filling machines that maintain the jelly at the exact flowable temperature before it solidifies in the container."
   },
   {
-    "question": "What types of packaging does it support?",
-    "answer": "Primarily LDPE pouches, but bottle filling is also fully supported."
-  },
-  {
-    "question": "Does SALVIN provide complete installation?",
-    "answer": "Absolutely. We are an end-to-end turnkey solution provider."
+    "question": "Can this plant also produce hair wax or similar cosmetics?",
+    "answer": "Yes, with minor formulation adjustments, the same high-shear heating and blending system can be used to manufacture hair waxes, pomades, and thick ointments."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg",
-    "caption": "Milk Reception & Chilling"
+    "src": "/turnkey-brochures/images/petrojelly-gallery/melting_tank.jpg",
+    "caption": "Raw Material Melting Tank"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg",
-    "caption": "Centrifugal Clarifier"
+    "src": "/turnkey-brochures/images/petrojelly-gallery/vacuum_mixing.jpg",
+    "caption": "Vacuum Mixing Kettle"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg",
-    "caption": "Homogenizer"
+    "src": "/turnkey-brochures/images/petrojelly-gallery/filtration_system.jpg",
+    "caption": "Filtration System"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg",
-    "caption": "HTST Pasteurizer"
+    "src": "/turnkey-brochures/images/petrojelly-gallery/cooling_holding.jpg",
+    "caption": "Cooling & Holding Tank"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg",
-    "caption": "Storage Silo"
+    "src": "/turnkey-brochures/images/petrojelly-gallery/jar_filling.jpg",
+    "caption": "Automatic Jar Filling"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg",
-    "caption": "Pouch Packing Machine"
+    "src": "/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.jpg",
+    "caption": "Robotic Packaging"
   }
 ];
 
 /* ════════════════════════════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════════════════════════════ */
-export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
+export default function PetroleumJellyProcessingDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
   const [activeFaq, setActiveFaq] = useState(null)
@@ -166,17 +162,17 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/petroleum_jelly_hero.png')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
             TURNKEY PROCESSING SOLUTION
           </span>
           <h1 className="rcp-hero__title">
-            Fully Automatic Pasteurized Milk Plant
+            Petroleum Jelly Processing Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Complete pasteurization line designed for efficient milk processing with HTST pasteurizers, high-efficiency separators, and flexible pouch/bottle filling.
+            Complete processing line for high-quality petroleum jelly production with melting, homogenization, filtration, and precision filling.
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -196,8 +192,9 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Pasteurized Milk Plant</strong> is the cornerstone of fresh dairy processing, ensuring safety while maintaining the natural taste of milk.</p>
-              <p>Featuring state-of-the-art HTST (High Temperature Short Time) pasteurizers and precise standardization systems, we deliver maximum efficiency for dairy operations.</p>
+              <p><strong>Salvin Industries' Petroleum Jelly Plant</strong> helps you easily make high-quality jelly for face creams, medicines, and hair wax. The raw materials are cheap, and the final product sells at a very good price, giving you high profits.</p>
+              <p>The machine first melts the wax and oil. Then it mixes them in a special vacuum tank. The vacuum removes all air bubbles. The mixing is so powerful that it leaves zero lumps in the jelly.</p>
+              <p>The final jelly is 100% smooth, clear, and looks very premium. The machine automatically fills the hot jelly into jars and cools it down. It is fully automatic, heavy-duty, and very easy to run.</p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -255,7 +252,44 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasteurized_milk_overview.jpg" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.jpg" alt="Petroleum Jelly Processing Plant Overview" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SEO GUIDE ═══ */}
+      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">Comprehensive Guide</div>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Petroleum Jelly Production</span></h2>
+          <p className="rcp-section-subtitle">Very simple and easy way to make Petroleum Jelly.</p>
+          <div className="rcp-seo-content__body">
+            <div className="rcp-seo-content__block">
+              <h3>Why Start This Business?</h3>
+              <ul>
+                <li><strong>High Demand:</strong> Used daily in face creams, hair wax, and medicines.</li>
+                <li><strong>Good Profit:</strong> Raw materials are cheap, and the final product sells at a good price.</li>
+                <li><strong>Easy to Run:</strong> Our machine is fully automatic. You just put the raw material, and the machine does the rest.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>How Do We Make It?</h3>
+              <ul>
+                <li><strong>Step 1: Melting.</strong> We heat and melt the wax and oil in a big tank.</li>
+                <li><strong>Step 2: Mixing.</strong> We mix it in a special vacuum tank. The vacuum removes all air.</li>
+                <li><strong>Step 3: Cooling & Packing.</strong> It becomes very smooth. Then the machine cools it and fills it directly into jars.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>Why Choose Salvin Machine?</h3>
+              <ul>
+                <li><strong>No Lumps:</strong> Our machine mixes so well that the jelly is 100% smooth.</li>
+                <li><strong>No Air Bubbles:</strong> The vacuum system gives a premium, clear look.</li>
+                <li><strong>Long Life:</strong> Heavy-duty machine that runs for years without problems.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -354,7 +388,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
         <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">FAQs</div>
           <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
-          <p className="rcp-section-subtitle">Everything you need to know about our Fully Automatic Pasteurized Milk Plant.</p>
+          <p className="rcp-section-subtitle">Everything you need to know about our Petroleum Jelly Processing Plant.</p>
 
           <div className="rcp-faq__list">
             {FAQS.map((faq, index) => {
@@ -393,6 +427,8 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       </section>
 
       {/* ═══ INDUSTRIAL GALLERY ═══ */}
+
+
       <section className="rcp-section rcp-gallery" id="gallery" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['gallery'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">Industrial Gallery</div>
@@ -423,20 +459,20 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       </section>
 
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="FullyAutomaticPasteurizedMilkPlantDetailPage" />
+      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="PetroleumJellyProcessingDetailPage" />
 
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['enquiry'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-cta__box">
-            <h2>Ready to Build Your Pasteurized Milk Plant?</h2>
+            <h2>Ready to Build Your Petroleum Jelly Plant?</h2>
             <p>
               Get a customised project proposal with capacity recommendations, plant layout, equipment list,
               timeline, and investment estimate — all tailored to your specific requirements.
             </p>
             <div className="rcp-cta__actions">
               <a
-                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully Automatic Pasteurized Milk Plant.%20Please%20share%20details.`}
+                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Petroleum Jelly Processing Plant.%20Please%20share%20details.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rcp-btn rcp-btn--primary rcp-btn--lg"

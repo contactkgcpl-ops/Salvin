@@ -7,27 +7,27 @@ import WhyChooseSalvin from './WhyChooseSalvin'
 const PROCESS_STEPS = [
   {
     id: 1,
-    "title": "Raw Milk Reception"
+    "title": "Curd Blending"
   },
   {
     id: 2,
-    "title": "Clarification"
+    "title": "Sugar Syrup Dosing"
   },
   {
     id: 3,
-    "title": "Standardization"
-  },
-  {
-    id: 4,
     "title": "Homogenization"
   },
   {
+    id: 4,
+    "title": "Flavour Mixing"
+  },
+  {
     id: 5,
-    "title": "HTST Pasteurization"
+    "title": "Pasteurization"
   },
   {
     id: 6,
-    "title": "Storage Silo"
+    "title": "Cooling & Filtration"
   },
   {
     id: 7,
@@ -38,93 +38,89 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    "name": "Milk Reception & Chilling",
-    "desc": "Rapid cooling of raw milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg"
+    "name": "Raw Milk Reception & Clarifier",
+    "desc": "Initial processing and purification of raw milk.",
+    "image": "/turnkey-brochures/images/lassi-gallery/1_reception.jpg"
   },
   {
-    "name": "Centrifugal Clarifier",
-    "desc": "Removes impurities effectively.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg"
+    "name": "Standardization & Pasteurization",
+    "desc": "Ensures pathogen-free milk and uniform texture.",
+    "image": "/turnkey-brochures/images/lassi-gallery/2_pasteurization.jpg"
   },
   {
-    "name": "Homogenizer",
-    "desc": "Uniform fat distribution.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg"
+    "name": "Sugar Syrup & Blending",
+    "desc": "Hygienic sugar dissolving and precise mixing.",
+    "image": "/turnkey-brochures/images/lassi-gallery/3_blending.jpg"
   },
   {
-    "name": "HTST Pasteurizer",
-    "desc": "Highly efficient heat transfer.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg"
+    "name": "Cooling System & Storage",
+    "desc": "Temperature adjustment and flavored lassi storage.",
+    "image": "/turnkey-brochures/images/lassi-gallery/4_cooling.jpg"
   },
   {
-    "name": "Storage Silo",
-    "desc": "Insulated storage for processed milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg"
+    "name": "Automatic Filling & Sealing",
+    "desc": "High-speed bottle and pouch packaging.",
+    "image": "/turnkey-brochures/images/lassi-gallery/5_filling.jpg"
   },
   {
-    "name": "Pouch Packing Machine",
-    "desc": "High speed milk pouch filling.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg"
+    "name": "Carton Packing & Palletizing",
+    "desc": "Automated end-of-line packaging by robot palletizer.",
+    "image": "/turnkey-brochures/images/lassi-gallery/6_packing.jpg"
   }
 ];
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the processing capacity?",
-    "answer": "We offer plants tailored to handle any volume of milk intake efficiently."
+    "question": "Can the plant produce flavored Lassi like Mango or Rose?",
+    "answer": "Absolutely. The plant features specialized blending tanks and inline dosing systems that perfectly mix fruit pulps, syrups, and flavors into the yogurt base."
   },
   {
-    "question": "Does the plant maintain natural taste?",
-    "answer": "Yes, precision HTST heating ensures safety without altering the fresh taste."
+    "question": "How do you ensure the Lassi doesn't separate in the bottle?",
+    "answer": "We utilize heavy-duty, high-shear homogenizers that completely emulsify the yogurt, water, and sugar, resulting in a perfectly stable and silky-smooth beverage that won't separate."
   },
   {
-    "question": "Do you provide pouch packing machines?",
-    "answer": "Yes, we integrate reliable, high-speed VFFS machines for liquid packaging."
+    "question": "What kind of packaging is typically used?",
+    "answer": "Our filling lines can be customized to handle PET bottles, glass bottles, or flexible pouches, complete with automatic capping and labeling."
   },
   {
-    "question": "What types of packaging does it support?",
-    "answer": "Primarily LDPE pouches, but bottle filling is also fully supported."
-  },
-  {
-    "question": "Does SALVIN provide complete installation?",
-    "answer": "Absolutely. We are an end-to-end turnkey solution provider."
+    "question": "Is the system easy to clean after running flavored batches?",
+    "answer": "Yes, the integrated automated CIP (Clean-In-Place) system thoroughly cleans the tanks and pipelines, preventing any flavor cross-contamination between different batches."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.jpg",
-    "caption": "Milk Reception & Chilling"
+    "src": "/turnkey-brochures/images/lassi-gallery/1_reception.jpg",
+    "caption": "Raw Milk Reception & Clarifier"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.jpg",
-    "caption": "Centrifugal Clarifier"
+    "src": "/turnkey-brochures/images/lassi-gallery/2_pasteurization.jpg",
+    "caption": "Standardization & Pasteurization"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.jpg",
-    "caption": "Homogenizer"
+    "src": "/turnkey-brochures/images/lassi-gallery/3_blending.jpg",
+    "caption": "Sugar Syrup Mixing & Blending"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.jpg",
-    "caption": "HTST Pasteurizer"
+    "src": "/turnkey-brochures/images/lassi-gallery/4_cooling.jpg",
+    "caption": "Cooling System & Storage Tanks"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.jpg",
-    "caption": "Storage Silo"
+    "src": "/turnkey-brochures/images/lassi-gallery/5_filling.jpg",
+    "caption": "Automatic Filling & Sealing"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.jpg",
-    "caption": "Pouch Packing Machine"
+    "src": "/turnkey-brochures/images/lassi-gallery/6_packing.jpg",
+    "caption": "Carton Packing & Palletizing"
   }
 ];
 
 /* ════════════════════════════════════════════════════════════════════
    MAIN COMPONENT
    ════════════════════════════════════════════════════════════════════ */
-export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
+export default function LassiProcessingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
   const [activeFaq, setActiveFaq] = useState(null)
@@ -166,17 +162,17 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/lassi_hero.png')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
             TURNKEY PROCESSING SOLUTION
           </span>
           <h1 className="rcp-hero__title">
-            Fully Automatic Pasteurized Milk Plant
+            Fully Automated Lassi Processing Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Complete pasteurization line designed for efficient milk processing with HTST pasteurizers, high-efficiency separators, and flexible pouch/bottle filling.
+            Advanced turnkey plant for Lassi production featuring precise blending, fermentation, flavour dosing, and automated shrink packing.
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -196,8 +192,9 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Pasteurized Milk Plant</strong> is the cornerstone of fresh dairy processing, ensuring safety while maintaining the natural taste of milk.</p>
-              <p>Featuring state-of-the-art HTST (High Temperature Short Time) pasteurizers and precise standardization systems, we deliver maximum efficiency for dairy operations.</p>
+              <p><strong>Salvin Industries' Lassi & Buttermilk Plant</strong> is perfect for making tasty, healthy cold drinks. Packed Lassi and Chaas are in very high demand, and our machine helps you make them in large amounts very easily.</p>
+              <p>We start with fresh yogurt (Dahi) and put it in a big mixing tank. We add sugar, fruit (like Mango), or spices. Then, our heavy-duty mixing machine blends it so well that it becomes perfectly smooth.</p>
+              <p>Our machine guarantees that the water and yogurt will never separate in the bottle. Your Lassi will stay thick and tasty for many days. The automatic bottle filling makes your work very fast and easy.</p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -255,7 +252,44 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasteurized_milk_overview.jpg" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/lassi-gallery/6_packing.jpg" alt="Fully Automated Lassi Processing Plant Overview" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ SEO GUIDE ═══ */}
+      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">Comprehensive Guide</div>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Lassi & Buttermilk Production</span></h2>
+          <p className="rcp-section-subtitle">How to make tasty, packed Lassi and Chaas.</p>
+          <div className="rcp-seo-content__body">
+            <div className="rcp-seo-content__block">
+              <h3>Why Start This Business?</h3>
+              <ul>
+                <li><strong>Very Famous Drinks:</strong> Lassi and Chaas are the most loved cold drinks, especially in summer.</li>
+                <li><strong>Healthy Choice:</strong> People are leaving cold drinks and choosing healthy options like Lassi.</li>
+                <li><strong>Good Money:</strong> Packed bottles sell at a very good price, giving you high profits.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>How Do We Make It?</h3>
+              <ul>
+                <li><strong>Step 1: Mixing.</strong> We take fresh Dahi (Yogurt). For Lassi, we add sugar and fruit (like Mango). For Chaas, we add water and spices.</li>
+                <li><strong>Step 2: Smooth Blending.</strong> A heavy-duty machine (homogenizer) mixes it so well that it becomes perfectly smooth.</li>
+                <li><strong>Step 3: Bottle Packing.</strong> The automatic machine fills the tasty drink into bottles and puts a cap on it.</li>
+              </ul>
+            </div>
+            
+            <div className="rcp-seo-content__block">
+              <h3>Why Choose Salvin Machine?</h3>
+              <ul>
+                <li><strong>No Separation:</strong> If water and Dahi separate in the bottle, it looks bad. Our machine mixes it so well that it never separates.</li>
+                <li><strong>Long Shelf Life:</strong> The drink stays fresh and tasty for many days.</li>
+                <li><strong>Easy to Clean:</strong> Fully automatic cleaning system saves your time and labor.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -354,7 +388,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
         <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">FAQs</div>
           <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
-          <p className="rcp-section-subtitle">Everything you need to know about our Fully Automatic Pasteurized Milk Plant.</p>
+          <p className="rcp-section-subtitle">Everything you need to know about our Fully Automated Lassi Processing Plant.</p>
 
           <div className="rcp-faq__list">
             {FAQS.map((faq, index) => {
@@ -423,20 +457,20 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       </section>
 
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="FullyAutomaticPasteurizedMilkPlantDetailPage" />
+      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="LassiProcessingPlantDetailPage" />
 
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['enquiry'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-cta__box">
-            <h2>Ready to Build Your Pasteurized Milk Plant?</h2>
+            <h2>Ready to Build Your Lassi Processing Plant?</h2>
             <p>
               Get a customised project proposal with capacity recommendations, plant layout, equipment list,
               timeline, and investment estimate — all tailored to your specific requirements.
             </p>
             <div className="rcp-cta__actions">
               <a
-                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully Automatic Pasteurized Milk Plant.%20Please%20share%20details.`}
+                href={`https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully Automated Lassi Processing Plant.%20Please%20share%20details.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rcp-btn rcp-btn--primary rcp-btn--lg"

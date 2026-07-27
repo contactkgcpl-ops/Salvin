@@ -123,6 +123,12 @@ import FullyAutomaticSpicePackagingLineDetailPage from './pages/TurnkeyProject/c
 import SpiceBlendingPlantDetailPage from './pages/TurnkeyProject/components/SpiceBlendingPlantDetailPage';
 import FullyAutomatedCurryPowderProcessingPlantDetailPage from './pages/TurnkeyProject/components/FullyAutomatedCurryPowderProcessingPlantDetailPage';
 import FullyAutomatedFrozenVegetableProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedFrozenVegetableProcessingPlantDetailPage";
+import PetroleumJellyProcessingDetailPage from "./pages/TurnkeyProject/components/PetroleumJellyProcessingDetailPage";
+import FullyAutomaticYogurtPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticYogurtPlantDetailPage";
+import FullyAutomaticUHTMilkPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticUHTMilkPlantDetailPage";
+import CurdPlantDetailPage from "./pages/TurnkeyProject/components/CurdPlantDetailPage";
+import LassiProcessingPlantDetailPage from "./pages/TurnkeyProject/components/LassiProcessingPlantDetailPage";
+
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import ServicesPage from "./pages/ServicesPage";
@@ -2708,6 +2714,11 @@ export default function App() {
         <Route path="/turnkey-project/spice-blending-plant" element={<SpiceBlendingPlantDetailPage />} />
         <Route path="/turnkey-project/fully-automated-curry-powder-processing-plant" element={<FullyAutomatedCurryPowderProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-frozen-vegetable-processing-plant" element={<FullyAutomatedFrozenVegetableProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/petroleum-jelly-processing" element={<PetroleumJellyProcessingDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-yogurt" element={<FullyAutomaticYogurtPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-uht-milk" element={<FullyAutomaticUHTMilkPlantDetailPage />} />
+          <Route path="/turnkey-project/curd" element={<CurdPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-lassi-processing" element={<LassiProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

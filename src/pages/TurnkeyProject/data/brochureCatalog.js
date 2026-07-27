@@ -73,7 +73,12 @@ const RAW = [
   ['pasteurized_milk_plant.jpg', null, 'Fully Automatic Pasteurized Milk Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-pasteurized-milk-plant'],
   ['spice_packaging_line.jpg', null, 'Fully Automatic Spice Packaging Line', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-spice-packaging-line'],
   ['spice_blending_plant.jpg', null, 'Spice Blending Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/spice-blending-plant'],
-  ['curry_powder_plant.jpg', null, 'Fully Automated Curry Powder Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-curry-powder-processing-plant']
+  ['curry_powder_plant.jpg', null, 'Fully Automated Curry Powder Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-curry-powder-processing-plant'],
+  ['petroleum_jelly_overview.png', null, 'Petroleum Jelly Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/petroleum-jelly-processing'],
+  ['yogurt_plant_overview.jpg', null, 'Fully Automatic Yogurt Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-yogurt'],
+  ['uht_milk_overview.jpg', null, 'Fully Automatic UHT Milk Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-uht-milk'],
+  ['curd_plant_overview.jpg', null, 'Curd Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/curd'],
+  ['lassi_plant_overview.jpg', null, 'Fully Automated Lassi Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-lassi-processing']
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {
