@@ -22,6 +22,29 @@
   <meta property="og:image:height" content="426" />
   <meta property="og:url" content="https://salvinindia.com/" />
 
+  <!-- Dynamic Canonical & OG URL for SPA SEO -->
+  <script>
+    (function() {
+      var path = window.location.pathname;
+      if (path.length > 1 && path.endsWith('/')) {
+        path = path.slice(0, -1);
+      }
+      var cleanUrl = 'https://salvinindia.com' + path;
+
+      // Create Canonical Link
+      var link = document.createElement('link');
+      link.setAttribute('rel', 'canonical');
+      link.setAttribute('href', cleanUrl);
+      document.head.appendChild(link);
+
+      // Dynamically sync OG URL meta tag
+      var ogUrl = document.querySelector('meta[property="og:url"]');
+      if (ogUrl) {
+        ogUrl.setAttribute('content', cleanUrl);
+      }
+    })();
+  </script>
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:title" content="Turnkey Solution & Consultant For Food Industries | Salvin Industries" />
@@ -68,7 +91,19 @@
       "https://salvinindustries.blogspot.com/"
     ],
     "description": "Salvin Industries is a leading manufacturer of turnkey food processing plants, packaging machinery, and industrial automation solutions in India and worldwide."
-  }
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N2113LNC6Y"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    // Configure GA4 (default send_page_view false as React Router will handle route events)
+    gtag('config', 'G-N2113LNC6Y', {
+      send_page_view: false
+    });
   </script>
 </head>
 

@@ -2405,7 +2405,10 @@ export default function App() {
       if (twitterDesc) twitterDesc.setAttribute("content", description);
     };
 
-    const path = location.pathname;
+    let path = location.pathname;
+    if (path.length > 1 && path.endsWith('/')) {
+      path = path.slice(0, -1);
+    }
 
     if (path === "/") {
       updateMetaTags(
@@ -2468,6 +2471,17 @@ export default function App() {
       if (ogUrl) ogUrl.setAttribute("content", `https://salvinindia.com${path}`);
     }
   }, [location.pathname, isAdminRoute]);
+
+  // Trigger GA4 Page Views on Route Change
+  React.useEffect(() => {
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "page_view", {
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: location.pathname
+      });
+    }
+  }, [location.pathname]);
 
   React.useEffect(() => {
     const isCatalogPage =
