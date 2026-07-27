@@ -48,3 +48,6 @@ jobs:
           # Do not target public_html/ here, or it creates /public_html/public_html.
           server-dir: ./
           timeout: 900000
+          exclude: |
+            **/services/**
+            services
