@@ -118,7 +118,7 @@ import FullyAutomaticDehydratedGarlicPlantDetailPage from "./pages/TurnkeyProjec
 import FullyAutomaticVegetableDryingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticVegetableDryingPlantDetailPage";
 import FullyAutomatedGaramMasalaProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedGaramMasalaProcessingPlantDetailPage";
 import FullyAutomaticMixedSpicePlantDetailPage from './pages/TurnkeyProject/components/FullyAutomaticMixedSpicePlantDetailPage';
-import FullyAutomaticPasteurizedMilkPlantDetailPage from './pages/TurnkeyProject/components/FullyAutomaticPasteurizedMilkPlantDetailPage';
+
 import FullyAutomaticSpicePackagingLineDetailPage from './pages/TurnkeyProject/components/FullyAutomaticSpicePackagingLineDetailPage';
 import SpiceBlendingPlantDetailPage from './pages/TurnkeyProject/components/SpiceBlendingPlantDetailPage';
 import FullyAutomatedCurryPowderProcessingPlantDetailPage from './pages/TurnkeyProject/components/FullyAutomatedCurryPowderProcessingPlantDetailPage';
@@ -127,7 +127,14 @@ import PetroleumJellyProcessingDetailPage from "./pages/TurnkeyProject/component
 import FullyAutomaticYogurtPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticYogurtPlantDetailPage";
 import FullyAutomaticUHTMilkPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticUHTMilkPlantDetailPage";
 import CurdPlantDetailPage from "./pages/TurnkeyProject/components/CurdPlantDetailPage";
-import LassiProcessingPlantDetailPage from "./pages/TurnkeyProject/components/LassiProcessingPlantDetailPage";
+
+import FullyAutomaticPasteurizedMilkPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticPasteurizedMilkPlantDetailPage";
+import ButtermilkProcessingPlantDetailPage from "./pages/TurnkeyProject/components/ButtermilkProcessingPlantDetailPage";
+import PaneerProcessingPlantDetailPage from "./pages/TurnkeyProject/components/PaneerProcessingPlantDetailPage";
+import CheesePlantDetailPage from "./pages/TurnkeyProject/components/CheesePlantDetailPage";
+import GheePlantDetailPage from "./pages/TurnkeyProject/components/GheePlantDetailPage";
+import ButterProcessingPlantDetailPage from "./pages/TurnkeyProject/components/ButterProcessingPlantDetailPage";
+import IceCreamProcessingPlantDetailPage from "./pages/TurnkeyProject/components/IceCreamProcessingPlantDetailPage";
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
@@ -2709,7 +2716,7 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-vegetable-drying-plant" element={<FullyAutomaticVegetableDryingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-garam-masala-processing-plant" element={<FullyAutomatedGaramMasalaProcessingPlantDetailPage />} />
         <Route path="/turnkey-project/fully-automatic-mixed-spice-plant" element={<FullyAutomaticMixedSpicePlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automatic-pasteurized-milk-plant" element={<FullyAutomaticPasteurizedMilkPlantDetailPage />} />
+
         <Route path="/turnkey-project/fully-automatic-spice-packaging-line" element={<FullyAutomaticSpicePackagingLineDetailPage />} />
         <Route path="/turnkey-project/spice-blending-plant" element={<SpiceBlendingPlantDetailPage />} />
         <Route path="/turnkey-project/fully-automated-curry-powder-processing-plant" element={<FullyAutomatedCurryPowderProcessingPlantDetailPage />} />
@@ -2718,7 +2725,14 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-yogurt" element={<FullyAutomaticYogurtPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-uht-milk" element={<FullyAutomaticUHTMilkPlantDetailPage />} />
           <Route path="/turnkey-project/curd" element={<CurdPlantDetailPage />} />
-          <Route path="/turnkey-project/fully-automated-lassi-processing" element={<LassiProcessingPlantDetailPage />} />
+
+          <Route path="/turnkey-project/fully-automatic-pasteurized-milk-plant" element={<FullyAutomaticPasteurizedMilkPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-buttermilk-processing-plant" element={<ButtermilkProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-paneer-processing-plant" element={<PaneerProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-cheese-plant" element={<CheesePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-ghee-plant" element={<GheePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-butter-processing-plant" element={<ButterProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-ice-cream-processing-plant" element={<IceCreamProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

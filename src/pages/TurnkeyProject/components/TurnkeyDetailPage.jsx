@@ -695,6 +695,29 @@ export default function TurnkeyDetailPage() {
         </section>
       )}
 
+      {/* ═══ COMPREHENSIVE GUIDE / SEO ═══ */}
+      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">{details.title} Processing</span></h2>
+          <p className="rcp-section-subtitle">Understanding the processing workflow, efficiency, and market impact.</p>
+          <div className="rcp-seo-content__body">
+            <div className="rcp-seo-content__block">
+              <h3>Why Start a {details.title} Business?</h3>
+              <p>The demand for branded, high-quality, and hygienically processed {details.title.toLowerCase()} products is growing rapidly across India and global markets. By investing in a fully automated {details.title} plant, you can build a highly profitable, scalable, and recurring FMCG or B2B manufacturing business with consistent product quality.</p>
+            </div>
+            <div className="rcp-seo-content__block">
+              <h3>How Does the {details.title} Processing Work?</h3>
+              <p>The process begins with careful raw material receiving and quality inspection. Materials are then cleaned, sorted, and fed into the processing line where they undergo the core treatment stages specific to {details.title.toLowerCase()} production. The finished product is then carefully packed and sealed to preserve quality, freshness, and shelf life.</p>
+            </div>
+            <div className="rcp-seo-content__block">
+              <h3>The Salvin Industries Advantage</h3>
+              <p>Salvin Industries designs every {details.title} plant with advanced automation, precision engineering, and food-grade stainless steel construction. Our PLC-controlled systems ensure every batch meets strict quality and hygiene standards. From site planning to commissioning and operator training, we provide complete end-to-end turnkey support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ═══ MACHINERY USED ═══ */}
       {details.machinery && details.machinery.length > 0 && (
         <section className="rcp-section rcp-machinery" id="machinery" data-animate>

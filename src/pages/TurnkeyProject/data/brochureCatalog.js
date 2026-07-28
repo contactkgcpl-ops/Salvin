@@ -78,7 +78,14 @@ const RAW = [
   ['yogurt_plant_overview.jpg', null, 'Fully Automatic Yogurt Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-yogurt'],
   ['uht_milk_overview.jpg', null, 'Fully Automatic UHT Milk Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-uht-milk'],
   ['curd_plant_overview.jpg', null, 'Curd Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/curd'],
-  ['lassi_plant_overview.jpg', null, 'Fully Automated Lassi Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-lassi-processing']
+
+  ['buttermilk_plant_overview.jpg', null, 'Fully Automated Buttermilk Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-buttermilk-processing-plant'],
+  ['paneer_plant_overview.jpg', null, 'Fully Automated Paneer Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-paneer-processing-plant'],
+  ['cheese_plant_overview.jpg', null, 'Fully Automatic Cheese Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-cheese-plant'],
+  ['ghee_plant_overview.jpg', null, 'Fully Automatic Ghee Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-ghee-plant'],
+  ['butter_plant_overview.jpg', null, 'Fully Automated Butter Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-butter-processing-plant'],
+  ['ice_cream_plant_overview.jpg', null, 'Fully Automatic Ice Cream Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-ice-cream-processing-plant'],
+
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

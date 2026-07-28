@@ -710,28 +710,14 @@
 
 .rcp-process-flow-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-start; /* changed from space-between for scroll */
-  gap: 56px;
+  justify-content: center;
+  gap: 16px;
   margin-top: 48px;
   width: 100%;
-  overflow-x: auto; /* Added per user request */
-  overflow-y: hidden;
-  padding-bottom: 16px;
-  -webkit-overflow-scrolling: touch;
-}
-
-.rcp-process-flow-container::-webkit-scrollbar {
-  height: 6px;
-}
-.rcp-process-flow-container::-webkit-scrollbar-track {
-  background: var(--rcp-slate-100);
-  border-radius: 10px;
-}
-.rcp-process-flow-container::-webkit-scrollbar-thumb {
-  background: var(--rcp-slate-300);
-  border-radius: 10px;
+  overflow: visible;
+  padding-bottom: 0;
 }
 
 .rcp-process-card {
@@ -740,9 +726,9 @@
   border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 24px 12px 16px 12px;
-  width: 100%;
-  min-width: 110px; /* Force minimum width for scrolling */
-  max-width: 120px; /* Reduced width per user request */
+  width: 110px;
+  min-width: 100px;
+  max-width: 130px;
   aspect-ratio: 1 / 1;
   display: flex;
   flex-direction: column;
@@ -751,6 +737,7 @@
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
 }
 
 .rcp-process-card:hover {
@@ -828,22 +815,17 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .rcp-process-flow-container {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 24px 12px;
+    gap: 12px;
   }
 
   .rcp-process-arrow {
     display: none;
-    /* Hide arrows on wrapped rows or mobile */
   }
 }
 
 @media (max-width: 640px) {
   .rcp-process-flow-container {
-    flex-direction: column;
-    align-items: center;
-    gap: 32px;
+    gap: 12px;
   }
 
   .rcp-process-card {
