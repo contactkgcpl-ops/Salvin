@@ -298,30 +298,31 @@ export default function DryFruitChikkiDetailPage() {
       </section>
 
       
-      {/* ═══ SEO GUIDE ═══ */}
-      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title" dangerouslySetInnerHTML={{ __html: `A Simple Guide to <span class='rcp-accent'>Dry Fruit Chikki Packaging</span>` }} />
-          <p className="rcp-section-subtitle">Understanding the packaging process, accuracy, and market impact.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Start a Dry Fruit Chikki Business?</h3>
-              <p>Dry Fruit Chikki is the heart of Indian and South Asian cooking. The demand for branded, high-quality, and hygienically packed blended spices and food products is skyrocketing. By manufacturing a perfectly balanced and highly aromatic Dry Fruit Chikki, you can build a highly profitable and recurring FMCG business.</p>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>How Does the Dry Fruit Chikki Processing Work?</h3>
-              <p>The process starts by thoroughly cleaning whole raw materials to remove stones and dust. They are then gently processed or roasted to release their natural oils and flavors. After roasting, they are fed into a heavy-duty processing system that grinds or refines them into a perfect consistency. This product is perfectly mixed in a ribbon blender or homogenizer before being automatically packed into sealed pouches.</p>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>When processing gets too hot during grinding or refining, products lose their flavor and aroma. Our equipment is equipped with advanced cooling jackets and precise temperature controls. Furthermore, our precision ribbon blenders and homogenizers ensure that every single pouch of Dry Fruit Chikki has the exact same taste, texture, and quality.</p>
+      
+        {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
+        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
+            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Dry Fruit Chikki Processing</span></h2>
+            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Dry Fruit Chikki Business?</h3>
+                <p>The demand for high-quality, hygienically processed Dry Fruit Chikki is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Does the Dry Fruit Chikki Processing Work?</h3>
+                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>The Salvin Industries Advantage</h3>
+                <p>Salvin Industries provides end-to-end turnkey solutions for Dry Fruit Chikki processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

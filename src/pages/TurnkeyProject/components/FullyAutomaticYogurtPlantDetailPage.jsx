@@ -258,42 +258,31 @@ export default function FullyAutomaticYogurtPlantDetailPage() {
         </div>
       </section>
 
-      {/* ═══ SEO GUIDE ═══ */}
-      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Commercial Yogurt Production</span></h2>
-          <p className="rcp-section-subtitle">A very simple guide to making packed Yogurt.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Start This Business?</h3>
-              <ul>
-                <li><strong>Daily Use:</strong> People eat yogurt every day for good health and strong digestion.</li>
-                <li><strong>Many Options:</strong> You can make plain yogurt, sweet yogurt, or fruit yogurt.</li>
-                <li><strong>Big Market:</strong> Everyone wants clean, packed yogurt now. It is a very safe business.</li>
-              </ul>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>How Do We Make It?</h3>
-              <ul>
-                <li><strong>Step 1: Cleaning Milk.</strong> We boil and pasteurize the milk to kill all bad germs.</li>
-                <li><strong>Step 2: Adding Culture.</strong> We add good yogurt bacteria (culture) to the warm milk.</li>
-                <li><strong>Step 3: Setting.</strong> We pack it in cups and keep it in a warm room. The yogurt sets perfectly.</li>
-              </ul>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>Why Choose Salvin Machine?</h3>
-              <ul>
-                <li><strong>No Water on Top:</strong> Our machine controls temperature so well that water never separates from the yogurt.</li>
-                <li><strong>Thick & Creamy:</strong> Your yogurt will always look and taste premium.</li>
-                <li><strong>Fully Automatic:</strong> Very less labor required. The machine handles everything.</li>
-              </ul>
+      
+        {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
+        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
+            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Yogurt Processing</span></h2>
+            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Yogurt Business?</h3>
+                <p>The demand for high-quality, hygienically processed Yogurt is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Does the Yogurt Processing Work?</h3>
+                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>The Salvin Industries Advantage</h3>
+                <p>Salvin Industries provides end-to-end turnkey solutions for Yogurt processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ PROCESS FLOW ═══ */}
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>

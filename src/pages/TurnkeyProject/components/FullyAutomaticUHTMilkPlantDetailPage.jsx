@@ -258,42 +258,31 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
         </div>
       </section>
 
-      {/* ═══ SEO GUIDE ═══ */}
-      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">UHT Milk Processing</span></h2>
-          <p className="rcp-section-subtitle">How to make milk that stays fresh for 6 months without a fridge.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Start This Business?</h3>
-              <ul>
-                <li><strong>No Fridge Needed:</strong> UHT milk does not go bad outside. You don't need a cold room.</li>
-                <li><strong>Long Life:</strong> It stays fresh for 6 to 9 months.</li>
-                <li><strong>Sell Anywhere:</strong> Because it doesn't spoil quickly, you can sell it in faraway villages and cities.</li>
-              </ul>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>How Do We Make It?</h3>
-              <ul>
-                <li><strong>Step 1: Super Fast Heating.</strong> We heat the milk very fast to 135 degrees. This kills all germs.</li>
-                <li><strong>Step 2: Super Fast Cooling.</strong> We cool it down immediately so the taste stays good.</li>
-                <li><strong>Step 3: Safe Packing.</strong> We pack it in special closed boxes so outside air cannot go in.</li>
-              </ul>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>Why Choose Salvin Machine?</h3>
-              <ul>
-                <li><strong>Good Taste:</strong> Our machine does not burn the milk. The taste remains fresh and natural.</li>
-                <li><strong>100% Safe:</strong> The pipes are completely sterile. No bacteria can enter.</li>
-                <li><strong>Automatic Cleaning:</strong> The machine cleans itself automatically (CIP system).</li>
-              </ul>
+      
+        {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
+        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
+            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">U H T Milk Processing</span></h2>
+            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a U H T Milk Business?</h3>
+                <p>The demand for high-quality, hygienically processed U H T Milk is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Does the U H T Milk Processing Work?</h3>
+                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>The Salvin Industries Advantage</h3>
+                <p>Salvin Industries provides end-to-end turnkey solutions for U H T Milk processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ PROCESS FLOW ═══ */}
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>

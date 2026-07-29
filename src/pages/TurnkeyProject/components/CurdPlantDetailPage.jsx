@@ -258,42 +258,31 @@ export default function CurdPlantDetailPage() {
         </div>
       </section>
 
-      {/* ═══ SEO GUIDE ═══ */}
-      <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Curd (Dahi) Production</span></h2>
-          <p className="rcp-section-subtitle">A simple way to start a commercial Dahi business.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Start This Business?</h3>
-              <ul>
-                <li><strong>Used in Every Home:</strong> Dahi (Curd) is eaten daily in almost every house.</li>
-                <li><strong>Packed Dahi Demand:</strong> People now prefer clean, packed Dahi over loose open Dahi.</li>
-                <li><strong>High Sales:</strong> If your Dahi is thick and sweet, customers will buy it every single day.</li>
-              </ul>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>How Do We Make It?</h3>
-              <ul>
-                <li><strong>Step 1: Preparing Milk.</strong> First, we boil (pasteurize) the milk to make it safe.</li>
-                <li><strong>Step 2: Packing in Cups.</strong> We add Dahi culture and immediately fill the milk into plastic cups.</li>
-                <li><strong>Step 3: Warm & Cold Rooms.</strong> Cups go to a warm room to set the Dahi. Then they go to a cold room to stop the sour taste.</li>
-              </ul>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>Why Choose Salvin Machine?</h3>
-              <ul>
-                <li><strong>No Water Separation:</strong> The biggest problem in Dahi is water coming on top. Our machine solves this 100%.</li>
-                <li><strong>Perfect Thickness:</strong> Your Dahi will be very thick and creamy.</li>
-                <li><strong>Complete Setup:</strong> We provide everything from milk processing to cup packing and cold rooms.</li>
-              </ul>
+      
+        {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
+        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
+            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Curd Processing</span></h2>
+            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Curd Business?</h3>
+                <p>The demand for high-quality, hygienically processed Curd is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Does the Curd Processing Work?</h3>
+                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>The Salvin Industries Advantage</h3>
+                <p>Salvin Industries provides end-to-end turnkey solutions for Curd processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ PROCESS FLOW ═══ */}
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>

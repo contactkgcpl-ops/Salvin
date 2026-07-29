@@ -86,6 +86,18 @@ const RAW = [
   ['butter_plant_overview.jpg', null, 'Fully Automated Butter Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-butter-processing-plant'],
   ['ice_cream_plant_overview.jpg', null, 'Fully Automatic Ice Cream Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-ice-cream-processing-plant'],
 
+  ['flavored_milk_plant_overview.jpg', null, 'Fully Automated Flavored Milk Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-flavored-milk-plant'],
+  ['cream_processing_plant_overview.jpg', null, 'Fully Automated Cream Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-cream-processing-plant'],
+  ['carbonated_soft_drink_plant_overview.jpg', null, 'Fully Automatic Carbonated Soft Drink Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-carbonated-soft-drink-plant'],
+  ['energy_drink_processing_plant_overview.jpg', null, 'Fully Automated Energy Drink Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-energy-drink-processing-plant'],
+  ['health_drink_plant_overview.jpg', null, 'Health Drink Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/health-drink-plant'],
+  ['syrup_manufacturing_plant_overview.jpg', null, 'Fully Automatic Syrup Manufacturing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-syrup-manufacturing-plant'],
+  ['rts_beverage_plant_overview.jpg', null, 'Fully Automated RTS Beverage Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-rts-beverage-plant'],
+  ['mineral_water_plant_overview.jpg', null, 'Fully Automatic Mineral Water Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-mineral-water-plant'],
+
+  ['packaged_drinking_water_plant_overview.jpg', null, 'Fully Automatic Packaged Drinking Water Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-packaged-drinking-water-plant'],
+  ['coconut_water_processing_plant_overview.jpg', null, 'Fully Automated Coconut Water Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-coconut-water-processing-plant'],
+
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

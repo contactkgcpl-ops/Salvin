@@ -135,6 +135,16 @@ import CheesePlantDetailPage from "./pages/TurnkeyProject/components/CheesePlant
 import GheePlantDetailPage from "./pages/TurnkeyProject/components/GheePlantDetailPage";
 import ButterProcessingPlantDetailPage from "./pages/TurnkeyProject/components/ButterProcessingPlantDetailPage";
 import IceCreamProcessingPlantDetailPage from "./pages/TurnkeyProject/components/IceCreamProcessingPlantDetailPage";
+import FlavoredMilkPlantDetailPage from "./pages/TurnkeyProject/components/FlavoredMilkPlantDetailPage";
+import CreamProcessingPlantDetailPage from "./pages/TurnkeyProject/components/CreamProcessingPlantDetailPage";
+import CarbonatedSoftDrinkPlantDetailPage from "./pages/TurnkeyProject/components/CarbonatedSoftDrinkPlantDetailPage";
+import EnergyDrinkProcessingPlantDetailPage from "./pages/TurnkeyProject/components/EnergyDrinkProcessingPlantDetailPage";
+import HealthDrinkPlantDetailPage from "./pages/TurnkeyProject/components/HealthDrinkPlantDetailPage";
+import SyrupManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/SyrupManufacturingPlantDetailPage";
+import RTSBeveragePlantDetailPage from "./pages/TurnkeyProject/components/RTSBeveragePlantDetailPage";
+import MineralWaterPlantDetailPage from "./pages/TurnkeyProject/components/MineralWaterPlantDetailPage";
+import PackagedDrinkingWaterPlantDetailPage from "./pages/TurnkeyProject/components/PackagedDrinkingWaterPlantDetailPage";
+import CoconutWaterProcessingPlantDetailPage from "./pages/TurnkeyProject/components/CoconutWaterProcessingPlantDetailPage";
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
@@ -2733,6 +2743,16 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-ghee-plant" element={<GheePlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-butter-processing-plant" element={<ButterProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-ice-cream-processing-plant" element={<IceCreamProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-flavored-milk-plant" element={<FlavoredMilkPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-cream-processing-plant" element={<CreamProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-carbonated-soft-drink-plant" element={<CarbonatedSoftDrinkPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-energy-drink-processing-plant" element={<EnergyDrinkProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/health-drink-plant" element={<HealthDrinkPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-syrup-manufacturing-plant" element={<SyrupManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-rts-beverage-plant" element={<RTSBeveragePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-mineral-water-plant" element={<MineralWaterPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-packaged-drinking-water-plant" element={<PackagedDrinkingWaterPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-coconut-water-processing-plant" element={<CoconutWaterProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

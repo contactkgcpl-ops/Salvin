@@ -327,7 +327,7 @@
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 48px;
-  align-items: flex-start;
+  align-items: center;
   margin-top: 16px;
 }
 
@@ -418,8 +418,8 @@
 
 .rcp-overview__image img {
   width: 100%;
-  height: auto;
-  object-fit: contain;
+  height: 380px;
+  object-fit: cover;
   object-position: center;
   display: block;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -499,8 +499,8 @@
 .rcp-overview__image--photo img {
   object-fit: cover;
   object-position: center;
-  height: auto;
-  max-height: 500px;
+  height: 100%;
+  max-height: none;
   width: 100%;
   border-radius: var(--rcp-radius);
 }
@@ -710,13 +710,13 @@
 
 .rcp-process-flow-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   margin-top: 48px;
   width: 100%;
-  overflow: visible;
+  overflow-x: auto; overflow-y: hidden; padding-bottom: 12px;
   padding-bottom: 0;
 }
 
