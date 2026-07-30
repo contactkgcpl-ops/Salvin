@@ -315,6 +315,7 @@ export default function RedChilliDetailPage() {
         </div>
       </section>
 
+
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
@@ -340,7 +341,7 @@ export default function RedChilliDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

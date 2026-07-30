@@ -145,6 +145,14 @@ import RTSBeveragePlantDetailPage from "./pages/TurnkeyProject/components/RTSBev
 import MineralWaterPlantDetailPage from "./pages/TurnkeyProject/components/MineralWaterPlantDetailPage";
 import PackagedDrinkingWaterPlantDetailPage from "./pages/TurnkeyProject/components/PackagedDrinkingWaterPlantDetailPage";
 import CoconutWaterProcessingPlantDetailPage from "./pages/TurnkeyProject/components/CoconutWaterProcessingPlantDetailPage";
+import AloeVeraJuiceProcessingPlantDetailPage from "./pages/TurnkeyProject/components/AloeVeraJuiceProcessingPlantDetailPage";
+import BiscuitPlantDetailPage from "./pages/TurnkeyProject/components/BiscuitPlantDetailPage";
+import CookiePlantDetailPage from "./pages/TurnkeyProject/components/CookiePlantDetailPage";
+import BreadPlantDetailPage from "./pages/TurnkeyProject/components/BreadPlantDetailPage";
+import CakePlantDetailPage from "./pages/TurnkeyProject/components/CakePlantDetailPage";
+import WaferPlantDetailPage from "./pages/TurnkeyProject/components/WaferPlantDetailPage";
+import ChocolateProcessingPlantDetailPage from "./pages/TurnkeyProject/components/ChocolateProcessingPlantDetailPage";
+import ToffeePlantDetailPage from "./pages/TurnkeyProject/components/ToffeePlantDetailPage";
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
@@ -2753,6 +2761,14 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-mineral-water-plant" element={<MineralWaterPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-packaged-drinking-water-plant" element={<PackagedDrinkingWaterPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-coconut-water-processing-plant" element={<CoconutWaterProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-aloe-vera-juice-processing-plant" element={<AloeVeraJuiceProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-biscuit-plant" element={<BiscuitPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-cookie-plant" element={<CookiePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-bread-plant" element={<BreadPlantDetailPage />} />
+          <Route path="/turnkey-project/cake-plant" element={<CakePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-wafer-plant" element={<WaferPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-chocolate-processing-plant" element={<ChocolateProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-toffee-plant" element={<ToffeePlantDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

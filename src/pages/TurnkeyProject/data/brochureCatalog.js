@@ -97,7 +97,14 @@ const RAW = [
 
   ['packaged_drinking_water_plant_overview.jpg', null, 'Fully Automatic Packaged Drinking Water Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-packaged-drinking-water-plant'],
   ['coconut_water_processing_plant_overview.jpg', null, 'Fully Automated Coconut Water Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-coconut-water-processing-plant'],
-
+  ['aloe-vera-juice.jpg', null, 'Fully Automated Aloe Vera Juice Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-aloe-vera-juice-processing-plant'],
+  ['biscuit-plant.jpg', null, 'Fully Automatic Biscuit Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-biscuit-plant'],
+  ['cookie-plant.jpg', null, 'Fully Automatic Cookie Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-cookie-plant'],
+  ['bread-plant.jpg', null, 'Fully Automated Bread Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-bread-plant'],
+  ['cake-plant.jpg', null, 'Cake Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/cake-plant'],
+  ['wafer-plant.jpg', null, 'Fully Automatic Wafer Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-wafer-plant'],
+  ['chocolate-plant.jpg', null, 'Fully Automatic Chocolate Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-chocolate-processing-plant'],
+  ['toffee-plant.jpg', null, 'Fully Automatic Toffee Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automatic-toffee-plant'],
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

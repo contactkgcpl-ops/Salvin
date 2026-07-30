@@ -297,6 +297,7 @@ export default function MamraPauvaDetailPage() {
         </div>
       </section>
 
+
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
@@ -322,7 +323,7 @@ export default function MamraPauvaDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

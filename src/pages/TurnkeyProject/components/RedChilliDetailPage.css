@@ -713,10 +713,12 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 28px;
   margin-top: 48px;
   width: 100%;
-  overflow-x: auto; overflow-y: hidden; padding-bottom: 12px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 12px;
   padding-bottom: 0;
 }
 
@@ -815,7 +817,7 @@
 /* Responsive Styles */
 @media (max-width: 1024px) {
   .rcp-process-flow-container {
-    gap: 12px;
+    gap: 20px;
   }
 
   .rcp-process-arrow {
@@ -825,7 +827,7 @@
 
 @media (max-width: 640px) {
   .rcp-process-flow-container {
-    gap: 12px;
+    gap: 16px;
   }
 
   .rcp-process-card {
@@ -1455,8 +1457,7 @@
 }
 
 .rcp-faq__item--open .rcp-faq__answer-wrapper {
-  max-height: 200px;
-  /* Big enough for the answers */
+  max-height: 800px;
 }
 
 .rcp-faq__answer-content {
@@ -1872,6 +1873,7 @@
   line-height: 1.8;
   color: var(--rcp-slate-700);
 }
+
 .rcp-seo-content__body h3 {
   font-size: 22px;
   color: var(--rcp-slate-900);
@@ -1879,6 +1881,79 @@
   margin-bottom: 16px;
   font-weight: 600;
 }
+
 .rcp-seo-content__body p {
   margin-bottom: 24px;
+}
+
+
+/* === AUTO SCROLL MARQUEE GALLERY === */
+.rcp-gallery__marquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.rcp-gallery__marquee-track {
+  display: flex;
+  width: max-content;
+  animation: scrollMarquee 25s linear infinite;
+}
+
+.rcp-gallery__marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.rcp-gallery__marquee-item {
+  width: 300px;
+  height: 220px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+  margin: 0 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #f5f5f5;
+}
+
+.rcp-gallery__marquee-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.rcp-gallery__marquee-item:hover img {
+  transform: scale(1.1);
+}
+
+.rcp-gallery__marquee-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.rcp-gallery__marquee-item:hover .rcp-gallery__marquee-caption {
+  transform: translateY(0);
 }

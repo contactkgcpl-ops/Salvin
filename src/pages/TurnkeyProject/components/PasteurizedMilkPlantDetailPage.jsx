@@ -302,6 +302,7 @@ export default function PasteurizedMilkPlantDetailPage() {
         </div>
       </section>
 
+
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
@@ -326,7 +327,7 @@ export default function PasteurizedMilkPlantDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

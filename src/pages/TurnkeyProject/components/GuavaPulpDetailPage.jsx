@@ -291,6 +291,7 @@ export default function GuavaPulpDetailPage() {
         </div>
       </section>
 
+
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
@@ -316,7 +317,7 @@ export default function GuavaPulpDetailPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>
