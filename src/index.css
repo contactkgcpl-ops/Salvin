@@ -24,3 +24,28 @@ body {
   min-width: 0;
   overflow-x: hidden;
 }
+
+/* Hide scrollbar for all process flow containers globally and force fitting in one line */
+[class$="-process-flow-container"]::-webkit-scrollbar {
+  display: none !important;
+}
+[class$="-process-flow-container"] {
+  -ms-overflow-style: none !important;
+  scrollbar-width: none !important;
+  flex-wrap: nowrap !important;
+  overflow-x: hidden !important;
+  justify-content: center !important;
+  gap: 10px !important;
+}
+
+[class$="-process-card"] {
+  flex-shrink: 1 !important;
+  min-width: 0 !important;
+  width: auto !important;
+  flex: 1 1 0 !important;
+  padding: 15px 5px !important;
+}
+
+[class$="-process-arrow"] {
+  flex-shrink: 1 !important;
+}

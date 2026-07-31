@@ -1180,9 +1180,9 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY SNACK PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Economical Kurkure Production',
     workflowTitle: 'Economical Kurkure Plant',
-    workflowAccentTitle: 'Workflow',
-
-    heroImage: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.jpg',
+    workflowAccentTitle: 'Processing Workflow',
+    isPdf: true,
+    heroImage: '/turnkey-brochures/images/economical-kurkure-plant/hero_economical_kurkure.png',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'kurkure.pdf',
     stats: { capacity: '100 Kg–500 Kg', stages: '7 Stage', efficiency: '98%', support: '24/7' },
@@ -1982,9 +1982,7 @@ export function getProjectDetails(slug, title = '') {
     return CORE_PROJECTS[slug];
   }
 
-  if (dynamicProjectCache[slug]) {
-    return dynamicProjectCache[slug];
-  }
+  // Cache removed to fix HMR issues
 
   // Construct dynamic data based on title
   const cleanTitle = title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -2128,11 +2126,26 @@ export function getProjectDetails(slug, title = '') {
     project.heroImage = '/turnkey-brochures/images/coriander-powder/coriander_powder_hero.png';
   }
   if (slug === 'banana-chips-processing-plant') {
-
     project.heroImage = '/turnkey-brochures/images/banana-chips-processing-plant/banana_chips_hero_banner.png';
   }
+  
+  if (slug === 'fully-automated-namkeen-plant') {
+    project.gallery = [
+      { src: '/turnkey-brochures/images/namkeen/media__1785499273491.jpg', caption: 'Automated Pouch Packing & Multi-head Weigher' },
+      { src: '/turnkey-brochures/images/namkeen/media__1785499263214.jpg', caption: 'Flavor Coating & Seasoning Drum' },
+      { src: '/turnkey-brochures/images/namkeen/media__1785499254675.jpg', caption: 'Raw Material Mixing & Sifting' },
+      { src: '/turnkey-brochures/images/namkeen/media__1785499242760.jpg', caption: 'Continuous Frying System' },
+      { src: '/turnkey-brochures/images/namkeen/media__1785499234267.jpg', caption: 'Dough Mixing & Extrusion Line' },
+      { src: '/turnkey-brochures/images/namkeen/media__1785499227685.jpg', caption: 'Vibratory Grading & Conveying' }
+    ];
+    project.heroImage = project.gallery[0].src;
+    if (project.overview) {
+      project.overview.image = project.gallery[3].src;
+      project.overview.photoImage = project.gallery[3].src;
+    }
+  }
 
-  dynamicProjectCache[slug] = project;
+  // Removed dynamicProjectCache[slug] = project;
 
   const customGalleries = {
     'chikki-plucking-plant': { hero: 'chikki-plucking-plant.jpg', images: ['chikki_plucking_1.jpg', 'chikki_plucking_2.jpg', 'chikki_plucking_3.jpg', 'chikki_plucking_4.jpg', 'chikki_plucking_5.jpg', 'chikki_plucking_6.jpg'] },

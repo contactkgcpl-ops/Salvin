@@ -458,29 +458,40 @@ function getFAQsForProject(details) {
   if (details.faqs && details.faqs.length > 0) {
     return details.faqs
   }
-  const title = details.title
+  const title = details.title || 'Plant'
   const isLiquidOrPaste = title.toLowerCase().includes('juice') || title.toLowerCase().includes('honey') || title.toLowerCase().includes('paste') || title.toLowerCase().includes('sauce') || title.toLowerCase().includes('ketchup') || title.toLowerCase().includes('jelly') || title.toLowerCase().includes('oil')
+
+  const machineryNames = (details.machinery || []).slice(0, 3).map(m => m.name).join(', ')
+  const machineStr = machineryNames ? `Key machines used include the ${machineryNames}, which ensure precise and automated processing.` : 'We use high-grade food-processing machinery for automated production.'
+
+  const stepsStr = (details.processSteps || []).length > 2 
+    ? `The primary processing stages include ${details.processSteps[0].title.toLowerCase()}, ${details.processSteps[1].title.toLowerCase()}, and ${details.processSteps[details.processSteps.length-1].title.toLowerCase()}.` 
+    : 'The process involves automated raw material feeding, processing, and hygienic packaging.'
 
   return [
     {
       question: `What is the processing capacity of the ${title}?`,
-      answer: `Our plants are available in custom configurations from ${isLiquidOrPaste ? '500 Ltr/Hr to 5,000 Ltr/Hr' : '500 Kg/Hr to 5 Ton/Hr'} capacities to match your target production requirements.`
+      answer: `Our plants are available in custom configurations from ${isLiquidOrPaste ? '500 Ltr/Hr to 5,000 Ltr/Hr' : '500 Kg/Hr to 5 Ton/Hr'} capacities to match your target production requirements. Each line is highly scalable to support your business growth.`
+    },
+    {
+      question: `What kind of machinery is used in this plant?`,
+      answer: `The plant utilizes advanced, fully automatic, food-grade SS304/SS316 stainless steel equipment. ${machineStr} Every machine is designed for energy efficiency, minimal product wastage, and high-speed continuous operation.`
+    },
+    {
+      question: `How does the process flow work?`,
+      answer: `The manufacturing process is a fully synchronized industrial workflow. ${stepsStr} Advanced thermal controls and PLC automation ensure that essential flavors, colors, and nutrients are perfectly preserved without any manual human intervention.`
     },
     {
       question: `Can the plant process different varieties or grades of raw material?`,
-      answer: `Yes. The system is engineered with adjustable settings and variable speed drives to handle diverse product grades while maintaining consistent color, flavor, and texture.`
+      answer: `Absolutely. The system is engineered with adjustable settings and variable speed drives to handle diverse product grades. Whether you are dealing with different moisture levels or sizes, the machinery maintains consistent color, flavor, and texture.`
     },
     {
-      question: `Is the plant fully automatic?`,
-      answer: `Yes. We offer semi-automatic and fully automatic turnkey solutions featuring centralized PLC automation and touch-screen HMI control systems.`
-    },
-    {
-      question: `Does SALVIN provide installation and training support?`,
-      answer: `Yes. SALVIN provides complete turnkey services including site planning, machinery manufacture, installation, dry runs, commissioning, and on-site operator training.`
+      question: `Does SALVIN provide complete installation and training?`,
+      answer: `Yes. SALVIN provides complete end-to-end turnkey services. We handle the factory layout design, machinery manufacturing, installation, dry runs, commissioning, and provide comprehensive on-site operator training.`
     },
     {
       question: `Why choose SALVIN for the ${title}?`,
-      answer: `SALVIN is a trusted name offering food-grade SS304/SS316L construction, energy-efficient thermal loops, modular expansion designs, and dedicated engineering support.`
+      answer: `SALVIN is a trusted industry leader offering one-touch automation, reducing labor costs, and eliminating human error. Our plants offer food-grade construction, energy-efficient thermal loops, modular expansion designs, and highly dedicated after-sales engineering support.`
     }
   ]
 }
@@ -699,52 +710,46 @@ export default function TurnkeyDetailPage() {
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">{details.title} Processing</span></h2>
-          <p className="rcp-section-subtitle">Understanding the processing workflow, efficiency, and market impact.</p>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">{details.title}</span></h2>
+          <p className="rcp-section-subtitle">Understanding the processing workflow, specific machinery used, and market impact.</p>
           <div className="rcp-seo-content__body">
             <div className="rcp-seo-content__block">
               <h3>Why Start a {details.title} Business?</h3>
-              <p>The demand for branded, high-quality, and hygienically processed {details.title.toLowerCase()} products is growing rapidly across India and global markets. By investing in a fully automated {details.title} plant, you can build a highly profitable, scalable, and recurring FMCG or B2B manufacturing business with consistent product quality.</p>
+              <p>The demand for branded, high-quality, and hygienically processed {String(details.title).replace('Plant', '').replace('Processing', '').toLowerCase().trim()} products is growing rapidly across India and global markets. By investing in a fully automated {details.title}, you can build a highly profitable, scalable, and recurring FMCG or B2B manufacturing business with consistent product quality.</p>
             </div>
+            
             <div className="rcp-seo-content__block">
-              <h3>How Does the {details.title} Processing Work?</h3>
-              <p>The process begins with careful raw material receiving and quality inspection. Materials are then cleaned, sorted, and fed into the processing line where they undergo the core treatment stages specific to {details.title.toLowerCase()} production. The finished product is then carefully packed and sealed to preserve quality, freshness, and shelf life.</p>
+              <h3>How Does the Processing Work?</h3>
+              <p>The {String(details.title).replace('Plant', '').trim()} follows a highly systematic and automated workflow to ensure the best output quality. The core process involves:</p>
+              {details.processSteps && details.processSteps.length > 0 ? (
+                <ul style={{ listStyleType: 'disc', paddingLeft: '24px', marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--rcp-slate-700)', lineHeight: '1.6' }}>
+                  {details.processSteps.map((step, idx) => (
+                    <li key={idx}><strong>{step.title}:</strong> {step.desc}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>The process begins with careful raw material receiving and quality inspection. Materials are then cleaned, sorted, and fed into the processing line where they undergo core treatment stages. Finally, the product is packed and sealed to preserve freshness.</p>
+              )}
             </div>
+
             <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries designs every {details.title} plant with advanced automation, precision engineering, and food-grade stainless steel construction. Our PLC-controlled systems ensure every batch meets strict quality and hygiene standards. From site planning to commissioning and operator training, we provide complete end-to-end turnkey support.</p>
+              <h3>What Machines are Used in the {details.title}?</h3>
+              <p>To achieve high-speed production and food-grade hygiene, the plant utilizes advanced industrial machinery. The primary equipment used in this process includes:</p>
+              {details.machinery && details.machinery.length > 0 ? (
+                <ul style={{ listStyleType: 'disc', paddingLeft: '24px', marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--rcp-slate-700)', lineHeight: '1.6' }}>
+                  {details.machinery.map((m, idx) => (
+                    <li key={idx}><strong>{m.name}:</strong> {m.desc}</li>
+                  ))}
+                </ul>
+              ) : (
+                <p>Salvin Industries designs every plant with advanced automation, precision engineering, and food-grade stainless steel construction. Our PLC-controlled systems ensure every batch meets strict quality and hygiene standards.</p>
+              )}
             </div>
           </div>
         </div>
       </section>
 
-      
-        {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">${details.title} Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
-                <h3>Why Start a ${details.title} Business?</h3>
-                <p>The demand for high-quality, hygienically processed ${details.title} is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
-              </div>
-              
-              <div className="rcp-seo-content__block">
-                <h3>How Does the ${details.title} Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
-              </div>
-              
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for ${details.title} processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ═══ MACHINERY USED ═══ */}
+      {/* ═══ MACHINERY USED ═══ */}
       {details.machinery && details.machinery.length > 0 && (
         <section className="rcp-section rcp-machinery" id="machinery" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['machinery'] ? 'rcp-animate--in' : ''}`}>

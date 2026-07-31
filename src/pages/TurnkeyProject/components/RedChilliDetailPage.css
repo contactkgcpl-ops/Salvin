@@ -468,8 +468,16 @@
 }
 
 .rcp-overview__feature:hover .rcp-overview__feature-icon {
-  background: var(--rcp-orange);
-  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: rgba(245, 130, 32, 0.09);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rcp-orange);
+  flex-shrink: 0;
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .rcp-overview__feature-icon svg {
@@ -481,11 +489,12 @@
 .rcp-overview__feature-body {}
 
 .rcp-overview__feature-title {
-  font-size: 12px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 700;
   color: var(--rcp-slate-800);
   line-height: 1.25;
-  margin: 0 0 2px;
+  margin: 0 0 4px;
+  text-align: left !important;
 }
 
 .rcp-overview__feature-desc {
@@ -493,6 +502,7 @@
   color: var(--rcp-slate-400);
   line-height: 1.35;
   margin: 0;
+  text-align: left !important;
 }
 
 /* Make overview image use cover (for real plant photos) */
