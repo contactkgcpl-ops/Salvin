@@ -2,9 +2,9 @@
 declare(strict_types=1);
 const DB_HOST = 'localhost';
 const DB_PORT = '3307';
-const DB_NAME = 'u757980258_salvin_db';
-const DB_USER = 'u757980258_salvin_india';
-const DB_PASSWORD = 'Salvin@123#';
+const DB_NAME = 'u757980258_spares_db';
+const DB_USER = 'u757980258_salvin_spares';
+const DB_PASSWORD = 'Keval@2026#';
 const ADMIN_TOKEN = 'salvin-admin-token';
 
 function db(): PDO

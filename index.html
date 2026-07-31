@@ -22,6 +22,9 @@
   <meta property="og:image:height" content="426" />
   <meta property="og:url" content="https://salvinindia.com/" />
 
+  <!-- Static Default Canonical & OG Tags -->
+  <link rel="canonical" href="https://salvinindia.com/" />
+
   <!-- Dynamic Canonical & OG URL for SPA SEO -->
   <script>
     (function() {
@@ -29,15 +32,18 @@
       if (path.length > 1 && path.endsWith('/')) {
         path = path.slice(0, -1);
       }
-      var cleanUrl = 'https://salvinindia.com' + path;
+      var cleanUrl = 'https://salvinindia.com' + (path || '/');
 
-      // Create Canonical Link
-      var link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', cleanUrl);
-      document.head.appendChild(link);
+      var link = document.querySelector('link[rel="canonical"]');
+      if (link) {
+        link.setAttribute('href', cleanUrl);
+      } else {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        link.setAttribute('href', cleanUrl);
+        document.head.appendChild(link);
+      }
 
-      // Dynamically sync OG URL meta tag
       var ogUrl = document.querySelector('meta[property="og:url"]');
       if (ogUrl) {
         ogUrl.setAttribute('content', cleanUrl);

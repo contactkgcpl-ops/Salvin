@@ -130,6 +130,23 @@ async function main() {
           .replace(/<meta name="description" content=".*?" \/>/s, `<meta name="description" content="${meta.desc}" />`);
       }
 
+      // Inject exact static canonical tag and og:url tag for search engine crawlers
+      const cleanPath = urlPath === "/" ? "/" : urlPath.replace(/\/+$/, "");
+      const canonicalUrl = `${SITE_URL}${cleanPath === "/" ? "/" : cleanPath}`;
+      
+      const canonicalTag = `<link rel="canonical" href="${canonicalUrl}" />`;
+      const ogUrlTag = `<meta property="og:url" content="${canonicalUrl}" />`;
+
+      if (pageHtml.includes('<link rel="canonical"')) {
+        pageHtml = pageHtml.replace(/<link rel="canonical" href=".*?" \/>/s, canonicalTag);
+      } else {
+        pageHtml = pageHtml.replace('</head>', `  ${canonicalTag}\n</head>`);
+      }
+
+      if (pageHtml.includes('property="og:url"')) {
+        pageHtml = pageHtml.replace(/<meta property="og:url" content=".*?" \/>/s, ogUrlTag);
+      }
+
       const destFile =
         urlPath === "/"
           ? join(projectRoot, "dist", "index.html")
