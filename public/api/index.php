@@ -44,9 +44,9 @@ try {
         $pdo = db();
         $counts = $pdo->query('
             SELECT
-                (SELECT COUNT(*) FROM machines) AS total_machines,
-                (SELECT COUNT(*) FROM categories) AS total_categories,
-                (SELECT COUNT(*) FROM subcategories) AS total_subcategories
+                (SELECT COUNT(*) FROM machine_machines) AS total_machines,
+                (SELECT COUNT(*) FROM machine_categories) AS total_categories,
+                (SELECT COUNT(*) FROM machine_subcategories) AS total_subcategories
         ')->fetch();
         $recent = $pdo->query(machine_select_sql() . ' ORDER BY m.created_at DESC LIMIT 5')->fetchAll();
         json_response([...$counts, 'recent_machines' => array_map('normalize_machine', $recent)]);

@@ -22,32 +22,32 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20   # 🔥 change to 20
+          node-version: 22
+          cache: 'npm'
 
-      - name: Clean install dependencies
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install
-
-      - name: Rebuild native modules
-        run: npm rebuild
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
       - name: Deploy to Hostinger
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftp
+          protocol: ftps
           port: 21
+          security: loose
           local-dir: ./dist/
-          # FTP user already lands in /public_html, so upload dist contents there.
-          # Do not target public_html/ here, or it creates /public_html/public_html.
           server-dir: ./
+          state-name: .ftp-deploy-sync-state-v4.json
+          log-level: minimal
           timeout: 900000
           exclude: |
             **/services/**
             services
+
+
+

@@ -10,8 +10,26 @@
   RewriteCond %{HTTP_HOST} ^www\. [NC]
   RewriteRule ^(.*)$ https://salvinindia.com/$1 [R=301,L]
 
+  # Redirect legacy /index.html to root /
+  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
+  RewriteRule ^index\.html$ https://salvinindia.com/ [R=301,L]
+
+  # Redirect legacy *.html requests to clean URLs
+  RewriteCond %{THE_REQUEST} \s/([^.\s]+)\.html[\s?] [NC]
+  RewriteRule ^([^.]+)\.html$ https://salvinindia.com/$1 [R=301,L]
+
+  # Route API requests to PHP backend
   RewriteRule ^api(/.*)?$ api/index.php [L,QSA]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Serve existing file or directory directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Serve pre-rendered static HTML directly without 301 trailing-slash redirect
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.*)$ /$1/index.html [L]
+
+  # Single Page Application fallback
   RewriteRule . /index.html [L]
 </IfModule>

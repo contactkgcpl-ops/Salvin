@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="shortcut icon" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/salvin_logo.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <title>Turnkey Solution & Consultant For Food Industries | Salvin Industries</title>
@@ -22,6 +24,9 @@
   <meta property="og:image:height" content="426" />
   <meta property="og:url" content="https://salvinindia.com/" />
 
+  <!-- Static Default Canonical & OG Tags -->
+  <link rel="canonical" href="https://salvinindia.com/" />
+
   <!-- Dynamic Canonical & OG URL for SPA SEO -->
   <script>
     (function() {
@@ -29,15 +34,18 @@
       if (path.length > 1 && path.endsWith('/')) {
         path = path.slice(0, -1);
       }
-      var cleanUrl = 'https://salvinindia.com' + path;
+      var cleanUrl = 'https://salvinindia.com' + (path || '/');
 
-      // Create Canonical Link
-      var link = document.createElement('link');
-      link.setAttribute('rel', 'canonical');
-      link.setAttribute('href', cleanUrl);
-      document.head.appendChild(link);
+      var link = document.querySelector('link[rel="canonical"]');
+      if (link) {
+        link.setAttribute('href', cleanUrl);
+      } else {
+        link = document.createElement('link');
+        link.setAttribute('rel', 'canonical');
+        link.setAttribute('href', cleanUrl);
+        document.head.appendChild(link);
+      }
 
-      // Dynamically sync OG URL meta tag
       var ogUrl = document.querySelector('meta[property="og:url"]');
       if (ogUrl) {
         ogUrl.setAttribute('content', cleanUrl);
@@ -87,7 +95,6 @@
       "closes": "19:00"
     },
     "sameAs": [
-      "https://spares.salvinindia.com/",
       "https://salvinindustries.blogspot.com/"
     ],
     "description": "Salvin Industries is a leading manufacturer of turnkey food processing plants, packaging machinery, and industrial automation solutions in India and worldwide."

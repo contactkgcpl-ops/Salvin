@@ -5,7 +5,7 @@ $pdo = db();
 $id = isset(route_parts()[1]) ? (int)route_parts()[1] : null;
 
 if (method() === 'GET') {
-    $rows = $pdo->query('SELECT id, name, slug, created_at FROM categories ORDER BY name ASC')->fetchAll();
+    $rows = $pdo->query('SELECT id, name, slug, created_at FROM machine_categories ORDER BY name ASC')->fetchAll();
     json_response($rows);
 }
 
@@ -15,10 +15,10 @@ $data = input_json();
 if (method() === 'POST') {
     $name = trim((string)($data['name'] ?? $data['category_name'] ?? ''));
     if (!$name) json_response(['error' => 'Category name is required'], 400);
-    $slug = unique_slug('categories', $data['slug'] ?? $name);
-    $stmt = $pdo->prepare('INSERT INTO categories (name, slug) VALUES (?, ?)');
+    $slug = unique_slug('machine_categories', $data['slug'] ?? $name);
+    $stmt = $pdo->prepare('INSERT INTO machine_categories (name, slug) VALUES (?, ?)');
     $stmt->execute([$name, $slug]);
-    $stmt = $pdo->prepare('SELECT id, name, slug, created_at FROM categories WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT id, name, slug, created_at FROM machine_categories WHERE id = ?');
     $stmt->execute([(int)$pdo->lastInsertId()]);
     json_response($stmt->fetch(), 201);
 }
@@ -28,25 +28,25 @@ if (!$id) json_response(['error' => 'Category id is required'], 400);
 if (method() === 'PUT') {
     $name = trim((string)($data['name'] ?? $data['category_name'] ?? ''));
     if (!$name) json_response(['error' => 'Category name is required'], 400);
-    $slug = unique_slug('categories', $data['slug'] ?? $name, $id);
-    $stmt = $pdo->prepare('UPDATE categories SET name = ?, slug = ? WHERE id = ?');
+    $slug = unique_slug('machine_categories', $data['slug'] ?? $name, $id);
+    $stmt = $pdo->prepare('UPDATE machine_categories SET name = ?, slug = ? WHERE id = ?');
     $stmt->execute([$name, $slug, $id]);
-    $stmt = $pdo->prepare('SELECT id, name, slug, created_at FROM categories WHERE id = ?');
+    $stmt = $pdo->prepare('SELECT id, name, slug, created_at FROM machine_categories WHERE id = ?');
     $stmt->execute([$id]);
     json_response($stmt->fetch());
 }
 
 if (method() === 'DELETE') {
-    $stmt = $pdo->prepare('SELECT COUNT(*) AS count FROM machines WHERE category_id = ?');
+    $stmt = $pdo->prepare('SELECT COUNT(*) AS count FROM machine_machines WHERE category_id = ?');
     $stmt->execute([$id]);
     if ((int)$stmt->fetch()['count'] > 0) {
         json_response(['error' => 'Move or delete machines in this category first.'], 409);
     }
 
-    $stmt = $pdo->prepare('DELETE FROM subcategories WHERE category_id = ?');
+    $stmt = $pdo->prepare('DELETE FROM machine_subcategories WHERE category_id = ?');
     $stmt->execute([$id]);
 
-    $stmt = $pdo->prepare('DELETE FROM categories WHERE id = ?');
+    $stmt = $pdo->prepare('DELETE FROM machine_categories WHERE id = ?');
     $stmt->execute([$id]);
     json_response(['success' => true]);
 }

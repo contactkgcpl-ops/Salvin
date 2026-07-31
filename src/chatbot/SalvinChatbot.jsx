@@ -37,7 +37,6 @@ const SERVICE_OPTIONS = [
   { label: "Consultancy", to: "/contact" },
   { label: "Projects", to: "/turnkey-project#brochures" },
   { label: "Machines", value: "show-machine-subcategories" },
-  { label: "Spares", href: "https://spares.salvinindia.com" },
 ];
 
 const WELCOME_MESSAGE = {
