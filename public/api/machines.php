@@ -58,9 +58,9 @@ function machine_payload(?array $current = null): array {
 
 if (method() === 'POST') {
     $payload = machine_payload();
-    $slug = unique_slug('machines', $payload['slug_base']);
+    $slug = unique_slug('machine_machines', $payload['slug_base']);
     $stmt = $pdo->prepare('
-        INSERT INTO machines
+        INSERT INTO machine_machines
             (machine_name, slug, description, image_url, meta_title, meta_description, category_id, subcategory_id, specifications)
         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     ');
@@ -78,14 +78,14 @@ if (!$identifier) json_response(['error' => 'Machine id is required'], 400);
 $id = (int)$identifier;
 
 if (method() === 'PUT') {
-    $stmt = $pdo->prepare('SELECT * FROM machines WHERE id = ? LIMIT 1');
+    $stmt = $pdo->prepare('SELECT * FROM machine_machines WHERE id = ? LIMIT 1');
     $stmt->execute([$id]);
     $current = $stmt->fetch();
     if (!$current) json_response(['error' => 'Machine not found'], 404);
     $payload = machine_payload($current);
-    $slug = unique_slug('machines', $payload['slug_base'], $id);
+    $slug = unique_slug('machine_machines', $payload['slug_base'], $id);
     $stmt = $pdo->prepare('
-        UPDATE machines SET
+        UPDATE machine_machines SET
             machine_name = ?, slug = ?, description = ?, image_url = ?, meta_title = ?,
             meta_description = ?, category_id = ?, subcategory_id = ?, specifications = ?
         WHERE id = ?
@@ -101,7 +101,7 @@ if (method() === 'PUT') {
 }
 
 if (method() === 'DELETE') {
-    $stmt = $pdo->prepare('DELETE FROM machines WHERE id = ?');
+    $stmt = $pdo->prepare('DELETE FROM machine_machines WHERE id = ?');
     $stmt->execute([$id]);
     json_response(['success' => true]);
 }

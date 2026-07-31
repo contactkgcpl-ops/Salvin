@@ -76,16 +76,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
 
         <NavLink to="/turnkey-project" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
         <NavLink to="/machineries" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
-        {/* <a href="https://spares.salvinindia.com/" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>SPARES & SERVICE</a> */}
-        <a
-          href="https://spares.salvinindia.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#000" }}
-          onClick={() => {
-            setMenuOpen(false);
-            window.open("https://spares.salvinindia.com/", "_blank");
-          }}>SPARES & SERVICE</a>
+
 
         <a
           href="https://salvinindustries.blogspot.com/"

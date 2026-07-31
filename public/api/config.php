@@ -69,8 +69,8 @@ function unique_slug(string $table, string $base, ?int $excludeId = null, ?int $
     $counter = 2;
 
     while (true) {
-        if ($table === 'subcategories') {
-            $stmt = $pdo->prepare('SELECT id FROM subcategories WHERE slug = ? AND category_id = ? AND (? IS NULL OR id <> ?) LIMIT 1');
+        if ($table === 'machine_subcategories' || $table === 'subcategories') {
+            $stmt = $pdo->prepare('SELECT id FROM machine_subcategories WHERE slug = ? AND category_id = ? AND (? IS NULL OR id <> ?) LIMIT 1');
             $stmt->execute([$slug, $categoryId, $excludeId, $excludeId]);
         } else {
             $stmt = $pdo->prepare("SELECT id FROM {$table} WHERE slug = ? AND (? IS NULL OR id <> ?) LIMIT 1");
@@ -143,8 +143,8 @@ function machine_select_sql(): string
             c.name AS category_name,
             s.id AS subcategory_db_id,
             s.name AS subcategory_name
-        FROM machines m
-        JOIN categories c ON c.id = m.category_id
-        LEFT JOIN subcategories s ON s.id = m.subcategory_id
+        FROM machine_machines m
+        JOIN machine_categories c ON c.id = m.category_id
+        LEFT JOIN machine_subcategories s ON s.id = m.subcategory_id
     ';
 }
