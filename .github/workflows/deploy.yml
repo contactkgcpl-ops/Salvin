@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
@@ -40,11 +41,12 @@ jobs:
           port: 21
           security: loose
           local-dir: ./dist/
-          # FTP user already lands in /public_html, so upload dist contents there.
           server-dir: ./
-          state-name: .ftp-deploy-sync-state-v3.json
+          state-name: .ftp-deploy-sync-state.json
+          log-level: minimal
           timeout: 900000
           exclude: |
             **/services/**
             services
+
 
