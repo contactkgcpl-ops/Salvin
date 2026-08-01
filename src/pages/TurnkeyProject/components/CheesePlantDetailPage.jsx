@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Clarifier",
     "desc": "For receiving, filtering, and standardizing raw milk.",
-    "image": "/turnkey-brochures/images/cheese-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/cheese-gallery/1.webp"
   },
   {
     "name": "Milk Pasteurization Unit",
     "desc": "Ensures precise thermal processing of cheese milk.",
-    "image": "/turnkey-brochures/images/cheese-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/cheese-gallery/2.webp"
   },
   {
     "name": "Cheese Vat & Coagulation",
     "desc": "For precise heating, culture mixing, and curd formation.",
-    "image": "/turnkey-brochures/images/cheese-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/cheese-gallery/3.webp"
   },
   {
     "name": "Curd Cutting & Pressing",
     "desc": "Automated cutting and pneumatic pressing to expel whey.",
-    "image": "/turnkey-brochures/images/cheese-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/cheese-gallery/4.webp"
   },
   {
     "name": "Brining Tank & Ripening",
     "desc": "For salting and controlled-temperature cheese aging.",
-    "image": "/turnkey-brochures/images/cheese-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/cheese-gallery/5.webp"
   },
   {
     "name": "Automatic Vacuum Packing",
     "desc": "Robotic handling and vacuum sealing for long shelf life.",
-    "image": "/turnkey-brochures/images/cheese-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/cheese-gallery/6.webp"
   }
 ]
 
@@ -96,27 +96,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/cheese-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/cheese-gallery/1.webp",
     "caption": "Raw Milk Reception & Clarifier"
   },
   {
-    "src": "/turnkey-brochures/images/cheese-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/cheese-gallery/2.webp",
     "caption": "Milk Pasteurization Unit"
   },
   {
-    "src": "/turnkey-brochures/images/cheese-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/cheese-gallery/3.webp",
     "caption": "Cheese Vat & Coagulation"
   },
   {
-    "src": "/turnkey-brochures/images/cheese-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/cheese-gallery/4.webp",
     "caption": "Curd Cutting & Whey Draining"
   },
   {
-    "src": "/turnkey-brochures/images/cheese-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/cheese-gallery/5.webp",
     "caption": "Cheese Brining & Ripening"
   },
   {
-    "src": "/turnkey-brochures/images/cheese-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/cheese-gallery/6.webp",
     "caption": "Automatic Vacuum Packing"
   }
 ]
@@ -165,7 +165,7 @@ export default function CheesePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/cheese.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/cheese.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Corn Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503799034.jpg',
+    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503799034.webp',
     desc: 'High-capacity screening and destoning system designed to effectively remove light impurities, stones, and dust from raw maize/corn.'
   },
   {
     name: 'Corn Degerminator & Conditioner',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503810943.jpg',
+    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503810943.webp',
     desc: 'Specialized degerminator to carefully detach the germ from the corn endosperm, combined with a conditioner for moisture balancing.'
   },
   {
     name: 'Grinding Machine / Roller Mill',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503823693.jpg',
+    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503823693.webp',
     desc: 'High-performance grinding machine optimized for crushing degermed corn into fine, consistent corn flour without quality degradation.'
   },
   {
     name: 'Plansifter / Corn Flour Purifier',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503833080.jpg',
+    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503833080.webp',
     desc: 'Multi-deck plansifter ensuring accurate grading and purification of the milled corn flour to achieve the desired particle size.'
   },
   {
     name: 'Corn Flour Blending Machine & Silo',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503843891.jpg',
+    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503843891.webp',
     desc: 'Stainless steel silo and batch blending unit for homogenous mixing and resting of the finished corn flour before packing.'
   },
   {
     name: 'Automatic Bag Filling Machine',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503854931.jpg',
+    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503854931.webp',
     desc: 'Precision automatic weighing and bag filling station for packing corn flour into bulk bags with high accuracy.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Corn Flour Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503799034.jpg', caption: 'Corn Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503810943.jpg', caption: 'Corn Degerminator & Conditioner' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503823693.jpg', caption: 'Grinding Machine / Roller Mill' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503833080.jpg', caption: 'Plansifter / Corn Flour Purifier' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503843891.jpg', caption: 'Corn Flour Blending Machine & Silo' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503854931.jpg', caption: 'Automatic Bag Filling Machine' }
+  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503799034.webp', caption: 'Corn Cleaning & Destoning System' },
+  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503810943.webp', caption: 'Corn Degerminator & Conditioner' },
+  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503823693.webp', caption: 'Grinding Machine / Roller Mill' },
+  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503833080.webp', caption: 'Plansifter / Corn Flour Purifier' },
+  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503843891.webp', caption: 'Corn Flour Blending Machine & Silo' },
+  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503854931.webp', caption: 'Automatic Bag Filling Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedCornFlourPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="facfp-hero">
         <div className="facfp-hero__overlay" />
-        <div className="facfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_corn_flour.png')` }} />
+        <div className="facfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_corn_flour.webp')` }} />
         <div className="facfp-hero__content">
           <span className="facfp-hero__badge">
             <span className="facfp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function FullyAutomatedCornFlourPlantDetailPage() {
               </div>
             </div>
             <div className="facfp-overview__image facfp-overview__image--photo">
-              <img src="/turnkey-brochures/images/corn-flour-plant/media__1785503810943.jpg" alt="Fully Automated Corn Flour Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/corn-flour-plant/media__1785503810943.webp" alt="Fully Automated Corn Flour Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

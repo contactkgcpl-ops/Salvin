@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ingredient Feeding & Inspection Conveyor',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/1_ingredient_feeding.jpg',
+    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/1_ingredient_feeding.webp',
     desc: 'Provides inspection and controlled feeding of tomatoes, onions, garlic, herbs, and spices before processing.'
   },
   {
     name: 'Tomato Dicer / Vegetable Chopper',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/2_tomato_dicer.jpg',
+    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/2_tomato_dicer.webp',
     desc: 'Cuts tomatoes and other ingredients into uniform pieces for efficient downstream processing.'
   },
   {
     name: 'Continuous Pulp Refiner',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/3_pulp_refiner.jpg',
+    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/3_pulp_refiner.webp',
     desc: 'Separates seeds and peels while producing smooth refined tomato pulp.'
   },
   {
     name: 'Pizza Sauce Homogenizer & Holding Tank',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.jpg',
+    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.webp',
     desc: 'Ensures uniform texture, consistency, and stable product quality before blending.'
   },
   {
     name: 'Pizza Sauce Blending & Seasoning Tank',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.jpg',
+    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.webp',
     desc: 'Mixes tomato pulp with herbs, spices, salt, sugar, and seasonings to achieve uniform flavor and consistency.'
   },
   {
     name: 'Automatic Pizza Sauce Filling, Capping & Labelling Line',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/6_filling_line.jpg',
+    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/6_filling_line.webp',
     desc: 'Accurately fills, caps, labels, and prepares pizza sauce jars for final distribution.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/1_ingredient_feeding.jpg', caption: 'Ingredient Feeding & Inspection Conveyor' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/2_tomato_dicer.jpg', caption: 'Tomato Dicer / Vegetable Chopper' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/3_pulp_refiner.jpg', caption: 'Continuous Pulp Refiner' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.jpg', caption: 'Pizza Sauce Homogenizer & Holding Tank' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.jpg', caption: 'Pizza Sauce Blending & Seasoning Tank' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/6_filling_line.jpg', caption: 'Automatic Pizza Sauce Filling, Capping & Labelling Line' },
+  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/1_ingredient_feeding.webp', caption: 'Ingredient Feeding & Inspection Conveyor' },
+  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/2_tomato_dicer.webp', caption: 'Tomato Dicer / Vegetable Chopper' },
+  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/3_pulp_refiner.webp', caption: 'Continuous Pulp Refiner' },
+  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.webp', caption: 'Pizza Sauce Homogenizer & Holding Tank' },
+  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.webp', caption: 'Pizza Sauce Blending & Seasoning Tank' },
+  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/6_filling_line.webp', caption: 'Automatic Pizza Sauce Filling, Capping & Labelling Line' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function PizzaSauceProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="psp-hero">
         <div className="psp-hero__overlay" />
-        <div className="psp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pizza_sauce_hero.png')` }} />
+        <div className="psp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pizza_sauce_hero.webp')` }} />
         <div className="psp-hero__content">
           <span className="psp-hero__badge">
             <span className="psp-hero__badge-dot" />
@@ -229,7 +229,7 @@ export default function PizzaSauceProcessingDetailPage() {
               </div>
             </div>
             <div className="psp-overview__image psp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.jpg" alt="Pizza Sauce Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.webp" alt="Pizza Sauce Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Washing Conveyor",
     desc: "Thoroughly cleans dirt from raw leaves.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.jpg"
+    image: "/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.webp"
   },
   {
     name: "Sorting Belt",
     desc: "Allows workers to inspect and remove bad leaves.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.jpg"
+    image: "/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.webp"
   },
   {
     name: "Automatic Slicer",
     desc: "Cuts the top and bottom of the leaves automatically.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.jpg"
+    image: "/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.webp"
   },
   {
     name: "Gel Filleting Machine",
     desc: "Separates the bitter outer skin from the pure gel.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.jpg"
+    image: "/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.webp"
   },
   {
     name: "Juice Extractor",
     desc: "Crushes the gel into a smooth, drinkable juice.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.jpg"
+    image: "/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.webp"
   },
   {
     name: "Pasteurizer & Filler",
     desc: "Heats the juice to remove bacteria, then fills bottles.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.jpg"
+    image: "/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.jpg', caption: 'Leaf Washing' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.jpg', caption: 'Manual Sorting' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.jpg', caption: 'Automatic Slicing' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.jpg', caption: 'Gel Filleting' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.jpg', caption: 'Juice Extraction' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.jpg', caption: 'Incline Conveyor' }
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.webp', caption: 'Leaf Washing' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.webp', caption: 'Manual Sorting' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.webp', caption: 'Automatic Slicing' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.webp', caption: 'Gel Filleting' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.webp', caption: 'Juice Extraction' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.webp', caption: 'Incline Conveyor' }
 ];
 
 export default function AloeVeraJuiceProcessingPlantDetailPage() {
@@ -123,7 +123,7 @@ export default function AloeVeraJuiceProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_aloe_vera.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_aloe_vera.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

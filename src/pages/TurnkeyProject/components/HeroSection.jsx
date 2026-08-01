@@ -1,5 +1,5 @@
 // src/components/HeroSection.jsx
-import HeroIMG from "../../../assets/hero/turkey_proj.png";
+import HeroIMG from "../../../assets/hero/turkey_proj.webp";
 function HeroSection() {
   return (
     <section
@@ -18,6 +18,20 @@ function HeroSection() {
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-slate-100 sm:text-base lg:text-lg">
             Salvin Industries delivers world-class, automated manufacturing lines. From concept and engineering to installation and commissioning, we build high-capacity plants designed for unmatched hygiene, efficiency, and scale.
           </p>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <a
+              href="#brochures"
+              className="inline-flex items-center justify-center rounded-md bg-[#f47c20] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-[#e06d19] hover:shadow-xl"
+            >
+              Explore Projects
+            </a>
+            <a
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-md border-2 border-white bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-white/10"
+            >
+              Contact Experts
+            </a>
+          </div>
         </div>
       </div>
     </section>

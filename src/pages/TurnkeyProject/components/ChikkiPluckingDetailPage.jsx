@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Cooling Tunnel Conveyor',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.jpg',
+    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.webp',
     desc: 'Our custom-engineered extended cooling belt equipped with high-capacity fans to uniformly bring down the chikki sheet temperature.'
   },
   {
     name: 'Automatic Chikki Processing Machine',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_2.jpg',
+    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_2.webp',
     desc: 'State-of-the-art automated mechanism manufactured by Salvin to gently pluck and separate the chikki sheets into individual pieces without breakage.'
   },
   {
     name: 'Chikki Separation Conveyor',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_3.jpg',
+    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_3.webp',
     desc: 'Our specialized modular belt system designed in-house to reliably separate and align the plucked chikki pieces for further processing.'
   },
   {
     name: 'Inspection & Sorting Table',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_4.jpg',
+    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_4.webp',
     desc: 'Ergonomically designed Salvin illuminated quality check station for manual sorting and complete foreign particle removal.'
   },
   {
     name: 'Transfer Conveyor System',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_5.jpg',
+    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_5.webp',
     desc: 'Hygienic stainless steel transfer conveyors built by Salvin to seamlessly connect different stages of your processing line.'
   },
   {
     name: 'Packing & Collection Conveyor',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_6.jpg',
+    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_6.webp',
     desc: 'High-speed automatic packing integrated with our custom stainless steel collection bin for finished chikki packets.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.jpg', caption: 'Cooling Tunnel Conveyor' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_2.jpg', caption: 'Automatic Chikki Processing Machine' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_3.jpg', caption: 'Chikki Separation Conveyor' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_4.jpg', caption: 'Inspection & Sorting Table' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_5.jpg', caption: 'Transfer Conveyor System' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_6.jpg', caption: 'Packing & Collection Station' }
+  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.webp', caption: 'Cooling Tunnel Conveyor' },
+  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_2.webp', caption: 'Automatic Chikki Processing Machine' },
+  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_3.webp', caption: 'Chikki Separation Conveyor' },
+  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_4.webp', caption: 'Inspection & Sorting Table' },
+  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_5.webp', caption: 'Transfer Conveyor System' },
+  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_6.webp', caption: 'Packing & Collection Station' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function ChikkiPluckingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/chikki_plucking_hero.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/chikki_plucking_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function ChikkiPluckingDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.jpg" alt="Fully Automated Brittle Chikki Processing Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.webp" alt="Fully Automated Brittle Chikki Processing Plant" loading="lazy" />
             </div>
           </div>
         </div>

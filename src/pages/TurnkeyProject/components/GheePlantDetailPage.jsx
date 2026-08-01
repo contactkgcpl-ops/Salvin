@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Chilling",
     "desc": "For receiving, filtering, and rapidly cooling raw milk.",
-    "image": "/turnkey-brochures/images/ghee-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/ghee-gallery/1.webp"
   },
   {
     "name": "Cream Separator & Storage",
     "desc": "High-speed centrifugal separation and storage of cream.",
-    "image": "/turnkey-brochures/images/ghee-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/ghee-gallery/2.webp"
   },
   {
     "name": "Cream Pasteurization & Ripening",
     "desc": "Thermal processing and ripening to develop aroma.",
-    "image": "/turnkey-brochures/images/ghee-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/ghee-gallery/3.webp"
   },
   {
     "name": "Automatic Butter Churning",
     "desc": "Efficient conversion of ripened cream into white butter.",
-    "image": "/turnkey-brochures/images/ghee-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/ghee-gallery/4.webp"
   },
   {
     "name": "Ghee Clarification & Filtration",
     "desc": "Steam-jacketed kettle for boiling and clarifying ghee.",
-    "image": "/turnkey-brochures/images/ghee-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/ghee-gallery/5.webp"
   },
   {
     "name": "Automatic Ghee Filling",
     "desc": "Fills hot ghee into jars/tins with capping and sealing.",
-    "image": "/turnkey-brochures/images/ghee-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/ghee-gallery/6.webp"
   }
 ]
 
@@ -96,27 +96,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/ghee-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/ghee-gallery/1.webp",
     "caption": "Raw Milk Reception & Chilling"
   },
   {
-    "src": "/turnkey-brochures/images/ghee-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/ghee-gallery/2.webp",
     "caption": "Cream Separator & Storage"
   },
   {
-    "src": "/turnkey-brochures/images/ghee-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/ghee-gallery/3.webp",
     "caption": "Cream Pasteurization & Ripening"
   },
   {
-    "src": "/turnkey-brochures/images/ghee-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/ghee-gallery/4.webp",
     "caption": "Automatic Butter Churning"
   },
   {
-    "src": "/turnkey-brochures/images/ghee-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/ghee-gallery/5.webp",
     "caption": "Ghee Clarification & Filtration"
   },
   {
-    "src": "/turnkey-brochures/images/ghee-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/ghee-gallery/6.webp",
     "caption": "Automatic Ghee Filling & Packaging"
   }
 ]
@@ -165,7 +165,7 @@ export default function GheePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/ghee.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/ghee.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

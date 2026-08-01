@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Latex Spray Washer',
-    image: '/turnkey-brochures/images/jackfruit-gallery/latex_spray_washer.jpg',
+    image: '/turnkey-brochures/images/jackfruit-gallery/latex_spray_washer.webp',
     desc: 'Conveyor wash cabin with high-pressure fan sprayers designed to eliminate sticky latex, dirt, and impurities from raw incoming jackfruits.'
   },
   {
     name: 'Retort Autoclave Sterilizer',
-    image: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.jpg',
+    image: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp',
     desc: 'Horizontal steam autoclave sterilizer with PLC record loggers that processes sealed cans under high pressure to achieve commercial sterility.'
   },
   {
     name: 'Automatic Can Seamer',
-    image: '/turnkey-brochures/images/jackfruit-gallery/automatic_can_seamer.jpg',
+    image: '/turnkey-brochures/images/jackfruit-gallery/automatic_can_seamer.webp',
     desc: 'Heavy-duty automatic can seamer applying double-seam vacuum lids to ensure a hermetic seal for maximum shelf life.'
   },
   {
     name: 'Can Rotary Filler',
-    image: '/turnkey-brochures/images/jackfruit-gallery/can_rotary_filler.jpg',
+    image: '/turnkey-brochures/images/jackfruit-gallery/can_rotary_filler.webp',
     desc: 'Sanitary volumetric rotary filler designed for precise placement of jackfruit bulbs and controlled syrup/brine dosing into standard tin cans.'
   },
   {
     name: 'Syrup Prep Vessel',
-    image: '/turnkey-brochures/images/jackfruit-gallery/syrup_prep_vessel.jpg',
+    image: '/turnkey-brochures/images/jackfruit-gallery/syrup_prep_vessel.webp',
     desc: 'Stainless-steel jacketed mixing vessel equipped with agitators for precise preparation, heating, and holding of sugar syrup or brine solutions prior to dosing.'
   },
   {
     name: 'Continuous Belt Blancher',
-    image: '/turnkey-brochures/images/jackfruit-gallery/continuous_belt_blancher.jpg',
+    image: '/turnkey-brochures/images/jackfruit-gallery/continuous_belt_blancher.webp',
     desc: 'Hot-water continuous belt blanching chamber that softens jackfruit fibers, deactivates coloring enzymes, and preserves texture.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/jackfruit-gallery/latex_spray_washer.jpg', caption: 'Latex Spray Washer' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.jpg', caption: 'Retort Autoclave Sterilizer' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/automatic_can_seamer.jpg', caption: 'Automatic Can Seamer' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/can_rotary_filler.jpg', caption: 'Can Rotary Filler' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/syrup_prep_vessel.jpg', caption: 'Syrup Prep Vessel' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/continuous_belt_blancher.jpg', caption: 'Continuous Belt Blancher' }
+  { src: '/turnkey-brochures/images/jackfruit-gallery/latex_spray_washer.webp', caption: 'Latex Spray Washer' },
+  { src: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp', caption: 'Retort Autoclave Sterilizer' },
+  { src: '/turnkey-brochures/images/jackfruit-gallery/automatic_can_seamer.webp', caption: 'Automatic Can Seamer' },
+  { src: '/turnkey-brochures/images/jackfruit-gallery/can_rotary_filler.webp', caption: 'Can Rotary Filler' },
+  { src: '/turnkey-brochures/images/jackfruit-gallery/syrup_prep_vessel.webp', caption: 'Syrup Prep Vessel' },
+  { src: '/turnkey-brochures/images/jackfruit-gallery/continuous_belt_blancher.webp', caption: 'Continuous Belt Blancher' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function JackfruitDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="jcp-hero">
         <div className="jcp-hero__overlay" />
-        <div className="jcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.jpg')` }} />
+        <div className="jcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp')` }} />
         <div className="jcp-hero__content">
           <span className="jcp-hero__badge">
             <span className="jcp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function JackfruitDetailPage() {
               </div>
             </div>
             <div className="jcp-overview__image jcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.jpg" alt="Jackfruit Canning Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp" alt="Jackfruit Canning Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

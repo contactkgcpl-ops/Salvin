@@ -1,5 +1,5 @@
-import { useState, useMemo } from 'react'
-import { Search } from 'lucide-react'
+import { useState, useMemo, useEffect, useRef } from 'react'
+import { Search, ChevronLeft, ChevronRight } from 'lucide-react'
 import BrochureCard from './BrochureCard'
 import { brochureProjects } from '../data/brochureCatalog'
 
@@ -21,14 +21,27 @@ const CATEGORIES = [
 export default function ProjectsSection() {
   const [searchQuery, setSearchQuery] = useState('')
   const [activeCategory, setActiveCategory] = useState('All')
+  const [currentPage, setCurrentPage] = useState(1)
+  const gridRef = useRef(null)
+  const ITEMS_PER_PAGE = 15
 
   const filteredProjects = useMemo(() => {
     return brochureProjects.filter(p => {
       // 1. Check Search Query
       const lowerQuery = searchQuery.toLowerCase().trim()
-      const matchesSearch = !lowerQuery ||
-        p.title.toLowerCase().includes(lowerQuery) ||
-        p.descriptionLines.some(line => line.toLowerCase().includes(lowerQuery))
+      let matchesSearch = true
+      
+      if (lowerQuery) {
+        const genericWords = ['plant', 'system', 'machine', 'line', 'processing', 'manufacturing', 'fully', 'automatic', 'automated', 'turnkey', 'making']
+        const queryWords = lowerQuery.split(/\s+/).filter(word => !genericWords.includes(word) && word.length > 0)
+        
+        // If they only typed generic words (like "processing plant"), use those. Otherwise use the filtered meaningful words.
+        const wordsToSearch = queryWords.length > 0 ? queryWords : lowerQuery.split(/\s+/).filter(w => w.length > 0)
+        const combinedText = `${p.title} ${p.descriptionLines.join(' ')}`.toLowerCase()
+        
+        // Match if ALL meaningful words are found anywhere in the text
+        matchesSearch = wordsToSearch.every(word => combinedText.includes(word))
+      }
 
       // 2. Check Category
       let matchesCategory = true
@@ -48,10 +61,47 @@ export default function ProjectsSection() {
     })
   }, [searchQuery, activeCategory])
 
+  const totalPages = Math.ceil(filteredProjects.length / ITEMS_PER_PAGE)
+  const currentProjects = filteredProjects.slice(
+    (currentPage - 1) * ITEMS_PER_PAGE,
+    currentPage * ITEMS_PER_PAGE
+  )
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [searchQuery, activeCategory])
+
+  const handlePageChange = (newPage) => {
+    setCurrentPage(newPage)
+    if (gridRef.current) {
+      gridRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+  }
+
+  const getVisiblePages = () => {
+    let start = Math.max(1, currentPage - 2)
+    let end = Math.min(totalPages, currentPage + 2)
+    
+    if (end - start < 4) {
+      if (start === 1) {
+        end = Math.min(totalPages, 5)
+      } else if (end === totalPages) {
+        start = Math.max(1, totalPages - 4)
+      }
+    }
+    
+    const pages = []
+    for (let i = start; i <= end; i++) {
+      pages.push(i)
+    }
+    return pages
+  }
+
   return (
-    <section id="brochures" className="border-t border-slate-100 bg-[#f8fafc] py-20 lg:py-28">
+    <section id="brochures" className="border-t border-slate-100 bg-[#f8fafc] py-10 lg:py-16">
       <div className="mx-auto w-full max-w-[1400px] px-6 lg:px-12">
-        <div className="mb-16 flex flex-col items-center text-center lg:mb-20">
+        <div className="mb-10 flex flex-col items-center text-center lg:mb-12">
           <span className="inline-flex items-center gap-2 rounded-full bg-[#f47c20]/10 px-4 py-1.5 text-[11px] font-black uppercase tracking-[0.25em] text-[#f47c20] ring-1 ring-inset ring-[#f47c20]/20">
             <span className="h-1.5 w-1.5 rounded-full bg-[#f47c20] animate-pulse" aria-hidden />
             Project Portfolio
@@ -59,9 +109,9 @@ export default function ProjectsSection() {
           <h2 className="mt-6 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
             Turnkey <span className="text-[#f47c20]">Solutions</span>
           </h2>
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
-            Explore Salvin&apos;s industrial processing lines—each card reflects an installed-capacity concept
-            you can scale with our engineers from blueprint through commissioning.
+          <p className="mt-6 text-lg leading-relaxed text-slate-600 text-center">
+            With a <strong>Salvin Turnkey Project</strong>, we build a fully automated, ready-to-operate processing plant for you<br />
+            from scratch, so you can focus entirely on growing your business.
           </p>
 
           <div className="mt-10 w-full max-w-xl relative group">
@@ -93,8 +143,9 @@ export default function ProjectsSection() {
           </div>
         </div>
 
-        <ul className="turnkey-projects-grid">
-          {filteredProjects.length > 0 ? filteredProjects.map((project) => (
+        <div ref={gridRef} className="scroll-mt-32">
+          <ul className="turnkey-projects-grid">
+            {currentProjects.length > 0 ? currentProjects.map((project) => (
             <li key={project.id} className="flex list-none">
               <BrochureCard
                 title={project.title}
@@ -119,8 +170,45 @@ export default function ProjectsSection() {
                 Clear all filters
               </button>
             </div>
-          )}
-        </ul>
+            )}
+          </ul>
+        </div>
+
+        {totalPages > 1 && (
+          <div className="mt-12 flex items-center justify-center gap-2 sm:gap-4">
+            <button
+              onClick={() => handlePageChange(Math.max(1, currentPage - 1))}
+              disabled={currentPage === 1}
+              className="flex items-center justify-center gap-2 h-10 px-4 sm:h-11 sm:px-5 rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-600 transition-all hover:bg-slate-50 hover:text-[#f47c20] hover:border-[#f47c20]/50 disabled:opacity-50 disabled:pointer-events-none shadow-sm"
+            >
+              <ChevronLeft className="h-4 w-4" /> <span className="hidden sm:inline">Previous</span>
+            </button>
+            
+            <div className="flex items-center gap-1.5 sm:gap-2">
+              {getVisiblePages().map(page => (
+                <button
+                  key={page}
+                  onClick={() => handlePageChange(page)}
+                  className={`flex items-center justify-center h-10 w-10 sm:h-11 sm:w-11 rounded-full text-sm font-bold transition-all shadow-sm ${
+                    currentPage === page 
+                      ? 'bg-[#f47c20] text-white border-transparent shadow-[#f47c20]/20 scale-110'
+                      : 'bg-white text-slate-600 border border-slate-200 hover:border-[#f47c20]/50 hover:text-[#f47c20] hover:bg-slate-50'
+                  }`}
+                >
+                  {page}
+                </button>
+              ))}
+            </div>
+
+            <button
+              onClick={() => handlePageChange(Math.min(totalPages, currentPage + 1))}
+              disabled={currentPage === totalPages}
+              className="flex items-center justify-center gap-2 h-10 px-4 sm:h-11 sm:px-5 rounded-full border border-slate-200 bg-white text-sm font-semibold text-slate-600 transition-all hover:bg-slate-50 hover:text-[#f47c20] hover:border-[#f47c20]/50 disabled:opacity-50 disabled:pointer-events-none shadow-sm"
+            >
+              <span className="hidden sm:inline">Next</span> <ChevronRight className="h-4 w-4" />
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )

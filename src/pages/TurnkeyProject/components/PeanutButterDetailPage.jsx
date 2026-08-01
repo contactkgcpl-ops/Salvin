@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Rotary Hot-Air Roaster',
-    image: '/turnkey-brochures/images/peanut-butter-gallery/machine1.jpg',
+    image: '/turnkey-brochures/images/peanut-butter-gallery/machine1.webp',
     desc: 'Provides uniform roasting of peanuts to develop the desired color and flavor profile before further processing.'
   },
   {
     name: 'Peanut Skin Blancher',
-    image: '/turnkey-brochures/images/peanut-butter-gallery/machine2.jpg',
+    image: '/turnkey-brochures/images/peanut-butter-gallery/machine2.webp',
     desc: 'Efficiently removes the red skin from roasted peanuts, ensuring a clean and high-quality raw material.'
   },
   {
     name: 'High-Shear Colloid Mill',
-    image: '/turnkey-brochures/images/peanut-butter-gallery/machine3.jpg',
+    image: '/turnkey-brochures/images/peanut-butter-gallery/machine3.webp',
     desc: 'High-speed industrial colloid mill for ultra-fine grinding of peanuts to achieve smooth and consistent paste texture.'
   },
   {
     name: 'Mixing & Homogenization Tank',
-    image: '/turnkey-brochures/images/peanut-butter-gallery/machine4.jpg',
+    image: '/turnkey-brochures/images/peanut-butter-gallery/machine4.webp',
     desc: 'Blends peanut paste with stabilizers, sugar, and salt to ensure perfect homogenization and prevent oil separation.'
   },
   {
     name: 'Volumetric Jar Filler',
-    image: '/turnkey-brochures/images/peanut-butter-gallery/machine5.jpg',
+    image: '/turnkey-brochures/images/peanut-butter-gallery/machine5.webp',
     desc: 'Automated high-precision volumetric filling machine for accurately dosing peanut butter into retail jars and containers.'
   },
   {
     name: 'Cooling & Packing System',
-    image: '/turnkey-brochures/images/peanut-butter-gallery/machine6.jpg',
+    image: '/turnkey-brochures/images/peanut-butter-gallery/machine6.webp',
     desc: 'Cooling bed conveyor designed to quickly reduce product temperature after filling to ensure stable quality before final carton packing.'
   }
 ]
@@ -77,13 +77,13 @@ const FAQS = [
 
 /* ─── Gallery Images (Peanut Butter Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/hero.jpg', caption: 'Peanut Butter Processing Plant — Complete Overview' },
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine1.jpg', caption: 'Rotary Hot-Air Roaster' },
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine2.jpg', caption: 'Peanut Skin Blancher' },
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine3.jpg', caption: 'High-Shear Colloid Mill' },
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine4.jpg', caption: 'Mixing & Homogenization Tank' },
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine5.jpg', caption: 'Volumetric Jar Filler' },
-  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine6.jpg', caption: 'Cooling & Packing System' }
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/hero.webp', caption: 'Peanut Butter Processing Plant — Complete Overview' },
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine1.webp', caption: 'Rotary Hot-Air Roaster' },
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine2.webp', caption: 'Peanut Skin Blancher' },
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine3.webp', caption: 'High-Shear Colloid Mill' },
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine4.webp', caption: 'Mixing & Homogenization Tank' },
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine5.webp', caption: 'Volumetric Jar Filler' },
+  { src: '/turnkey-brochures/images/peanut-butter-gallery/machine6.webp', caption: 'Cooling & Packing System' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -138,7 +138,7 @@ export default function PeanutButterDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pbp-hero">
         <div className="pbp-hero__overlay" />
-        <div className="pbp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/peanut_butter_hero.png')` }} />
+        <div className="pbp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/peanut_butter_hero.webp')` }} />
         <div className="pbp-hero__content">
           <span className="pbp-hero__badge">
             <span className="pbp-hero__badge-dot" />
@@ -239,7 +239,7 @@ export default function PeanutButterDetailPage() {
               </div>
             </div>
             <div className="pbp-overview__image pbp-overview__image--photo">
-              <img src="/turnkey-brochures/images/peanut-butter-gallery/machine3.jpg" alt="Peanut Butter Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/peanut-butter-gallery/machine3.webp" alt="Peanut Butter Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

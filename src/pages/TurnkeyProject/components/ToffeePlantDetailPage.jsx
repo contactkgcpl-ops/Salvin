@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Vacuum Cooker",
     desc: "Boils sugar and glucose syrup without burning it.",
-    image: "/turnkey-brochures/images/toffee-gallery/1_weighing_system.jpg"
+    image: "/turnkey-brochures/images/toffee-gallery/1_weighing_system.webp"
   },
   {
     name: "Cooling Table",
     desc: "Cools the hot syrup so colors and flavors can be mixed in.",
-    image: "/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.jpg"
+    image: "/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.webp"
   },
   {
     name: "Batch Roller",
     desc: "Rolls the huge lump of candy into a thick rope.",
-    image: "/turnkey-brochures/images/toffee-gallery/3_cooling_table.jpg"
+    image: "/turnkey-brochures/images/toffee-gallery/3_cooling_table.webp"
   },
   {
     name: "Rope Sizer & Former",
     desc: "Chops the rope and stamps it into small toffee shapes.",
-    image: "/turnkey-brochures/images/toffee-gallery/4_rope_sizer.jpg"
+    image: "/turnkey-brochures/images/toffee-gallery/4_rope_sizer.webp"
   },
   {
     name: "Cooling Tunnel",
     desc: "Hardens the soft toffee shapes using cold air.",
-    image: "/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.jpg"
+    image: "/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.webp"
   },
   {
     name: "Twist Wrap Machine",
     desc: "Automatically twists a shiny wrapper around each toffee.",
-    image: "/turnkey-brochures/images/toffee-gallery/6_carton_packing.jpg"
+    image: "/turnkey-brochures/images/toffee-gallery/6_carton_packing.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/toffee-gallery/1_weighing_system.jpg', caption: 'Weighing System' },
-  { src: '/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.jpg', caption: 'Toffee Cooker' },
-  { src: '/turnkey-brochures/images/toffee-gallery/3_cooling_table.jpg', caption: 'Cooling Table' },
-  { src: '/turnkey-brochures/images/toffee-gallery/4_rope_sizer.jpg', caption: 'Rope Sizer' },
-  { src: '/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.jpg', caption: 'Wrap Packaging' },
-  { src: '/turnkey-brochures/images/toffee-gallery/6_carton_packing.jpg', caption: 'Carton Packing' }
+  { src: '/turnkey-brochures/images/toffee-gallery/1_weighing_system.webp', caption: 'Weighing System' },
+  { src: '/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.webp', caption: 'Toffee Cooker' },
+  { src: '/turnkey-brochures/images/toffee-gallery/3_cooling_table.webp', caption: 'Cooling Table' },
+  { src: '/turnkey-brochures/images/toffee-gallery/4_rope_sizer.webp', caption: 'Rope Sizer' },
+  { src: '/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.webp', caption: 'Wrap Packaging' },
+  { src: '/turnkey-brochures/images/toffee-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function ToffeePlantDetailPage() {
@@ -123,7 +123,7 @@ export default function ToffeePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_toffee.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_toffee.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

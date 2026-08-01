@@ -9,15 +9,15 @@ import {
   FaUserTie,
 } from "react-icons/fa";
 
-import img1 from "../assets/journey/d1-1.png";
-import img2 from "../assets/journey/d1-2.png";
-import img3 from "../assets/journey/d1-3.png";
-import img4 from "../assets/journey/d1-4.png";
-import img5 from "../assets/journey/d1-5.png";
-import img6 from "../assets/journey/d1-6.png";
-import img7 from "../assets/journey/d1-7.png";
-import img8 from "../assets/journey/d1-8.png";
-import img9 from "../assets/journey/d1-9.png";
+import img1 from "../assets/journey/d1-1.webp";
+import img2 from "../assets/journey/d1-2.webp";
+import img3 from "../assets/journey/d1-3.webp";
+import img4 from "../assets/journey/d1-4.webp";
+import img5 from "../assets/journey/d1-5.webp";
+import img6 from "../assets/journey/d1-6.webp";
+import img7 from "../assets/journey/d1-7.webp";
+import img8 from "../assets/journey/d1-8.webp";
+import img9 from "../assets/journey/d1-9.webp";
 
 const timeline = [
   {

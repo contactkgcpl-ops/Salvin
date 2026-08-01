@@ -39,32 +39,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     "name": "High-Capacity Vegetable Washing System",
-    "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_washing.jpg",
+    "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_washing.webp",
     "desc": "Intensive bubble and spray washing system that thoroughly cleans fresh vegetables before the freezing process begins."
   },
   {
     "name": "Automatic Cutting & Slicing Machine",
-    "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_slicing.jpg",
+    "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_slicing.webp",
     "desc": "Precision cutting machinery that dices or slices vegetables uniformly for even freezing and consistent cooking times."
   },
   {
     "name": "Continuous Blanching System",
-    "image": "/turnkey-brochures/images/frozen-veg-gallery/continuous_blancher.jpg",
+    "image": "/turnkey-brochures/images/frozen-veg-gallery/continuous_blancher.webp",
     "desc": "Steam or hot water continuous blancher that preserves vibrant colors, texture, and nutritional value prior to freezing."
   },
   {
     "name": "IQF (Individual Quick Freezing) Tunnel",
-    "image": "/turnkey-brochures/images/frozen-veg-gallery/iqf_freezer.jpg",
+    "image": "/turnkey-brochures/images/frozen-veg-gallery/iqf_freezer.webp",
     "desc": "Advanced IQF technology that rapidly freezes each vegetable piece individually, preventing clumping and cell damage."
   },
   {
     "name": "Multihead Weigher & VFFS Packaging Machine",
-    "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_packaging.jpg",
+    "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_packaging.webp",
     "desc": "High-speed, frost-resistant packaging line that accurately weighs and seals frozen vegetables into retail-ready bags."
   },
   {
     "name": "Robotic Palletizing & Cold Storage System (-18°C)",
-    "image": "/turnkey-brochures/images/frozen-veg-gallery/cold_storage.jpg",
+    "image": "/turnkey-brochures/images/frozen-veg-gallery/cold_storage.webp",
     "desc": "Automated robotic palletizer that efficiently stacks packaged frozen goods for seamless transfer to deep cold storage."
   }
 ];
@@ -95,12 +95,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/frozen-veg-gallery/veg_washing.jpg", caption: "High-Capacity Vegetable Washing System" },
-  { src: "/turnkey-brochures/images/frozen-veg-gallery/veg_slicing.jpg", caption: "Automatic Cutting & Slicing Machine" },
-  { src: "/turnkey-brochures/images/frozen-veg-gallery/continuous_blancher.jpg", caption: "Continuous Blanching System" },
-  { src: "/turnkey-brochures/images/frozen-veg-gallery/iqf_freezer.jpg", caption: "IQF (Individual Quick Freezing) Tunnel" },
-  { src: "/turnkey-brochures/images/frozen-veg-gallery/veg_packaging.jpg", caption: "Multihead Weigher & VFFS Packaging Machine" },
-  { src: "/turnkey-brochures/images/frozen-veg-gallery/cold_storage.jpg", caption: "Robotic Palletizing & Cold Storage System (-18°C)" }
+  { src: "/turnkey-brochures/images/frozen-veg-gallery/veg_washing.webp", caption: "High-Capacity Vegetable Washing System" },
+  { src: "/turnkey-brochures/images/frozen-veg-gallery/veg_slicing.webp", caption: "Automatic Cutting & Slicing Machine" },
+  { src: "/turnkey-brochures/images/frozen-veg-gallery/continuous_blancher.webp", caption: "Continuous Blanching System" },
+  { src: "/turnkey-brochures/images/frozen-veg-gallery/iqf_freezer.webp", caption: "IQF (Individual Quick Freezing) Tunnel" },
+  { src: "/turnkey-brochures/images/frozen-veg-gallery/veg_packaging.webp", caption: "Multihead Weigher & VFFS Packaging Machine" },
+  { src: "/turnkey-brochures/images/frozen-veg-gallery/cold_storage.webp", caption: "Robotic Palletizing & Cold Storage System (-18°C)" }
 ];
 
 export default function FullyAutomatedFrozenVegetableProcessingPlantDetailPage() {
@@ -145,7 +145,7 @@ export default function FullyAutomatedFrozenVegetableProcessingPlantDetailPage()
     <div className="rcp-page">
                   <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_frozen_veg.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_frozen_veg.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Frozen Vegetable Processing Plant</h1>
@@ -190,7 +190,7 @@ export default function FullyAutomatedFrozenVegetableProcessingPlantDetailPage()
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/frozen-veg-gallery/iqf_freezer.jpg" alt="Fully Automated Frozen Vegetable Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/frozen-veg-gallery/iqf_freezer.webp" alt="Fully Automated Frozen Vegetable Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

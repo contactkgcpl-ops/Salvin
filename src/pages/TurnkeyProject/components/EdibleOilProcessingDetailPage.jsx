@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Seed Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/1_cleaning_destoning.jpg',
+    image: '/turnkey-brochures/images/edible-oil-gallery/1_cleaning_destoning.webp',
     desc: 'Removes dust, stones and foreign impurities to improve oil yield and processing efficiency.'
   },
   {
     name: 'Seed Cracking & Conditioning System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/2_cracking_conditioning.jpg',
+    image: '/turnkey-brochures/images/edible-oil-gallery/2_cracking_conditioning.webp',
     desc: 'Prepares seeds for efficient oil extraction through controlled cracking and steam conditioning.'
   },
   {
     name: 'Oil Expeller Machine',
-    image: '/turnkey-brochures/images/edible-oil-gallery/3_oil_expeller.jpg',
+    image: '/turnkey-brochures/images/edible-oil-gallery/3_oil_expeller.webp',
     desc: 'Extracts crude oil efficiently while generating high-quality oil cake by-product.'
   },
   {
     name: 'Crude Oil Filtration System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/4_crude_oil_filtration.jpg',
+    image: '/turnkey-brochures/images/edible-oil-gallery/4_crude_oil_filtration.webp',
     desc: 'Removes suspended particles and impurities to produce cleaner crude oil.'
   },
   {
     name: 'Edible Oil Refining Plant',
-    image: '/turnkey-brochures/images/edible-oil-gallery/5_refining_plant.jpg',
+    image: '/turnkey-brochures/images/edible-oil-gallery/5_refining_plant.webp',
     desc: 'Performs neutralization, bleaching and deodorization for premium refined edible oil.'
   },
   {
     name: 'Automatic Oil Filling & Packaging System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.jpg',
+    image: '/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp',
     desc: 'Automates filling, capping, labeling and carton packing for final dispatch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/edible-oil-gallery/1_cleaning_destoning.jpg', caption: 'Seed Cleaning & Destoning' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/2_cracking_conditioning.jpg', caption: 'Seed Cracking & Conditioning' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/3_oil_expeller.jpg', caption: 'Oil Expeller' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/4_crude_oil_filtration.jpg', caption: 'Crude Oil Filtration' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/5_refining_plant.jpg', caption: 'Edible Oil Refining Plant' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.jpg', caption: 'Oil Packaging System' },
+  { src: '/turnkey-brochures/images/edible-oil-gallery/1_cleaning_destoning.webp', caption: 'Seed Cleaning & Destoning' },
+  { src: '/turnkey-brochures/images/edible-oil-gallery/2_cracking_conditioning.webp', caption: 'Seed Cracking & Conditioning' },
+  { src: '/turnkey-brochures/images/edible-oil-gallery/3_oil_expeller.webp', caption: 'Oil Expeller' },
+  { src: '/turnkey-brochures/images/edible-oil-gallery/4_crude_oil_filtration.webp', caption: 'Crude Oil Filtration' },
+  { src: '/turnkey-brochures/images/edible-oil-gallery/5_refining_plant.webp', caption: 'Edible Oil Refining Plant' },
+  { src: '/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp', caption: 'Oil Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function EdibleOilProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="eop-hero">
         <div className="eop-hero__overlay" />
-        <div className="eop-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.jpg')` }} />
+        <div className="eop-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp')` }} />
         <div className="eop-hero__content">
           <span className="eop-hero__badge">
             <span className="eop-hero__badge-dot" />
@@ -228,7 +228,7 @@ export default function EdibleOilProcessingDetailPage() {
               </div>
             </div>
             <div className="eop-overview__image eop-overview__image--photo">
-              <img src="/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.jpg" alt="Edible Oil Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp" alt="Edible Oil Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

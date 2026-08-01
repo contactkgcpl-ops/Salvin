@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Wheat Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.jpg',
+    image: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.webp',
     desc: 'Removes dust, stones, husk and foreign impurities to improve flour quality and milling efficiency.'
   },
   {
     name: 'Wheat Conditioning & Tempering System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.jpg',
+    image: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.webp',
     desc: 'Optimizes wheat moisture content before milling for better flour extraction and product quality.'
   },
   {
     name: 'Roller Flour Milling System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.jpg',
+    image: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.webp',
     desc: 'Performs efficient grinding and flour extraction through advanced roller milling technology.'
   },
   {
     name: 'Plansifter & Flour Grading System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.jpg',
+    image: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.webp',
     desc: 'Separates and grades flour into different products including Maida, Atta, Sooji and Bran.'
   },
   {
     name: 'Flour Storage & Blending System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.jpg',
+    image: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.webp',
     desc: 'Provides controlled storage, blending and product standardization before packaging.'
   },
   {
     name: 'Automatic Flour Packaging System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg',
+    image: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp',
     desc: 'Automates weighing, filling, sealing and packing for accurate and efficient flour packaging.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.jpg', caption: 'Wheat Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.jpg', caption: 'Wheat Conditioning & Tempering System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.jpg', caption: 'Roller Flour Milling System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.jpg', caption: 'Plansifter & Flour Grading System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.jpg', caption: 'Flour Storage & Blending System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg', caption: 'Automatic Flour Packaging System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.webp', caption: 'Wheat Cleaning & Destoning System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.webp', caption: 'Wheat Conditioning & Tempering System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.webp', caption: 'Roller Flour Milling System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.webp', caption: 'Plansifter & Flour Grading System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.webp', caption: 'Flour Storage & Blending System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp', caption: 'Automatic Flour Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function WheatFlourProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="wfp-hero">
         <div className="wfp-hero__overlay" />
-        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/wheat_flour_hero.png')` }} />
+        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/wheat_flour_hero.webp')` }} />
         <div className="wfp-hero__content">
           <span className="wfp-hero__badge">
             <span className="wfp-hero__badge-dot" />
@@ -228,7 +228,7 @@ export default function WheatFlourProcessingDetailPage() {
               </div>
             </div>
             <div className="wfp-overview__image wfp-overview__image--photo">
-              <img src="/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg" alt="Wheat Flour Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp" alt="Wheat Flour Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

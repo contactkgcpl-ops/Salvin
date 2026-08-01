@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Vibrating Screen Cleaner',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.png',
+    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp',
     desc: 'Multi-deck screening system designed to eliminate dust, stalks, sand, and light impurities from raw incoming red chillies, preparing them for downstream processing.'
   },
   {
     name: 'Gravity Destoner',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.png',
+    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp',
     desc: 'Employs density separation to clean and separate stones, glass, heavy dirt particles, and other solid contaminants from the chilli stream.'
   },
   {
     name: 'Tunnel Dryer',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_drying_tunnel.png',
+    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_drying_tunnel.webp',
     desc: 'Controlled convective tunnel drying section that gently reduces red chilli moisture levels to 8–10% while preserving ASTA color and SHU pungency.'
   },
   {
     name: 'Hammer Mill Crusher',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_grinding_unit.png',
+    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_grinding_unit.webp',
     desc: 'Heavy-duty pre-crusher designed to reduce dried whole chillies into uniform coarse flakes, facilitating high-efficiency fine grinding.'
   },
   {
     name: 'Pin Mill Grinder',
-    image: '/turnkey-brochures/images/rotary_sifter.png',
+    image: '/turnkey-brochures/images/rotary_sifter.webp',
     desc: 'Fine pulverization unit featuring ambient or cryogenic temperature control to grind chilli flakes into consistent mesh powder without losing volatile oils.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.png',
+    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.webp',
     desc: 'Fully automatic vertical form-fill-seal packaging system that packs finished chilli powder under nitrogen gas to prevent oxidation and extend shelf life.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Red Chilli Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/1_red_chilli.png', caption: 'Red Chilli Processing Plant — Complete Overview' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.png', caption: 'Red Chilli Cleaning & Destoning Line' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_drying_tunnel.png', caption: 'Red Chilli Tunnel Drying Section' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_grinding_unit.png', caption: 'Red Chilli Grinding & Pulverisation Unit' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.png', caption: 'Red Chilli Optical Color Sorting Machine' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.png', caption: 'Red Chilli Powder Packaging Station' },
+  { src: '/turnkey-brochures/images/1_red_chilli.webp', caption: 'Red Chilli Processing Plant — Complete Overview' },
+  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Red Chilli Cleaning & Destoning Line' },
+  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_drying_tunnel.webp', caption: 'Red Chilli Tunnel Drying Section' },
+  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_grinding_unit.webp', caption: 'Red Chilli Grinding & Pulverisation Unit' },
+  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp', caption: 'Red Chilli Optical Color Sorting Machine' },
+  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.webp', caption: 'Red Chilli Powder Packaging Station' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function RedChilliDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/red_chilli_hero.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/red_chilli_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function RedChilliDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.png" alt="Red Chilli Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp" alt="Red Chilli Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Cocoa Bean Roasting Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.jpg',
+    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.webp',
     desc: 'Uniformly roasts cocoa beans to develop rich aroma, flavor, and optimum moisture content.'
   },
   {
     name: 'Cocoa Bean Winnowing Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine3.jpg',
+    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine3.webp',
     desc: 'Separates cocoa nibs from shells and removes dust and light impurities.'
   },
   {
     name: 'Cocoa Grinding Machine (Cocoa Liquor Mill)',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.jpg',
+    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.webp',
     desc: 'Converts cocoa nibs into smooth cocoa liquor for further processing.'
   },
   {
     name: 'Cocoa Powder Pulverizer',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.jpg',
+    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.webp',
     desc: 'Pulverizes cocoa cake into fine cocoa powder with consistent particle size.'
   },
   {
     name: 'Vibro Sifter',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/vibro-sifter.jpg',
+    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/vibro-sifter.webp',
     desc: 'Classifies cocoa powder into desired mesh sizes and removes oversized particles.'
   },
   {
     name: 'Cocoa Powder Packaging Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine1.jpg',
+    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine1.webp',
     desc: 'Accurately fills, seals, and packs cocoa powder into pouches for final distribution.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine1.jpg', caption: 'Cocoa Powder Packaging Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.jpg', caption: 'Cocoa Bean Roasting Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine3.jpg', caption: 'Cocoa Bean Winnowing Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.jpg', caption: 'Cocoa Grinding Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.jpg', caption: 'Cocoa Powder Pulverizer' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/vibro-sifter.jpg', caption: 'Vibro Sifter' },
+  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine1.webp', caption: 'Cocoa Powder Packaging Machine' },
+  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.webp', caption: 'Cocoa Bean Roasting Machine' },
+  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine3.webp', caption: 'Cocoa Bean Winnowing Machine' },
+  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.webp', caption: 'Cocoa Grinding Machine' },
+  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.webp', caption: 'Cocoa Powder Pulverizer' },
+  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/vibro-sifter.webp', caption: 'Vibro Sifter' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function CocoaPowderProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/cocoa_powder_hero.png')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/cocoa_powder_hero.webp')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />
@@ -226,7 +226,7 @@ export default function CocoaPowderProcessingDetailPage() {
               </div>
             </div>
             <div className="cpp-overview__image cpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.jpg" alt="Cocoa Powder Processing System Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.webp" alt="Cocoa Powder Processing System Plant" loading="lazy" />
             </div>
           </div>
         </div>

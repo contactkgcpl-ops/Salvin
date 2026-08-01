@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Aerated Mixer",
     desc: "Whips air into the batter to make the cake spongy.",
-    image: "/turnkey-brochures/images/cake-gallery/1_batter_mixer.jpg"
+    image: "/turnkey-brochures/images/cake-gallery/1_batter_mixer.webp"
   },
   {
     name: "Batter Depositor",
     desc: "Pumps exactly the right amount of batter into molds.",
-    image: "/turnkey-brochures/images/cake-gallery/2_batter_depositor.jpg"
+    image: "/turnkey-brochures/images/cake-gallery/2_batter_depositor.webp"
   },
   {
     name: "Tunnel Baking Oven",
     desc: "Bakes the cakes perfectly as the trays move inside.",
-    image: "/turnkey-brochures/images/cake-gallery/3_tunnel_oven.jpg"
+    image: "/turnkey-brochures/images/cake-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Vacuum Depanner",
     desc: "Uses suction to gently lift soft cakes out of hot trays.",
-    image: "/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.jpg"
+    image: "/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Cooling Conveyor",
     desc: "Allows the hot cakes to cool down before packing.",
-    image: "/turnkey-brochures/images/cake-gallery/5_cake_decorator.jpg"
+    image: "/turnkey-brochures/images/cake-gallery/5_cake_decorator.webp"
   },
   {
     name: "Flow Wrapper",
     desc: "Packs the cakes individually to keep them fresh.",
-    image: "/turnkey-brochures/images/cake-gallery/6_packaging_machine.jpg"
+    image: "/turnkey-brochures/images/cake-gallery/6_packaging_machine.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cake-gallery/1_batter_mixer.jpg', caption: 'Batter Mixer' },
-  { src: '/turnkey-brochures/images/cake-gallery/2_batter_depositor.jpg', caption: 'Batter Depositor' },
-  { src: '/turnkey-brochures/images/cake-gallery/3_tunnel_oven.jpg', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.jpg', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/cake-gallery/5_cake_decorator.jpg', caption: 'Cake Decorator' },
-  { src: '/turnkey-brochures/images/cake-gallery/6_packaging_machine.jpg', caption: 'Packaging Machine' }
+  { src: '/turnkey-brochures/images/cake-gallery/1_batter_mixer.webp', caption: 'Batter Mixer' },
+  { src: '/turnkey-brochures/images/cake-gallery/2_batter_depositor.webp', caption: 'Batter Depositor' },
+  { src: '/turnkey-brochures/images/cake-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/cake-gallery/5_cake_decorator.webp', caption: 'Cake Decorator' },
+  { src: '/turnkey-brochures/images/cake-gallery/6_packaging_machine.webp', caption: 'Packaging Machine' }
 ];
 
 export default function CakePlantDetailPage() {
@@ -123,7 +123,7 @@ export default function CakePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cake.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cake.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

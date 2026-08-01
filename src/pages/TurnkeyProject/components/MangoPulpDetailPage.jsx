@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Mango Washing & Sorting Machine',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.jpg',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp',
     desc: 'High-capacity washing flume and sorting conveyor ensuring only quality mangoes proceed.'
   },
   {
     name: 'Mango Pulper',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.jpg',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.webp',
     desc: 'Heavy-duty pulper for maximum pulp extraction and skin/stone separation.'
   },
   {
     name: 'Pulp Preheating Tank & Refiner',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.jpg',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.webp',
     desc: 'Temperature-controlled preheating tank with integrated refining system for consistent pulp quality.'
   },
   {
     name: 'Vacuum Evaporation Concentration System',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.jpg',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.webp',
     desc: 'Vacuum concentration system that gently removes water to increase brix level and preserve aroma.'
   },
   {
     name: 'Mango Pulp Sterilization Unit',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.jpg',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.webp',
     desc: 'Advanced tubular sterilization for precise pasteurization while retaining natural flavor and nutrients.'
   },
   {
     name: 'Automatic Mango Pulp Filling & Sealing Machine',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.jpg',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.webp',
     desc: 'Highly automated aseptic filling and sealing for pouches or bottles, maximizing shelf life.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.jpg', caption: 'Mango Washing & Sorting Machine' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.jpg', caption: 'Mango Pulper' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.jpg', caption: 'Pulp Preheating Tank & Refiner' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.jpg', caption: 'Vacuum Evaporation Concentration System' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.jpg', caption: 'Mango Pulp Sterilization Unit' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.jpg', caption: 'Automatic Mango Pulp Filling & Sealing Machine' }
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp', caption: 'Mango Washing & Sorting Machine' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.webp', caption: 'Mango Pulper' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.webp', caption: 'Pulp Preheating Tank & Refiner' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.webp', caption: 'Mango Pulp Sterilization Unit' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.webp', caption: 'Automatic Mango Pulp Filling & Sealing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function MangoPulpDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/mango_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/mango_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function MangoPulpDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.jpg" alt="Fully Automatic Mango Pulp Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp" alt="Fully Automatic Mango Pulp Plant" loading="lazy" />
             </div>
           </div>
         </div>

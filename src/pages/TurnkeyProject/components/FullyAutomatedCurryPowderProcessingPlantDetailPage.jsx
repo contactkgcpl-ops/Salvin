@@ -27,12 +27,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Spice Cleaning & Destoning", desc: "Advanced cleaning machine to efficiently remove stones, dust, and impurities from raw spices.", image: "/turnkey-brochures/images/curry-powder/cleaning_destoning.jpg" },
-  { name: "Automatic Spice Roaster", desc: "Industrial rotary roaster with precise temperature control to enhance aroma and remove moisture.", image: "/turnkey-brochures/images/curry-powder/spice_roaster.jpg" },
-  { name: "Hammer Mill / Pulverizer", desc: "Heavy-duty grinding machine designed to pulverize roasted spices into uniform fine powder.", image: "/turnkey-brochures/images/curry-powder/hammer_mill.jpg" },
-  { name: "Ribbon Blender Mixer", desc: "High-capacity ribbon blending system ensuring 100% homogeneous mixing of ground spices.", image: "/turnkey-brochures/images/curry-powder/ribbon_blender.jpg" },
-  { name: "Vibro Sieving & Screening", desc: "Fine mesh vibro sifter to guarantee consistent powder size and remove any oversized particles.", image: "/turnkey-brochures/images/curry-powder/vibro_sieving.jpg" },
-  { name: "Automatic Pouch Packing", desc: "High-speed multi-head weigher and VFFS packing machine for highly accurate pouch filling.", image: "/turnkey-brochures/images/curry-powder/pouch_packing.jpg" }
+  { name: "Raw Spice Cleaning & Destoning", desc: "Advanced cleaning machine to efficiently remove stones, dust, and impurities from raw spices.", image: "/turnkey-brochures/images/curry-powder/cleaning_destoning.webp" },
+  { name: "Automatic Spice Roaster", desc: "Industrial rotary roaster with precise temperature control to enhance aroma and remove moisture.", image: "/turnkey-brochures/images/curry-powder/spice_roaster.webp" },
+  { name: "Hammer Mill / Pulverizer", desc: "Heavy-duty grinding machine designed to pulverize roasted spices into uniform fine powder.", image: "/turnkey-brochures/images/curry-powder/hammer_mill.webp" },
+  { name: "Ribbon Blender Mixer", desc: "High-capacity ribbon blending system ensuring 100% homogeneous mixing of ground spices.", image: "/turnkey-brochures/images/curry-powder/ribbon_blender.webp" },
+  { name: "Vibro Sieving & Screening", desc: "Fine mesh vibro sifter to guarantee consistent powder size and remove any oversized particles.", image: "/turnkey-brochures/images/curry-powder/vibro_sieving.webp" },
+  { name: "Automatic Pouch Packing", desc: "High-speed multi-head weigher and VFFS packing machine for highly accurate pouch filling.", image: "/turnkey-brochures/images/curry-powder/pouch_packing.webp" }
 ];
 
 /* ─── FAQs ─── */
@@ -46,12 +46,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/curry-powder/cleaning_destoning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/spice_roaster.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/ribbon_blender.jpg", caption: "Ribbon Blender Spice Mixing Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/pouch_packing.jpg", caption: "Automatic Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/curry-powder/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/spice_roaster.webp", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/ribbon_blender.webp", caption: "Ribbon Blender Spice Mixing Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/pouch_packing.webp", caption: "Automatic Pouch Filling & Packing Machine" }
 ];
 
 export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
@@ -96,7 +96,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Curry Powder Processing Plant</h1>
@@ -141,7 +141,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/curry-powder/ribbon_blender.jpg" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/curry-powder/ribbon_blender.webp" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

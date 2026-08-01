@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Wheat Pre-Cleaner & Destoner',
-    image: '/turnkey-brochures/images/atta-plant/media__1785502657836.jpg',
+    image: '/turnkey-brochures/images/atta-plant/media__1785502657836.webp',
     desc: 'High-efficiency vibrating screen and destoner combo to remove all foreign particles, dust, and stones from raw wheat.'
   },
   {
     name: 'Wheat Scourer / Washer',
-    image: '/turnkey-brochures/images/atta-plant/media__1785502672769.jpg',
+    image: '/turnkey-brochures/images/atta-plant/media__1785502672769.webp',
     desc: 'Intensive scouring machine designed to clean the surface of wheat grains and remove outer husk layers prior to milling.'
   },
   {
     name: 'Roller Mill (Chakki)',
-    image: '/turnkey-brochures/images/atta-plant/media__1785502683466.jpg',
+    image: '/turnkey-brochures/images/atta-plant/media__1785502683466.webp',
     desc: 'Heavy-duty roller milling system with chilled cast iron rolls for consistent grinding of wheat into fine atta.'
   },
   {
     name: 'Plansifter',
-    image: '/turnkey-brochures/images/atta-plant/media__1785502692356.jpg',
+    image: '/turnkey-brochures/images/atta-plant/media__1785502692356.webp',
     desc: 'Advanced multi-deck plansifter ensuring accurate grading and separation of flour, semolina, and bran.'
   },
   {
     name: 'Flour Blender & Storage Silo',
-    image: '/turnkey-brochures/images/atta-plant/media__1785502708286.jpg',
+    image: '/turnkey-brochures/images/atta-plant/media__1785502708286.webp',
     desc: 'Stainless steel batch blender and silo storage system for homogenous mixing and resting of the finished flour.'
   },
   {
     name: 'Bagging & Stitching Machine',
-    image: '/turnkey-brochures/images/atta-plant/media__1785502728547.jpg',
+    image: '/turnkey-brochures/images/atta-plant/media__1785502728547.webp',
     desc: 'Automatic electronic weighing, bagging, and stitching station for packing atta in bulk woven or paper bags.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Atta Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/atta-plant/media__1785502657836.jpg', caption: 'Wheat Pre-Cleaner & Destoner' },
-  { src: '/turnkey-brochures/images/atta-plant/media__1785502672769.jpg', caption: 'Wheat Scourer / Washer' },
-  { src: '/turnkey-brochures/images/atta-plant/media__1785502683466.jpg', caption: 'Roller Mill (Chakki)' },
-  { src: '/turnkey-brochures/images/atta-plant/media__1785502692356.jpg', caption: 'Plansifter' },
-  { src: '/turnkey-brochures/images/atta-plant/media__1785502708286.jpg', caption: 'Flour Blender & Storage Silo' },
-  { src: '/turnkey-brochures/images/atta-plant/media__1785502728547.jpg', caption: 'Bagging & Stitching Machine' }
+  { src: '/turnkey-brochures/images/atta-plant/media__1785502657836.webp', caption: 'Wheat Pre-Cleaner & Destoner' },
+  { src: '/turnkey-brochures/images/atta-plant/media__1785502672769.webp', caption: 'Wheat Scourer / Washer' },
+  { src: '/turnkey-brochures/images/atta-plant/media__1785502683466.webp', caption: 'Roller Mill (Chakki)' },
+  { src: '/turnkey-brochures/images/atta-plant/media__1785502692356.webp', caption: 'Plansifter' },
+  { src: '/turnkey-brochures/images/atta-plant/media__1785502708286.webp', caption: 'Flour Blender & Storage Silo' },
+  { src: '/turnkey-brochures/images/atta-plant/media__1785502728547.webp', caption: 'Bagging & Stitching Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedAttaPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="faap-hero">
         <div className="faap-hero__overlay" />
-        <div className="faap-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_atta.png')` }} />
+        <div className="faap-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_atta.webp')` }} />
         <div className="faap-hero__content">
           <span className="faap-hero__badge">
             <span className="faap-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function FullyAutomatedAttaPlantDetailPage() {
               </div>
             </div>
             <div className="faap-overview__image faap-overview__image--photo">
-              <img src="/turnkey-brochures/images/atta-plant/media__1785502683466.jpg" alt="Fully Automated Atta Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/atta-plant/media__1785502683466.webp" alt="Fully Automated Atta Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

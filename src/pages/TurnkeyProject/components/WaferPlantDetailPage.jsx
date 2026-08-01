@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Batter Mixer",
     desc: "Mixes flour and water into a smooth, thin liquid.",
-    image: "/turnkey-brochures/images/wafer-gallery/1_batter_mixer.jpg"
+    image: "/turnkey-brochures/images/wafer-gallery/1_batter_mixer.webp"
   },
   {
     name: "Wafer Baking Oven",
     desc: "Bakes the liquid batter into large, crispy wafer sheets.",
-    image: "/turnkey-brochures/images/wafer-gallery/2_wafer_baking.jpg"
+    image: "/turnkey-brochures/images/wafer-gallery/2_wafer_baking.webp"
   },
   {
     name: "Cream Spreader",
     desc: "Applies a smooth layer of sweet cream onto the sheets.",
-    image: "/turnkey-brochures/images/wafer-gallery/3_cream_spreading.jpg"
+    image: "/turnkey-brochures/images/wafer-gallery/3_cream_spreading.webp"
   },
   {
     name: "Cooling Tunnel",
     desc: "A giant fridge that hardens the cream to hold layers together.",
-    image: "/turnkey-brochures/images/wafer-gallery/4_block_laminating.jpg"
+    image: "/turnkey-brochures/images/wafer-gallery/4_block_laminating.webp"
   },
   {
     name: "Wire Cutting Machine",
     desc: "Slices the large wafer block into small finger shapes.",
-    image: "/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.jpg"
+    image: "/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.webp"
   },
   {
     name: "Automatic Packaging",
     desc: "Packs the crispy wafer fingers into shiny wrappers.",
-    image: "/turnkey-brochures/images/wafer-gallery/6_carton_packing.jpg"
+    image: "/turnkey-brochures/images/wafer-gallery/6_carton_packing.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/wafer-gallery/1_batter_mixer.jpg', caption: 'Batter Mixer' },
-  { src: '/turnkey-brochures/images/wafer-gallery/2_wafer_baking.jpg', caption: 'Wafer Baking' },
-  { src: '/turnkey-brochures/images/wafer-gallery/3_cream_spreading.jpg', caption: 'Cream Spreading' },
-  { src: '/turnkey-brochures/images/wafer-gallery/4_block_laminating.jpg', caption: 'Block Laminating' },
-  { src: '/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.jpg', caption: 'Flow Wrapper' },
-  { src: '/turnkey-brochures/images/wafer-gallery/6_carton_packing.jpg', caption: 'Carton Packing' }
+  { src: '/turnkey-brochures/images/wafer-gallery/1_batter_mixer.webp', caption: 'Batter Mixer' },
+  { src: '/turnkey-brochures/images/wafer-gallery/2_wafer_baking.webp', caption: 'Wafer Baking' },
+  { src: '/turnkey-brochures/images/wafer-gallery/3_cream_spreading.webp', caption: 'Cream Spreading' },
+  { src: '/turnkey-brochures/images/wafer-gallery/4_block_laminating.webp', caption: 'Block Laminating' },
+  { src: '/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.webp', caption: 'Flow Wrapper' },
+  { src: '/turnkey-brochures/images/wafer-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function WaferPlantDetailPage() {
@@ -123,7 +123,7 @@ export default function WaferPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_wafer.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_wafer.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

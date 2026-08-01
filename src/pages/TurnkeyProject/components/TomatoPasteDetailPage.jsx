@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Tomato Washing & Sorting Machine',
-    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_1.jpg',
+    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_1.webp',
     desc: 'High-capacity washing system with agitated water flumes and an inspection conveyor for manual sorting of raw tomatoes.'
   },
   {
     name: 'Tomato Pulping Line',
-    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_2.jpg',
+    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_2.webp',
     desc: 'Heavy-duty crushing and pulping unit designed to efficiently extract high-yield tomato juice while separating seeds and skin.'
   },
   {
     name: 'Tomato Paste Evaporation System',
-    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_3.jpg',
+    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_3.webp',
     desc: 'Multi-stage vacuum evaporator plant that gently removes water to concentrate tomato juice into thick paste while preserving color and flavor.'
   },
   {
     name: 'Tomato Paste Mixing Tank',
-    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_4.jpg',
+    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_4.webp',
     desc: 'Large stainless steel mixing vessel with heavy-duty agitator for uniform blending and standardizing of the tomato paste.'
   },
   {
     name: 'Tomato Paste Sterilization Unit',
-    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_5.jpg',
+    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_5.webp',
     desc: 'Advanced tubular or scraped-surface sterilizer to ensure commercial sterility and extend the shelf life of the final product.'
   },
   {
     name: 'Automatic Tomato Paste Filling & Capping Machine',
-    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_6.jpg',
+    image: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_6.webp',
     desc: 'High-precision automated filling line to hygienically pack the sterilized paste into glass jars, cans, or aseptic bags.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_1.jpg', caption: 'Tomato Washing & Sorting Machine' },
-  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_2.jpg', caption: 'Tomato Pulping Line' },
-  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_3.jpg', caption: 'Tomato Paste Evaporation System' },
-  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_4.jpg', caption: 'Tomato Paste Mixing Tank' },
-  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_5.jpg', caption: 'Tomato Paste Sterilization Unit' },
-  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_6.jpg', caption: 'Automatic Filling & Capping Machine' }
+  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_1.webp', caption: 'Tomato Washing & Sorting Machine' },
+  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_2.webp', caption: 'Tomato Pulping Line' },
+  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_3.webp', caption: 'Tomato Paste Evaporation System' },
+  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_4.webp', caption: 'Tomato Paste Mixing Tank' },
+  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_5.webp', caption: 'Tomato Paste Sterilization Unit' },
+  { src: '/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_6.webp', caption: 'Automatic Filling & Capping Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function TomatoPasteDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_paste_hero.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_paste_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function TomatoPasteDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_2.jpg" alt="Tomato Pulping Line" loading="lazy" />
+              <img src="/turnkey-brochures/images/tomato-paste-gallery/tomato_paste_2.webp" alt="Tomato Pulping Line" loading="lazy" />
             </div>
           </div>
         </div>

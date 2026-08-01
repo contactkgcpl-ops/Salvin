@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ingredient Dosing & Mixing System',
-    image: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.jpg',
+    image: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp',
     desc: 'Fully automated multi-ingredient dosing system that ensures accurate weighing and homogeneous mixing of dry powders, oats, and functional ingredients.'
   },
   {
     name: 'Syrup Preparation System',
-    image: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.jpg',
+    image: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.webp',
     desc: 'Advanced temperature-controlled kettles designed to precisely prepare binding syrups, ensuring consistent viscosity and perfect texture for bar binding.'
   },
   {
     name: 'Protein Bar Mass Mixer',
-    image: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.jpg',
+    image: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.webp',
     desc: 'Heavy-duty continuous mass mixer that uniformly blends dry ingredients with prepared syrups to create a consistent, workable protein bar dough.'
   },
   {
     name: 'Protein Bar Forming Machine',
-    image: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.jpg',
+    image: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp',
     desc: 'Precision forming extruder and slab roller unit that continuously shapes the mixed mass into uniform slabs with highly accurate thickness control.'
   },
   {
     name: 'Protein Bar Cutting Machine',
-    image: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.jpg',
+    image: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.webp',
     desc: 'High-speed ultrasonic or guillotine cutting system delivering exact portion control, clean cuts, and minimal product wastage across continuous operation.'
   },
   {
     name: 'Flow Wrapping & Packaging Machine',
-    image: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.jpg',
+    image: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.webp',
     desc: 'Fully automatic horizontal form-fill-seal flow wrapper providing hygienic, airtight packaging to maximize shelf life and maintain product freshness.'
   }
 ]
@@ -78,12 +78,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Dosing & Mixing System' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.jpg', caption: 'Syrup Preparation System' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.jpg', caption: 'Protein Bar Mass Mixer' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.jpg', caption: 'Protein Bar Forming Machine' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.jpg', caption: 'Protein Bar Cutting Machine' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.jpg', caption: 'Flow Wrapping Machine' },
+  { src: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp', caption: 'Ingredient Dosing & Mixing System' },
+  { src: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.webp', caption: 'Syrup Preparation System' },
+  { src: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.webp', caption: 'Protein Bar Mass Mixer' },
+  { src: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp', caption: 'Protein Bar Forming Machine' },
+  { src: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.webp', caption: 'Protein Bar Cutting Machine' },
+  { src: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.webp', caption: 'Flow Wrapping Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -138,7 +138,7 @@ export default function ProteinBarManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pbm-hero">
         <div className="pbm-hero__overlay" />
-        <div className="pbm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.jpg')` }} />
+        <div className="pbm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp')` }} />
         <div className="pbm-hero__content">
           <span className="pbm-hero__badge">
             <span className="pbm-hero__badge-dot" />
@@ -235,7 +235,7 @@ export default function ProteinBarManufacturingDetailPage() {
               </div>
             </div>
             <div className="pbm-overview__image pbm-overview__image--photo">
-              <img src="/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.jpg" alt="Protein Bar Manufacturing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp" alt="Protein Bar Manufacturing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

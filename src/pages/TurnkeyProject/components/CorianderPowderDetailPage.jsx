@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Coriander Seed Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/1_cleaning.jpg',
+    image: '/turnkey-brochures/images/coriander-powder-gallery/1_cleaning.webp',
     desc: 'Removes dust, stones, husk and unwanted impurities to improve product quality and processing efficiency.'
   },
   {
     name: 'Coriander Seed Roasting System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/2_roasting.jpg',
+    image: '/turnkey-brochures/images/coriander-powder-gallery/2_roasting.webp',
     desc: 'Enhances flavor and aroma through controlled roasting technology before grinding.'
   },
   {
     name: 'Coriander Seed Pulverizing System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/3_pulverizing.jpg',
+    image: '/turnkey-brochures/images/coriander-powder-gallery/3_pulverizing.webp',
     desc: 'Converts roasted coriander seeds into fine powder using high-efficiency pulverizing technology.'
   },
   {
     name: 'Coriander Powder Sieving System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/4_sieving.jpg',
+    image: '/turnkey-brochures/images/coriander-powder-gallery/4_sieving.webp',
     desc: 'Ensures uniform particle size distribution and consistent product quality through precision sieving.'
   },
   {
     name: 'Coriander Powder Storage & Blending System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/5_storage.jpg',
+    image: '/turnkey-brochures/images/coriander-powder-gallery/5_storage.webp',
     desc: 'Provides controlled storage and homogeneous blending for standardized product quality.'
   },
   {
     name: 'Coriander Powder Packaging System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/6_packaging.jpg',
+    image: '/turnkey-brochures/images/coriander-powder-gallery/6_packaging.webp',
     desc: 'Automates weighing, filling, sealing and packaging for efficient and accurate production output.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/1_cleaning.jpg', caption: 'Coriander Seed Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/2_roasting.jpg', caption: 'Coriander Seed Roasting System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/3_pulverizing.jpg', caption: 'Coriander Seed Pulverizing System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/4_sieving.jpg', caption: 'Coriander Powder Sieving System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/5_storage.jpg', caption: 'Coriander Powder Storage & Blending System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/6_packaging.jpg', caption: 'Coriander Powder Packaging System' },
+  { src: '/turnkey-brochures/images/coriander-powder-gallery/1_cleaning.webp', caption: 'Coriander Seed Cleaning & Destoning System' },
+  { src: '/turnkey-brochures/images/coriander-powder-gallery/2_roasting.webp', caption: 'Coriander Seed Roasting System' },
+  { src: '/turnkey-brochures/images/coriander-powder-gallery/3_pulverizing.webp', caption: 'Coriander Seed Pulverizing System' },
+  { src: '/turnkey-brochures/images/coriander-powder-gallery/4_sieving.webp', caption: 'Coriander Powder Sieving System' },
+  { src: '/turnkey-brochures/images/coriander-powder-gallery/5_storage.webp', caption: 'Coriander Powder Storage & Blending System' },
+  { src: '/turnkey-brochures/images/coriander-powder-gallery/6_packaging.webp', caption: 'Coriander Powder Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function CorianderPowderDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coriander-powder/coriander_powder_hero.png')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coriander-powder/coriander_powder_hero.webp')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />
@@ -224,7 +224,7 @@ export default function CorianderPowderDetailPage() {
               </div>
             </div>
             <div className="cpp-overview__image cpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/coriander-powder-gallery/6_packaging.jpg" alt="Coriander Powder Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/coriander-powder-gallery/6_packaging.webp" alt="Coriander Powder Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

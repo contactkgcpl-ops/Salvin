@@ -39,32 +39,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     "name": "Raw Spice Cleaning & Destoning Machine",
-    "image": "/turnkey-brochures/images/garam-masala-gallery/spice_cleaning.jpg",
+    "image": "/turnkey-brochures/images/garam-masala-gallery/spice_cleaning.webp",
     "desc": "Vibratory cleaning and destoning unit that removes stones, dust, and foreign particles from raw whole spices."
   },
   {
     "name": "Automatic Spice Roasting Machine",
-    "image": "/turnkey-brochures/images/garam-masala-gallery/spice_roaster.jpg",
+    "image": "/turnkey-brochures/images/garam-masala-gallery/spice_roaster.webp",
     "desc": "Temperature-controlled rotary roaster that precisely heats spices to release essential oils and enhance rich aromas."
   },
   {
     "name": "Hammer Mill / Pulverizer Grinding Machine",
-    "image": "/turnkey-brochures/images/garam-masala-gallery/hammer_mill.jpg",
+    "image": "/turnkey-brochures/images/garam-masala-gallery/hammer_mill.webp",
     "desc": "Heavy-duty pulverizer equipped with cooling technology to grind roasted spices into fine powder without losing flavor."
   },
   {
     "name": "Masala Blending Ribbon Mixer",
-    "image": "/turnkey-brochures/images/garam-masala-gallery/ribbon_mixer.jpg",
+    "image": "/turnkey-brochures/images/garam-masala-gallery/ribbon_mixer.webp",
     "desc": "Homogenous ribbon blender that perfectly mixes different spice powders to achieve a consistent, uniform Garam Masala blend."
   },
   {
     "name": "Vibro Sieving & Fine Mesh Screening Machine",
-    "image": "/turnkey-brochures/images/garam-masala-gallery/vibro_sieving.jpg",
+    "image": "/turnkey-brochures/images/garam-masala-gallery/vibro_sieving.webp",
     "desc": "High-frequency vibrating screen that filters out oversized particles, ensuring a perfectly smooth and fine masala powder."
   },
   {
     "name": "Automatic Garam Masala Pouch Filling & Packing Machine",
-    "image": "/turnkey-brochures/images/garam-masala-gallery/pouch_packing.jpg",
+    "image": "/turnkey-brochures/images/garam-masala-gallery/pouch_packing.webp",
     "desc": "High-speed auger filler and pouch packaging machine that seals masala powder in airtight packets to retain freshness."
   }
 ];
@@ -95,12 +95,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/garam-masala-gallery/spice_cleaning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/garam-masala-gallery/spice_roaster.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/garam-masala-gallery/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/garam-masala-gallery/ribbon_mixer.jpg", caption: "Masala Blending Ribbon Mixer" },
-  { src: "/turnkey-brochures/images/garam-masala-gallery/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/garam-masala-gallery/pouch_packing.jpg", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/garam-masala-gallery/spice_cleaning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/garam-masala-gallery/spice_roaster.webp", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/garam-masala-gallery/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/garam-masala-gallery/ribbon_mixer.webp", caption: "Masala Blending Ribbon Mixer" },
+  { src: "/turnkey-brochures/images/garam-masala-gallery/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/garam-masala-gallery/pouch_packing.webp", caption: "Automatic Garam Masala Pouch Filling & Packing Machine" }
 ];
 
 export default function FullyAutomatedGaramMasalaProcessingPlantDetailPage() {
@@ -145,7 +145,7 @@ export default function FullyAutomatedGaramMasalaProcessingPlantDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Garam Masala Processing Plant</h1>
@@ -190,7 +190,7 @@ export default function FullyAutomatedGaramMasalaProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/garam-masala-gallery/spice_roaster.jpg" alt="Fully Automated Garam Masala Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/garam-masala-gallery/spice_roaster.webp" alt="Fully Automated Garam Masala Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

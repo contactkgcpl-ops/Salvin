@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ginger & Garlic Washing Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine1.jpg',
+    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine1.webp',
     desc: 'Removes dirt, soil, and impurities using high-pressure washing technology.'
   },
   {
     name: 'Manual Sorting Conveyor',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine2.jpg',
+    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine2.webp',
     desc: 'Operators inspect and remove damaged ginger and garlic before processing.'
   },
   {
     name: 'Ginger & Garlic Peeling Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine3.jpg',
+    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine3.webp',
     desc: 'Automated peeling system ensures higher yield and reduced manual labor.'
   },
   {
     name: 'Ginger Garlic Crushing Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine4.jpg',
+    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine4.webp',
     desc: 'Heavy-duty crusher designed for efficient size reduction before paste production.'
   },
   {
     name: 'Ginger Garlic Colloid Mill',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine5.jpg',
+    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine5.webp',
     desc: 'Produces smooth and uniform paste consistency through high-shear milling.'
   },
   {
     name: 'Ginger Garlic Jar Filling & Capping Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine6.jpg',
+    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine6.webp',
     desc: 'Automated filling and capping system for hygienic packaging of finished paste.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine6.jpg', caption: 'Ginger Garlic Jar Filling & Capping Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine1.jpg', caption: 'Ginger & Garlic Washing Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine2.jpg', caption: 'Manual Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine3.jpg', caption: 'Ginger & Garlic Peeling Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine4.jpg', caption: 'Ginger Garlic Crushing Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine5.jpg', caption: 'Ginger Garlic Colloid Mill' },
+  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine6.webp', caption: 'Ginger Garlic Jar Filling & Capping Machine' },
+  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine1.webp', caption: 'Ginger & Garlic Washing Machine' },
+  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine2.webp', caption: 'Manual Sorting Conveyor' },
+  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine3.webp', caption: 'Ginger & Garlic Peeling Machine' },
+  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine4.webp', caption: 'Ginger Garlic Crushing Machine' },
+  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine5.webp', caption: 'Ginger Garlic Colloid Mill' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ export default function GingerGarlicPasteDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ggp-hero">
         <div className="ggp-hero__overlay" />
-        <div className="ggp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/ginger_garlic_hero.png')` }} />
+        <div className="ggp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/ginger_garlic_hero.webp')` }} />
         <div className="ggp-hero__content">
           <span className="ggp-hero__badge">
             <span className="ggp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function GingerGarlicPasteDetailPage() {
               </div>
             </div>
             <div className="ggp-overview__image ggp-overview__image--photo">
-              <img src="/turnkey-brochures/images/ginger-garlic-gallery/machine1.jpg" alt="Ginger Garlic Paste Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/ginger-garlic-gallery/machine1.webp" alt="Ginger Garlic Paste Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

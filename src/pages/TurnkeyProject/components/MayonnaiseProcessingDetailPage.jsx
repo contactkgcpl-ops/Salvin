@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './MayonnaiseProcessingDetailPage.css'
 
-import eq1 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/oil_ingredient_dosing.jpg';
-import eq2 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_premixing.jpg';
-import eq3 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_emulsification.jpg';
-import eq4 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/vacuum_homogenizer.jpg';
-import eq5 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/quality_inspection.jpg';
-import eq6 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/automatic_filling.jpg';
-import mayoHero from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/mayonnaise_hero.jpg';
+import eq1 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/oil_ingredient_dosing.webp';
+import eq2 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_premixing.webp';
+import eq3 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_emulsification.webp';
+import eq4 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/vacuum_homogenizer.webp';
+import eq5 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/quality_inspection.webp';
+import eq6 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/automatic_filling.webp';
+import mayoHero from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/mayonnaise_hero.webp';
 
 
 /* ─── Process Flow Steps ─── */

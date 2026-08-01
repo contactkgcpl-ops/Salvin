@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     "name": "RO Plant Reverse Osmosis",
     "desc": "Advanced multi-stage RO system for high-purity water generation.",
-    "image": "/turnkey-brochures/images/mineral-water-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/mineral-water-gallery/1.webp"
   },
   {
     "name": "Ozonation & UV Sterilization",
     "desc": "Eliminates harmful bacteria and microorganisms using UV and ozone.",
-    "image": "/turnkey-brochures/images/mineral-water-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/mineral-water-gallery/2.webp"
   },
   {
     "name": "Treated Water Storage Tank",
     "desc": "High capacity stainless steel tanks for storing pure mineral water.",
-    "image": "/turnkey-brochures/images/mineral-water-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/mineral-water-gallery/3.webp"
   },
   {
     "name": "Rinsing, Filling & Capping",
     "desc": "Fully automatic rotary machine for precise bottle filling.",
-    "image": "/turnkey-brochures/images/mineral-water-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/mineral-water-gallery/4.webp"
   },
   {
     "name": "Labeling & Batch Coding",
     "desc": "Automatic label application and expiry date batch coding.",
-    "image": "/turnkey-brochures/images/mineral-water-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/mineral-water-gallery/5.webp"
   },
   {
     "name": "Carton Packing & Palletizing",
     "desc": "End-of-line carton packers and robotic palletizing systems.",
-    "image": "/turnkey-brochures/images/mineral-water-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/mineral-water-gallery/6.webp"
   }
 ]
 
@@ -71,27 +71,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/mineral-water-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/mineral-water-gallery/1.webp",
     "caption": "RO Plant & Reverse Osmosis System"
   },
   {
-    "src": "/turnkey-brochures/images/mineral-water-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/mineral-water-gallery/2.webp",
     "caption": "Ozonation, UV Sterilization & Mineral Dosing Unit"
   },
   {
-    "src": "/turnkey-brochures/images/mineral-water-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/mineral-water-gallery/3.webp",
     "caption": "Treated Water Storage Tank"
   },
   {
-    "src": "/turnkey-brochures/images/mineral-water-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/mineral-water-gallery/4.webp",
     "caption": "Automatic Rinsing, Filling & Capping Machine"
   },
   {
-    "src": "/turnkey-brochures/images/mineral-water-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/mineral-water-gallery/5.webp",
     "caption": "Labeling, Shrink Wrapping & Batch Coding Machine"
   },
   {
-    "src": "/turnkey-brochures/images/mineral-water-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/mineral-water-gallery/6.webp",
     "caption": "Carton Packing Machine & Palletizing System"
   }
 ]
@@ -140,7 +140,7 @@ export default function MineralWaterPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_mineral_water.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_mineral_water.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Potato Washing & Destoning Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.jpg',
+    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.webp',
     desc: 'Removes soil, stones, dirt, and foreign materials from fresh potatoes using high-pressure washing and destoning technology.'
   },
   {
     name: 'Potato Peeling Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/2_peeling_machine.jpg',
+    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/2_peeling_machine.webp',
     desc: 'Efficiently removes potato skin with minimal product loss while maintaining product quality.'
   },
   {
     name: 'Potato Slicing Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/3_slicing_machine.jpg',
+    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/3_slicing_machine.webp',
     desc: 'Produces uniform potato slices for consistent dehydration and powder quality.'
   },
   {
     name: 'Potato Dehydration Dryer',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/4_dehydration_dryer.jpg',
+    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/4_dehydration_dryer.webp',
     desc: 'Uses controlled hot air drying technology to remove moisture while preserving product quality and color.'
   },
   {
     name: 'Potato Powder Pulverizer & Vibro Sifter',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/5_pulverizer_sifter.jpg',
+    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/5_pulverizer_sifter.webp',
     desc: 'Converts dehydrated potato flakes into fine powder and ensures uniform particle size through precision sieving.'
   },
   {
     name: 'Potato Powder Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.jpg',
+    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.webp',
     desc: 'Accurately fills, seals, and packs potato powder into retail and industrial packaging formats.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.jpg', caption: 'Potato Washing & Destoning Machine' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/2_peeling_machine.jpg', caption: 'Potato Peeling Machine' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/3_slicing_machine.jpg', caption: 'Potato Slicing Machine' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/4_dehydration_dryer.jpg', caption: 'Potato Dehydration Dryer' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/5_pulverizer_sifter.jpg', caption: 'Potato Powder Pulverizer & Vibro Sifter' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.jpg', caption: 'Potato Powder Filling & Packaging Machine' },
+  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.webp', caption: 'Potato Washing & Destoning Machine' },
+  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/2_peeling_machine.webp', caption: 'Potato Peeling Machine' },
+  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/3_slicing_machine.webp', caption: 'Potato Slicing Machine' },
+  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/4_dehydration_dryer.webp', caption: 'Potato Dehydration Dryer' },
+  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/5_pulverizer_sifter.webp', caption: 'Potato Powder Pulverizer & Vibro Sifter' },
+  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.webp', caption: 'Potato Powder Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function PotatoPowderDehydrationDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ppd-hero">
         <div className="ppd-hero__overlay" />
-        <div className="ppd-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.jpg')` }} />
+        <div className="ppd-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.webp')` }} />
         <div className="ppd-hero__content">
           <span className="ppd-hero__badge">
             <span className="ppd-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function PotatoPowderDehydrationDetailPage() {
               </div>
             </div>
             <div className="ppd-overview__image ppd-overview__image--photo">
-              <img src="/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.jpg" alt="Potato Powder Dehydration Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.webp" alt="Potato Powder Dehydration Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

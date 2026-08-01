@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Fresh Tea Leaf Sorting Conveyor',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.jpg',
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.webp',
     desc: 'Separates leaves, stems, dust, and impurities to ensure high-quality tea processing.'
   },
   {
     name: 'Tea Leaf Withering Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.jpg',
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp',
     desc: 'Reduces moisture content in fresh tea leaves and prepares them for further processing.'
   },
   {
     name: 'Tea Leaf Fixation / Steaming Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.jpg',
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.webp',
     desc: 'Uses controlled steam treatment to deactivate enzymes and preserve natural green color and flavor.'
   },
   {
     name: 'Tea Leaf Rolling Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.jpg',
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.webp',
     desc: 'Rolls tea leaves to develop shape, texture, and enhance flavor extraction characteristics.'
   },
   {
     name: 'Tea Leaf Drying Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.jpg',
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.webp',
     desc: 'Removes remaining moisture using controlled hot air drying while preserving aroma and shelf life.'
   },
   {
     name: 'Green Tea Packaging Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.jpg',
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp',
     desc: 'Accurately fills, seals, and packs green tea into pouches for retail and commercial distribution.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.jpg', caption: 'Fresh Tea Leaf Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.jpg', caption: 'Tea Leaf Withering Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.jpg', caption: 'Tea Leaf Fixation / Steaming Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.jpg', caption: 'Tea Leaf Rolling Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.jpg', caption: 'Tea Leaf Drying Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.jpg', caption: 'Green Tea Packaging Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.webp', caption: 'Fresh Tea Leaf Sorting Conveyor' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp', caption: 'Tea Leaf Withering Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.webp', caption: 'Tea Leaf Fixation / Steaming Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.webp', caption: 'Tea Leaf Rolling Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.webp', caption: 'Tea Leaf Drying Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp', caption: 'Green Tea Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function GreenTeaProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="gtp-hero">
         <div className="gtp-hero__overlay" />
-        <div className="gtp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.jpg')` }} />
+        <div className="gtp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp')` }} />
         <div className="gtp-hero__content">
           <span className="gtp-hero__badge">
             <span className="gtp-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function GreenTeaProcessingDetailPage() {
               </div>
             </div>
             <div className="gtp-overview__image gtp-overview__image--photo">
-              <img src="/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.jpg" alt="Green Tea Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp" alt="Green Tea Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

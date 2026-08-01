@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Clarifier",
     "desc": "Initial processing and purification of raw milk.",
-    "image": "/turnkey-brochures/images/lassi-gallery/1_reception.jpg"
+    "image": "/turnkey-brochures/images/lassi-gallery/1_reception.webp"
   },
   {
     "name": "Standardization & Pasteurization",
     "desc": "Ensures pathogen-free milk and uniform texture.",
-    "image": "/turnkey-brochures/images/lassi-gallery/2_pasteurization.jpg"
+    "image": "/turnkey-brochures/images/lassi-gallery/2_pasteurization.webp"
   },
   {
     "name": "Sugar Syrup & Blending",
     "desc": "Hygienic sugar dissolving and precise mixing.",
-    "image": "/turnkey-brochures/images/lassi-gallery/3_blending.jpg"
+    "image": "/turnkey-brochures/images/lassi-gallery/3_blending.webp"
   },
   {
     "name": "Cooling System & Storage",
     "desc": "Temperature adjustment and flavored lassi storage.",
-    "image": "/turnkey-brochures/images/lassi-gallery/4_cooling.jpg"
+    "image": "/turnkey-brochures/images/lassi-gallery/4_cooling.webp"
   },
   {
     "name": "Automatic Filling & Sealing",
     "desc": "High-speed bottle and pouch packaging.",
-    "image": "/turnkey-brochures/images/lassi-gallery/5_filling.jpg"
+    "image": "/turnkey-brochures/images/lassi-gallery/5_filling.webp"
   },
   {
     "name": "Carton Packing & Palletizing",
     "desc": "Automated end-of-line packaging by robot palletizer.",
-    "image": "/turnkey-brochures/images/lassi-gallery/6_packing.jpg"
+    "image": "/turnkey-brochures/images/lassi-gallery/6_packing.webp"
   }
 ];
 
@@ -92,27 +92,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/lassi-gallery/1_reception.jpg",
+    "src": "/turnkey-brochures/images/lassi-gallery/1_reception.webp",
     "caption": "Raw Milk Reception & Clarifier"
   },
   {
-    "src": "/turnkey-brochures/images/lassi-gallery/2_pasteurization.jpg",
+    "src": "/turnkey-brochures/images/lassi-gallery/2_pasteurization.webp",
     "caption": "Standardization & Pasteurization"
   },
   {
-    "src": "/turnkey-brochures/images/lassi-gallery/3_blending.jpg",
+    "src": "/turnkey-brochures/images/lassi-gallery/3_blending.webp",
     "caption": "Sugar Syrup Mixing & Blending"
   },
   {
-    "src": "/turnkey-brochures/images/lassi-gallery/4_cooling.jpg",
+    "src": "/turnkey-brochures/images/lassi-gallery/4_cooling.webp",
     "caption": "Cooling System & Storage Tanks"
   },
   {
-    "src": "/turnkey-brochures/images/lassi-gallery/5_filling.jpg",
+    "src": "/turnkey-brochures/images/lassi-gallery/5_filling.webp",
     "caption": "Automatic Filling & Sealing"
   },
   {
-    "src": "/turnkey-brochures/images/lassi-gallery/6_packing.jpg",
+    "src": "/turnkey-brochures/images/lassi-gallery/6_packing.webp",
     "caption": "Carton Packing & Palletizing"
   }
 ];
@@ -162,7 +162,7 @@ export default function LassiProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/lassi_hero.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/lassi_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -252,7 +252,7 @@ export default function LassiProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/lassi-gallery/6_packing.jpg" alt="Fully Automated Lassi Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/lassi-gallery/6_packing.webp" alt="Fully Automated Lassi Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
   {
     "name": "Milk Reception Unit",
     "desc": "Hygienic intake and chilling of raw milk.",
-    "image": "/turnkey-brochures/images/yogurt-gallery/1_reception.jpg"
+    "image": "/turnkey-brochures/images/yogurt-gallery/1_reception.webp"
   },
   {
     "name": "Clarifier & Standardizer",
     "desc": "Precise fat standardization and cleaning.",
-    "image": "/turnkey-brochures/images/yogurt-gallery/2_standardization.jpg"
+    "image": "/turnkey-brochures/images/yogurt-gallery/2_standardization.webp"
   },
   {
     "name": "Fermentation Tanks",
     "desc": "Temperature controlled incubation and fermentation.",
-    "image": "/turnkey-brochures/images/yogurt-gallery/3_fermentation.jpg"
+    "image": "/turnkey-brochures/images/yogurt-gallery/3_fermentation.webp"
   },
   {
     "name": "Cooling & Stirring Tank",
     "desc": "Controlled cooling and gentle stirring for perfect texture.",
-    "image": "/turnkey-brochures/images/yogurt-gallery/4_cooling.jpg"
+    "image": "/turnkey-brochures/images/yogurt-gallery/4_cooling.webp"
   },
   {
     "name": "Automatic Cup Filling",
     "desc": "High-speed automatic cup filling and sealing.",
-    "image": "/turnkey-brochures/images/yogurt-gallery/5_filling.jpg"
+    "image": "/turnkey-brochures/images/yogurt-gallery/5_filling.webp"
   },
   {
     "name": "Carton Packing Machine",
     "desc": "Automated end-of-line carton packaging and palletizing.",
-    "image": "/turnkey-brochures/images/yogurt-gallery/6_packing.jpg"
+    "image": "/turnkey-brochures/images/yogurt-gallery/6_packing.webp"
   }
 ];
 
@@ -92,27 +92,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/yogurt-gallery/1_reception.jpg",
+    "src": "/turnkey-brochures/images/yogurt-gallery/1_reception.webp",
     "caption": "Milk Reception Unit"
   },
   {
-    "src": "/turnkey-brochures/images/yogurt-gallery/2_standardization.jpg",
+    "src": "/turnkey-brochures/images/yogurt-gallery/2_standardization.webp",
     "caption": "Clarifier & Standardizer"
   },
   {
-    "src": "/turnkey-brochures/images/yogurt-gallery/3_fermentation.jpg",
+    "src": "/turnkey-brochures/images/yogurt-gallery/3_fermentation.webp",
     "caption": "Fermentation Tanks"
   },
   {
-    "src": "/turnkey-brochures/images/yogurt-gallery/4_cooling.jpg",
+    "src": "/turnkey-brochures/images/yogurt-gallery/4_cooling.webp",
     "caption": "Cooling & Stirring Tank"
   },
   {
-    "src": "/turnkey-brochures/images/yogurt-gallery/5_filling.jpg",
+    "src": "/turnkey-brochures/images/yogurt-gallery/5_filling.webp",
     "caption": "Automatic Cup Filling"
   },
   {
-    "src": "/turnkey-brochures/images/yogurt-gallery/6_packing.jpg",
+    "src": "/turnkey-brochures/images/yogurt-gallery/6_packing.webp",
     "caption": "Carton Packing Machine"
   }
 ];
@@ -162,7 +162,7 @@ export default function FullyAutomaticYogurtPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/yogurt_hero.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/yogurt_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -252,7 +252,7 @@ export default function FullyAutomaticYogurtPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/yogurt-gallery/5_filling.jpg" alt="Fully Automatic Yogurt Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/yogurt-gallery/5_filling.webp" alt="Fully Automatic Yogurt Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

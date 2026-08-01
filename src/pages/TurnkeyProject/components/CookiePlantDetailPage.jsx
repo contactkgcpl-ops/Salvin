@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Planetary Mixer",
     desc: "Whips the heavy cookie dough perfectly.",
-    image: "/turnkey-brochures/images/cookie-gallery/1_dough_mixer.jpg"
+    image: "/turnkey-brochures/images/cookie-gallery/1_dough_mixer.webp"
   },
   {
     name: "Wire Cut / Drop Machine",
     desc: "Slices or drops cookie dough directly onto baking trays.",
-    image: "/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.jpg"
+    image: "/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.webp"
   },
   {
     name: "Tunnel Oven",
     desc: "Bakes cookies slowly to keep them soft or crunchy.",
-    image: "/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.jpg"
+    image: "/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Cooling Belt",
     desc: "Cools the baked cookies to set their shape.",
-    image: "/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.jpg"
+    image: "/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Automatic Flow Wrapper",
     desc: "Seals the cookies individually or in small stacks.",
-    image: "/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.jpg"
+    image: "/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.webp"
   },
   {
     name: "Carton Packer",
     desc: "Loads the cookie packets into shipping boxes.",
-    image: "/turnkey-brochures/images/cookie-gallery/6_carton_sealer.jpg"
+    image: "/turnkey-brochures/images/cookie-gallery/6_carton_sealer.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cookie-gallery/1_dough_mixer.jpg', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.jpg', caption: 'Cookie Extruder' },
-  { src: '/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.jpg', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.jpg', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.jpg', caption: 'Flow Wrapper' },
-  { src: '/turnkey-brochures/images/cookie-gallery/6_carton_sealer.jpg', caption: 'Carton Sealer' }
+  { src: '/turnkey-brochures/images/cookie-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.webp', caption: 'Cookie Extruder' },
+  { src: '/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.webp', caption: 'Flow Wrapper' },
+  { src: '/turnkey-brochures/images/cookie-gallery/6_carton_sealer.webp', caption: 'Carton Sealer' }
 ];
 
 export default function CookiePlantDetailPage() {
@@ -123,7 +123,7 @@ export default function CookiePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cookie.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cookie.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

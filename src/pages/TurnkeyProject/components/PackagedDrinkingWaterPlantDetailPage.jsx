@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     "name": "RO System & Multi-Grade Filters",
     "desc": "Sand, carbon, and micron filters combined with advanced RO for purification.",
-    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/1.webp"
   },
   {
     "name": "UV & Ozonation Sterilization",
     "desc": "Ensures completely bacteria-free and microbiologically safe water.",
-    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/2.webp"
   },
   {
     "name": "Pure Water Storage Tank",
     "desc": "High capacity hygienic stainless steel tanks for storing treated water.",
-    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/3.webp"
   },
   {
     "name": "PET Preform Auto Loader",
     "desc": "Automated loading of PET preforms for the blowing machine.",
-    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/4.webp"
   },
   {
     "name": "Automatic Bottle Blowing Machine",
     "desc": "High-speed blowing machine for manufacturing PET bottles on-site.",
-    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/5.webp"
   },
   {
     "name": "Rinsing, Filling & Capping",
     "desc": "Monoblock machine for washing, filling, and sealing the bottles.",
-    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/packaged-drinking-water-gallery/6.webp"
   }
 ]
 
@@ -71,27 +71,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/1.webp",
     "caption": "Multi-Grade Filters & Reverse Osmosis System"
   },
   {
-    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/2.webp",
     "caption": "UV Sterilization & Ozonation Unit"
   },
   {
-    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/3.webp",
     "caption": "Pure Water Storage Tank"
   },
   {
-    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/4.webp",
     "caption": "PET Preform Auto Loader & Bottle Blowing"
   },
   {
-    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/5.webp",
     "caption": "Automatic PET Bottle Making Machine"
   },
   {
-    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/packaged-drinking-water-gallery/6.webp",
     "caption": "Rinsing, Filling & Capping Monoblock"
   }
 ]
@@ -140,7 +140,7 @@ export default function PackagedDrinkingWaterPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_packaged_water.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_packaged_water.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Heavy Duty Dough Mixer",
     desc: "Mixes flour, sugar, and fat into a perfect dough.",
-    image: "/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.jpg"
+    image: "/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.webp"
   },
   {
     name: "Rotary Moulder",
     desc: "Stamps the dough into perfect biscuit shapes.",
-    image: "/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.jpg"
+    image: "/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.webp"
   },
   {
     name: "Tunnel Baking Oven",
     desc: "Bakes the biscuits evenly as they pass through.",
-    image: "/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.jpg"
+    image: "/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Cooling Conveyor",
     desc: "Long belt that cools hot biscuits so they get crispy.",
-    image: "/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.jpg"
+    image: "/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Flow Wrap Machine",
     desc: "Packs the biscuits quickly into plastic wrappers.",
-    image: "/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.jpg"
+    image: "/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.webp"
   },
   {
     name: "Carton Packing System",
     desc: "Puts the wrapped biscuit packets into large boxes.",
-    image: "/turnkey-brochures/images/biscuit-gallery/6_carton_packing.jpg"
+    image: "/turnkey-brochures/images/biscuit-gallery/6_carton_packing.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.jpg', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.jpg', caption: 'Rotary Moulding' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.jpg', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.jpg', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.jpg', caption: 'Flow Wrap Packaging' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/6_carton_packing.jpg', caption: 'Carton Packing' }
+  { src: '/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.webp', caption: 'Rotary Moulding' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.webp', caption: 'Flow Wrap Packaging' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function BiscuitPlantDetailPage() {
@@ -123,7 +123,7 @@ export default function BiscuitPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_biscuit.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_biscuit.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

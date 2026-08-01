@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Spiral Dough Mixer",
     desc: "Kneads flour and yeast into stretchy, soft dough.",
-    image: "/turnkey-brochures/images/bread-gallery/1_dough_mixer.jpg"
+    image: "/turnkey-brochures/images/bread-gallery/1_dough_mixer.webp"
   },
   {
     name: "Dough Divider",
     desc: "Cuts the huge dough batch into equal-sized pieces.",
-    image: "/turnkey-brochures/images/bread-gallery/2_dough_divider.jpg"
+    image: "/turnkey-brochures/images/bread-gallery/2_dough_divider.webp"
   },
   {
     name: "Proofing Chamber",
     desc: "Warm room where the yeast makes the dough rise.",
-    image: "/turnkey-brochures/images/bread-gallery/3_bread_moulder.jpg"
+    image: "/turnkey-brochures/images/bread-gallery/3_bread_moulder.webp"
   },
   {
     name: "Baking Oven",
     desc: "Bakes the risen dough into soft, golden bread loaves.",
-    image: "/turnkey-brochures/images/bread-gallery/4_tunnel_oven.jpg"
+    image: "/turnkey-brochures/images/bread-gallery/4_tunnel_oven.webp"
   },
   {
     name: "Bread Slicer",
     desc: "Cuts the baked loaf into perfectly even slices.",
-    image: "/turnkey-brochures/images/bread-gallery/5_cooling_slicer.jpg"
+    image: "/turnkey-brochures/images/bread-gallery/5_cooling_slicer.webp"
   },
   {
     name: "Bagging Machine",
     desc: "Puts the sliced bread into plastic bags and ties them.",
-    image: "/turnkey-brochures/images/bread-gallery/6_carton_packing.jpg"
+    image: "/turnkey-brochures/images/bread-gallery/6_carton_packing.webp"
   }
 ]
 
@@ -69,12 +69,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/bread-gallery/1_dough_mixer.jpg', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/bread-gallery/2_dough_divider.jpg', caption: 'Dough Divider' },
-  { src: '/turnkey-brochures/images/bread-gallery/3_bread_moulder.jpg', caption: 'Bread Moulder' },
-  { src: '/turnkey-brochures/images/bread-gallery/4_tunnel_oven.jpg', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/bread-gallery/5_cooling_slicer.jpg', caption: 'Cooling Slicer' },
-  { src: '/turnkey-brochures/images/bread-gallery/6_carton_packing.jpg', caption: 'Carton Packing' }
+  { src: '/turnkey-brochures/images/bread-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/turnkey-brochures/images/bread-gallery/2_dough_divider.webp', caption: 'Dough Divider' },
+  { src: '/turnkey-brochures/images/bread-gallery/3_bread_moulder.webp', caption: 'Bread Moulder' },
+  { src: '/turnkey-brochures/images/bread-gallery/4_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/turnkey-brochures/images/bread-gallery/5_cooling_slicer.webp', caption: 'Cooling Slicer' },
+  { src: '/turnkey-brochures/images/bread-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function BreadPlantDetailPage() {
@@ -123,7 +123,7 @@ export default function BreadPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_bread.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_bread.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

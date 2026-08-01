@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ingredient Weighing & Batching System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.jpg',
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.webp',
     desc: 'Accurate weighing and ingredient batching system to ensure consistent mix proportions for every production run.'
   },
   {
     name: 'Mixing & Blending Machine',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.jpg',
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.webp',
     desc: 'Advanced mixing systems ensuring homogeneous blending of spices, grains, and ingredients for instant mixes.'
   },
   {
     name: 'Cooking & Processing System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.jpg',
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.webp',
     desc: 'Controlled cooking, roasting, or steaming processes tailored for specific product requirements.'
   },
   {
     name: 'Cooling & Freezing Tunnel System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.jpg',
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.webp',
     desc: 'Advanced IQF and rapid freezing technology to preserve freshness, taste, and nutritional quality of frozen foods.'
   },
   {
     name: 'Quality Inspection & Metal Detection System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.jpg',
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.webp',
     desc: 'Rigorous quality checks and metal detection to ensure compliance with stringent food safety and industry standards.'
   },
   {
     name: 'Automatic Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.jpg',
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.webp',
     desc: 'High-speed automated packaging systems ensuring accuracy, hygiene, and attractive presentation for finished products.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.jpg', caption: 'Ingredient Weighing & Batching System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.jpg', caption: 'Mixing & Blending Machine' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.jpg', caption: 'Cooking & Processing System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.jpg', caption: 'Cooling & Freezing Tunnel System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.jpg', caption: 'Quality Inspection & Metal Detection System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.jpg', caption: 'Automatic Filling & Packaging Machine' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.webp', caption: 'Ingredient Weighing & Batching System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.webp', caption: 'Mixing & Blending Machine' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.webp', caption: 'Cooking & Processing System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.webp', caption: 'Cooling & Freezing Tunnel System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.webp', caption: 'Quality Inspection & Metal Detection System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.webp', caption: 'Automatic Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ export default function InstantMixFrozenFoodDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="imff-hero">
         <div className="imff-hero__overlay" />
-        <div className="imff-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/instant_mix_frozen_food_hero.jpg')` }} />
+        <div className="imff-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/instant_mix_frozen_food_hero.webp')` }} />
         <div className="imff-hero__content">
           <span className="imff-hero__badge">
             <span className="imff-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function InstantMixFrozenFoodDetailPage() {
               </div>
             </div>
             <div className="imff-overview__image imff-overview__image--brochure">
-              <img src="/turnkey-brochures/images/instant-mix-frozen-food-processing-plant/instant-mix-frozen-food-brochure.jpg" alt="Instant Mix & Frozen Food Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/instant-mix-frozen-food-processing-plant/instant-mix-frozen-food-brochure.webp" alt="Instant Mix & Frozen Food Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
   {
     name: "Cocoa Bean Roaster",
     desc: "Roasts the raw beans to bring out the chocolate flavor.",
-    image: "/turnkey-brochures/images/chocolate-gallery/1_cocoa_roaster.jpg"
+    image: "/turnkey-brochures/images/chocolate-gallery/1_cocoa_roaster.webp"
   },
   {
     name: "Cocoa Grinder & Liquor Tank",
     desc: "Grinds the roasted beans into a thick liquid chocolate.",
-    image: "/turnkey-brochures/images/chocolate-gallery/2_cocoa_grinder.jpg"
+    image: "/turnkey-brochures/images/chocolate-gallery/2_cocoa_grinder.webp"
   },
   {
     name: "Chocolate Conche",
     desc: "Mixes and refines the chocolate so it melts in your mouth.",
-    image: "/turnkey-brochures/images/chocolate-gallery/3_chocolate_conche.jpg"
+    image: "/turnkey-brochures/images/chocolate-gallery/3_chocolate_conche.webp"
   },
   {
     name: "Tempering Machine",
     desc: "Heats and cools chocolate so it gets a shiny look and hard snap.",
-    image: "/turnkey-brochures/images/chocolate-gallery/4_chocolate_mixer.jpg"
+    image: "/turnkey-brochures/images/chocolate-gallery/4_chocolate_mixer.webp"
   },
   {
     name: "Chocolate Molding Line",
     desc: "Pours the liquid chocolate into bar or candy shapes.",
-    image: "/turnkey-brochures/images/chocolate-gallery/5_chocolate_moulding.jpg"
+    image: "/turnkey-brochures/images/chocolate-gallery/5_chocolate_moulding.webp"
   },
   {
     name: "Foil Wrapping Machine",
     desc: "Packs the finished chocolate bars in foil or plastic.",
-    image: "/turnkey-brochures/images/chocolate-gallery/6_chocolate_wrapping.jpg"
+    image: "/turnkey-brochures/images/chocolate-gallery/6_chocolate_wrapping.webp"
   }
 ]
 
@@ -69,13 +69,13 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/chocolate-gallery/1_cocoa_roaster.jpg', caption: 'Cocoa Roaster' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/2_cocoa_grinder.jpg', caption: 'Cocoa Grinder' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/3_chocolate_conche.jpg', caption: 'Chocolate Conche' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/4_chocolate_mixer.jpg', caption: 'Chocolate Mixer' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/5_chocolate_moulding.jpg', caption: 'Chocolate Moulding' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/6_chocolate_wrapping.jpg', caption: 'Chocolate Wrapping' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/6_packaging_system.jpg', caption: 'Packaging System' }
+  { src: '/turnkey-brochures/images/chocolate-gallery/1_cocoa_roaster.webp', caption: 'Cocoa Roaster' },
+  { src: '/turnkey-brochures/images/chocolate-gallery/2_cocoa_grinder.webp', caption: 'Cocoa Grinder' },
+  { src: '/turnkey-brochures/images/chocolate-gallery/3_chocolate_conche.webp', caption: 'Chocolate Conche' },
+  { src: '/turnkey-brochures/images/chocolate-gallery/4_chocolate_mixer.webp', caption: 'Chocolate Mixer' },
+  { src: '/turnkey-brochures/images/chocolate-gallery/5_chocolate_moulding.webp', caption: 'Chocolate Moulding' },
+  { src: '/turnkey-brochures/images/chocolate-gallery/6_chocolate_wrapping.webp', caption: 'Chocolate Wrapping' },
+  { src: '/turnkey-brochures/images/chocolate-gallery/6_packaging_system.webp', caption: 'Packaging System' }
 ];
 
 export default function ChocolateProcessingPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function ChocolateProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_chocolate.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_chocolate.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

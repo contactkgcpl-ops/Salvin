@@ -39,32 +39,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     "name": "Automatic Garlic Bulb Breaking & Peeling Machine",
-    "image": "/turnkey-brochures/images/garlic-gallery/bulb_breaking.jpg",
+    "image": "/turnkey-brochures/images/garlic-gallery/bulb_breaking.webp",
     "desc": "High-efficiency machine that gently separates garlic bulbs into individual cloves without damaging the surface."
   },
   {
     "name": "Garlic Peeling & Washing Machine",
-    "image": "/turnkey-brochures/images/garlic-gallery/garlic_washing.jpg",
+    "image": "/turnkey-brochures/images/garlic-gallery/garlic_washing.webp",
     "desc": "Pneumatic peeling system combined with a high-pressure washing flume to ensure perfectly clean, skin-free garlic cloves."
   },
   {
     "name": "High-Speed Garlic Slicer",
-    "image": "/turnkey-brochures/images/garlic-gallery/garlic_slicer.jpg",
+    "image": "/turnkey-brochures/images/garlic-gallery/garlic_slicer.webp",
     "desc": "Precision slicing equipment that cuts garlic into uniform flakes, ensuring consistent drying and maximum flavor retention."
   },
   {
     "name": "Continuous Belt Dryer for Dehydration",
-    "image": "/turnkey-brochures/images/garlic-gallery/belt_dryer.jpg",
+    "image": "/turnkey-brochures/images/garlic-gallery/belt_dryer.webp",
     "desc": "Multi-layer hot air drying system that precisely dehydrates garlic flakes while locking in pungency and aroma."
   },
   {
     "name": "Vibratory Sorting & Grading Machine",
-    "image": "/turnkey-brochures/images/garlic-gallery/vibratory_sorting.jpg",
+    "image": "/turnkey-brochures/images/garlic-gallery/vibratory_sorting.webp",
     "desc": "Advanced sorting machine that separates dehydrated garlic by size and removes impurities for premium quality output."
   },
   {
     "name": "Automatic Dehydrated Garlic Packaging Machine",
-    "image": "/turnkey-brochures/images/garlic-gallery/garlic_packaging.jpg",
+    "image": "/turnkey-brochures/images/garlic-gallery/garlic_packaging.webp",
     "desc": "Automated weighing and packaging line designed to seal dehydrated garlic in moisture-proof bags for extended shelf life."
   }
 ];
@@ -95,12 +95,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/garlic-gallery/bulb_breaking.jpg", caption: "Automatic Garlic Bulb Breaking & Peeling Machine" },
-  { src: "/turnkey-brochures/images/garlic-gallery/garlic_washing.jpg", caption: "Garlic Peeling & Washing Machine" },
-  { src: "/turnkey-brochures/images/garlic-gallery/garlic_slicer.jpg", caption: "High-Speed Garlic Slicer" },
-  { src: "/turnkey-brochures/images/garlic-gallery/belt_dryer.jpg", caption: "Continuous Belt Dryer for Dehydration" },
-  { src: "/turnkey-brochures/images/garlic-gallery/vibratory_sorting.jpg", caption: "Vibratory Sorting & Grading Machine" },
-  { src: "/turnkey-brochures/images/garlic-gallery/garlic_packaging.jpg", caption: "Automatic Dehydrated Garlic Packaging Machine" }
+  { src: "/turnkey-brochures/images/garlic-gallery/bulb_breaking.webp", caption: "Automatic Garlic Bulb Breaking & Peeling Machine" },
+  { src: "/turnkey-brochures/images/garlic-gallery/garlic_washing.webp", caption: "Garlic Peeling & Washing Machine" },
+  { src: "/turnkey-brochures/images/garlic-gallery/garlic_slicer.webp", caption: "High-Speed Garlic Slicer" },
+  { src: "/turnkey-brochures/images/garlic-gallery/belt_dryer.webp", caption: "Continuous Belt Dryer for Dehydration" },
+  { src: "/turnkey-brochures/images/garlic-gallery/vibratory_sorting.webp", caption: "Vibratory Sorting & Grading Machine" },
+  { src: "/turnkey-brochures/images/garlic-gallery/garlic_packaging.webp", caption: "Automatic Dehydrated Garlic Packaging Machine" }
 ];
 
 export default function FullyAutomaticDehydratedGarlicPlantDetailPage() {
@@ -145,7 +145,7 @@ export default function FullyAutomaticDehydratedGarlicPlantDetailPage() {
     <div className="rcp-page">
                   <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garlic.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garlic.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Dehydrated Garlic Plant</h1>
@@ -190,7 +190,7 @@ export default function FullyAutomaticDehydratedGarlicPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/garlic-gallery/belt_dryer.jpg" alt="Fully Automatic Dehydrated Garlic Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/garlic-gallery/belt_dryer.webp" alt="Fully Automatic Dehydrated Garlic Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

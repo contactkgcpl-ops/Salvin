@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Seed Pre-Cleaner Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.jpg',
+    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.webp',
     desc: 'Removes dust, chaff, light impurities, and oversized contaminants from incoming seeds.'
   },
   {
     name: 'Seed Inspection Sorting Conveyor',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine2.jpg',
+    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine2.webp',
     desc: 'Provides manual inspection for removal of damaged seeds and foreign materials.'
   },
   {
     name: 'Seed Destoner Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine3.jpg',
+    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine3.webp',
     desc: 'Separates stones, heavy impurities, and unwanted materials from seeds.'
   },
   {
     name: 'Seed Gravity Separator',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine4.jpg',
+    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine4.webp',
     desc: 'Separates seeds based on density to improve overall seed quality and germination performance.'
   },
   {
     name: 'Seed Grading Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine5.jpg',
+    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine5.webp',
     desc: 'Grades seeds into multiple size categories for uniformity and quality control.'
   },
   {
     name: 'Automatic Seed Packaging Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine6.jpg',
+    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine6.webp',
     desc: 'Accurately weighs, fills, and seals seeds into bags or pouches for final dispatch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine6.jpg', caption: 'Automatic Seed Packaging Machine' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.jpg', caption: 'Seed Pre-Cleaner Machine' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine2.jpg', caption: 'Seed Inspection Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine3.jpg', caption: 'Seed Destoner Machine' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine4.jpg', caption: 'Seed Gravity Separator' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine5.jpg', caption: 'Seed Grading Machine' },
+  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine6.webp', caption: 'Automatic Seed Packaging Machine' },
+  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.webp', caption: 'Seed Pre-Cleaner Machine' },
+  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine2.webp', caption: 'Seed Inspection Sorting Conveyor' },
+  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine3.webp', caption: 'Seed Destoner Machine' },
+  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine4.webp', caption: 'Seed Gravity Separator' },
+  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine5.webp', caption: 'Seed Grading Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function SeedCleaningSortingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="scs-hero">
         <div className="scs-hero__overlay" />
-        <div className="scs-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/seed_cleaning_hero.png')` }} />
+        <div className="scs-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/seed_cleaning_hero.webp')` }} />
         <div className="scs-hero__content">
           <span className="scs-hero__badge">
             <span className="scs-hero__badge-dot" />
@@ -226,7 +226,7 @@ export default function SeedCleaningSortingDetailPage() {
               </div>
             </div>
             <div className="scs-overview__image scs-overview__image--photo">
-              <img src="/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.jpg" alt="Seed Cleaning & Sorting Line Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.webp" alt="Seed Cleaning & Sorting Line Plant" loading="lazy" />
             </div>
           </div>
         </div>

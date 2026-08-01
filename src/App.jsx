@@ -3,13 +3,13 @@ import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchPara
 import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
 import "./App.css";
 import Cropper from "react-easy-crop";
-import machineryLayoutImage from "./assets/machinery-layout.png";
-import blueMachinesImage from "./assets/blue-machines.png";
+import machineryLayoutImage from "./assets/machinery-layout.webp";
+import blueMachinesImage from "./assets/blue-machines.webp";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 // import IntroOverlay from "./components/IntroOverlay";
-import searchIcon from './assets/search.png'
+import searchIcon from './assets/search.webp'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
@@ -162,30 +162,40 @@ import FullyAutomatedAttaPlantDetailPage from "./pages/TurnkeyProject/components
 import FullyAutomatedBesanProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedBesanProcessingPlantDetailPage";
 import FullyAutomatedCornFlourPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedCornFlourPlantDetailPage";
 import OatProcessingPlantDetailPage from "./pages/TurnkeyProject/components/OatProcessingPlantDetailPage";
+import JaggeryProcessingPlantDetailPage from "./pages/TurnkeyProject/components/JaggeryProcessingPlantDetailPage";
+import SugarSyrupPlantDetailPage from "./pages/TurnkeyProject/components/SugarSyrupPlantDetailPage";
+import BabyFoodPlantDetailPage from "./pages/TurnkeyProject/components/BabyFoodPlantDetailPage";
+import MaltedFoodPlantDetailPage from "./pages/TurnkeyProject/components/MaltedFoodPlantDetailPage";
+import CocoaPowderPlantDetailPage from "./pages/TurnkeyProject/components/CocoaPowderPlantDetailPage";
+import ProteinBarPlantDetailPage from "./pages/TurnkeyProject/components/ProteinBarPlantDetailPage";
+import MilletProcessingPlantDetailPage from "./pages/TurnkeyProject/components/MilletProcessingPlantDetailPage";
+import BottleFillingLineDetailPage from "./pages/TurnkeyProject/components/BottleFillingLineDetailPage";
+import PanipuriProcessingLineDetailPage from "./pages/TurnkeyProject/components/PanipuriProcessingLineDetailPage";
+import ChapatiProcessingLineDetailPage from "./pages/TurnkeyProject/components/ChapatiProcessingLineDetailPage";
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import ServicesPage from "./pages/ServicesPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
-import Decade from "./assets/home_extra/decade_experties.png";
-import global from "./assets/home_extra/globalsupport.png";
-import innovation from "./assets/home_extra/innovation.png";
-import quality from "./assets/home_extra/quality.png";
-import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
-import projproteinbar from "./assets/industry-divisions/proteinbar.png";
+import Decade from "./assets/home_extra/decade_experties.webp";
+import global from "./assets/home_extra/globalsupport.webp";
+import innovation from "./assets/home_extra/innovation.webp";
+import quality from "./assets/home_extra/quality.webp";
+import industryTurnkey from "./assets/industry-divisions/turnkey-projects.webp";
+import projproteinbar from "./assets/industry-divisions/proteinbar.webp";
 import industryAutomation from "./assets/industry-divisions/automation-robotics.webp";
-import industryProcessing from "./assets/industry-divisions/processing-packaging.png";
-import industryConsultancy from "./assets/industry-divisions/food_consultant.jpg";
-import industryMaintenance from "./assets/industry-divisions/machine-maintenance.jpg";
+import industryProcessing from "./assets/industry-divisions/processing-packaging.webp";
+import industryConsultancy from "./assets/industry-divisions/food_consultant.webp";
+import industryMaintenance from "./assets/industry-divisions/machine-maintenance.webp";
 import projHoney from "./assets/home_projects/honey processing plant.webp";
-import projSpices from "./assets/home_projects/spices_processing.png";
-import projApi from "./assets/home_projects/APi_Plant.jpg";
-import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
-import projRice from "./assets/home_projects/puffed_rice.png";
-import projectHeroImage from "./assets/hero/turkey_proj.png";
-import machineHeroImage from "./assets/hero/salvinhero2.png";
-import sparesHeroImage from "./assets/hero/sparse02.png";
-import salvinLogo from "./assets/salvin_logo.png";
+import projSpices from "./assets/home_projects/spices_processing.webp";
+import projApi from "./assets/home_projects/APi_Plant.webp";
+import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.webp";
+import projRice from "./assets/home_projects/puffed_rice.webp";
+import projectHeroImage from "./assets/hero/turkey_proj.webp";
+import machineHeroImage from "./assets/hero/salvinhero2.webp";
+import sparesHeroImage from "./assets/hero/sparse02.webp";
+import salvinLogo from "./assets/salvin_logo.webp";
 
 
 const serviceCards = [
@@ -2787,6 +2797,16 @@ export default function App() {
           <Route path="/turnkey-project/fully-automated-besan-processing-plant" element={<FullyAutomatedBesanProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-corn-flour-plant" element={<FullyAutomatedCornFlourPlantDetailPage />} />
           <Route path="/turnkey-project/oat-processing-plant" element={<OatProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/jaggery-processing-plant" element={<JaggeryProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/sugar-syrup-plant" element={<SugarSyrupPlantDetailPage />} />
+          <Route path="/turnkey-project/baby-food-plant" element={<BabyFoodPlantDetailPage />} />
+          <Route path="/turnkey-project/malted-food-plant" element={<MaltedFoodPlantDetailPage />} />
+          <Route path="/turnkey-project/cocoa-powder-processing-plant" element={<CocoaPowderPlantDetailPage />} />
+          <Route path="/turnkey-project/protein-bar-manufacturing-plant" element={<ProteinBarPlantDetailPage />} />
+          <Route path="/turnkey-project/millet-processing-plant" element={<MilletProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/bottle-filling-line" element={<BottleFillingLineDetailPage />} />
+          <Route path="/turnkey-project/panipuri-processing-line" element={<PanipuriProcessingLineDetailPage />} />
+          <Route path="/turnkey-project/chapati-processing-line" element={<ChapatiProcessingLineDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

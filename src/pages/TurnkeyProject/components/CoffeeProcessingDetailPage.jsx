@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Coffee Bean Cleaning Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/1_cleaning_machine.jpg',
+    image: '/turnkey-brochures/images/coffee-processing-gallery/1_cleaning_machine.webp',
     desc: 'Removes stones, dust, broken beans, and impurities to ensure clean coffee beans before roasting.'
   },
   {
     name: 'Coffee Bean Roasting Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.jpg',
+    image: '/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.webp',
     desc: 'Uniformly roasts coffee beans to develop rich aroma, flavor, and desired roast characteristics.'
   },
   {
     name: 'Coffee Bean Cooling Conveyor',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/3_cooling_conveyor.jpg',
+    image: '/turnkey-brochures/images/coffee-processing-gallery/3_cooling_conveyor.webp',
     desc: 'Rapidly cools roasted coffee beans to preserve flavor and prevent over-roasting.'
   },
   {
     name: 'Coffee Powder Grinding Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/4_grinding_machine.jpg',
+    image: '/turnkey-brochures/images/coffee-processing-gallery/4_grinding_machine.webp',
     desc: 'Grinds roasted coffee beans into fine and uniform coffee powder suitable for different applications.'
   },
   {
     name: 'Coffee Powder Blending Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/5_blending_machine.jpg',
+    image: '/turnkey-brochures/images/coffee-processing-gallery/5_blending_machine.webp',
     desc: 'Provides homogeneous blending of coffee powder batches to ensure consistent taste and quality.'
   },
   {
     name: 'Coffee Powder Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.jpg',
+    image: '/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.webp',
     desc: 'Accurately fills, seals, and packs coffee powder into pouches for final distribution and retail sale.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/1_cleaning_machine.jpg', caption: 'Coffee Bean Cleaning Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.jpg', caption: 'Coffee Bean Roasting Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/3_cooling_conveyor.jpg', caption: 'Coffee Bean Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/4_grinding_machine.jpg', caption: 'Coffee Powder Grinding Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/5_blending_machine.jpg', caption: 'Coffee Powder Blending Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.jpg', caption: 'Coffee Powder Filling & Packaging Machine' },
+  { src: '/turnkey-brochures/images/coffee-processing-gallery/1_cleaning_machine.webp', caption: 'Coffee Bean Cleaning Machine' },
+  { src: '/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.webp', caption: 'Coffee Bean Roasting Machine' },
+  { src: '/turnkey-brochures/images/coffee-processing-gallery/3_cooling_conveyor.webp', caption: 'Coffee Bean Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/coffee-processing-gallery/4_grinding_machine.webp', caption: 'Coffee Powder Grinding Machine' },
+  { src: '/turnkey-brochures/images/coffee-processing-gallery/5_blending_machine.webp', caption: 'Coffee Powder Blending Machine' },
+  { src: '/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.webp', caption: 'Coffee Powder Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function CoffeeProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cp-hero">
         <div className="cp-hero__overlay" />
-        <div className="cp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.jpg')` }} />
+        <div className="cp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.webp')` }} />
         <div className="cp-hero__content">
           <span className="cp-hero__badge">
             <span className="cp-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function CoffeeProcessingDetailPage() {
               </div>
             </div>
             <div className="cp-overview__image cp-overview__image--photo">
-              <img src="/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.jpg" alt="Coffee Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.webp" alt="Coffee Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

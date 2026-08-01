@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Oat Cleaning, Destoning & Grading System',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504316135.jpg',
+    image: '/turnkey-brochures/images/oat-plant/media__1785504316135.webp',
     desc: 'High-efficiency vibratory screening and destoning system designed to remove dust, straw, stones, and separate raw oats by size.'
   },
   {
     name: 'Oat Huller / Dehulling Machine',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504355145.jpg',
+    image: '/turnkey-brochures/images/oat-plant/media__1785504355145.webp',
     desc: 'Specialized centrifugal huller to carefully detach the hull from the oat groats with maximum efficiency and minimal breakage.'
   },
   {
     name: 'Oat Kilning, Steaming & Conditioning',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504447423.jpg',
+    image: '/turnkey-brochures/images/oat-plant/media__1785504447423.webp',
     desc: 'Advanced kilning and steaming system to deactivate enzymes, enhance flavor, and condition the oat groats for optimal flaking.'
   },
   {
     name: 'Oat Flaking Roller Machine',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504578350.jpg',
+    image: '/turnkey-brochures/images/oat-plant/media__1785504578350.webp',
     desc: 'Heavy-duty flaking machine equipped with precision chilled cast iron rolls to press conditioned oats into uniform, high-quality flakes.'
   },
   {
     name: 'Oat Cooling, Grading & Storage Silo',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504738661.jpg',
+    image: '/turnkey-brochures/images/oat-plant/media__1785504738661.webp',
     desc: 'Integrated fluid-bed cooler and grader to reduce flake temperature, remove fines, and store finished flakes in hygienic silos.'
   },
   {
     name: 'Automatic Weighing & Bagging Machine',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504774919.jpg',
+    image: '/turnkey-brochures/images/oat-plant/media__1785504774919.webp',
     desc: 'Fully automatic multi-head weighing and vertical form-fill-seal (VFFS) machine for packing oat flakes into retail pouches and bags.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Oat Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504316135.jpg', caption: 'Oat Cleaning, Destoning & Grading System' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504355145.jpg', caption: 'Oat Huller / Dehulling Machine' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504447423.jpg', caption: 'Oat Kilning, Steaming & Conditioning System' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504578350.jpg', caption: 'Oat Flaking Roller Machine' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504738661.jpg', caption: 'Oat Cooling, Grading & Storage Silo System' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504774919.jpg', caption: 'Automatic Weighing & Bagging Machine' }
+  { src: '/turnkey-brochures/images/oat-plant/media__1785504316135.webp', caption: 'Oat Cleaning, Destoning & Grading System' },
+  { src: '/turnkey-brochures/images/oat-plant/media__1785504355145.webp', caption: 'Oat Huller / Dehulling Machine' },
+  { src: '/turnkey-brochures/images/oat-plant/media__1785504447423.webp', caption: 'Oat Kilning, Steaming & Conditioning System' },
+  { src: '/turnkey-brochures/images/oat-plant/media__1785504578350.webp', caption: 'Oat Flaking Roller Machine' },
+  { src: '/turnkey-brochures/images/oat-plant/media__1785504738661.webp', caption: 'Oat Cooling, Grading & Storage Silo System' },
+  { src: '/turnkey-brochures/images/oat-plant/media__1785504774919.webp', caption: 'Automatic Weighing & Bagging Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function OatProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_oat.png')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_oat.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge">
             <span className="opp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function OatProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/oat-plant/media__1785504578350.jpg" alt="Oat Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/oat-plant/media__1785504578350.webp" alt="Oat Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

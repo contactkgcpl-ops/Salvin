@@ -3,12 +3,12 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './MayonnaiseProcessingDetailPage.css'
 
-import eq1 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/1_flour_mixing_dough_preparation.jpg';
-import eq2 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/2_dough_sheeting_compound_roller.jpg';
-import eq3 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/3_noodle_slitting_waving.jpg';
-import eq4 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/4_continuous_steaming.jpg';
-import eq5 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/5_continuous_noodle_frying.jpg';
-import eq6 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/6_automatic_noodle_packaging.jpg';
+import eq1 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/1_flour_mixing_dough_preparation.webp';
+import eq2 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/2_dough_sheeting_compound_roller.webp';
+import eq3 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/3_noodle_slitting_waving.webp';
+import eq4 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/4_continuous_steaming.webp';
+import eq5 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/5_continuous_noodle_frying.webp';
+import eq6 from '../../../assets/turnkey-brochures/images/instant-noodles-gallery/6_automatic_noodle_packaging.webp';
 import { Blend, Wheat, Layers, Scissors, Droplets, Flame, Package } from 'lucide-react';
 
 
@@ -143,7 +143,7 @@ export default function InstantNoodlesDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="mpp-hero">
         <div className="mpp-hero__overlay" style={{ background: 'linear-gradient(to right, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.6) 100%)' }} />
-        <div className="mpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/instant-noodles-plant/instant_noodles_hero_banner.png')`, backgroundPosition: 'center', backgroundSize: 'cover' }} />
+        <div className="mpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/instant-noodles-plant/instant_noodles_hero_banner.webp')`, backgroundPosition: 'center', backgroundSize: 'cover' }} />
         <div className="mpp-hero__content">
           <span className="mpp-hero__badge">
             <span className="mpp-hero__badge-dot" />

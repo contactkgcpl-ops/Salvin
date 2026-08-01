@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Vibratory Grading Conveyor',
-    image: '/turnkey-brochures/images/namkeen/media__1785499227685.jpg',
+    image: '/turnkey-brochures/images/namkeen/media__1785499227685.webp',
     desc: 'Vibratory sifting to remove broken pieces and ensure uniform product size for incoming raw materials.'
   },
   {
     name: 'Dough Mixer & Extruder',
-    image: '/turnkey-brochures/images/namkeen/media__1785499234267.jpg',
+    image: '/turnkey-brochures/images/namkeen/media__1785499234267.webp',
     desc: 'High-speed dough mixing and extrusion system for forming consistent namkeen shapes and textures.'
   },
   {
     name: 'Continuous Frying System',
-    image: '/turnkey-brochures/images/namkeen/media__1785499242760.jpg',
+    image: '/turnkey-brochures/images/namkeen/media__1785499242760.webp',
     desc: 'Automated continuous fryer with precise temperature control for uniform cooking and crispiness.'
   },
   {
     name: 'Oil Extraction & Cooling',
-    image: '/turnkey-brochures/images/namkeen/media__1785499254675.jpg',
+    image: '/turnkey-brochures/images/namkeen/media__1785499254675.webp',
     desc: 'Efficient de-oiling and ambient cooling conveyors to preserve crispness and remove excess surface oil.'
   },
   {
     name: 'Flavor Coating Drum',
-    image: '/turnkey-brochures/images/namkeen/media__1785499263214.jpg',
+    image: '/turnkey-brochures/images/namkeen/media__1785499263214.webp',
     desc: 'Rotary seasoning drum for even application of dry spices and flavorings across all namkeen products.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/namkeen/media__1785499273491.jpg',
+    image: '/turnkey-brochures/images/namkeen/media__1785499273491.webp',
     desc: 'Fully automatic vertical form-fill-seal packaging system with multi-head weighers for accurate retail pouch packing.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Namkeen Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/namkeen/media__1785499273491.jpg', caption: 'Automated Pouch Packing & Multi-head Weigher' },
-  { src: '/turnkey-brochures/images/namkeen/media__1785499263214.jpg', caption: 'Flavor Coating & Seasoning Drum' },
-  { src: '/turnkey-brochures/images/namkeen/media__1785499254675.jpg', caption: 'Oil Extraction & Cooling Conveyors' },
-  { src: '/turnkey-brochures/images/namkeen/media__1785499242760.jpg', caption: 'Continuous Frying System' },
-  { src: '/turnkey-brochures/images/namkeen/media__1785499234267.jpg', caption: 'Dough Mixing & Extrusion Line' },
-  { src: '/turnkey-brochures/images/namkeen/media__1785499227685.jpg', caption: 'Vibratory Grading & Conveying' }
+  { src: '/turnkey-brochures/images/namkeen/media__1785499273491.webp', caption: 'Automated Pouch Packing & Multi-head Weigher' },
+  { src: '/turnkey-brochures/images/namkeen/media__1785499263214.webp', caption: 'Flavor Coating & Seasoning Drum' },
+  { src: '/turnkey-brochures/images/namkeen/media__1785499254675.webp', caption: 'Oil Extraction & Cooling Conveyors' },
+  { src: '/turnkey-brochures/images/namkeen/media__1785499242760.webp', caption: 'Continuous Frying System' },
+  { src: '/turnkey-brochures/images/namkeen/media__1785499234267.webp', caption: 'Dough Mixing & Extrusion Line' },
+  { src: '/turnkey-brochures/images/namkeen/media__1785499227685.webp', caption: 'Vibratory Grading & Conveying' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedNamkeenPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="fanp-hero">
         <div className="fanp-hero__overlay" />
-        <div className="fanp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_namkeen.png')` }} />
+        <div className="fanp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_namkeen.webp')` }} />
         <div className="fanp-hero__content">
           <span className="fanp-hero__badge">
             <span className="fanp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function FullyAutomatedNamkeenPlantDetailPage() {
               </div>
             </div>
             <div className="fanp-overview__image fanp-overview__image--photo">
-              <img src="/turnkey-brochures/images/namkeen/media__1785499254675.jpg" alt="Fully Automated Namkeen Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/namkeen/media__1785499254675.webp" alt="Fully Automated Namkeen Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

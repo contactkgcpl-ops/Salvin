@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Black Pepper Cleaning & Destoning Machine',
-    image: '/turnkey-brochures/images/black-pepper-gallery/machine1.jpg',
+    image: '/turnkey-brochures/images/black-pepper-gallery/machine1.webp',
     desc: 'Removes dust, stones, foreign particles, and impurities before processing.'
   },
   {
     name: 'Black Pepper Sorting Conveyor',
-    image: '/turnkey-brochures/images/black-pepper-gallery/machine2.jpg',
+    image: '/turnkey-brochures/images/black-pepper-gallery/machine2.webp',
     desc: 'Allows manual inspection and removal of defective pepper berries.'
   },
   {
     name: 'Black Pepper Roasting / Drying Machine',
-    image: '/turnkey-brochures/images/black-pepper-gallery/machine3.jpg',
+    image: '/turnkey-brochures/images/black-pepper-gallery/machine3.webp',
     desc: 'Reduces moisture content and enhances aroma for better grinding performance.'
   },
   {
     name: 'Black Pepper Pulverizing Machine',
-    image: '/turnkey-brochures/images/black-pepper-gallery/machine4.jpg',
+    image: '/turnkey-brochures/images/black-pepper-gallery/machine4.webp',
     desc: 'Converts roasted black pepper into fine powder with consistent particle size.'
   },
   {
     name: 'Black Pepper Sieving Machine',
-    image: '/turnkey-brochures/images/black-pepper-gallery/machine5.jpg',
+    image: '/turnkey-brochures/images/black-pepper-gallery/machine5.webp',
     desc: 'Separates powder into required mesh grades and ensures uniform fineness.'
   },
   {
     name: 'Black Pepper Powder Packaging Machine',
-    image: '/turnkey-brochures/images/black-pepper-gallery/machine6.jpg',
+    image: '/turnkey-brochures/images/black-pepper-gallery/machine6.webp',
     desc: 'Accurately fills and seals powder into pouches or containers.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/black-pepper-gallery/machine6.jpg', caption: 'Black Pepper Powder Packaging Machine' },
-  { src: '/turnkey-brochures/images/black-pepper-gallery/machine1.jpg', caption: 'Black Pepper Cleaning & Destoning Machine' },
-  { src: '/turnkey-brochures/images/black-pepper-gallery/machine2.jpg', caption: 'Black Pepper Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/black-pepper-gallery/machine3.jpg', caption: 'Black Pepper Roasting / Drying Machine' },
-  { src: '/turnkey-brochures/images/black-pepper-gallery/machine4.jpg', caption: 'Black Pepper Pulverizing Machine' },
-  { src: '/turnkey-brochures/images/black-pepper-gallery/machine5.jpg', caption: 'Black Pepper Sieving Machine' },
+  { src: '/turnkey-brochures/images/black-pepper-gallery/machine6.webp', caption: 'Black Pepper Powder Packaging Machine' },
+  { src: '/turnkey-brochures/images/black-pepper-gallery/machine1.webp', caption: 'Black Pepper Cleaning & Destoning Machine' },
+  { src: '/turnkey-brochures/images/black-pepper-gallery/machine2.webp', caption: 'Black Pepper Sorting Conveyor' },
+  { src: '/turnkey-brochures/images/black-pepper-gallery/machine3.webp', caption: 'Black Pepper Roasting / Drying Machine' },
+  { src: '/turnkey-brochures/images/black-pepper-gallery/machine4.webp', caption: 'Black Pepper Pulverizing Machine' },
+  { src: '/turnkey-brochures/images/black-pepper-gallery/machine5.webp', caption: 'Black Pepper Sieving Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function BlackPepperDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="bpp-hero">
         <div className="bpp-hero__overlay" />
-        <div className="bpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/black_pepper_hero.png')` }} />
+        <div className="bpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/black_pepper_hero.webp')` }} />
         <div className="bpp-hero__content">
           <span className="bpp-hero__badge">
             <span className="bpp-hero__badge-dot" />
@@ -222,7 +222,7 @@ export default function BlackPepperDetailPage() {
               </div>
             </div>
             <div className="bpp-overview__image bpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/black-pepper-gallery/machine1.jpg" alt="Black Pepper Powder Processing Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/black-pepper-gallery/machine1.webp" alt="Black Pepper Powder Processing Plant" loading="lazy" />
             </div>
           </div>
         </div>

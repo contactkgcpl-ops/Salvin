@@ -28,12 +28,12 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Cleaning & Destoning", desc: "Raw spice cleaning and destoning machine to remove impurities and foreign materials.", image: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.jpg" },
-  { name: "Spice Roasting", desc: "Automatic spice roasting machine for consistent flavor development.", image: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.jpg" },
-  { name: "Grinding System", desc: "Hammer mill pulverizer grinding machine for perfect particle size reduction.", image: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.jpg" },
-  { name: "Ribbon Blending", desc: "Industrial ribbon blender & spice mixing machine for homogeneous spice blends.", image: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.jpg" },
-  { name: "Vibro Sieving", desc: "Vibro sieving and fine mesh screening machine to ensure uniform product.", image: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.jpg" },
-  { name: "Weighing & Packing", desc: "Automatic spice weighing, packing and sealing machine for perfect packaging.", image: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.jpg" }
+  { name: "Cleaning & Destoning", desc: "Raw spice cleaning and destoning machine to remove impurities and foreign materials.", image: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.webp" },
+  { name: "Spice Roasting", desc: "Automatic spice roasting machine for consistent flavor development.", image: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.webp" },
+  { name: "Grinding System", desc: "Hammer mill pulverizer grinding machine for perfect particle size reduction.", image: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.webp" },
+  { name: "Ribbon Blending", desc: "Industrial ribbon blender & spice mixing machine for homogeneous spice blends.", image: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp" },
+  { name: "Vibro Sieving", desc: "Vibro sieving and fine mesh screening machine to ensure uniform product.", image: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.webp" },
+  { name: "Weighing & Packing", desc: "Automatic spice weighing, packing and sealing machine for perfect packaging.", image: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.webp" }
 ];
 
 /* ─── FAQs ─── */
@@ -47,12 +47,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.jpg", caption: "Ribbon Blender & Spice Mixing Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.jpg", caption: "Automatic Spice Weighing, Packing & Sealing Machine" }
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.webp", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp", caption: "Ribbon Blender & Spice Mixing Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.webp", caption: "Automatic Spice Weighing, Packing & Sealing Machine" }
 ];
 
 export default function FullyAutomaticMixedSpicePlantDetailPage() {
@@ -97,7 +97,7 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Mixed Spice Plant</h1>
@@ -142,7 +142,7 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.jpg" alt="Fully Automatic Mixed Spice Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp" alt="Fully Automatic Mixed Spice Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     "name": "Washing & Dehusking System",
     "desc": "Automated system for sorting, washing, and dehusking coconuts.",
-    "image": "/turnkey-brochures/images/coconut-water-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/coconut-water-gallery/1.webp"
   },
   {
     "name": "Extraction & Filtration Unit",
     "desc": "Hygienic coconut water extraction followed by advanced filtration.",
-    "image": "/turnkey-brochures/images/coconut-water-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/coconut-water-gallery/2.webp"
   },
   {
     "name": "Pasteurization & Sterilization",
     "desc": "Eliminates bacteria and enzymes to preserve natural flavor and shelf life.",
-    "image": "/turnkey-brochures/images/coconut-water-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/coconut-water-gallery/3.webp"
   },
   {
     "name": "Cooling & Storage System",
     "desc": "Rapid cooling using PHE and hygienic storage in stainless steel tanks.",
-    "image": "/turnkey-brochures/images/coconut-water-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/coconut-water-gallery/4.webp"
   },
   {
     "name": "Filling & Sealing Machine",
     "desc": "Automatic aseptic filling in bottles or tetra packs.",
-    "image": "/turnkey-brochures/images/coconut-water-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/coconut-water-gallery/5.webp"
   },
   {
     "name": "Labeling & Carton Packing",
     "desc": "End-of-line labeling, shrink wrapping, and carton packaging.",
-    "image": "/turnkey-brochures/images/coconut-water-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/coconut-water-gallery/6.webp"
   }
 ]
 
@@ -71,27 +71,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/coconut-water-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/coconut-water-gallery/1.webp",
     "caption": "Coconut Washing, Sorting & Dehusking System"
   },
   {
-    "src": "/turnkey-brochures/images/coconut-water-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/coconut-water-gallery/2.webp",
     "caption": "Extraction & Filtration Unit (Micron & Carbon Filter)"
   },
   {
-    "src": "/turnkey-brochures/images/coconut-water-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/coconut-water-gallery/3.webp",
     "caption": "Deaeration, Pasteurization & Sterilization Unit"
   },
   {
-    "src": "/turnkey-brochures/images/coconut-water-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/coconut-water-gallery/4.webp",
     "caption": "Plate Heat Exchanger & Cooling Storage Tank"
   },
   {
-    "src": "/turnkey-brochures/images/coconut-water-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/coconut-water-gallery/5.webp",
     "caption": "Automatic Bottle / Tetra Pack Filling & Sealing"
   },
   {
-    "src": "/turnkey-brochures/images/coconut-water-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/coconut-water-gallery/6.webp",
     "caption": "Labeling, Shrink Wrapping & Carton Packing Machine"
   }
 ]
@@ -140,7 +140,7 @@ export default function CoconutWaterProcessingPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_coconut_water.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_coconut_water.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

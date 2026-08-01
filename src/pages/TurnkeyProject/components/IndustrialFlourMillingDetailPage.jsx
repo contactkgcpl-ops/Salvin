@@ -17,32 +17,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Wheat Cleaning & Pre-Cleaning Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.jpg',
+    image: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.webp',
     desc: 'Removes impurities and foreign materials from raw wheat to ensure high-quality milling.'
   },
   {
     name: 'Wheat Destoner Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.jpg',
+    image: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.webp',
     desc: 'Separates stones, mud balls, and heavy particles using advanced gravity separation.'
   },
   {
     name: 'Wheat Conditioning System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.jpg',
+    image: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.webp',
     desc: 'Optimizes moisture content in wheat kernels to ensure maximum flour yield and bran separation.'
   },
   {
     name: 'Roller Flour Milling System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.jpg',
+    image: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.webp',
     desc: 'High-precision roller mills crush and grind conditioned wheat into fine flour with consistent quality.'
   },
   {
     name: 'Plansifter System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.jpg',
+    image: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.webp',
     desc: 'Efficiently sifts and grades the milled flour into different categories based on particle size.'
   },
   {
     name: 'Automatic Flour Packaging Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg',
+    image: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp',
     desc: 'Automatically weighs, fills, and seals flour into consumer and bulk packaging.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.jpg', caption: 'Wheat Cleaning & Pre-Cleaning Machine' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.jpg', caption: 'Wheat Destoner Machine' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.jpg', caption: 'Wheat Conditioning System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.jpg', caption: 'Roller Flour Milling System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.jpg', caption: 'Plansifter System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg', caption: 'Automatic Flour Packaging Machine' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.webp', caption: 'Wheat Cleaning & Pre-Cleaning Machine' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.webp', caption: 'Wheat Destoner Machine' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.webp', caption: 'Wheat Conditioning System' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.webp', caption: 'Roller Flour Milling System' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.webp', caption: 'Plansifter System' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp', caption: 'Automatic Flour Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function IndustrialFlourMillingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ifm-hero">
         <div className="ifm-hero__overlay" />
-        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/industrial_flour_milling_hero.png')` }} />
+        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/industrial_flour_milling_hero.webp')` }} />
         <div className="ifm-hero__content">
           <span className="ifm-hero__badge">
             <span className="ifm-hero__badge-dot" />
@@ -228,7 +228,7 @@ export default function IndustrialFlourMillingDetailPage() {
               </div>
             </div>
             <div className="ifm-overview__image ifm-overview__image--photo">
-              <img src="/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg" alt="Industrial Flour Milling Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp" alt="Industrial Flour Milling Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     "name": "Water Treatment & Ingredient Prep",
     "desc": "RO plant and mixing tanks for pure water and base ingredients.",
-    "image": "/turnkey-brochures/images/rts-beverage-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/rts-beverage-gallery/1.webp"
   },
   {
     "name": "Sugar Syrup & Beverage Blending",
     "desc": "High-capacity tanks for preparing syrup and blending flavors.",
-    "image": "/turnkey-brochures/images/rts-beverage-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/rts-beverage-gallery/2.webp"
   },
   {
     "name": "Homogenization & Pasteurization",
     "desc": "Ensures uniform texture and eliminates microbes for safety.",
-    "image": "/turnkey-brochures/images/rts-beverage-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/rts-beverage-gallery/3.webp"
   },
   {
     "name": "Cooling & Beverage Storage",
     "desc": "Plate heat exchangers and chilled tanks for storing beverages.",
-    "image": "/turnkey-brochures/images/rts-beverage-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/rts-beverage-gallery/4.webp"
   },
   {
     "name": "Automatic Filling & Sealing",
     "desc": "High-speed hygienic filling and capping machines for bottles.",
-    "image": "/turnkey-brochures/images/rts-beverage-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/rts-beverage-gallery/5.webp"
   },
   {
     "name": "Labeling & Carton Packaging",
     "desc": "End-of-line labeling, shrink wrapping, and carton packing.",
-    "image": "/turnkey-brochures/images/rts-beverage-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/rts-beverage-gallery/6.webp"
   }
 ]
 
@@ -71,27 +71,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/rts-beverage-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/rts-beverage-gallery/1.webp",
     "caption": "Water Treatment & Ingredient Mixing System"
   },
   {
-    "src": "/turnkey-brochures/images/rts-beverage-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/rts-beverage-gallery/2.webp",
     "caption": "Sugar Syrup Preparation & Beverage Blending Tank"
   },
   {
-    "src": "/turnkey-brochures/images/rts-beverage-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/rts-beverage-gallery/3.webp",
     "caption": "Homogenizer, Deaerator & Pasteurization Unit"
   },
   {
-    "src": "/turnkey-brochures/images/rts-beverage-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/rts-beverage-gallery/4.webp",
     "caption": "Plate Heat Exchanger & Beverage Cooling Tank"
   },
   {
-    "src": "/turnkey-brochures/images/rts-beverage-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/rts-beverage-gallery/5.webp",
     "caption": "Automatic Bottle Filling & Sealing Machine"
   },
   {
-    "src": "/turnkey-brochures/images/rts-beverage-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/rts-beverage-gallery/6.webp",
     "caption": "Labeling, Shrink Wrapping & Carton Packing"
   }
 ]
@@ -140,7 +140,7 @@ export default function RTSBeveragePlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_rts_beverage.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_rts_beverage.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

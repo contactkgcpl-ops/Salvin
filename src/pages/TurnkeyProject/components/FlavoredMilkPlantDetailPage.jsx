@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Storage & Initial Processing",
     "desc": "For receiving, filtering, and storing raw milk before processing.",
-    "image": "/turnkey-brochures/images/flavored-milk-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/flavored-milk-gallery/1.webp"
   },
   {
     "name": "Pasteurization & Homogenization System",
     "desc": "Skid-mounted heating, homogenizing, and pasteurization unit.",
-    "image": "/turnkey-brochures/images/flavored-milk-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/flavored-milk-gallery/2.webp"
   },
   {
     "name": "Flavored Milk Blending & Mixing Tank",
     "desc": "Tanks for blending sugar, colors, and flavors uniformly.",
-    "image": "/turnkey-brochures/images/flavored-milk-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/flavored-milk-gallery/3.webp"
   },
   {
     "name": "Holding & Buffer Storage Tank",
     "desc": "Maintains temperature and consistency before filling.",
-    "image": "/turnkey-brochures/images/flavored-milk-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/flavored-milk-gallery/4.webp"
   },
   {
     "name": "High-Speed Automatic Bottle Filling Line",
     "desc": "Automatically rinses, fills, and caps flavored milk bottles.",
-    "image": "/turnkey-brochures/images/flavored-milk-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/flavored-milk-gallery/5.webp"
   },
   {
     "name": "Automated Carton Packing & Dispatch",
     "desc": "End-of-line packaging for carton sealing and palletizing.",
-    "image": "/turnkey-brochures/images/flavored-milk-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/flavored-milk-gallery/6.webp"
   }
 ]
 
@@ -71,27 +71,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/flavored-milk-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/flavored-milk-gallery/1.webp",
     "caption": "Raw Milk Storage & Initial Processing"
   },
   {
-    "src": "/turnkey-brochures/images/flavored-milk-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/flavored-milk-gallery/2.webp",
     "caption": "Pasteurization & Homogenization System"
   },
   {
-    "src": "/turnkey-brochures/images/flavored-milk-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/flavored-milk-gallery/3.webp",
     "caption": "Flavored Milk Blending & Mixing Tank"
   },
   {
-    "src": "/turnkey-brochures/images/flavored-milk-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/flavored-milk-gallery/4.webp",
     "caption": "Holding & Buffer Storage Tank"
   },
   {
-    "src": "/turnkey-brochures/images/flavored-milk-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/flavored-milk-gallery/5.webp",
     "caption": "High-Speed Automatic Bottle Filling Line"
   },
   {
-    "src": "/turnkey-brochures/images/flavored-milk-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/flavored-milk-gallery/6.webp",
     "caption": "Automated Carton Packing & Dispatch"
   }
 ]
@@ -140,7 +140,7 @@ export default function FlavoredMilkPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_flavored_milk.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_flavored_milk.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

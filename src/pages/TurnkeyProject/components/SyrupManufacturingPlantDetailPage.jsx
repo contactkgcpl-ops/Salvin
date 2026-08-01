@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     "name": "Water Treatment & RO System",
     "desc": "Ensures high-purity water for safe syrup manufacturing.",
-    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/1.webp"
   },
   {
     "name": "Syrup Mixing & Dissolving Tank",
     "desc": "Heavy-duty mixing tanks for precise blending of ingredients.",
-    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/2.webp"
   },
   {
     "name": "Filtration & Pasteurization Unit",
     "desc": "Removes impurities and pasteurizes the syrup for shelf life.",
-    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/3.webp"
   },
   {
     "name": "Syrup Cooling & Storage Tank",
     "desc": "Large capacity cooling and storage tanks for holding syrup.",
-    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/4.webp"
   },
   {
     "name": "Automatic Filling & Sealing",
     "desc": "Accurate filling, capping, and sealing for bottles.",
-    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/5.webp"
   },
   {
     "name": "Labeling & Carton Palletizing",
     "desc": "End-of-line packaging with labeling and robotic palletizing.",
-    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/syrup-manufacturing-gallery/6.webp"
   }
 ]
 
@@ -71,27 +71,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/1.webp",
     "caption": "Water Treatment & RO System (Sugar Dissolving Tank)"
   },
   {
-    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/2.webp",
     "caption": "Syrup Mixing Tank (Cap. 5000 LTR.)"
   },
   {
-    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/3.webp",
     "caption": "Filtration, Homogenizer & Pasteurization Unit"
   },
   {
-    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/4.webp",
     "caption": "Syrup Cooling Unit & Storage Tank (Cap. 10000 LTR.)"
   },
   {
-    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/5.webp",
     "caption": "Automatic Filling, Capping & Sealing Machine"
   },
   {
-    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/syrup-manufacturing-gallery/6.webp",
     "caption": "Labeling, Carton Packing & Palletizing System"
   }
 ]
@@ -140,7 +140,7 @@ export default function SyrupManufacturingPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_syrup.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_syrup.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

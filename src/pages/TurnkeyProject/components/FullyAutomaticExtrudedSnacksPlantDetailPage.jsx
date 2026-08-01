@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ribbon Blender Mixer',
-    image: '/turnkey-brochures/images/extruded-snacks/media__1785501004052.jpg',
+    image: '/turnkey-brochures/images/extruded-snacks/media__1785501004052.webp',
     desc: 'Stainless steel ribbon blender for homogenous mixing of raw flour, grains, and moisture before extrusion.'
   },
   {
     name: 'Bucket Elevator & Hopper',
-    image: '/turnkey-brochures/images/extruded-snacks/media__1785501050102.jpg',
+    image: '/turnkey-brochures/images/extruded-snacks/media__1785501050102.webp',
     desc: 'Sanitary bucket elevator system ensuring consistent, automated material feeding into the extruder hopper.'
   },
   {
     name: 'Twin Screw Extruder',
-    image: '/turnkey-brochures/images/extruded-snacks/media__1785501019282.jpg',
+    image: '/turnkey-brochures/images/extruded-snacks/media__1785501019282.webp',
     desc: 'Advanced twin screw extrusion technology with precise temperature and pressure control for perfect puffing and shaping.'
   },
   {
     name: 'Vibratory Sifter & Cooler',
-    image: '/turnkey-brochures/images/extruded-snacks/media__1785501027619.jpg',
+    image: '/turnkey-brochures/images/extruded-snacks/media__1785501027619.webp',
     desc: 'Vibratory grading conveyor to remove broken pieces and cool down the extruded snacks prior to flavoring.'
   },
   {
     name: 'Rotary Seasoning Drum',
-    image: '/turnkey-brochures/images/extruded-snacks/media__1785501037572.jpg',
+    image: '/turnkey-brochures/images/extruded-snacks/media__1785501037572.webp',
     desc: 'Continuous rotary flavoring drum equipped with oil and powder sprayers for uniform coating of extruded snacks.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/extruded-snacks/media__1785501060641.jpg',
+    image: '/turnkey-brochures/images/extruded-snacks/media__1785501060641.webp',
     desc: 'Fully automatic vertical form-fill-seal packaging system with multi-head weighers for accurate retail pouch packing.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automatic Extruded Snacks Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501004052.jpg', caption: 'Ribbon Blender Mixer' },
-  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501050102.jpg', caption: 'Material Feeding Elevator' },
-  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501019282.jpg', caption: 'Twin Screw Extruder Unit' },
-  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501027619.jpg', caption: 'Vibratory Sifter & Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501037572.jpg', caption: 'Continuous Rotary Seasoning Drum' },
-  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501060641.jpg', caption: 'Automatic Pouch Packing Machine' }
+  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501004052.webp', caption: 'Ribbon Blender Mixer' },
+  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501050102.webp', caption: 'Material Feeding Elevator' },
+  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501019282.webp', caption: 'Twin Screw Extruder Unit' },
+  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501027619.webp', caption: 'Vibratory Sifter & Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501037572.webp', caption: 'Continuous Rotary Seasoning Drum' },
+  { src: '/turnkey-brochures/images/extruded-snacks/media__1785501060641.webp', caption: 'Automatic Pouch Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomaticExtrudedSnacksPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="faesp-hero">
         <div className="faesp-hero__overlay" />
-        <div className="faesp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_extruded_snacks.png')` }} />
+        <div className="faesp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_extruded_snacks.webp')` }} />
         <div className="faesp-hero__content">
           <span className="faesp-hero__badge">
             <span className="faesp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function FullyAutomaticExtrudedSnacksPlantDetailPage() {
               </div>
             </div>
             <div className="faesp-overview__image faesp-overview__image--photo">
-              <img src="/turnkey-brochures/images/extruded-snacks/media__1785501019282.jpg" alt="Fully Automatic Extruded Snacks Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/extruded-snacks/media__1785501019282.webp" alt="Fully Automatic Extruded Snacks Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

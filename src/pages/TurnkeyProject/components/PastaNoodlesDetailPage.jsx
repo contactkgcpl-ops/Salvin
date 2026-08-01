@@ -21,32 +21,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Flour Sifter Conveyor',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.jpg',
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.webp',
     desc: 'Automated sifting and conveying system that removes impurities from raw flour before mixing.'
   },
   {
     name: 'Multihead Weigher',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.jpg',
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.webp',
     desc: 'High-precision multihead weighing system for accurate portioning of dry ingredients into the mixer.'
   },
   {
     name: 'Vacuum Extruder Press',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.jpg',
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.webp',
     desc: 'Industrial vacuum extruder that mixes and kneads the dough under vacuum to ensure bubble-free, high-density pasta shapes.'
   },
   {
     name: 'Pasta Dryer',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.jpg',
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.webp',
     desc: 'Multi-stage continuous pasta drying chamber that controls temperature and humidity for perfect moisture reduction.'
   },
   {
     name: 'Cooling Conveyor',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine5.jpg',
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine5.webp',
     desc: 'Vibratory and belt cooling conveyors designed to rapidly reduce product temperature after drying and prevent condensation before packaging.'
   },
   {
     name: 'Automatic Packing Machine',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.jpg',
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.webp',
     desc: 'Fully automatic vertical form-fill-seal packaging system equipped with weight checkers for reliable and hygienic packing.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Pasta & Noodles Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/hero.jpg', caption: 'Pasta & Noodles Production Plant — Complete Overview' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.jpg', caption: 'Flour Sifter Conveyor' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.jpg', caption: 'Multihead Weigher' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.jpg', caption: 'Vacuum Extruder Press' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.jpg', caption: 'Pasta Dryer' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.jpg', caption: 'Automatic Packing Machine' }
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/hero.webp', caption: 'Pasta & Noodles Production Plant — Complete Overview' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.webp', caption: 'Flour Sifter Conveyor' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.webp', caption: 'Multihead Weigher' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.webp', caption: 'Vacuum Extruder Press' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.webp', caption: 'Pasta Dryer' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.webp', caption: 'Automatic Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function PastaNoodlesDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pnp-hero">
         <div className="pnp-hero__overlay" />
-        <div className="pnp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pasta_noodles_hero.png')` }} />
+        <div className="pnp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pasta_noodles_hero.webp')` }} />
         <div className="pnp-hero__content">
           <span className="pnp-hero__badge">
             <span className="pnp-hero__badge-dot" />
@@ -238,7 +238,7 @@ export default function PastaNoodlesDetailPage() {
               </div>
             </div>
             <div className="pnp-overview__image pnp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasta-noodles-gallery/machine3.jpg" alt="Pasta & Noodles Production Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/pasta-noodles-gallery/machine3.webp" alt="Pasta & Noodles Production Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
