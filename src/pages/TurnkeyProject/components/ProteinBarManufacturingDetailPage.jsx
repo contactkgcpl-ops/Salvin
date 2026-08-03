@@ -16,63 +16,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Ingredient Dosing & Mixing System',
     image: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp',
-    desc: 'Fully automated multi-ingredient dosing system that ensures accurate weighing and homogeneous mixing of dry powders, oats, and functional ingredients.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Syrup Preparation System',
     image: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.webp',
-    desc: 'Advanced temperature-controlled kettles designed to precisely prepare binding syrups, ensuring consistent viscosity and perfect texture for bar binding.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Protein Bar Mass Mixer',
     image: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.webp',
-    desc: 'Heavy-duty continuous mass mixer that uniformly blends dry ingredients with prepared syrups to create a consistent, workable protein bar dough.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Protein Bar Forming Machine',
     image: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp',
-    desc: 'Precision forming extruder and slab roller unit that continuously shapes the mixed mass into uniform slabs with highly accurate thickness control.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Protein Bar Cutting Machine',
     image: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.webp',
-    desc: 'High-speed ultrasonic or guillotine cutting system delivering exact portion control, clean cuts, and minimal product wastage across continuous operation.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Flow Wrapping & Packaging Machine',
     image: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.webp',
-    desc: 'Fully automatic horizontal form-fill-seal flow wrapper providing hygienic, airtight packaging to maximize shelf life and maintain product freshness.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What is the production capacity of the Protein Bar Manufacturing Plant?",
-    answer: "Our turnkey plants are available in various capacities, ranging from small-batch pilot lines to fully automated high-speed production systems exceeding 10,000 bars per hour."
+    question: "Do you manufacture all the machines for the Protein Bar Manufacturing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Protein Bar Manufacturing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant handle different types of bar recipes?",
-    answer: "Yes. The equipment is highly versatile and designed to process a wide range of formulations including protein bars, energy bars, granola bars, and cereal bars with varying viscosities and ingredient profiles."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the dosing and mixing process fully automated?",
-    answer: "Yes, our plants integrate advanced PLC-based control systems for precise automated ingredient weighing, dosing, and mixing, which eliminates human error and guarantees batch-to-batch consistency."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What sanitation standards does the equipment meet?",
-    answer: "All our machinery is constructed using food-grade SS304/SS316L stainless steel, featuring hygienic designs with easy-to-clean components that comply with stringent global food safety and GMP standards."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Does Salvin provide installation and operator training?",
-    answer: "Absolutely. Salvin offers complete turnkey support including plant layout design, equipment installation, commissioning, and comprehensive on-site training for your operators and maintenance personnel."
-  },
-  {
-    question: "Can chocolate enrobing be integrated into the line?",
-    answer: "Yes, an optional chocolate enrobing and cooling section can be seamlessly integrated into the continuous production line to coat bars before final packaging."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -148,7 +144,7 @@ export default function ProteinBarManufacturingDetailPage() {
             Protein Bar Manufacturing Plant
           </h1>
           <p className="pbm-hero__subtitle">
-            Complete Turnkey Solution For Advanced Ingredient Dosing, Mixing, Forming, Cutting And Packaging Of Nutritional Bars
+            Start Your Own Protein Bar Manufacturing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="pbm-hero__actions">
             <a
@@ -175,10 +171,10 @@ export default function ProteinBarManufacturingDetailPage() {
           <div className="pbm-overview__grid">
             <div className="pbm-overview__text">
               <p>
-                Salvin Industries' Protein Bar Manufacturing Plant is a state-of-the-art turnkey industrial solution engineered for food processors demanding high production efficiency, rigorous hygiene standards, and consistent nutritional output. Our fully automated lines cover every stage of production—from precise ingredient handling and mixing to forming, cooling, cutting, and final flow-wrap packaging.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Protein Bar Manufacturing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Designed with automation at its core, the plant ensures accurate recipe management and uniform product quality while significantly reducing manual intervention and product waste. Whether you are producing protein bars, energy bars, or sports nutrition bars, our flexible recipes capability and scalable capacity allow you to adapt to rapidly evolving market demands.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="pbm-overview__features">
                 {/* Feature 1 */}
@@ -316,25 +312,25 @@ export default function ProteinBarManufacturingDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Protein Bar Manufacturing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="pbm-section pbm-seo-content" id="seo-guide" data-animate>
+          <div className={`pbm-container pbm-animate ${isVisible['seo-guide'] ? 'pbm-animate--in' : ''}`}>
+            <div className="pbm-section-badge">ABOUT THE PLANT</div>
+            <h2 className="pbm-section-title">How Does The <span className="pbm-accent">Plant Work?</span></h2>
+            <p className="pbm-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="pbm-seo-content__body">
+              <div className="pbm-seo-content__block">
                 <h3>Why Start a Protein Bar Manufacturing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Protein Bar Manufacturing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Protein Bar Manufacturing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Protein Bar Manufacturing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="pbm-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Protein Bar Manufacturing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="pbm-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

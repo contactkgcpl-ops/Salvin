@@ -19,9 +19,34 @@ const CATEGORIES = [
 ]
 
 export default function ProjectsSection() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [activeCategory, setActiveCategory] = useState('All')
-  const [currentPage, setCurrentPage] = useState(1)
+  const [searchQuery, setSearchQuery] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('projectsSearch') || ''
+    }
+    return ''
+  })
+  const [activeCategory, setActiveCategory] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return sessionStorage.getItem('projectsCategory') || 'All'
+    }
+    return 'All'
+  })
+  const [currentPage, setCurrentPage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      const saved = sessionStorage.getItem('projectsPage')
+      return saved ? parseInt(saved, 10) : 1
+    }
+    return 1
+  })
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      sessionStorage.setItem('projectsSearch', searchQuery)
+      sessionStorage.setItem('projectsCategory', activeCategory)
+      sessionStorage.setItem('projectsPage', currentPage.toString())
+    }
+  }, [searchQuery, activeCategory, currentPage])
+
   const gridRef = useRef(null)
   const ITEMS_PER_PAGE = 15
 
@@ -67,11 +92,6 @@ export default function ProjectsSection() {
     currentPage * ITEMS_PER_PAGE
   )
 
-  // Reset to page 1 when filters change
-  useEffect(() => {
-    setCurrentPage(1)
-  }, [searchQuery, activeCategory])
-
   const handlePageChange = (newPage) => {
     setCurrentPage(newPage)
     if (gridRef.current) {
@@ -107,11 +127,11 @@ export default function ProjectsSection() {
             Project Portfolio
           </span>
           <h2 className="mt-6 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-            Turnkey <span className="text-[#f47c20]">Solutions</span>
+            Our Turnkey <span className="text-[#f47c20]">Plants</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-slate-600 text-center">
-            With a <strong>Salvin Turnkey Project</strong>, we build a fully automated, ready-to-operate processing plant for you<br />
-            from scratch, so you can focus entirely on growing your business.
+            With a <strong>Salvin Turnkey Plant</strong>, we build the complete automatic factory for you.<br />
+            Just select your product, and we will manufacture all the machines and install them for you.
           </p>
 
           <div className="mt-10 w-full max-w-xl relative group">
@@ -122,7 +142,10 @@ export default function ProjectsSection() {
               type="text"
               placeholder="Search for a processing plant (e.g., Namkeen, Dairy, Spices)..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value)
+                setCurrentPage(1)
+              }}
               className="w-full rounded-full border border-slate-200 bg-white py-4 pl-12 pr-6 text-base text-slate-900 shadow-sm outline-none transition-all placeholder:text-slate-400 focus:border-[#f47c20] focus:ring-4 focus:ring-[#f47c20]/10 hover:border-slate-300"
             />
           </div>
@@ -131,7 +154,10 @@ export default function ProjectsSection() {
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.name}
-                onClick={() => setActiveCategory(cat.name)}
+                onClick={() => {
+                  setActiveCategory(cat.name)
+                  setCurrentPage(1)
+                }}
                 className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 ${activeCategory === cat.name
                     ? 'bg-[#f47c20] text-white shadow-md'
                     : 'bg-white text-slate-600 border border-slate-200 hover:border-[#f47c20] hover:text-[#f47c20]'
@@ -164,6 +190,7 @@ export default function ProjectsSection() {
                 onClick={() => {
                   setSearchQuery('')
                   setActiveCategory('All')
+                  setCurrentPage(1)
                 }}
                 className="mt-4 text-[#f47c20] hover:text-[#e06b12] font-semibold transition-colors"
               >

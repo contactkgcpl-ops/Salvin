@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Flour Sifter',
     image: '/turnkey-brochures/images/chapati-line/1_sifter.webp',
-    desc: 'High-capacity vibratory sifter for consistent, lump-free flour dosing before mixing.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Dough Mixer',
     image: '/turnkey-brochures/images/chapati-line/2_mixer.webp',
-    desc: 'Industrial dough mixer with variable speed drive for preparing smooth, elastic chapati dough.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Dough Kneader',
     image: '/turnkey-brochures/images/chapati-line/3_kneader.webp',
-    desc: 'Heavy-duty dough kneader to develop gluten and ensure the perfect texture for chapatis.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Dough Divider & Portioning Machine',
     image: '/turnkey-brochures/images/chapati-line/4_divider.webp',
-    desc: 'Automatic divider that cuts the bulk dough into equal portions and forms uniform dough balls.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Continuous Baking Oven',
     image: '/turnkey-brochures/images/chapati-line/5_oven.webp',
-    desc: 'Continuous tunnel oven with precise temperature control to bake chapatis to soft, puffed perfection.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Chapati Packing Machine',
     image: '/turnkey-brochures/images/chapati-line/6_packing.webp',
-    desc: 'High-speed flow-wrap machine for hygienic, automated packaging of stacked chapatis.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Chapati Processing Line?",
-    answer: "Our lines are available from 1,000 chapatis/hour to 20,000 chapatis/hour and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Chapati Processing Line?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Chapati Processing Line. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the line produce different chapati sizes?",
-    answer: "Yes. The pressing and sheeting machine uses interchangeable tooling to produce 6-inch, 8-inch, 10-inch, and custom-diameter chapatis for retail, institutional, and export markets."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the line fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC control systems for consistent, high-speed, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Chapati Processing Lines?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient baking systems, customized solutions, reliable performance, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function ChapatiProcessingLineDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY CHAPATI PROCESSING SOLUTION</span>
           <h1 className="opp-hero__title">Chapati Processing Line</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Dough Mixing, Sheeting, Pressing, Baking, Cooling And Packaging Of Chapati</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Chapati Processing Line Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function ChapatiProcessingLineDetailPage() {
           <h2 className="opp-section-title">Complete Chapati <span className="opp-accent">Processing Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Chapati Processing Line is a turnkey industrial solution designed for manufacturers who demand consistent chapati diameter, uniform softness, and full food safety compliance. Our integrated line handles every stage — from flour sifting and dough mixing through sheeting, baking, cooling, and packaging — in a single, automated, hygienic facility.</p>
-              <p>Each line is custom-engineered to your specific chapati size, texture, shelf-life requirement, and packaging format. Whether producing retail packaged fresh or frozen chapatis, bulk foodservice supply, or export-ready rotis, our systems deliver the uniform softness, consistent bake, and extended freshness your buyers demand.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Chapati Processing Line</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function ChapatiProcessingLineDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Chapati Processing Line</span></h2>
-          <p className="opp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Start a Chapati Processing Business?</h3>
-              <p>The market for packaged, ready-to-eat chapati is growing rapidly, driven by urbanisation, dual-income households, and demand from restaurants, airlines, and institutional caterers. Automated chapati lines ensure consistent quality, extended shelf life through MAP packaging, and the hygienic standards required for modern retail and export distribution.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does the Chapati Processing Work?</h3>
-              <p>The process begins with sifting wheat flour and mixing it with water and oil into a smooth dough. After resting, the dough is divided into exact-weight portions and pressed into uniform round chapatis by the sheeting machine. They then pass through a direct-flame or infrared baking conveyor, are cooled to ambient temperature, and are sealed in modified-atmosphere packs to preserve freshness.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for chapati processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Advanced PLC/SCADA automation ensures dough consistency, baking uniformity, and one-touch operation. We handle everything from factory layout design to installation and global commissioning.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Chapati Processing Line Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Chapati Processing Line, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Cocoa Bean Roaster',
     image: '/turnkey-brochures/images/cocoa-powder-plant/1_roaster.webp',
-    desc: 'Rotary drum roaster for uniform roasting of cocoa beans to develop flavor and aroma.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Cocoa Bean Winnower',
     image: '/turnkey-brochures/images/cocoa-powder-plant/2_winnower.webp',
-    desc: 'Aspirated winnower to efficiently crack cocoa beans and separate the nibs from the shells.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Cocoa Liquor Grinder',
     image: '/turnkey-brochures/images/cocoa-powder-plant/3_grinder.webp',
-    desc: 'Heavy-duty grinder to mill cocoa nibs into smooth, free-flowing cocoa liquor.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cocoa Pulverizer',
     image: '/turnkey-brochures/images/cocoa-powder-plant/4_pulverizer.webp',
-    desc: 'High-speed pulverizer with air classification to grind cocoa press cake into fine powder.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Vibro Sifter',
     image: '/turnkey-brochures/images/cocoa-powder-plant/5_sifter.webp',
-    desc: 'Multi-deck vibratory sifter to ensure uniform particle size and remove oversized particles.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Powder Filling Machine',
     image: '/turnkey-brochures/images/cocoa-powder-plant/6_packing.webp',
-    desc: 'Automatic form-fill-seal machine for hygienic and accurate packaging of cocoa powder.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Cocoa Powder Plant?",
-    answer: "Our plants are available from 200 KG/HR to 3 TON/HR capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Cocoa Powder Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Cocoa Powder Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant produce different grades of cocoa powder?",
-    answer: "Yes. The plant is designed to produce natural cocoa powder, alkalized (Dutch-process) cocoa powder, and low-fat cocoa powder for food, beverage, and confectionery applications."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC control systems for consistent, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Cocoa Powder Plants?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized solutions, reliable performance, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function CocoaPowderPlantDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY COCOA POWDER SOLUTION</span>
           <h1 className="opp-hero__title">Cocoa Powder Processing Plant</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Bean Roasting, Winnowing, Pressing, Pulverising And Packaging Of Cocoa Powder</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Cocoa Powder Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function CocoaPowderPlantDetailPage() {
           <h2 className="opp-section-title">Complete Cocoa Powder <span className="opp-accent">Processing Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Cocoa Powder Processing Plant is a turnkey industrial solution designed for manufacturers who demand consistent colour, flavour, and fat content in every batch. Our integrated processing line handles every stage — from raw cocoa bean reception through finished packaged powder — in a single, automated, dust-free facility.</p>
-              <p>Each plant is custom-engineered to your capacity, product grade, and market specifications. Whether producing natural cocoa powder for baking, alkalized powder for beverage mixes, or low-fat cocoa for health food applications, our systems deliver the rich colour, aroma, and microbial safety your buyers require.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Cocoa Powder Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function CocoaPowderPlantDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Cocoa Powder Processing</span></h2>
-          <p className="opp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Start a Cocoa Powder Processing Business?</h3>
-              <p>Global demand for cocoa powder is growing across chocolate confectionery, beverages, dairy, baking, and cosmetics industries. Setting up an automated processing plant ensures consistent product quality, high recovery rates, and the brand premium that export buyers expect.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does the Cocoa Powder Processing Work?</h3>
-              <p>The process begins with cleaning and sorting raw cocoa beans, followed by precision roasting to develop flavour. The roasted beans are cracked and winnowed to remove shells, then ground into smooth cocoa liquor. A hydraulic press extracts cocoa butter, leaving press cake that is pulverised into fine cocoa powder and sealed hygienically into consumer or bulk packaging.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for cocoa powder processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Advanced PLC/SCADA automation ensures roasting profile repeatability, fat-content precision, and one-touch operation with minimal human intervention.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Cocoa Powder Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Cocoa Powder Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

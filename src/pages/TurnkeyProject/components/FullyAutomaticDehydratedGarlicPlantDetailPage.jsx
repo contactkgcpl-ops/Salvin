@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Automatic Garlic Bulb Breaking & Peeling Machine",
     "image": "/turnkey-brochures/images/garlic-gallery/bulb_breaking.webp",
@@ -67,29 +68,30 @@ const MACHINERY_LIST = [
     "image": "/turnkey-brochures/images/garlic-gallery/garlic_packaging.webp",
     "desc": "Automated weighing and packaging line designed to seal dehydrated garlic in moisture-proof bags for extended shelf life."
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Does the dehydration process retain the strong garlic aroma?",
-    "answer": "Yes. Our continuous multi-layer belt dryers use precise, low-temperature profiles (55°C - 65°C) that perfectly preserve the essential oils, allicin content, and strong natural aroma of the garlic."
+    question: "Do you manufacture all the machines for the Fully Automatic Dehydrated Garlic Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Dehydrated Garlic Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "What forms of dehydrated garlic can this plant produce?",
-    "answer": "The processing line can produce dehydrated garlic flakes (slices). With the addition of our milling section, it can also produce minced garlic, granulated garlic, and fine garlic powder."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "How is the garlic peeled without damaging the clove?",
-    "answer": "We utilize advanced pneumatic (air-based) peeling technology. This method uses air friction rather than mechanical abrasion, ensuring 98% peeling efficiency with zero damage to the clove surface."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "What is the standard production capacity of the plant?",
-    "answer": "We offer customizable turnkey solutions ranging from 500 kg/day to 10,000 kg/day of raw garlic processing, tailored to your industrial requirements."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    "question": "Can this plant be used to dehydrate other vegetables like onions?",
-    "answer": "With minor adjustments to the peeling and slicing sections, the continuous drying line can effectively process and dehydrate onions, ginger, and other root vegetables."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -149,7 +151,9 @@ export default function FullyAutomaticDehydratedGarlicPlantDetailPage() {
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Dehydrated Garlic Plant</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Dehydrated Garlic</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automatic Dehydrated Garlic Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,8 +164,12 @@ export default function FullyAutomaticDehydratedGarlicPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Dehydrated Garlic Plant</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity garlic bulb breaking, peeling, slicing, and continuous dehydration. Engineered to meet global food safety standards, our robust production line seamlessly processes raw garlic into premium-grade dehydrated flakes, granules, and powder.</p>
-              <p>From automated root cutting and advanced wet peeling to continuous belt drying and vibratory grading, our machinery ensures absolute zero contamination. Experience maximum pungency retention, vibrant natural color, and extended shelf life. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Dehydrated Garlic Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -197,22 +205,28 @@ export default function FullyAutomaticDehydratedGarlicPlantDetailPage() {
       </section>
 
             <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-           <div className="rcp-section-badge">Comprehensive Guide</div>
-           <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Garlic Dehydration</span></h2>
-           <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-           <div className="rcp-seo-content__body">
-               <h3>Why Start a Garlic Dehydration Business?</h3>
-               <p>Dehydrated garlic flakes, minced garlic, and garlic powder are essential ingredients in the global food industry, used heavily in spices, sauces, ready-to-eat meals, and snacks. Dehydrating raw garlic extends its shelf life from a few months to over a year, making it highly profitable for export and bulk industrial sales.</p>
-               
-               <h3>How Does the Dehydration Process Work?</h3>
-               <p>The process starts by breaking the raw garlic bulbs into individual cloves. A pneumatic air-peeler then removes the skin without damaging the clove. The peeled cloves are washed, sterilized, and sliced evenly. These slices are fed onto a continuous hot air belt dryer, which slowly removes the moisture. The dried flakes are then sorted by size and packaged.</p>
-               
-               <h3>The Salvin Industries Advantage</h3>
-               <p>Our continuous belt drying technology is designed to operate at precise, low temperatures. This is critical because excessive heat destroys the allicin (the compound that gives garlic its strong smell and taste). Our plant ensures that your dehydrated garlic retains its sharp pungency, natural white color, and strong aroma, fetching premium prices in the market.</p>
-           </div>
-        </div>
-      </section>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Dehydrated Garlic Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Dehydrated Garlic Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Industrial Vegetable Washing System",
     "image": "/turnkey-brochures/images/veg-drying-gallery/veg_washing.webp",
@@ -67,29 +68,30 @@ const MACHINERY_LIST = [
     "image": "/turnkey-brochures/images/veg-drying-gallery/veg_packaging.webp",
     "desc": "Hygienic, automated packaging solution that seals dried vegetables in airtight pouches to maximize shelf life."
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Which vegetables can be dried using this processing plant?",
-    "answer": "The plant is highly versatile and can dehydrate onions, tomatoes, carrots, potatoes, cabbage, spinach, mushrooms, bell peppers, and various herbs."
+    question: "Do you manufacture all the machines for the Fully Automatic Vegetable Drying Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Vegetable Drying Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Why is blanching necessary before dehydration?",
-    "answer": "Blanching deactivates enzymes that cause browning and flavor loss during the drying process. It ensures the final dried vegetables retain their vibrant color, texture, and nutritional value."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "What heating sources are available for the continuous dryer?",
-    "answer": "Depending on your factory setup and local utility costs, the dryer can be configured to run on electricity, steam radiators, thermic fluid heaters, or natural gas burners."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is the final product suitable for export markets?",
-    "answer": "Absolutely. Our automated lines are built with SS304/316 food-grade stainless steel and integrate optical color sorters to ensure the final product meets stringent FDA and European export standards."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    "question": "What is the moisture content of the final dried vegetables?",
-    "answer": "The drying parameters are fully adjustable via the PLC panel. Typically, vegetables are dehydrated down to a final moisture content of 4% to 8% for maximum shelf life."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -149,7 +151,9 @@ export default function FullyAutomaticVegetableDryingPlantDetailPage() {
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Vegetable Drying Plant</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Dried Vegetables</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automatic Vegetable Drying Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,8 +164,12 @@ export default function FullyAutomaticVegetableDryingPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Vegetable Drying Plant</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity vegetable washing, slicing, blanching, and continuous hot air dehydration. Engineered to meet global food safety standards, our robust production line seamlessly processes fresh vegetables into premium-grade dried products with perfectly preserved nutrients.</p>
-              <p>From automated multi-stage washing and precision slicing to efficient continuous belt drying and optical inspection, our machinery ensures absolute zero contamination. Experience maximum flavor retention, vibrant natural color, and vastly extended shelf life. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Vegetable Drying Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -197,22 +205,28 @@ export default function FullyAutomaticVegetableDryingPlantDetailPage() {
       </section>
 
             <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-           <div className="rcp-section-badge">Comprehensive Guide</div>
-           <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Vegetable Drying</span></h2>
-           <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-           <div className="rcp-seo-content__body">
-               <h3>Why Invest in a Vegetable Drying Plant?</h3>
-               <p>Dried vegetables like onions, carrots, cabbage, and ginger are in huge demand by soup manufacturers, instant noodle brands, and spice blenders. Drying vegetables reduces their weight by up to 90%, making shipping incredibly cheap while preserving the vegetables for years without refrigeration.</p>
-               
-               <h3>How Does the Vegetable Drying Process Work?</h3>
-               <p>Fresh vegetables are first dumped into a massive bubble washing tank to remove all dirt. They are then automatically sliced or diced into small pieces. To stop them from losing their color, they are quickly blanched (briefly boiled) and then passed over a vibration screen to remove excess water. Finally, they enter a continuous hot air dryer where the moisture is gently evaporated.</p>
-               
-               <h3>The Salvin Industries Advantage</h3>
-               <p>Drying vegetables evenly is a massive challenge in the food industry. Our automated drying lines use multiple layers and advanced air circulation to ensure that every single vegetable piece is perfectly dried inside and out. The result is a high-quality product that rehydrates instantly and tastes fresh when cooked.</p>
-           </div>
-        </div>
-      </section>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Vegetable Drying Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Vegetable Drying Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

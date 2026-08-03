@@ -1,41 +1,59 @@
 // src/components/HeroSection.jsx
-import HeroIMG from "../../../assets/hero/turkey_proj.webp";
+import { useState, useEffect } from "react";
+import Slide1 from "../../../assets/hero/user-wide-slide-5.png"; // Red Chilli
+import Slide2 from "../../../assets/hero/final-slide-1.png";
+import Slide3 from "../../../assets/hero/final-slide-2.png";
+import Slide4 from "../../../assets/hero/final-slide-3.png";
+import Slide5 from "../../../assets/hero/final-slide-4.png";
+
+const IMAGES = [Slide1, Slide2, Slide3, Slide4, Slide5];
+
 function HeroSection() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsTransitioning(true);
+      setCurrentSlide((prev) => prev + 1);
+    }, 4000); // Change image every 4 seconds
+    return () => clearInterval(timer);
+  }, []);
+
+  useEffect(() => {
+    if (currentSlide === IMAGES.length) {
+      const timeout = setTimeout(() => {
+        setIsTransitioning(false); // disable transition
+        setCurrentSlide(0); // snap back to real first slide
+      }, 1500); // match transition duration
+      return () => clearTimeout(timeout);
+    }
+  }, [currentSlide]);
+
   return (
-    <section
-      className="relative min-h-[72vh] overflow-hidden"
-      style={{
-        backgroundImage:
-          `linear-gradient(90deg, rgba(8,37,77,0.84) 0%, rgba(8,37,77,0.74) 40%, rgba(8,37,77,0.45) 100%), url('${HeroIMG}')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-      }}
-    >
-      <div className="mx-auto flex min-h-[72vh] w-full min-w-0 max-w-7xl items-center px-4 py-16 sm:px-6 sm:py-20 lg:px-8 lg:py-24">
-        <div className="max-w-4xl text-white">
-          <p className="mb-5 inline-flex rounded-full border border-[#f47c20]/80 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-[#ffd2ac] sm:text-sm">END-TO-END FOOD PROCESSING TURNKEY SOLUTIONS</p>
-          <h1 className="text-balance text-3xl font-extrabold leading-tight sm:text-4xl md:text-5xl lg:text-5xl">Complete Turnkey Plant Solutions for Snacks, Spices & Dairy</h1>
-          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-slate-100 sm:text-base lg:text-lg">
-            Salvin Industries delivers world-class, automated manufacturing lines. From concept and engineering to installation and commissioning, we build high-capacity plants designed for unmatched hygiene, efficiency, and scale.
-          </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
-              href="#brochures"
-              className="inline-flex items-center justify-center rounded-md bg-[#f47c20] px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-white shadow-lg transition-all hover:bg-[#e06d19] hover:shadow-xl"
-            >
-              Explore Projects
-            </a>
-            <a
-              href="/contact"
-              className="inline-flex items-center justify-center rounded-md border-2 border-white bg-transparent px-8 py-3 text-sm font-bold uppercase tracking-wide text-white transition-all hover:bg-white/10"
-            >
-              Contact Experts
-            </a>
-          </div>
-        </div>
+    <section className="relative w-full overflow-hidden bg-[#f3f3f3]">
+      
+      {/* Image Slider */}
+      <div 
+        className={`flex w-full ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
+        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+      >
+        {[...IMAGES, IMAGES[0]].map((imgSrc, index) => (
+          <img
+            key={index}
+            src={imgSrc}
+            alt={`Salvin Turnkey Plant ${index + 1}`}
+            className="w-full shrink-0 h-auto object-cover object-center"
+          />
+        ))}
+      </div>
+
+      {/* Content Removed - Using Image Banners Only */}
+      <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-4 sm:pb-8 lg:pb-12">
+         {/* If buttons are needed later, they can be placed here at the bottom */}
       </div>
     </section>
-  )
+  );
 }
 
-export default HeroSection
+export default HeroSection;

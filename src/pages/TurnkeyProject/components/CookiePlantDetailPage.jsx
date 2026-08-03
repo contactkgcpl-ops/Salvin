@@ -15,55 +15,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: "Planetary Mixer",
-    desc: "Whips the heavy cookie dough perfectly.",
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
     image: "/turnkey-brochures/images/cookie-gallery/1_dough_mixer.webp"
   },
   {
     name: "Wire Cut / Drop Machine",
-    desc: "Slices or drops cookie dough directly onto baking trays.",
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
     image: "/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.webp"
   },
   {
     name: "Tunnel Oven",
-    desc: "Bakes cookies slowly to keep them soft or crunchy.",
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
     image: "/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Cooling Belt",
-    desc: "Cools the baked cookies to set their shape.",
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
     image: "/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Automatic Flow Wrapper",
-    desc: "Seals the cookies individually or in small stacks.",
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
     image: "/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.webp"
   },
   {
     name: "Carton Packer",
-    desc: "Loads the cookie packets into shipping boxes.",
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
     image: "/turnkey-brochures/images/cookie-gallery/6_carton_sealer.webp"
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Can this plant make center-filled chocolate cookies?",
-    "answer": "Yes! We offer specialized center-filling extruders that allow you to inject liquid chocolate, jam, or cream directly into the center of the dough before baking."
+    question: "Do you manufacture all the machines for the Fully Automatic Cookie Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Cookie Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "What is the difference between a wire-cut and dropped cookie?",
-    "answer": "Wire-cut cookies are sliced from a thick dough roll, making them look rustic and thick (like classic chocolate chip cookies). Dropped cookies use a softer dough that is squeezed onto the tray, creating a smooth, round shape. Our plant can do both!"
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Do I need a lot of workers to run this plant?",
-    "answer": "No. Because the plant is fully automatic, the dough is automatically dropped onto the baking belt, travels through the oven, cools down, and goes into the packing machine automatically. You only need a few supervisors."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is the oven energy efficient?",
-    "answer": "Absolutely. Our continuous tunnel ovens use heavy insulation and smart temperature control zones to lock in heat, drastically reducing your fuel or electricity costs."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -133,7 +137,7 @@ export default function CookiePlantDetailPage() {
             Fully Automatic Cookie Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automatic Cookie Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -155,9 +159,12 @@ export default function CookiePlantDetailPage() {
           
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Salvin Industries specializes in designing and manufacturing <strong>Fully Automatic Cookie Processing Plants</strong> for large-scale industrial bakery operations. Our advanced wire-cut and drop cookie machines provide precise weight control and versatile shaping.</p>
-              <p>Engineered for high-volume production, our complete turnkey cookie manufacturing line integrates automated dough feeding, baking, cooling, and wrapping. Achieve consistent texture, extended shelf life, and maximum ROI with our heavy-duty, PLC-operated commercial bakery equipment.</p>
-
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Cookie Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -260,29 +267,28 @@ export default function CookiePlantDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Comprehensive Guide to <span className="rcp-accent">Commercial Cookie Production</span></h2>
-          <p className="rcp-section-subtitle">Understanding wire-cut technology, drop cookies, and industrial baking.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Invest in an Industrial Cookie Plant?</h3>
-              <p>The premium cookie market is expanding rapidly, driven by consumer demand for center-filled, wire-cut, and gourmet varieties. An automated cookie production line allows food manufacturers to produce diverse, high-margin bakery products with precise quality control and minimal manual intervention.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>Industrial Cookie Production Workflow</h3>
-              <p><strong>1. Automated Ingredient Dosing & Mixing:</strong> Programmable dosing systems ensure exact ingredient ratios before high-shear mixing.</p>
-              <p><strong>2. Wire-Cut & Drop Extrusion:</strong> Versatile extrusion heads accurately portion the thick dough directly onto baking bands or trays.</p>
-              <p><strong>3. Multi-Zone Baking:</strong> Convection tunnel ovens apply precise heat profiles to achieve the perfect texture, from soft-baked to crispy.</p>
-              <p><strong>4. Cooling & Wrapping:</strong> Engineered cooling conveyors stabilize the cookies before they enter high-speed automatic packaging lines.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries delivers innovative turnkey solutions for commercial cookie manufacturing. Our fully automated plants offer rapid changeovers between product types, exceptional energy efficiency, and superior build quality. We empower bakery enterprises to scale their production seamlessly with our cutting-edge, PLC-integrated machinery.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Cookie Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Cookie Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

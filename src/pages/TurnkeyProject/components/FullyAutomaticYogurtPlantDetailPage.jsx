@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Milk Reception Unit",
     "desc": "Hygienic intake and chilling of raw milk.",
@@ -67,25 +68,30 @@ const MACHINERY_LIST = [
     "desc": "Automated end-of-line carton packaging and palletizing.",
     "image": "/turnkey-brochures/images/yogurt-gallery/6_packing.webp"
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "How do you prevent whey separation (wateriness) in the yogurt?",
-    "answer": "Whey separation is prevented by our precise homogenization and exact temperature-controlled incubation vats, which ensure the protein structure sets perfectly."
+    question: "Do you manufacture all the machines for the Fully Automatic Yogurt Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Yogurt Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can the plant produce both set yogurt and stirred/flavored yogurt?",
-    "answer": "Yes, our turnkey solution is highly versatile. It features specialized gentle agitators that can blend in fruit pulp or flavors without breaking the delicate curd structure of stirred yogurt."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Is the cleaning process automated?",
-    "answer": "Yes, the entire plant is equipped with a fully automatic CIP (Clean-In-Place) system, ensuring maximum hygiene without manual intervention."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "What type of packaging options are supported?",
-    "answer": "The plant integrates with fully automatic rotary or linear cup filling and sealing machines, as well as pouch filling systems, depending on your market needs."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -172,7 +178,7 @@ export default function FullyAutomaticYogurtPlantDetailPage() {
             Fully Automatic Yogurt Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution for high-capacity yogurt production featuring milk reception, standardization, fermentation, and automated cup packaging.
+            Start Your Own Fully Automatic Yogurt Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -192,9 +198,12 @@ export default function FullyAutomaticYogurtPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Yogurt Plant</strong> is the best machine to make plain, sweet, or fruit yogurt. People eat yogurt every day for good health, and our machine helps you make premium quality yogurt easily.</p>
-              <p>First, the machine boils the milk to remove bad germs. Then it mixes the milk very well so the yogurt becomes creamy. We add the yogurt culture and pack it. The machine keeps the temperature perfect so the yogurt sets beautifully.</p>
-              <p>Our advanced machine makes sure no water comes on top of the yogurt. Whether you want to make thick set yogurt or flavored stirred yogurt, our plant handles everything automatically and saves labor costs.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Yogurt Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -329,23 +338,23 @@ export default function FullyAutomaticYogurtPlantDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Yogurt Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Yogurt Business?</h3>
-                <p>The demand for high-quality, hygienically processed Yogurt is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Fully Automatic Yogurt Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Yogurt Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Yogurt Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Yogurt processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

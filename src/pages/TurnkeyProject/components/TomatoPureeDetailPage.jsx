@@ -16,59 +16,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Tomato Washing & Sorting Machine',
     image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_1.webp',
-    desc: 'High-capacity washing system with agitated water flumes and an inspection conveyor for manual sorting of raw tomatoes.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tomato Crushing & Pulping Machine',
     image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_2.webp',
-    desc: 'Heavy-duty crushing and pulping unit designed to efficiently extract high-yield tomato juice while separating seeds and skin.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Steam Jacketed Cooking Kettle',
     image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_3.webp',
-    desc: 'Jacketed heating vessel for pre-cooking and standardizing the tomato puree before concentration.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Vacuum Evaporator Concentration System',
     image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_4.webp',
-    desc: 'Vacuum concentration system that gently removes excess water at lower temperatures to preserve the natural lycopene color and flavor.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Tomato Puree Evaporation System',
     image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_5.webp',
-    desc: 'Multi-stage evaporation tanks for continuous concentration of the puree to the desired brix level.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Filling & Capping Machine',
     image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_6.webp',
-    desc: 'High-precision automated filling line to hygienically pack the sterilized puree into glass jars, bottles, or aseptic bags.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "Does this plant preserve the natural red color?",
-    answer: "Yes, our vacuum evaporation and optimized heating technologies preserve the natural lycopene, color, and aroma of tomatoes."
+    question: "Do you manufacture all the machines for the Tomato Puree Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Tomato Puree Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can it be used to make tomato paste as well?",
-    answer: "This line is optimized for puree. For high brix tomato paste, we offer a dedicated Tomato Paste Plant with multi-effect evaporators."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "What packaging options does it support?",
-    answer: "The line supports aseptic bags, hot-fill bottles, cans, and retail pouches based on the filling machine configured."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. We provide complete turnkey solutions including installation, commissioning, operator training, and reliable after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Tomato Puree Plants?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized solutions, reliable performance, and complete engineering support."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -137,7 +137,7 @@ export default function TomatoPureeDetailPage() {
             Tomato Puree Processing Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Fully Automated Process For High Efficiency, Maximum Output & Superior Quality
+            Start Your Own Tomato Puree Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -158,10 +158,10 @@ export default function TomatoPureeDetailPage() {
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
               <p>
-                <strong>Salvin Industries' Fully Automated Tomato Puree Processing Plant</strong> is a cutting-edge, commercial-grade turnkey manufacturing line designed for high-yield, continuous extraction of premium tomato puree. This comprehensive <strong>tomato processing equipment</strong> integrates gentle water-flume washing, precision sorting, heavy-duty crushing, and advanced pulping to extract the maximum amount of high-quality pulp while effectively separating seeds and skins.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Tomato Puree Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                At the core of this advanced <strong>tomato puree manufacturing plant</strong> is our state-of-the-art vacuum evaporation and thermal pasteurization technology. Operating at controlled low temperatures, this system meticulously preserves the vibrant natural red color (lycopene), fresh tomato aroma, and vital nutritional profiles without thermal degradation. Finished with highly accurate aseptic filling machines, our <strong>tomato processing solutions</strong> guarantee an extended shelf life, uncompromising hygiene, and strict compliance with global food safety standards.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
@@ -303,23 +303,23 @@ export default function TomatoPureeDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Tomato Puree Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Tomato Puree Business?</h3>
-                <p>The demand for high-quality, hygienically processed Tomato Puree is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Tomato Puree Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Tomato Puree Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Tomato Puree Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Tomato Puree processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

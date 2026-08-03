@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "High-Capacity Vegetable Washing System",
     "image": "/turnkey-brochures/images/frozen-veg-gallery/veg_washing.webp",
@@ -67,29 +68,30 @@ const MACHINERY_LIST = [
     "image": "/turnkey-brochures/images/frozen-veg-gallery/cold_storage.webp",
     "desc": "Automated robotic palletizer that efficiently stacks packaged frozen goods for seamless transfer to deep cold storage."
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What exactly is IQF technology and why is it important?",
-    "answer": "IQF stands for Individual Quick Freezing. It uses extreme cold air blasts to freeze each piece of vegetable separately in minutes. This rapid freezing prevents large ice crystals from rupturing cell walls, keeping the vegetable crisp and fresh when thawed."
+    question: "Do you manufacture all the machines for the Fully Automated Frozen Vegetable Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automated Frozen Vegetable Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can this processing plant handle green peas and sweet corn?",
-    "answer": "Yes, this plant is highly optimized for delicate produce like green peas, sweet corn kernels, diced carrots, broccoli florets, and mixed vegetable blends."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "What is the required ambient temperature for the packaging section?",
-    "answer": "To ensure the frozen vegetables do not begin to thaw or stick together before being sealed, the packaging section is typically installed in a climate-controlled cold room operating at around 4°C to 10°C."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is the blanching time adjustable for different vegetables?",
-    "answer": "Absolutely. The continuous blanching tunnel is controlled via a centralized PLC panel, allowing operators to precisely adjust the conveyor speed and temperature based on the specific vegetable being processed."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    "question": "What capacities are available for the IQF processing line?",
-    "answer": "Salvin Industries offers customizable turnkey IQF lines with freezing capacities ranging from 500 kg/hr up to 5,000 kg/hr, depending on your commercial production requirements."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -149,7 +151,9 @@ export default function FullyAutomatedFrozenVegetableProcessingPlantDetailPage()
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Frozen Vegetable Processing Plant</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Frozen Vegetables</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automated Frozen Vegetable Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,8 +164,12 @@ export default function FullyAutomatedFrozenVegetableProcessingPlantDetailPage()
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automated Frozen Vegetable Processing Plant</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity vegetable washing, blanching, IQF freezing, and robotic cold storage. Engineered to meet global food safety standards, our robust production line seamlessly processes fresh produce into premium-grade frozen vegetables.</p>
-              <p>From automated multi-stage washing and precision blanching to rapid IQF (Individual Quick Freezing) and automated VFFS packaging, our machinery ensures absolute zero contamination. Experience maximum nutrient retention, vibrant natural color, and perfectly preserved texture. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automated Frozen Vegetable Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -197,22 +205,28 @@ export default function FullyAutomatedFrozenVegetableProcessingPlantDetailPage()
       </section>
 
             <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-           <div className="rcp-section-badge">Comprehensive Guide</div>
-           <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Frozen Vegetable Processing</span></h2>
-           <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-           <div className="rcp-seo-content__body">
-               <h3>Why Invest in a Frozen Vegetable Plant?</h3>
-               <p>The frozen food sector is booming as modern consumers look for convenience and year-round availability of seasonal vegetables like green peas and sweet corn. Frozen vegetables have an incredible shelf life and often retain more nutrients than fresh produce that sits in supermarkets for days.</p>
-               
-               <h3>How Does the Freezing Process Work?</h3>
-               <p>The process begins with intensive washing and slicing of the fresh vegetables. They are then blanched in hot water to deactivate enzymes that cause rotting. The most critical step is the IQF (Individual Quick Freezing) tunnel. Cold air blasts freeze the vegetables in just a few minutes. Because it happens so fast, ice crystals don't have time to grow and destroy the vegetable cells. The frozen goods are then weighed and packed.</p>
-               
-               <h3>The Salvin Industries Advantage</h3>
-               <p>Our IQF technology is world-class. It ensures that vegetables like green peas do not stick together in a giant block of ice—every pea remains separate and individually frozen. With our fully automated stainless steel production line, you can process tons of vegetables per hour with minimal labor and zero contamination.</p>
-           </div>
-        </div>
-      </section>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automated Frozen Vegetable Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automated Frozen Vegetable Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

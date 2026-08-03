@@ -18,59 +18,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Starch Slurry Preparation System',
     image: '/turnkey-brochures/images/liquid-glucose-gallery/1_starch_slurry.webp',
-    desc: 'Prepares uniform starch slurry for downstream processing.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Liquefaction Reactor System',
     image: '/turnkey-brochures/images/liquid-glucose-gallery/2_liquefaction.webp',
-    desc: 'Converts starch molecules into shorter chains through controlled enzymatic liquefaction.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Saccharification Tank',
     image: '/turnkey-brochures/images/liquid-glucose-gallery/3_saccharification.webp',
-    desc: 'Converts liquefied starch into glucose-rich syrup using enzymes.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Filtration System',
     image: '/turnkey-brochures/images/liquid-glucose-gallery/4_filtration.webp',
-    desc: 'Removes suspended impurities and improves product clarity.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Evaporation System',
     image: '/turnkey-brochures/images/liquid-glucose-gallery/5_evaporation.webp',
-    desc: 'Concentrates glucose syrup to required solids content.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Packaging System',
     image: '/turnkey-brochures/images/liquid-glucose-gallery/6_packaging.webp',
-    desc: 'Fills and packs finished liquid glucose for storage and distribution.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What is the production capacity of the Liquid Glucose Plant?",
-    answer: "Our plants are available in various capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Complete Liquid Glucose Manufacturing Solution?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Complete Liquid Glucose Manufacturing Solution. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "What raw materials are used for liquid glucose production?",
-    answer: "The primary raw material used is high-quality starch, typically derived from corn, rice, or other starch-rich sources."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Does the plant include enzymatic processing systems?",
-    answer: "Yes, the plant utilizes advanced enzymatic processes for controlled liquefaction and saccharification."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Can the plant be customized for different capacities?",
-    answer: "Yes, the entire plant and its equipment can be engineered and scaled to match your specific output requirements."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Does the system support automatic packaging?",
-    answer: "Yes, the plant includes an automatic packaging system for filling and packing finished liquid glucose efficiently."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -147,7 +147,7 @@ export default function LiquidGlucoseDetailPage() {
             Complete Liquid Glucose Manufacturing Solution
           </h1>
           <p className="lgp-hero__subtitle">
-            Advanced turnkey solution for starch slurry preparation, liquefaction, saccharification, filtration, evaporation, and packaging for high-quality liquid glucose production.
+            Start Your Own Complete Liquid Glucose Manufacturing Solution Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="lgp-hero__actions">
             <a href="/contact" className="lgp-btn lgp-btn--primary lgp-btn--lg">
@@ -170,14 +170,10 @@ export default function LiquidGlucoseDetailPage() {
           <div className="lgp-overview__grid">
             <div className="lgp-overview__text">
               <p>
-                Salvin Industries' Complete Liquid Glucose Manufacturing Solution is a turnkey industrial solution designed for processors who demand
-                consistent quality, high throughput, and full regulatory compliance. Our integrated processing line handles every stage
-                — from incoming raw chilli inspection through final packaged product — in a single, automated, dust-free facility.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Complete Liquid Glucose Manufacturing Solution</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Each plant is custom-engineered to match your specific capacity requirements, product grades, and market standards.
-                Whether you're producing retail packs, bulk institutional supply, or export-grade chilli powder, our systems deliver
-                the colour retention, pungency preservation, and microbial safety your buyers expect.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="lgp-overview__features">
                 {/* Feature 1 */}
@@ -313,25 +309,25 @@ export default function LiquidGlucoseDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Liquid Glucose Manufacturing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
-                <h3>Why Start a Liquid Glucose Manufacturing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Liquid Glucose Manufacturing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+        <section className="lgp-section lgp-seo-content" id="seo-guide" data-animate>
+          <div className={`lgp-container lgp-animate ${isVisible['seo-guide'] ? 'lgp-animate--in' : ''}`}>
+            <div className="lgp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="lgp-section-title">How Does The <span className="lgp-accent">Plant Work?</span></h2>
+            <p className="lgp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="lgp-seo-content__body">
+              <div className="lgp-seo-content__block">
+                <h3>Why Start a Complete Liquid Glucose Manufacturing Solution Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Complete Liquid Glucose Manufacturing Solution, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Liquid Glucose Manufacturing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="lgp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Liquid Glucose Manufacturing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="lgp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

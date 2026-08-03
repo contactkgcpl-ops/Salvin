@@ -5,37 +5,37 @@ const steps = [
     icon: <Lightbulb className="h-7 w-7" />,
     number: "01",
     title: "Design",
-    desc: "Conceptualizing the ideal processing & packaging flow."
+    desc: "We design the perfect machine layout for your factory."
   },
   {
     icon: <Factory className="h-7 w-7" />,
     number: "02",
     title: "Build",
-    desc: "High-precision manufacturing of core units."
+    desc: "We manufacture high-quality stainless steel machines."
   },
   {
     icon: <ClipboardCheck className="h-7 w-7" />,
     number: "03",
     title: "Testing",
-    desc: "Rigorous pre-deployment validation of integrated systems."
+    desc: "We test all machines to make sure they work perfectly."
   },
   {
     icon: <Wrench className="h-7 w-7" />,
     number: "04",
     title: "Installation",
-    desc: "Seamless on-site setup and utility integration."
+    desc: "Our engineers come to your factory to install everything."
   },
   {
     icon: <GraduationCap className="h-7 w-7" />,
     number: "05",
     title: "Training",
-    desc: "Empowering your operational team with technical know-how."
+    desc: "We teach your workers how to run the automatic machines."
   },
   {
     icon: <Headset className="h-7 w-7" />,
     number: "06",
     title: "Support",
-    desc: "Continuous maintenance & lifetime technical guidance."
+    desc: "We provide lifetime support to keep your plant running smoothly."
   }
 ];
 
@@ -50,11 +50,11 @@ export default function ProcessSection() {
         </div>
 
         <h2 className="max-w-4xl text-balance text-2xl font-extrabold uppercase leading-tight tracking-tight text-gray-800 sm:text-3xl lg:text-4xl">
-          FROM CONCEPT TO COMMISSIONING – WE DELIVER END TO END
+          HOW DO WE BUILD YOUR PLANT?
         </h2>
 
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base">
-          A structured 6-step implementation process that ensures every project is delivered with precision, performance, and peace of mind.
+          We follow a very simple 6-step process to manufacture and install your complete automatic factory.
         </p>
 
         <ul className="mt-10 grid list-none grid-cols-1 gap-4 p-0 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 lg:gap-5">

@@ -16,59 +16,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Automatic Destoning & Cleaning Machine',
     image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_1.webp',
-    desc: 'Advanced pre-cleaning system to automatically remove stones, dust, and impurities from raw paddy/rice before processing.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Continuous Roasting & Puffing Oven',
     image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_2.webp',
-    desc: 'High-efficiency automated oven designed for continuous and uniform roasting and puffing of grains.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Multi-Stage Cooling & Grading Conveyor',
     image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_3.webp',
-    desc: 'Long conveyor system equipped with exhaust fans to rapidly cool and grade the puffed mamra/pauva.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Rotary Flavoring & Mixing Drum',
     image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_4.webp',
-    desc: 'Hexagonal rotary drum for uniform application and blending of oil, salt, and spices on the finished product.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Transfer & Feed Conveyor System',
     image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_5.webp',
-    desc: 'Hygienic inclined conveyor system to seamlessly transfer the processed mamra to the packaging line.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Multi-Head Packing Machine',
     image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_6.webp',
-    desc: 'High-speed vertical form-fill-seal (VFFS) packing machine with multi-head weighers for accurate and fast pouch packing.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "Is this plant suitable for both Mamra and Pauva?",
-    answer: "Yes, the process line can be customized or configured to handle both puffed rice (Mamra) and flattened rice (Pauva) processing."
+    question: "Do you manufacture all the machines for the Mamra Pauva Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Mamra Pauva Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Does the system include flavoring?",
-    answer: "Yes, the plant includes an automated mixing and flavoring system to add seasonings uniformly before packing."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "What is the material of construction?",
-    answer: "All contact parts are made of high-quality food-grade stainless steel (SS304) ensuring maximum hygiene and safety."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. We provide complete turnkey solutions including installation, commissioning, operator training, and reliable after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Mamra Pauva Plants?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized solutions, reliable performance, and complete engineering support."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -137,7 +137,7 @@ export default function MamraPauvaDetailPage() {
             Mamra Pauva Processing Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Fully Automated Process For High Efficiency & Maximum Output
+            Start Your Own Mamra Pauva Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -158,10 +158,10 @@ export default function MamraPauvaDetailPage() {
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
               <p>
-                <strong>Salvin Industries' Industrial Mamra (Puffed Rice) and Pauva (Flattened Rice) Processing Plant</strong> is a highly robust, fully automated turnkey manufacturing solution engineered for maximum yield and premium product quality. From automated raw paddy intake and destoning to high-speed multi-head packing, our comprehensive <strong>puffed rice processing line</strong> ensures a completely touch-free, hygienic operation.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Mamra Pauva Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Equipped with advanced continuous roasting and puffing ovens, multi-stage cooling conveyors, and precision rotary flavoring drums, this high-tech <strong>mamra pauva making machine</strong> guarantees perfectly uniform grain expansion, consistent crispiness, and even flavor distribution. Built with heavy-duty food-grade materials, our energy-efficient <strong>flattened rice processing plant</strong> significantly reduces operational costs, minimizes labor dependence, and maximizes overall production throughput to meet soaring market demands.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
@@ -303,23 +303,23 @@ export default function MamraPauvaDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Mamra Pauva Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Mamra Pauva Business?</h3>
-                <p>The demand for high-quality, hygienically processed Mamra Pauva is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Mamra Pauva Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Mamra Pauva Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Mamra Pauva Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Mamra Pauva processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Washing System',
     image: '/turnkey-brochures/images/baby-food-plant/1_washing.webp',
-    desc: 'Automated fruit and vegetable washing and sorting conveyor with water bath and air agitation.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Cutting & Dicing Machine',
     image: '/turnkey-brochures/images/baby-food-plant/2_cutting.webp',
-    desc: 'High-speed cutting and dicing machine for precise size reduction of vegetables and fruits.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Steam Cooking Kettle',
     image: '/turnkey-brochures/images/baby-food-plant/3_cooking.webp',
-    desc: 'Jacketed steam cooking kettle for hygienic batch cooking of ingredients.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Homogenizer & Colloid Mill',
     image: '/turnkey-brochures/images/baby-food-plant/4_homogenizer.webp',
-    desc: 'High-shear homogenizer to blend and puree ingredients into a smooth, consistent baby food paste.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'HTST Pasteurization System',
     image: '/turnkey-brochures/images/baby-food-plant/5_pasteurization.webp',
-    desc: 'High-Temperature Short-Time pasteurizer to ensure product safety and extend shelf life.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Aseptic Filling Machine',
     image: '/turnkey-brochures/images/baby-food-plant/6_filling.webp',
-    desc: 'Automatic aseptic filling and capping machine for hygienic packaging in jars or bottles.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Baby Food Plant?",
-    answer: "Our plants are available from 200 KG/HR to 5 TON/HR capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Baby Food Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Baby Food Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant produce different types of baby food?",
-    answer: "Yes. The plant is designed to handle cereal-based, milk-based, and fruit/vegetable-based formulations for infants and young children."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC/SCADA control systems for hygienic, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Baby Food Plants?",
-    answer: "SALVIN offers food-grade machinery built to CODEX and FSSAI standards, energy-efficient systems, customized solutions, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function BabyFoodPlantDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY BABY FOOD SOLUTION</span>
           <h1 className="opp-hero__title">Baby Food Plant</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Batching, Mixing, Pasteurisation, Spray Drying And Packaging Of Baby Food Powder</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Baby Food Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function BabyFoodPlantDetailPage() {
           <h2 className="opp-section-title">Complete Baby Food <span className="opp-accent">Processing Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Baby Food Plant is a turnkey industrial solution designed for manufacturers who demand impeccable hygiene, consistent nutritional profiles, and full regulatory compliance. Our integrated processing line handles every stage — from ingredient reception through final packaged baby food powder — in a single, automated, clean-room facility.</p>
-              <p>Each plant is custom-engineered to your specific capacity requirements, product formulations, and regulatory standards including CODEX, FSSAI, and EU directives. Whether producing cereal-based infant formulas, milk-based follow-up formulas, or specialised therapeutic nutrition, our systems deliver the safety and consistency parents trust.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Baby Food Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function BabyFoodPlantDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Baby Food Plant Processing</span></h2>
-          <p className="opp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Start a Baby Food Plant Business?</h3>
-              <p>The global baby food market is growing rapidly, driven by rising health awareness, urbanisation, and increased disposable income. Automated, high-capacity production ensures consistent nutritional profiles, extended shelf life, and the regulatory compliance required to compete in both domestic and export markets.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does the Baby Food Processing Work?</h3>
-              <p>The process begins with precise batching of dry and liquid ingredients, followed by high-shear mixing into a homogeneous slurry. The slurry undergoes UHT pasteurisation before being spray-dried into a fine, free-flowing powder. Fluid-bed cooling and sieving finalise the texture, and the product is hermetically sealed under nitrogen in clean-room conditions.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for baby food manufacturing. Our machinery meets CODEX, FSSAI, and EU hygiene standards, constructed with premium SS304/SS316 food-grade stainless steel. Advanced PLC/SCADA automation ensures recipe repeatability, traceability, and one-touch operation with minimal human intervention.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Baby Food Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Baby Food Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

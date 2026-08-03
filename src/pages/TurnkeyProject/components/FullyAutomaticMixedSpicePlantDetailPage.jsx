@@ -28,21 +28,38 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Cleaning & Destoning", desc: "Raw spice cleaning and destoning machine to remove impurities and foreign materials.", image: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.webp" },
-  { name: "Spice Roasting", desc: "Automatic spice roasting machine for consistent flavor development.", image: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.webp" },
-  { name: "Grinding System", desc: "Hammer mill pulverizer grinding machine for perfect particle size reduction.", image: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.webp" },
-  { name: "Ribbon Blending", desc: "Industrial ribbon blender & spice mixing machine for homogeneous spice blends.", image: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp" },
-  { name: "Vibro Sieving", desc: "Vibro sieving and fine mesh screening machine to ensure uniform product.", image: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.webp" },
-  { name: "Weighing & Packing", desc: "Automatic spice weighing, packing and sealing machine for perfect packaging.", image: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.webp" }
-];
+
+  { name: "Cleaning & Destoning", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.webp" },
+  { name: "Spice Roasting", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.webp" },
+  { name: "Grinding System", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.webp" },
+  { name: "Ribbon Blending", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp" },
+  { name: "Vibro Sieving", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.webp" },
+  { name: "Weighing & Packing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.webp" }
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
-  { question: "What is the production capacity of the Fully Automatic Mixed Spice Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
-  { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
-  { question: "What materials are used in the construction of the mixed spice plant?", answer: "All product contact parts are manufactured using high-grade stainless steel (SS 304 / SS 316) to ensure strict hygiene and food safety compliance." },
-  { question: "Can the plant handle different types of spices?", answer: "Yes, our versatile systems are designed to process, grind, and blend a wide variety of whole and powdered spices with minimal changeover time." }
+  {
+    question: "Do you manufacture all the machines for the Fully Automatic Mixed Spice Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Mixed Spice Plant. From the first processing machine to the final packing machine, we build everything in our factory."
+  },
+  {
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
+  },
+  {
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
+  },
+  {
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
+  }
 ];
 
 /* ─── Gallery Images ─── */
@@ -101,7 +118,9 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Mixed Spice Plant</h1>
-          <p className="rcp-hero__subtitle">State-of-the-art turnkey solution for processing, blending, and packaging mixed spices efficiently.</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automatic Mixed Spice Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -112,8 +131,12 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
           <h2 className="rcp-section-title">Complete <span className="rcp-accent">Mixed Spice Processing</span> Solution</h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Mixed Spice Processing Plant</strong> is an advanced turnkey solution designed to handle a variety of spices efficiently. From pre-cleaning and sorting to precision grinding and hygienic blending, our fully automated system ensures maximum product yield and zero flavor loss.</p>
-              <p>Built with food-grade SS304/316 stainless steel, this plant features PLC-controlled automation to reduce manual labor and ensure every batch meets the highest global food safety standards. It is the perfect choice for scaling up mixed spice production with consistent quality.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Mixed Spice Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -149,22 +172,28 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
       </section>
 
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-          <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Mixed Spice Processing</span></h2>
-          <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-          <div className="rcp-seo-content__body">
-            <h3>Why Start a Garam Masala Business?</h3>
-            <p>Garam Masala is the heart of Indian and South Asian cooking. The demand for branded, high-quality, and hygienically packed blended spices is skyrocketing. By manufacturing a perfectly balanced and highly aromatic Garam Masala, you can build a highly profitable and recurring FMCG business.</p>
-
-            <h3>How Does the Masala Processing Work?</h3>
-            <p>The process starts by thoroughly cleaning whole raw spices (like cumin, cardamom, and black pepper) to remove stones and dust. The spices are then gently roasted to release their natural oils and flavors. After roasting, they are fed into a heavy-duty pulverizer that grinds them into a fine powder. This powder is perfectly mixed in a ribbon blender before being automatically packed into sealed pouches.</p>
-
-            <h3>The Salvin Industries Advantage</h3>
-            <p>When spices get too hot during grinding, they lose their flavor and aroma. Our pulverizers are equipped with advanced cooling jackets to grind spices at low temperatures. Furthermore, our precision ribbon blenders ensure that every single pouch of Garam Masala has the exact same taste and proportion of spices.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Mixed Spice Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Mixed Spice Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

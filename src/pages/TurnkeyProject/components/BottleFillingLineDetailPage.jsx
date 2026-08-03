@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Bottle Unscrambler',
     image: '/turnkey-brochures/images/bottle-filling-line/1_unscrambler.webp',
-    desc: 'Automatic rotary bottle unscrambler to orient and feed empty bottles into the line.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Air Rinsing Machine',
     image: '/turnkey-brochures/images/bottle-filling-line/2_rinsing.webp',
-    desc: 'High-speed air rinsing machine to clean the interior of empty bottles before filling.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Automatic Liquid Filling Machine',
     image: '/turnkey-brochures/images/bottle-filling-line/3_filling.webp',
-    desc: 'Precision volumetric filling machine for hygienic and accurate liquid dispensing.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cap Sorting & Feeding System',
     image: '/turnkey-brochures/images/bottle-filling-line/4_cap_sorting.webp',
-    desc: 'Vibratory bowl feeder and elevator to orient and supply caps continuously.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Automatic Capping Machine',
     image: '/turnkey-brochures/images/bottle-filling-line/5_capping.webp',
-    desc: 'Inline rotary capping machine to apply and tighten caps with precise torque control.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Labeling Machine',
     image: '/turnkey-brochures/images/bottle-filling-line/6_labeling.webp',
-    desc: 'High-speed labeling machine with vision system for accurate label placement.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Bottle Filling Line?",
-    answer: "Our lines are available from 1,000 BPH to 36,000 BPH (bottles per hour) and can be customized based on bottle size and product type."
+    question: "Do you manufacture all the machines for the Bottle Filling Line?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Bottle Filling Line. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the line handle different bottle sizes and products?",
-    answer: "Yes. Our bottle filling lines are designed with quick-changeover tooling to handle various bottle shapes, sizes, and products including beverages, edible oils, syrups, sauces, dairy, and pharmaceuticals."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the line fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC control systems for consistent, high-speed, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Bottle Filling Lines?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized solutions, reliable high-speed performance, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function BottleFillingLineDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY BOTTLE FILLING SOLUTION</span>
           <h1 className="opp-hero__title">Bottle Filling Line</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Rinsing, Filling, Capping, Labelling, Inspection And Cartonning Of Bottled Products</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Bottle Filling Line Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function BottleFillingLineDetailPage() {
           <h2 className="opp-section-title">Complete Bottle Filling <span className="opp-accent">Line Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Bottle Filling Line is a turnkey industrial solution designed for manufacturers who demand consistent fill accuracy, high-speed throughput, and full food and pharmaceutical compliance. Our integrated line handles every stage — from bottle unscrambling and rinsing through filling, capping, labelling, and case packing — in a single, automated, hygienic facility.</p>
-              <p>Each line is custom-engineered to your specific product, bottle format, output rate, and regulatory requirements. Whether you're filling beverages, edible oils, syrups, dairy products, sauces, or pharmaceutical liquids, our systems deliver the fill accuracy, seal integrity, and label placement precision your retail and regulatory buyers demand.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Bottle Filling Line</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function BottleFillingLineDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Bottle Filling Line Solutions</span></h2>
-          <p className="opp-section-subtitle">Understanding the filling workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Invest in a Bottle Filling Line?</h3>
-              <p>Manual bottling is slow, inconsistent, and prone to hygiene risk. An automated bottle filling line dramatically increases throughput, eliminates human error in fill volumes, and ensures every bottle is sealed, labelled, and coded to regulatory standards — making it essential for any serious FMCG manufacturer.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does the Bottle Filling Line Work?</h3>
-              <p>The process begins with automatic bottle unscramblingand rinsing to prepare clean containers. The filling machine dispenses precise volumes using volumetric, gravimetric, or flow-meter technology. Bottles then pass through capping, torque-verification, labelling, and optional ink-jet coding, before being grouped into cartons or cases for palletising and despatch.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey bottle filling lines. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Advanced PLC/SCADA automation ensures fill accuracy, line efficiency tracking, and one-touch recipe changeover. We handle everything from layout design to installation and global commissioning.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Bottle Filling Line Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Bottle Filling Line, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Ingredient Mixing & Preparation Tank",
     "image": "/turnkey-brochures/images/jelly-gallery/ingredient_mixing.webp",
@@ -67,29 +68,30 @@ const MACHINERY_LIST = [
     "image": "/turnkey-brochures/images/jelly-gallery/pouch_packing.webp",
     "desc": "High-speed vertical form-fill-seal (VFFS) machine for hygienic and efficient pouch packaging of the final product."
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the processing capacity of the Jelly Manufacturing Plant?",
-    "answer": "We engineer jelly plants with processing capacities starting from 500 kg/hr up to 5,000 kg/hr, customized to suit your industrial production needs."
+    question: "Do you manufacture all the machines for the Fully Automatic Jelly Manufacturing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Jelly Manufacturing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can this plant produce different types of jellies?",
-    "answer": "Yes, the plant is highly versatile and capable of producing clear jellies, real fruit pulp jellies, pectin-based jellies, and fortified functional jellies."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "How do you ensure consistent texture and firmness in the jelly?",
-    "answer": "Our continuous vacuum cookers paired with automated PLC-controlled ingredient batching ensure that every batch achieves the exact Brix and pH levels required for a perfect set."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is a CIP (Clean-In-Place) system included in the production line?",
-    "answer": "Yes, the entire processing line, including kettles, pipelines, and filling nozzles, is connected to an automated CIP system for quick, hygienic cleaning during flavor changeovers."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    "question": "What packaging options does the plant support?",
-    "answer": "The line can be integrated with various packaging solutions, including rotary cup fillers, stick-pack machines, and spouted pouch filling machines."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -149,7 +151,9 @@ export default function FullyAutomaticJellyManufacturingPlantDetailPage() {
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Jelly Manufacturing Plant</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Jelly</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automatic Jelly Manufacturing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,8 +164,12 @@ export default function FullyAutomaticJellyManufacturingPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Jelly Manufacturing Plant</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity jelly cooking, depositing, moulding, and packaging. Engineered to meet global food safety standards, our robust production line seamlessly processes premium-grade, consistent jelly products.</p>
-              <p>From automated ingredient mixing and advanced vacuum cooking systems to high-speed depositing, cooling tunnels, and aseptic pouch packing, our machinery ensures absolute zero contamination. Experience continuous production, vibrant natural colors, and perfect texture. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Jelly Manufacturing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -197,22 +205,28 @@ export default function FullyAutomaticJellyManufacturingPlantDetailPage() {
       </section>
 
             <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-           <div className="rcp-section-badge">Comprehensive Guide</div>
-           <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Jelly Manufacturing</span></h2>
-           <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-           <div className="rcp-seo-content__body">
-               <h3>Why Invest in a Jelly Plant?</h3>
-               <p>Fruit jellies, gummies, and soft candies are incredibly popular among children and adults alike. The confectionery market offers massive scalability. By manufacturing high-quality, perfectly textured jellies, you can quickly establish a highly profitable FMCG brand with excellent shelf life and easy distribution.</p>
-               
-               <h3>How Does the Jelly Processing Work?</h3>
-               <p>The automated process begins by mixing sugar, water, pectin, and natural fruit flavors in a specialized vacuum cooker. This mixture is boiled until it reaches the perfect syrup consistency. The hot syrup is then pumped into a depositor machine that precisely fills it into custom-shaped moulds. These moulds pass through a long cooling tunnel where the jelly sets and hardens before being automatically demoulded and coated with sugar.</p>
-               
-               <h3>The Salvin Industries Advantage</h3>
-               <p>We provide completely automated, hands-free jelly production lines. Our advanced vacuum cooking technology ensures that the fruit flavors and vibrant colors are not destroyed by excessive heat. With our precision depositing machines, every single jelly comes out in the exact same size and weight, guaranteeing a premium product every time.</p>
-           </div>
-        </div>
-      </section>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Jelly Manufacturing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Jelly Manufacturing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

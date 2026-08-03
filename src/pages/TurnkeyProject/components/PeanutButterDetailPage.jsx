@@ -19,59 +19,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Rotary Hot-Air Roaster',
     image: '/turnkey-brochures/images/peanut-butter-gallery/machine1.webp',
-    desc: 'Provides uniform roasting of peanuts to develop the desired color and flavor profile before further processing.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Peanut Skin Blancher',
     image: '/turnkey-brochures/images/peanut-butter-gallery/machine2.webp',
-    desc: 'Efficiently removes the red skin from roasted peanuts, ensuring a clean and high-quality raw material.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'High-Shear Colloid Mill',
     image: '/turnkey-brochures/images/peanut-butter-gallery/machine3.webp',
-    desc: 'High-speed industrial colloid mill for ultra-fine grinding of peanuts to achieve smooth and consistent paste texture.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Mixing & Homogenization Tank',
     image: '/turnkey-brochures/images/peanut-butter-gallery/machine4.webp',
-    desc: 'Blends peanut paste with stabilizers, sugar, and salt to ensure perfect homogenization and prevent oil separation.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Volumetric Jar Filler',
     image: '/turnkey-brochures/images/peanut-butter-gallery/machine5.webp',
-    desc: 'Automated high-precision volumetric filling machine for accurately dosing peanut butter into retail jars and containers.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Cooling & Packing System',
     image: '/turnkey-brochures/images/peanut-butter-gallery/machine6.webp',
-    desc: 'Cooling bed conveyor designed to quickly reduce product temperature after filling to ensure stable quality before final carton packing.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What peanut butter products can be manufactured?",
-    answer: "You can produce smooth peanut butter, crunchy peanut butter, peanut spreads, flavored peanut butter, and other nut-based spreads."
+    question: "Do you manufacture all the machines for the Peanut Butter Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Peanut Butter Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "What production capacities are available?",
-    answer: "We offer Small Scale, Medium Scale, Large Scale, and Fully Automatic Industrial Plant capacities based on your needs."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant fully automatic?",
-    answer: "Yes, we offer fully automatic solutions with advanced PLC-based control systems for efficient and consistent operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What material is used for construction?",
-    answer: "The entire processing plant is built with SS304/SS316 food-grade stainless steel to ensure maximum hygiene."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Do you provide installation and commissioning?",
-    answer: "Yes, we provide end-to-end turnkey solutions including manufacturing, global installation, process commissioning, and operator training."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -148,7 +148,7 @@ export default function PeanutButterDetailPage() {
             Peanut Butter Processing Plant
           </h1>
           <p className="pbp-hero__subtitle">
-            Complete Turnkey Solution For Roasting, Blanching, Grinding, Homogenizing And Packaging Of Peanut Butter
+            Start Your Own Peanut Butter Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="pbp-hero__actions">
             <a
@@ -175,14 +175,10 @@ export default function PeanutButterDetailPage() {
           <div className="pbp-overview__grid">
             <div className="pbp-overview__text">
               <p>
-                Salvin Industries' Peanut Butter Processing Plant is a turnkey industrial solution designed for processors who demand
-                consistent quality, high throughput, and full regulatory compliance. Our integrated processing line handles every stage
-                — from raw peanut roasting and blanching through colloid milling and final jar filling — in a single, automated, food-safe facility.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Peanut Butter Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Each plant is custom-engineered to match your specific capacity requirements. Our equipment is perfect for producing
-                Smooth Peanut Butter, Crunchy Peanut Butter, Peanut Spread, Nut-Based Spreads, Flavored Peanut Butter, and for Commercial Food Processing
-                in Small Scale, Medium Scale, Large Scale, or as a Fully Automatic Industrial Plant.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="pbp-overview__features">
                 {/* Feature 1 */}
@@ -323,25 +319,25 @@ export default function PeanutButterDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Peanut Butter Processing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="pbp-section pbp-seo-content" id="seo-guide" data-animate>
+          <div className={`pbp-container pbp-animate ${isVisible['seo-guide'] ? 'pbp-animate--in' : ''}`}>
+            <div className="pbp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="pbp-section-title">How Does The <span className="pbp-accent">Plant Work?</span></h2>
+            <p className="pbp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="pbp-seo-content__body">
+              <div className="pbp-seo-content__block">
                 <h3>Why Start a Peanut Butter Processing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Peanut Butter Processing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Peanut Butter Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Peanut Butter Processing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="pbp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Peanut Butter Processing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="pbp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

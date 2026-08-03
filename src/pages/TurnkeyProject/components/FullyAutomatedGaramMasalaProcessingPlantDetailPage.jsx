@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Raw Spice Cleaning & Destoning Machine",
     "image": "/turnkey-brochures/images/garam-masala-gallery/spice_cleaning.webp",
@@ -67,29 +68,30 @@ const MACHINERY_LIST = [
     "image": "/turnkey-brochures/images/garam-masala-gallery/pouch_packing.webp",
     "desc": "High-speed auger filler and pouch packaging machine that seals masala powder in airtight packets to retain freshness."
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Does the high-speed grinding process cause aroma loss?",
-    "answer": "No. Our pulverizers are either water-jacketed or integrated with cryogenic (liquid nitrogen) grinding technology to maintain ultra-low temperatures, preventing the volatilization of essential spice oils."
+    question: "Do you manufacture all the machines for the Fully Automated Garam Masala Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automated Garam Masala Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can the plant automatically handle complex customized spice formulations?",
-    "answer": "Yes, the centralized PLC/SCADA batching system allows you to save hundreds of recipes. It will automatically weigh and convey the exact proportions of up to 15 different whole spices per batch."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "How is dust controlled in the spice processing facility?",
-    "answer": "The entire plant is fully enclosed and integrated with centralized pulse-jet dust collection systems. This ensures a dust-free working environment and prevents cross-contamination between batches."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "What type of packaging machines are provided for Garam Masala?",
-    "answer": "We integrate fully automated VFFS (Vertical Form-Fill-Seal) machines capable of handling stand-up pouches, center-seal bags, and jars, optionally equipped with nitrogen flushing for extended shelf life."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    "question": "Can the same plant be used for single spices like Turmeric or Chilli?",
-    "answer": "Yes, the grinding and packaging modules are highly versatile. With proper cleaning procedures, you can run single spices like coriander, turmeric, and chilli powder on the same line."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -149,7 +151,9 @@ export default function FullyAutomatedGaramMasalaProcessingPlantDetailPage() {
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Garam Masala Processing Plant</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Garam Masala</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automated Garam Masala Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,8 +164,12 @@ export default function FullyAutomatedGaramMasalaProcessingPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automated Garam Masala Processing Plant</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity spice cleaning, roasting, pulverizing, and blending. Engineered to meet global food safety standards, our robust production line seamlessly processes raw whole spices into premium-grade, highly aromatic Garam Masala powder.</p>
-              <p>From automated destoning and precision temperature-controlled roasting to hammer mill grinding and homogenous ribbon blending, our machinery ensures absolute zero contamination. Experience maximum volatile oil retention, vibrant natural color, and unmatched flavor consistency. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automated Garam Masala Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -197,22 +205,28 @@ export default function FullyAutomatedGaramMasalaProcessingPlantDetailPage() {
       </section>
 
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-          <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Garam Masala Processing</span></h2>
-          <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-          <div className="rcp-seo-content__body">
-            <h3>Why Start a Garam Masala Business?</h3>
-            <p>Garam Masala is the heart of Indian and South Asian cooking. The demand for branded, high-quality, and hygienically packed blended spices is skyrocketing. By manufacturing a perfectly balanced and highly aromatic Garam Masala, you can build a highly profitable and recurring FMCG business.</p>
-
-            <h3>How Does the Masala Processing Work?</h3>
-            <p>The process starts by thoroughly cleaning whole raw spices (like cumin, cardamom, and black pepper) to remove stones and dust. The spices are then gently roasted to release their natural oils and flavors. After roasting, they are fed into a heavy-duty pulverizer that grinds them into a fine powder. This powder is perfectly mixed in a ribbon blender before being automatically packed into sealed pouches.</p>
-
-            <h3>The Salvin Industries Advantage</h3>
-            <p>When spices get too hot during grinding, they lose their flavor and aroma. Our pulverizers are equipped with advanced cooling jackets to grind spices at low temperatures. Furthermore, our precision ribbon blenders ensure that every single pouch of Garam Masala has the exact same taste and proportion of spices.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automated Garam Masala Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automated Garam Masala Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

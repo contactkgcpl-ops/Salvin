@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Vibratory Screener & Destoner',
     image: '/turnkey-brochures/images/millet-plant/1_destoner.webp',
-    desc: 'High-efficiency screener to remove impurities, dust, and stones from raw millet grains.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Millet Huller Machine',
     image: '/turnkey-brochures/images/millet-plant/3_huller.webp',
-    desc: 'Efficient hulling machine to remove the outer husk from millet grains with minimal breakage.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Millet Polisher',
     image: '/turnkey-brochures/images/millet-plant/2_polisher.webp',
-    desc: 'Abrasive polisher designed to refine the surface of de-husked millet for better texture and whiteness.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Aspirator Air Separator',
     image: '/turnkey-brochures/images/millet-plant/5_aspirator.webp',
-    desc: 'Air separator system to effectively remove lightweight impurities, dust, and loose husks.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Optical Color Sorter',
     image: '/turnkey-brochures/images/millet-plant/4_sorter.webp',
-    desc: 'Advanced multi-chute optical color sorter to eliminate discolored grains and ensure premium quality.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Packaging Machine',
     image: '/turnkey-brochures/images/millet-plant/6_packing.webp',
-    desc: 'High-speed automatic VFFS packaging machine for hygienic sealing of processed millet grains.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Millet Processing Plant?",
-    answer: "Our plants are available from 500 KG/HR to 10 TON/HR capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Millet Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Millet Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant process different types of millet?",
-    answer: "Yes. The plant is designed to handle pearl millet (bajra), finger millet (ragi), foxtail millet, sorghum (jowar), proso millet, and little millet."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC control systems for consistent, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Millet Processing Plants?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized multi-variety processing solutions, reliable performance, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function MilletProcessingPlantDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY MILLET PROCESSING SOLUTION</span>
           <h1 className="opp-hero__title">Millet Processing Plant</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Cleaning, De-Husking, Polishing, Grading, Milling And Packaging Of Millet</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Millet Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function MilletProcessingPlantDetailPage() {
           <h2 className="opp-section-title">Complete Millet <span className="opp-accent">Processing Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Millet Processing Plant is a turnkey industrial solution designed for processors who demand consistent grain quality, high throughput, and full regulatory compliance. Our integrated processing line handles every stage — from incoming raw millet inspection through final packaged grain or flour — in a single, automated, dust-free facility.</p>
-              <p>Each plant is custom-engineered to your specific millet variety, capacity requirements, and market standards. Whether you're producing polished millet grains, flour for retail packs, or bulk institutional supply, our systems deliver the colour retention, nutritional safety, and microbial compliance your buyers expect.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Millet Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function MilletProcessingPlantDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Millet Processing Plant</span></h2>
-          <p className="opp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Start a Millet Processing Plant Business?</h3>
-              <p>The global demand for millet — a gluten-free, highly nutritious superfood — is growing rapidly as consumers shift towards healthier, ancient grains. Setting up an automated, high-capacity millet processing plant ensures a highly profitable FMCG business with strong export potential to Europe, the Americas, and Southeast Asia.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does the Millet Processing Work?</h3>
-              <p>The manufacturing process is a fully synchronized industrial workflow. Raw millet is received, cleaned, and destoned to remove all impurities. The grain is then de-husked to remove the outer shell, polished to the desired whiteness, graded by size, and optionally milled into fine flour. The finished product is conveyed directly into automatic packaging lines.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for millet processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Advanced PLC/SCADA control panels offer one-touch automation. We handle everything from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Millet Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Millet Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

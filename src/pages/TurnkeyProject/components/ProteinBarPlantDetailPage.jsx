@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Ingredient Weighing & Batching System',
     image: '/turnkey-brochures/images/oat-plant/media__1785504316135.webp',
-    desc: 'Automated multi-ingredient weighing and batching station for precise recipe formulation of protein powders, syrups, nuts, seeds, and binding agents.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Sigma / Z-Blade Mixer',
     image: '/turnkey-brochures/images/oat-plant/media__1785504355145.webp',
-    desc: 'Heavy-duty sigma or Z-blade mixer for thorough blending of viscous protein bar dough with nuts, dried fruits, chocolate chips, and coating syrups.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Slab Roller & Extrusion System',
     image: '/turnkey-brochures/images/oat-plant/media__1785504447423.webp',
-    desc: 'Precision slab-rolling or extrusion unit to form the protein bar mass into uniform, consistent slabs at the exact thickness and density required.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Chocolate Enrober & Coating Machine',
     image: '/turnkey-brochures/images/oat-plant/media__1785504578350.webp',
-    desc: 'Full-width chocolate enrober with curtain coater and blower for applying uniform chocolate or compound coatings over the formed bar slab.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Stainless Steel Cooling Tunnel',
     image: '/turnkey-brochures/images/oat-plant/media__1785504738661.webp',
-    desc: 'Multi-zone cooling tunnel with precise temperature control to set the chocolate coating and firm the bar core for clean, sharp cutting.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Flow-Wrap Packaging Machine',
     image: '/turnkey-brochures/images/oat-plant/media__1785504774919.webp',
-    desc: 'High-speed flow-wrap machine for hygienic individual bar wrapping in film, foil, or compostable packaging with date coding and batch traceability.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Protein Bar Manufacturing Plant?",
-    answer: "Our plants are available from 200 KG/HR to 3 TON/HR capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Protein Bar Manufacturing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Protein Bar Manufacturing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant produce different types of protein bars?",
-    answer: "Yes. The plant is designed to handle whey protein bars, plant-based protein bars, granola bars, energy bars, and low-sugar nutritional snack bars."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC control systems for consistent, high-speed, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Protein Bar Plants?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient systems, customized solutions, reliable performance, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function ProteinBarPlantDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY PROTEIN BAR SOLUTION</span>
           <h1 className="opp-hero__title">Protein Bar Manufacturing Plant</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Batching, Mixing, Forming, Enrobing, Cooling And Packaging Of Protein Bars</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Protein Bar Manufacturing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function ProteinBarPlantDetailPage() {
           <h2 className="opp-section-title">Complete Protein Bar <span className="opp-accent">Manufacturing Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Protein Bar Manufacturing Plant is a turnkey industrial solution for health food brands who demand consistent texture, precise protein content, and impeccable food safety. Our integrated line handles every stage — from ingredient batching through individually wrapped finished bars — in a single, automated, hygienic facility.</p>
-              <p>Each plant is custom-engineered to your specific product formulation, bar size, output rate, and packaging format. Whether you're launching a whey protein bar, a plant-based snack bar, or a premium chocolate-enrobed energy bar, our systems deliver the uniformity, texture, and shelf life your retail and export buyers demand.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Protein Bar Manufacturing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function ProteinBarPlantDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Protein Bar Manufacturing</span></h2>
-          <p className="opp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Start a Protein Bar Manufacturing Business?</h3>
-              <p>The global health snack bar market is booming, driven by fitness culture, on-the-go nutrition demand, and growing consumer awareness of protein intake. Automated manufacturing ensures consistent macros, extended shelf life, and the premium brand image that retail and e-commerce buyers demand.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does Protein Bar Manufacturing Work?</h3>
-              <p>The process begins with precise ingredient batching and mixing in a sigma or Z-blade mixer. The dough is then formed into slabs via rollers or extrusion, enrobed in chocolate or compound coating, cooled in a multi-zone tunnel to set the coating, cut to precise bar dimensions, and flow-wrapped individually in high-barrier film.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for protein bar manufacturing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel. Advanced PLC automation ensures recipe repeatability, weight accuracy, and one-touch operation. We handle everything from factory layout to machine manufacturing, installation, and commissioning.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Protein Bar Manufacturing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Protein Bar Manufacturing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

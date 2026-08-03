@@ -16,6 +16,7 @@ const PROCESS_STEPS = [
 
 /* â”€â”€â”€ Machinery Used â”€â”€â”€ */
 const MACHINERY_LIST = [
+
   {
     "name": "RO Plant Reverse Osmosis",
     "desc": "Advanced multi-stage RO system for high-purity water generation.",
@@ -47,24 +48,27 @@ const MACHINERY_LIST = [
     "image": "/turnkey-brochures/images/mineral-water-gallery/6.webp"
   }
 ]
-
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
 const FAQS = [
   {
-    "question": "What is the difference between Packaged Drinking Water and Mineral Water?",
-    "answer": "Packaged drinking water is highly purified RO water. Mineral water goes a step further by artificially or naturally adding essential minerals like Calcium and Magnesium back into the water for health benefits and taste."
+    question: "Do you manufacture all the machines for the Fully Automatic Mineral Water Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Mineral Water Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "How are minerals added to the water?",
-    "answer": "After the RO system strips the water of all impurities (and natural minerals), our precise Mineral Dosing Pump injects a calculated solution of essential minerals into the pure water stream."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Why is Ozonation required?",
-    "answer": "Ozone is a powerful natural disinfectant. Dissolving ozone into the water just before filling ensures the water, bottle, and cap remain completely sterile, preventing any bacterial growth during storage."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is the filling machine fully automatic?",
-    "answer": "Yes, we provide an automatic rotary monoblock machine that seamlessly rinses the empty bottle, fills it with mineral water, and caps it in one continuous motion."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -150,7 +154,7 @@ export default function MineralWaterPlantDetailPage() {
             Fully Automatic Mineral Water Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automatic Mineral Water Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -170,9 +174,12 @@ export default function MineralWaterPlantDetailPage() {
           <h2 className="rcp-section-title">Commercial Mineral Water <span className="rcp-accent">Manufacturing Plant</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Provide safe, healthy, and refreshing hydration with our <strong>Fully Automatic Mineral Water Plant</strong>. With increasing health awareness, the demand for premium mineral-enriched water is at an all-time high in homes, offices, and restaurants.</p>
-              <p>The purification process is rigorous. Raw water is pumped through sand, carbon, and micron filters to remove suspended particles, odor, and color. It then passes through a high-pressure Reverse Osmosis (RO) system which eliminates dissolved solids, heavy metals, and impurities down to the molecular level.</p>
-              <p>Since RO removes natural minerals, a precise dosing system adds essential minerals back into the water for a crisp taste and health benefits. Finally, the water is sterilized using UV light and Ozone gas before being automatically filled and capped in a highly hygienic rotary monoblock machine.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Mineral Water Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -400,23 +407,23 @@ export default function MineralWaterPlantDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Mineral Water Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Mineral Water Business?</h3>
-                <p>The demand for high-quality, hygienically processed Mineral Water is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Fully Automatic Mineral Water Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Mineral Water Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Mineral Water Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Mineral Water processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

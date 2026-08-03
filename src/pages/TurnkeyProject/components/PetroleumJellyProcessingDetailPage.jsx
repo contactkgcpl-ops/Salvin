@@ -37,6 +37,7 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Raw Material Melting Tank",
     "desc": "High-efficiency jacketed melting tank.",
@@ -67,25 +68,30 @@ const MACHINERY_LIST = [
     "desc": "Automated robotic arm for case packing.",
     "image": "/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.webp"
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What grades of petroleum jelly can this plant produce?",
-    "answer": "Our plants are designed to produce all grades, including cosmetic, pharmaceutical (medical), and industrial-grade petroleum jelly, by precisely controlling the homogenization and cooling processes."
+    question: "Do you manufacture all the machines for the Petroleum Jelly Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Petroleum Jelly Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Does the plant maintain uniform blending without lump formation?",
-    "answer": "Yes, our high-shear vacuum homogenizers ensure perfectly smooth, lump-free, and air-bubble-free jelly, which is critical for cosmetic and medical applications."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Is the filling process fully automated?",
-    "answer": "Absolutely. The plant integrates seamlessly with automatic tube and jar filling machines that maintain the jelly at the exact flowable temperature before it solidifies in the container."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Can this plant also produce hair wax or similar cosmetics?",
-    "answer": "Yes, with minor formulation adjustments, the same high-shear heating and blending system can be used to manufacture hair waxes, pomades, and thick ointments."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -172,7 +178,7 @@ export default function PetroleumJellyProcessingDetailPage() {
             Petroleum Jelly Processing Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Complete processing line for high-quality petroleum jelly production with melting, homogenization, filtration, and precision filling.
+            Start Your Own Petroleum Jelly Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -192,9 +198,12 @@ export default function PetroleumJellyProcessingDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Petroleum Jelly Plant</strong> helps you easily make high-quality jelly for face creams, medicines, and hair wax. The raw materials are cheap, and the final product sells at a very good price, giving you high profits.</p>
-              <p>The machine first melts the wax and oil. Then it mixes them in a special vacuum tank. The vacuum removes all air bubbles. The mixing is so powerful that it leaves zero lumps in the jelly.</p>
-              <p>The final jelly is 100% smooth, clear, and looks very premium. The machine automatically fills the hot jelly into jars and cools it down. It is fully automatic, heavy-duty, and very easy to run.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Petroleum Jelly Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -329,23 +338,23 @@ export default function PetroleumJellyProcessingDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Petroleum Jelly Processing Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Petroleum Jelly Processing Business?</h3>
-                <p>The demand for high-quality, hygienically processed Petroleum Jelly Processing is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Petroleum Jelly Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Petroleum Jelly Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Petroleum Jelly Processing Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Petroleum Jelly Processing processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

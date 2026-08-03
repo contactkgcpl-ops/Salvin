@@ -14,58 +14,58 @@ const PROCESS_STEPS = [
 ]
 
 const MACHINERY_LIST = [
+
   {
     name: 'Dough Mixer',
     image: '/turnkey-brochures/images/panipuri-line/1_mixer.webp',
-    desc: 'Heavy-duty dough mixer for uniform blending of semolina and water to prepare the perfect panipuri dough.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Dough Sheeting Machine',
     image: '/turnkey-brochures/images/panipuri-line/2_sheeter.webp',
-    desc: 'Precision sheeter to roll the dough into a continuous, thin, and uniform sheet for cutting.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Panipuri Cutting Machine',
     image: '/turnkey-brochures/images/panipuri-line/3_cutter.webp',
-    desc: 'High-speed rotary cutter to precisely cut uniform round panipuri discs from the dough sheet.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Continuous Frying Machine',
     image: '/turnkey-brochures/images/panipuri-line/4_fryer.webp',
-    desc: 'Automated continuous fryer that instantly puffs and fries the panipuris to a golden, crispy finish.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Cooling & De-oiling Conveyor',
     image: '/turnkey-brochures/images/panipuri-line/5_cooler.webp',
-    desc: 'Mesh conveyor system to drain excess oil and cool the fried panipuris before packaging.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Weighing & Packing Machine',
     image: '/turnkey-brochures/images/panipuri-line/6_packing.webp',
-    desc: 'Multi-head weighing and VFFS packing machine for hygienic, automated packaging of panipuris.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 const FAQS = [
   {
-    question: "What is the processing capacity of the Panipuri Processing Line?",
-    answer: "Our lines are available from 500 KG/HR to 5 TON/HR capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Panipuri Processing Line?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Panipuri Processing Line. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the line produce different sizes of panipuri?",
-    answer: "Yes. The rotary cutting system uses interchangeable dies to produce various puri sizes — small, medium, and large — for different retail and institutional markets."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the line fully automatic?",
-    answer: "Yes. We offer semi-automatic and fully automatic solutions with advanced PLC control systems for consistent, high-speed, low-labour operation."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and support?",
-    answer: "Yes. SALVIN provides complete turnkey solutions including installation, commissioning, operator training, and after-sales support."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Why choose SALVIN for Panipuri Processing Lines?",
-    answer: "SALVIN offers food-grade machinery, energy-efficient frying systems, customized solutions, reliable performance, and complete engineering support from concept to commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -110,7 +110,9 @@ export default function PanipuriProcessingLineDetailPage() {
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY PANIPURI PROCESSING SOLUTION</span>
           <h1 className="opp-hero__title">Panipuri Processing Line</h1>
-          <p className="opp-hero__subtitle">Complete Turnkey Solution For Dough Mixing, Sheeting, Cutting, Frying, Cooling And Packaging Of Panipuri</p>
+          <p className="opp-hero__subtitle">
+            Start Your Own Panipuri Processing Line Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="opp-hero__actions">
             <NavLink to="/contact" className="opp-btn opp-btn--primary opp-btn--lg">Request Information</NavLink>
             <a href="#enquiry" className="opp-btn opp-btn--outline">Enquire Now</a>
@@ -124,8 +126,12 @@ export default function PanipuriProcessingLineDetailPage() {
           <h2 className="opp-section-title">Complete Panipuri <span className="opp-accent">Processing Solution</span></h2>
           <div className="opp-overview__grid">
             <div className="opp-overview__text">
-              <p>Salvin Industries' Panipuri Processing Line is a turnkey industrial solution designed for manufacturers who demand consistent puri size, crispy texture, and full food safety compliance. Our integrated line handles every stage — from semolina preparation and dough mixing through sheeting, cutting, frying, cooling, and packaging — in a single, automated, hygienic facility.</p>
-              <p>Each line is custom-engineered to your specific capacity, puri size, and packaging format requirements. Whether producing retail packaged panipuri, bulk institutional supply, or export-grade crispy puris, our systems deliver the uniform puffing, consistent crunch, and extended shelf life your buyers expect.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Panipuri Processing Line</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="opp-overview__features">
                 <div className="opp-overview__feature">
                   <div className="opp-overview__feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17" /><polyline points="16 7 22 7 22 13" /></svg></div>
@@ -180,26 +186,28 @@ export default function PanipuriProcessingLineDetailPage() {
       </section>
 
       <section className="opp-section opp-seo-content" id="seo-guide" data-animate>
-        <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
-          <div className="opp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="opp-section-title">A Simple Guide to <span className="opp-accent">Panipuri Processing Line</span></h2>
-          <p className="opp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-          <div className="opp-seo-content__body">
-            <div className="opp-seo-content__block">
-              <h3>Why Start a Panipuri Processing Business?</h3>
-              <p>Panipuri is one of India's most popular street foods, with an enormous and growing packaged retail market. Automated industrial processing ensures consistent puri size, uniform crunch, extended shelf life, and the hygienic packaging required to enter modern retail chains, supermarkets, and export markets worldwide.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>How Does the Panipuri Processing Work?</h3>
-              <p>The process begins with sifting semolina and mixing it with water and salt into a stiff dough. The dough is progressively sheeted to the exact thickness and then stamped into uniform round puris by a rotary cutter. Puris are conveyed into a precisely temperature-controlled continuous fryer where they puff and turn golden. After de-oiling and cooling, they are weighed and sealed under nitrogen into retail pouches.</p>
-            </div>
-            <div className="opp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for panipuri processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel. Advanced PLC/SCADA automation ensures consistent oil temperature, uniform frying, and one-touch operation. We handle everything from factory layout to machine manufacturing, installation, and commissioning.</p>
+          <div className={`opp-container opp-animate ${isVisible['seo-guide'] ? 'opp-animate--in' : ''}`}>
+            <div className="opp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="opp-section-title">How Does The <span className="opp-accent">Plant Work?</span></h2>
+            <p className="opp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="opp-seo-content__body">
+              <div className="opp-seo-content__block">
+                <h3>Why Start a Panipuri Processing Line Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Panipuri Processing Line, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="opp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="opp-section opp-machinery" id="machinery" data-animate>
         <div className={`opp-container opp-animate ${isVisible['machinery'] ? 'opp-animate--in' : ''}`}>

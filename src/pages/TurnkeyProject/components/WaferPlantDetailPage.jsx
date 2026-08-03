@@ -15,55 +15,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: "Batter Mixer",
-    desc: "Mixes flour and water into a smooth, thin liquid.",
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
     image: "/turnkey-brochures/images/wafer-gallery/1_batter_mixer.webp"
   },
   {
     name: "Wafer Baking Oven",
-    desc: "Bakes the liquid batter into large, crispy wafer sheets.",
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
     image: "/turnkey-brochures/images/wafer-gallery/2_wafer_baking.webp"
   },
   {
     name: "Cream Spreader",
-    desc: "Applies a smooth layer of sweet cream onto the sheets.",
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
     image: "/turnkey-brochures/images/wafer-gallery/3_cream_spreading.webp"
   },
   {
     name: "Cooling Tunnel",
-    desc: "A giant fridge that hardens the cream to hold layers together.",
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
     image: "/turnkey-brochures/images/wafer-gallery/4_block_laminating.webp"
   },
   {
     name: "Wire Cutting Machine",
-    desc: "Slices the large wafer block into small finger shapes.",
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
     image: "/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.webp"
   },
   {
     name: "Automatic Packaging",
-    desc: "Packs the crispy wafer fingers into shiny wrappers.",
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
     image: "/turnkey-brochures/images/wafer-gallery/6_carton_packing.webp"
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "How are the thin wafer sheets made?",
-    "answer": "The liquid batter is automatically pumped onto flat baking plates that close like a waffle iron. These plates travel through a gas-heated oven, baking the batter into a large, crispy, flat wafer sheet in just a few minutes."
+    question: "Do you manufacture all the machines for the Fully Automatic Wafer Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Wafer Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can I make wafers with different colored creams?",
-    "answer": "Yes! The automatic cream spreading machine can apply chocolate, vanilla, strawberry, or any flavor cream you want. You can even create dual-flavor wafers by using multiple cream spreaders on the same line."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "How do you cut the large sheets into small finger wafers?",
-    "answer": "After the large sheets are layered with cream, they pass through a cooling tunnel to harden the cream. Then, a highly precise wire-cutting machine slices the large stack into perfect, identical small wafer fingers."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is the plant energy efficient?",
-    "answer": "Absolutely. The wafer baking oven is the heart of the plant, and ours is heavily insulated to prevent heat loss, making it highly fuel-efficient and cost-effective to run continuously."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
@@ -133,7 +137,7 @@ export default function WaferPlantDetailPage() {
             Fully Automatic Wafer Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automatic Wafer Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -155,9 +159,12 @@ export default function WaferPlantDetailPage() {
           
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Salvin Industries offers high-speed <strong>Fully Automatic Wafer Biscuit Manufacturing Plants</strong> engineered for premium commercial confectionery production. Our advanced flat-plate baking technology ensures ultra-crispy, perfectly layered wafers.</p>
-              <p>Our comprehensive turnkey wafer processing line automates batter mixing, continuous baking, automatic cream spreading, block cooling, and wire cutting. Minimize product waste and maximize your production capacity with our highly reliable, PLC-controlled wafer making machinery.</p>
-
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Wafer Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -260,29 +267,28 @@ export default function WaferPlantDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Comprehensive Guide to <span className="rcp-accent">Industrial Wafer Manufacturing</span></h2>
-          <p className="rcp-section-subtitle">Understanding flat-plate baking, cream spreading, and high-speed processing.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Invest in a Commercial Wafer Plant?</h3>
-              <p>Wafer biscuits are high-demand confectionery products known for their crisp texture and long shelf life. A fully automated wafer manufacturing plant provides an incredibly efficient production cycle, converting simple liquid batter and cream into high-margin, globally marketable products in minutes.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>Industrial Wafer Production Workflow</h3>
-              <p><strong>1. Liquid Batter Preparation:</strong> Automated mixers blend flour, water, and lecithin into a perfectly smooth, lump-free liquid batter.</p>
-              <p><strong>2. Flat-Plate Baking:</strong> The batter is pumped onto hot, moving baking plates, transforming instantly into large, crispy wafer sheets.</p>
-              <p><strong>3. Automated Cream Spreading:</strong> Precision rollers apply uniform layers of cream, automatically stacking the wafer sheets into blocks.</p>
-              <p><strong>4. Cooling & Wire Cutting:</strong> The wafer blocks are chilled in a cooling tower to solidify the cream, then cleanly sliced into individual fingers by tensioned wires.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries delivers highly reliable, continuous-operation turnkey wafer plants. Our robust baking ovens and precision cutting systems ensure zero product deformity and minimal waste. Designed for supreme energy efficiency and strict sanitation, our commercial machinery is the optimal choice for scaling your confectionery brand.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Wafer Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Wafer Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

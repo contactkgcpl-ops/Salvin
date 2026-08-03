@@ -8,6 +8,7 @@ import blueMachinesImage from "./assets/blue-machines.webp";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingContact from "./components/FloatingContact";
 // import IntroOverlay from "./components/IntroOverlay";
 import searchIcon from './assets/search.webp'
 
@@ -2842,9 +2843,8 @@ export default function App() {
         </Routes>
         <Footer />
       </div>
+      <FloatingContact />
       <SalvinChatbot machines={machines} subcategories={subcategories} />
     </>
   );
 }
-
-

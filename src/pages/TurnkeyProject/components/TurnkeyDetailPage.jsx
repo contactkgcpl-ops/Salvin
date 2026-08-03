@@ -592,7 +592,7 @@ export default function TurnkeyDetailPage() {
             {details.title}
           </h1>
           <p className="rcp-hero__subtitle">
-            {details.subtitle}
+            Start Your Own {details.title} Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             {details.pdfFile ? (
@@ -625,8 +625,12 @@ export default function TurnkeyDetailPage() {
           <h2 className="rcp-section-title">Complete <span className="rcp-accent">Processing Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>{details.overview.p1}</p>
-              <p>{details.overview.p2}</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>{details.title}</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 {(details.overview.features4 || [
                   { title: 'High Yield', desc: 'Maximum product recovery per batch' },
@@ -708,46 +712,28 @@ export default function TurnkeyDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE / SEO ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">{details.title}</span></h2>
-          <p className="rcp-section-subtitle">Understanding the processing workflow, specific machinery used, and market impact.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Start a {details.title} Business?</h3>
-              <p>The demand for branded, high-quality, and hygienically processed {String(details.title).replace('Plant', '').replace('Processing', '').toLowerCase().trim()} products is growing rapidly across India and global markets. By investing in a fully automated {details.title}, you can build a highly profitable, scalable, and recurring FMCG or B2B manufacturing business with consistent product quality.</p>
-            </div>
-            
-            <div className="rcp-seo-content__block">
-              <h3>How Does the Processing Work?</h3>
-              <p>The {String(details.title).replace('Plant', '').trim()} follows a highly systematic and automated workflow to ensure the best output quality. The core process involves:</p>
-              {details.processSteps && details.processSteps.length > 0 ? (
-                <ul style={{ listStyleType: 'disc', paddingLeft: '24px', marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--rcp-slate-700)', lineHeight: '1.6' }}>
-                  {details.processSteps.map((step, idx) => (
-                    <li key={idx}><strong>{step.title}:</strong> {step.desc}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p>The process begins with careful raw material receiving and quality inspection. Materials are then cleaned, sorted, and fed into the processing line where they undergo core treatment stages. Finally, the product is packed and sealed to preserve freshness.</p>
-              )}
-            </div>
-
-            <div className="rcp-seo-content__block">
-              <h3>What Machines are Used in the {details.title}?</h3>
-              <p>To achieve high-speed production and food-grade hygiene, the plant utilizes advanced industrial machinery. The primary equipment used in this process includes:</p>
-              {details.machinery && details.machinery.length > 0 ? (
-                <ul style={{ listStyleType: 'disc', paddingLeft: '24px', marginTop: '12px', display: 'flex', flexDirection: 'column', gap: '8px', color: 'var(--rcp-slate-700)', lineHeight: '1.6' }}>
-                  {details.machinery.map((m, idx) => (
-                    <li key={idx}><strong>{m.name}:</strong> {m.desc}</li>
-                  ))}
-                </ul>
-              ) : (
-                <p>Salvin Industries designs every plant with advanced automation, precision engineering, and food-grade stainless steel construction. Our PLC-controlled systems ensure every batch meets strict quality and hygiene standards.</p>
-              )}
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a {details.title} Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated {details.title}, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       {details.machinery && details.machinery.length > 0 && (
