@@ -9,12 +9,13 @@ const CATEGORIES = [
   { name: 'Dairy & Milk', keywords: ['dairy', 'milk', 'buttermilk', 'paneer', 'curd', 'cheese', 'ghee', '(?<!peanut\\s)butter', 'yogurt', 'lassi', 'ice cream', 'cream'] },
   { name: 'Spices & Condiments', keywords: ['spice', 'masala', 'chilli', 'turmeric', 'coriander', 'ginger', 'garlic', 'pepper', 'mayonnaise', 'sauce', 'ketchup', 'pickle', 'paste', 'peanut butter'] },
   { name: 'Beverages & Liquids', keywords: ['beverage', 'juice', 'drink', 'water', 'syrup', 'liquid', 'coffee', 'tea', 'honey', 'glucose'] },
-  { name: 'Bakery & Sweets', keywords: ['bakery', 'biscuit', 'cake', 'chocolate', 'toffee', 'cookie', 'bread', 'jelly', 'chikki', 'brittle', 'cocoa'] },
+  { name: 'Bakery & Sweets', keywords: ['bakery', 'biscuit', 'cake', 'chocolate', 'toffee', 'cookie', 'bread', 'jelly', 'chikki', 'brittle', 'cocoa', 'sugar'] },
   { name: 'Fruits & Veg', keywords: ['fruit', 'vegetable', 'tomato', 'potato', 'jackfruit', 'onion', 'pulp', 'puree', 'dehydrated', 'dates', 'beetroot', 'banana', 'frozen'] },
   { name: 'Flour & Milling', keywords: ['flour', 'wheat', 'atta', 'besan', 'corn', 'rice', 'oat', 'grain', 'mill'] },
   { name: 'Ready-To-Eat', keywords: ['noodle', 'pasta', 'mix'] },
   { name: 'Health & Nutrition', keywords: ['protein', 'nutrition', 'ors', 'bar'] },
   { name: 'Edible Oils', keywords: ['oil', 'seed', 'cleaning', 'sorting'] },
+  { name: 'Pharmaceuticals', keywords: ['pharmaceutical', 'pharma', 'tablet', 'capsule', 'syrup', 'suspension', 'ointment', 'injection', 'eye', 'ear', 'blister'] },
   { name: 'Automation & Specialty', keywords: ['automation', 'petroleum', 'glucose'] }
 ]
 

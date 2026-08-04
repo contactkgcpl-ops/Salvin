@@ -114,6 +114,16 @@ const RAW = [
   ['besan-plant.webp', null, 'Fully Automated Besan Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-besan-processing-plant'],
   ['corn-flour.webp', null, 'Fully Automated Corn Flour Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/fully-automated-corn-flour-plant'],
   ['oat-processing.webp', null, 'Oat Processing Plant', ['Fully automated end-to-end processing solution.', 'Engineered for high efficiency, premium quality, and stringent hygiene standards.'], '/turnkey-project/oat-processing-plant'],
+  ['sugar_flowchart.webp', null, 'Sugar Processing Plant', ['Complete turnkey solution for sugar processing and refining.', 'Advanced crystallization and automated packaging systems.']],
+  ['tablet_flowchart.webp', null, 'Tablet Manufacturing Plant', ['Complete turnkey solution for pharmaceutical tablet manufacturing.', 'Includes granulation, compression, coating, and blister packaging.']],
+  ['capsule_flowchart.webp', null, 'Capsule Manufacturing Plant', ['Fully automated capsule filling and packaging line.', 'Precision dosing and high-speed operation for pharmaceutical standards.']],
+  ['oral_suspension_flowchart.webp', null, 'Oral Suspension Manufacturing Plant', ['Advanced processing systems for oral suspensions.', 'Ensures uniform dispersion and accurate dosing.']],
+  ['ointment_flowchart.webp', null, 'Ointment & Cream Manufacturing Plant', ['Complete plant for manufacturing ointments and creams.', 'Vacuum emulsification and tube filling machines.']],
+  ['liquid_injection_flowchart.webp', null, 'Liquid Injection Manufacturing Plant', ['Aseptic processing line for liquid injections.', 'High standards of sterility and precise ampoule/vial filling.']],
+  ['dry_powder_injection_flowchart.webp', null, 'Dry Powder Injection Plant', ['Sterile powder filling line for injectable antibiotics and drugs.', 'Ensures contamination-free dosing and sealing.']],
+  ['eye_ear_drop_flowchart.webp', null, 'Eye/Ear Drop Manufacturing Plant', ['Fully automated aseptic liquid filling for eye and ear drops.', 'Precision dosing and sterile packaging.']],
+  ['pharmaceutical_powder_manufacturing.webp', null, 'Pharmaceutical Powder Manufacturing Plant', ['Turnkey solution for pharmaceutical powder blending and packing.', 'Hygienic processing and accurate sachet or jar filling.']],
+  ['pharmaceutical_packaging_plant.webp', null, 'Pharmaceutical Packaging & Blister Packing Plant', ['High-speed packaging solutions for pharmaceutical products.', 'Advanced blister packing, cartoning, and serialization.']]
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

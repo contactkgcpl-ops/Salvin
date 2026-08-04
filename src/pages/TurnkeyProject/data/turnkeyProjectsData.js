@@ -390,7 +390,7 @@ const CORE_PROJECTS = {
     title: 'Petroleum Jelly Manufacturing Plant',
     badge: 'TURNKEY CHEMICAL & PHARMA SOLUTION',
     subtitle: 'Melting, Blending, Micro-filtration And Jar Filling Lines For Cosmetic and Pharmaceutical Grade Petroleum Jelly',
-    heroImage: '/turnkey-brochures/images/petrojelly-gallery/petrojelly_hero.png',
+    heroImage: '/turnkey-brochures/images/petrojelly-gallery/petrojelly_hero.webp',
     stats: {
       capacity: '500 Ltr–3,000 Ltr',
       stages: '10 Stage',
@@ -405,8 +405,8 @@ const CORE_PROJECTS = {
         { title: 'Jacketed Piping', desc: 'Steam-heated transfer lines prevent material solidifying.' },
         { title: 'Vacuum Deaeration', desc: 'Removes air bubbles during blending to yield smooth jelly texture.' }
       ],
-      image: '/turnkey-brochures/images/7_petrolium_jelly.png',
-      photoImage: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.png',
+      image: '/turnkey-brochures/images/7_petrolium_jelly.webp',
+      photoImage: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.webp',
       features4: [
         { title: 'GMP Compliant', desc: 'Meets FDA and pharmaceutical manufacturing norms' },
         { title: 'Vacuum Deaeration', desc: 'Air-free blending yields perfectly smooth jelly' },
@@ -441,12 +441,12 @@ const CORE_PROJECTS = {
       { id: 10, title: 'Capping & Labeling', desc: 'Automatic capping and labelers apply lids and decals to finished jars.' }
     ],
     machinery: [
-      { name: 'Wax Melting Vessel', image: '/turnkey-brochures/images/petrojelly-gallery/wax_melter.png', desc: 'Steam-jacketed vessel with slow agitator for melting paraffin block bases.' },
-      { name: 'Vacuum Emulsifier Tank', image: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.png', desc: 'High-shear homogenizing mixer with vacuum pump and contra-rotation scrapers.' },
-      { name: 'Jacketed Filtration Skid', image: '/turnkey-brochures/images/petrojelly-gallery/filtration_skid.png', desc: 'Heated cartridge filter housing to clarify raw molten petroleum jelly.' },
-      { name: 'Molten Jelly Filler', image: '/turnkey-brochures/images/petrojelly-gallery/jelly_filler.png', desc: 'Heat-traced volumetric dosing machine with anti-drip filling nozzles.' },
-      { name: 'Cooling Conveyor Tunnel', image: '/turnkey-brochures/images/petrojelly-gallery/cooling_tunnel.png', desc: 'Multi-pass insulated tunnel circulating chilled air for jelly setting.' },
-      { name: 'Induction Bottle Sealer', image: '/turnkey-brochures/images/petrojelly-gallery/bottle_sealer.png', desc: 'Automatic electromagnetic induction sealer applying lids to jars.' }
+      { name: 'Wax Melting Vessel', image: '/turnkey-brochures/images/petrojelly-gallery/wax_melter.webp', desc: 'Steam-jacketed vessel with slow agitator for melting paraffin block bases.' },
+      { name: 'Vacuum Emulsifier Tank', image: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.webp', desc: 'High-shear homogenizing mixer with vacuum pump and contra-rotation scrapers.' },
+      { name: 'Jacketed Filtration Skid', image: '/turnkey-brochures/images/petrojelly-gallery/filtration_skid.webp', desc: 'Heated cartridge filter housing to clarify raw molten petroleum jelly.' },
+      { name: 'Molten Jelly Filler', image: '/turnkey-brochures/images/petrojelly-gallery/jelly_filler.webp', desc: 'Heat-traced volumetric dosing machine with anti-drip filling nozzles.' },
+      { name: 'Cooling Conveyor Tunnel', image: '/turnkey-brochures/images/petrojelly-gallery/cooling_tunnel.webp', desc: 'Multi-pass insulated tunnel circulating chilled air for jelly setting.' },
+      { name: 'Induction Bottle Sealer', image: '/turnkey-brochures/images/petrojelly-gallery/bottle_sealer.webp', desc: 'Automatic electromagnetic induction sealer applying lids to jars.' }
     ],
     applications: [
       { title: 'Cosmetic Skin Care', desc: 'Retail personal care skin protectants, lip balms, and baby creams.' },
@@ -457,13 +457,13 @@ const CORE_PROJECTS = {
       { title: 'Veterinary Lubricants', desc: 'Animal skin care protectants and dairy teat ointments.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/7_petrolium_jelly.png', caption: 'Petroleum Jelly Plant Layout' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/wax_melter.png', caption: 'Wax Melting Vessel' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.png', caption: 'Vacuum Emulsifier Tank' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/filtration_skid.png', caption: 'Jacketed Filtration Skid' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/jelly_filler.png', caption: 'Molten Jelly Filler' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/cooling_tunnel.png', caption: 'Cooling Conveyor Tunnel' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/bottle_sealer.png', caption: 'Induction Bottle Sealer' }
+      { src: '/turnkey-brochures/images/7_petrolium_jelly.webp', caption: 'Petroleum Jelly Plant Layout' },
+      { src: '/turnkey-brochures/images/petrojelly-gallery/wax_melter.webp', caption: 'Wax Melting Vessel' },
+      { src: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.webp', caption: 'Vacuum Emulsifier Tank' },
+      { src: '/turnkey-brochures/images/petrojelly-gallery/filtration_skid.webp', caption: 'Jacketed Filtration Skid' },
+      { src: '/turnkey-brochures/images/petrojelly-gallery/jelly_filler.webp', caption: 'Molten Jelly Filler' },
+      { src: '/turnkey-brochures/images/petrojelly-gallery/cooling_tunnel.webp', caption: 'Cooling Conveyor Tunnel' },
+      { src: '/turnkey-brochures/images/petrojelly-gallery/bottle_sealer.webp', caption: 'Induction Bottle Sealer' }
     ]
   },
   'jackfruit-canning-retort-line': {
@@ -488,7 +488,7 @@ const CORE_PROJECTS = {
         { title: 'Syrup Dosing', desc: 'Precise syrup dispensers maintain consistent Brix ratios.' }
       ],
       image: '/turnkey-brochures/images/8_jackfruit.webp',
-      photoImage: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.png',
+      photoImage: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.webp',
       features4: [
         { title: 'Hermetic Seaming', desc: 'Double-seam can lids ensure absolute seal integrity' },
         { title: 'Retort Sterilized', desc: 'Autoclave sterilization for ambient shelf storage' },
@@ -524,12 +524,12 @@ const CORE_PROJECTS = {
       { id: 11, title: 'Labeling & Box packing', desc: 'Self-adhesive labels are applied, and cans are packed into shipping boxes.' }
     ],
     machinery: [
-      { name: 'Continuous Belt Blancher', image: '/turnkey-brochures/images/jackfruit-gallery/belt_blancher.png', desc: 'Hot-water blanching chamber with VFD mesh conveyor belt.' },
-      { name: 'Syrup Prep Vessel', image: '/turnkey-brochures/images/jackfruit-gallery/syrup_vessel.png', desc: 'Steam-jacketed sugar dissolution tank with high-speed agitator.' },
-      { name: 'Can Rotary Filler', image: '/turnkey-brochures/images/jackfruit-gallery/can_filler.png', desc: 'Sanitary volumetric bulb and syrup filler for standard tin cans.' },
-      { name: 'Automatic Can Seamer', image: '/turnkey-brochures/images/jackfruit-gallery/can_seamer.png', desc: 'Heavy-duty can seamer applying double-seam vacuum lids.' },
-      { name: 'Retort Autoclave Sterilizer', image: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.png', desc: 'Horizontal steam autoclave sterilizer with PLC record loggers.' },
-      { name: 'Latex Spray Washer', image: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.png', desc: 'Conveyor wash cabin with high-pressure fan sprayers.' }
+      { name: 'Continuous Belt Blancher', image: '/turnkey-brochures/images/jackfruit-gallery/belt_blancher.webp', desc: 'Hot-water blanching chamber with VFD mesh conveyor belt.' },
+      { name: 'Syrup Prep Vessel', image: '/turnkey-brochures/images/jackfruit-gallery/syrup_vessel.webp', desc: 'Steam-jacketed sugar dissolution tank with high-speed agitator.' },
+      { name: 'Can Rotary Filler', image: '/turnkey-brochures/images/jackfruit-gallery/can_filler.webp', desc: 'Sanitary volumetric bulb and syrup filler for standard tin cans.' },
+      { name: 'Automatic Can Seamer', image: '/turnkey-brochures/images/jackfruit-gallery/can_seamer.webp', desc: 'Heavy-duty can seamer applying double-seam vacuum lids.' },
+      { name: 'Retort Autoclave Sterilizer', image: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.webp', desc: 'Horizontal steam autoclave sterilizer with PLC record loggers.' },
+      { name: 'Latex Spray Washer', image: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.webp', desc: 'Conveyor wash cabin with high-pressure fan sprayers.' }
     ],
     applications: [
       { title: 'Canned Sweet Jackfruit', desc: 'Sweet canned jackfruit bulbs in heavy sugar syrup for dessert lines.' },
@@ -541,12 +541,12 @@ const CORE_PROJECTS = {
     ],
     gallery: [
       { src: '/turnkey-brochures/images/8_jackfruit.webp', caption: 'Jackfruit Canning & Retort Plant Layout' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/belt_blancher.png', caption: 'Continuous Belt Blancher' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/syrup_vessel.png', caption: 'Syrup Prep Vessel' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/can_filler.png', caption: 'Can Rotary Filler' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/can_seamer.png', caption: 'Automatic Can Seamer' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.png', caption: 'Retort Autoclave Sterilizer' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.png', caption: 'Latex Spray Washer' }
+      { src: '/turnkey-brochures/images/jackfruit-gallery/belt_blancher.webp', caption: 'Continuous Belt Blancher' },
+      { src: '/turnkey-brochures/images/jackfruit-gallery/syrup_vessel.webp', caption: 'Syrup Prep Vessel' },
+      { src: '/turnkey-brochures/images/jackfruit-gallery/can_filler.webp', caption: 'Can Rotary Filler' },
+      { src: '/turnkey-brochures/images/jackfruit-gallery/can_seamer.webp', caption: 'Automatic Can Seamer' },
+      { src: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.webp', caption: 'Retort Autoclave Sterilizer' },
+      { src: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.webp', caption: 'Latex Spray Washer' }
     ]
   },
   'mayonnaise-processing-plant': {
@@ -1986,8 +1986,9 @@ export function getProjectDetails(slug, title = '') {
 
   // Construct dynamic data based on title
   const cleanTitle = title || slug.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
-  const isPowder = cleanTitle.toLowerCase().includes('powder') || cleanTitle.toLowerCase().includes('mill') || cleanTitle.toLowerCase().includes('spice');
-  const isLiquidOrPaste = cleanTitle.toLowerCase().includes('juice') || cleanTitle.toLowerCase().includes('honey') || cleanTitle.toLowerCase().includes('paste') || cleanTitle.toLowerCase().includes('sauce') || cleanTitle.toLowerCase().includes('ketchup') || cleanTitle.toLowerCase().includes('jelly') || cleanTitle.toLowerCase().includes('oil');
+  const isPharma = cleanTitle.toLowerCase().includes('tablet') || cleanTitle.toLowerCase().includes('capsule') || cleanTitle.toLowerCase().includes('pharmaceutical') || cleanTitle.toLowerCase().includes('injection') || cleanTitle.toLowerCase().includes('syrup') || cleanTitle.toLowerCase().includes('suspension') || cleanTitle.toLowerCase().includes('ointment') || cleanTitle.toLowerCase().includes('cream') || cleanTitle.toLowerCase().includes('drop');
+  const isPowder = !isPharma && (cleanTitle.toLowerCase().includes('powder') || cleanTitle.toLowerCase().includes('mill') || cleanTitle.toLowerCase().includes('spice') || cleanTitle.toLowerCase().includes('sugar'));
+  const isLiquidOrPaste = !isPharma && (cleanTitle.toLowerCase().includes('juice') || cleanTitle.toLowerCase().includes('honey') || cleanTitle.toLowerCase().includes('paste') || cleanTitle.toLowerCase().includes('sauce') || cleanTitle.toLowerCase().includes('ketchup') || cleanTitle.toLowerCase().includes('jelly') || cleanTitle.toLowerCase().includes('oil'));
   
   // Set default steps
   let processSteps = [];
@@ -2000,7 +2001,35 @@ export function getProjectDetails(slug, title = '') {
     { capacity: '5 Ton/Hr', type: 'Industrial Scale', ideal: 'Mass Production & Exports', color: '#a34a0d' }
   ];
 
-  if (isPowder) {
+  if (isPharma) {
+    stats = { capacity: 'Customizable', stages: 'GMP Compliant', retention: 'High Precision' };
+    capacities = [
+      { capacity: 'Pilot Scale', type: 'R&D / Pilot', ideal: 'Research & Small Batches', color: '#f47c20' },
+      { capacity: 'Medium Scale', type: 'Commercial', ideal: 'Regional Pharma Units', color: '#dc6e19' },
+      { capacity: 'Large Scale', type: 'Industrial', ideal: 'National & Export Production', color: '#c45a10' },
+      { capacity: 'High Speed', type: 'Mass Production', ideal: 'Global Pharma Brands', color: '#a34a0d' }
+    ];
+    processSteps = [
+      { id: 1, title: 'Raw Material Dispensing', desc: 'Precise weighing and dispensing of APIs and excipients in a controlled environment.' },
+      { id: 2, title: 'Milling & Sieving', desc: 'Particle size reduction and classification to ensure uniform distribution.' },
+      { id: 3, title: 'Blending / Granulation', desc: 'Homogeneous mixing or wet/dry granulation to prepare the formulation.' },
+      { id: 4, title: 'Drying (If applicable)', desc: 'Fluid bed drying or tray drying for moisture control in granules.' },
+      { id: 5, title: 'Core Processing', desc: 'Tablet compression, capsule filling, or liquid/ointment compounding depending on the product.' },
+      { id: 6, title: 'Coating / Filtration', desc: 'Tablet coating for release control or sterile filtration for liquid products.' },
+      { id: 7, title: 'Primary Packaging', desc: 'Blister packing, strip packing, or aseptic liquid filling into vials/bottles/tubes.' },
+      { id: 8, title: 'Quality Inspection', desc: 'Automated vision inspection, check weighing, and leak detection.' },
+      { id: 9, title: 'Secondary Packaging', desc: 'Cartoning, labeling, and serialization for track-and-trace compliance.' },
+      { id: 10, title: 'Dispatch & Storage', desc: 'Secure quarantine and temperature-controlled storage before distribution.' }
+    ];
+    machinery = [
+      { name: 'Dispensing Booth', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Laminar flow booths for safe and sterile weighing of active ingredients.' },
+      { name: 'High Shear Mixer Granulator', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'Advanced granulator for efficient wet granulation and uniform mixing.' },
+      { name: 'Fluid Bed Dryer', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'Rapid and uniform drying of granules with precise temperature control.' },
+      { name: 'Compression / Filling Machine', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'High-speed rotary tablet press or automated capsule/liquid filling machine.' },
+      { name: 'Auto Coater', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Fully automated coating pan for film or enteric coating.' },
+      { name: 'Blister / Cartoning Line', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Integrated blister packaging and cartoning with serialization.' }
+    ];
+  } else if (isPowder) {
     processSteps = [
       { id: 1, title: 'Raw Material Receiving', desc: 'Raw feed material is inspected, weighed, and logged into the hopper.' },
       { id: 2, title: 'Cleaning & Aspiration', desc: 'Removes sand, leaves, stones, and light foreign matter.' },
@@ -2076,18 +2105,28 @@ export function getProjectDetails(slug, title = '') {
   const project = {
     title: cleanTitle,
     badge: `TURNKEY ${cleanTitle.toUpperCase()} SOLUTION`,
-    subtitle: `Complete Turnkey Processing, Refining And Packaging Lines For ${cleanTitle}`,
+    subtitle: isPharma ? `Complete cGMP Compliant Turnkey Plant For ${cleanTitle}` : `Complete Turnkey Processing, Refining And Packaging Lines For ${cleanTitle}`,
     pdfFile: isPowder ? null : 'fruit_juice_salvin.pdf',
     stats,
     overview: {
       title: `Complete ${cleanTitle}`,
-      p1: `Salvin Industries' ${cleanTitle} is a premium turnkey industrial plant engineered for processors seeking high yield, sanitary design, and dependable OEE. Our complete lines guide products seamlessly from raw crop intake through cleaning, refining, thermal processing, and high-speed packaging.`,
-      p2: `We custom-engineer each plant according to your local codes, daily throughput goals, and product standards. Contact parts are constructed from food-grade SS304/SS316L, fully supporting automatic Clean-in-Place (CIP) operations. PLC systems track and log batch codes from intake to packaging.`,
-      highlights: [
-        { title: 'End-to-End Turnkey', desc: 'Engineering → Fabrication → Commissioning → Operator Training.' },
-        { title: 'OEE Optimised', desc: 'Engineered to achieve 85%+ Overall Equipment Effectiveness.' },
-        { title: 'Global Compliance', desc: 'Complies with FSSAI, FDA, CE, and GMP sanitary standards.' }
-      ],
+      p1: isPharma 
+        ? `Salvin Industries' ${cleanTitle} is a state-of-the-art turnkey solution engineered for the pharmaceutical industry, prioritizing compliance, precision, and efficiency. From raw material dispensing to advanced serialization and packaging, our lines ensure the highest standards of product quality.`
+        : `Salvin Industries' ${cleanTitle} is a premium turnkey industrial plant engineered for processors seeking high yield, sanitary design, and dependable OEE. Our complete lines guide products seamlessly from raw crop intake through cleaning, refining, thermal processing, and high-speed packaging.`,
+      p2: isPharma
+        ? `Designed strictly in accordance with cGMP, FDA, and WHO guidelines, our plants feature SS316L contact parts, automated CIP/SIP systems, and 21 CFR Part 11 compliant SCADA controls for complete batch traceability and data integrity.`
+        : `We custom-engineer each plant according to your local codes, daily throughput goals, and product standards. Contact parts are constructed from food-grade SS304/SS316L, fully supporting automatic Clean-in-Place (CIP) operations. PLC systems track and log batch codes from intake to packaging.`,
+      highlights: isPharma
+        ? [
+            { title: 'cGMP Compliant', desc: 'Engineered strictly to current Good Manufacturing Practices.' },
+            { title: 'Validation Support', desc: 'Complete DQ, IQ, OQ, and PQ documentation provided.' },
+            { title: 'Data Integrity', desc: '21 CFR Part 11 compliant automation and reporting.' }
+          ]
+        : [
+            { title: 'End-to-End Turnkey', desc: 'Engineering → Fabrication → Commissioning → Operator Training.' },
+            { title: 'OEE Optimised', desc: 'Engineered to achieve 85%+ Overall Equipment Effectiveness.' },
+            { title: 'Global Compliance', desc: 'Complies with FSSAI, FDA, CE, and GMP sanitary standards.' }
+          ],
       image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp'
     },
     capacities,
@@ -2154,7 +2193,15 @@ export function getProjectDetails(slug, title = '') {
     'tomato-puree-plant': { hero: 'tomato-puree-plant.webp', images: ['tomato_puree_1.webp', 'tomato_puree_2.webp', 'tomato_puree_3.webp', 'tomato_puree_4.webp', 'tomato_puree_5.webp', 'tomato_puree_6.webp'] },
     'tomato-paste-plant': { hero: 'tomato-paste-plant.webp', images: ['tomato_paste_1.webp', 'tomato_paste_2.webp', 'tomato_paste_3.webp', 'tomato_paste_4.webp', 'tomato_paste_5.webp', 'tomato_paste_6.webp'] },
     'mango-pulp-plant': { hero: 'mango-pulp-plant.webp', images: ['mango_pulp_1.webp', 'mango_pulp_2.webp', 'mango_pulp_3.webp', 'mango_pulp_4.webp', 'mango_pulp_5.webp', 'mango_pulp_6.webp'] },
-    'guava-pulp-plant': { hero: 'guava-pulp-plant.webp', images: ['guava_pulp_1.webp', 'guava_pulp_2.webp', 'guava_pulp_3.webp', 'guava_pulp_4.webp', 'guava_pulp_5.webp', 'guava_pulp_6.webp'] }
+    'guava-pulp-plant': { hero: 'guava-pulp-plant.webp', images: ['guava_pulp_1.webp', 'guava_pulp_2.webp', 'guava_pulp_3.webp', 'guava_pulp_4.webp', 'guava_pulp_5.webp', 'guava_pulp_6.webp'] },
+    'sugar-processing-plant': { hero: 'sugar_flowchart.webp', images: ['sugar_1.webp', 'sugar_2.webp', 'sugar_3.webp', 'sugar_4.webp', 'sugar_5.webp', 'sugar_6.webp'] },
+    'tablet-manufacturing-plant': { hero: 'tablet_flowchart.webp', images: ['tablet_1.webp', 'tablet_2.webp', 'tablet_3.webp', 'tablet_4.webp', 'tablet_5.webp', 'tablet_6.webp'] },
+    'capsule-manufacturing-plant': { hero: 'capsule_flowchart.webp', images: ['capsule_1.webp', 'capsule_2.webp', 'capsule_3.webp', 'capsule_4.webp', 'capsule_5.webp', 'capsule_6.webp'] },
+    'oral-suspension-manufacturing-plant': { hero: 'oral_suspension_flowchart.webp', images: ['oral_suspension_1.webp', 'oral_suspension_2.webp', 'oral_suspension_3.webp', 'oral_suspension_4.webp', 'oral_suspension_5.webp', 'oral_suspension_6.webp'] },
+    'ointment-cream-manufacturing-plant': { hero: 'ointment_flowchart.webp', images: ['ointment_1.webp', 'ointment_2.webp', 'ointment_3.webp', 'ointment_4.webp', 'ointment_5.webp', 'ointment_6.webp'] },
+    'liquid-injection-manufacturing-plant': { hero: 'liquid_injection_flowchart.webp', images: ['liquid_injection_1.webp', 'liquid_injection_2.webp', 'liquid_injection_3.webp', 'liquid_injection_4.webp', 'liquid_injection_5.webp', 'liquid_injection_6.webp'] },
+    'dry-powder-injection-plant': { hero: 'dry_powder_flowchart.webp', images: ['dry_powder_1.webp', 'dry_powder_2.webp', 'dry_powder_3.webp', 'dry_powder_4.webp', 'dry_powder_5.webp', 'dry_powder_6.webp', 'dry_powder_7.webp'] },
+    'eye-ear-drop-manufacturing-plant': { hero: 'eye_ear_drop_flowchart.webp', images: ['eye_ear_1.webp', 'eye_ear_2.webp', 'eye_ear_3.webp', 'eye_ear_4.webp', 'eye_ear_5.webp', 'eye_ear_6.webp'] }
   };
 
   if (customGalleries[slug]) {
@@ -2172,6 +2219,24 @@ export function getProjectDetails(slug, title = '') {
       src: `${galleryDir}/${img}`,
       caption: project.gallery[i] ? project.gallery[i].caption : `${cleanTitle} Image ${i+1}`
     }));
+  }
+
+  const generatedHeroImages = {
+    'sugar-processing-plant': 'sugar_processing_plant.webp',
+    'tablet-manufacturing-plant': 'tablet_manufacturing_plant.webp',
+    'capsule-manufacturing-plant': 'capsule_manufacturing_plant.webp',
+    'oral-suspension-manufacturing-plant': 'oral_suspension_manufacturing.webp',
+    'ointment-cream-manufacturing-plant': 'ointment_cream_manufacturing.webp',
+    'liquid-injection-manufacturing-plant': 'liquid_injection_manufacturing.webp',
+    'dry-powder-injection-plant': 'dry_powder_injection_plant.webp',
+    'eye-ear-drop-manufacturing-plant': 'eye_ear_drop_manufacturing.webp',
+    'pharmaceutical-powder-manufacturing-plant': 'pharmaceutical_powder_manufacturing.webp',
+    'pharmaceutical-packaging-blister-packing-plant': 'pharmaceutical_packaging_plant.webp'
+  };
+
+  if (generatedHeroImages[slug]) {
+    project.heroImage = `/turnkey-brochures/images/${generatedHeroImages[slug]}`;
+    project.heroStyle = { backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' };
   }
 
   return project;
