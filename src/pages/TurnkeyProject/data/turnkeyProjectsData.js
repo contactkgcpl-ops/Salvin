@@ -2184,6 +2184,59 @@ export function getProjectDetails(slug, title = '') {
     }
   }
 
+  if (slug === 'pharmaceutical-powder-manufacturing-plant') {
+    project.gallery = [
+      { src: '/turnkey-brochures/images/pharma_powder_1.jpg', caption: 'Pharmaceutical Powder Manufacturing Plant' },
+      { src: '/turnkey-brochures/images/pharma_powder_2.jpg', caption: 'Vibro Sifter & Weighing Hopper' },
+      { src: '/turnkey-brochures/images/pharma_powder_3.jpg', caption: 'Ribbon Blender' },
+      { src: '/turnkey-brochures/images/pharma_powder_4.jpg', caption: 'Multi Mill' },
+      { src: '/turnkey-brochures/images/pharma_powder_5.jpg', caption: 'Intermediate Storage Bin' },
+      { src: '/turnkey-brochures/images/pharma_powder_6.jpg', caption: 'Automatic Powder Filling & Sealing' },
+      { src: '/turnkey-brochures/images/pharma_powder_7.jpg', caption: 'Powder Mixing & Granulation' }
+    ];
+    project.heroImage = project.gallery[0].src;
+    if (project.overview) {
+      project.overview.image = project.gallery[1].src;
+      project.overview.photoImage = project.gallery[1].src;
+    }
+    
+    // Completely override machinery to match the exact 6 images provided
+    project.machinery = [
+      { title: 'Vibro Sifter & Weighing Hopper', desc: 'Precision weighing and initial sifting system for raw pharmaceutical powders, ensuring accurate dosing and removal of oversize impurities.', image: project.gallery[1].src },
+      { title: 'Ribbon Blender', desc: 'High-efficiency ribbon blender for homogeneous mixing of dry powders and pharmaceutical granules with uniform distribution.', image: project.gallery[2].src },
+      { title: 'Multi Mill', desc: 'Versatile multi mill for size reduction, granulation, and pulverization of pharmaceutical ingredients with variable speed settings.', image: project.gallery[3].src },
+      { title: 'Intermediate Storage Bin', desc: 'Hygienic stainless steel intermediate storage bin for holding blended powders before packaging.', image: project.gallery[4].src },
+      { title: 'Automatic Powder Filling & Sealing', desc: 'Fully automatic, high-speed auger powder filling and sealing machine with advanced PLC controls and touch screen interface.', image: project.gallery[5].src },
+      { title: 'Powder Mixing & Granulation', desc: 'Advanced mixing and granulation unit for consistent product quality and homogeneous blending.', image: project.gallery[6].src }
+    ];
+  }
+
+  if (slug === 'pharmaceutical-packaging-blister-packing-plant') {
+    project.gallery = [
+      { src: '/turnkey-brochures/images/pharma_pack_1.jpg', caption: 'Pharmaceutical Packaging & Blister Packing Plant' },
+      { src: '/turnkey-brochures/images/pharma_pack_2.jpg', caption: 'Capsule Sorting & Feeding System' },
+      { src: '/turnkey-brochures/images/pharma_pack_3.jpg', caption: 'Blister Forming & Sealing Machine' },
+      { src: '/turnkey-brochures/images/pharma_pack_4.jpg', caption: 'Automatic Cartoning Machine' },
+      { src: '/turnkey-brochures/images/pharma_pack_5.jpg', caption: 'Check Weigher & Metal Detector' },
+      { src: '/turnkey-brochures/images/pharma_pack_6.jpg', caption: 'Robotic Palletizing System' }
+    ];
+    if (project.overview) {
+      project.overview.image = project.gallery[1].src;
+      project.overview.photoImage = project.gallery[1].src;
+    }
+    
+    // Completely override machinery to match the exact 6 images provided
+    project.machinery = [
+      { title: 'Capsule Sorting & Feeding System', desc: 'High-speed automated sorting and precision feeding system for tablets and capsules into blister pockets.', image: project.gallery[1].src },
+      { title: 'Blister Forming & Sealing Machine', desc: 'Advanced thermoforming and cold-forming blister packaging machine with precise foil sealing and batch coding.', image: project.gallery[2].src },
+      { title: 'Automatic Cartoning Machine', desc: 'High-efficiency continuous motion cartoning machine for inserting blister cards and leaflets into pre-formed cartons.', image: project.gallery[3].src },
+      { title: 'Check Weigher & Metal Detector', desc: 'Integrated checkweighing and metal detection system to ensure compliance and reject non-conforming packages.', image: project.gallery[4].src },
+      { title: 'Robotic Palletizing System', desc: 'End-of-line robotic palletizing unit for automated case packing and seamless warehouse integration.', image: project.gallery[5].src },
+      { title: 'Final Packaging System', desc: 'End-of-line packaging and secondary cartoning system for secure warehouse storage and distribution.', image: project.gallery[0].src }
+    ];
+  }
+
+
   // Removed dynamicProjectCache[slug] = project;
 
   const customGalleries = {
@@ -2230,8 +2283,8 @@ export function getProjectDetails(slug, title = '') {
     'liquid-injection-manufacturing-plant': 'liquid_injection_manufacturing.webp',
     'dry-powder-injection-plant': 'dry_powder_injection_plant.webp',
     'eye-ear-drop-manufacturing-plant': 'eye_ear_drop_manufacturing.webp',
-    'pharmaceutical-powder-manufacturing-plant': 'pharmaceutical_powder_manufacturing.webp',
-    'pharmaceutical-packaging-blister-packing-plant': 'pharmaceutical_packaging_plant.webp'
+    'pharmaceutical-powder-manufacturing-plant': 'pharma_powder_hero.png',
+    'pharmaceutical-packaging-blister-packing-plant': 'pharma_packaging_hero.png'
   };
 
   if (generatedHeroImages[slug]) {

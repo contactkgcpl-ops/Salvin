@@ -1,12 +1,10 @@
 // src/components/HeroSection.jsx
 import { useState, useEffect } from "react";
 import Slide1 from "../../../assets/hero/user-wide-slide-5.png"; // Red Chilli
-import Slide2 from "../../../assets/hero/final-slide-1.png";
-import Slide3 from "../../../assets/hero/final-slide-2.png";
 import Slide4 from "../../../assets/hero/final-slide-3.png";
 import Slide5 from "../../../assets/hero/final-slide-4.png";
 
-const IMAGES = [Slide1, Slide2, Slide3, Slide4, Slide5];
+const IMAGES = [Slide1, Slide4, Slide5];
 
 function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -31,11 +29,11 @@ function HeroSection() {
   }, [currentSlide]);
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#f3f3f3]">
-      
+    <section className="relative w-full overflow-hidden bg-white">
+
       {/* Image Slider */}
-      <div 
-        className={`flex w-full ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
+      <div
+        className={`flex w-full h-[400px] md:h-[500px] lg:h-[650px] ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {[...IMAGES, IMAGES[0]].map((imgSrc, index) => (
@@ -43,14 +41,14 @@ function HeroSection() {
             key={index}
             src={imgSrc}
             alt={`Salvin Turnkey Plant ${index + 1}`}
-            className="w-full shrink-0 h-auto object-cover object-center"
+            className="w-full shrink-0 h-[400px] md:h-[500px] lg:h-[650px] object-cover object-center block"
           />
         ))}
       </div>
 
       {/* Content Removed - Using Image Banners Only */}
       <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-4 sm:pb-8 lg:pb-12">
-         {/* If buttons are needed later, they can be placed here at the bottom */}
+        {/* If buttons are needed later, they can be placed here at the bottom */}
       </div>
     </section>
   );

@@ -45,7 +45,13 @@ async function loadMachinePaths() {
       const slug = deriveMachineSlug(m);
       if (!slug || seen.has(slug)) continue;
       seen.add(slug);
-      paths.push(`/machineries/${slug}`);
+      const urlPath = `/machineries/${slug}`;
+      paths.push(urlPath);
+      
+      META_MAP[urlPath] = {
+        title: `${m.machine_name} | Salvin Industries`,
+        desc: m.short_description || `High quality ${m.machine_name} manufactured by Salvin Industries. Explore our full range of industrial processing equipment.`,
+      };
     }
     return paths;
   } catch (e) {

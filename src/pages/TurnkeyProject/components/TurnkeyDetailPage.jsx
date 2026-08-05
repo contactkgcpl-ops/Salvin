@@ -4,6 +4,7 @@ import { getProjectDetails } from '../data/turnkeyProjectsData'
 import { PackageSearch, CookingPot, Factory, Stamp, Flame, Snowflake, Package, FlaskConical, Utensils, Scissors, Hammer, Wind, Layers, ScanSearch, Cpu, Wifi, Bot, Eye, QrCode, BarChart3 } from 'lucide-react'
 import './RedChilliDetailPage.css' // Reuse the master layout stylesheet
 import WhyChooseSalvin from './WhyChooseSalvin'
+import { useSEO } from '../../../hooks/useSEO'
 
 /* Helper to dynamically resolve unique SVG icons for each process stage.
    Priority: most-specific keyword first to prevent duplicate assignments. */
@@ -503,6 +504,11 @@ export default function TurnkeyDetailPage() {
   const [activeFaq, setActiveFaq] = useState(null)
 
   const details = useMemo(() => getProjectDetails(projectSlug), [projectSlug])
+  
+  useSEO({
+    title: details ? `${details.title} | Salvin Industries` : 'Turnkey Project | Salvin Industries',
+    description: details ? `Complete turnkey ${details.title} setup by Salvin Industries.` : 'Turnkey Projects by Salvin Industries.'
+  });
 
   // Reset gallery index on route change
   useEffect(() => {
