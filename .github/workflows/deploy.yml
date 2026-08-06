@@ -43,7 +43,7 @@ jobs:
           local-dir: ./dist/
           server-dir: ./
           log-level: minimal
-          timeout: 900000
+          timeout: 3600000
           exclude: |
             **/services/**
             services

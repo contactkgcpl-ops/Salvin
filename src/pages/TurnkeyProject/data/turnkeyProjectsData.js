@@ -2186,13 +2186,13 @@ export function getProjectDetails(slug, title = '') {
 
   if (slug === 'pharmaceutical-powder-manufacturing-plant') {
     project.gallery = [
-      { src: '/turnkey-brochures/images/pharma_powder_1.jpg', caption: 'Pharmaceutical Powder Manufacturing Plant' },
-      { src: '/turnkey-brochures/images/pharma_powder_2.jpg', caption: 'Vibro Sifter & Weighing Hopper' },
-      { src: '/turnkey-brochures/images/pharma_powder_3.jpg', caption: 'Ribbon Blender' },
-      { src: '/turnkey-brochures/images/pharma_powder_4.jpg', caption: 'Multi Mill' },
-      { src: '/turnkey-brochures/images/pharma_powder_5.jpg', caption: 'Intermediate Storage Bin' },
-      { src: '/turnkey-brochures/images/pharma_powder_6.jpg', caption: 'Automatic Powder Filling & Sealing' },
-      { src: '/turnkey-brochures/images/pharma_powder_7.jpg', caption: 'Powder Mixing & Granulation' }
+      { src: '/turnkey-brochures/images/pharma_powder_1.webp', caption: 'Pharmaceutical Powder Manufacturing Plant' },
+      { src: '/turnkey-brochures/images/pharma_powder_2.webp', caption: 'Vibro Sifter & Weighing Hopper' },
+      { src: '/turnkey-brochures/images/pharma_powder_3.webp', caption: 'Ribbon Blender' },
+      { src: '/turnkey-brochures/images/pharma_powder_4.webp', caption: 'Multi Mill' },
+      { src: '/turnkey-brochures/images/pharma_powder_5.webp', caption: 'Intermediate Storage Bin' },
+      { src: '/turnkey-brochures/images/pharma_powder_6.webp', caption: 'Automatic Powder Filling & Sealing' },
+      { src: '/turnkey-brochures/images/pharma_powder_7.webp', caption: 'Powder Mixing & Granulation' }
     ];
     project.heroImage = project.gallery[0].src;
     if (project.overview) {
@@ -2213,12 +2213,12 @@ export function getProjectDetails(slug, title = '') {
 
   if (slug === 'pharmaceutical-packaging-blister-packing-plant') {
     project.gallery = [
-      { src: '/turnkey-brochures/images/pharma_pack_1.jpg', caption: 'Pharmaceutical Packaging & Blister Packing Plant' },
-      { src: '/turnkey-brochures/images/pharma_pack_2.jpg', caption: 'Capsule Sorting & Feeding System' },
-      { src: '/turnkey-brochures/images/pharma_pack_3.jpg', caption: 'Blister Forming & Sealing Machine' },
-      { src: '/turnkey-brochures/images/pharma_pack_4.jpg', caption: 'Automatic Cartoning Machine' },
-      { src: '/turnkey-brochures/images/pharma_pack_5.jpg', caption: 'Check Weigher & Metal Detector' },
-      { src: '/turnkey-brochures/images/pharma_pack_6.jpg', caption: 'Robotic Palletizing System' }
+      { src: '/turnkey-brochures/images/pharma_pack_1.webp', caption: 'Pharmaceutical Packaging & Blister Packing Plant' },
+      { src: '/turnkey-brochures/images/pharma_pack_2.webp', caption: 'Capsule Sorting & Feeding System' },
+      { src: '/turnkey-brochures/images/pharma_pack_3.webp', caption: 'Blister Forming & Sealing Machine' },
+      { src: '/turnkey-brochures/images/pharma_pack_4.webp', caption: 'Automatic Cartoning Machine' },
+      { src: '/turnkey-brochures/images/pharma_pack_5.webp', caption: 'Check Weigher & Metal Detector' },
+      { src: '/turnkey-brochures/images/pharma_pack_6.webp', caption: 'Robotic Palletizing System' }
     ];
     if (project.overview) {
       project.overview.image = project.gallery[1].src;
@@ -2283,8 +2283,8 @@ export function getProjectDetails(slug, title = '') {
     'liquid-injection-manufacturing-plant': 'liquid_injection_manufacturing.webp',
     'dry-powder-injection-plant': 'dry_powder_injection_plant.webp',
     'eye-ear-drop-manufacturing-plant': 'eye_ear_drop_manufacturing.webp',
-    'pharmaceutical-powder-manufacturing-plant': 'pharma_powder_hero.png',
-    'pharmaceutical-packaging-blister-packing-plant': 'pharma_packaging_hero.png'
+    'pharmaceutical-powder-manufacturing-plant': 'pharma_powder_hero.webp',
+    'pharmaceutical-packaging-blister-packing-plant': 'pharma_packaging_hero.webp'
   };
 
   if (generatedHeroImages[slug]) {

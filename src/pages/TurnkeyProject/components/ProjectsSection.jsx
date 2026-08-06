@@ -21,30 +21,30 @@ const CATEGORIES = [
 
 export default function ProjectsSection() {
   const [searchQuery, setSearchQuery] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem('projectsSearch') || ''
+    if (typeof window !== 'undefined' && typeof window.sessionStorage !== 'undefined') {
+      return window.sessionStorage.getItem('projectsSearch') || ''
     }
     return ''
   })
   const [activeCategory, setActiveCategory] = useState(() => {
-    if (typeof window !== 'undefined') {
-      return sessionStorage.getItem('projectsCategory') || 'All'
+    if (typeof window !== 'undefined' && typeof window.sessionStorage !== 'undefined') {
+      return window.sessionStorage.getItem('projectsCategory') || 'All'
     }
     return 'All'
   })
   const [currentPage, setCurrentPage] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = sessionStorage.getItem('projectsPage')
+    if (typeof window !== 'undefined' && typeof window.sessionStorage !== 'undefined') {
+      const saved = window.sessionStorage.getItem('projectsPage')
       return saved ? parseInt(saved, 10) : 1
     }
     return 1
   })
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      sessionStorage.setItem('projectsSearch', searchQuery)
-      sessionStorage.setItem('projectsCategory', activeCategory)
-      sessionStorage.setItem('projectsPage', currentPage.toString())
+    if (typeof window !== 'undefined' && typeof window.sessionStorage !== 'undefined') {
+      window.sessionStorage.setItem('projectsSearch', searchQuery)
+      window.sessionStorage.setItem('projectsCategory', activeCategory)
+      window.sessionStorage.setItem('projectsPage', currentPage.toString())
     }
   }, [searchQuery, activeCategory, currentPage])
 

@@ -122,8 +122,8 @@ const RAW = [
   ['liquid_injection_flowchart.webp', null, 'Liquid Injection Manufacturing Plant', ['Aseptic processing line for liquid injections.', 'High standards of sterility and precise ampoule/vial filling.']],
   ['dry_powder_injection_flowchart.webp', null, 'Dry Powder Injection Plant', ['Sterile powder filling line for injectable antibiotics and drugs.', 'Ensures contamination-free dosing and sealing.']],
   ['eye_ear_drop_flowchart.webp', null, 'Eye/Ear Drop Manufacturing Plant', ['Fully automated aseptic liquid filling for eye and ear drops.', 'Precision dosing and sterile packaging.']],
-  ['pharmaceutical_powder_manufacturing.jpg', null, 'Pharmaceutical Powder Manufacturing Plant', ['Turnkey solution for pharmaceutical powder blending and packing.', 'Hygienic processing and accurate sachet or jar filling.']],
-  ['pharmaceutical_packaging_plant.jpg', null, 'Pharmaceutical Packaging & Blister Packing Plant', ['High-speed packaging solutions for pharmaceutical products.', 'Advanced blister packing, cartoning, and serialization.']]
+  ['pharmaceutical_powder_manufacturing.webp', null, 'Pharmaceutical Powder Manufacturing Plant', ['Turnkey solution for pharmaceutical powder blending and packing.', 'Hygienic processing and accurate sachet or jar filling.']],
+  ['pharmaceutical_packaging_plant.webp', null, 'Pharmaceutical Packaging & Blister Packing Plant', ['High-speed packaging solutions for pharmaceutical products.', 'Advanced blister packing, cartoning, and serialization.']]
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {
