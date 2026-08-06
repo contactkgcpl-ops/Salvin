@@ -128,7 +128,9 @@ const RAW = [
   ['cosmetic_placeholder.webp', null, 'Shampoo Manufacturing Plant', ['Complete turnkey solution for shampoo processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/shampoo-manufacturing-plant'],
   ['cosmetic_placeholder.webp', null, 'Hair Oil Manufacturing Plant', ['Complete turnkey solution for hair oil processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/hair-oil-manufacturing-plant'],
   ['cosmetic_placeholder.webp', null, 'Body Lotion Manufacturing Plant', ['Complete turnkey solution for body lotion processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/body-lotion-manufacturing-plant'],
-  ['cosmetic_placeholder.webp', null, 'Hand Wash Manufacturing Plant', ['Complete turnkey solution for hand wash processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/hand-wash-manufacturing-plant']
+  ['cosmetic_placeholder.webp', null, 'Hand Wash Manufacturing Plant', ['Complete turnkey solution for hand wash processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/hand-wash-manufacturing-plant'],
+  ['cosmetic_placeholder.webp', null, 'Liquid Soap Manufacturing Plant', ['Complete turnkey solution for liquid soap processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/liquid-soap-manufacturing-plant'],
+  ['cosmetic_placeholder.webp', null, 'Hand Sanitizer Manufacturing Plant', ['Complete turnkey solution for hand sanitizer processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/hand-sanitizer-manufacturing-plant']
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

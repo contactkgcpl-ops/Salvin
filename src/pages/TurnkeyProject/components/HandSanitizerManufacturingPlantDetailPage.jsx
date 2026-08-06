@@ -1,12 +1,4 @@
-const fs = require('fs');
-const path = require('path');
-
-const plants = [
-    { title: 'Liquid Soap Manufacturing Plant', short: 'Liquid Soap', comp: 'LiquidSoapManufacturingPlantDetailPage', slug: 'liquid-soap-manufacturing-plant' },
-    { title: 'Hand Sanitizer Manufacturing Plant', short: 'Hand Sanitizer', comp: 'HandSanitizerManufacturingPlantDetailPage', slug: 'hand-sanitizer-manufacturing-plant' }
-];
-
-const template = `import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './RedChilliDetailPage.css'
 import WhyChooseSalvin from './WhyChooseSalvin'
@@ -79,7 +71,7 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = []
 
-export default function {component_name}() {
+export default function HandSanitizerManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
   const [isVisible, setIsVisible] = useState({})
   const [activeFaq, setActiveFaq] = useState(null)
@@ -89,9 +81,9 @@ export default function {component_name}() {
   }, [])
 
   useEffect(() => {
-    document.title = '{full_title} | Salvin Industries'
+    document.title = 'Hand Sanitizer Manufacturing Plant | Salvin Industries'
     const metaDesc = document.querySelector('meta[name="description"]')
-    if (metaDesc) metaDesc.setAttribute('content', 'Complete turnkey solution for {full_title}. High efficiency, robust design, and automatic processing.')
+    if (metaDesc) metaDesc.setAttribute('content', 'Complete turnkey solution for Hand Sanitizer Manufacturing Plant. High efficiency, robust design, and automatic processing.')
   }, [])
 
   useEffect(() => {
@@ -125,14 +117,14 @@ export default function {component_name}() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: \`url('')\`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
             TURNKEY PROCESSING SOLUTION
           </span>
           <h1 className="rcp-hero__title">
-            {full_title}
+            Hand Sanitizer Manufacturing Plant
           </h1>
           <p className="rcp-hero__subtitle">
             Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
@@ -150,13 +142,13 @@ export default function {component_name}() {
 
       {/* ═══ PLANT OVERVIEW ═══ */}
       <section className="rcp-section rcp-overview" id="overview" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['overview'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['overview'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">Plant Overview</div>
-          <h2 className="rcp-section-title">Commercial {short_name} <span className="rcp-accent">Manufacturing Plant</span></h2>
+          <h2 className="rcp-section-title">Commercial Hand Sanitizer <span className="rcp-accent">Manufacturing Plant</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Capitalize on the global market with our <strong>{full_title}</strong>. We deliver cutting-edge technology for processing {short_name}, ensuring high yield and premium quality.</p>
-              <p>The manufacturing process is meticulously designed to handle the specific requirements of {short_name} production. From raw material intake to the final packaged product, every step is optimized for hygiene, speed, and consistency.</p>
+              <p>Capitalize on the global market with our <strong>Hand Sanitizer Manufacturing Plant</strong>. We deliver cutting-edge technology for processing Hand Sanitizer, ensuring high yield and premium quality.</p>
+              <p>The manufacturing process is meticulously designed to handle the specific requirements of Hand Sanitizer production. From raw material intake to the final packaged product, every step is optimized for hygiene, speed, and consistency.</p>
               <p>Our plants are fully automated, utilizing advanced PLC systems to control critical parameters. This ensures zero human touch, minimizes contamination risks, and guarantees a long shelf life for the final product.</p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
@@ -223,7 +215,7 @@ export default function {component_name}() {
 
       {/* ═══ PROCESS FLOW ═══ */}
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['process-flow'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['process-flow'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">Process Flow</div>
           <h2 className="rcp-section-title">Plant <span className="rcp-accent">Workflow</span></h2>
           <p className="rcp-section-subtitle">A streamlined and fully integrated processing workflow designed to transform raw materials into premium-quality packaged product.</p>
@@ -259,7 +251,7 @@ export default function {component_name}() {
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['machinery'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['machinery'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">Machinery Used</div>
           <h2 className="rcp-section-title">Core <span className="rcp-accent">Equipment</span></h2>
           <div className="rcp-machinery__grid">
@@ -285,16 +277,16 @@ export default function {component_name}() {
 
       {/* ═══ FAQ SECTION ═══ */}
       <section className="rcp-section rcp-faq-section" id="faq" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['faq'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['faq'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">FAQs</div>
           <h2 className="rcp-section-title">Frequently Asked <span className="rcp-accent">Questions</span></h2>
-          <p className="rcp-section-subtitle">Everything you need to know about our {full_title}.</p>
+          <p className="rcp-section-subtitle">Everything you need to know about our Hand Sanitizer Manufacturing Plant.</p>
 
           <div className="rcp-faq__list">
             {FAQS.map((faq, index) => {
               const isOpen = activeFaq === index;
               return (
-                <div key={index} className={\`rcp-faq__item \${isOpen ? 'rcp-faq__item--open' : ''}\`}>
+                <div key={index} className={`rcp-faq__item ${isOpen ? 'rcp-faq__item--open' : ''}`}>
                   <button
                     className="rcp-faq__question-btn"
                     onClick={() => setActiveFaq(isOpen ? null : index)}
@@ -328,7 +320,7 @@ export default function {component_name}() {
 
       {/* ═══ INDUSTRIAL GALLERY ═══ */}
       <section className="rcp-section rcp-gallery" id="gallery" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['gallery'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['gallery'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">Industrial Gallery</div>
           <h2 className="rcp-section-title">Plant <span className="rcp-accent">Gallery</span></h2>
           <div className="rcp-gallery__showcase">
@@ -351,7 +343,7 @@ export default function {component_name}() {
                 {GALLERY_IMAGES.map((img, i) => (
                   <button
                     key={i}
-                    className={\`rcp-gallery__thumb \${galleryIndex === i ? 'rcp-gallery__thumb--active' : ''}\`}
+                    className={`rcp-gallery__thumb ${galleryIndex === i ? 'rcp-gallery__thumb--active' : ''}`}
                     onClick={() => setGalleryIndex(i)}
                     type="button"
                   >
@@ -365,13 +357,13 @@ export default function {component_name}() {
       </section>
 
       {/* ═══ WHY CHOOSE SALVIN ═══ */}
-      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="{component_name}" />
+      <WhyChooseSalvin prefix="rcp" isVisible={isVisible['why-salvin']} projectKey="HandSanitizerManufacturingPlantDetailPage" />
 
       {/* ═══ ENQUIRY / CONTACT CTA ═══ */}
       <section className="rcp-section rcp-cta" id="enquiry" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['enquiry'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['enquiry'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-cta__box">
-            <h2>Ready to Build Your {short_name} Plant?</h2>
+            <h2>Ready to Build Your Hand Sanitizer Plant?</h2>
             <p>
               Get in touch with our engineering experts today. We provide end-to-end turnkey solutions from factory design to final commissioning and training.
             </p>
@@ -384,24 +376,24 @@ export default function {component_name}() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={\`rcp-container rcp-animate \${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}\`}>
+        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
           <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">{short_name} Processing</span></h2>
+          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Hand Sanitizer Processing</span></h2>
           <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
           <div className="rcp-seo-content__body">
             <div className="rcp-seo-content__block">
-              <h3>Why Start a {short_name} Processing Business?</h3>
-              <p>The demand for high-quality, hygienically processed {short_name} is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+              <h3>Why Start a Hand Sanitizer Processing Business?</h3>
+              <p>The demand for high-quality, hygienically processed Hand Sanitizer is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
             </div>
             
             <div className="rcp-seo-content__block">
-              <h3>How Does the {short_name} Processing Work?</h3>
+              <h3>How Does the Hand Sanitizer Processing Work?</h3>
               <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit. Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically.</p>
             </div>
             
             <div className="rcp-seo-content__block">
               <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides end-to-end turnkey solutions for {short_name} processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <p>Salvin Industries provides end-to-end turnkey solutions for Hand Sanitizer processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
             </div>
           </div>
         </div>
@@ -410,12 +402,3 @@ export default function {component_name}() {
     </div>
   )
 }
-`
-
-plants.forEach(plant => {
-    let content = template.replace(/{full_title}/g, plant.title)
-                          .replace(/{short_name}/g, plant.short)
-                          .replace(/{component_name}/g, plant.comp);
-    fs.writeFileSync(path.join(__dirname, '../src/pages/TurnkeyProject/components', plant.comp + '.jsx'), content, 'utf8');
-    console.log('Generated ' + plant.comp + '.jsx');
-});
