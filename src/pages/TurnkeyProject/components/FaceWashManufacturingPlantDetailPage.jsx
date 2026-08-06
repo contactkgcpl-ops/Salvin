@@ -69,7 +69,13 @@ const FAQS = [
 ];
 
 /* ─── Gallery Images ─── */
-const GALLERY_IMAGES = []
+const GALLERY_IMAGES = [
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_1.jpg', alt: 'Vacuum Emulsifying Mixer' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_2.jpg', alt: 'Homogenizer and Cooling Mixing Tank' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_3.jpg', alt: 'Intermediate Storage Tank' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_4.jpg', alt: 'Automatic Tube Filling & Sealing Machine' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_5.jpg', alt: 'Packing & Dispatch System' }
+]
 
 export default function FaceWashManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
