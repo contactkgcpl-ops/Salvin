@@ -123,7 +123,12 @@ const RAW = [
   ['dry_powder_injection_flowchart.webp', null, 'Dry Powder Injection Plant', ['Sterile powder filling line for injectable antibiotics and drugs.', 'Ensures contamination-free dosing and sealing.']],
   ['eye_ear_drop_flowchart.webp', null, 'Eye/Ear Drop Manufacturing Plant', ['Fully automated aseptic liquid filling for eye and ear drops.', 'Precision dosing and sterile packaging.']],
   ['pharmaceutical_powder_manufacturing.webp', null, 'Pharmaceutical Powder Manufacturing Plant', ['Turnkey solution for pharmaceutical powder blending and packing.', 'Hygienic processing and accurate sachet or jar filling.']],
-  ['pharmaceutical_packaging_plant.webp', null, 'Pharmaceutical Packaging & Blister Packing Plant', ['High-speed packaging solutions for pharmaceutical products.', 'Advanced blister packing, cartoning, and serialization.']]
+  ['pharmaceutical_packaging_plant.webp', null, 'Pharmaceutical Packaging & Blister Packing Plant', ['High-speed packaging solutions for pharmaceutical products.', 'Advanced blister packing, cartoning, and serialization.']],
+  ['cosmetic_placeholder.webp', null, 'Face Wash Manufacturing Plant', ['Complete turnkey solution for face wash processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/face-wash-manufacturing-plant'],
+  ['cosmetic_placeholder.webp', null, 'Shampoo Manufacturing Plant', ['Complete turnkey solution for shampoo processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/shampoo-manufacturing-plant'],
+  ['cosmetic_placeholder.webp', null, 'Hair Oil Manufacturing Plant', ['Complete turnkey solution for hair oil processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/hair-oil-manufacturing-plant'],
+  ['cosmetic_placeholder.webp', null, 'Body Lotion Manufacturing Plant', ['Complete turnkey solution for body lotion processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/body-lotion-manufacturing-plant'],
+  ['cosmetic_placeholder.webp', null, 'Hand Wash Manufacturing Plant', ['Complete turnkey solution for hand wash processing and packaging.', 'Advanced automated processing and filling lines.'], '/turnkey-project/hand-wash-manufacturing-plant']
 ]
 
 export const brochureProjects = RAW.map(([imageFile, pdfFile, title, lines, detailsPath], index) => {

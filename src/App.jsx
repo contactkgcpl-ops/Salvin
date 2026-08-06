@@ -173,6 +173,11 @@ import MilletProcessingPlantDetailPage from "./pages/TurnkeyProject/components/M
 import BottleFillingLineDetailPage from "./pages/TurnkeyProject/components/BottleFillingLineDetailPage";
 import PanipuriProcessingLineDetailPage from "./pages/TurnkeyProject/components/PanipuriProcessingLineDetailPage";
 import ChapatiProcessingLineDetailPage from "./pages/TurnkeyProject/components/ChapatiProcessingLineDetailPage";
+import FaceWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/FaceWashManufacturingPlantDetailPage";
+import ShampooManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/ShampooManufacturingPlantDetailPage";
+import HairOilManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HairOilManufacturingPlantDetailPage";
+import BodyLotionManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/BodyLotionManufacturingPlantDetailPage";
+import HandWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandWashManufacturingPlantDetailPage";
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
@@ -2808,6 +2813,11 @@ export default function App() {
           <Route path="/turnkey-project/bottle-filling-line" element={<BottleFillingLineDetailPage />} />
           <Route path="/turnkey-project/panipuri-processing-line" element={<PanipuriProcessingLineDetailPage />} />
           <Route path="/turnkey-project/chapati-processing-line" element={<ChapatiProcessingLineDetailPage />} />
+          <Route path="/turnkey-project/face-wash-manufacturing-plant" element={<FaceWashManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/shampoo-manufacturing-plant" element={<ShampooManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/hair-oil-manufacturing-plant" element={<HairOilManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/body-lotion-manufacturing-plant" element={<BodyLotionManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/hand-wash-manufacturing-plant" element={<HandWashManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
