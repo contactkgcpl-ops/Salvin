@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Raw Material Weighing & Dosing System",
     desc: "Automated weighing controller and hopper system for precise dispensing of raw materials.",
-    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_1.jpg"
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_1.webp"
   },
   {
     name: "Vacuum Emulsifying Mixing Vessel",
     desc: "Advanced vacuum emulsifying mixer equipped with heating and homogenization capabilities.",
-    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_2.jpg"
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_2.webp"
   },
   {
     name: "High Shear Mixer / Homogenizer",
     desc: "High shear mixer ensuring a perfectly smooth and stable emulsion for body lotions.",
-    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_3.jpg"
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_3.webp"
   },
   {
     name: "Storage Holding Tank",
     desc: "Hygienic stainless steel storage holding tank to maintain product temperature and consistency.",
-    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_4.jpg"
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_4.webp"
   },
   {
     name: "Automatic Bottle Filling & Capping Machine",
     desc: "High-speed automated system for precise filling and secure capping of lotion bottles.",
-    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_5.jpg"
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_5.webp"
   },
   {
     name: "Labeling & Packaging Machine",
     desc: "Automated labeling and shrink sleeve packaging machine for final retail presentation.",
-    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_6.jpg"
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_6.webp"
   }
 ]
 
@@ -70,12 +70,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { id: 1, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_1.jpg', alt: 'Raw Material Weighing & Dosing System' },
-  { id: 2, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_2.jpg', alt: 'Vacuum Emulsifying Mixing Vessel' },
-  { id: 3, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_3.jpg', alt: 'Homogenizer / High Shear Mixer' },
-  { id: 4, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_4.jpg', alt: 'Storage Holding Tank' },
-  { id: 5, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_5.jpg', alt: 'Automatic Bottle Filling & Capping Machine' },
-  { id: 6, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_6.jpg', alt: 'Labeling & Packaging Machine' }
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_1.webp', alt: 'Raw Material Weighing & Dosing System' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_2.webp', alt: 'Vacuum Emulsifying Mixing Vessel' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_3.webp', alt: 'Homogenizer / High Shear Mixer' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_4.webp', alt: 'Storage Holding Tank' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_5.webp', alt: 'Automatic Bottle Filling & Capping Machine' },
+  { id: 6, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_6.webp', alt: 'Labeling & Packaging Machine' }
 ]
 
 export default function BodyLotionManufacturingPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function BodyLotionManufacturingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/body_lotion_hero.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/body_lotion_hero.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

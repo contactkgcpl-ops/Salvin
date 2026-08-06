@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Raw Material Weighing & Dosing",
     desc: "Automated dosing system for precise measurement of SLES, CAPB, COCO DI, salt, and fragrance.",
-    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_1.jpg"
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_1.webp"
   },
   {
     name: "Main Mixing Tank",
     desc: "Stainless steel blending vessel equipped with heating capabilities for homogenous mixing.",
-    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_2.jpg"
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_2.webp"
   },
   {
     name: "High Shear Mixer",
     desc: "Advanced high-shear homogenizer to ensure perfect emulsion and smooth product texture.",
-    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_3.jpg"
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_3.webp"
   },
   {
     name: "Storage Tanks",
     desc: "Hygienic intermediate storage tanks for holding the finished shampoo before filling.",
-    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_4.jpg"
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_4.webp"
   },
   {
     name: "Filling & Capping Machine",
     desc: "Automatic high-speed piston filling and capping machine for precise bottling.",
-    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_5.jpg"
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_5.webp"
   },
   {
     name: "Labeling & Packaging Machine",
     desc: "Automated labeling and shrink sleeve packaging system for final product presentation.",
-    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_6.jpg"
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_6.webp"
   }
 ]
 
@@ -70,12 +70,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { id: 1, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_1.jpg', alt: 'Raw Material Weighing & Dosing System' },
-  { id: 2, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_2.jpg', alt: 'Main Mixing Tank' },
-  { id: 3, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_3.jpg', alt: 'High Shear Mixer' },
-  { id: 4, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_4.jpg', alt: 'Storage Tanks' },
-  { id: 5, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_5.jpg', alt: 'Filling & Capping Machine' },
-  { id: 6, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_6.jpg', alt: 'Labeling & Packaging Machine' }
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_1.webp', alt: 'Raw Material Weighing & Dosing System' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_2.webp', alt: 'Main Mixing Tank' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_3.webp', alt: 'High Shear Mixer' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_4.webp', alt: 'Storage Tanks' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_5.webp', alt: 'Filling & Capping Machine' },
+  { id: 6, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_6.webp', alt: 'Labeling & Packaging Machine' }
 ]
 
 export default function ShampooManufacturingPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function ShampooManufacturingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/shampoo_hero.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/shampoo_hero.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

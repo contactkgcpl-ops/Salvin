@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Mixing & Heating Tanks",
     desc: "Stainless steel tanks for initial preparation and heating of raw materials.",
-    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_0.jpg"
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_0.webp"
   },
   {
     name: "Vacuum Emulsifying Mixer",
     desc: "Advanced vacuum emulsifying system with oil and water phase tanks for smooth blending.",
-    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_1.jpg"
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_1.webp"
   },
   {
     name: "Homogenizer & Cooling Tank",
     desc: "High-shear homogenizer combined with a cooling mixing tank for stable emulsion.",
-    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_2.jpg"
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_2.webp"
   },
   {
     name: "Intermediate Storage Tank",
     desc: "Hygienic stainless steel storage tank for holding the processed face wash before filling.",
-    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_3.jpg"
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_3.webp"
   },
   {
     name: "Automatic Tube Filling & Sealing",
     desc: "High-speed automatic filling and sealing machine for precise dosing into tubes.",
-    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_4.jpg"
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_4.webp"
   },
   {
     name: "Packing & Dispatch System",
     desc: "Automated carton packing and dispatch conveying system for final product.",
-    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_5.jpg"
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_5.webp"
   }
 ]
 
@@ -70,12 +70,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { id: 0, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_0.jpg', alt: 'Mixing & Heating Tanks' },
-  { id: 1, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_1.jpg', alt: 'Vacuum Emulsifying Mixer' },
-  { id: 2, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_2.jpg', alt: 'Homogenizer and Cooling Mixing Tank' },
-  { id: 3, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_3.jpg', alt: 'Intermediate Storage Tank' },
-  { id: 4, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_4.jpg', alt: 'Automatic Tube Filling & Sealing Machine' },
-  { id: 5, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_5.jpg', alt: 'Packing & Dispatch System' }
+  { id: 0, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_0.webp', alt: 'Mixing & Heating Tanks' },
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_1.webp', alt: 'Vacuum Emulsifying Mixer' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_2.webp', alt: 'Homogenizer and Cooling Mixing Tank' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_3.webp', alt: 'Intermediate Storage Tank' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_4.webp', alt: 'Automatic Tube Filling & Sealing Machine' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_5.webp', alt: 'Packing & Dispatch System' }
 ]
 
 export default function FaceWashManufacturingPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function FaceWashManufacturingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/face_wash_hero.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/face_wash_hero.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
