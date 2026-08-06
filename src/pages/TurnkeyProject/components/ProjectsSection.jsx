@@ -16,6 +16,7 @@ const CATEGORIES = [
   { name: 'Health & Nutrition', keywords: ['protein', 'nutrition', 'ors', 'bar'] },
   { name: 'Edible Oils', keywords: ['oil', 'seed', 'cleaning', 'sorting'] },
   { name: 'Pharmaceuticals', keywords: ['pharmaceutical', 'pharma', 'tablet', 'capsule', 'syrup', 'suspension', 'ointment', 'injection', 'eye', 'ear', 'blister'] },
+  { name: 'Cosmetics & Personal Care', keywords: ['cosmetic', 'face wash', 'shampoo', 'hair oil', 'body lotion', 'hand wash', 'liquid soap', 'sanitizer'] },
   { name: 'Automation & Specialty', keywords: ['automation', 'petroleum', 'glucose'] }
 ]
 
