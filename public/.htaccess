@@ -1,5 +1,8 @@
 <IfModule mod_rewrite.c>
   RewriteEngine On
+  Options -Indexes
+  DirectoryIndex index.html index.php
+
   SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
 
   # Force HTTPS and canonicalize non-WWW (except on localhost / development hosts)
@@ -21,15 +24,18 @@
   # Route API requests to PHP backend
   RewriteRule ^api(/.*)?$ api/index.php [L,QSA]
 
-  # Serve existing file or directory directly
-  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  # Serve existing file directly
+  RewriteCond %{REQUEST_FILENAME} -f
+  RewriteRule ^ - [L]
+
+  # Serve existing directory directly (mod_dir and DirectoryIndex will handle index.html)
   RewriteCond %{REQUEST_FILENAME} -d
   RewriteRule ^ - [L]
 
-  # Serve pre-rendered static HTML directly without 301 trailing-slash redirect
-  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  # Serve pre-rendered static HTML directly if a matching index.html exists in a subfolder
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
   RewriteRule ^(.*)$ /$1/index.html [L]
 
   # Single Page Application fallback
-  RewriteRule . /index.html [L]
+  RewriteRule ^ /index.html [L]
 </IfModule>
