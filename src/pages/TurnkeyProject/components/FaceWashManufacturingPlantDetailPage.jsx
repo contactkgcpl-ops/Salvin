@@ -17,34 +17,34 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: "Preparation & Washing Unit",
-    desc: "Automated system for sorting, washing, and preparing raw materials.",
-    image: ""
+    name: "Mixing & Heating Tanks",
+    desc: "Stainless steel tanks for initial preparation and heating of raw materials.",
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_0.jpg"
   },
   {
-    name: "Processing & Extraction System",
-    desc: "Hygienic processing followed by advanced filtration or forming.",
-    image: ""
+    name: "Vacuum Emulsifying Mixer",
+    desc: "Advanced vacuum emulsifying system with oil and water phase tanks for smooth blending.",
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_1.jpg"
   },
   {
-    name: "Thermal Processing Unit",
-    desc: "Advanced baking or pasteurization system to preserve flavor and quality.",
-    image: ""
+    name: "Homogenizer & Cooling Tank",
+    desc: "High-shear homogenizer combined with a cooling mixing tank for stable emulsion.",
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_2.jpg"
   },
   {
-    name: "Cooling & Conveying System",
-    desc: "Rapid cooling and hygienic conveying of the processed product.",
-    image: ""
+    name: "Intermediate Storage Tank",
+    desc: "Hygienic stainless steel storage tank for holding the processed face wash before filling.",
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_3.jpg"
   },
   {
-    name: "Quality Inspection System",
-    desc: "Automated inspection for weight, metal detection, and visual quality.",
-    image: ""
+    name: "Automatic Tube Filling & Sealing",
+    desc: "High-speed automatic filling and sealing machine for precise dosing into tubes.",
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_4.jpg"
   },
   {
-    name: "Packaging & Sealing Machine",
-    desc: "Automatic packaging in pouches, bottles, or cartons.",
-    image: ""
+    name: "Packing & Dispatch System",
+    desc: "Automated carton packing and dispatch conveying system for final product.",
+    image: "/turnkey-brochures/images/cosmetic/face_wash_plant_5.jpg"
   }
 ]
 
@@ -70,6 +70,7 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
+  { id: 0, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_0.jpg', alt: 'Mixing & Heating Tanks' },
   { id: 1, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_1.jpg', alt: 'Vacuum Emulsifying Mixer' },
   { id: 2, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_2.jpg', alt: 'Homogenizer and Cooling Mixing Tank' },
   { id: 3, src: '/turnkey-brochures/images/cosmetic/face_wash_plant_3.jpg', alt: 'Intermediate Storage Tank' },
