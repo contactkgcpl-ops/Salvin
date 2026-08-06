@@ -115,8 +115,29 @@ export default function HandSanitizerManufacturingPlantDetailPage() {
   return (
     <div className="rcp-page">
       {/* ═══ HERO BANNER ═══ */}
-      <section className="rcp-hero" style={{ minHeight: 'auto', padding: '60px 0 0 0', backgroundColor: '#fff' }}>
-        <img src="/turnkey-brochures/images/cosmetic/hand_sanitizer.jpg" alt="Hand Sanitizer Manufacturing Plant" style={{ width: '100%', height: 'auto', display: 'block' }} />
+      <section className="rcp-hero">
+        <div className="rcp-hero__overlay" />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/hand_sanitizer_hero.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__content">
+          <span className="rcp-hero__badge">
+            <span className="rcp-hero__badge-dot" />
+            TURNKEY PROCESSING SOLUTION
+          </span>
+          <h1 className="rcp-hero__title">
+            Hand Sanitizer Manufacturing Plant
+          </h1>
+          <p className="rcp-hero__subtitle">
+            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+          </p>
+          <div className="rcp-hero__actions">
+            <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
+              Request Information
+            </NavLink>
+            <a href="#enquiry" className="rcp-btn rcp-btn--outline">
+              Enquire Now
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* ═══ PLANT OVERVIEW ═══ */}
