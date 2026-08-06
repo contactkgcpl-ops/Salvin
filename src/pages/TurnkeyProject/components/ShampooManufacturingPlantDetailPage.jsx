@@ -17,34 +17,34 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: "Preparation & Washing Unit",
-    desc: "Automated system for sorting, washing, and preparing raw materials.",
-    image: ""
+    name: "Raw Material Weighing & Dosing",
+    desc: "Automated dosing system for precise measurement of SLES, CAPB, COCO DI, salt, and fragrance.",
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_1.jpg"
   },
   {
-    name: "Processing & Extraction System",
-    desc: "Hygienic processing followed by advanced filtration or forming.",
-    image: ""
+    name: "Main Mixing Tank",
+    desc: "Stainless steel blending vessel equipped with heating capabilities for homogenous mixing.",
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_2.jpg"
   },
   {
-    name: "Thermal Processing Unit",
-    desc: "Advanced baking or pasteurization system to preserve flavor and quality.",
-    image: ""
+    name: "High Shear Mixer",
+    desc: "Advanced high-shear homogenizer to ensure perfect emulsion and smooth product texture.",
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_3.jpg"
   },
   {
-    name: "Cooling & Conveying System",
-    desc: "Rapid cooling and hygienic conveying of the processed product.",
-    image: ""
+    name: "Storage Tanks",
+    desc: "Hygienic intermediate storage tanks for holding the finished shampoo before filling.",
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_4.jpg"
   },
   {
-    name: "Quality Inspection System",
-    desc: "Automated inspection for weight, metal detection, and visual quality.",
-    image: ""
+    name: "Filling & Capping Machine",
+    desc: "Automatic high-speed piston filling and capping machine for precise bottling.",
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_5.jpg"
   },
   {
-    name: "Packaging & Sealing Machine",
-    desc: "Automatic packaging in pouches, bottles, or cartons.",
-    image: ""
+    name: "Labeling & Packaging Machine",
+    desc: "Automated labeling and shrink sleeve packaging system for final product presentation.",
+    image: "/turnkey-brochures/images/cosmetic/shampoo_plant_6.jpg"
   }
 ]
 
@@ -69,7 +69,14 @@ const FAQS = [
 ];
 
 /* ─── Gallery Images ─── */
-const GALLERY_IMAGES = []
+const GALLERY_IMAGES = [
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_1.jpg', alt: 'Raw Material Weighing & Dosing System' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_2.jpg', alt: 'Main Mixing Tank' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_3.jpg', alt: 'High Shear Mixer' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_4.jpg', alt: 'Storage Tanks' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_5.jpg', alt: 'Filling & Capping Machine' },
+  { id: 6, src: '/turnkey-brochures/images/cosmetic/shampoo_plant_6.jpg', alt: 'Labeling & Packaging Machine' }
+]
 
 export default function ShampooManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
