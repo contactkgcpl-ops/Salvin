@@ -17,34 +17,34 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: "Preparation & Washing Unit",
-    desc: "Automated system for sorting, washing, and preparing raw materials.",
-    image: ""
+    name: "Raw Material Weighing & Mixing System",
+    desc: "Stainless steel weighing scale and dosing vessels for precise measurement of hand wash ingredients.",
+    image: "/turnkey-brochures/images/cosmetic/hand_wash_plant_1.jpg"
   },
   {
-    name: "Processing & Extraction System",
-    desc: "Hygienic processing followed by advanced filtration or forming.",
-    image: ""
+    name: "Jacketed Mixing Tank with Agitator",
+    desc: "Advanced jacketed mixing tank equipped with a top-mounted agitator for uniform blending and heating.",
+    image: "/turnkey-brochures/images/cosmetic/hand_wash_plant_2.jpg"
   },
   {
-    name: "Thermal Processing Unit",
-    desc: "Advanced baking or pasteurization system to preserve flavor and quality.",
-    image: ""
+    name: "Inline Homogenizer & Filtration",
+    desc: "High-performance inline homogenizer paired with a filtration system for a smooth, lump-free texture.",
+    image: "/turnkey-brochures/images/cosmetic/hand_wash_plant_3.jpg"
   },
   {
-    name: "Cooling & Conveying System",
-    desc: "Rapid cooling and hygienic conveying of the processed product.",
-    image: ""
+    name: "Intermediate Storage Tank",
+    desc: "Hygienic stainless steel intermediate storage tank for holding the finished hand wash prior to filling.",
+    image: "/turnkey-brochures/images/cosmetic/hand_wash_plant_4.jpg"
   },
   {
-    name: "Quality Inspection System",
-    desc: "Automated inspection for weight, metal detection, and visual quality.",
-    image: ""
+    name: "Automatic Bottle Filling & Capping",
+    desc: "Automated filling and capping machine specifically designed for precise dispensing into hand wash pump bottles.",
+    image: "/turnkey-brochures/images/cosmetic/hand_wash_plant_5.jpg"
   },
   {
-    name: "Packaging & Sealing Machine",
-    desc: "Automatic packaging in pouches, bottles, or cartons.",
-    image: ""
+    name: "Labeling & Carton Packing System",
+    desc: "Integrated labeling machine and carton packing system ensuring retail-ready packaging and seamless dispatch.",
+    image: "/turnkey-brochures/images/cosmetic/hand_wash_plant_6.jpg"
   }
 ]
 
@@ -69,7 +69,14 @@ const FAQS = [
 ];
 
 /* ─── Gallery Images ─── */
-const GALLERY_IMAGES = []
+const GALLERY_IMAGES = [
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/hand_wash_plant_1.jpg', alt: 'Raw Material Weighing & Mixing System' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/hand_wash_plant_2.jpg', alt: 'Jacketed Mixing Tank with Agitator' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/hand_wash_plant_3.jpg', alt: 'Inline Homogenizer & Filtration' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/hand_wash_plant_4.jpg', alt: 'Intermediate Storage Tank' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/hand_wash_plant_5.jpg', alt: 'Automatic Bottle Filling & Capping' },
+  { id: 6, src: '/turnkey-brochures/images/cosmetic/hand_wash_plant_6.jpg', alt: 'Labeling & Carton Packing System' }
+]
 
 export default function HandWashManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
