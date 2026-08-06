@@ -17,34 +17,34 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: "Preparation & Washing Unit",
-    desc: "Automated system for sorting, washing, and preparing raw materials.",
-    image: ""
+    name: "Raw Material Weighing & Oil Storage Tank",
+    desc: "Precision weighing system coupled with a high-capacity stainless steel oil storage tank.",
+    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_1.jpg"
   },
   {
-    name: "Processing & Extraction System",
-    desc: "Hygienic processing followed by advanced filtration or forming.",
-    image: ""
+    name: "Jacketed Oil Mixing Tank",
+    desc: "Stainless steel jacketed tank with agitator for heating and homogenous blending of oils and herbs.",
+    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_2.jpg"
   },
   {
-    name: "Thermal Processing Unit",
-    desc: "Advanced baking or pasteurization system to preserve flavor and quality.",
-    image: ""
+    name: "Inline Homogenizer & Filtration",
+    desc: "Advanced inline homogenizer and filtration system to ensure absolute purity and smooth texture.",
+    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_3.jpg"
   },
   {
-    name: "Cooling & Conveying System",
-    desc: "Rapid cooling and hygienic conveying of the processed product.",
-    image: ""
+    name: "Intermediate Storage Tank",
+    desc: "Hygienic stainless steel intermediate tank for holding the refined hair oil before filling.",
+    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_4.jpg"
   },
   {
-    name: "Quality Inspection System",
-    desc: "Automated inspection for weight, metal detection, and visual quality.",
-    image: ""
+    name: "Automatic Bottle Filling & Capping",
+    desc: "High-speed automatic liquid filling and capping machine for precise and spill-free bottling.",
+    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_5.jpg"
   },
   {
-    name: "Packaging & Sealing Machine",
-    desc: "Automatic packaging in pouches, bottles, or cartons.",
-    image: ""
+    name: "Labeling & Dispatch System",
+    desc: "Automated labeling machine integrated with a carton packing and dispatch conveying system.",
+    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_6.jpg"
   }
 ]
 
@@ -69,7 +69,14 @@ const FAQS = [
 ];
 
 /* ─── Gallery Images ─── */
-const GALLERY_IMAGES = []
+const GALLERY_IMAGES = [
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_1.jpg', alt: 'Raw Material Weighing & Oil Storage Tank' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_2.jpg', alt: 'Jacketed Oil Mixing Tank with Agitator' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_3.jpg', alt: 'Inline Homogenizer & Filtration System' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_4.jpg', alt: 'Intermediate Storage Tank' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_5.jpg', alt: 'Automatic Bottle Filling & Capping Machine' },
+  { id: 6, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_6.jpg', alt: 'Labeling & Dispatch System' }
+]
 
 export default function HairOilManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
