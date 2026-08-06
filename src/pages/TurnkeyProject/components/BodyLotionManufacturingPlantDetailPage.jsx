@@ -17,34 +17,34 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: "Preparation & Washing Unit",
-    desc: "Automated system for sorting, washing, and preparing raw materials.",
-    image: ""
+    name: "Raw Material Weighing & Dosing System",
+    desc: "Automated weighing controller and hopper system for precise dispensing of raw materials.",
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_1.jpg"
   },
   {
-    name: "Processing & Extraction System",
-    desc: "Hygienic processing followed by advanced filtration or forming.",
-    image: ""
+    name: "Vacuum Emulsifying Mixing Vessel",
+    desc: "Advanced vacuum emulsifying mixer equipped with heating and homogenization capabilities.",
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_2.jpg"
   },
   {
-    name: "Thermal Processing Unit",
-    desc: "Advanced baking or pasteurization system to preserve flavor and quality.",
-    image: ""
+    name: "High Shear Mixer / Homogenizer",
+    desc: "High shear mixer ensuring a perfectly smooth and stable emulsion for body lotions.",
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_3.jpg"
   },
   {
-    name: "Cooling & Conveying System",
-    desc: "Rapid cooling and hygienic conveying of the processed product.",
-    image: ""
+    name: "Storage Holding Tank",
+    desc: "Hygienic stainless steel storage holding tank to maintain product temperature and consistency.",
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_4.jpg"
   },
   {
-    name: "Quality Inspection System",
-    desc: "Automated inspection for weight, metal detection, and visual quality.",
-    image: ""
+    name: "Automatic Bottle Filling & Capping Machine",
+    desc: "High-speed automated system for precise filling and secure capping of lotion bottles.",
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_5.jpg"
   },
   {
-    name: "Packaging & Sealing Machine",
-    desc: "Automatic packaging in pouches, bottles, or cartons.",
-    image: ""
+    name: "Labeling & Packaging Machine",
+    desc: "Automated labeling and shrink sleeve packaging machine for final retail presentation.",
+    image: "/turnkey-brochures/images/cosmetic/body_lotion_plant_6.jpg"
   }
 ]
 
@@ -69,7 +69,14 @@ const FAQS = [
 ];
 
 /* ─── Gallery Images ─── */
-const GALLERY_IMAGES = []
+const GALLERY_IMAGES = [
+  { id: 1, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_1.jpg', alt: 'Raw Material Weighing & Dosing System' },
+  { id: 2, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_2.jpg', alt: 'Vacuum Emulsifying Mixing Vessel' },
+  { id: 3, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_3.jpg', alt: 'Homogenizer / High Shear Mixer' },
+  { id: 4, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_4.jpg', alt: 'Storage Holding Tank' },
+  { id: 5, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_5.jpg', alt: 'Automatic Bottle Filling & Capping Machine' },
+  { id: 6, src: '/turnkey-brochures/images/cosmetic/body_lotion_plant_6.jpg', alt: 'Labeling & Packaging Machine' }
+]
 
 export default function BodyLotionManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)
