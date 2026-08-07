@@ -1967,3 +1967,52 @@
 .faap-gallery__marquee-item:hover .faap-gallery__marquee-caption {
   transform: translateY(0);
 }
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.faap-seo-content {
+  background: var(--faap-slate-50);
+}
+
+.faap-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.faap-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--faap-radius);
+  border: 1px solid var(--faap-slate-200);
+  box-shadow: var(--faap-shadow);
+  transition: all var(--faap-transition);
+}
+
+.faap-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--faap-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.faap-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--faap-slate-800);
+  margin: 0 0 12px;
+}
+
+.faap-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--faap-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faap-seo-content__block {
+    padding: 24px;
+  }
+}

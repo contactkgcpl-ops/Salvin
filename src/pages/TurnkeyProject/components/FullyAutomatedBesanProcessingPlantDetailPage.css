@@ -1967,3 +1967,52 @@
 .fabpp-gallery__marquee-item:hover .fabpp-gallery__marquee-caption {
   transform: translateY(0);
 }
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.fabpp-seo-content {
+  background: var(--fabpp-slate-50);
+}
+
+.fabpp-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.fabpp-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--fabpp-radius);
+  border: 1px solid var(--fabpp-slate-200);
+  box-shadow: var(--fabpp-shadow);
+  transition: all var(--fabpp-transition);
+}
+
+.fabpp-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--fabpp-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.fabpp-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--fabpp-slate-800);
+  margin: 0 0 12px;
+}
+
+.fabpp-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--fabpp-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .fabpp-seo-content__block {
+    padding: 24px;
+  }
+}

@@ -180,6 +180,16 @@ import BodyLotionManufacturingPlantDetailPage from "./pages/TurnkeyProject/compo
 import HandWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandWashManufacturingPlantDetailPage";
 import LiquidSoapManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/LiquidSoapManufacturingPlantDetailPage";
 import HandSanitizerManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandSanitizerManufacturingPlantDetailPage";
+import FaceCreamManufacturingDetailPage from "./pages/TurnkeyProject/components/FaceCreamManufacturingDetailPage";
+import MoisturizingCreamManufacturingDetailPage from "./pages/TurnkeyProject/components/MoisturizingCreamManufacturingDetailPage";
+import SunscreenLotionManufacturingDetailPage from "./pages/TurnkeyProject/components/SunscreenLotionManufacturingDetailPage";
+import HairConditionerManufacturingDetailPage from "./pages/TurnkeyProject/components/HairConditionerManufacturingDetailPage";
+import HairSerumManufacturingDetailPage from "./pages/TurnkeyProject/components/HairSerumManufacturingDetailPage";
+import BabyLotionManufacturingDetailPage from "./pages/TurnkeyProject/components/BabyLotionManufacturingDetailPage";
+import BabyShampooManufacturingDetailPage from "./pages/TurnkeyProject/components/BabyShampooManufacturingDetailPage";
+import BodyButterManufacturingDetailPage from "./pages/TurnkeyProject/components/BodyButterManufacturingDetailPage";
+import FacialSerumManufacturingDetailPage from "./pages/TurnkeyProject/components/FacialSerumManufacturingDetailPage";
+
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
@@ -2822,6 +2832,16 @@ export default function App() {
           <Route path="/turnkey-project/hand-wash-manufacturing-plant" element={<HandWashManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/liquid-soap-manufacturing-plant" element={<LiquidSoapManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/hand-sanitizer-manufacturing-plant" element={<HandSanitizerManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/face-cream-manufacturing-plant" element={<FaceCreamManufacturingDetailPage />} />
+          <Route path="/turnkey-project/moisturizing-cream-manufacturing-plant" element={<MoisturizingCreamManufacturingDetailPage />} />
+          <Route path="/turnkey-project/sunscreen-lotion-manufacturing-plant" element={<SunscreenLotionManufacturingDetailPage />} />
+          <Route path="/turnkey-project/hair-conditioner-manufacturing-plant" element={<HairConditionerManufacturingDetailPage />} />
+          <Route path="/turnkey-project/hair-serum-manufacturing-plant" element={<HairSerumManufacturingDetailPage />} />
+          <Route path="/turnkey-project/baby-lotion-manufacturing-plant" element={<BabyLotionManufacturingDetailPage />} />
+          <Route path="/turnkey-project/baby-shampoo-manufacturing-plant" element={<BabyShampooManufacturingDetailPage />} />
+          <Route path="/turnkey-project/body-butter-manufacturing-plant" element={<BodyButterManufacturingDetailPage />} />
+          <Route path="/turnkey-project/facial-serum-manufacturing-plant" element={<FacialSerumManufacturingDetailPage />} />
+
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />

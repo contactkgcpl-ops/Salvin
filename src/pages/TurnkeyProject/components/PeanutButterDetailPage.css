@@ -1866,3 +1866,53 @@
     text-align: left;
   }
 }
+
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.pbp-seo-content {
+  background: var(--pbp-slate-50);
+}
+
+.pbp-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.pbp-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--pbp-radius);
+  border: 1px solid var(--pbp-slate-200);
+  box-shadow: var(--pbp-shadow);
+  transition: all var(--pbp-transition);
+}
+
+.pbp-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--pbp-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.pbp-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--pbp-slate-800);
+  margin: 0 0 12px;
+}
+
+.pbp-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--pbp-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pbp-seo-content__block {
+    padding: 24px;
+  }
+}

@@ -1967,3 +1967,52 @@
 .rcp-gallery__marquee-item:hover .rcp-gallery__marquee-caption {
   transform: translateY(0);
 }
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.rcp-seo-content {
+  background: var(--rcp-slate-50);
+}
+
+.rcp-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.rcp-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--rcp-radius);
+  border: 1px solid var(--rcp-slate-200);
+  box-shadow: var(--rcp-shadow);
+  transition: all var(--rcp-transition);
+}
+
+.rcp-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--rcp-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.rcp-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--rcp-slate-800);
+  margin: 0 0 12px;
+}
+
+.rcp-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--rcp-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .rcp-seo-content__block {
+    padding: 24px;
+  }
+}

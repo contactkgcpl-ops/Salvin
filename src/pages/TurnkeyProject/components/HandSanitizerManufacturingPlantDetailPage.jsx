@@ -17,34 +17,34 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: "Preparation & Washing Unit",
-    desc: "Automated system for sorting, washing, and preparing raw materials.",
-    image: ""
+    name: "RO Water Treatment Plant",
+    desc: "Purifies water to the required pharmaceutical grade for sanitizer formulation.",
+    image: "/turnkey-brochures/images/hand-sanitizer-gallery/1.jpg"
   },
   {
-    name: "Processing & Extraction System",
-    desc: "Hygienic processing followed by advanced filtration or forming.",
-    image: ""
+    name: "Main Mixing & Blending Tank",
+    desc: "Stainless steel tank equipped with agitators for blending alcohol, water, and thickeners.",
+    image: "/turnkey-brochures/images/hand-sanitizer-gallery/2.jpg"
   },
   {
-    name: "Thermal Processing Unit",
-    desc: "Advanced baking or pasteurization system to preserve flavor and quality.",
-    image: ""
+    name: "High Shear Homogenizer",
+    desc: "Ensures complete dispersion of carbomer or thickeners for a smooth, consistent gel.",
+    image: "/turnkey-brochures/images/hand-sanitizer-gallery/3.jpg"
   },
   {
-    name: "Cooling & Conveying System",
-    desc: "Rapid cooling and hygienic conveying of the processed product.",
-    image: ""
+    name: "Holding Tank with Filtration",
+    desc: "Stores the mixed sanitizer and filters out any impurities before the filling stage.",
+    image: "/turnkey-brochures/images/hand-sanitizer-gallery/4.jpg"
   },
   {
-    name: "Quality Inspection System",
-    desc: "Automated inspection for weight, metal detection, and visual quality.",
-    image: ""
+    name: "Automatic Filling Machine",
+    desc: "Precise, automated filling nozzles suitable for flammable liquids and various bottle sizes.",
+    image: "/turnkey-brochures/images/hand-sanitizer-gallery/5.jpg"
   },
   {
-    name: "Packaging & Sealing Machine",
-    desc: "Automatic packaging in pouches, bottles, or cartons.",
-    image: ""
+    name: "Labeling & Carton Packing Line",
+    desc: "Fully automated labeling, carton forming, packing, and dispatch preparation.",
+    image: "/turnkey-brochures/images/hand-sanitizer-gallery/6.jpg"
   }
 ]
 
@@ -68,8 +68,14 @@ const FAQS = [
   }
 ];
 
-/* ─── Gallery Images ─── */
-const GALLERY_IMAGES = []
+const GALLERY_IMAGES = [
+  { id: 1, src: '/turnkey-brochures/images/hand-sanitizer-gallery/2.jpg', alt: 'Main Mixing & Blending Tank' },
+  { id: 2, src: '/turnkey-brochures/images/hand-sanitizer-gallery/5.jpg', alt: 'Automatic Filling Machine' },
+  { id: 3, src: '/turnkey-brochures/images/hand-sanitizer-gallery/1.jpg', alt: 'RO Water Treatment Plant' },
+  { id: 4, src: '/turnkey-brochures/images/hand-sanitizer-gallery/3.jpg', alt: 'High Shear Homogenizer' },
+  { id: 5, src: '/turnkey-brochures/images/hand-sanitizer-gallery/4.jpg', alt: 'Holding Tank with Filtration' },
+  { id: 6, src: '/turnkey-brochures/images/hand-sanitizer-gallery/6.jpg', alt: 'Labeling & Carton Packing Line' }
+]
 
 export default function HandSanitizerManufacturingPlantDetailPage() {
   const [galleryIndex, setGalleryIndex] = useState(0)

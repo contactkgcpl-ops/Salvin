@@ -1881,3 +1881,53 @@
     text-align: left;
   }
 }
+
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.imff-seo-content {
+  background: var(--imff-slate-50);
+}
+
+.imff-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.imff-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--imff-radius);
+  border: 1px solid var(--imff-slate-200);
+  box-shadow: var(--imff-shadow);
+  transition: all var(--imff-transition);
+}
+
+.imff-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--imff-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.imff-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--imff-slate-800);
+  margin: 0 0 12px;
+}
+
+.imff-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--imff-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .imff-seo-content__block {
+    padding: 24px;
+  }
+}
