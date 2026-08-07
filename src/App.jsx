@@ -103,6 +103,8 @@ import CocoaPowderProcessingDetailPage from "./pages/TurnkeyProject/components/C
 import LiquidGlucoseDetailPage from "./pages/TurnkeyProject/components/LiquidGlucoseDetailPage";
 import ProteinBarManufacturingDetailPage from "./pages/TurnkeyProject/components/ProteinBarManufacturingDetailPage";
 import MayonnaiseProcessingDetailPage from "./pages/TurnkeyProject/components/MayonnaiseProcessingDetailPage";
+import BlogsPage from "./pages/blogs/BlogsPage";
+import BlogPostPage from "./pages/blogs/BlogPostPage";
 import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/InstantMixFrozenFoodDetailPage";
 import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
 import ChikkiPluckingDetailPage from "./pages/TurnkeyProject/components/ChikkiPluckingDetailPage";
@@ -2696,6 +2698,9 @@ export default function App() {
           <Route path="/food-consultant" element={<ServicesPage />} />
           <Route path="/services" element={<Navigate to="/food-consultant" replace />} />
           <Route path="/consultant" element={<ConsultantPage />} />
+          <Route path="/blogs" element={<BlogsPage />} />
+          <Route path="/blogs/:slug" element={<BlogPostPage />} />
+          <Route path="/blog" element={<Navigate to="/blogs" replace />} />
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
           <Route path="/turnkey-project/red-chilli-processing-plant" element={<RedChilliDetailPage />} />

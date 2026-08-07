@@ -62,7 +62,7 @@ export default function Footer() {
           <h4>COMPANY</h4>
           <NavLink to="/about">About Us</NavLink>
           <NavLink to="/about">Projects Portfolio</NavLink>
-          <NavLink to="/food-consultant">Resources & Blog</NavLink>
+          <NavLink to="/blogs">Resources & Blog</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>
           <NavLink to="/contact">International Offices</NavLink>
           <NavLink to="/contact">Careers</NavLink>
