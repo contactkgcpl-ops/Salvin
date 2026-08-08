@@ -15,70 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Wheat Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.jpg',
-    desc: 'Removes dust, stones, husk and foreign impurities to improve flour quality and milling efficiency.'
+    image: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Wheat Conditioning & Tempering System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.jpg',
-    desc: 'Optimizes wheat moisture content before milling for better flour extraction and product quality.'
+    image: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Roller Flour Milling System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.jpg',
-    desc: 'Performs efficient grinding and flour extraction through advanced roller milling technology.'
+    image: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Plansifter & Flour Grading System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.jpg',
-    desc: 'Separates and grades flour into different products including Maida, Atta, Sooji and Bran.'
+    image: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Flour Storage & Blending System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.jpg',
-    desc: 'Provides controlled storage, blending and product standardization before packaging.'
+    image: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Flour Packaging System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg',
-    desc: 'Automates weighing, filling, sealing and packing for accurate and efficient flour packaging.'
+    image: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What products can be produced in this flour plant?",
-    answer: "The plant can produce Atta, Maida, Sooji, Daliya and Bran with customizable production ratios."
+    question: "Do you manufacture all the machines for the Complete Wheat Flour Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Complete Wheat Flour Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant handle different wheat varieties?",
-    answer: "Yes. The system is designed to process various wheat types while maintaining consistent flour quality."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant available in different capacities?",
-    answer: "Yes. Plants can be customized from small commercial units to large industrial flour mills."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does the plant include automatic packaging?",
-    answer: "Yes. Automated weighing, filling, sealing and bagging systems can be integrated."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Do you provide turnkey installation services?",
-    answer: "Yes. Complete engineering, manufacturing, installation, commissioning and training support are provided."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.jpg', caption: 'Wheat Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.jpg', caption: 'Wheat Conditioning & Tempering System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.jpg', caption: 'Roller Flour Milling System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.jpg', caption: 'Plansifter & Flour Grading System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.jpg', caption: 'Flour Storage & Blending System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg', caption: 'Automatic Flour Packaging System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.webp', caption: 'Wheat Cleaning & Destoning System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.webp', caption: 'Wheat Conditioning & Tempering System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.webp', caption: 'Roller Flour Milling System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.webp', caption: 'Plansifter & Flour Grading System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.webp', caption: 'Flour Storage & Blending System' },
+  { src: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp', caption: 'Automatic Flour Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function WheatFlourProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="wfp-hero">
         <div className="wfp-hero__overlay" />
-        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/wheat_flour_hero.png')` }} />
+        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/wheat_flour_hero.webp')` }} />
         <div className="wfp-hero__content">
           <span className="wfp-hero__badge">
             <span className="wfp-hero__badge-dot" />
@@ -143,7 +143,7 @@ export default function WheatFlourProcessingDetailPage() {
             Complete Wheat Flour Processing Plant
           </h1>
           <p className="wfp-hero__subtitle">
-            The Wheat Flour Processing Plant is a complete turnkey solution for producing premium-quality wheat flour products. The plant integrates cleaning, conditioning, milling, grading, blending, storage, and automated packaging systems to ensure maximum flour yield, consistent quality, and efficient production.
+            Start Your Own Complete Wheat Flour Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="wfp-hero__actions">
             <a
@@ -169,7 +169,10 @@ export default function WheatFlourProcessingDetailPage() {
           <div className="wfp-overview__grid">
             <div className="wfp-overview__text">
               <p>
-                The Wheat Flour Processing Plant is a complete turnkey solution for producing premium-quality wheat flour products. The plant integrates cleaning, conditioning, milling, grading, blending, storage, and automated packaging systems to ensure maximum flour yield, consistent quality, and efficient production.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Complete Wheat Flour Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="wfp-overview__features">
                 {/* Feature 1 */}
@@ -228,7 +231,7 @@ export default function WheatFlourProcessingDetailPage() {
               </div>
             </div>
             <div className="wfp-overview__image wfp-overview__image--photo">
-              <img src="/turnkey-brochures/images/wheat-flour-gallery/6_packaging.jpg" alt="Wheat Flour Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp" alt="Wheat Flour Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
@@ -301,25 +304,25 @@ export default function WheatFlourProcessingDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Complete Wheat Flour Processing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="wfp-section wfp-seo-content" id="seo-guide" data-animate>
+          <div className={`wfp-container wfp-animate ${isVisible['seo-guide'] ? 'wfp-animate--in' : ''}`}>
+            <div className="wfp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="wfp-section-title">How Does The <span className="wfp-accent">Plant Work?</span></h2>
+            <p className="wfp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="wfp-seo-content__body">
+              <div className="wfp-seo-content__block">
                 <h3>Why Start a Complete Wheat Flour Processing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Complete Wheat Flour Processing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Complete Wheat Flour Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Complete Wheat Flour Processing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="wfp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Complete Wheat Flour Processing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="wfp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

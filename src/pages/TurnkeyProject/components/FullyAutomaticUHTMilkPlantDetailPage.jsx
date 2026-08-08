@@ -37,82 +37,88 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "Raw Milk Reception Unit",
     "desc": "Initial reception, filtration, and chilling.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/1_reception.jpg"
+    "image": "/turnkey-brochures/images/uht-milk-gallery/1_reception.webp"
   },
   {
     "name": "Clarifier & Standardization",
     "desc": "Precise inline fat adjustment.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.jpg"
+    "image": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.webp"
   },
   {
     "name": "Homogenizer & Sterilizer",
     "desc": "Advanced UHT heating up to 135°C for 2-4 seconds.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.jpg"
+    "image": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.webp"
   },
   {
     "name": "Aseptic Holding Tanks",
     "desc": "Sterile buffering before filling.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.jpg"
+    "image": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.webp"
   },
   {
     "name": "Aseptic Pouch Filling",
     "desc": "Sterile pouch packaging environment.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.jpg"
+    "image": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.webp"
   },
   {
     "name": "Carton Packing Machine",
     "desc": "Automated end-of-line carton packaging.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.jpg"
+    "image": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.webp"
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Does UHT sterilization affect the taste of the milk?",
-    "answer": "Because we use ultra-fast flash heating (over 135°C for just seconds) and immediate cooling, the natural flavor and nutritional value of the milk are highly preserved without any burnt taste."
+    question: "Do you manufacture all the machines for the Fully Automatic UHT Milk Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic UHT Milk Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "What is the shelf life of the milk produced?",
-    "answer": "When paired with our aseptic packaging machines, the UHT milk can achieve a shelf life of 6 to 9 months without any refrigeration or chemical preservatives."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Is this plant suitable for flavored milk or juices?",
-    "answer": "Yes, our UHT sterilizers are highly versatile and can process flavored milk, soya milk, juices, and other liquid beverages with minor configuration changes."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "How is the aseptic condition maintained during packaging?",
-    "answer": "The milk is transferred from the sterilizer to the aseptic filling machine through a completely closed, sterile piping loop, preventing any exposure to ambient air."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/1_reception.jpg",
+    "src": "/turnkey-brochures/images/uht-milk-gallery/1_reception.webp",
     "caption": "Raw Milk Reception Unit"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.jpg",
+    "src": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.webp",
     "caption": "Clarifier & Standardization"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.jpg",
+    "src": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.webp",
     "caption": "Homogenizer & Sterilizer"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.jpg",
+    "src": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.webp",
     "caption": "Aseptic Holding Tanks"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.jpg",
+    "src": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.webp",
     "caption": "Aseptic Pouch Filling"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.jpg",
+    "src": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.webp",
     "caption": "Carton Packing Machine"
   }
 ];
@@ -162,7 +168,7 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/uht_milk_hero.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/uht_milk_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -172,7 +178,7 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
             Fully Automatic UHT Milk Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Complete processing line for UHT milk production with advanced aseptic sterilization (135°C), homogenization, and carton packing.
+            Start Your Own Fully Automatic UHT Milk Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -192,9 +198,12 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' UHT Milk Plant</strong> makes special milk that stays fresh for 6 months without any fridge. This means you can easily sell your milk in faraway villages and cities without worrying about it going bad.</p>
-              <p>The machine heats the milk very fast to 135 degrees and then cools it down immediately. This kills all germs instantly but keeps the fresh taste of the milk. It does not taste burnt.</p>
-              <p>After heating, the milk is packed in special boxes so no outside air can enter. The whole machine cleans itself automatically, making it very safe, clean, and extremely easy for anyone to run.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic UHT Milk Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
                 <div className="rcp-overview__feature">
@@ -252,7 +261,7 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.jpg" alt="Fully Automatic UHT Milk Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.webp" alt="Fully Automatic UHT Milk Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
@@ -329,23 +338,23 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">U H T Milk Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a U H T Milk Business?</h3>
-                <p>The demand for high-quality, hygienically processed U H T Milk is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Fully Automatic UHT Milk Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic UHT Milk Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the U H T Milk Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for U H T Milk processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

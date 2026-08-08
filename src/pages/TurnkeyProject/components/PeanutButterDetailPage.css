@@ -461,14 +461,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--pbp-orange);
+  color: var(--rcp-orange);
   flex-shrink: 0;
-  transition: background var(--pbp-transition), color var(--pbp-transition);
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .pbp-overview__feature:hover .pbp-overview__feature-icon {
-  background: var(--pbp-orange);
-  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: rgba(245, 130, 32, 0.09);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rcp-orange);
+  flex-shrink: 0;
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .pbp-overview__feature-icon svg {
@@ -480,26 +488,30 @@
 .pbp-overview__feature-body {}
 
 .pbp-overview__feature-title {
-  font-size: 12px;
-  font-weight: 800;
-  color: var(--pbp-slate-800);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rcp-slate-800);
   line-height: 1.25;
-  margin: 0 0 2px;
+  margin: 0 0 4px;
+  text-align: left !important;
 }
 
 .pbp-overview__feature-desc {
   font-size: 11px;
-  color: var(--pbp-slate-400);
+  color: var(--rcp-slate-400);
   line-height: 1.35;
   margin: 0;
+  text-align: left !important;
 }
 
 /* Make overview image use cover (for real plant photos) */
 .pbp-overview__image--photo img {
   object-fit: cover;
-  height: 380px;
+  object-position: center;
+  height: 100%;
+  max-height: none;
   width: 100%;
-  border-radius: var(--pbp-radius);
+  border-radius: var(--rcp-radius);
 }
 
 
@@ -1852,5 +1864,55 @@
 
   .pbp-spec-row__value {
     text-align: left;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.pbp-seo-content {
+  background: var(--pbp-slate-50);
+}
+
+.pbp-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.pbp-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--pbp-radius);
+  border: 1px solid var(--pbp-slate-200);
+  box-shadow: var(--pbp-shadow);
+  transition: all var(--pbp-transition);
+}
+
+.pbp-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--pbp-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.pbp-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--pbp-slate-800);
+  margin: 0 0 12px;
+}
+
+.pbp-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--pbp-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .pbp-seo-content__block {
+    padding: 24px;
   }
 }

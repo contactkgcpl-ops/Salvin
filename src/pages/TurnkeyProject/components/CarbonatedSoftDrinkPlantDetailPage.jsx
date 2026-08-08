@@ -16,82 +16,86 @@ const PROCESS_STEPS = [
 
 /* â”€â”€â”€ Machinery Used â”€â”€â”€ */
 const MACHINERY_LIST = [
+
   {
     "name": "Water Treatment & Syrup Preparation",
     "desc": "RO system for pure water and tanks for preparing sugar syrup.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/soft-drink-gallery/1.webp"
   },
   {
     "name": "Syrup Mixing & Carbonation Unit",
     "desc": "Blends flavor with syrup and injects CO2 for carbonation.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/soft-drink-gallery/2.webp"
   },
   {
     "name": "Automatic Bottle Rinsing Machine",
     "desc": "Washes and sterilizes empty PET or glass bottles.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/soft-drink-gallery/3.webp"
   },
   {
     "name": "Filling & Capping Machine",
     "desc": "High-pressure counter-pressure filling to prevent gas loss.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/soft-drink-gallery/4.webp"
   },
   {
     "name": "Bottle Labeling & Shrink Sleeve Machine",
     "desc": "Automatically applies wrap-around labels or shrink sleeves.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/soft-drink-gallery/5.webp"
   },
   {
     "name": "Carton Packing & Palletizing",
     "desc": "Case packers and robotic arms for end-of-line packaging.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/soft-drink-gallery/6.webp"
   }
 ]
-
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
 const FAQS = [
   {
-    "question": "How is the fizziness (gas volume) controlled?",
-    "answer": "Our advanced carbonators use precision flow meters and pressure controls to inject exactly the right volume of CO2, ensuring consistent fizziness in every bottle."
+    question: "Do you manufacture all the machines for the Fully Automatic Carbonated Soft Drink Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Carbonated Soft Drink Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can this plant fill both PET and glass bottles?",
-    "answer": "Yes, our isobaric filling machines are adaptable. With minor change parts, you can easily switch between different sizes of PET bottles and glass bottles."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "What is an isobaric filler?",
-    "answer": "An isobaric filler maintains equal pressure between the bottle and the filling tank. This prevents the CO2 gas from escaping during the filling process, keeping the drink carbonated."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Do you provide bottle making machines as well?",
-    "answer": "Yes, we offer fully integrated PET blow molding machines that manufacture the bottles right before they enter the rinsing and filling section."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/soft-drink-gallery/1.webp",
     "caption": "Water Treatment & Syrup Preparation System"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/soft-drink-gallery/2.webp",
     "caption": "Syrup Mixing & Carbonation Unit"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/soft-drink-gallery/3.webp",
     "caption": "Automatic Bottle Rinsing Machine"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/soft-drink-gallery/4.webp",
     "caption": "Carbonated Soft Drink Filling & Capping Machine"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/soft-drink-gallery/5.webp",
     "caption": "Bottle Labeling & Shrink Sleeve Machine"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/soft-drink-gallery/6.webp",
     "caption": "Carton Packing Machine & Palletizing System"
   }
 ]
@@ -140,7 +144,7 @@ export default function CarbonatedSoftDrinkPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_soft_drink.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_soft_drink.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -150,7 +154,7 @@ export default function CarbonatedSoftDrinkPlantDetailPage() {
             Fully Automatic Carbonated Soft Drink Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automatic Carbonated Soft Drink Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -170,9 +174,12 @@ export default function CarbonatedSoftDrinkPlantDetailPage() {
           <h2 className="rcp-section-title">Commercial Carbonated Soft Drink <span className="rcp-accent">Manufacturing Plant</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Capitalize on the massive beverage market with our <strong>Fully Automatic Carbonated Soft Drink (CSD) Plant</strong>. From colas and lemon sodas to sparkling fruit drinks, carbonated beverages are among the highest-selling consumer products globally.</p>
-              <p>The process begins with high-grade water purification to ensure a flawless base. Sugar is dissolved into a clear syrup, filtered, and precisely blended with concentrated flavors and colors. The blended beverage is then chilled to near-freezing temperatures for optimal gas absorption.</p>
-              <p>In the carbonator, CO2 gas is perfectly infused into the cold liquid. The fizzy drink is immediately sent to an isobaric monoblock filler where bottles are rinsed, filled under pressure, and tightly capped at high speeds. The result is a refreshing, perfectly carbonated drink ready for the market.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Carbonated Soft Drink Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -400,23 +407,23 @@ export default function CarbonatedSoftDrinkPlantDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Carbonated Soft Drink Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Carbonated Soft Drink Business?</h3>
-                <p>The demand for high-quality, hygienically processed Carbonated Soft Drink is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Fully Automatic Carbonated Soft Drink Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Carbonated Soft Drink Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Carbonated Soft Drink Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Carbonated Soft Drink processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

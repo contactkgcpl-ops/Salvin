@@ -15,70 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Tomato Washing Machine',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/1_tomato_washing.jpg',
-    desc: 'Removes dirt, dust, and contaminants from fresh tomatoes before processing.'
+    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/1_tomato_washing.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tomato Inspection & Sorting Conveyor',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.jpg',
-    desc: 'Allows manual inspection and sorting of tomatoes to ensure only quality produce enters production.'
+    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Tomato Crusher Pulper',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.jpg',
-    desc: 'Crushes tomatoes and extracts pulp for further ketchup processing.'
+    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Steam Jacketed Sauce Cooking Kettle',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.jpg',
-    desc: 'Cooks tomato pulp with ingredients under controlled temperature conditions to achieve desired consistency.'
+    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Tomato Ketchup Homogenizer & Balance Tank',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.jpg',
-    desc: 'Provides uniform texture and consistency while maintaining continuous product flow.'
+    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Tomato Ketchup Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.jpg',
-    desc: 'Accurately fills, seals, labels, and packs ketchup bottles for final distribution.'
+    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What production capacities are available for the Tomato Ketchup Manufacturing Plant?",
-    answer: "Our plants are available in various capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Complete Tomato Ketchup Manufacturing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Complete Tomato Ketchup Manufacturing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Does the plant include washing and sorting systems?",
-    answer: "Yes. The plant includes integrated systems for washing and manual inspection to ensure high-quality input."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Can the plant produce different ketchup formulations?",
-    answer: "Yes. The plant is designed to handle various formulations with adjustable cooking and blending parameters."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Is the system suitable for food-grade hygienic production?",
-    answer: "Absolutely. The plant uses high-quality food-grade stainless steel components ensuring maximum hygiene and compliance with safety standards."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Can the filling machine handle different bottle sizes?",
-    answer: "Yes. The automatic filling line can be customized to handle various bottle shapes and sizes."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/1_tomato_washing.jpg', caption: 'Tomato Washing Machine' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.jpg', caption: 'Tomato Inspection & Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.jpg', caption: 'Tomato Crusher Pulper' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.jpg', caption: 'Steam Jacketed Sauce Cooking Kettle' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.jpg', caption: 'Tomato Ketchup Homogenizer & Balance Tank' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.jpg', caption: 'Tomato Ketchup Filling & Packaging Machine' },
+  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/1_tomato_washing.webp', caption: 'Tomato Washing Machine' },
+  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.webp', caption: 'Tomato Inspection & Sorting Conveyor' },
+  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.webp', caption: 'Tomato Crusher Pulper' },
+  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.webp', caption: 'Steam Jacketed Sauce Cooking Kettle' },
+  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.webp', caption: 'Tomato Ketchup Homogenizer & Balance Tank' },
+  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp', caption: 'Tomato Ketchup Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="tkm-hero">
         <div className="tkm-hero__overlay" />
-        <div className="tkm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_ketchup_hero.png')` }} />
+        <div className="tkm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_ketchup_hero.webp')` }} />
         <div className="tkm-hero__content">
           <span className="tkm-hero__badge">
             <span className="tkm-hero__badge-dot" />
@@ -143,7 +143,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
             Complete Tomato Ketchup Manufacturing Plant
           </h1>
           <p className="tkm-hero__subtitle">
-            Advanced turnkey solution for tomato washing, inspection, pulping, cooking, homogenization, filling, and packaging to produce premium quality tomato ketchup with high efficiency and consistent product quality.
+            Start Your Own Complete Tomato Ketchup Manufacturing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="tkm-hero__actions">
             <a
@@ -169,10 +169,10 @@ export default function TomatoKetchupManufacturingDetailPage() {
           <div className="tkm-overview__grid">
             <div className="tkm-overview__text">
               <p>
-                The Tomato Ketchup Manufacturing Plant is designed for efficient processing of fresh tomatoes into premium quality tomato ketchup through washing, sorting, pulping, cooking, homogenization, and packaging.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Complete Tomato Ketchup Manufacturing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                The plant ensures hygienic production, consistent taste, excellent texture, and high operational efficiency for food processing industries.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="tkm-overview__features">
                 {/* Feature 1 */}
@@ -229,7 +229,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
               </div>
             </div>
             <div className="tkm-overview__image tkm-overview__image--photo">
-              <img src="/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.jpg" alt="Tomato Ketchup Manufacturing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp" alt="Tomato Ketchup Manufacturing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
@@ -303,25 +303,25 @@ export default function TomatoKetchupManufacturingDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Complete Tomato Ketchup Manufacturing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="tkm-section tkm-seo-content" id="seo-guide" data-animate>
+          <div className={`tkm-container tkm-animate ${isVisible['seo-guide'] ? 'tkm-animate--in' : ''}`}>
+            <div className="tkm-section-badge">ABOUT THE PLANT</div>
+            <h2 className="tkm-section-title">How Does The <span className="tkm-accent">Plant Work?</span></h2>
+            <p className="tkm-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="tkm-seo-content__body">
+              <div className="tkm-seo-content__block">
                 <h3>Why Start a Complete Tomato Ketchup Manufacturing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Complete Tomato Ketchup Manufacturing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Complete Tomato Ketchup Manufacturing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Complete Tomato Ketchup Manufacturing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="tkm-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Complete Tomato Ketchup Manufacturing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="tkm-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './MayonnaiseProcessingDetailPage.css'
 
-import eq1 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/oil_ingredient_dosing.jpg';
-import eq2 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_premixing.jpg';
-import eq3 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_emulsification.jpg';
-import eq4 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/vacuum_homogenizer.jpg';
-import eq5 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/quality_inspection.jpg';
-import eq6 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/automatic_filling.jpg';
-import mayoHero from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/mayonnaise_hero.jpg';
+import eq1 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/oil_ingredient_dosing.webp';
+import eq2 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_premixing.webp';
+import eq3 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_emulsification.webp';
+import eq4 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/vacuum_homogenizer.webp';
+import eq5 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/quality_inspection.webp';
+import eq6 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/automatic_filling.webp';
+import mayoHero from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/mayonnaise_hero.webp';
 
 
 /* ─── Process Flow Steps ─── */
@@ -25,59 +25,59 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Oil & Ingredient Dosing System',
     image: eq1,
-    desc: 'Automated dosing and weighing system ensuring precise recipe formulation for oils, water, and additives.'
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'High Shear Premixing Tank',
     image: eq2,
-    desc: 'Pre-emulsification vessel designed to uniformly blend raw ingredients prior to final homogenization.'
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'High Shear Emulsification System',
     image: eq3,
-    desc: 'Advanced emulsification technology creating stable droplet sizes for creamy mayonnaise texture.'
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Vacuum Homogenizer Mixer',
     image: eq4,
-    desc: 'Core processing unit operating under vacuum to eliminate aeration and ensure perfect emulsion.'
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Quality Inspection & Metal Detection System',
     image: eq5,
-    desc: 'Inline optical and metal detection systems guaranteeing absolute food safety and jar integrity.'
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Filling & Packaging Machine',
     image: eq6,
-    desc: 'High-speed rotary or inline filling systems capable of handling various jar and bottle sizes efficiently.'
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What is a Mayonnaise Processing Plant?",
-    answer: "A Mayonnaise Processing Plant is an industrial turnkey system comprising mixing, emulsification, homogenization, and filling lines specifically designed to produce stable, creamy mayonnaise and similar sauces."
+    question: "Do you manufacture all the machines for the Mayonnaise Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Mayonnaise Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "What production capacities are available?",
-    answer: "We offer completely scalable systems that cater to a wide range of production needs, from pilot-scale batches up to continuous, high-volume industrial operations."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the plant fully automatic?",
-    answer: "Yes, our processing solutions feature PLC-based automation for precise recipe control, automated dosing, continuous monitoring, and minimal manual intervention."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What packaging options are supported?",
-    answer: "Our automated filling and packaging machines are highly versatile and can support various packaging options including glass jars, PET bottles, pouches, and bulk pails."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Does the plant comply with food safety standards?",
-    answer: "Absolutely. The entire plant is constructed using high-grade stainless steel with hygienic, easy-to-clean designs that comply with strict international food-grade processing standards."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
@@ -153,7 +153,7 @@ export default function MayonnaiseProcessingDetailPage() {
             Mayonnaise Processing Plant
           </h1>
           <p className="mpp-hero__subtitle">
-            Complete Turnkey Solution For Advanced Ingredient Dosing, Mixing, Forming, Cutting And Packaging Of Nutritional Bars
+            Start Your Own Mayonnaise Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="mpp-hero__actions">
             <a
@@ -180,10 +180,10 @@ export default function MayonnaiseProcessingDetailPage() {
           <div className="mpp-overview__grid">
             <div className="mpp-overview__text">
               <p>
-                Salvin Industries' Mayonnaise Processing Plant is a state-of-the-art turnkey industrial solution engineered for food processors demanding high production efficiency, rigorous hygiene standards, and consistent nutritional output. Our fully automated lines cover every stage of production—from precise ingredient handling and mixing to forming, cooling, cutting, and final flow-wrap packaging.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Mayonnaise Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Designed with automation at its core, the plant ensures accurate recipe management and uniform product quality while significantly reducing manual intervention and product waste. Whether you are producing protein bars, energy bars, or sports nutrition bars, our flexible recipes capability and scalable capacity allow you to adapt to rapidly evolving market demands.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="mpp-overview__features">
                 {/* Feature 1 */}
@@ -321,25 +321,25 @@ export default function MayonnaiseProcessingDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Mayonnaise Processing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="mpp-section mpp-seo-content" id="seo-guide" data-animate>
+          <div className={`mpp-container mpp-animate ${isVisible['seo-guide'] ? 'mpp-animate--in' : ''}`}>
+            <div className="mpp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="mpp-section-title">How Does The <span className="mpp-accent">Plant Work?</span></h2>
+            <p className="mpp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="mpp-seo-content__body">
+              <div className="mpp-seo-content__block">
                 <h3>Why Start a Mayonnaise Processing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Mayonnaise Processing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Mayonnaise Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Mayonnaise Processing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="mpp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Mayonnaise Processing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="mpp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

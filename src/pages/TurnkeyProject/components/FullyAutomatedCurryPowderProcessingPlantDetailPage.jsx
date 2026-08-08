@@ -27,31 +27,48 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
-  { name: "Raw Spice Cleaning & Destoning", desc: "Advanced cleaning machine to efficiently remove stones, dust, and impurities from raw spices.", image: "/turnkey-brochures/images/curry-powder/cleaning_destoning.jpg" },
-  { name: "Automatic Spice Roaster", desc: "Industrial rotary roaster with precise temperature control to enhance aroma and remove moisture.", image: "/turnkey-brochures/images/curry-powder/spice_roaster.jpg" },
-  { name: "Hammer Mill / Pulverizer", desc: "Heavy-duty grinding machine designed to pulverize roasted spices into uniform fine powder.", image: "/turnkey-brochures/images/curry-powder/hammer_mill.jpg" },
-  { name: "Ribbon Blender Mixer", desc: "High-capacity ribbon blending system ensuring 100% homogeneous mixing of ground spices.", image: "/turnkey-brochures/images/curry-powder/ribbon_blender.jpg" },
-  { name: "Vibro Sieving & Screening", desc: "Fine mesh vibro sifter to guarantee consistent powder size and remove any oversized particles.", image: "/turnkey-brochures/images/curry-powder/vibro_sieving.jpg" },
-  { name: "Automatic Pouch Packing", desc: "High-speed multi-head weigher and VFFS packing machine for highly accurate pouch filling.", image: "/turnkey-brochures/images/curry-powder/pouch_packing.jpg" }
-];
+
+  { name: "Raw Spice Cleaning & Destoning", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/turnkey-brochures/images/curry-powder/cleaning_destoning.webp" },
+  { name: "Automatic Spice Roaster", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/turnkey-brochures/images/curry-powder/spice_roaster.webp" },
+  { name: "Hammer Mill / Pulverizer", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/turnkey-brochures/images/curry-powder/hammer_mill.webp" },
+  { name: "Ribbon Blender Mixer", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/turnkey-brochures/images/curry-powder/ribbon_blender.webp" },
+  { name: "Vibro Sieving & Screening", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/turnkey-brochures/images/curry-powder/vibro_sieving.webp" },
+  { name: "Automatic Pouch Packing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/turnkey-brochures/images/curry-powder/pouch_packing.webp" }
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
-  { question: "What is the production capacity of the Curry Powder Processing Plant?", answer: "Our plants are custom-designed to match your required output, ranging from small-scale setups to multi-ton per hour industrial facilities." },
-  { question: "Is the machinery fully automated?", answer: "Yes, the entire plant is equipped with advanced PLC controls for fully automated, continuous operation with minimal human intervention." },
-  { question: "Does Salvin provide installation and training?", answer: "Absolutely. We provide comprehensive turnkey services including complete on-site installation, commissioning, and operator training." },
-  { question: "How do you prevent flavor loss during grinding?", answer: "Our heavy-duty pulverizers are equipped with specialized water-cooling jackets that maintain low grinding temperatures, perfectly preserving the essential volatile oils." },
-  { question: "Is the curry powder plant suitable for exporting products?", answer: "Yes, our equipment ensures 100% homogeneous blending and airtight packaging, strictly meeting international export standards for quality and hygiene." }
+  {
+    question: "Do you manufacture all the machines for the Fully Automated Curry Powder Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automated Curry Powder Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
+  },
+  {
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
+  },
+  {
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
+  },
+  {
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
+  }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/curry-powder/cleaning_destoning.jpg", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/spice_roaster.jpg", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/hammer_mill.jpg", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/ribbon_blender.jpg", caption: "Ribbon Blender Spice Mixing Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/vibro_sieving.jpg", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/pouch_packing.jpg", caption: "Automatic Pouch Filling & Packing Machine" }
+  { src: "/turnkey-brochures/images/curry-powder/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/spice_roaster.webp", caption: "Automatic Spice Roasting Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/ribbon_blender.webp", caption: "Ribbon Blender Spice Mixing Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/turnkey-brochures/images/curry-powder/pouch_packing.webp", caption: "Automatic Pouch Filling & Packing Machine" }
 ];
 
 export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
@@ -96,11 +113,13 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Curry Powder Processing Plant</h1>
-          <p className="rcp-hero__subtitle">Complete turnkey solution for processing and packaging high-quality, perfectly blended curry powder.</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automated Curry Powder Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -111,8 +130,12 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
           <h2 className="rcp-section-title">Complete <span className="rcp-accent">Curry Powder Processing</span> Solution</h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automatic Curry Powder Processing Plant</strong> is an advanced turnkey solution engineered specifically for high-volume curry powder production. From roasting raw coriander and cumin to ultra-fine pulverizing, we ensure maximum flavor retention.</p>
-              <p>With our robust machinery and PLC-controlled automation, you can achieve continuous, high-yield production of premium curry powder. The entire plant is fabricated from food-grade stainless steel to ensure a highly hygienic, touch-free operation tailored to global export standards.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automated Curry Powder Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -141,29 +164,35 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/curry-powder/ribbon_blender.jpg" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/curry-powder/ribbon_blender.webp" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-          <div className="rcp-section-badge">Comprehensive Guide</div>
-          <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Curry Powder Production</span></h2>
-          <p className="rcp-section-subtitle">Understanding roasting, grinding, and the global curry powder market.</p>
-          <div className="rcp-seo-content__body">
-            <h3>Why Start a Garam Masala Business?</h3>
-            <p>Garam Masala is the heart of Indian and South Asian cooking. The demand for branded, high-quality, and hygienically packed blended spices is skyrocketing. By manufacturing a perfectly balanced and highly aromatic Garam Masala, you can build a highly profitable and recurring FMCG business.</p>
-
-            <h3>How Does the Masala Processing Work?</h3>
-            <p>The process starts by thoroughly cleaning whole raw spices (like cumin, cardamom, and black pepper) to remove stones and dust. The spices are then gently roasted to release their natural oils and flavors. After roasting, they are fed into a heavy-duty pulverizer that grinds them into a fine powder. This powder is perfectly mixed in a ribbon blender before being automatically packed into sealed pouches.</p>
-
-            <h3>The Salvin Industries Advantage</h3>
-            <p>When spices get too hot during grinding, they lose their flavor and aroma. Our pulverizers are equipped with advanced cooling jackets to grind spices at low temperatures. Furthermore, our precision ribbon blenders ensure that every single pouch of Garam Masala has the exact same taste and proportion of spices.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automated Curry Powder Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automated Curry Powder Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

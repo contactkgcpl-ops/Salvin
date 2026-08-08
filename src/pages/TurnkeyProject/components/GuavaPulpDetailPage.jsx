@@ -16,70 +16,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Guava Washing Machine',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.jpg',
-    desc: 'High-capacity washing flume and sorting conveyor ensuring only quality guavas proceed.'
+    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Guava Pulper',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_2.jpg',
-    desc: 'Heavy-duty pulper for maximum pulp extraction and seed separation.'
+    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_2.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Guava Pulp Preheating & Refining',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_3.jpg',
-    desc: 'Temperature-controlled preheating tank with integrated refining system for consistent pulp quality.'
+    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_3.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Vacuum Evaporation Concentration System',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_4.jpg',
-    desc: 'Vacuum concentration system that gently removes water to increase brix level and preserve aroma.'
+    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_4.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Guava Pulp Sterilization Unit',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_5.jpg',
-    desc: 'Advanced tubular sterilization for precise pasteurization while retaining natural flavor and nutrients.'
+    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_5.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Guava Pulp Filling Machine',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_6.jpg',
-    desc: 'Highly automated filling into bottles or bags with precise capping and labeling integration.'
+    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_6.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What is the processing capacity of the Guava Pulp Plant?",
-    answer: "Our turnkey plants are fully customizable, with capacities ranging from 1 Ton/Hr up to 10+ Tons/Hr based on your requirements."
+    question: "Do you manufacture all the machines for the Fully Automatic Guava Pulp Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Guava Pulp Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Does the plant maintain the natural color and flavor?",
-    answer: "Yes, advanced deaeration, homogenization, and rapid pasteurization ensure the natural color, flavor, and nutrients of the guava are perfectly preserved."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "How does it handle guava seeds?",
-    answer: "Our specialized pulping and refining (finisher) systems are designed to effectively separate the hard guava seeds from the pulp without crushing them, preventing any bitter taste."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What types of packaging does it support?",
-    answer: "The line integrates with aseptic bag-in-drum fillers, hot-fill bottles, cans, and retail pouches."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Does SALVIN provide complete installation?",
-    answer: "Absolutely. We offer end-to-end turnkey solutions including process engineering, equipment manufacturing, installation, and commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.jpg', caption: 'Guava Washing Machine' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_2.jpg', caption: 'Guava Pulper' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_3.jpg', caption: 'Guava Pulp Preheating & Refining' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_4.jpg', caption: 'Vacuum Evaporation Concentration System' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_5.jpg', caption: 'Guava Pulp Sterilization Unit' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_6.jpg', caption: 'Automatic Guava Pulp Filling Machine' }
+  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.webp', caption: 'Guava Washing Machine' },
+  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_2.webp', caption: 'Guava Pulper' },
+  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_3.webp', caption: 'Guava Pulp Preheating & Refining' },
+  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
+  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_5.webp', caption: 'Guava Pulp Sterilization Unit' },
+  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_6.webp', caption: 'Automatic Guava Pulp Filling Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function GuavaPulpDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -137,7 +137,7 @@ export default function GuavaPulpDetailPage() {
             Fully Automatic Guava Pulp Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced Processing Technology for High-Yield & Premium Quality Guava Pulp
+            Start Your Own Fully Automatic Guava Pulp Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -158,10 +158,10 @@ export default function GuavaPulpDetailPage() {
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
               <p>
-                <strong>Salvin Industries' Fully Automatic Guava Pulp Processing Plant</strong> is an advanced, large-scale industrial turnkey solution engineered to extract premium-grade guava pulp with unmatched efficiency. From raw guava reception in our robust <strong>Guava Washing Machines</strong> to precision seed separation using heavy-duty <strong>Guava Pulpers</strong>, our complete <strong>guava processing line</strong> guarantees a seamless, touch-free hygienic operation that maximizes product yield.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Guava Pulp Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Our high-performance production line integrates <strong>Guava Pulp Preheating & Refining</strong> systems and our state-of-the-art <strong>Vacuum Evaporation Concentration System</strong> to remove excess water and achieve the perfect Brix level. Followed by rapid processing in our <strong>Guava Pulp Sterilization Unit</strong> and touchless packaging via the <strong>Automatic Guava Pulp Filling Machine</strong>, this robust setup meticulously preserves the natural pink or white color, distinct tropical flavor, and rich nutrients of the guava. Fabricated entirely from food-grade stainless steel (SS304/316), Salvin's <strong>fruit processing solutions</strong> ensure extended shelf life and strict adherence to global food safety standards.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
@@ -220,7 +220,7 @@ export default function GuavaPulpDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.jpg" alt="Fully Automatic Guava Pulp Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.webp" alt="Fully Automatic Guava Pulp Plant" loading="lazy" />
             </div>
           </div>
         </div>
@@ -297,23 +297,23 @@ export default function GuavaPulpDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Guava Pulp Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Guava Pulp Business?</h3>
-                <p>The demand for high-quality, hygienically processed Guava Pulp is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Fully Automatic Guava Pulp Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Guava Pulp Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Guava Pulp Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Guava Pulp processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

@@ -16,70 +16,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Ingredient Weighing & Batching System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.jpg',
-    desc: 'Accurate weighing and ingredient batching system to ensure consistent mix proportions for every production run.'
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Mixing & Blending Machine',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.jpg',
-    desc: 'Advanced mixing systems ensuring homogeneous blending of spices, grains, and ingredients for instant mixes.'
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Cooking & Processing System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.jpg',
-    desc: 'Controlled cooking, roasting, or steaming processes tailored for specific product requirements.'
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cooling & Freezing Tunnel System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.jpg',
-    desc: 'Advanced IQF and rapid freezing technology to preserve freshness, taste, and nutritional quality of frozen foods.'
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Quality Inspection & Metal Detection System',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.jpg',
-    desc: 'Rigorous quality checks and metal detection to ensure compliance with stringent food safety and industry standards.'
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.jpg',
-    desc: 'High-speed automated packaging systems ensuring accuracy, hygiene, and attractive presentation for finished products.'
+    image: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What products can be manufactured using this plant?",
-    answer: "Our turnkey plants are versatile and can produce a wide range of instant mixes (like upma, idli, dosa mixes) and frozen foods (like frozen vegetables, snacks, and ready-to-eat meals)."
+    question: "Do you manufacture all the machines for the Instant Mix & Frozen Food Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Instant Mix & Frozen Food Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "What is the production capacity range?",
-    answer: "Our processing plants are designed with scalable production capacities tailored to your specific requirements, ranging from pilot-scale operations to fully automated high-volume industrial lines."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Can the plant handle both Instant Mix and Frozen Food products?",
-    answer: "Yes, the facility is engineered with flexible processing lines that seamlessly accommodate the manufacturing and packaging of both dry instant mixes and deep-frozen food products."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Does SALVIN provide installation and commissioning support?",
-    answer: "Absolutely. Salvin Industries offers complete end-to-end turnkey solutions, including plant layout design, equipment supply, on-site installation, automation, commissioning, and operator training."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Is the plant customizable according to product requirements?",
-    answer: "Yes, all our processing plants are highly customizable. We design bespoke solutions tailored to your unique recipe formulations, hygiene standards, and operational goals."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.jpg', caption: 'Ingredient Weighing & Batching System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.jpg', caption: 'Mixing & Blending Machine' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.jpg', caption: 'Cooking & Processing System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.jpg', caption: 'Cooling & Freezing Tunnel System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.jpg', caption: 'Quality Inspection & Metal Detection System' },
-  { src: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.jpg', caption: 'Automatic Filling & Packaging Machine' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/ingredient_weighing_batching_system.webp', caption: 'Ingredient Weighing & Batching System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/mixing_blending_machine.webp', caption: 'Mixing & Blending Machine' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooking_processing_system.webp', caption: 'Cooking & Processing System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/cooling_freezing_tunnel_system.webp', caption: 'Cooling & Freezing Tunnel System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/quality_inspection_metal_detection_system.webp', caption: 'Quality Inspection & Metal Detection System' },
+  { src: '/turnkey-brochures/images/instant-mix-frozen-food/automatic_filling_packaging_machine.webp', caption: 'Automatic Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ export default function InstantMixFrozenFoodDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="imff-hero">
         <div className="imff-hero__overlay" />
-        <div className="imff-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/instant_mix_frozen_food_hero.jpg')` }} />
+        <div className="imff-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/instant_mix_frozen_food_hero.webp')` }} />
         <div className="imff-hero__content">
           <span className="imff-hero__badge">
             <span className="imff-hero__badge-dot" />
@@ -144,7 +144,7 @@ export default function InstantMixFrozenFoodDetailPage() {
             Instant Mix & Frozen Food Processing Plant
           </h1>
           <p className="imff-hero__subtitle">
-            Complete Turnkey solutions for Instant Mix & Frozen Food Processing & Packaging
+            Start Your Own Instant Mix & Frozen Food Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="imff-hero__actions">
             <a
@@ -171,10 +171,10 @@ export default function InstantMixFrozenFoodDetailPage() {
           <div className="imff-overview__grid">
             <div className="imff-overview__text">
               <p>
-                Salvin Industries is a trusted engineering, consultancy, and turnkey project execution company specializing in Instant Mix and Frozen Food Processing Plants. We offer complete end-to-end solutions, from concept development and process design to machinery selection, installation, automation, and packaging systems, helping businesses build modern and efficient food manufacturing facilities.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Instant Mix & Frozen Food Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                With extensive industry expertise, we focus on delivering customized solutions that ensure operational efficiency, product consistency, hygiene, and long-term scalability. Our advanced processing technologies and engineering excellence enable manufacturers to achieve superior product quality while optimizing production performance.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="imff-overview__features">
                 {/* Feature 1 */}
@@ -231,7 +231,7 @@ export default function InstantMixFrozenFoodDetailPage() {
               </div>
             </div>
             <div className="imff-overview__image imff-overview__image--brochure">
-              <img src="/turnkey-brochures/images/instant-mix-frozen-food-processing-plant/instant-mix-frozen-food-brochure.jpg" alt="Instant Mix & Frozen Food Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/instant-mix-frozen-food-processing-plant/instant-mix-frozen-food-brochure.webp" alt="Instant Mix & Frozen Food Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
@@ -312,25 +312,25 @@ export default function InstantMixFrozenFoodDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Instant Mix & Frozen Food Processing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="imff-section imff-seo-content" id="seo-guide" data-animate>
+          <div className={`imff-container imff-animate ${isVisible['seo-guide'] ? 'imff-animate--in' : ''}`}>
+            <div className="imff-section-badge">ABOUT THE PLANT</div>
+            <h2 className="imff-section-title">How Does The <span className="imff-accent">Plant Work?</span></h2>
+            <p className="imff-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="imff-seo-content__body">
+              <div className="imff-seo-content__block">
                 <h3>Why Start a Instant Mix & Frozen Food Processing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Instant Mix & Frozen Food Processing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Instant Mix & Frozen Food Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Instant Mix & Frozen Food Processing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="imff-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Instant Mix & Frozen Food Processing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="imff-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

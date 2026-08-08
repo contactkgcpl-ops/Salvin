@@ -3,13 +3,14 @@ import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchPara
 import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
 import "./App.css";
 import Cropper from "react-easy-crop";
-import machineryLayoutImage from "./assets/machinery-layout.png";
-import blueMachinesImage from "./assets/blue-machines.png";
+import machineryLayoutImage from "./assets/machinery-layout.webp";
+import blueMachinesImage from "./assets/blue-machines.webp";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FloatingContact from "./components/FloatingContact";
 // import IntroOverlay from "./components/IntroOverlay";
-import searchIcon from './assets/search.png'
+import searchIcon from './assets/search.webp'
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
@@ -155,30 +156,66 @@ import CakePlantDetailPage from "./pages/TurnkeyProject/components/CakePlantDeta
 import WaferPlantDetailPage from "./pages/TurnkeyProject/components/WaferPlantDetailPage";
 import ChocolateProcessingPlantDetailPage from "./pages/TurnkeyProject/components/ChocolateProcessingPlantDetailPage";
 import ToffeePlantDetailPage from "./pages/TurnkeyProject/components/ToffeePlantDetailPage";
+import FullyAutomatedNamkeenPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedNamkeenPlantDetailPage";
+import FullyAutomaticExtrudedSnacksPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomaticExtrudedSnacksPlantDetailPage";
+import CornPuffPlantDetailPage from "./pages/TurnkeyProject/components/CornPuffPlantDetailPage";
+import FullyAutomatedPopcornProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedPopcornProcessingPlantDetailPage";
+import FullyAutomatedRiceProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedRiceProcessingPlantDetailPage";
+import FullyAutomatedAttaPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedAttaPlantDetailPage";
+import FullyAutomatedBesanProcessingPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedBesanProcessingPlantDetailPage";
+import FullyAutomatedCornFlourPlantDetailPage from "./pages/TurnkeyProject/components/FullyAutomatedCornFlourPlantDetailPage";
+import OatProcessingPlantDetailPage from "./pages/TurnkeyProject/components/OatProcessingPlantDetailPage";
+import JaggeryProcessingPlantDetailPage from "./pages/TurnkeyProject/components/JaggeryProcessingPlantDetailPage";
+import SugarSyrupPlantDetailPage from "./pages/TurnkeyProject/components/SugarSyrupPlantDetailPage";
+import BabyFoodPlantDetailPage from "./pages/TurnkeyProject/components/BabyFoodPlantDetailPage";
+import MaltedFoodPlantDetailPage from "./pages/TurnkeyProject/components/MaltedFoodPlantDetailPage";
+import CocoaPowderPlantDetailPage from "./pages/TurnkeyProject/components/CocoaPowderPlantDetailPage";
+import ProteinBarPlantDetailPage from "./pages/TurnkeyProject/components/ProteinBarPlantDetailPage";
+import MilletProcessingPlantDetailPage from "./pages/TurnkeyProject/components/MilletProcessingPlantDetailPage";
+import BottleFillingLineDetailPage from "./pages/TurnkeyProject/components/BottleFillingLineDetailPage";
+import PanipuriProcessingLineDetailPage from "./pages/TurnkeyProject/components/PanipuriProcessingLineDetailPage";
+import ChapatiProcessingLineDetailPage from "./pages/TurnkeyProject/components/ChapatiProcessingLineDetailPage";
+import FaceWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/FaceWashManufacturingPlantDetailPage";
+import ShampooManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/ShampooManufacturingPlantDetailPage";
+import HairOilManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HairOilManufacturingPlantDetailPage";
+import BodyLotionManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/BodyLotionManufacturingPlantDetailPage";
+import HandWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandWashManufacturingPlantDetailPage";
+import LiquidSoapManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/LiquidSoapManufacturingPlantDetailPage";
+import HandSanitizerManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandSanitizerManufacturingPlantDetailPage";
+import FaceCreamManufacturingDetailPage from "./pages/TurnkeyProject/components/FaceCreamManufacturingDetailPage";
+import MoisturizingCreamManufacturingDetailPage from "./pages/TurnkeyProject/components/MoisturizingCreamManufacturingDetailPage";
+import SunscreenLotionManufacturingDetailPage from "./pages/TurnkeyProject/components/SunscreenLotionManufacturingDetailPage";
+import HairConditionerManufacturingDetailPage from "./pages/TurnkeyProject/components/HairConditionerManufacturingDetailPage";
+import HairSerumManufacturingDetailPage from "./pages/TurnkeyProject/components/HairSerumManufacturingDetailPage";
+import BabyLotionManufacturingDetailPage from "./pages/TurnkeyProject/components/BabyLotionManufacturingDetailPage";
+import BabyShampooManufacturingDetailPage from "./pages/TurnkeyProject/components/BabyShampooManufacturingDetailPage";
+import BodyButterManufacturingDetailPage from "./pages/TurnkeyProject/components/BodyButterManufacturingDetailPage";
+import FacialSerumManufacturingDetailPage from "./pages/TurnkeyProject/components/FacialSerumManufacturingDetailPage";
+
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
 import ConsultantPage from "./pages/ConsultantPage";
 import ServicesPage from "./pages/ServicesPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
-import Decade from "./assets/home_extra/decade_experties.png";
-import global from "./assets/home_extra/globalsupport.png";
-import innovation from "./assets/home_extra/innovation.png";
-import quality from "./assets/home_extra/quality.png";
-import industryTurnkey from "./assets/industry-divisions/turnkey-projects.png";
-import projproteinbar from "./assets/industry-divisions/proteinbar.png";
+import Decade from "./assets/home_extra/decade_experties.webp";
+import global from "./assets/home_extra/globalsupport.webp";
+import innovation from "./assets/home_extra/innovation.webp";
+import quality from "./assets/home_extra/quality.webp";
+import industryTurnkey from "./assets/industry-divisions/turnkey-projects.webp";
+import projproteinbar from "./assets/industry-divisions/proteinbar.webp";
 import industryAutomation from "./assets/industry-divisions/automation-robotics.webp";
-import industryProcessing from "./assets/industry-divisions/processing-packaging.png";
-import industryConsultancy from "./assets/industry-divisions/food_consultant.jpg";
-import industryMaintenance from "./assets/industry-divisions/machine-maintenance.jpg";
+import industryProcessing from "./assets/industry-divisions/processing-packaging.webp";
+import industryConsultancy from "./assets/industry-divisions/food_consultant.webp";
+import industryMaintenance from "./assets/industry-divisions/machine-maintenance.webp";
 import projHoney from "./assets/home_projects/honey processing plant.webp";
-import projSpices from "./assets/home_projects/spices_processing.png";
-import projApi from "./assets/home_projects/APi_Plant.jpg";
-import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.png";
-import projRice from "./assets/home_projects/puffed_rice.png";
-import projectHeroImage from "./assets/hero/turkey_proj.png";
-import machineHeroImage from "./assets/hero/salvinhero2.png";
-import sparesHeroImage from "./assets/hero/sparse02.png";
-import salvinLogo from "./assets/salvin_logo.png";
+import projSpices from "./assets/home_projects/spices_processing.webp";
+import projApi from "./assets/home_projects/APi_Plant.webp";
+import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.webp";
+import projRice from "./assets/home_projects/puffed_rice.webp";
+import projectHeroImage from "./assets/hero/turkey_proj.webp";
+import machineHeroImage from "./assets/hero/salvinhero2.webp";
+import sparesHeroImage from "./assets/hero/sparse02.webp";
+import salvinLogo from "./assets/salvin_logo.webp";
 
 
 const serviceCards = [
@@ -2774,6 +2811,42 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-wafer-plant" element={<WaferPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-chocolate-processing-plant" element={<ChocolateProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-toffee-plant" element={<ToffeePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-namkeen-plant" element={<FullyAutomatedNamkeenPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-extruded-snacks-plant" element={<FullyAutomaticExtrudedSnacksPlantDetailPage />} />
+          <Route path="/turnkey-project/corn-puff-plant" element={<CornPuffPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-popcorn-processing-plant" element={<FullyAutomatedPopcornProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-rice-processing-plant" element={<FullyAutomatedRiceProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-atta-plant" element={<FullyAutomatedAttaPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-besan-processing-plant" element={<FullyAutomatedBesanProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-corn-flour-plant" element={<FullyAutomatedCornFlourPlantDetailPage />} />
+          <Route path="/turnkey-project/oat-processing-plant" element={<OatProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/jaggery-processing-plant" element={<JaggeryProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/sugar-syrup-plant" element={<SugarSyrupPlantDetailPage />} />
+          <Route path="/turnkey-project/baby-food-plant" element={<BabyFoodPlantDetailPage />} />
+          <Route path="/turnkey-project/malted-food-plant" element={<MaltedFoodPlantDetailPage />} />
+          <Route path="/turnkey-project/cocoa-powder-processing-plant" element={<CocoaPowderPlantDetailPage />} />
+          <Route path="/turnkey-project/protein-bar-manufacturing-plant" element={<ProteinBarPlantDetailPage />} />
+          <Route path="/turnkey-project/millet-processing-plant" element={<MilletProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/bottle-filling-line" element={<BottleFillingLineDetailPage />} />
+          <Route path="/turnkey-project/panipuri-processing-line" element={<PanipuriProcessingLineDetailPage />} />
+          <Route path="/turnkey-project/chapati-processing-line" element={<ChapatiProcessingLineDetailPage />} />
+          <Route path="/turnkey-project/face-wash-manufacturing-plant" element={<FaceWashManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/shampoo-manufacturing-plant" element={<ShampooManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/hair-oil-manufacturing-plant" element={<HairOilManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/body-lotion-manufacturing-plant" element={<BodyLotionManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/hand-wash-manufacturing-plant" element={<HandWashManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/liquid-soap-manufacturing-plant" element={<LiquidSoapManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/hand-sanitizer-manufacturing-plant" element={<HandSanitizerManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/face-cream-manufacturing-plant" element={<FaceCreamManufacturingDetailPage />} />
+          <Route path="/turnkey-project/moisturizing-cream-manufacturing-plant" element={<MoisturizingCreamManufacturingDetailPage />} />
+          <Route path="/turnkey-project/sunscreen-lotion-manufacturing-plant" element={<SunscreenLotionManufacturingDetailPage />} />
+          <Route path="/turnkey-project/hair-conditioner-manufacturing-plant" element={<HairConditionerManufacturingDetailPage />} />
+          <Route path="/turnkey-project/hair-serum-manufacturing-plant" element={<HairSerumManufacturingDetailPage />} />
+          <Route path="/turnkey-project/baby-lotion-manufacturing-plant" element={<BabyLotionManufacturingDetailPage />} />
+          <Route path="/turnkey-project/baby-shampoo-manufacturing-plant" element={<BabyShampooManufacturingDetailPage />} />
+          <Route path="/turnkey-project/body-butter-manufacturing-plant" element={<BodyButterManufacturingDetailPage />} />
+          <Route path="/turnkey-project/facial-serum-manufacturing-plant" element={<FacialSerumManufacturingDetailPage />} />
+
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
@@ -2809,9 +2882,8 @@ export default function App() {
         </Routes>
         <Footer />
       </div>
+      <FloatingContact />
       <SalvinChatbot machines={machines} subcategories={subcategories} />
     </>
   );
 }
-
-

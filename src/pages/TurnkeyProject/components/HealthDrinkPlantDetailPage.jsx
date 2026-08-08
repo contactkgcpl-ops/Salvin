@@ -16,82 +16,86 @@ const PROCESS_STEPS = [
 
 /* â”€â”€â”€ Machinery Used â”€â”€â”€ */
 const MACHINERY_LIST = [
+
   {
     "name": "Raw Material Receiving & Weighing",
     "desc": "Precision weighing hoppers for protein, vitamins, and minerals.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/1.jpg"
+    "image": "/turnkey-brochures/images/health-drink-gallery/1.webp"
   },
   {
     "name": "Ingredient Blending & Dissolving",
     "desc": "High-shear mixing tanks for lump-free powder dissolution.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/2.jpg"
+    "image": "/turnkey-brochures/images/health-drink-gallery/2.webp"
   },
   {
     "name": "Homogenization & Pasteurization",
     "desc": "Ensures uniform consistency and eliminates harmful bacteria.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/3.jpg"
+    "image": "/turnkey-brochures/images/health-drink-gallery/3.webp"
   },
   {
     "name": "Cooling & Storage Tank",
     "desc": "Chilled storage tanks to maintain quality before filling.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/4.jpg"
+    "image": "/turnkey-brochures/images/health-drink-gallery/4.webp"
   },
   {
     "name": "Automatic Filling & Capping",
     "desc": "Hygienic automatic filling machines for bottles.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/5.jpg"
+    "image": "/turnkey-brochures/images/health-drink-gallery/5.webp"
   },
   {
     "name": "Labeling & Carton Packaging",
     "desc": "End-of-line labeling, shrink wrapping, and carton packing.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/6.jpg"
+    "image": "/turnkey-brochures/images/health-drink-gallery/6.webp"
   }
 ]
-
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
 const FAQS = [
   {
-    "question": "What is UHT and why is it used for health drinks?",
-    "answer": "UHT stands for Ultra-High Temperature processing. It heats the beverage to around 135°C for just a few seconds. This kills all bacteria but protects the vitamins and proteins from heat degradation."
+    question: "Do you manufacture all the machines for the Health Drink Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Health Drink Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Can this plant process milk-based and plant-based health drinks?",
-    "answer": "Yes, our processing lines are designed to handle both dairy-based drinks and plant-based alternatives like almond, soy, or oat milk."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Does the beverage require preservatives?",
-    "answer": "No. When UHT sterilization is combined with aseptic (germ-free) packaging, the health drink can last for months on a shelf without needing any chemical preservatives."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "How are the proteins and nutrients mixed smoothly?",
-    "answer": "We use advanced high-shear mixers followed by a high-pressure homogenizer. This breaks down protein clumps and fat molecules, ensuring a perfectly smooth, lump-free beverage."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/1.jpg",
+    "src": "/turnkey-brochures/images/health-drink-gallery/1.webp",
     "caption": "Raw Material Receiving & Weighing System"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/2.jpg",
+    "src": "/turnkey-brochures/images/health-drink-gallery/2.webp",
     "caption": "Ingredient Blending & Dissolving Tank"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/3.jpg",
+    "src": "/turnkey-brochures/images/health-drink-gallery/3.webp",
     "caption": "Homogenization & Pasteurization Unit"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/4.jpg",
+    "src": "/turnkey-brochures/images/health-drink-gallery/4.webp",
     "caption": "Cooling & Storage Tank"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/5.jpg",
+    "src": "/turnkey-brochures/images/health-drink-gallery/5.webp",
     "caption": "Automatic Bottle Filling & Capping Machine"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/6.jpg",
+    "src": "/turnkey-brochures/images/health-drink-gallery/6.webp",
     "caption": "Labeling & Carton Packaging System"
   }
 ]
@@ -140,7 +144,7 @@ export default function HealthDrinkPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_health_drink.png')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_health_drink.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -150,7 +154,7 @@ export default function HealthDrinkPlantDetailPage() {
             Health Drink Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Health Drink Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -170,9 +174,12 @@ export default function HealthDrinkPlantDetailPage() {
           <h2 className="rcp-section-title">Commercial Health Drink <span className="rcp-accent">Manufacturing Plant</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Meet the rising consumer demand for nutrition and wellness with our <strong>Fully Automated Health Drink Plant</strong>. Whether you are producing protein shakes, vitamin-fortified waters, or plant-based milks, this plant delivers uncompromising quality.</p>
-              <p>The process starts with a pure liquid base (water or milk) which is then accurately dosed with nutritional powders, vitamins, and minerals. Because health drinks often contain proteins that tend to clump, the mixture is passed through a powerful homogenizer to create a perfectly smooth, silky texture.</p>
-              <p>To preserve the delicate nutrients, the beverage undergoes UHT (Ultra-High Temperature) sterilization. It is heated and cooled in seconds, ensuring total safety. Finally, it is filled in a completely sterile aseptic environment into tetra packs or specialized bottles, ensuring a long shelf life without preservatives.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Health Drink Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -400,23 +407,23 @@ export default function HealthDrinkPlantDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Health Drink Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Health Drink Business?</h3>
-                <p>The demand for high-quality, hygienically processed Health Drink is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why Start a Health Drink Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Health Drink Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Health Drink Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Health Drink processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

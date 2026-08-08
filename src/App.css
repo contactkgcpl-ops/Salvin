@@ -637,7 +637,7 @@ body {
 /* HERO */
 .hero {
   min-height: 80vh;
-  background: url('assets/Hero_home.jpg') center/cover no-repeat;
+  background: url('assets/Hero_home.webp') center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
@@ -5444,7 +5444,7 @@ body {
   place-items: center;
   background:
     linear-gradient(90deg, rgba(24, 27, 31, 0.9), rgba(14, 23, 30, 0.72)),
-    url("/assets/consultant/Food-Business-Consultancy.png") center / cover no-repeat;
+    url("/assets/consultant/Food-Business-Consultancy.webp") center / cover no-repeat;
   color: #fff;
   text-align: center;
 }

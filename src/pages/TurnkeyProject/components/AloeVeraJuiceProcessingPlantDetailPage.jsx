@@ -15,66 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: "Washing Conveyor",
-    desc: "Thoroughly cleans dirt from raw leaves.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.jpg"
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
+    image: "/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.webp"
   },
   {
     name: "Sorting Belt",
-    desc: "Allows workers to inspect and remove bad leaves.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.jpg"
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
+    image: "/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.webp"
   },
   {
     name: "Automatic Slicer",
-    desc: "Cuts the top and bottom of the leaves automatically.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.jpg"
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
+    image: "/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.webp"
   },
   {
     name: "Gel Filleting Machine",
-    desc: "Separates the bitter outer skin from the pure gel.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.jpg"
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
+    image: "/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.webp"
   },
   {
     name: "Juice Extractor",
-    desc: "Crushes the gel into a smooth, drinkable juice.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.jpg"
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
+    image: "/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.webp"
   },
   {
     name: "Pasteurizer & Filler",
-    desc: "Heats the juice to remove bacteria, then fills bottles.",
-    image: "/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.jpg"
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
+    image: "/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.webp"
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Is the aloe vera juice extraction fully automatic?",
-    "answer": "Yes! Our plant is fully automated. Once you load the fresh aloe vera leaves, the machine automatically washes, peels, and extracts the pure gel without any manual touching."
+    question: "Do you manufacture all the machines for the Fully Automated Aloe Vera Juice Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automated Aloe Vera Juice Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Does the machine preserve the natural nutrients of aloe vera?",
-    "answer": "Absolutely. We use a cold-processing method and gentle filtration to make sure all the natural vitamins, minerals, and health benefits of the aloe vera are kept safe in the juice."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "What kind of packaging can this plant do?",
-    "answer": "The plant can easily be connected to various packaging machines. You can pack the aloe vera juice into PET bottles, glass bottles, or tetra packs depending on your market needs."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "Is it easy to clean the machines after production?",
-    "answer": "Yes, our plant comes with a built-in CIP (Clean-In-Place) system. This means the machines clean themselves automatically from the inside using hot water and food-safe cleaning liquids."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.jpg', caption: 'Leaf Washing' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.jpg', caption: 'Manual Sorting' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.jpg', caption: 'Automatic Slicing' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.jpg', caption: 'Gel Filleting' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.jpg', caption: 'Juice Extraction' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.jpg', caption: 'Incline Conveyor' }
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.webp', caption: 'Leaf Washing' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.webp', caption: 'Manual Sorting' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.webp', caption: 'Automatic Slicing' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.webp', caption: 'Gel Filleting' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.webp', caption: 'Juice Extraction' },
+  { src: '/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.webp', caption: 'Incline Conveyor' }
 ];
 
 export default function AloeVeraJuiceProcessingPlantDetailPage() {
@@ -123,7 +127,7 @@ export default function AloeVeraJuiceProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_aloe_vera.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_aloe_vera.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -133,7 +137,7 @@ export default function AloeVeraJuiceProcessingPlantDetailPage() {
             Fully Automated Aloe Vera Juice Processing Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automated Aloe Vera Juice Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -155,9 +159,12 @@ export default function AloeVeraJuiceProcessingPlantDetailPage() {
           
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Salvin Industries is a leading manufacturer and exporter of <strong>Fully Automatic Aloe Vera Juice Processing Plants</strong>. Our state-of-the-art turnkey solutions are engineered for high-efficiency commercial production, ensuring maximum yield and nutrient retention.</p>
-              <p>Designed with premium SS304/SS316 food-grade stainless steel, our machinery guarantees 100% hygienic processing. The fully automated PLC-controlled system streamlines leaf washing, gel extraction, pasteurization, and packaging, significantly reducing labor costs and boosting profitability for your beverage manufacturing business.</p>
-
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automated Aloe Vera Juice Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -260,29 +267,28 @@ export default function AloeVeraJuiceProcessingPlantDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Comprehensive Guide to <span className="rcp-accent">Aloe Vera Processing</span></h2>
-          <p className="rcp-section-subtitle">Understanding commercial extraction, pasteurization, and market opportunities.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Invest in Commercial Aloe Vera Processing?</h3>
-              <p>The global demand for health-centric beverages is surging, making commercial aloe vera juice processing a highly lucrative venture. Setting up an industrial-scale manufacturing plant allows you to capitalize on this growing market by producing high-volume, premium-grade aloe vera products with consistent quality and extended shelf life.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>Industrial Aloe Vera Processing Workflow</h3>
-              <p><strong>1. Washing & Trimming:</strong> Automated high-pressure washers and trimmers ensure complete removal of impurities from raw aloe leaves.</p>
-              <p><strong>2. Filleting & Extraction:</strong> Advanced mechanical extractors efficiently separate the bitter aloin skin from the pure, nutrient-rich inner gel.</p>
-              <p><strong>3. Homogenization & Pasteurization:</strong> The gel is blended into a smooth liquid and rapidly pasteurized to eliminate pathogens while preserving essential vitamins.</p>
-              <p><strong>4. Aseptic Packaging:</strong> The finished juice is automatically filled into sterile bottles or pouches, ready for global distribution.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries provides cutting-edge turnkey solutions for beverage manufacturing. Our fully automated aloe vera plants are manufactured from premium SS304/SS316 food-grade materials, ensuring zero contamination and maximum ROI. From complete facility layout design to machinery installation and operator training, we deliver unmatched industrial performance.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automated Aloe Vera Juice Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automated Aloe Vera Juice Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

@@ -461,14 +461,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--pjp-orange);
+  color: var(--rcp-orange);
   flex-shrink: 0;
-  transition: background var(--pjp-transition), color var(--pjp-transition);
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .pjp-overview__feature:hover .pjp-overview__feature-icon {
-  background: var(--pjp-orange);
-  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: rgba(245, 130, 32, 0.09);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rcp-orange);
+  flex-shrink: 0;
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .pjp-overview__feature-icon svg {
@@ -480,26 +488,30 @@
 .pjp-overview__feature-body {}
 
 .pjp-overview__feature-title {
-  font-size: 12px;
-  font-weight: 800;
-  color: var(--pjp-slate-800);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rcp-slate-800);
   line-height: 1.25;
-  margin: 0 0 2px;
+  margin: 0 0 4px;
+  text-align: left !important;
 }
 
 .pjp-overview__feature-desc {
   font-size: 11px;
-  color: var(--pjp-slate-400);
+  color: var(--rcp-slate-400);
   line-height: 1.35;
   margin: 0;
+  text-align: left !important;
 }
 
 /* Make overview image use cover (for real plant photos) */
 .pjp-overview__image--photo img {
   object-fit: cover;
-  height: 380px;
+  object-position: center;
+  height: 100%;
+  max-height: none;
   width: 100%;
-  border-radius: var(--pjp-radius);
+  border-radius: var(--rcp-radius);
 }
 
 

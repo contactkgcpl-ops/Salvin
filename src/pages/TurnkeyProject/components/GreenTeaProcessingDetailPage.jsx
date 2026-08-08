@@ -15,70 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Fresh Tea Leaf Sorting Conveyor',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.jpg',
-    desc: 'Separates leaves, stems, dust, and impurities to ensure high-quality tea processing.'
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tea Leaf Withering Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.jpg',
-    desc: 'Reduces moisture content in fresh tea leaves and prepares them for further processing.'
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Tea Leaf Fixation / Steaming Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.jpg',
-    desc: 'Uses controlled steam treatment to deactivate enzymes and preserve natural green color and flavor.'
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Tea Leaf Rolling Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.jpg',
-    desc: 'Rolls tea leaves to develop shape, texture, and enhance flavor extraction characteristics.'
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Tea Leaf Drying Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.jpg',
-    desc: 'Removes remaining moisture using controlled hot air drying while preserving aroma and shelf life.'
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Green Tea Packaging Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.jpg',
-    desc: 'Accurately fills, seals, and packs green tea into pouches for retail and commercial distribution.'
+    image: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What capacities are available for the Green Tea Processing Plant?",
-    answer: "Our plants are available in various capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Complete Green Tea Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Complete Green Tea Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Does the plant preserve the natural green color of tea leaves?",
-    answer: "Yes, the steaming machine uses controlled high-temperature steam to deactivate enzymes, preserving the natural green color and flavor."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the steaming process included in the system?",
-    answer: "Yes, the plant includes an integrated continuous steaming machine specifically designed for green tea production."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "Can the drying parameters be adjusted for different tea varieties?",
-    answer: "Yes, the drying machine features adjustable temperature and conveyor speed settings to accommodate different tea varieties."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Can the packaging system handle different pouch sizes and formats?",
-    answer: "Yes, the automatic packaging line can be customized to handle various pouch sizes and packaging formats according to your needs."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.jpg', caption: 'Fresh Tea Leaf Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.jpg', caption: 'Tea Leaf Withering Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.jpg', caption: 'Tea Leaf Fixation / Steaming Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.jpg', caption: 'Tea Leaf Rolling Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.jpg', caption: 'Tea Leaf Drying Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.jpg', caption: 'Green Tea Packaging Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.webp', caption: 'Fresh Tea Leaf Sorting Conveyor' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp', caption: 'Tea Leaf Withering Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.webp', caption: 'Tea Leaf Fixation / Steaming Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.webp', caption: 'Tea Leaf Rolling Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.webp', caption: 'Tea Leaf Drying Machine' },
+  { src: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp', caption: 'Green Tea Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function GreenTeaProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="gtp-hero">
         <div className="gtp-hero__overlay" />
-        <div className="gtp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.jpg')` }} />
+        <div className="gtp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp')` }} />
         <div className="gtp-hero__content">
           <span className="gtp-hero__badge">
             <span className="gtp-hero__badge-dot" />
@@ -143,7 +143,7 @@ export default function GreenTeaProcessingDetailPage() {
             Complete Green Tea Processing Plant
           </h1>
           <p className="gtp-hero__subtitle">
-            Advanced turnkey solution for green tea leaf sorting, withering, steaming, rolling, drying, and packaging to produce premium quality green tea with excellent aroma, color retention, and shelf life.
+            Start Your Own Complete Green Tea Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="gtp-hero__actions">
             <a
@@ -169,10 +169,10 @@ export default function GreenTeaProcessingDetailPage() {
           <div className="gtp-overview__grid">
             <div className="gtp-overview__text">
               <p>
-                The Green Tea Processing Plant is designed for efficient processing of fresh tea leaves into premium quality green tea through sorting, withering, fixation (steaming), rolling, drying, and packaging.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Complete Green Tea Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                The plant ensures superior flavor retention, natural green color preservation, hygienic processing, and reliable operation for commercial tea manufacturers.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="gtp-overview__features">
                 {/* Feature 1 */}
@@ -231,7 +231,7 @@ export default function GreenTeaProcessingDetailPage() {
               </div>
             </div>
             <div className="gtp-overview__image gtp-overview__image--photo">
-              <img src="/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.jpg" alt="Green Tea Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp" alt="Green Tea Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
@@ -304,25 +304,25 @@ export default function GreenTeaProcessingDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Complete Green Tea Processing Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="gtp-section gtp-seo-content" id="seo-guide" data-animate>
+          <div className={`gtp-container gtp-animate ${isVisible['seo-guide'] ? 'gtp-animate--in' : ''}`}>
+            <div className="gtp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="gtp-section-title">How Does The <span className="gtp-accent">Plant Work?</span></h2>
+            <p className="gtp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="gtp-seo-content__body">
+              <div className="gtp-seo-content__block">
                 <h3>Why Start a Complete Green Tea Processing Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Complete Green Tea Processing Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Complete Green Tea Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Complete Green Tea Processing Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="gtp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Complete Green Tea Processing Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="gtp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

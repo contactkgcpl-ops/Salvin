@@ -15,66 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: "Heavy Duty Dough Mixer",
-    desc: "Mixes flour, sugar, and fat into a perfect dough.",
-    image: "/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.jpg"
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
+    image: "/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.webp"
   },
   {
     name: "Rotary Moulder",
-    desc: "Stamps the dough into perfect biscuit shapes.",
-    image: "/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.jpg"
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
+    image: "/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.webp"
   },
   {
     name: "Tunnel Baking Oven",
-    desc: "Bakes the biscuits evenly as they pass through.",
-    image: "/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.jpg"
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
+    image: "/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Cooling Conveyor",
-    desc: "Long belt that cools hot biscuits so they get crispy.",
-    image: "/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.jpg"
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
+    image: "/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Flow Wrap Machine",
-    desc: "Packs the biscuits quickly into plastic wrappers.",
-    image: "/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.jpg"
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
+    image: "/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.webp"
   },
   {
     name: "Carton Packing System",
-    desc: "Puts the wrapped biscuit packets into large boxes.",
-    image: "/turnkey-brochures/images/biscuit-gallery/6_carton_packing.jpg"
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
+    image: "/turnkey-brochures/images/biscuit-gallery/6_carton_packing.webp"
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Can I make different types of biscuits with one plant?",
-    "answer": "Yes! By simply changing the molds and recipe, you can make soft dough biscuits (like glucose or butter cookies) and hard dough biscuits (like Marie or crackers) on the same production line."
+    question: "Do you manufacture all the machines for the Fully Automatic Biscuit Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Biscuit Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "How is the baking temperature controlled?",
-    "answer": "Our continuous baking tunnel ovens are equipped with smart temperature sensors and PLC controls. This ensures heat is distributed evenly across all zones, giving every biscuit the perfect golden color and crunch."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Does the plant include automatic packaging?",
-    "answer": "Yes, our fully automatic plant includes high-speed cooling conveyors that feed the baked biscuits directly into automatic flow wrapping or family pack machines without any human touch."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "What is the fuel source for the baking oven?",
-    "answer": "Our ovens are highly energy-efficient and can be customized to run on LPG, natural gas (PNG), diesel, or electricity, depending on what is most cost-effective in your region."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.jpg', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.jpg', caption: 'Rotary Moulding' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.jpg', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.jpg', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.jpg', caption: 'Flow Wrap Packaging' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/6_carton_packing.jpg', caption: 'Carton Packing' }
+  { src: '/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.webp', caption: 'Rotary Moulding' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.webp', caption: 'Flow Wrap Packaging' },
+  { src: '/turnkey-brochures/images/biscuit-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function BiscuitPlantDetailPage() {
@@ -123,7 +127,7 @@ export default function BiscuitPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_biscuit.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_biscuit.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -133,7 +137,7 @@ export default function BiscuitPlantDetailPage() {
             Fully Automatic Biscuit Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automatic Biscuit Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -155,9 +159,12 @@ export default function BiscuitPlantDetailPage() {
           
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Maximize your bakery's production capacity with our <strong>Fully Automatic Biscuit Manufacturing Plant</strong>. As a top-tier manufacturer of commercial bakery equipment, Salvin Industries provides robust, continuous processing lines for all types of biscuits.</p>
-              <p>From automated dough mixing and rotary molding to continuous tunnel baking and automated packaging, our turnkey biscuit processing solutions deliver uniform baking, unmatched operational efficiency, and strict adherence to global food safety standards. Upgrade your confectionery business with our high-speed, energy-efficient bakery machines.</p>
-
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Biscuit Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -260,29 +267,28 @@ export default function BiscuitPlantDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Comprehensive Guide to <span className="rcp-accent">Commercial Biscuit Manufacturing</span></h2>
-          <p className="rcp-section-subtitle">Understanding industrial baking, automation, and operational efficiency.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Invest in a Commercial Biscuit Plant?</h3>
-              <p>Biscuits remain a cornerstone of the global fast-moving consumer goods (FMCG) market. Establishing a fully automated biscuit manufacturing plant provides a scalable business model with exceptional profit margins, leveraging high-speed production lines to meet massive consumer demand efficiently.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>Industrial Biscuit Production Workflow</h3>
-              <p><strong>1. High-Shear Dough Mixing:</strong> Industrial planetary and horizontal mixers ensure uniform blending of flour, sugar, and fats into perfect dough.</p>
-              <p><strong>2. Rotary Molding & Sheeting:</strong> The dough is continuously fed into precision rotary molds, ensuring identical weight and shape for every biscuit.</p>
-              <p><strong>3. Continuous Tunnel Baking:</strong> The raw biscuits travel through advanced, multi-zone tunnel ovens for perfectly even baking and moisture extraction.</p>
-              <p><strong>4. Automated Packaging:</strong> Finished biscuits are rapidly cooled and seamlessly fed into high-speed horizontal flow wrapping machines.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries is a premier manufacturer of heavy-duty commercial bakery equipment. Our turnkey biscuit production lines are engineered for 24/7 continuous operation, minimizing labor overhead while maximizing output. With state-of-the-art PLC controls and robust SS304 construction, we guarantee long-term reliability and compliance with stringent food safety standards.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Biscuit Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Biscuit Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

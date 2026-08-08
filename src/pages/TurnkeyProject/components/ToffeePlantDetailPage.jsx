@@ -15,66 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: "Vacuum Cooker",
-    desc: "Boils sugar and glucose syrup without burning it.",
-    image: "/turnkey-brochures/images/toffee-gallery/1_weighing_system.jpg"
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
+    image: "/turnkey-brochures/images/toffee-gallery/1_weighing_system.webp"
   },
   {
     name: "Cooling Table",
-    desc: "Cools the hot syrup so colors and flavors can be mixed in.",
-    image: "/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.jpg"
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
+    image: "/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.webp"
   },
   {
     name: "Batch Roller",
-    desc: "Rolls the huge lump of candy into a thick rope.",
-    image: "/turnkey-brochures/images/toffee-gallery/3_cooling_table.jpg"
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
+    image: "/turnkey-brochures/images/toffee-gallery/3_cooling_table.webp"
   },
   {
     name: "Rope Sizer & Former",
-    desc: "Chops the rope and stamps it into small toffee shapes.",
-    image: "/turnkey-brochures/images/toffee-gallery/4_rope_sizer.jpg"
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
+    image: "/turnkey-brochures/images/toffee-gallery/4_rope_sizer.webp"
   },
   {
     name: "Cooling Tunnel",
-    desc: "Hardens the soft toffee shapes using cold air.",
-    image: "/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.jpg"
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
+    image: "/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.webp"
   },
   {
     name: "Twist Wrap Machine",
-    desc: "Automatically twists a shiny wrapper around each toffee.",
-    image: "/turnkey-brochures/images/toffee-gallery/6_carton_packing.jpg"
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
+    image: "/turnkey-brochures/images/toffee-gallery/6_carton_packing.webp"
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the difference between making hard candy and soft toffee?",
-    "answer": "It comes down to the recipe and boiling temperature. Hard candy is boiled at a higher temperature to remove more moisture, while soft toffees and caramels have more moisture, milk, and fat. Our plant can be adjusted to make both!"
+    question: "Do you manufacture all the machines for the Fully Automatic Toffee Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automatic Toffee Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "How does the machine shape the toffee so perfectly?",
-    "answer": "After the hot candy mass is cooled slightly, it goes through a 'Batch Roller' and 'Rope Sizer'. These machines roll the thick candy into a long, thin rope. A high-speed forming machine then chops and stamps this rope into perfect individual toffees."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Can this plant do center-filled toffees?",
-    "answer": "Yes. Our advanced candy forming lines can include a center-filling pump. This injects liquid chocolate, fruit jam, or soft cream right into the center of the candy rope before it gets chopped and formed."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "How fast does the twist wrapping machine work?",
-    "answer": "Our high-speed automatic packaging machines are incredibly fast. Depending on the model, they can individually twist-wrap or flow-wrap hundreds of toffees every single minute, directly from the cooling conveyor."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/toffee-gallery/1_weighing_system.jpg', caption: 'Weighing System' },
-  { src: '/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.jpg', caption: 'Toffee Cooker' },
-  { src: '/turnkey-brochures/images/toffee-gallery/3_cooling_table.jpg', caption: 'Cooling Table' },
-  { src: '/turnkey-brochures/images/toffee-gallery/4_rope_sizer.jpg', caption: 'Rope Sizer' },
-  { src: '/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.jpg', caption: 'Wrap Packaging' },
-  { src: '/turnkey-brochures/images/toffee-gallery/6_carton_packing.jpg', caption: 'Carton Packing' }
+  { src: '/turnkey-brochures/images/toffee-gallery/1_weighing_system.webp', caption: 'Weighing System' },
+  { src: '/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.webp', caption: 'Toffee Cooker' },
+  { src: '/turnkey-brochures/images/toffee-gallery/3_cooling_table.webp', caption: 'Cooling Table' },
+  { src: '/turnkey-brochures/images/toffee-gallery/4_rope_sizer.webp', caption: 'Rope Sizer' },
+  { src: '/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.webp', caption: 'Wrap Packaging' },
+  { src: '/turnkey-brochures/images/toffee-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function ToffeePlantDetailPage() {
@@ -123,7 +127,7 @@ export default function ToffeePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_toffee.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_toffee.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -133,7 +137,7 @@ export default function ToffeePlantDetailPage() {
             Fully Automatic Toffee Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Fully Automatic Toffee Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -155,9 +159,12 @@ export default function ToffeePlantDetailPage() {
           
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Optimize your confectionery manufacturing with our <strong>Fully Automatic Toffee and Candy Production Plant</strong>. Salvin Industries engineers high-capacity, complete turnkey solutions for hard candies, soft toffees, and caramels.</p>
-              <p>Our advanced continuous vacuum cookers, automated cooling tables, and high-speed twist wrapping machines eliminate manual labor and ensure perfect consistency. Built from premium food-grade stainless steel with intelligent PLC controls, our commercial candy making machines deliver unmatched efficiency and superior product quality.</p>
-
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Toffee Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -260,29 +267,28 @@ export default function ToffeePlantDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Comprehensive Guide to <span className="rcp-accent">Industrial Toffee & Candy Production</span></h2>
-          <p className="rcp-section-subtitle">Understanding vacuum cooking, continuous forming, and high-speed wrapping.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Invest in a Commercial Candy & Toffee Plant?</h3>
-              <p>The confectionery market demands vast volumes of hard candies, caramels, and toffees. A fully automated candy production plant eliminates the severe hazards and inconsistencies of manual sugar boiling, delivering massive daily outputs with perfect shape, taste, and hygienic safety.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>Industrial Candy Production Workflow</h3>
-              <p><strong>1. Continuous Vacuum Cooking:</strong> Sugar and glucose syrup are boiled under vacuum pressure, ensuring rapid moisture evaporation without burning or discoloration.</p>
-              <p><strong>2. Cooling & Flavor Mixing:</strong> The hot sugar mass is discharged onto automated cooling tables where colors and flavors are homogeneously kneaded in.</p>
-              <p><strong>3. Batch Rolling & Rope Sizing:</strong> The candy mass is automatically drawn into a continuous, uniform rope of exact thickness.</p>
-              <p><strong>4. High-Speed Forming & Wrapping:</strong> The candy rope is rapidly stamped into individual pieces, cooled in a chilling tunnel, and instantly twist-wrapped by high-speed packaging machines.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries is an industry leader in manufacturing highly durable turnkey confectionery plants. Our advanced PLC-controlled systems guarantee precise temperature management and synchronization between cooking and forming stages. Built entirely from heavy-duty stainless steel, our commercial candy machinery ensures absolute hygiene, minimal labor dependency, and exceptional manufacturing profitability.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automatic Toffee Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automatic Toffee Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

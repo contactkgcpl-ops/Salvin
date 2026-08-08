@@ -5,81 +5,81 @@ import WhyChooseSalvin from './WhyChooseSalvin'
 
 /* ─── Process Flow Steps ─── */
 const PROCESS_STEPS = [
-  { id: 1, title: 'Raw Mango Reception & Washing' },
-  { id: 2, title: 'Sorting & Grading' },
-  { id: 3, title: 'Steaming & Peeling' },
-  { id: 4, title: 'Pulping & Refining' },
-  { id: 5, title: 'Preheating & Deaeration' },
-  { id: 6, title: 'Sterilization Unit' },
-  { id: 7, title: 'Aseptic Filling & Packaging' }
+  { id: 1, title: 'Washing the Raw Mangoes' },
+  { id: 2, title: 'Removing the Skin and Seed' },
+  { id: 3, title: 'Extracting the Mango Pulp' },
+  { id: 4, title: 'Heating and Refining' },
+  { id: 5, title: 'Removing Extra Water' },
+  { id: 6, title: 'Sterilizing to Kill Bacteria' },
+  { id: 7, title: 'Automatic Packing' }
 ]
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
   {
-    name: 'Mango Washing & Sorting Machine',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.jpg',
-    desc: 'High-capacity washing flume and sorting conveyor ensuring only quality mangoes proceed.'
+    name: 'Mango Washing Machine',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp',
+    desc: 'Salvin Industries builds this automatic washing system. It thoroughly cleans the raw mangoes with water to remove any dirt or chemicals before processing begins.'
   },
   {
-    name: 'Mango Pulper',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.jpg',
-    desc: 'Heavy-duty pulper for maximum pulp extraction and skin/stone separation.'
+    name: 'Mango Destoner & Pulper',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.webp',
+    desc: 'Our heavy-duty Mango Pulper easily separates the mango skin and hard seeds from the fruit, extracting fresh, pure mango pulp automatically.'
   },
   {
-    name: 'Pulp Preheating Tank & Refiner',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.jpg',
-    desc: 'Temperature-controlled preheating tank with integrated refining system for consistent pulp quality.'
+    name: 'Refining & Heating Tank',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.webp',
+    desc: 'This machine gently heats the pulp and passes it through fine screens. It makes sure the final mango pulp is completely smooth without any lumps.'
   },
   {
-    name: 'Vacuum Evaporation Concentration System',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.jpg',
-    desc: 'Vacuum concentration system that gently removes water to increase brix level and preserve aroma.'
+    name: 'Vacuum Evaporator',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.webp',
+    desc: 'We manufacture this machine to remove extra water from the pulp. It makes the mango pulp thicker (higher Brix) while keeping its natural taste and smell safe.'
   },
   {
-    name: 'Mango Pulp Sterilization Unit',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.jpg',
-    desc: 'Advanced tubular sterilization for precise pasteurization while retaining natural flavor and nutrients.'
+    name: 'Pulp Sterilizer Unit',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.webp',
+    desc: 'This is a very important machine. It quickly heats and cools the pulp to kill any bad bacteria. This gives your mango pulp a long shelf life.'
   },
   {
-    name: 'Automatic Mango Pulp Filling & Sealing Machine',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.jpg',
-    desc: 'Highly automated aseptic filling and sealing for pouches or bottles, maximizing shelf life.'
+    name: 'Automatic Packaging Machine',
+    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill the ready mango pulp into pouches, bottles, or big cans without any human touch.'
   }
 ]
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What is the processing capacity of the Mango Pulp Plant?",
-    answer: "Our turnkey plants are fully customizable, with capacities ranging from 1 Ton/Hr up to 10+ Tons/Hr based on your requirements."
+    question: "Do you manufacture all the machines for the Mango Pulp Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Mango Pulp Plant. From the washing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Does the plant maintain the natural color and flavor?",
-    answer: "Yes, advanced deaeration and rapid tubular pasteurization ensure the natural color, flavor, and nutrients of the mango are perfectly preserved."
+    question: "How much mango pulp can this plant make in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small plant that makes 1,000 kg per hour, or a large industrial plant that makes over 10,000 kg per hour."
   },
   {
-    question: "Can this line process other fruits?",
-    answer: "Yes, with minor adjustments and bypass lines, this plant can also process fruits like guava, papaya, and tomatoes."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What types of packaging does it support?",
-    answer: "The line integrates with aseptic bag-in-drum fillers, hot-fill bottles, cans, and retail pouches."
+    question: "Will the mango pulp taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced heating and vacuum technology. This ensures the mango pulp keeps its original golden color, natural sweet taste, and healthy vitamins."
   },
   {
-    question: "Does SALVIN provide complete installation?",
-    answer: "Absolutely. We offer end-to-end turnkey solutions including process engineering, equipment manufacturing, installation, and commissioning."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.jpg', caption: 'Mango Washing & Sorting Machine' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.jpg', caption: 'Mango Pulper' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.jpg', caption: 'Pulp Preheating Tank & Refiner' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.jpg', caption: 'Vacuum Evaporation Concentration System' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.jpg', caption: 'Mango Pulp Sterilization Unit' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.jpg', caption: 'Automatic Mango Pulp Filling & Sealing Machine' }
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp', caption: 'Mango Washing & Sorting Machine' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.webp', caption: 'Mango Pulper' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.webp', caption: 'Pulp Preheating Tank & Refiner' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.webp', caption: 'Mango Pulp Sterilization Unit' },
+  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.webp', caption: 'Automatic Mango Pulp Filling & Sealing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function MangoPulpDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/mango_hero.jpg')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/mango_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -137,7 +137,7 @@ export default function MangoPulpDetailPage() {
             Fully Automatic Mango Pulp Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced Processing Technology for High-Yield & Premium Quality Mango Pulp
+            Start Your Own Mango Pulp Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -158,10 +158,10 @@ export default function MangoPulpDetailPage() {
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
               <p>
-                <strong>Salvin Industries' Fully Automatic Mango Pulp Processing Plant</strong> is a state-of-the-art industrial turnkey solution engineered to extract premium-grade mango pulp with unmatched efficiency. From raw mango reception and robust washing systems to heavy-duty pulping and advanced aseptic packaging, our complete <strong>mango processing line</strong> guarantees a seamless, highly hygienic, and touch-free operation designed for maximum yield.
+                If you want to start a business making fresh, thick, and tasty mango pulp, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automatic Mango Pulp Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Our comprehensively designed line features industrial <strong>Mango Washing & Sorting Machines</strong>, dual-stage <strong>Mango Pulpers</strong>, and integrated <strong>Preheating & Refining Tanks</strong>. Utilizing our powerful <strong>Vacuum Evaporation Concentration System</strong>, we can gently remove water to achieve your desired Brix level, while the <strong>Tubular Sterilization Unit</strong> and <strong>Automatic Aseptic Filling Line</strong> meticulously preserve the natural golden-yellow color, rich tropical aroma, and vital nutrients of the fruit. Fabricated entirely from food-grade stainless steel (SS304/316), Salvin's <strong>fruit processing solutions</strong> ensure extended shelf life and strict adherence to global food safety standards.
+                In this plant, you just need to put raw mangoes at the starting line. Our automatic <strong>Washing Machines</strong> clean them, the <strong>Pulper Machines</strong> extract the pulp and throw away the seeds, and the <strong>Evaporators</strong> make the pulp thick. Finally, our <strong>Sterilizers and Packing Machines</strong> pack the pulp safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="rcp-overview__features">
                 {/* Feature 1 */}
@@ -220,7 +220,7 @@ export default function MangoPulpDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.jpg" alt="Fully Automatic Mango Pulp Plant" loading="lazy" />
+              <img src="/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp" alt="Fully Automatic Mango Pulp Plant" loading="lazy" />
             </div>
           </div>
         </div>
@@ -297,23 +297,23 @@ export default function MangoPulpDetailPage() {
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
         <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
           <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Mango Pulp Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Mango Pulp Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
             <div className="rcp-seo-content__body">
               <div className="rcp-seo-content__block">
-                <h3>Why Start a Mango Pulp Business?</h3>
-                <p>The demand for high-quality, hygienically processed Mango Pulp is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <h3>Why is a Mango Pulp Plant a Good Business?</h3>
+                <p>People all over the world love mangoes, but mango season is very short. By setting up a Mango Pulp Processing Plant, you can extract the pulp from fresh mangoes and pack it safely. This packed pulp is then sold to companies that make mango juices, ice creams, and sweets all year round. It is a highly profitable business with huge demand.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>How Does the Mango Pulp Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw mangoes are dumped into our large washing tanks where water cleans them. Then, they go into a pulping machine that acts like a giant mixer—it separates the yellow pulp and throws out the hard seed and skin. The pure pulp is then gently heated in our refining tanks to make it smooth. Finally, the pulp is sterilized (heated quickly to kill bacteria) and packed into pouches or large cans automatically.</p>
               </div>
               
               <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Mango Pulp processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final mango pulp product is the best in the market.</p>
               </div>
             </div>
           </div>

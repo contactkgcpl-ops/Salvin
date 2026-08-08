@@ -1,5 +1,5 @@
 // src/components/AboutSection.jsx
-import indus from '../../../assets/turnkey_projects.png'
+import indus from '../../../assets/turnkey_projects.webp'
 
 function AboutSection() {
   return (

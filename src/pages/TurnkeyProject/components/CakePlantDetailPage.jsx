@@ -15,66 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: "Aerated Mixer",
-    desc: "Whips air into the batter to make the cake spongy.",
-    image: "/turnkey-brochures/images/cake-gallery/1_batter_mixer.jpg"
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
+    image: "/turnkey-brochures/images/cake-gallery/1_batter_mixer.webp"
   },
   {
     name: "Batter Depositor",
-    desc: "Pumps exactly the right amount of batter into molds.",
-    image: "/turnkey-brochures/images/cake-gallery/2_batter_depositor.jpg"
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
+    image: "/turnkey-brochures/images/cake-gallery/2_batter_depositor.webp"
   },
   {
     name: "Tunnel Baking Oven",
-    desc: "Bakes the cakes perfectly as the trays move inside.",
-    image: "/turnkey-brochures/images/cake-gallery/3_tunnel_oven.jpg"
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
+    image: "/turnkey-brochures/images/cake-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Vacuum Depanner",
-    desc: "Uses suction to gently lift soft cakes out of hot trays.",
-    image: "/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.jpg"
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
+    image: "/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Cooling Conveyor",
-    desc: "Allows the hot cakes to cool down before packing.",
-    image: "/turnkey-brochures/images/cake-gallery/5_cake_decorator.jpg"
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
+    image: "/turnkey-brochures/images/cake-gallery/5_cake_decorator.webp"
   },
   {
     name: "Flow Wrapper",
-    desc: "Packs the cakes individually to keep them fresh.",
-    image: "/turnkey-brochures/images/cake-gallery/6_packaging_machine.jpg"
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
+    image: "/turnkey-brochures/images/cake-gallery/6_packaging_machine.webp"
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "Can I make cupcakes and bar cakes on the same machine?",
-    "answer": "Yes! Our automatic batter depositor is highly flexible. By changing the baking trays and nozzle settings, you can produce cupcakes, bar cakes, muffins, and even center-filled cakes on the exact same production line."
+    question: "Do you manufacture all the machines for the Cake Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Cake Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "How do you achieve the perfect sponge texture?",
-    "answer": "The secret is in our industrial aerated mixer. It whips the batter at high speeds to trap air, making the batter extremely light and fluffy. This guarantees a perfectly soft and spongy cake every time."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "What is center-filled cake, and can this plant do it?",
-    "answer": "Center-filled cakes have liquid chocolate, strawberry jam, or cream injected inside the baked cake. Yes, our plant can be equipped with an automatic injection system that fills the cakes right after baking."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "How are the delicate cakes removed from the hot trays?",
-    "answer": "Our plant uses automatic suction or vacuum depanning machines. They gently lift the soft baked cakes out of the hot molds without breaking or crushing them, placing them safely onto the cooling conveyor."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
+  },
+  {
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cake-gallery/1_batter_mixer.jpg', caption: 'Batter Mixer' },
-  { src: '/turnkey-brochures/images/cake-gallery/2_batter_depositor.jpg', caption: 'Batter Depositor' },
-  { src: '/turnkey-brochures/images/cake-gallery/3_tunnel_oven.jpg', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.jpg', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/cake-gallery/5_cake_decorator.jpg', caption: 'Cake Decorator' },
-  { src: '/turnkey-brochures/images/cake-gallery/6_packaging_machine.jpg', caption: 'Packaging Machine' }
+  { src: '/turnkey-brochures/images/cake-gallery/1_batter_mixer.webp', caption: 'Batter Mixer' },
+  { src: '/turnkey-brochures/images/cake-gallery/2_batter_depositor.webp', caption: 'Batter Depositor' },
+  { src: '/turnkey-brochures/images/cake-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/turnkey-brochures/images/cake-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/turnkey-brochures/images/cake-gallery/5_cake_decorator.webp', caption: 'Cake Decorator' },
+  { src: '/turnkey-brochures/images/cake-gallery/6_packaging_machine.webp', caption: 'Packaging Machine' }
 ];
 
 export default function CakePlantDetailPage() {
@@ -123,7 +127,7 @@ export default function CakePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cake.png')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cake.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -133,7 +137,7 @@ export default function CakePlantDetailPage() {
             Cake Plant
           </h1>
           <p className="rcp-hero__subtitle">
-            Advanced turnkey solution to produce premium quality products with high efficiency and consistent product quality.
+            Start Your Own Cake Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="rcp-hero__actions">
             <NavLink to="/contact" className="rcp-btn rcp-btn--primary rcp-btn--lg">
@@ -155,9 +159,12 @@ export default function CakePlantDetailPage() {
           
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p>Scale your confectionery business with the <strong>Fully Automatic Cake Production Plant</strong> by Salvin Industries. We provide end-to-end commercial bakery solutions designed for cupcakes, muffins, layer cakes, and sponge cakes.</p>
-              <p>Our turnkey cake processing line features precision aerated batter mixers, automatic tray depositors, and continuous tunnel ovens. Built with hygienic stainless steel and advanced automation, our machinery ensures perfect sponge volume, consistent baking, and seamless packaging for maximum industrial output.</p>
-
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Cake Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -260,29 +267,28 @@ export default function CakePlantDetailPage() {
 
       {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
       <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-          <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-          <h2 className="rcp-section-title">A Comprehensive Guide to <span className="rcp-accent">Commercial Cake Production</span></h2>
-          <p className="rcp-section-subtitle">Understanding batter aeration, precision depositing, and industrial baking.</p>
-          <div className="rcp-seo-content__body">
-            <div className="rcp-seo-content__block">
-              <h3>Why Invest in a Commercial Cake Plant?</h3>
-              <p>The demand for packaged cakes, muffins, and Swiss rolls offers exceptional profit margins for commercial bakeries. A fully automated cake production plant ensures perfect batter aeration and consistent baking, allowing you to deliver premium, long-shelf-life confectionery products at an industrial scale.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>Industrial Cake Production Workflow</h3>
-              <p><strong>1. Aerated Batter Preparation:</strong> Specialized planetary mixers whip air into the ingredients to create a highly stable, voluminous batter.</p>
-              <p><strong>2. Precision Depositing:</strong> Servo-driven depositors inject exact volumes of batter into automatically greased baking trays.</p>
-              <p><strong>3. Tunnel Baking:</strong> The trays move continuously through a highly regulated tunnel oven, ensuring uniform heat distribution and perfect sponge development.</p>
-              <p><strong>4. Vacuum Depanning & Packaging:</strong> Soft cakes are gently extracted using vacuum depanners, cooled, and processed through flow wrapping machines.</p>
-            </div>
-            <div className="rcp-seo-content__block">
-              <h3>The Salvin Industries Advantage</h3>
-              <p>Salvin Industries engineers state-of-the-art turnkey cake manufacturing plants built for maximum operational efficiency. Our hygienic, SS304/SS316 food-grade machinery integrates advanced PLC/HMI controls, ensuring minimal product wastage, perfect baking consistency, and rapid production speeds for your bakery enterprise.</p>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Cake Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Cake Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* ═══ MACHINERY USED ═══ */}
       <section className="rcp-section rcp-machinery" id="machinery" data-animate>

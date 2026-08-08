@@ -461,14 +461,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--psp-orange);
+  color: var(--rcp-orange);
   flex-shrink: 0;
-  transition: background var(--psp-transition), color var(--psp-transition);
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .psp-overview__feature:hover .psp-overview__feature-icon {
-  background: var(--psp-orange);
-  color: #fff;
+  width: 30px;
+  height: 30px;
+  background: rgba(245, 130, 32, 0.09);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--rcp-orange);
+  flex-shrink: 0;
+  transition: background var(--rcp-transition), color var(--rcp-transition);
 }
 
 .psp-overview__feature-icon svg {
@@ -480,26 +488,30 @@
 .psp-overview__feature-body {}
 
 .psp-overview__feature-title {
-  font-size: 12px;
-  font-weight: 800;
-  color: var(--psp-slate-800);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--rcp-slate-800);
   line-height: 1.25;
-  margin: 0 0 2px;
+  margin: 0 0 4px;
+  text-align: left !important;
 }
 
 .psp-overview__feature-desc {
   font-size: 11px;
-  color: var(--psp-slate-400);
+  color: var(--rcp-slate-400);
   line-height: 1.35;
   margin: 0;
+  text-align: left !important;
 }
 
 /* Make overview image use cover (for real plant photos) */
 .psp-overview__image--photo img {
   object-fit: cover;
-  height: 380px;
+  object-position: center;
+  height: 100%;
+  max-height: none;
   width: 100%;
-  border-radius: var(--psp-radius);
+  border-radius: var(--rcp-radius);
 }
 
 
@@ -1852,5 +1864,55 @@
 
   .psp-spec-row__value {
     text-align: left;
+  }
+}
+
+
+/* ══════════════════════════════════════════
+   COMPREHENSIVE GUIDE (SEO)
+   ══════════════════════════════════════════ */
+.psp-seo-content {
+  background: var(--psp-slate-50);
+}
+
+.psp-seo-content__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.psp-seo-content__block {
+  background: #fff;
+  padding: 32px;
+  border-radius: var(--psp-radius);
+  border: 1px solid var(--psp-slate-200);
+  box-shadow: var(--psp-shadow);
+  transition: all var(--psp-transition);
+}
+
+.psp-seo-content__block:hover {
+  border-color: rgba(244, 124, 32, .2);
+  box-shadow: var(--psp-shadow-lg);
+  transform: translateY(-2px);
+}
+
+.psp-seo-content__block h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--psp-slate-800);
+  margin: 0 0 12px;
+}
+
+.psp-seo-content__block p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--psp-slate-600);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .psp-seo-content__block {
+    padding: 24px;
   }
 }

@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import consultantHero from "../assets/hero/salvinhero2.png";
-import foodPlant from "../assets/food-processing-plant.jpg";
-import turnkeyProj from "../assets/hero/turkey_proj.png";
+import consultantHero from "../assets/hero/salvinhero2.webp";
+import foodPlant from "../assets/food-processing-plant.webp";
+import turnkeyProj from "../assets/hero/turkey_proj.webp";
 // Imported local advisory images
-import adv1 from "../assets/advisory/tech_advisory.png";
-import adv2 from "../assets/advisory/engineering.png";
-import adv3 from "../assets/advisory/marketing.png";
-import adv4 from "../assets/advisory/merger.png";
-import adv5 from "../assets/advisory/regulatory.png";
-import customMachineImg from "../assets/turnkey_custom_machine.png";
-import largePlantImg from "../assets/large_industrial_plant.jpg";
-import equipmentCollageImg from "../assets/equipment_collage.jpg";
-import expertiseFactoryImg from "../assets/expertise_factory.jpg";
+import adv1 from "../assets/advisory/tech_advisory.webp";
+import adv2 from "../assets/advisory/engineering.webp";
+import adv3 from "../assets/advisory/marketing.webp";
+import adv4 from "../assets/advisory/merger.webp";
+import adv5 from "../assets/advisory/regulatory.webp";
+import customMachineImg from "../assets/turnkey_custom_machine.webp";
+import largePlantImg from "../assets/large_industrial_plant.webp";
+import equipmentCollageImg from "../assets/equipment_collage.webp";
+import expertiseFactoryImg from "../assets/expertise_factory.webp";
 
 const slides = [
   {

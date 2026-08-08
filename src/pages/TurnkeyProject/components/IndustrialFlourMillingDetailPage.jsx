@@ -15,70 +15,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Wheat Cleaning & Pre-Cleaning Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.jpg',
-    desc: 'Removes impurities and foreign materials from raw wheat to ensure high-quality milling.'
+    image: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Wheat Destoner Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.jpg',
-    desc: 'Separates stones, mud balls, and heavy particles using advanced gravity separation.'
+    image: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Wheat Conditioning System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.jpg',
-    desc: 'Optimizes moisture content in wheat kernels to ensure maximum flour yield and bran separation.'
+    image: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Roller Flour Milling System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.jpg',
-    desc: 'High-precision roller mills crush and grind conditioned wheat into fine flour with consistent quality.'
+    image: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Plansifter System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.jpg',
-    desc: 'Efficiently sifts and grades the milled flour into different categories based on particle size.'
+    image: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Flour Packaging Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg',
-    desc: 'Automatically weighs, fills, and seals flour into consumer and bulk packaging.'
+    image: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What capacities are available for the Industrial Flour Milling Plant?",
-    answer: "Our plants are available in various capacities and can be customized based on production requirements."
+    question: "Do you manufacture all the machines for the Complete Industrial Flour Milling Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Complete Industrial Flour Milling Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "Can the plant produce Atta, Maida and Sooji simultaneously?",
-    answer: "Yes, our advanced milling and plansifting systems allow for simultaneous extraction of different flour grades."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is automatic wheat conditioning included?",
-    answer: "Yes, the plant features a fully automated wheat conditioning system with precision moisture control."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What is the flour extraction efficiency?",
-    answer: "Our roller milling and sifting technologies ensure maximum flour extraction rates with minimal product loss."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Can the plant be customized for different wheat varieties?",
-    answer: "Absolutely. The milling process can be adjusted and customized to process hard, soft, or mixed wheat varieties."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.jpg', caption: 'Wheat Cleaning & Pre-Cleaning Machine' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.jpg', caption: 'Wheat Destoner Machine' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.jpg', caption: 'Wheat Conditioning System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.jpg', caption: 'Roller Flour Milling System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.jpg', caption: 'Plansifter System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg', caption: 'Automatic Flour Packaging Machine' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.webp', caption: 'Wheat Cleaning & Pre-Cleaning Machine' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.webp', caption: 'Wheat Destoner Machine' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.webp', caption: 'Wheat Conditioning System' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.webp', caption: 'Roller Flour Milling System' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.webp', caption: 'Plansifter System' },
+  { src: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp', caption: 'Automatic Flour Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function IndustrialFlourMillingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ifm-hero">
         <div className="ifm-hero__overlay" />
-        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/industrial_flour_milling_hero.png')` }} />
+        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/industrial_flour_milling_hero.webp')` }} />
         <div className="ifm-hero__content">
           <span className="ifm-hero__badge">
             <span className="ifm-hero__badge-dot" />
@@ -143,7 +143,7 @@ export default function IndustrialFlourMillingDetailPage() {
             Complete Industrial Flour Milling Plant
           </h1>
           <p className="ifm-hero__subtitle">
-            Our Industrial Flour Milling Plant is engineered for efficient wheat processing and premium flour production. The plant integrates cleaning, conditioning, roller milling, plansifting, grading and automatic packaging systems to deliver consistent flour quality with high extraction rates.
+            Start Your Own Complete Industrial Flour Milling Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="ifm-hero__actions">
             <a
@@ -169,7 +169,10 @@ export default function IndustrialFlourMillingDetailPage() {
           <div className="ifm-overview__grid">
             <div className="ifm-overview__text">
               <p>
-                Our Industrial Flour Milling Plant is engineered for efficient wheat processing and premium flour production. The plant integrates cleaning, conditioning, roller milling, plansifting, grading and automatic packaging systems to deliver consistent flour quality with high extraction rates.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Complete Industrial Flour Milling Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="ifm-overview__features">
                 {/* Feature 1 */}
@@ -228,7 +231,7 @@ export default function IndustrialFlourMillingDetailPage() {
               </div>
             </div>
             <div className="ifm-overview__image ifm-overview__image--photo">
-              <img src="/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.jpg" alt="Industrial Flour Milling Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp" alt="Industrial Flour Milling Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
@@ -301,25 +304,25 @@ export default function IndustrialFlourMillingDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Complete Industrial Flour Milling Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="ifm-section ifm-seo-content" id="seo-guide" data-animate>
+          <div className={`ifm-container ifm-animate ${isVisible['seo-guide'] ? 'ifm-animate--in' : ''}`}>
+            <div className="ifm-section-badge">ABOUT THE PLANT</div>
+            <h2 className="ifm-section-title">How Does The <span className="ifm-accent">Plant Work?</span></h2>
+            <p className="ifm-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="ifm-seo-content__body">
+              <div className="ifm-seo-content__block">
                 <h3>Why Start a Complete Industrial Flour Milling Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Complete Industrial Flour Milling Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Complete Industrial Flour Milling Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Complete Industrial Flour Milling Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="ifm-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Complete Industrial Flour Milling Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="ifm-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>

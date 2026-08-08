@@ -37,70 +37,72 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     "name": "High-Capacity Washing & Sorting Machine",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/washing_sorting.jpg",
+    "image": "/turnkey-brochures/images/fruit-juice-gallery/washing_sorting.webp",
     "desc": "High-capacity washing flume ensuring complete removal of dirt, pesticides, and microbial contaminants from raw fruits."
   },
   {
     "name": "Advanced Pulping & Juice Extraction",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/pulping_extraction.jpg",
+    "image": "/turnkey-brochures/images/fruit-juice-gallery/pulping_extraction.webp",
     "desc": "Robust stainless steel extraction unit engineered for maximum juice yield while efficiently separating seeds and skins."
   },
   {
     "name": "Automated Filtration & Clarification System",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/filtration_clarification.jpg",
+    "image": "/turnkey-brochures/images/fruit-juice-gallery/filtration_clarification.webp",
     "desc": "Advanced micro-filtration machinery designed to produce clear, pulp-free juice with perfect consistency."
   },
   {
     "name": "Continuous Pasteurization & Mixing Tank",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/pasteurization_mixing.jpg",
+    "image": "/turnkey-brochures/images/fruit-juice-gallery/pasteurization_mixing.webp",
     "desc": "High-efficiency thermal processing equipment ensuring the elimination of pathogens while preserving the fruit's natural vitamins and aroma."
   },
   {
     "name": "High-Speed Rotary Filling Line",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/automatic_filling.jpg",
+    "image": "/turnkey-brochures/images/fruit-juice-gallery/automatic_filling.webp",
     "desc": "Highly automated bottling and capping system that guarantees a sterile packaging environment for extended shelf life."
   },
   {
     "name": "Automated Labeling & Packaging",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/labeling_packaging.jpg",
+    "image": "/turnkey-brochures/images/fruit-juice-gallery/labeling_packaging.webp",
     "desc": "End-of-line packaging automation including high-speed labelers and case packers to prepare the juice for distribution."
   }
-];
+]
+
 
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    "question": "What is the production capacity of the Fruit Juice Processing Plant?",
-    "answer": "Our turnkey juice processing plants are fully customizable, with industrial capacities ranging from 1,000 liters per hour (LPH) up to 20,000 LPH based on client requirements."
+    question: "Do you manufacture all the machines for the Fully Automated Fruit Juice Processing Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Fully Automated Fruit Juice Processing Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    "question": "Does the plant support aseptic packaging for long shelf life?",
-    "answer": "Yes, our fruit juice machinery integrates seamlessly with aseptic packaging lines, including PET bottles, Tetra Pak, and aseptic pouches, ensuring zero contamination."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    "question": "Can the same plant process multiple types of fruits?",
-    "answer": "Absolutely. The production line is designed with modular extraction systems capable of processing apples, mangoes, oranges, berries, and mixed fruits with minimal changeover time."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    "question": "How is the natural flavor and color of the juice maintained?",
-    "answer": "We utilize advanced deaeration technology to prevent oxidation, combined with rapid tubular pasteurization that perfectly preserves the natural flavor, color, and nutritional profile."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    "question": "Do you provide complete installation and commissioning services?",
-    "answer": "Yes, Salvin Industries provides end-to-end turnkey services, from 3D factory layout and equipment manufacturing to on-site installation, commissioning, and operator training."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ];
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/washing_sorting.jpg", caption: "High-Capacity Fruit Washing & Sorting Machine" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/pulping_extraction.jpg", caption: "Advanced Industrial Pulping & Juice Extraction" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/filtration_clarification.jpg", caption: "Automated Filtration System & Clarification Tanks" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/pasteurization_mixing.jpg", caption: "Continuous Pasteurization & Mixing Tank" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/automatic_filling.jpg", caption: "High-Speed Rotary Filling & Capping Line" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/labeling_packaging.jpg", caption: "Automated Labeling & End-of-Line Packaging" }
+  { src: "/turnkey-brochures/images/fruit-juice-gallery/washing_sorting.webp", caption: "High-Capacity Fruit Washing & Sorting Machine" },
+  { src: "/turnkey-brochures/images/fruit-juice-gallery/pulping_extraction.webp", caption: "Advanced Industrial Pulping & Juice Extraction" },
+  { src: "/turnkey-brochures/images/fruit-juice-gallery/filtration_clarification.webp", caption: "Automated Filtration System & Clarification Tanks" },
+  { src: "/turnkey-brochures/images/fruit-juice-gallery/pasteurization_mixing.webp", caption: "Continuous Pasteurization & Mixing Tank" },
+  { src: "/turnkey-brochures/images/fruit-juice-gallery/automatic_filling.webp", caption: "High-Speed Rotary Filling & Capping Line" },
+  { src: "/turnkey-brochures/images/fruit-juice-gallery/labeling_packaging.webp", caption: "Automated Labeling & End-of-Line Packaging" }
 ];
 
 export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
@@ -145,11 +147,13 @@ export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
     <div className="rcp-page">
                   <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_fruit_juice.png')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_fruit_juice.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Fruit Juice Processing Plant</h1>
-          <p className="rcp-hero__subtitle">Advanced Processing Technology for High-Yield & Premium Quality Fruit Juice</p>
+          <p className="rcp-hero__subtitle">
+            Start Your Own Fully Automated Fruit Juice Processing Plant Business with Salvin Industries' Automatic Turnkey Plant
+          </p>
           <div className="rcp-hero__actions"><a href="#enquiry" className="rcp-btn rcp-btn--primary rcp-btn--lg">Enquire Now</a></div>
         </div>
       </section>
@@ -160,8 +164,12 @@ export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
           <h2 className="rcp-section-title">Complete Processing <span className="rcp-accent">Solution</span></h2>
           <div className="rcp-overview__grid">
             <div className="rcp-overview__text">
-              <p><strong>Salvin Industries' Fully Automated Fruit Juice Processing Plant</strong> is a state-of-the-art industrial turnkey solution designed for high-capacity fruit extraction, clarification, and pasteurization. Engineered to meet global food safety standards, our robust production line seamlessly processes apples, mangoes, citrus, and mixed fruits into premium-grade, natural juice.</p>
-              <p>From automated fruit washing and advanced enzymatic treatment to continuous thermal pasteurization and aseptic packaging, our machinery ensures absolute zero contamination. Experience maximum flavor retention, vibrant natural colors, and extended shelf life. Partner with Salvin Industries for a highly efficient, PLC-controlled processing ecosystem that minimizes waste and maximizes your manufacturing ROI.</p>
+              <p>
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Fully Automated Fruit Juice Processing Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
+              </p>
+              <p>
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
+              </p>
               <div className="rcp-overview__features">
                 <div className="rcp-overview__feature">
                   <div className="rcp-overview__feature-icon">
@@ -190,29 +198,35 @@ export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/hero_fruit_juice.png" alt="Fully Automated Fruit Juice Processing Plant Overview" loading="lazy" />
+              <img src="/turnkey-brochures/images/hero_fruit_juice.webp" alt="Fully Automated Fruit Juice Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>
       </section>
 
             <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-        <div className={`rcp-container rcp-animate ${isVisible["seo-guide"] ? "rcp-animate--in" : ""}`}>
-           <div className="rcp-section-badge">Comprehensive Guide</div>
-           <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Fruit Juice Manufacturing</span></h2>
-           <p className="rcp-section-subtitle">Understanding the industrial process, benefits, and market potential.</p>
-           <div className="rcp-seo-content__body">
-               <h3>Why Start a Fruit Juice Business?</h3>
-               <p>The demand for packaged, ready-to-drink fruit juices is growing rapidly worldwide. With increasing health awareness, consumers are looking for natural, hygienic, and preservative-free fruit juices. Setting up a fully automated processing plant allows you to tap into this massive market with high-profit margins.</p>
-               
-               <h3>How Does the Processing Plant Work?</h3>
-               <p>The process is completely automated to maintain hygiene. It starts with thoroughly washing the raw fruits to remove dirt and pesticides. The fruits are then crushed, and the pulp is extracted. The extracted juice is filtered and passed through a pasteurization machine, which rapidly heats and cools the juice to kill bacteria without destroying the natural vitamins. Finally, the juice is packed in sterile bottles or pouches.</p>
-               
-               <h3>The Salvin Industries Advantage</h3>
-               <p>Our turnkey solutions are built using high-grade stainless steel to ensure 100% food safety. The entire production line is controlled by an advanced PLC system, meaning you need very few workers to operate the massive plant. We ensure maximum juice yield from every fruit, reducing waste and increasing your daily profits.</p>
-           </div>
-        </div>
-      </section>
+          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
+            <div className="rcp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="rcp-section-title">How Does The <span className="rcp-accent">Plant Work?</span></h2>
+            <p className="rcp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="rcp-seo-content__body">
+              <div className="rcp-seo-content__block">
+                <h3>Why Start a Fully Automated Fruit Juice Processing Plant Business?</h3>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Fully Automated Fruit Juice Processing Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
+              </div>
+              
+              <div className="rcp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
       <section className="rcp-section rcp-process-new" id="process-flow" data-animate>
         <div className={`rcp-container rcp-animate ${isVisible["process-flow"] ? "rcp-animate--in" : ""}`}>

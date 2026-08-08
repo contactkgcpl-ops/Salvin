@@ -19,70 +19,70 @@ const PROCESS_STEPS = [
 
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
+
   {
     name: 'Flour Sifter Conveyor',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.jpg',
-    desc: 'Automated sifting and conveying system that removes impurities from raw flour before mixing.'
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.webp',
+    desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Multihead Weigher',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.jpg',
-    desc: 'High-precision multihead weighing system for accurate portioning of dry ingredients into the mixer.'
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.webp',
+    desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Vacuum Extruder Press',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.jpg',
-    desc: 'Industrial vacuum extruder that mixes and kneads the dough under vacuum to ensure bubble-free, high-density pasta shapes.'
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.webp',
+    desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Pasta Dryer',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.jpg',
-    desc: 'Multi-stage continuous pasta drying chamber that controls temperature and humidity for perfect moisture reduction.'
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.webp',
+    desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Cooling Conveyor',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine5.jpg',
-    desc: 'Vibratory and belt cooling conveyors designed to rapidly reduce product temperature after drying and prevent condensation before packaging.'
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine5.webp',
+    desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Packing Machine',
-    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.jpg',
-    desc: 'Fully automatic vertical form-fill-seal packaging system equipped with weight checkers for reliable and hygienic packing.'
+    image: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.webp',
+    desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
-
 /* ─── FAQs ─── */
 const FAQS = [
   {
-    question: "What products can be produced?",
-    answer: "Our plant is capable of producing a wide range of products including Macaroni, Penne, Fusilli, Elbow Pasta, Noodles, Instant Noodles, and Specialty Pasta Products."
+    question: "Do you manufacture all the machines for the Pasta & Noodles Production Plant?",
+    answer: "Yes! At Salvin Industries, we manufacture the complete range of machines required for a Pasta & Noodles Production Plant. From the first processing machine to the final packing machine, we build everything in our factory."
   },
   {
-    question: "What production capacities are available?",
-    answer: "We offer Small Scale, Medium Scale, Large Scale, and Fully Automatic Industrial Line capacities customized to your needs."
+    question: "How much capacity can this plant handle in one day?",
+    answer: "We build turnkey plants according to your needs. You can choose a small-scale plant or a large industrial plant depending on your budget and market demand."
   },
   {
-    question: "Is the line fully automatic?",
-    answer: "Yes, our lines feature advanced PLC Automation for fully automatic and highly efficient production with minimal manual intervention."
+    question: "Is it difficult to run this automatic plant?",
+    answer: "Not at all. We design our machines with easy-to-use automatic control panels (PLC). We will also give full training to your workers on how to run the plant safely and easily."
   },
   {
-    question: "What materials are used in construction?",
-    answer: "All contact parts and structural components are built using SS304 Food Grade Construction to guarantee hygienic production and low maintenance."
+    question: "Will the final product taste natural and fresh?",
+    answer: "Yes, definitely. Our machines use advanced technology to ensure your product keeps its original color, natural taste, and healthy nutrients."
   },
   {
-    question: "Do you provide installation and commissioning?",
-    answer: "Yes, we provide end-to-end turnkey solutions including manufacturing, global installation, process commissioning, and operator training."
+    question: "Will Salvin Industries install the machines at my factory?",
+    answer: "Yes, we provide a complete turnkey solution. Our expert engineers will come to your factory, install all the machines, start the production, and hand over a running plant to you."
   }
 ]
 
 /* ─── Gallery Images (Pasta & Noodles Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/hero.jpg', caption: 'Pasta & Noodles Production Plant — Complete Overview' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.jpg', caption: 'Flour Sifter Conveyor' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.jpg', caption: 'Multihead Weigher' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.jpg', caption: 'Vacuum Extruder Press' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.jpg', caption: 'Pasta Dryer' },
-  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.jpg', caption: 'Automatic Packing Machine' }
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/hero.webp', caption: 'Pasta & Noodles Production Plant — Complete Overview' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine1.webp', caption: 'Flour Sifter Conveyor' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine2.webp', caption: 'Multihead Weigher' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine3.webp', caption: 'Vacuum Extruder Press' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine4.webp', caption: 'Pasta Dryer' },
+  { src: '/turnkey-brochures/images/pasta-noodles-gallery/machine6.webp', caption: 'Automatic Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function PastaNoodlesDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pnp-hero">
         <div className="pnp-hero__overlay" />
-        <div className="pnp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pasta_noodles_hero.png')` }} />
+        <div className="pnp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pasta_noodles_hero.webp')` }} />
         <div className="pnp-hero__content">
           <span className="pnp-hero__badge">
             <span className="pnp-hero__badge-dot" />
@@ -147,7 +147,7 @@ export default function PastaNoodlesDetailPage() {
             Pasta & Noodles Production Plant
           </h1>
           <p className="pnp-hero__subtitle">
-            Complete Turnkey Solution For Mixing, Extrusion, Drying, Cooling And Packaging Of Pasta & Noodles
+            Start Your Own Pasta & Noodles Production Plant Business with Salvin Industries' Automatic Turnkey Plant
           </p>
           <div className="pnp-hero__actions">
             <a
@@ -174,14 +174,10 @@ export default function PastaNoodlesDetailPage() {
           <div className="pnp-overview__grid">
             <div className="pnp-overview__text">
               <p>
-                Salvin Industries' Pasta & Noodles Production Plant is a turnkey industrial solution designed for processors who demand
-                consistent quality, high throughput, and full regulatory compliance. Our integrated processing line handles every stage
-                — from flour mixing and extrusion through drying and final packaged product — in a single, automated, dust-free facility.
+                If you want to start a business in the processing industry, <strong>Salvin Industries</strong> is here to help you. We design, manufacture, and set up the complete <strong>Pasta & Noodles Production Plant</strong> for you. Instead of buying different machines from different places, we provide a complete "Turnkey Solution". This means we give you the entire factory setup from start to finish.
               </p>
               <p>
-                Each plant is custom-engineered to match your specific capacity requirements, product grades, and market standards.
-                Our equipment is perfectly suited for producing Macaroni, Penne Pasta, Fusilli, Elbow Pasta, Noodles, Instant Noodles,
-                and Specialty Pasta Products in Small Scale, Medium Scale, Large Scale, or as a Fully Automatic Industrial Line.
+                In this plant, you just need to put your raw materials at the starting line. Our heavy-duty machines will automatically process them step-by-step. Finally, our packing machines will pack your product safely so it lasts for a long time. All our machines are made from high-quality stainless steel (SS304/316) so your food product remains 100% safe, hygienic, and ready to sell in the market.
               </p>
               <div className="pnp-overview__features">
                 {/* Feature 1 */}
@@ -238,7 +234,7 @@ export default function PastaNoodlesDetailPage() {
               </div>
             </div>
             <div className="pnp-overview__image pnp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasta-noodles-gallery/machine3.jpg" alt="Pasta & Noodles Production Plant by Salvin Industries" loading="lazy" />
+              <img src="/turnkey-brochures/images/pasta-noodles-gallery/machine3.webp" alt="Pasta & Noodles Production Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>
@@ -322,25 +318,25 @@ export default function PastaNoodlesDetailPage() {
       
       
         {/* ═══ COMPREHENSIVE GUIDE (SEO) ═══ */}
-        <section className="rcp-section rcp-seo-content" id="seo-guide" data-animate>
-          <div className={`rcp-container rcp-animate ${isVisible['seo-guide'] ? 'rcp-animate--in' : ''}`}>
-            <div className="rcp-section-badge">COMPREHENSIVE GUIDE</div>
-            <h2 className="rcp-section-title">A Simple Guide to <span className="rcp-accent">Pasta & Noodles Production Plant Processing</span></h2>
-            <p className="rcp-section-subtitle">Understanding the processing workflow, accuracy, and market impact.</p>
-            <div className="rcp-seo-content__body">
-              <div className="rcp-seo-content__block">
+        <section className="pnp-section pnp-seo-content" id="seo-guide" data-animate>
+          <div className={`pnp-container pnp-animate ${isVisible['seo-guide'] ? 'pnp-animate--in' : ''}`}>
+            <div className="pnp-section-badge">ABOUT THE PLANT</div>
+            <h2 className="pnp-section-title">How Does The <span className="pnp-accent">Plant Work?</span></h2>
+            <p className="pnp-section-subtitle">A simple explanation of the machinery and process by Salvin Industries.</p>
+            <div className="pnp-seo-content__body">
+              <div className="pnp-seo-content__block">
                 <h3>Why Start a Pasta & Noodles Production Plant Business?</h3>
-                <p>The demand for high-quality, hygienically processed Pasta & Noodles Production Plant is growing rapidly in both domestic and international markets. Setting up an automated, high-capacity industrial plant ensures a highly profitable, recurring FMCG business with excellent ROI. Modern consumers prioritize branded, untouched-by-hand products, making industrial automation the key to market success.</p>
+                <p>The demand for high-quality, hygienically processed products is growing rapidly in both domestic and international markets. By setting up an automated Pasta & Noodles Production Plant, you can produce large quantities safely. This is a highly profitable business with huge demand, as modern consumers prioritize branded, untouched-by-hand products.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>How Does the Pasta & Noodles Production Plant Processing Work?</h3>
-                <p>The manufacturing process is a fully synchronized industrial workflow. It begins with the automated intake and thorough cleaning of raw materials to remove any impurities. The product is then conveyed into the primary processing unit (such as grinding, blending, roasting, or extraction, depending on the product). Advanced thermal controls ensure that essential flavors, colors, and nutrients are perfectly preserved. Finally, the processed product is fed directly into high-speed automatic packaging lines to be sealed hygienically into pouches, jars, or bottles.</p>
+              <div className="pnp-seo-content__block">
+                <h3>How Do Salvin Industries' Machines Work?</h3>
+                <p>The process is very simple and fully automatic. First, raw materials are fed into the initial processing machines where they are cleaned and prepared. Then, they go into the main processing units that act precisely to refine the product. Finally, the finished product is automatically packed into pouches, boxes, or cans without any human touch.</p>
               </div>
               
-              <div className="rcp-seo-content__block">
-                <h3>The Salvin Industries Advantage</h3>
-                <p>Salvin Industries provides end-to-end turnkey solutions for Pasta & Noodles Production Plant processing. Our machinery is constructed with premium SS304/SS316 food-grade stainless steel to meet global hygiene standards. Integrated with advanced PLC/SCADA control panels, our plants offer one-touch automation, reducing labor costs and eliminating human error. We handle everything—from factory layout design to machine manufacturing, installation, and global commissioning.</p>
+              <div className="pnp-seo-content__block">
+                <h3>Why Choose Salvin Industries for Your Plant?</h3>
+                <p>Salvin Industries is a leading manufacturer of food processing machines in India. When you choose us, you don't have to worry about anything. We will build the best quality stainless steel machines for you, deliver them to your factory, and our engineers will install everything. We make sure your plant runs perfectly and your final product is the best in the market.</p>
               </div>
             </div>
           </div>
