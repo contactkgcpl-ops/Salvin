@@ -33,7 +33,7 @@ function HeroSection() {
 
       {/* Image Slider */}
       <div
-        className={`flex w-full h-[400px] md:h-[500px] lg:h-[650px] ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
+        className={`flex w-full ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
         style={{ transform: `translateX(-${currentSlide * 100}%)` }}
       >
         {[...IMAGES, IMAGES[0]].map((imgSrc, index) => (
@@ -41,7 +41,7 @@ function HeroSection() {
             key={index}
             src={imgSrc}
             alt={`Salvin Turnkey Plant ${index + 1}`}
-            className="w-full shrink-0 h-[400px] md:h-[500px] lg:h-[650px] object-cover object-center block"
+            className="w-full shrink-0 h-auto object-contain block bg-[#f4f4f4]"
           />
         ))}
       </div>

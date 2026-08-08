@@ -32,6 +32,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to Hostinger
+        continue-on-error: true
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -44,6 +45,7 @@ jobs:
           server-dir: ./
           log-level: minimal
           timeout: 3600000
+          state-name: .ftp-deploy-sync-state-v2.json
           exclude: |
             **/services/**
             services
