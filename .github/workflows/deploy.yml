@@ -42,10 +42,10 @@ jobs:
           security: loose
           local-dir: ./dist/
           server-dir: ./
+          state-name: .ftp-deploy-sync-state.json
           log-level: minimal
           timeout: 3600000
           exclude: |
             **/services/**
             services
-
-
+            **/*.map
