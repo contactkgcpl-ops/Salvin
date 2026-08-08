@@ -43,7 +43,6 @@ jobs:
           security: loose
           local-dir: ./dist/
           server-dir: ./
-          state-name: .ftp-deploy-sync-state.json
           delete-orphaned-files: false
           dangerous-clean-slate: false
           log-level: minimal
