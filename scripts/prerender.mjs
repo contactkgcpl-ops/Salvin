@@ -17,6 +17,8 @@ const STATIC_PATHS = [
   "/consultant",
   "/turnkey",
   "/turnkey-project",
+  "/blogs",
+  "/blogs/how-to-start-food-processing-business-in-india",
   ...brochureProjects.map((p) => p.detailsPath),
   "/machineries",
 ];
@@ -88,6 +90,14 @@ const META_MAP = {
   "/turnkey-project": {
     title: "Our Successful Turnkey Projects Portfolio | Salvin Industries",
     desc: "Browse our turnkey project portfolio including spices grinding lines, honey filtration units, edible oil mills, and tomato paste plants.",
+  },
+  "/blogs": {
+    title: "Food Processing Industry Insights & Guides | Salvin Industries",
+    desc: "Read practical guides, regulatory compliance steps, market data, and capital requirements for food processing manufacturing businesses in India.",
+  },
+  "/blogs/how-to-start-food-processing-business-in-india": {
+    title: "How to Start a Food Processing Business in India: A Complete Guide | Salvin",
+    desc: "Comprehensive step-by-step guide to starting a food processing business in India covering market size, licensing, machinery, investment, and turnkey plant setup.",
   },
   "/machineries": {
     title: "Industrial Processing & Packaging Machinery Catalog | Salvin Industries",

@@ -78,15 +78,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         <NavLink to="/machineries" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
 
 
-        <a
-          href="https://salvinindustries.blogspot.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "#000" }}
-          onClick={() => {
-            setMenuOpen(false);
-            window.open("https://salvinindustries.blogspot.com/", "_blank");
-          }}>BLOGS</a>
+        <NavLink to="/blogs" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>BLOGS</NavLink>
 
         <NavLink to="/contact" style={{ color: "#000" }} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
         <LanguageSelector />

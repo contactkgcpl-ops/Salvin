@@ -24,6 +24,8 @@ const STATIC_PATHS = [
   "/consultant",
   "/turnkey",
   "/turnkey-project",
+  "/blogs",
+  "/blogs/how-to-start-food-processing-business-in-india",
   ...brochureProjects.map((p) => p.detailsPath),
   "/machineries",
 ];
