@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import foodProcessingPlant from "../assets/food-processing-plant.webp";
+const foodProcessingPlant = "/assets/core/icons/food-processing-plant.webp";
 
 function TurnkeyPage() {
   return (

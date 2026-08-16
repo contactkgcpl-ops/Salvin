@@ -20,32 +20,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Chilling System",
     "desc": "For receiving, filtering, and chilling raw milk.",
-    "image": "/turnkey-brochures/images/cream-processing-gallery/1.webp"
+    "image": "/assets/plants/dairy/cream-processing-gallery/1.webp"
   },
   {
     "name": "Centrifugal Cream Separator",
     "desc": "Disc-type separator to efficiently extract cream from milk.",
-    "image": "/turnkey-brochures/images/cream-processing-gallery/2.webp"
+    "image": "/assets/plants/dairy/cream-processing-gallery/2.webp"
   },
   {
     "name": "Cream Pasteurization Unit",
     "desc": "Skid-mounted HTST pasteurization system to ensure food safety.",
-    "image": "/turnkey-brochures/images/cream-processing-gallery/3.webp"
+    "image": "/assets/plants/dairy/cream-processing-gallery/3.webp"
   },
   {
     "name": "Cream Homogenizer & Cooler",
     "desc": "High-pressure homogenizer to maintain a uniform texture.",
-    "image": "/turnkey-brochures/images/cream-processing-gallery/4.webp"
+    "image": "/assets/plants/dairy/cream-processing-gallery/4.webp"
   },
   {
     "name": "Cream Storage & Aging Tank",
     "desc": "Temperature-controlled tanks for cream maturation.",
-    "image": "/turnkey-brochures/images/cream-processing-gallery/5.webp"
+    "image": "/assets/plants/dairy/cream-processing-gallery/5.webp"
   },
   {
     "name": "Automatic Cream Filling Line",
     "desc": "High-speed filling and sealing line for containers.",
-    "image": "/turnkey-brochures/images/cream-processing-gallery/6.webp"
+    "image": "/assets/plants/dairy/cream-processing-gallery/6.webp"
   }
 ]
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
@@ -75,27 +75,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/cream-processing-gallery/1.webp",
+    "src": "/assets/plants/dairy/cream-processing-gallery/1.webp",
     "caption": "Raw Milk Reception & Chilling System"
   },
   {
-    "src": "/turnkey-brochures/images/cream-processing-gallery/2.webp",
+    "src": "/assets/plants/dairy/cream-processing-gallery/2.webp",
     "caption": "Centrifugal Cream Separator (Disc Type)"
   },
   {
-    "src": "/turnkey-brochures/images/cream-processing-gallery/3.webp",
+    "src": "/assets/plants/dairy/cream-processing-gallery/3.webp",
     "caption": "Cream Pasteurization Unit (HTST System)"
   },
   {
-    "src": "/turnkey-brochures/images/cream-processing-gallery/4.webp",
+    "src": "/assets/plants/dairy/cream-processing-gallery/4.webp",
     "caption": "Cream Homogenizer & Cooling Tank"
   },
   {
-    "src": "/turnkey-brochures/images/cream-processing-gallery/5.webp",
+    "src": "/assets/plants/dairy/cream-processing-gallery/5.webp",
     "caption": "Cream Storage & Aging Tank"
   },
   {
-    "src": "/turnkey-brochures/images/cream-processing-gallery/6.webp",
+    "src": "/assets/plants/dairy/cream-processing-gallery/6.webp",
     "caption": "Automatic Cream Filling & Sealing Line"
   }
 ]
@@ -144,7 +144,7 @@ export default function CreamProcessingPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_cream.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/beverages/beverage-heroes/hero_cream.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

@@ -1,5 +1,5 @@
 // src/components/AboutSection.jsx
-import indus from '../../../assets/turnkey_projects.webp'
+const indus = "/assets/core/icons/turnkey_projects.webp";
 
 function AboutSection() {
   return (

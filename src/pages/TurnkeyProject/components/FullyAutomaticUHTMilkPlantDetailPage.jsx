@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception Unit",
     "desc": "Initial reception, filtration, and chilling.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/1_reception.webp"
+    "image": "/assets/plants/dairy/uht-milk-gallery/1_reception.webp"
   },
   {
     "name": "Clarifier & Standardization",
     "desc": "Precise inline fat adjustment.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.webp"
+    "image": "/assets/plants/dairy/uht-milk-gallery/2_standardization.webp"
   },
   {
     "name": "Homogenizer & Sterilizer",
     "desc": "Advanced UHT heating up to 135°C for 2-4 seconds.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.webp"
+    "image": "/assets/plants/dairy/uht-milk-gallery/3_uht_sterilizer.webp"
   },
   {
     "name": "Aseptic Holding Tanks",
     "desc": "Sterile buffering before filling.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.webp"
+    "image": "/assets/plants/dairy/uht-milk-gallery/4_aseptic_holding.webp"
   },
   {
     "name": "Aseptic Pouch Filling",
     "desc": "Sterile pouch packaging environment.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.webp"
+    "image": "/assets/plants/dairy/uht-milk-gallery/5_pouch_packing.webp"
   },
   {
     "name": "Carton Packing Machine",
     "desc": "Automated end-of-line carton packaging.",
-    "image": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.webp"
+    "image": "/assets/plants/dairy/uht-milk-gallery/6_carton_packing.webp"
   }
 ]
 
@@ -98,27 +98,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/1_reception.webp",
+    "src": "/assets/plants/dairy/uht-milk-gallery/1_reception.webp",
     "caption": "Raw Milk Reception Unit"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/2_standardization.webp",
+    "src": "/assets/plants/dairy/uht-milk-gallery/2_standardization.webp",
     "caption": "Clarifier & Standardization"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/3_uht_sterilizer.webp",
+    "src": "/assets/plants/dairy/uht-milk-gallery/3_uht_sterilizer.webp",
     "caption": "Homogenizer & Sterilizer"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/4_aseptic_holding.webp",
+    "src": "/assets/plants/dairy/uht-milk-gallery/4_aseptic_holding.webp",
     "caption": "Aseptic Holding Tanks"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/5_pouch_packing.webp",
+    "src": "/assets/plants/dairy/uht-milk-gallery/5_pouch_packing.webp",
     "caption": "Aseptic Pouch Filling"
   },
   {
-    "src": "/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.webp",
+    "src": "/assets/plants/dairy/uht-milk-gallery/6_carton_packing.webp",
     "caption": "Carton Packing Machine"
   }
 ];
@@ -168,7 +168,7 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/uht_milk_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/uht_milk_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -261,7 +261,7 @@ export default function FullyAutomaticUHTMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/uht-milk-gallery/6_carton_packing.webp" alt="Fully Automatic UHT Milk Plant Overview" loading="lazy" />
+              <img src="/assets/plants/dairy/uht-milk-gallery/6_carton_packing.webp" alt="Fully Automatic UHT Milk Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

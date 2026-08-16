@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Paddy Pre-Cleaner',
-    image: '/turnkey-brochures/images/rice-processing/media__1785502089150.webp',
+    image: '/assets/plants/food/rice-processing/media__1785502089150.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Destoner & Paddy Grader',
-    image: '/turnkey-brochures/images/rice-processing/media__1785502097389.webp',
+    image: '/assets/plants/food/rice-processing/media__1785502097389.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Rubber Roll Husker',
-    image: '/turnkey-brochures/images/rice-processing/media__1785502106999.webp',
+    image: '/assets/plants/food/rice-processing/media__1785502106999.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Paddy Separator',
-    image: '/turnkey-brochures/images/rice-processing/media__1785502116773.webp',
+    image: '/assets/plants/food/rice-processing/media__1785502116773.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Rice Length Grader & Color Sorter',
-    image: '/turnkey-brochures/images/rice-processing/media__1785502126732.webp',
+    image: '/assets/plants/food/rice-processing/media__1785502126732.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Bagging Machine',
-    image: '/turnkey-brochures/images/rice-processing/media__1785502136873.webp',
+    image: '/assets/plants/food/rice-processing/media__1785502136873.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Rice Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/rice-processing/media__1785502089150.webp', caption: 'Paddy Pre-Cleaner' },
-  { src: '/turnkey-brochures/images/rice-processing/media__1785502097389.webp', caption: 'Destoner & Paddy Grader' },
-  { src: '/turnkey-brochures/images/rice-processing/media__1785502106999.webp', caption: 'Rubber Roll Husker' },
-  { src: '/turnkey-brochures/images/rice-processing/media__1785502116773.webp', caption: 'Paddy Separator' },
-  { src: '/turnkey-brochures/images/rice-processing/media__1785502126732.webp', caption: 'Rice Length Grader & Color Sorter' },
-  { src: '/turnkey-brochures/images/rice-processing/media__1785502136873.webp', caption: 'Automatic Bagging Machine' }
+  { src: '/assets/plants/food/rice-processing/media__1785502089150.webp', caption: 'Paddy Pre-Cleaner' },
+  { src: '/assets/plants/food/rice-processing/media__1785502097389.webp', caption: 'Destoner & Paddy Grader' },
+  { src: '/assets/plants/food/rice-processing/media__1785502106999.webp', caption: 'Rubber Roll Husker' },
+  { src: '/assets/plants/food/rice-processing/media__1785502116773.webp', caption: 'Paddy Separator' },
+  { src: '/assets/plants/food/rice-processing/media__1785502126732.webp', caption: 'Rice Length Grader & Color Sorter' },
+  { src: '/assets/plants/food/rice-processing/media__1785502136873.webp', caption: 'Automatic Bagging Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedRiceProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="farpp-hero">
         <div className="farpp-hero__overlay" />
-        <div className="farpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_rice.webp')` }} />
+        <div className="farpp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_rice.webp')` }} />
         <div className="farpp-hero__content">
           <span className="farpp-hero__badge">
             <span className="farpp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function FullyAutomatedRiceProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="farpp-overview__image farpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/rice-processing/media__1785502116773.webp" alt="Fully Automated Rice Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/rice-processing/media__1785502116773.webp" alt="Fully Automated Rice Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

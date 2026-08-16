@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Filtration Unit",
     "desc": "For receiving, chilling, and filtering raw milk.",
-    "image": "/turnkey-brochures/images/paneer-gallery/1.webp"
+    "image": "/assets/plants/dairy/paneer-gallery/1.webp"
   },
   {
     "name": "Milk Standardization & Pasteurization",
     "desc": "Ensures precise fat content and thermal processing.",
-    "image": "/turnkey-brochures/images/paneer-gallery/2.webp"
+    "image": "/assets/plants/dairy/paneer-gallery/2.webp"
   },
   {
     "name": "Paneer Coagulation Vat",
     "desc": "For precise heating and controlled curdling.",
-    "image": "/turnkey-brochures/images/paneer-gallery/3.webp"
+    "image": "/assets/plants/dairy/paneer-gallery/3.webp"
   },
   {
     "name": "Paneer Pressing & Dewatering",
     "desc": "Pneumatic pressing to expel whey uniformly.",
-    "image": "/turnkey-brochures/images/paneer-gallery/4.webp"
+    "image": "/assets/plants/dairy/paneer-gallery/4.webp"
   },
   {
     "name": "Paneer Chilling & Cooling Tank",
     "desc": "Rapidly cools blocks to set the final texture.",
-    "image": "/turnkey-brochures/images/paneer-gallery/5.webp"
+    "image": "/assets/plants/dairy/paneer-gallery/5.webp"
   },
   {
     "name": "Cutting & Vacuum Packing",
     "desc": "Automatic slicing and vacuum sealing for long shelf life.",
-    "image": "/turnkey-brochures/images/paneer-gallery/6.webp"
+    "image": "/assets/plants/dairy/paneer-gallery/6.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -96,27 +96,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/paneer-gallery/1.webp",
+    "src": "/assets/plants/dairy/paneer-gallery/1.webp",
     "caption": "Raw Milk Reception & Filtration"
   },
   {
-    "src": "/turnkey-brochures/images/paneer-gallery/2.webp",
+    "src": "/assets/plants/dairy/paneer-gallery/2.webp",
     "caption": "Milk Standardization & Pasteurization"
   },
   {
-    "src": "/turnkey-brochures/images/paneer-gallery/3.webp",
+    "src": "/assets/plants/dairy/paneer-gallery/3.webp",
     "caption": "Paneer Coagulation Vat"
   },
   {
-    "src": "/turnkey-brochures/images/paneer-gallery/4.webp",
+    "src": "/assets/plants/dairy/paneer-gallery/4.webp",
     "caption": "Paneer Pressing & Dewatering"
   },
   {
-    "src": "/turnkey-brochures/images/paneer-gallery/5.webp",
+    "src": "/assets/plants/dairy/paneer-gallery/5.webp",
     "caption": "Paneer Chilling & Cooling Tank"
   },
   {
-    "src": "/turnkey-brochures/images/paneer-gallery/6.webp",
+    "src": "/assets/plants/dairy/paneer-gallery/6.webp",
     "caption": "Cutting & Vacuum Packing"
   }
 ]
@@ -165,7 +165,7 @@ export default function PaneerProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/paneer.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/dairy-heroes/paneer.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

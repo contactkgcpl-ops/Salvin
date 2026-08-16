@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Filtration",
     "desc": "Initial processing and purification of raw milk.",
-    "image": "/turnkey-brochures/images/curd-gallery/1_reception.webp"
+    "image": "/assets/plants/dairy/curd-gallery/1_reception.webp"
   },
   {
     "name": "Pasteurization & Homogenization",
     "desc": "Ensures pathogen-free milk and uniform texture.",
-    "image": "/turnkey-brochures/images/curd-gallery/2_pasteurization.webp"
+    "image": "/assets/plants/dairy/curd-gallery/2_pasteurization.webp"
   },
   {
     "name": "Cooling & Starter Culture",
     "desc": "Temperature adjustment and precise culture dosing.",
-    "image": "/turnkey-brochures/images/curd-gallery/3_cooling.webp"
+    "image": "/assets/plants/dairy/curd-gallery/3_cooling.webp"
   },
   {
     "name": "Incubation & Fermentation",
     "desc": "Temperature-controlled chamber for perfect setting.",
-    "image": "/turnkey-brochures/images/curd-gallery/4_incubation.webp"
+    "image": "/assets/plants/dairy/curd-gallery/4_incubation.webp"
   },
   {
     "name": "Automatic Cup Filling",
     "desc": "High-speed filling, foil sealing, and lid capping.",
-    "image": "/turnkey-brochures/images/curd-gallery/5_filling.webp"
+    "image": "/assets/plants/dairy/curd-gallery/5_filling.webp"
   },
   {
     "name": "Cold Storage & Dispatch",
     "desc": "Carton packing and final refrigerated storage.",
-    "image": "/turnkey-brochures/images/curd-gallery/6_storage.webp"
+    "image": "/assets/plants/dairy/curd-gallery/6_storage.webp"
   }
 ]
 
@@ -98,27 +98,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/curd-gallery/1_reception.webp",
+    "src": "/assets/plants/dairy/curd-gallery/1_reception.webp",
     "caption": "Raw Milk Reception & Filtration"
   },
   {
-    "src": "/turnkey-brochures/images/curd-gallery/2_pasteurization.webp",
+    "src": "/assets/plants/dairy/curd-gallery/2_pasteurization.webp",
     "caption": "Pasteurization & Homogenization"
   },
   {
-    "src": "/turnkey-brochures/images/curd-gallery/3_cooling.webp",
+    "src": "/assets/plants/dairy/curd-gallery/3_cooling.webp",
     "caption": "Cooling & Starter Culture"
   },
   {
-    "src": "/turnkey-brochures/images/curd-gallery/4_incubation.webp",
+    "src": "/assets/plants/dairy/curd-gallery/4_incubation.webp",
     "caption": "Incubation & Fermentation Chamber"
   },
   {
-    "src": "/turnkey-brochures/images/curd-gallery/5_filling.webp",
+    "src": "/assets/plants/dairy/curd-gallery/5_filling.webp",
     "caption": "Automatic Cup Filling & Sealing"
   },
   {
-    "src": "/turnkey-brochures/images/curd-gallery/6_storage.webp",
+    "src": "/assets/plants/dairy/curd-gallery/6_storage.webp",
     "caption": "Cold Storage & Carton Packing"
   }
 ];
@@ -168,7 +168,7 @@ export default function CurdPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/curd_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/curd_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -261,7 +261,7 @@ export default function CurdPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/curd-gallery/6_storage.webp" alt="Curd Plant Overview" loading="lazy" />
+              <img src="/assets/plants/dairy/curd-gallery/6_storage.webp" alt="Curd Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

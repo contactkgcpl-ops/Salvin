@@ -20,32 +20,32 @@ const MACHINERY_LIST = [
   {
     "name": "Water Treatment & Syrup Preparation",
     "desc": "RO system for pure water and tanks for preparing sugar syrup.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/1.webp"
+    "image": "/assets/plants/beverages/soft-drink-gallery/1.webp"
   },
   {
     "name": "Syrup Mixing & Carbonation Unit",
     "desc": "Blends flavor with syrup and injects CO2 for carbonation.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/2.webp"
+    "image": "/assets/plants/beverages/soft-drink-gallery/2.webp"
   },
   {
     "name": "Automatic Bottle Rinsing Machine",
     "desc": "Washes and sterilizes empty PET or glass bottles.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/3.webp"
+    "image": "/assets/plants/beverages/soft-drink-gallery/3.webp"
   },
   {
     "name": "Filling & Capping Machine",
     "desc": "High-pressure counter-pressure filling to prevent gas loss.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/4.webp"
+    "image": "/assets/plants/beverages/soft-drink-gallery/4.webp"
   },
   {
     "name": "Bottle Labeling & Shrink Sleeve Machine",
     "desc": "Automatically applies wrap-around labels or shrink sleeves.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/5.webp"
+    "image": "/assets/plants/beverages/soft-drink-gallery/5.webp"
   },
   {
     "name": "Carton Packing & Palletizing",
     "desc": "Case packers and robotic arms for end-of-line packaging.",
-    "image": "/turnkey-brochures/images/soft-drink-gallery/6.webp"
+    "image": "/assets/plants/beverages/soft-drink-gallery/6.webp"
   }
 ]
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
@@ -75,27 +75,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/1.webp",
+    "src": "/assets/plants/beverages/soft-drink-gallery/1.webp",
     "caption": "Water Treatment & Syrup Preparation System"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/2.webp",
+    "src": "/assets/plants/beverages/soft-drink-gallery/2.webp",
     "caption": "Syrup Mixing & Carbonation Unit"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/3.webp",
+    "src": "/assets/plants/beverages/soft-drink-gallery/3.webp",
     "caption": "Automatic Bottle Rinsing Machine"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/4.webp",
+    "src": "/assets/plants/beverages/soft-drink-gallery/4.webp",
     "caption": "Carbonated Soft Drink Filling & Capping Machine"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/5.webp",
+    "src": "/assets/plants/beverages/soft-drink-gallery/5.webp",
     "caption": "Bottle Labeling & Shrink Sleeve Machine"
   },
   {
-    "src": "/turnkey-brochures/images/soft-drink-gallery/6.webp",
+    "src": "/assets/plants/beverages/soft-drink-gallery/6.webp",
     "caption": "Carton Packing Machine & Palletizing System"
   }
 ]
@@ -144,7 +144,7 @@ export default function CarbonatedSoftDrinkPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_soft_drink.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/beverages/beverage-heroes/hero_soft_drink.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

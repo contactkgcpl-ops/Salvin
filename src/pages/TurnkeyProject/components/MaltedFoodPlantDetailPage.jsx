@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Grain Cleaning & Grading',
-    image: '/turnkey-brochures/images/malted-food-plant/1_cleaning.webp',
+    image: '/assets/plants/food/malted-food-plant/1_cleaning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Steeping Tank',
-    image: '/turnkey-brochures/images/malted-food-plant/2_steeping.webp',
+    image: '/assets/plants/food/malted-food-plant/2_steeping.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Germination Drum',
-    image: '/turnkey-brochures/images/malted-food-plant/3_germination.webp',
+    image: '/assets/plants/food/malted-food-plant/3_germination.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Malt Kiln Dryer',
-    image: '/turnkey-brochures/images/malted-food-plant/4_kilning.webp',
+    image: '/assets/plants/food/malted-food-plant/4_kilning.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Deculming Machine',
-    image: '/turnkey-brochures/images/malted-food-plant/5_deculming.webp',
+    image: '/assets/plants/food/malted-food-plant/5_deculming.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Milling & Grinding Machine',
-    image: '/turnkey-brochures/images/malted-food-plant/6_milling.webp',
+    image: '/assets/plants/food/malted-food-plant/6_milling.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/malted-food-plant/1_cleaning.webp', caption: 'Grain Cleaning & Grading' },
-  { src: '/turnkey-brochures/images/malted-food-plant/2_steeping.webp', caption: 'Steeping Tank' },
-  { src: '/turnkey-brochures/images/malted-food-plant/3_germination.webp', caption: 'Germination Drum' },
-  { src: '/turnkey-brochures/images/malted-food-plant/4_kilning.webp', caption: 'Malt Kiln Dryer' },
-  { src: '/turnkey-brochures/images/malted-food-plant/5_deculming.webp', caption: 'Deculming Machine' },
-  { src: '/turnkey-brochures/images/malted-food-plant/6_milling.webp', caption: 'Milling & Grinding Machine' }
+  { src: '/assets/plants/food/malted-food-plant/1_cleaning.webp', caption: 'Grain Cleaning & Grading' },
+  { src: '/assets/plants/food/malted-food-plant/2_steeping.webp', caption: 'Steeping Tank' },
+  { src: '/assets/plants/food/malted-food-plant/3_germination.webp', caption: 'Germination Drum' },
+  { src: '/assets/plants/food/malted-food-plant/4_kilning.webp', caption: 'Malt Kiln Dryer' },
+  { src: '/assets/plants/food/malted-food-plant/5_deculming.webp', caption: 'Deculming Machine' },
+  { src: '/assets/plants/food/malted-food-plant/6_milling.webp', caption: 'Milling & Grinding Machine' }
 ]
 
 export default function MaltedFoodPlantDetailPage() {
@@ -106,7 +106,7 @@ export default function MaltedFoodPlantDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_malted_food_plant.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_malted_food_plant.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY MALTED FOOD SOLUTION</span>
           <h1 className="opp-hero__title">Malted Food Plant</h1>
@@ -152,7 +152,7 @@ export default function MaltedFoodPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/malted-food-plant/3_germination.webp" alt="Malted Food Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/malted-food-plant/3_germination.webp" alt="Malted Food Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

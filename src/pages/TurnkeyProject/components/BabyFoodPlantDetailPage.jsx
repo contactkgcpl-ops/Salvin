@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Washing System',
-    image: '/turnkey-brochures/images/baby-food-plant/1_washing.webp',
+    image: '/assets/plants/pharma/baby-food-plant/1_washing.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Cutting & Dicing Machine',
-    image: '/turnkey-brochures/images/baby-food-plant/2_cutting.webp',
+    image: '/assets/plants/pharma/baby-food-plant/2_cutting.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Steam Cooking Kettle',
-    image: '/turnkey-brochures/images/baby-food-plant/3_cooking.webp',
+    image: '/assets/plants/pharma/baby-food-plant/3_cooking.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Homogenizer & Colloid Mill',
-    image: '/turnkey-brochures/images/baby-food-plant/4_homogenizer.webp',
+    image: '/assets/plants/pharma/baby-food-plant/4_homogenizer.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'HTST Pasteurization System',
-    image: '/turnkey-brochures/images/baby-food-plant/5_pasteurization.webp',
+    image: '/assets/plants/pharma/baby-food-plant/5_pasteurization.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Aseptic Filling Machine',
-    image: '/turnkey-brochures/images/baby-food-plant/6_filling.webp',
+    image: '/assets/plants/pharma/baby-food-plant/6_filling.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/baby-food-plant/1_washing.webp', caption: 'Washing System' },
-  { src: '/turnkey-brochures/images/baby-food-plant/2_cutting.webp', caption: 'Cutting & Dicing Machine' },
-  { src: '/turnkey-brochures/images/baby-food-plant/3_cooking.webp', caption: 'Steam Cooking Kettle' },
-  { src: '/turnkey-brochures/images/baby-food-plant/4_homogenizer.webp', caption: 'Homogenizer & Colloid Mill' },
-  { src: '/turnkey-brochures/images/baby-food-plant/5_pasteurization.webp', caption: 'HTST Pasteurization System' },
-  { src: '/turnkey-brochures/images/baby-food-plant/6_filling.webp', caption: 'Aseptic Filling Machine' }
+  { src: '/assets/plants/pharma/baby-food-plant/1_washing.webp', caption: 'Washing System' },
+  { src: '/assets/plants/pharma/baby-food-plant/2_cutting.webp', caption: 'Cutting & Dicing Machine' },
+  { src: '/assets/plants/pharma/baby-food-plant/3_cooking.webp', caption: 'Steam Cooking Kettle' },
+  { src: '/assets/plants/pharma/baby-food-plant/4_homogenizer.webp', caption: 'Homogenizer & Colloid Mill' },
+  { src: '/assets/plants/pharma/baby-food-plant/5_pasteurization.webp', caption: 'HTST Pasteurization System' },
+  { src: '/assets/plants/pharma/baby-food-plant/6_filling.webp', caption: 'Aseptic Filling Machine' }
 ]
 
 export default function BabyFoodPlantDetailPage() {
@@ -106,7 +106,7 @@ export default function BabyFoodPlantDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_baby_food_plant.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_baby_food_plant.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY BABY FOOD SOLUTION</span>
           <h1 className="opp-hero__title">Baby Food Plant</h1>
@@ -152,7 +152,7 @@ export default function BabyFoodPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/baby-food-plant/4_homogenizer.webp" alt="Baby Food Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/pharma/baby-food-plant/4_homogenizer.webp" alt="Baby Food Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

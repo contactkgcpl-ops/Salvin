@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Automatic Destoning & Cleaning Machine',
-    image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_1.webp',
+    image: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Continuous Roasting & Puffing Oven',
-    image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_2.webp',
+    image: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Multi-Stage Cooling & Grading Conveyor',
-    image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_3.webp',
+    image: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Rotary Flavoring & Mixing Drum',
-    image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_4.webp',
+    image: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Transfer & Feed Conveyor System',
-    image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_5.webp',
+    image: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Multi-Head Packing Machine',
-    image: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_6.webp',
+    image: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_1.webp', caption: 'Automatic Destoning & Cleaning Machine' },
-  { src: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_2.webp', caption: 'Continuous Roasting & Puffing Oven' },
-  { src: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_3.webp', caption: 'Cooling & Grading Conveyor' },
-  { src: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_4.webp', caption: 'Rotary Flavoring & Mixing Drum' },
-  { src: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_5.webp', caption: 'Transfer & Feed Conveyor System' },
-  { src: '/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_6.webp', caption: 'Automatic Multi-Head Packing Machine' }
+  { src: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_1.webp', caption: 'Automatic Destoning & Cleaning Machine' },
+  { src: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_2.webp', caption: 'Continuous Roasting & Puffing Oven' },
+  { src: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_3.webp', caption: 'Cooling & Grading Conveyor' },
+  { src: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_4.webp', caption: 'Rotary Flavoring & Mixing Drum' },
+  { src: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_5.webp', caption: 'Transfer & Feed Conveyor System' },
+  { src: '/assets/plants/food/mamra-pauva-gallery/mamra_pauva_6.webp', caption: 'Automatic Multi-Head Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function MamraPauvaDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/mamra_pauva_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/mamra_pauva_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function MamraPauvaDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mamra-pauva-gallery/mamra_pauva_2.webp" alt="Mamra Pauva Processing Plant Oven" loading="lazy" />
+              <img src="/assets/plants/food/mamra-pauva-gallery/mamra_pauva_2.webp" alt="Mamra Pauva Processing Plant Oven" loading="lazy" />
             </div>
           </div>
         </div>

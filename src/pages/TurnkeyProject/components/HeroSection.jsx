@@ -1,8 +1,8 @@
 // src/components/HeroSection.jsx
 import { useState, useEffect } from "react";
-import Slide1 from "../../../assets/hero/user-wide-slide-5.webp"; // Red Chilli
-import Slide4 from "../../../assets/hero/final-slide-3.webp";
-import Slide5 from "../../../assets/hero/final-slide-4.webp";
+const Slide1 = "/assets/core/heroes/user-wide-slide-5.webp"; // Red Chilli
+const Slide4 = "/assets/core/heroes/final-slide-3.webp";
+const Slide5 = "/assets/core/heroes/final-slide-4.webp";
 
 const IMAGES = [Slide1, Slide4, Slide5];
 

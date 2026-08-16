@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Seed Pre-Cleaner Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.webp',
+    image: '/assets/plants/food/seed-cleaning-sorting-gallery/machine1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Seed Inspection Sorting Conveyor',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine2.webp',
+    image: '/assets/plants/food/seed-cleaning-sorting-gallery/machine2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Seed Destoner Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine3.webp',
+    image: '/assets/plants/food/seed-cleaning-sorting-gallery/machine3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Seed Gravity Separator',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine4.webp',
+    image: '/assets/plants/food/seed-cleaning-sorting-gallery/machine4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Seed Grading Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine5.webp',
+    image: '/assets/plants/food/seed-cleaning-sorting-gallery/machine5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Seed Packaging Machine',
-    image: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine6.webp',
+    image: '/assets/plants/food/seed-cleaning-sorting-gallery/machine6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine6.webp', caption: 'Automatic Seed Packaging Machine' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.webp', caption: 'Seed Pre-Cleaner Machine' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine2.webp', caption: 'Seed Inspection Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine3.webp', caption: 'Seed Destoner Machine' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine4.webp', caption: 'Seed Gravity Separator' },
-  { src: '/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine5.webp', caption: 'Seed Grading Machine' },
+  { src: '/assets/plants/food/seed-cleaning-sorting-gallery/machine6.webp', caption: 'Automatic Seed Packaging Machine' },
+  { src: '/assets/plants/food/seed-cleaning-sorting-gallery/machine1.webp', caption: 'Seed Pre-Cleaner Machine' },
+  { src: '/assets/plants/food/seed-cleaning-sorting-gallery/machine2.webp', caption: 'Seed Inspection Sorting Conveyor' },
+  { src: '/assets/plants/food/seed-cleaning-sorting-gallery/machine3.webp', caption: 'Seed Destoner Machine' },
+  { src: '/assets/plants/food/seed-cleaning-sorting-gallery/machine4.webp', caption: 'Seed Gravity Separator' },
+  { src: '/assets/plants/food/seed-cleaning-sorting-gallery/machine5.webp', caption: 'Seed Grading Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function SeedCleaningSortingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="scs-hero">
         <div className="scs-hero__overlay" />
-        <div className="scs-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/seed_cleaning_hero.webp')` }} />
+        <div className="scs-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/seed_cleaning_hero.webp')` }} />
         <div className="scs-hero__content">
           <span className="scs-hero__badge">
             <span className="scs-hero__badge-dot" />
@@ -229,7 +229,7 @@ export default function SeedCleaningSortingDetailPage() {
               </div>
             </div>
             <div className="scs-overview__image scs-overview__image--photo">
-              <img src="/turnkey-brochures/images/seed-cleaning-sorting-gallery/machine1.webp" alt="Seed Cleaning & Sorting Line Plant" loading="lazy" />
+              <img src="/assets/plants/food/seed-cleaning-sorting-gallery/machine1.webp" alt="Seed Cleaning & Sorting Line Plant" loading="lazy" />
             </div>
           </div>
         </div>

@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Vibrating Screen Cleaner',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp',
+    image: '/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Gravity Destoner',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp',
+    image: '/assets/plants/spices/red-chilli-gallery/chilli_sorting_optical.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Tunnel Dryer',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_drying_tunnel.webp',
+    image: '/assets/plants/spices/red-chilli-gallery/chilli_drying_tunnel.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Hammer Mill Crusher',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_grinding_unit.webp',
+    image: '/assets/plants/spices/red-chilli-gallery/chilli_grinding_unit.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Pin Mill Grinder',
-    image: '/turnkey-brochures/images/rotary_sifter.webp',
+    image: '/assets/plants/food/rotary_sifter.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.webp',
+    image: '/assets/plants/spices/red-chilli-gallery/chilli_packaging_station.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Red Chilli Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/1_red_chilli.webp', caption: 'Red Chilli Processing Plant — Complete Overview' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Red Chilli Cleaning & Destoning Line' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_drying_tunnel.webp', caption: 'Red Chilli Tunnel Drying Section' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_grinding_unit.webp', caption: 'Red Chilli Grinding & Pulverisation Unit' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp', caption: 'Red Chilli Optical Color Sorting Machine' },
-  { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.webp', caption: 'Red Chilli Powder Packaging Station' },
+  { src: '/assets/plants/food/1_red_chilli.webp', caption: 'Red Chilli Processing Plant — Complete Overview' },
+  { src: '/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Red Chilli Cleaning & Destoning Line' },
+  { src: '/assets/plants/spices/red-chilli-gallery/chilli_drying_tunnel.webp', caption: 'Red Chilli Tunnel Drying Section' },
+  { src: '/assets/plants/spices/red-chilli-gallery/chilli_grinding_unit.webp', caption: 'Red Chilli Grinding & Pulverisation Unit' },
+  { src: '/assets/plants/spices/red-chilli-gallery/chilli_sorting_optical.webp', caption: 'Red Chilli Optical Color Sorting Machine' },
+  { src: '/assets/plants/spices/red-chilli-gallery/chilli_packaging_station.webp', caption: 'Red Chilli Powder Packaging Station' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function RedChilliDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/red_chilli_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/red_chilli_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function RedChilliDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp" alt="Red Chilli Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp" alt="Red Chilli Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

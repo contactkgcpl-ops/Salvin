@@ -28,12 +28,12 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
 
-  { name: "Raw Spice Cleaning & Destoning", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/turnkey-brochures/images/curry-powder/cleaning_destoning.webp" },
-  { name: "Automatic Spice Roaster", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/turnkey-brochures/images/curry-powder/spice_roaster.webp" },
-  { name: "Hammer Mill / Pulverizer", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/turnkey-brochures/images/curry-powder/hammer_mill.webp" },
-  { name: "Ribbon Blender Mixer", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/turnkey-brochures/images/curry-powder/ribbon_blender.webp" },
-  { name: "Vibro Sieving & Screening", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/turnkey-brochures/images/curry-powder/vibro_sieving.webp" },
-  { name: "Automatic Pouch Packing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/turnkey-brochures/images/curry-powder/pouch_packing.webp" }
+  { name: "Raw Spice Cleaning & Destoning", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/assets/plants/spices/curry-powder/cleaning_destoning.webp" },
+  { name: "Automatic Spice Roaster", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/assets/plants/spices/curry-powder/spice_roaster.webp" },
+  { name: "Hammer Mill / Pulverizer", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/assets/plants/spices/curry-powder/hammer_mill.webp" },
+  { name: "Ribbon Blender Mixer", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/assets/plants/spices/curry-powder/ribbon_blender.webp" },
+  { name: "Vibro Sieving & Screening", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/assets/plants/spices/curry-powder/vibro_sieving.webp" },
+  { name: "Automatic Pouch Packing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/assets/plants/spices/curry-powder/pouch_packing.webp" }
 ]
 
 
@@ -63,12 +63,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/curry-powder/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/spice_roaster.webp", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/ribbon_blender.webp", caption: "Ribbon Blender Spice Mixing Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/curry-powder/pouch_packing.webp", caption: "Automatic Pouch Filling & Packing Machine" }
+  { src: "/assets/plants/spices/curry-powder/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/assets/plants/spices/curry-powder/spice_roaster.webp", caption: "Automatic Spice Roasting Machine" },
+  { src: "/assets/plants/spices/curry-powder/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/assets/plants/spices/curry-powder/ribbon_blender.webp", caption: "Ribbon Blender Spice Mixing Machine" },
+  { src: "/assets/plants/spices/curry-powder/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/assets/plants/spices/curry-powder/pouch_packing.webp", caption: "Automatic Pouch Filling & Packing Machine" }
 ];
 
 export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
@@ -113,7 +113,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/assets/plants/food/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Curry Powder Processing Plant</h1>
@@ -164,7 +164,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/curry-powder/ribbon_blender.webp" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
+              <img src="/assets/plants/spices/curry-powder/ribbon_blender.webp" alt="Fully Automated Curry Powder Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

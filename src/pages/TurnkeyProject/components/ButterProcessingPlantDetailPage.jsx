@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Clarification",
     "desc": "Receives, filters, and clarifies raw milk.",
-    "image": "/turnkey-brochures/images/butter-gallery/1.webp"
+    "image": "/assets/plants/dairy/butter-gallery/1.webp"
   },
   {
     "name": "Cream Pasteurization & Aging",
     "desc": "Pasteurizes and ages cream to crystallize fat.",
-    "image": "/turnkey-brochures/images/butter-gallery/2.webp"
+    "image": "/assets/plants/dairy/butter-gallery/2.webp"
   },
   {
     "name": "Continuous Butter Churn",
     "desc": "Turns cream into butter granules continuously.",
-    "image": "/turnkey-brochures/images/butter-gallery/3.webp"
+    "image": "/assets/plants/dairy/butter-gallery/3.webp"
   },
   {
     "name": "Butter Kneading & Forming",
     "desc": "Works the butter mass to ensure perfect texture.",
-    "image": "/turnkey-brochures/images/butter-gallery/4.webp"
+    "image": "/assets/plants/dairy/butter-gallery/4.webp"
   },
   {
     "name": "Automatic Butter Wrapping",
     "desc": "Hygienically portions and wraps butter blocks.",
-    "image": "/turnkey-brochures/images/butter-gallery/5.webp"
+    "image": "/assets/plants/dairy/butter-gallery/5.webp"
   },
   {
     "name": "Carton Packing & Cold Storage",
     "desc": "Robotic carton packing and temperature control.",
-    "image": "/turnkey-brochures/images/butter-gallery/6.webp"
+    "image": "/assets/plants/dairy/butter-gallery/6.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -96,27 +96,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/butter-gallery/1.webp",
+    "src": "/assets/plants/dairy/butter-gallery/1.webp",
     "caption": "Raw Milk Reception & Clarification"
   },
   {
-    "src": "/turnkey-brochures/images/butter-gallery/2.webp",
+    "src": "/assets/plants/dairy/butter-gallery/2.webp",
     "caption": "Cream Pasteurization & Aging"
   },
   {
-    "src": "/turnkey-brochures/images/butter-gallery/3.webp",
+    "src": "/assets/plants/dairy/butter-gallery/3.webp",
     "caption": "Continuous Butter Churn"
   },
   {
-    "src": "/turnkey-brochures/images/butter-gallery/4.webp",
+    "src": "/assets/plants/dairy/butter-gallery/4.webp",
     "caption": "Butter Kneading & Forming"
   },
   {
-    "src": "/turnkey-brochures/images/butter-gallery/5.webp",
+    "src": "/assets/plants/dairy/butter-gallery/5.webp",
     "caption": "Automatic Butter Wrapping"
   },
   {
-    "src": "/turnkey-brochures/images/butter-gallery/6.webp",
+    "src": "/assets/plants/dairy/butter-gallery/6.webp",
     "caption": "Carton Packing & Cold Storage"
   }
 ]
@@ -165,7 +165,7 @@ export default function ButterProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/butter.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/dairy-heroes/butter.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

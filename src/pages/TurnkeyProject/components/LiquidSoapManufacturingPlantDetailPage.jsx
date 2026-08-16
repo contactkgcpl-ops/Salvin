@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Raw Material Weighing & Dosing System",
     desc: "Precision dosing system for continuous and accurate feeding of surfactants, salts, and citric acid.",
-    image: "/turnkey-brochures/images/cosmetic/liquid_soap_plant_1.webp"
+    image: "/assets/plants/cosmetics/cosmetic/liquid_soap_plant_1.webp"
   },
   {
     name: "Liquid Soap Mixing Tank",
     desc: "High-capacity stainless steel mixing tank with advanced temperature and agitation control.",
-    image: "/turnkey-brochures/images/cosmetic/liquid_soap_plant_2.webp"
+    image: "/assets/plants/cosmetics/cosmetic/liquid_soap_plant_2.webp"
   },
   {
     name: "Inline Homogenizer & High Shear Mixer",
     desc: "Powerful inline homogenizer and high shear mixer for a completely stable and uniform liquid soap.",
-    image: "/turnkey-brochures/images/cosmetic/liquid_soap_plant_3.webp"
+    image: "/assets/plants/cosmetics/cosmetic/liquid_soap_plant_3.webp"
   },
   {
     name: "Storage Holding Tank",
     desc: "Hygienic holding tank for buffering the finished liquid soap prior to the filling process.",
-    image: "/turnkey-brochures/images/cosmetic/liquid_soap_plant_4.webp"
+    image: "/assets/plants/cosmetics/cosmetic/liquid_soap_plant_4.webp"
   },
   {
     name: "Automatic Bottle Filling & Capping Machine",
     desc: "Automated, high-speed filling line equipped with precision nozzles and capping stations.",
-    image: "/turnkey-brochures/images/cosmetic/liquid_soap_plant_5.webp"
+    image: "/assets/plants/cosmetics/cosmetic/liquid_soap_plant_5.webp"
   },
   {
     name: "Labeling & Shrink Sleeve Packaging Machine",
     desc: "Integrated labeling and shrink tunnel system for automated retail-ready packaging.",
-    image: "/turnkey-brochures/images/cosmetic/liquid_soap_plant_6.webp"
+    image: "/assets/plants/cosmetics/cosmetic/liquid_soap_plant_6.webp"
   }
 ]
 
@@ -70,12 +70,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { id: 1, src: '/turnkey-brochures/images/cosmetic/liquid_soap_plant_1.webp', alt: 'Raw Material Weighing & Dosing System' },
-  { id: 2, src: '/turnkey-brochures/images/cosmetic/liquid_soap_plant_2.webp', alt: 'Liquid Soap Mixing Tank' },
-  { id: 3, src: '/turnkey-brochures/images/cosmetic/liquid_soap_plant_3.webp', alt: 'Inline Homogenizer & High Shear Mixer' },
-  { id: 4, src: '/turnkey-brochures/images/cosmetic/liquid_soap_plant_4.webp', alt: 'Storage Holding Tank' },
-  { id: 5, src: '/turnkey-brochures/images/cosmetic/liquid_soap_plant_5.webp', alt: 'Automatic Bottle Filling & Capping Machine' },
-  { id: 6, src: '/turnkey-brochures/images/cosmetic/liquid_soap_plant_6.webp', alt: 'Labeling & Shrink Sleeve Packaging Machine' }
+  { id: 1, src: '/assets/plants/cosmetics/cosmetic/liquid_soap_plant_1.webp', alt: 'Raw Material Weighing & Dosing System' },
+  { id: 2, src: '/assets/plants/cosmetics/cosmetic/liquid_soap_plant_2.webp', alt: 'Liquid Soap Mixing Tank' },
+  { id: 3, src: '/assets/plants/cosmetics/cosmetic/liquid_soap_plant_3.webp', alt: 'Inline Homogenizer & High Shear Mixer' },
+  { id: 4, src: '/assets/plants/cosmetics/cosmetic/liquid_soap_plant_4.webp', alt: 'Storage Holding Tank' },
+  { id: 5, src: '/assets/plants/cosmetics/cosmetic/liquid_soap_plant_5.webp', alt: 'Automatic Bottle Filling & Capping Machine' },
+  { id: 6, src: '/assets/plants/cosmetics/cosmetic/liquid_soap_plant_6.webp', alt: 'Labeling & Shrink Sleeve Packaging Machine' }
 ]
 
 export default function LiquidSoapManufacturingPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function LiquidSoapManufacturingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/liquid_soap_hero.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/liquid_soap_hero.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Seed Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/1_cleaning_destoning.webp',
+    image: '/assets/plants/food/edible-oil-gallery/1_cleaning_destoning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Seed Cracking & Conditioning System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/2_cracking_conditioning.webp',
+    image: '/assets/plants/food/edible-oil-gallery/2_cracking_conditioning.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Oil Expeller Machine',
-    image: '/turnkey-brochures/images/edible-oil-gallery/3_oil_expeller.webp',
+    image: '/assets/plants/food/edible-oil-gallery/3_oil_expeller.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Crude Oil Filtration System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/4_crude_oil_filtration.webp',
+    image: '/assets/plants/food/edible-oil-gallery/4_crude_oil_filtration.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Edible Oil Refining Plant',
-    image: '/turnkey-brochures/images/edible-oil-gallery/5_refining_plant.webp',
+    image: '/assets/plants/food/edible-oil-gallery/5_refining_plant.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Oil Filling & Packaging System',
-    image: '/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp',
+    image: '/assets/plants/food/edible-oil-gallery/6_oil_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/edible-oil-gallery/1_cleaning_destoning.webp', caption: 'Seed Cleaning & Destoning' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/2_cracking_conditioning.webp', caption: 'Seed Cracking & Conditioning' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/3_oil_expeller.webp', caption: 'Oil Expeller' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/4_crude_oil_filtration.webp', caption: 'Crude Oil Filtration' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/5_refining_plant.webp', caption: 'Edible Oil Refining Plant' },
-  { src: '/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp', caption: 'Oil Packaging System' },
+  { src: '/assets/plants/food/edible-oil-gallery/1_cleaning_destoning.webp', caption: 'Seed Cleaning & Destoning' },
+  { src: '/assets/plants/food/edible-oil-gallery/2_cracking_conditioning.webp', caption: 'Seed Cracking & Conditioning' },
+  { src: '/assets/plants/food/edible-oil-gallery/3_oil_expeller.webp', caption: 'Oil Expeller' },
+  { src: '/assets/plants/food/edible-oil-gallery/4_crude_oil_filtration.webp', caption: 'Crude Oil Filtration' },
+  { src: '/assets/plants/food/edible-oil-gallery/5_refining_plant.webp', caption: 'Edible Oil Refining Plant' },
+  { src: '/assets/plants/food/edible-oil-gallery/6_oil_packaging.webp', caption: 'Oil Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function EdibleOilProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="eop-hero">
         <div className="eop-hero__overlay" />
-        <div className="eop-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp')` }} />
+        <div className="eop-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/edible-oil-gallery/6_oil_packaging.webp')` }} />
         <div className="eop-hero__content">
           <span className="eop-hero__badge">
             <span className="eop-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function EdibleOilProcessingDetailPage() {
               </div>
             </div>
             <div className="eop-overview__image eop-overview__image--photo">
-              <img src="/turnkey-brochures/images/edible-oil-gallery/6_oil_packaging.webp" alt="Edible Oil Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/edible-oil-gallery/6_oil_packaging.webp" alt="Edible Oil Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Vacuum Cooker",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/toffee-gallery/1_weighing_system.webp"
+    image: "/assets/plants/food/toffee-gallery/1_weighing_system.webp"
   },
   {
     name: "Cooling Table",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.webp"
+    image: "/assets/plants/food/toffee-gallery/2_toffee_cooker.webp"
   },
   {
     name: "Batch Roller",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/toffee-gallery/3_cooling_table.webp"
+    image: "/assets/plants/food/toffee-gallery/3_cooling_table.webp"
   },
   {
     name: "Rope Sizer & Former",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/toffee-gallery/4_rope_sizer.webp"
+    image: "/assets/plants/food/toffee-gallery/4_rope_sizer.webp"
   },
   {
     name: "Cooling Tunnel",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.webp"
+    image: "/assets/plants/food/toffee-gallery/5_wrap_packaging.webp"
   },
   {
     name: "Twist Wrap Machine",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/toffee-gallery/6_carton_packing.webp"
+    image: "/assets/plants/food/toffee-gallery/6_carton_packing.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/toffee-gallery/1_weighing_system.webp', caption: 'Weighing System' },
-  { src: '/turnkey-brochures/images/toffee-gallery/2_toffee_cooker.webp', caption: 'Toffee Cooker' },
-  { src: '/turnkey-brochures/images/toffee-gallery/3_cooling_table.webp', caption: 'Cooling Table' },
-  { src: '/turnkey-brochures/images/toffee-gallery/4_rope_sizer.webp', caption: 'Rope Sizer' },
-  { src: '/turnkey-brochures/images/toffee-gallery/5_wrap_packaging.webp', caption: 'Wrap Packaging' },
-  { src: '/turnkey-brochures/images/toffee-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
+  { src: '/assets/plants/food/toffee-gallery/1_weighing_system.webp', caption: 'Weighing System' },
+  { src: '/assets/plants/food/toffee-gallery/2_toffee_cooker.webp', caption: 'Toffee Cooker' },
+  { src: '/assets/plants/food/toffee-gallery/3_cooling_table.webp', caption: 'Cooling Table' },
+  { src: '/assets/plants/food/toffee-gallery/4_rope_sizer.webp', caption: 'Rope Sizer' },
+  { src: '/assets/plants/food/toffee-gallery/5_wrap_packaging.webp', caption: 'Wrap Packaging' },
+  { src: '/assets/plants/food/toffee-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function ToffeePlantDetailPage() {
@@ -127,7 +127,7 @@ export default function ToffeePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_toffee.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_toffee.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

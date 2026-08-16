@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Raw Material Weighing & Oil Storage Tank",
     desc: "Precision weighing system coupled with a high-capacity stainless steel oil storage tank.",
-    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_1.webp"
+    image: "/assets/plants/cosmetics/cosmetic/hair_oil_plant_1.webp"
   },
   {
     name: "Jacketed Oil Mixing Tank",
     desc: "Stainless steel jacketed tank with agitator for heating and homogenous blending of oils and herbs.",
-    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_2.webp"
+    image: "/assets/plants/cosmetics/cosmetic/hair_oil_plant_2.webp"
   },
   {
     name: "Inline Homogenizer & Filtration",
     desc: "Advanced inline homogenizer and filtration system to ensure absolute purity and smooth texture.",
-    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_3.webp"
+    image: "/assets/plants/cosmetics/cosmetic/hair_oil_plant_3.webp"
   },
   {
     name: "Intermediate Storage Tank",
     desc: "Hygienic stainless steel intermediate tank for holding the refined hair oil before filling.",
-    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_4.webp"
+    image: "/assets/plants/cosmetics/cosmetic/hair_oil_plant_4.webp"
   },
   {
     name: "Automatic Bottle Filling & Capping",
     desc: "High-speed automatic liquid filling and capping machine for precise and spill-free bottling.",
-    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_5.webp"
+    image: "/assets/plants/cosmetics/cosmetic/hair_oil_plant_5.webp"
   },
   {
     name: "Labeling & Dispatch System",
     desc: "Automated labeling machine integrated with a carton packing and dispatch conveying system.",
-    image: "/turnkey-brochures/images/cosmetic/hair_oil_plant_6.webp"
+    image: "/assets/plants/cosmetics/cosmetic/hair_oil_plant_6.webp"
   }
 ]
 
@@ -70,12 +70,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { id: 1, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_1.webp', alt: 'Raw Material Weighing & Oil Storage Tank' },
-  { id: 2, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_2.webp', alt: 'Jacketed Oil Mixing Tank with Agitator' },
-  { id: 3, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_3.webp', alt: 'Inline Homogenizer & Filtration System' },
-  { id: 4, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_4.webp', alt: 'Intermediate Storage Tank' },
-  { id: 5, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_5.webp', alt: 'Automatic Bottle Filling & Capping Machine' },
-  { id: 6, src: '/turnkey-brochures/images/cosmetic/hair_oil_plant_6.webp', alt: 'Labeling & Dispatch System' }
+  { id: 1, src: '/assets/plants/cosmetics/cosmetic/hair_oil_plant_1.webp', alt: 'Raw Material Weighing & Oil Storage Tank' },
+  { id: 2, src: '/assets/plants/cosmetics/cosmetic/hair_oil_plant_2.webp', alt: 'Jacketed Oil Mixing Tank with Agitator' },
+  { id: 3, src: '/assets/plants/cosmetics/cosmetic/hair_oil_plant_3.webp', alt: 'Inline Homogenizer & Filtration System' },
+  { id: 4, src: '/assets/plants/cosmetics/cosmetic/hair_oil_plant_4.webp', alt: 'Intermediate Storage Tank' },
+  { id: 5, src: '/assets/plants/cosmetics/cosmetic/hair_oil_plant_5.webp', alt: 'Automatic Bottle Filling & Capping Machine' },
+  { id: 6, src: '/assets/plants/cosmetics/cosmetic/hair_oil_plant_6.webp', alt: 'Labeling & Dispatch System' }
 ]
 
 export default function HairOilManufacturingPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function HairOilManufacturingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/hair_oil_hero.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/hair_oil_hero.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

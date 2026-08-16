@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Wheat Cleaning & Pre-Cleaning Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.webp',
+    image: '/assets/plants/food/flour-milling-gallery/1_wheat_cleaning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Wheat Destoner Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.webp',
+    image: '/assets/plants/food/flour-milling-gallery/2_wheat_destoning.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Wheat Conditioning System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.webp',
+    image: '/assets/plants/food/flour-milling-gallery/3_wheat_conditioning.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Roller Flour Milling System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.webp',
+    image: '/assets/plants/food/flour-milling-gallery/4_roller_flour_milling.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Plansifter System',
-    image: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.webp',
+    image: '/assets/plants/food/flour-milling-gallery/5_plansifter.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Flour Packaging Machine',
-    image: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp',
+    image: '/assets/plants/food/flour-milling-gallery/6_automatic_flour_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/flour-milling-gallery/1_wheat_cleaning.webp', caption: 'Wheat Cleaning & Pre-Cleaning Machine' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/2_wheat_destoning.webp', caption: 'Wheat Destoner Machine' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/3_wheat_conditioning.webp', caption: 'Wheat Conditioning System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/4_roller_flour_milling.webp', caption: 'Roller Flour Milling System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/5_plansifter.webp', caption: 'Plansifter System' },
-  { src: '/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp', caption: 'Automatic Flour Packaging Machine' },
+  { src: '/assets/plants/food/flour-milling-gallery/1_wheat_cleaning.webp', caption: 'Wheat Cleaning & Pre-Cleaning Machine' },
+  { src: '/assets/plants/food/flour-milling-gallery/2_wheat_destoning.webp', caption: 'Wheat Destoner Machine' },
+  { src: '/assets/plants/food/flour-milling-gallery/3_wheat_conditioning.webp', caption: 'Wheat Conditioning System' },
+  { src: '/assets/plants/food/flour-milling-gallery/4_roller_flour_milling.webp', caption: 'Roller Flour Milling System' },
+  { src: '/assets/plants/food/flour-milling-gallery/5_plansifter.webp', caption: 'Plansifter System' },
+  { src: '/assets/plants/food/flour-milling-gallery/6_automatic_flour_packaging.webp', caption: 'Automatic Flour Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function IndustrialFlourMillingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ifm-hero">
         <div className="ifm-hero__overlay" />
-        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/industrial_flour_milling_hero.webp')` }} />
+        <div className="ifm-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/industrial_flour_milling_hero.webp')` }} />
         <div className="ifm-hero__content">
           <span className="ifm-hero__badge">
             <span className="ifm-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function IndustrialFlourMillingDetailPage() {
               </div>
             </div>
             <div className="ifm-overview__image ifm-overview__image--photo">
-              <img src="/turnkey-brochures/images/flour-milling-gallery/6_automatic_flour_packaging.webp" alt="Industrial Flour Milling Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/flour-milling-gallery/6_automatic_flour_packaging.webp" alt="Industrial Flour Milling Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

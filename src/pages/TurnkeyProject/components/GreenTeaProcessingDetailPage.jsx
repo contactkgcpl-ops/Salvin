@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Fresh Tea Leaf Sorting Conveyor',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.webp',
+    image: '/assets/plants/beverages/green-tea-processing-gallery/1_sorting_conveyor.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tea Leaf Withering Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp',
+    image: '/assets/plants/beverages/green-tea-processing-gallery/2_withering_machine.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Tea Leaf Fixation / Steaming Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.webp',
+    image: '/assets/plants/beverages/green-tea-processing-gallery/3_steaming_machine.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Tea Leaf Rolling Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.webp',
+    image: '/assets/plants/beverages/green-tea-processing-gallery/4_rolling_machine.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Tea Leaf Drying Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.webp',
+    image: '/assets/plants/beverages/green-tea-processing-gallery/5_drying_machine.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Green Tea Packaging Machine',
-    image: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp',
+    image: '/assets/plants/beverages/green-tea-processing-gallery/6_packaging_machine.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/1_sorting_conveyor.webp', caption: 'Fresh Tea Leaf Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp', caption: 'Tea Leaf Withering Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/3_steaming_machine.webp', caption: 'Tea Leaf Fixation / Steaming Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/4_rolling_machine.webp', caption: 'Tea Leaf Rolling Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/5_drying_machine.webp', caption: 'Tea Leaf Drying Machine' },
-  { src: '/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp', caption: 'Green Tea Packaging Machine' },
+  { src: '/assets/plants/beverages/green-tea-processing-gallery/1_sorting_conveyor.webp', caption: 'Fresh Tea Leaf Sorting Conveyor' },
+  { src: '/assets/plants/beverages/green-tea-processing-gallery/2_withering_machine.webp', caption: 'Tea Leaf Withering Machine' },
+  { src: '/assets/plants/beverages/green-tea-processing-gallery/3_steaming_machine.webp', caption: 'Tea Leaf Fixation / Steaming Machine' },
+  { src: '/assets/plants/beverages/green-tea-processing-gallery/4_rolling_machine.webp', caption: 'Tea Leaf Rolling Machine' },
+  { src: '/assets/plants/beverages/green-tea-processing-gallery/5_drying_machine.webp', caption: 'Tea Leaf Drying Machine' },
+  { src: '/assets/plants/beverages/green-tea-processing-gallery/6_packaging_machine.webp', caption: 'Green Tea Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function GreenTeaProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="gtp-hero">
         <div className="gtp-hero__overlay" />
-        <div className="gtp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/green-tea-processing-gallery/2_withering_machine.webp')` }} />
+        <div className="gtp-hero__bg" style={{ backgroundImage: `url('/assets/plants/beverages/green-tea-processing-gallery/2_withering_machine.webp')` }} />
         <div className="gtp-hero__content">
           <span className="gtp-hero__badge">
             <span className="gtp-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function GreenTeaProcessingDetailPage() {
               </div>
             </div>
             <div className="gtp-overview__image gtp-overview__image--photo">
-              <img src="/turnkey-brochures/images/green-tea-processing-gallery/6_packaging_machine.webp" alt="Green Tea Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/beverages/green-tea-processing-gallery/6_packaging_machine.webp" alt="Green Tea Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

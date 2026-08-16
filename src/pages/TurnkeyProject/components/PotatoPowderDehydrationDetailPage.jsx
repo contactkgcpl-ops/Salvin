@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Potato Washing & Destoning Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.webp',
+    image: '/assets/plants/food/potato-powder-dehydration-gallery/1_washing_destoning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Potato Peeling Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/2_peeling_machine.webp',
+    image: '/assets/plants/food/potato-powder-dehydration-gallery/2_peeling_machine.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Potato Slicing Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/3_slicing_machine.webp',
+    image: '/assets/plants/food/potato-powder-dehydration-gallery/3_slicing_machine.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Potato Dehydration Dryer',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/4_dehydration_dryer.webp',
+    image: '/assets/plants/food/potato-powder-dehydration-gallery/4_dehydration_dryer.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Potato Powder Pulverizer & Vibro Sifter',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/5_pulverizer_sifter.webp',
+    image: '/assets/plants/food/potato-powder-dehydration-gallery/5_pulverizer_sifter.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Potato Powder Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.webp',
+    image: '/assets/plants/food/potato-powder-dehydration-gallery/6_packaging_machine.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.webp', caption: 'Potato Washing & Destoning Machine' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/2_peeling_machine.webp', caption: 'Potato Peeling Machine' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/3_slicing_machine.webp', caption: 'Potato Slicing Machine' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/4_dehydration_dryer.webp', caption: 'Potato Dehydration Dryer' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/5_pulverizer_sifter.webp', caption: 'Potato Powder Pulverizer & Vibro Sifter' },
-  { src: '/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.webp', caption: 'Potato Powder Filling & Packaging Machine' },
+  { src: '/assets/plants/food/potato-powder-dehydration-gallery/1_washing_destoning.webp', caption: 'Potato Washing & Destoning Machine' },
+  { src: '/assets/plants/food/potato-powder-dehydration-gallery/2_peeling_machine.webp', caption: 'Potato Peeling Machine' },
+  { src: '/assets/plants/food/potato-powder-dehydration-gallery/3_slicing_machine.webp', caption: 'Potato Slicing Machine' },
+  { src: '/assets/plants/food/potato-powder-dehydration-gallery/4_dehydration_dryer.webp', caption: 'Potato Dehydration Dryer' },
+  { src: '/assets/plants/food/potato-powder-dehydration-gallery/5_pulverizer_sifter.webp', caption: 'Potato Powder Pulverizer & Vibro Sifter' },
+  { src: '/assets/plants/food/potato-powder-dehydration-gallery/6_packaging_machine.webp', caption: 'Potato Powder Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function PotatoPowderDehydrationDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ppd-hero">
         <div className="ppd-hero__overlay" />
-        <div className="ppd-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/potato-powder-dehydration-gallery/1_washing_destoning.webp')` }} />
+        <div className="ppd-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/potato-powder-dehydration-gallery/1_washing_destoning.webp')` }} />
         <div className="ppd-hero__content">
           <span className="ppd-hero__badge">
             <span className="ppd-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function PotatoPowderDehydrationDetailPage() {
               </div>
             </div>
             <div className="ppd-overview__image ppd-overview__image--photo">
-              <img src="/turnkey-brochures/images/potato-powder-dehydration-gallery/6_packaging_machine.webp" alt="Potato Powder Dehydration Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/potato-powder-dehydration-gallery/6_packaging_machine.webp" alt="Potato Powder Dehydration Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

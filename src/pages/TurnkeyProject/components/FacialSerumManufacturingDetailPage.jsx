@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ingredient Dosing & Mixing System',
-    image: '/turnkey-brochures/images/hair-conditioner-gallery/1_weighing_dosing.jpg',
+    image: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Syrup Preparation System',
-    image: '/turnkey-brochures/images/hair-conditioner-gallery/2_vacuum_mixer.jpg',
+    image: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Facial Serum Mass Mixer',
-    image: '/turnkey-brochures/images/hair-conditioner-gallery/3_high_shear.jpg',
+    image: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Facial Serum Forming Machine',
-    image: '/turnkey-brochures/images/hair-conditioner-gallery/4_storage_tank.jpg',
+    image: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Facial Serum Cutting Machine',
-    image: '/turnkey-brochures/images/hair-conditioner-gallery/5_filling_capping.jpg',
+    image: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Flow Wrapping & Packaging Machine',
-    image: '/turnkey-brochures/images/hair-conditioner-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/1_weighing_dosing.jpg', caption: 'Ingredient Dosing & Mixing System' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/2_vacuum_mixer.jpg', caption: 'Syrup Preparation System' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/3_high_shear.jpg', caption: 'Facial Serum Mass Mixer' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/4_storage_tank.jpg', caption: 'Facial Serum Forming Machine' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/5_filling_capping.jpg', caption: 'Facial Serum Cutting Machine' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/6_labeling_packing.jpg', caption: 'Flow Wrapping Machine' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg', caption: 'Ingredient Dosing & Mixing System' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg', caption: 'Syrup Preparation System' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg', caption: 'Facial Serum Mass Mixer' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg', caption: 'Facial Serum Forming Machine' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg', caption: 'Facial Serum Cutting Machine' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg', caption: 'Flow Wrapping Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ export default function FacialSerumManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="fsm-hero">
         <div className="fsm-hero__overlay" />
-        <div className="fsm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/facial_serum_hero.png')` }} />
+        <div className="fsm-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/facial_serum_hero.png')` }} />
         <div className="fsm-hero__content">
           <span className="fsm-hero__badge">
             <span className="fsm-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function FacialSerumManufacturingDetailPage() {
               </div>
             </div>
             <div className="fsm-overview__image fsm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/turnkey-brochures/images/hair-conditioner-gallery/3_high_shear.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

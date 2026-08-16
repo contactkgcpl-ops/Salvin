@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Tomato Washing & Sorting Machine',
-    image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_1.webp',
+    image: '/assets/plants/food/tomato-puree-gallery/tomato_puree_1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tomato Crushing & Pulping Machine',
-    image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_2.webp',
+    image: '/assets/plants/food/tomato-puree-gallery/tomato_puree_2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Steam Jacketed Cooking Kettle',
-    image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_3.webp',
+    image: '/assets/plants/food/tomato-puree-gallery/tomato_puree_3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Vacuum Evaporator Concentration System',
-    image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_4.webp',
+    image: '/assets/plants/food/tomato-puree-gallery/tomato_puree_4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Tomato Puree Evaporation System',
-    image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_5.webp',
+    image: '/assets/plants/food/tomato-puree-gallery/tomato_puree_5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Filling & Capping Machine',
-    image: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_6.webp',
+    image: '/assets/plants/food/tomato-puree-gallery/tomato_puree_6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_1.webp', caption: 'Tomato Washing & Sorting Machine' },
-  { src: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_2.webp', caption: 'Tomato Crushing & Pulping Machine' },
-  { src: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_3.webp', caption: 'Steam Jacketed Cooking Kettle' },
-  { src: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_4.webp', caption: 'Vacuum Evaporator Concentration System' },
-  { src: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_5.webp', caption: 'Tomato Puree Evaporation System' },
-  { src: '/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_6.webp', caption: 'Automatic Filling & Capping Machine' }
+  { src: '/assets/plants/food/tomato-puree-gallery/tomato_puree_1.webp', caption: 'Tomato Washing & Sorting Machine' },
+  { src: '/assets/plants/food/tomato-puree-gallery/tomato_puree_2.webp', caption: 'Tomato Crushing & Pulping Machine' },
+  { src: '/assets/plants/food/tomato-puree-gallery/tomato_puree_3.webp', caption: 'Steam Jacketed Cooking Kettle' },
+  { src: '/assets/plants/food/tomato-puree-gallery/tomato_puree_4.webp', caption: 'Vacuum Evaporator Concentration System' },
+  { src: '/assets/plants/food/tomato-puree-gallery/tomato_puree_5.webp', caption: 'Tomato Puree Evaporation System' },
+  { src: '/assets/plants/food/tomato-puree-gallery/tomato_puree_6.webp', caption: 'Automatic Filling & Capping Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function TomatoPureeDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_puree_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/tomato_puree_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function TomatoPureeDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/tomato-puree-gallery/tomato_puree_5.webp" alt="Tomato Puree Evaporation System" loading="lazy" />
+              <img src="/assets/plants/food/tomato-puree-gallery/tomato_puree_5.webp" alt="Tomato Puree Evaporation System" loading="lazy" />
             </div>
           </div>
         </div>

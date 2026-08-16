@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Vibrating Screen Cleaner',
-    image: '/turnkey-brochures/images/popcorn/media__1785501725565.webp',
+    image: '/assets/plants/food/popcorn/media__1785501725565.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Bucket Elevator & Hopper',
-    image: '/turnkey-brochures/images/popcorn/media__1785501737780.webp',
+    image: '/assets/plants/food/popcorn/media__1785501737780.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Rotary Seasoning Drum',
-    image: '/turnkey-brochures/images/popcorn/media__1785501751034.webp',
+    image: '/assets/plants/food/popcorn/media__1785501751034.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cooling Conveyor',
-    image: '/turnkey-brochures/images/popcorn/media__1785501762244.webp',
+    image: '/assets/plants/food/popcorn/media__1785501762244.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Automatic Pouch Packing Machine',
-    image: '/turnkey-brochures/images/popcorn/media__1785501775251.webp',
+    image: '/assets/plants/food/popcorn/media__1785501775251.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Carton Packing Machine',
-    image: '/turnkey-brochures/images/popcorn/media__1785501807417.webp',
+    image: '/assets/plants/food/popcorn/media__1785501807417.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Popcorn Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/popcorn/media__1785501725565.webp', caption: 'Vibrating Screen Cleaner' },
-  { src: '/turnkey-brochures/images/popcorn/media__1785501737780.webp', caption: 'Bucket Elevator & Hopper' },
-  { src: '/turnkey-brochures/images/popcorn/media__1785501751034.webp', caption: 'Rotary Seasoning Drum' },
-  { src: '/turnkey-brochures/images/popcorn/media__1785501762244.webp', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/popcorn/media__1785501775251.webp', caption: 'Automatic Pouch Packing Machine' },
-  { src: '/turnkey-brochures/images/popcorn/media__1785501807417.webp', caption: 'Automatic Carton Packing Machine' }
+  { src: '/assets/plants/food/popcorn/media__1785501725565.webp', caption: 'Vibrating Screen Cleaner' },
+  { src: '/assets/plants/food/popcorn/media__1785501737780.webp', caption: 'Bucket Elevator & Hopper' },
+  { src: '/assets/plants/food/popcorn/media__1785501751034.webp', caption: 'Rotary Seasoning Drum' },
+  { src: '/assets/plants/food/popcorn/media__1785501762244.webp', caption: 'Cooling Conveyor' },
+  { src: '/assets/plants/food/popcorn/media__1785501775251.webp', caption: 'Automatic Pouch Packing Machine' },
+  { src: '/assets/plants/food/popcorn/media__1785501807417.webp', caption: 'Automatic Carton Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedPopcornProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="fappp-hero">
         <div className="fappp-hero__overlay" />
-        <div className="fappp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_popcorn.webp')` }} />
+        <div className="fappp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_popcorn.webp')` }} />
         <div className="fappp-hero__content">
           <span className="fappp-hero__badge">
             <span className="fappp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function FullyAutomatedPopcornProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="fappp-overview__image fappp-overview__image--photo">
-              <img src="/turnkey-brochures/images/popcorn/media__1785501775251.webp" alt="Fully Automated Popcorn Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/popcorn/media__1785501775251.webp" alt="Fully Automated Popcorn Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception System",
     "desc": "For receiving, filtering, and chilling raw milk.",
-    "image": "/turnkey-brochures/images/ice-cream-gallery/1.webp"
+    "image": "/assets/plants/dairy/ice-cream-gallery/1.webp"
   },
   {
     "name": "Mix Preparation & Pasteurization",
     "desc": "Skid-mounted mixing, heating, and homogenizing unit.",
-    "image": "/turnkey-brochures/images/ice-cream-gallery/2.webp"
+    "image": "/assets/plants/dairy/ice-cream-gallery/2.webp"
   },
   {
     "name": "Ice Cream Aging Tank",
     "desc": "Chilled tanks to let the mix rest and hydrate.",
-    "image": "/turnkey-brochures/images/ice-cream-gallery/3.webp"
+    "image": "/assets/plants/dairy/ice-cream-gallery/3.webp"
   },
   {
     "name": "Continuous Ice Cream Freezer",
     "desc": "Whips air (overrun) and freezes the mix instantly.",
-    "image": "/turnkey-brochures/images/ice-cream-gallery/4.webp"
+    "image": "/assets/plants/dairy/ice-cream-gallery/4.webp"
   },
   {
     "name": "Automatic Cup & Cone Filling",
     "desc": "Automatically fills and caps cups, cones, and tubs.",
-    "image": "/turnkey-brochures/images/ice-cream-gallery/5.webp"
+    "image": "/assets/plants/dairy/ice-cream-gallery/5.webp"
   },
   {
     "name": "Hardening Tunnel",
     "desc": "Deep freezes the product at -30°C to lock the texture.",
-    "image": "/turnkey-brochures/images/ice-cream-gallery/6.webp"
+    "image": "/assets/plants/dairy/ice-cream-gallery/6.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -96,27 +96,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/ice-cream-gallery/1.webp",
+    "src": "/assets/plants/dairy/ice-cream-gallery/1.webp",
     "caption": "Raw Milk Reception System"
   },
   {
-    "src": "/turnkey-brochures/images/ice-cream-gallery/2.webp",
+    "src": "/assets/plants/dairy/ice-cream-gallery/2.webp",
     "caption": "Mix Preparation & Pasteurization"
   },
   {
-    "src": "/turnkey-brochures/images/ice-cream-gallery/3.webp",
+    "src": "/assets/plants/dairy/ice-cream-gallery/3.webp",
     "caption": "Ice Cream Aging Tank"
   },
   {
-    "src": "/turnkey-brochures/images/ice-cream-gallery/4.webp",
+    "src": "/assets/plants/dairy/ice-cream-gallery/4.webp",
     "caption": "Continuous Ice Cream Freezer"
   },
   {
-    "src": "/turnkey-brochures/images/ice-cream-gallery/5.webp",
+    "src": "/assets/plants/dairy/ice-cream-gallery/5.webp",
     "caption": "Automatic Cup & Cone Filling"
   },
   {
-    "src": "/turnkey-brochures/images/ice-cream-gallery/6.webp",
+    "src": "/assets/plants/dairy/ice-cream-gallery/6.webp",
     "caption": "Hardening Tunnel & Cold Storage"
   }
 ]
@@ -165,7 +165,7 @@ export default function IceCreamProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/ice-cream.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/dairy-heroes/ice-cream.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

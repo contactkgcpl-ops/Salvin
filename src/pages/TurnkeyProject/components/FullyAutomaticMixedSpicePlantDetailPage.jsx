@@ -29,12 +29,12 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
 
-  { name: "Cleaning & Destoning", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.webp" },
-  { name: "Spice Roasting", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.webp" },
-  { name: "Grinding System", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.webp" },
-  { name: "Ribbon Blending", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp" },
-  { name: "Vibro Sieving", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.webp" },
-  { name: "Weighing & Packing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.webp" }
+  { name: "Cleaning & Destoning", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/assets/plants/spices/mixed-spice-gallery/cleaning_destoning.webp" },
+  { name: "Spice Roasting", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/assets/plants/spices/mixed-spice-gallery/spice_roasting.webp" },
+  { name: "Grinding System", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/assets/plants/spices/mixed-spice-gallery/hammer_mill.webp" },
+  { name: "Ribbon Blending", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/assets/plants/spices/mixed-spice-gallery/ribbon_blender.webp" },
+  { name: "Vibro Sieving", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/assets/plants/spices/mixed-spice-gallery/vibro_sieving.webp" },
+  { name: "Weighing & Packing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/assets/plants/spices/mixed-spice-gallery/weighing_packing.webp" }
 ]
 
 
@@ -64,12 +64,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/spice_roasting.webp", caption: "Automatic Spice Roasting Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp", caption: "Ribbon Blender & Spice Mixing Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
-  { src: "/turnkey-brochures/images/mixed-spice-gallery/weighing_packing.webp", caption: "Automatic Spice Weighing, Packing & Sealing Machine" }
+  { src: "/assets/plants/spices/mixed-spice-gallery/cleaning_destoning.webp", caption: "Raw Spice Cleaning & Destoning Machine" },
+  { src: "/assets/plants/spices/mixed-spice-gallery/spice_roasting.webp", caption: "Automatic Spice Roasting Machine" },
+  { src: "/assets/plants/spices/mixed-spice-gallery/hammer_mill.webp", caption: "Hammer Mill / Pulverizer Grinding Machine" },
+  { src: "/assets/plants/spices/mixed-spice-gallery/ribbon_blender.webp", caption: "Ribbon Blender & Spice Mixing Machine" },
+  { src: "/assets/plants/spices/mixed-spice-gallery/vibro_sieving.webp", caption: "Vibro Sieving & Fine Mesh Screening Machine" },
+  { src: "/assets/plants/spices/mixed-spice-gallery/weighing_packing.webp", caption: "Automatic Spice Weighing, Packing & Sealing Machine" }
 ];
 
 export default function FullyAutomaticMixedSpicePlantDetailPage() {
@@ -114,7 +114,7 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/assets/plants/food/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Mixed Spice Plant</h1>
@@ -165,7 +165,7 @@ export default function FullyAutomaticMixedSpicePlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mixed-spice-gallery/ribbon_blender.webp" alt="Fully Automatic Mixed Spice Plant Overview" loading="lazy" />
+              <img src="/assets/plants/spices/mixed-spice-gallery/ribbon_blender.webp" alt="Fully Automatic Mixed Spice Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

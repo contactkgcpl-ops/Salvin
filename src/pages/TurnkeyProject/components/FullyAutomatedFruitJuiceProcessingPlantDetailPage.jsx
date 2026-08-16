@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
 
   {
     "name": "High-Capacity Washing & Sorting Machine",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/washing_sorting.webp",
+    "image": "/assets/plants/beverages/fruit-juice-gallery/washing_sorting.webp",
     "desc": "High-capacity washing flume ensuring complete removal of dirt, pesticides, and microbial contaminants from raw fruits."
   },
   {
     "name": "Advanced Pulping & Juice Extraction",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/pulping_extraction.webp",
+    "image": "/assets/plants/beverages/fruit-juice-gallery/pulping_extraction.webp",
     "desc": "Robust stainless steel extraction unit engineered for maximum juice yield while efficiently separating seeds and skins."
   },
   {
     "name": "Automated Filtration & Clarification System",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/filtration_clarification.webp",
+    "image": "/assets/plants/beverages/fruit-juice-gallery/filtration_clarification.webp",
     "desc": "Advanced micro-filtration machinery designed to produce clear, pulp-free juice with perfect consistency."
   },
   {
     "name": "Continuous Pasteurization & Mixing Tank",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/pasteurization_mixing.webp",
+    "image": "/assets/plants/beverages/fruit-juice-gallery/pasteurization_mixing.webp",
     "desc": "High-efficiency thermal processing equipment ensuring the elimination of pathogens while preserving the fruit's natural vitamins and aroma."
   },
   {
     "name": "High-Speed Rotary Filling Line",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/automatic_filling.webp",
+    "image": "/assets/plants/beverages/fruit-juice-gallery/automatic_filling.webp",
     "desc": "Highly automated bottling and capping system that guarantees a sterile packaging environment for extended shelf life."
   },
   {
     "name": "Automated Labeling & Packaging",
-    "image": "/turnkey-brochures/images/fruit-juice-gallery/labeling_packaging.webp",
+    "image": "/assets/plants/beverages/fruit-juice-gallery/labeling_packaging.webp",
     "desc": "End-of-line packaging automation including high-speed labelers and case packers to prepare the juice for distribution."
   }
 ]
@@ -97,12 +97,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/washing_sorting.webp", caption: "High-Capacity Fruit Washing & Sorting Machine" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/pulping_extraction.webp", caption: "Advanced Industrial Pulping & Juice Extraction" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/filtration_clarification.webp", caption: "Automated Filtration System & Clarification Tanks" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/pasteurization_mixing.webp", caption: "Continuous Pasteurization & Mixing Tank" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/automatic_filling.webp", caption: "High-Speed Rotary Filling & Capping Line" },
-  { src: "/turnkey-brochures/images/fruit-juice-gallery/labeling_packaging.webp", caption: "Automated Labeling & End-of-Line Packaging" }
+  { src: "/assets/plants/beverages/fruit-juice-gallery/washing_sorting.webp", caption: "High-Capacity Fruit Washing & Sorting Machine" },
+  { src: "/assets/plants/beverages/fruit-juice-gallery/pulping_extraction.webp", caption: "Advanced Industrial Pulping & Juice Extraction" },
+  { src: "/assets/plants/beverages/fruit-juice-gallery/filtration_clarification.webp", caption: "Automated Filtration System & Clarification Tanks" },
+  { src: "/assets/plants/beverages/fruit-juice-gallery/pasteurization_mixing.webp", caption: "Continuous Pasteurization & Mixing Tank" },
+  { src: "/assets/plants/beverages/fruit-juice-gallery/automatic_filling.webp", caption: "High-Speed Rotary Filling & Capping Line" },
+  { src: "/assets/plants/beverages/fruit-juice-gallery/labeling_packaging.webp", caption: "Automated Labeling & End-of-Line Packaging" }
 ];
 
 export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
@@ -147,7 +147,7 @@ export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
     <div className="rcp-page">
                   <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_fruit_juice.webp')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/assets/plants/food/hero_fruit_juice.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automated Fruit Juice Processing Plant</h1>
@@ -198,7 +198,7 @@ export default function FullyAutomatedFruitJuiceProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/hero_fruit_juice.webp" alt="Fully Automated Fruit Juice Processing Plant Overview" loading="lazy" />
+              <img src="/assets/plants/food/hero_fruit_juice.webp" alt="Fully Automated Fruit Juice Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

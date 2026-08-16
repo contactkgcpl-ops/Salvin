@@ -20,32 +20,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Material Receiving & Weighing",
     "desc": "Precision weighing hoppers for protein, vitamins, and minerals.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/1.webp"
+    "image": "/assets/plants/beverages/health-drink-gallery/1.webp"
   },
   {
     "name": "Ingredient Blending & Dissolving",
     "desc": "High-shear mixing tanks for lump-free powder dissolution.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/2.webp"
+    "image": "/assets/plants/beverages/health-drink-gallery/2.webp"
   },
   {
     "name": "Homogenization & Pasteurization",
     "desc": "Ensures uniform consistency and eliminates harmful bacteria.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/3.webp"
+    "image": "/assets/plants/beverages/health-drink-gallery/3.webp"
   },
   {
     "name": "Cooling & Storage Tank",
     "desc": "Chilled storage tanks to maintain quality before filling.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/4.webp"
+    "image": "/assets/plants/beverages/health-drink-gallery/4.webp"
   },
   {
     "name": "Automatic Filling & Capping",
     "desc": "Hygienic automatic filling machines for bottles.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/5.webp"
+    "image": "/assets/plants/beverages/health-drink-gallery/5.webp"
   },
   {
     "name": "Labeling & Carton Packaging",
     "desc": "End-of-line labeling, shrink wrapping, and carton packing.",
-    "image": "/turnkey-brochures/images/health-drink-gallery/6.webp"
+    "image": "/assets/plants/beverages/health-drink-gallery/6.webp"
   }
 ]
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
@@ -75,27 +75,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/1.webp",
+    "src": "/assets/plants/beverages/health-drink-gallery/1.webp",
     "caption": "Raw Material Receiving & Weighing System"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/2.webp",
+    "src": "/assets/plants/beverages/health-drink-gallery/2.webp",
     "caption": "Ingredient Blending & Dissolving Tank"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/3.webp",
+    "src": "/assets/plants/beverages/health-drink-gallery/3.webp",
     "caption": "Homogenization & Pasteurization Unit"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/4.webp",
+    "src": "/assets/plants/beverages/health-drink-gallery/4.webp",
     "caption": "Cooling & Storage Tank"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/5.webp",
+    "src": "/assets/plants/beverages/health-drink-gallery/5.webp",
     "caption": "Automatic Bottle Filling & Capping Machine"
   },
   {
-    "src": "/turnkey-brochures/images/health-drink-gallery/6.webp",
+    "src": "/assets/plants/beverages/health-drink-gallery/6.webp",
     "caption": "Labeling & Carton Packaging System"
   }
 ]
@@ -144,7 +144,7 @@ export default function HealthDrinkPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_health_drink.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/beverages/beverage-heroes/hero_health_drink.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

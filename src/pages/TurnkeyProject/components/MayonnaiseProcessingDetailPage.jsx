@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
 import './MayonnaiseProcessingDetailPage.css'
 
-import eq1 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/oil_ingredient_dosing.webp';
-import eq2 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_premixing.webp';
-import eq3 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/high_shear_emulsification.webp';
-import eq4 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/vacuum_homogenizer.webp';
-import eq5 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/quality_inspection.webp';
-import eq6 from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/automatic_filling.webp';
-import mayoHero from '../../../assets/turnkey-brochures/images/mayonnaise-processing-plant/mayonnaise_hero.webp';
+const eq1 = "/assets/core/icons/oil_ingredient_dosing.webp";
+const eq2 = "/assets/core/icons/high_shear_premixing.webp";
+const eq3 = "/assets/core/icons/high_shear_emulsification.webp";
+const eq4 = "/assets/core/icons/vacuum_homogenizer.webp";
+const eq5 = "/assets/core/icons/quality_inspection.webp";
+const eq6 = "/assets/plants/beverages/fruit-juice-gallery/automatic_filling.webp";
+const mayoHero = "/assets/plants/food/mayonnaise/mayonnaise_hero.webp";
 
 
 /* ─── Process Flow Steps ─── */

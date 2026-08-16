@@ -9,7 +9,7 @@ const CORE_PROJECTS = {
     title: 'CTC Tea Processing & Packaging Plant',
     badge: 'TURNKEY CTC TEA PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solutions for CTC Tea Manufacturing & Packaging',
-    heroImage: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.webp',
+    heroImage: '/assets/plants/beverages/ctc-tea-processing-plant/tea_plant_hero.webp',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'ctc_tea_processing.pdf',
     stats: {
@@ -21,8 +21,8 @@ const CORE_PROJECTS = {
       title: 'Complete CTC Tea Processing Solution',
       p1: 'Salvin Industries provides complete turnkey solutions for CTC Tea Processing Plants, offering advanced systems for tea leaf handling, withering, rolling, fermentation, drying, sorting, and packaging. Our solutions are designed to maximize productivity while maintaining tea quality and consistency.',
       p2: 'Our modern processing technologies ensure efficient manufacturing, uniform granule formation, and preservation of tea aroma, flavor, and color. Advanced automation improves operational efficiency while maintaining stringent quality standards.',
-      image: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.webp',
-      photoImage: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.webp',
+      image: '/assets/plants/beverages/ctc-tea-processing-plant/tea_plant_hero.webp',
+      photoImage: '/assets/plants/beverages/ctc-tea-processing-plant/tea_plant_hero.webp',
       features4: [
         { title: 'Hygienic Processing', desc: 'Food grade construction for safe tea production' },
         { title: 'Uniform Granules', desc: 'Advanced CTC technology for consistent size' },
@@ -42,21 +42,21 @@ const CORE_PROJECTS = {
       { id: 9, title: 'Finished Product Dispatch' }
     ],
     machinery: [
-      { name: 'Fresh Tea Leaf Receiving', desc: 'Freshly harvested tea leaves are received and inspected for quality. Proper selection ensures high-quality tea production.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_leaf_receiving.webp' },
-      { name: 'Tea Leaf Withering Trough', desc: 'Tea leaves are spread in withering troughs where moisture content is reduced under controlled airflow. This prepares the leaves for efficient processing.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/withering_trough.webp' },
-      { name: 'CTC Crushing Tearing & Curling Machine', desc: 'Leaves pass through specialized CTC machines that crush, tear, and curl them into characteristic tea granules. This step develops the tea structure required for strong liquor.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/ctc_machine.webp' },
-      { name: 'Fermentation / Oxidation Conveyor System', desc: 'Processed leaves undergo controlled oxidation to develop color, aroma, flavor, and strength. This is a critical stage in black tea manufacturing.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/fermentation.webp' },
-      { name: 'Continuous Tea Dryer', desc: 'Fermented tea is dried using hot-air dryers to stop oxidation and achieve the required moisture level. Proper drying ensures shelf stability and quality retention.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_dryer.webp' },
-      { name: 'Automatic Tea Packaging Machine', desc: 'Tea is packed into pouches, cartons, tea bags, or bulk packs using automated filling and sealing systems. Packaging protects freshness and aroma.', image: '/turnkey-brochures/images/ctc-tea-processing-plant/packaging.webp' }
+      { name: 'Fresh Tea Leaf Receiving', desc: 'Freshly harvested tea leaves are received and inspected for quality. Proper selection ensures high-quality tea production.', image: '/assets/plants/beverages/ctc-tea-processing-plant/tea_leaf_receiving.webp' },
+      { name: 'Tea Leaf Withering Trough', desc: 'Tea leaves are spread in withering troughs where moisture content is reduced under controlled airflow. This prepares the leaves for efficient processing.', image: '/assets/plants/beverages/ctc-tea-processing-plant/withering_trough.webp' },
+      { name: 'CTC Crushing Tearing & Curling Machine', desc: 'Leaves pass through specialized CTC machines that crush, tear, and curl them into characteristic tea granules. This step develops the tea structure required for strong liquor.', image: '/assets/plants/beverages/ctc-tea-processing-plant/ctc_machine.webp' },
+      { name: 'Fermentation / Oxidation Conveyor System', desc: 'Processed leaves undergo controlled oxidation to develop color, aroma, flavor, and strength. This is a critical stage in black tea manufacturing.', image: '/assets/plants/beverages/ctc-tea-processing-plant/fermentation.webp' },
+      { name: 'Continuous Tea Dryer', desc: 'Fermented tea is dried using hot-air dryers to stop oxidation and achieve the required moisture level. Proper drying ensures shelf stability and quality retention.', image: '/assets/plants/beverages/ctc-tea-processing-plant/tea_dryer.webp' },
+      { name: 'Automatic Tea Packaging Machine', desc: 'Tea is packed into pouches, cartons, tea bags, or bulk packs using automated filling and sealing systems. Packaging protects freshness and aroma.', image: '/assets/plants/beverages/ctc-tea-processing-plant/packaging.webp' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_plant_hero.webp', caption: 'Fully Automated CTC Tea Processing Plant' },
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_leaf_receiving.webp', caption: 'Tea Leaf Receiving & Feeding System' },
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/withering_trough.webp', caption: 'Tea Leaf Withering Trough' },
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/ctc_machine.webp', caption: 'CTC Crushing Tearing & Curling Machine' },
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/fermentation.webp', caption: 'Fermentation / Oxidation Conveyor System' },
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/tea_dryer.webp', caption: 'Continuous Tea Dryer' },
-      { src: '/turnkey-brochures/images/ctc-tea-processing-plant/packaging.webp', caption: 'Automatic Tea Packaging Machine' }
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/tea_plant_hero.webp', caption: 'Fully Automated CTC Tea Processing Plant' },
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/tea_leaf_receiving.webp', caption: 'Tea Leaf Receiving & Feeding System' },
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/withering_trough.webp', caption: 'Tea Leaf Withering Trough' },
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/ctc_machine.webp', caption: 'CTC Crushing Tearing & Curling Machine' },
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/fermentation.webp', caption: 'Fermentation / Oxidation Conveyor System' },
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/tea_dryer.webp', caption: 'Continuous Tea Dryer' },
+      { src: '/assets/plants/beverages/ctc-tea-processing-plant/packaging.webp', caption: 'Automatic Tea Packaging Machine' }
     ]
   },
 
@@ -64,7 +64,7 @@ const CORE_PROJECTS = {
     title: 'Beetroot Juice Processing Plant',
     badge: 'TURNKEY BEETROOT JUICE PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solution For Cleaning, Washing, Crushing, Juice Extraction, Clarification, Pasteurization and Packaging of Beetroot',
-    heroImage: '/turnkey-brochures/images/beetroot-gallery/beetroot_juice_hero_banner.webp',
+    heroImage: '/assets/plants/beverages/beetroot-gallery/beetroot_juice_hero_banner.webp',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'fruit_juice_salvin.pdf',
     stats: {
@@ -81,8 +81,8 @@ const CORE_PROJECTS = {
         { title: 'OEE Optimised', desc: '85%+ Overall Equipment Effectiveness target' },
         { title: 'Global Standards', desc: 'FSSAI, FDA, CE, ISO 22000 compliant designs' }
       ],
-      image: '/turnkey-brochures/images/3_beetroot.webp',
-      photoImage: '/turnkey-brochures/images/beetroot-gallery/juice-extractor.webp',
+      image: '/assets/plants/food/3_beetroot.webp',
+      photoImage: '/assets/plants/beverages/beetroot-gallery/juice-extractor.webp',
       features4: [
         { title: 'Maximum Juice Yield', desc: 'High-pressure screw press extraction per batch' },
         { title: 'Nutrient Retention', desc: 'Cold processing preserves vitamins and enzymes' },
@@ -118,12 +118,12 @@ const CORE_PROJECTS = {
       { id: 11, title: 'Packaging', desc: 'Automatic capping, labeling, shrink-wrapping, and carton packing prepare the juice for shipping and cold storage.' }
     ],
     machinery: [
-      { name: 'Beetroot Washing Machine', image: '/turnkey-brochures/images/beetroot-gallery/washing-machine.webp', desc: 'Heavy-duty rotary drum and spray washer designed to remove soil, mud, and external debris from raw harvested beetroots.' },
-      { name: 'Sorting Conveyor', image: '/turnkey-brochures/images/beetroot-gallery/sorting-conveyor.webp', desc: 'Ergonomic conveyor belt with speed control for inspecting and grading beetroots, rejecting damaged or irregular roots.' },
-      { name: 'Beetroot Crusher', image: '/turnkey-brochures/images/beetroot-gallery/beetroot-crusher.webp', desc: 'High-speed disintegration mill that crushes whole peeled beetroots into a fine pulp slurry to facilitate extraction.' },
-      { name: 'Juice Extractor', image: '/turnkey-brochures/images/beetroot-gallery/juice-extractor.webp', desc: 'Continuous screw press system designed to extract juice from pulp efficiently under gentle pressure.' },
-      { name: 'Filtration System', image: '/turnkey-brochures/images/beetroot-gallery/filtration-system.webp', desc: 'Clarity filtration or centrifugal separator system that removes solid particulate matter and fibre from beetroot juice.' },
-      { name: 'Bottle Filling & Packaging Machine', image: '/turnkey-brochures/images/beetroot-gallery/bottle-filling-packaging.webp', desc: 'Fully automatic rotary hot-fill bottling or aseptic carton packaging line equipped with capping and labeling attachments.' }
+      { name: 'Beetroot Washing Machine', image: '/assets/plants/beverages/beetroot-gallery/washing-machine.webp', desc: 'Heavy-duty rotary drum and spray washer designed to remove soil, mud, and external debris from raw harvested beetroots.' },
+      { name: 'Sorting Conveyor', image: '/assets/plants/beverages/beetroot-gallery/sorting-conveyor.webp', desc: 'Ergonomic conveyor belt with speed control for inspecting and grading beetroots, rejecting damaged or irregular roots.' },
+      { name: 'Beetroot Crusher', image: '/assets/plants/beverages/beetroot-gallery/beetroot-crusher.webp', desc: 'High-speed disintegration mill that crushes whole peeled beetroots into a fine pulp slurry to facilitate extraction.' },
+      { name: 'Juice Extractor', image: '/assets/plants/beverages/beetroot-gallery/juice-extractor.webp', desc: 'Continuous screw press system designed to extract juice from pulp efficiently under gentle pressure.' },
+      { name: 'Filtration System', image: '/assets/plants/beverages/beetroot-gallery/filtration-system.webp', desc: 'Clarity filtration or centrifugal separator system that removes solid particulate matter and fibre from beetroot juice.' },
+      { name: 'Bottle Filling & Packaging Machine', image: '/assets/plants/beverages/beetroot-gallery/bottle-filling-packaging.webp', desc: 'Fully automatic rotary hot-fill bottling or aseptic carton packaging line equipped with capping and labeling attachments.' }
     ],
     applications: [
       { title: 'Fruit & Vegetable Juice', desc: 'Production of pure premium beetroot juice, organic blends, and botanical juice formulations.' },
@@ -134,20 +134,20 @@ const CORE_PROJECTS = {
       { title: 'Dehydrated Concentrates', desc: 'Upstream feed line for spray-dryers producing beetroot powder and instant mixes.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/3_beetroot.webp', caption: 'Beetroot Juice Processing Plant Overview' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/washing-machine.webp', caption: 'Beetroot Washing Operation' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/sorting-conveyor.webp', caption: 'Beetroot Sorting & Inspection' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/beetroot-crusher.webp', caption: 'Beetroot Crusher Process' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/juice-extractor.webp', caption: 'Beetroot Juice Extraction' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/filtration-system.webp', caption: 'Juice Clarification & Filtration' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/bottle-filling-packaging.webp', caption: 'Automated Bottling & Packaging Line' }
+      { src: '/assets/plants/food/3_beetroot.webp', caption: 'Beetroot Juice Processing Plant Overview' },
+      { src: '/assets/plants/beverages/beetroot-gallery/washing-machine.webp', caption: 'Beetroot Washing Operation' },
+      { src: '/assets/plants/beverages/beetroot-gallery/sorting-conveyor.webp', caption: 'Beetroot Sorting & Inspection' },
+      { src: '/assets/plants/beverages/beetroot-gallery/beetroot-crusher.webp', caption: 'Beetroot Crusher Process' },
+      { src: '/assets/plants/beverages/beetroot-gallery/juice-extractor.webp', caption: 'Beetroot Juice Extraction' },
+      { src: '/assets/plants/beverages/beetroot-gallery/filtration-system.webp', caption: 'Juice Clarification & Filtration' },
+      { src: '/assets/plants/beverages/beetroot-gallery/bottle-filling-packaging.webp', caption: 'Automated Bottling & Packaging Line' }
     ]
   },
   'turmeric-powder-processing-plant': {
     title: 'Turmeric Powder Processing Plant',
     badge: 'TURNKEY TURMERIC POWDER PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Washing, Boiling, Drying, Cryogenic Grinding, Sieving And Packaging Of Turmeric',
-    heroImage: '/turnkey-brochures/images/hero-banners/turmeric_powder_hero.webp',
+    heroImage: '/assets/core/heroes/hero-banners/turmeric_powder_hero.webp',
     stats: {
       capacity: '500 Kg–5 Ton',
       stages: '11 Stage',
@@ -162,8 +162,8 @@ const CORE_PROJECTS = {
         { title: 'High Thermal OEE', desc: 'Heat-recovery boiling and drying lines cut fuel consumption by 25%.' },
         { title: 'Aflatoxin-Safe Dryers', desc: 'Enclosed hot-air circulation prevents moisture mold and bacterial growth.' }
       ],
-      image: '/turnkey-brochures/images/4_turmeric.webp',
-      photoImage: '/turnkey-brochures/images/turmeric-gallery/micro_pulverizer.webp',
+      image: '/assets/plants/food/4_turmeric.webp',
+      photoImage: '/assets/plants/spices/turmeric-gallery/micro_pulverizer.webp',
       features4: [
         { title: 'Curcumin Preserved', desc: 'Cryogenic grinding locks in active curcumin value' },
         { title: 'Hygienic Process', desc: 'Food grade SS304/SS316L enclosed construction' },
@@ -199,12 +199,12 @@ const CORE_PROJECTS = {
       { id: 11, title: 'Batch Storage', desc: 'Finished pouches or bags are stored in dry, moisture-controlled warehouses.' }
     ],
     machinery: [
-      { name: 'Drum Washing System', image: '/turnkey-brochures/images/turmeric-gallery/drum_washing_system.webp', desc: 'High-capacity rotary drum washer with multi-stage high-pressure jet nozzles.' },
-      { name: 'Steam Curing Kettle', image: '/turnkey-brochures/images/turmeric-gallery/steam_curing_kettle.webp', desc: 'Stainless steel steam-jacketed curing vessel with automatic tilting discharge.' },
-      { name: 'Continuous Belt Dryer', image: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.webp', desc: 'Multi-layer continuous belt dryer with temperature control and air recirculators.' },
-      { name: 'Impact Crusher', image: '/turnkey-brochures/images/turmeric-gallery/impact_crusher.webp', desc: 'Heavy-duty impact crusher that breaks cured turmeric roots into coarse granules.' },
-      { name: 'Micro Pulverizer', image: '/turnkey-brochures/images/turmeric-gallery/micro_pulverizer.webp', desc: 'High-speed fine grinding pin mill with ambient air cooling or liquid nitrogen cooling.' },
-      { name: 'FFS Packaging Machine', image: '/turnkey-brochures/images/turmeric-gallery/ffs_packaging_machine.webp', desc: 'Vertical form-fill-seal packing line equipped with nitrogen flush and auger dosing.' }
+      { name: 'Drum Washing System', image: '/assets/plants/spices/turmeric-gallery/drum_washing_system.webp', desc: 'High-capacity rotary drum washer with multi-stage high-pressure jet nozzles.' },
+      { name: 'Steam Curing Kettle', image: '/assets/plants/spices/turmeric-gallery/steam_curing_kettle.webp', desc: 'Stainless steel steam-jacketed curing vessel with automatic tilting discharge.' },
+      { name: 'Continuous Belt Dryer', image: '/assets/plants/spices/turmeric-gallery/continuous_belt_dryer.webp', desc: 'Multi-layer continuous belt dryer with temperature control and air recirculators.' },
+      { name: 'Impact Crusher', image: '/assets/plants/spices/turmeric-gallery/impact_crusher.webp', desc: 'Heavy-duty impact crusher that breaks cured turmeric roots into coarse granules.' },
+      { name: 'Micro Pulverizer', image: '/assets/plants/spices/turmeric-gallery/micro_pulverizer.webp', desc: 'High-speed fine grinding pin mill with ambient air cooling or liquid nitrogen cooling.' },
+      { name: 'FFS Packaging Machine', image: '/assets/plants/spices/turmeric-gallery/ffs_packaging_machine.webp', desc: 'Vertical form-fill-seal packing line equipped with nitrogen flush and auger dosing.' }
     ],
     applications: [
       { title: 'Spice Powder Brands', desc: 'Consumer retail and institutional spice powder supplies.' },
@@ -215,20 +215,20 @@ const CORE_PROJECTS = {
       { title: 'Spices Export Business', desc: 'High-grade bulk packaging meeting international sanitary regulations.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/4_turmeric.webp', caption: 'Turmeric Processing Plant Layout' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/drum_washing_system.webp', caption: 'Drum Washing System for Turmeric' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/steam_curing_kettle.webp', caption: 'Steam Curing Kettle for Turmeric' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.webp', caption: 'Continuous Belt Dryer for Turmeric' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/impact_crusher.webp', caption: 'Impact Crusher — Turmeric Crushing Station' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/micro_pulverizer.webp', caption: 'Micro Pulverizer — Fine Grinding Unit' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/ffs_packaging_machine.webp', caption: 'FFS Packaging Machine — Turmeric Powder Packing' }
+      { src: '/assets/plants/food/4_turmeric.webp', caption: 'Turmeric Processing Plant Layout' },
+      { src: '/assets/plants/spices/turmeric-gallery/drum_washing_system.webp', caption: 'Drum Washing System for Turmeric' },
+      { src: '/assets/plants/spices/turmeric-gallery/steam_curing_kettle.webp', caption: 'Steam Curing Kettle for Turmeric' },
+      { src: '/assets/plants/spices/turmeric-gallery/continuous_belt_dryer.webp', caption: 'Continuous Belt Dryer for Turmeric' },
+      { src: '/assets/plants/spices/turmeric-gallery/impact_crusher.webp', caption: 'Impact Crusher — Turmeric Crushing Station' },
+      { src: '/assets/plants/spices/turmeric-gallery/micro_pulverizer.webp', caption: 'Micro Pulverizer — Fine Grinding Unit' },
+      { src: '/assets/plants/spices/turmeric-gallery/ffs_packaging_machine.webp', caption: 'FFS Packaging Machine — Turmeric Powder Packing' }
     ]
   },
   'honey-processing-bottling-plant': {
     title: 'Honey Processing & Bottling Plant',
     badge: 'TURNKEY HONEY PROCESSING SOLUTION',
     subtitle: 'Complete Processing, Filtration, Moisture Extraction And Packaging Lines For Honey Products',
-    heroImage: '/turnkey-brochures/images/honey-gallery/honey_hero.webp',
+    heroImage: '/assets/plants/food/honey-gallery/honey_hero.webp',
     pdfFile: 'honey_processing.pdf',
     stats: {
       capacity: '200 Kg–3 Ton',
@@ -244,8 +244,8 @@ const CORE_PROJECTS = {
         { title: 'HMF Optimization', desc: 'Careful temperature profiling prevents Hydroxymethylfurfural (HMF) spikes.' },
         { title: 'Precision Bottling', desc: 'Drip-free rotary filling ensures consistent bottle volumes.' }
       ],
-      image: '/turnkey-brochures/images/5_honey.webp',
-      photoImage: '/turnkey-brochures/images/honey-gallery/piston_filler.webp',
+      image: '/assets/plants/food/5_honey.webp',
+      photoImage: '/assets/plants/food/honey-gallery/piston_filler.webp',
       features4: [
         { title: 'Viscosity Preserved', desc: 'Gentle warming retains natural honey texture' },
         { title: 'HMF Controlled', desc: 'Temperature profiling prevents enzyme degradation' },
@@ -280,12 +280,12 @@ const CORE_PROJECTS = {
       { id: 10, title: 'Labeling & Box packing', desc: 'Self-adhesive labels are applied, and jars are cartooned for shipping.' }
     ],
     machinery: [
-      { name: 'Drum Liquefaction Chamber', image: '/turnkey-brochures/images/honey-gallery/drum_liquefaction.webp', desc: 'Insulated hot-water circulation chamber designed to melt raw crystallised honey.' },
-      { name: 'Plate Pre-Heater', image: '/turnkey-brochures/images/honey-gallery/plate_preheater.webp', desc: 'SS316L heat exchanger to lower viscosity before fine filtration.' },
-      { name: 'Duplex Fine Filter', image: '/turnkey-brochures/images/honey-gallery/duplex_filter.webp', desc: 'Dual stainless steel filters operating in parallel for continuous wax separation.' },
-      { name: 'Vacuum Moisture Reducer', image: '/turnkey-brochures/images/honey-gallery/vacuum_reducer.webp', desc: 'Low-temperature vacuum evaporator to reduce moisture content below 18%.' },
-      { name: 'Piston Bottle Filler', image: '/turnkey-brochures/images/honey-gallery/piston_filler.webp', desc: 'Automatic piston filling machine with drip-free nozzles for sticky liquids.' },
-      { name: 'Labeling Conveyor Line', image: '/turnkey-brochures/images/honey-gallery/labeling_line.webp', desc: 'High-speed flat conveyor belt with automatic side-label applicator.' }
+      { name: 'Drum Liquefaction Chamber', image: '/assets/plants/food/honey-gallery/drum_liquefaction.webp', desc: 'Insulated hot-water circulation chamber designed to melt raw crystallised honey.' },
+      { name: 'Plate Pre-Heater', image: '/assets/plants/food/honey-gallery/plate_preheater.webp', desc: 'SS316L heat exchanger to lower viscosity before fine filtration.' },
+      { name: 'Duplex Fine Filter', image: '/assets/plants/food/honey-gallery/duplex_filter.webp', desc: 'Dual stainless steel filters operating in parallel for continuous wax separation.' },
+      { name: 'Vacuum Moisture Reducer', image: '/assets/plants/food/honey-gallery/vacuum_reducer.webp', desc: 'Low-temperature vacuum evaporator to reduce moisture content below 18%.' },
+      { name: 'Piston Bottle Filler', image: '/assets/plants/food/honey-gallery/piston_filler.webp', desc: 'Automatic piston filling machine with drip-free nozzles for sticky liquids.' },
+      { name: 'Labeling Conveyor Line', image: '/assets/plants/food/honey-gallery/labeling_line.webp', desc: 'High-speed flat conveyor belt with automatic side-label applicator.' }
     ],
     applications: [
       { title: 'Retail Honey Brands', desc: 'Pure multi-flora, mono-flora, and organic consumer retail packaging.' },
@@ -296,20 +296,20 @@ const CORE_PROJECTS = {
       { title: 'Bulk Exporters', desc: 'Industrial steel drum packing for overseas confectionery bulk orders.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/5_honey.webp', caption: 'Honey Processing & Bottling Plant Layout' },
-      { src: '/turnkey-brochures/images/honey-gallery/drum_liquefaction.webp', caption: 'Drum Liquefaction Chamber' },
-      { src: '/turnkey-brochures/images/honey-gallery/plate_preheater.webp', caption: 'Plate Pre-Heater Unit' },
-      { src: '/turnkey-brochures/images/honey-gallery/duplex_filter.webp', caption: 'Duplex Fine Filtration Skids' },
-      { src: '/turnkey-brochures/images/honey-gallery/vacuum_reducer.webp', caption: 'Vacuum Moisture Reducer' },
-      { src: '/turnkey-brochures/images/honey-gallery/piston_filler.webp', caption: 'Piston Bottle Filler Line' },
-      { src: '/turnkey-brochures/images/honey-gallery/labeling_line.webp', caption: 'Labeling & Packing Conveyor' }
+      { src: '/assets/plants/food/5_honey.webp', caption: 'Honey Processing & Bottling Plant Layout' },
+      { src: '/assets/plants/food/honey-gallery/drum_liquefaction.webp', caption: 'Drum Liquefaction Chamber' },
+      { src: '/assets/plants/food/honey-gallery/plate_preheater.webp', caption: 'Plate Pre-Heater Unit' },
+      { src: '/assets/plants/food/honey-gallery/duplex_filter.webp', caption: 'Duplex Fine Filtration Skids' },
+      { src: '/assets/plants/food/honey-gallery/vacuum_reducer.webp', caption: 'Vacuum Moisture Reducer' },
+      { src: '/assets/plants/food/honey-gallery/piston_filler.webp', caption: 'Piston Bottle Filler Line' },
+      { src: '/assets/plants/food/honey-gallery/labeling_line.webp', caption: 'Labeling & Packing Conveyor' }
     ]
   },
   'dates-processing-packing-plant': {
     title: 'Dates Processing & Packing Plant',
     badge: 'TURNKEY DATES PROCESSING SOLUTION',
     subtitle: 'Industrial Lines For Cleaning, Washing, Pitting, De-Seeding, Drying, Grading And Vacuum Packing of Dates',
-    heroImage: '/turnkey-brochures/images/dates-gallery/dates_hero.webp',
+    heroImage: '/assets/plants/food/dates-gallery/dates_hero.webp',
     stats: {
       capacity: '500 Kg–4 Ton',
       stages: '11 Stage',
@@ -324,8 +324,8 @@ const CORE_PROJECTS = {
         { title: 'Automatic Pitting', desc: 'High-speed mechanical pitting rollers extract seeds without tearing flesh.' },
         { title: 'Vacuum Freshness', desc: 'Packaging lines lock in texture and moisture for shelf-life extension.' }
       ],
-      image: '/turnkey-brochures/images/6_dates.webp',
-      photoImage: '/turnkey-brochures/images/dates-gallery/pitting_machine.webp',
+      image: '/assets/plants/food/6_dates.webp',
+      photoImage: '/assets/plants/food/dates-gallery/pitting_machine.webp',
       features4: [
         { title: 'Gentle Handling', desc: 'Air bubble washers protect delicate date skins' },
         { title: 'Automatic Pitting', desc: 'High-speed needle pitters extract seeds cleanly' },
@@ -361,12 +361,12 @@ const CORE_PROJECTS = {
       { id: 11, title: 'Carton boxing', desc: 'Finished packs are stacked in shipping cases and logged for distribution.' }
     ],
     machinery: [
-      { name: 'Bubble Washing System', image: '/turnkey-brochures/images/dates-gallery/bubble_washer.webp', desc: 'Food-grade washing bath with bottom air injection manifolds.' },
-      { name: 'Polishing & Brushing Drum', image: '/turnkey-brochures/images/dates-gallery/polishing_drum.webp', desc: 'Rotating drum lined with soft brushes and oil spray nozzles.' },
-      { name: 'Dates Pitting Machine', image: '/turnkey-brochures/images/dates-gallery/pitting_machine.webp', desc: 'Piston-driven needle de-seeding system with separated seed chute.' },
-      { name: 'Dates Drying Conveyor', image: '/turnkey-brochures/images/dates-gallery/drying_conveyor.webp', desc: 'Continuous hot-air conveyor dryer designed to dry dates uniformly.' },
-      { name: 'Vacuum Sealing Line', image: '/turnkey-brochures/images/dates-gallery/vacuum_sealer.webp', desc: 'Industrial multi-chamber vacuum sealer for plastic pouches and trays.' },
-      { name: 'Grading Conveyor Belt', image: '/turnkey-brochures/images/dates-gallery/grading_conveyor.webp', desc: 'Ergonomic conveyor belt with collection channels for sorted grades.' }
+      { name: 'Bubble Washing System', image: '/assets/plants/food/dates-gallery/bubble_washer.webp', desc: 'Food-grade washing bath with bottom air injection manifolds.' },
+      { name: 'Polishing & Brushing Drum', image: '/assets/plants/food/dates-gallery/polishing_drum.webp', desc: 'Rotating drum lined with soft brushes and oil spray nozzles.' },
+      { name: 'Dates Pitting Machine', image: '/assets/plants/food/dates-gallery/pitting_machine.webp', desc: 'Piston-driven needle de-seeding system with separated seed chute.' },
+      { name: 'Dates Drying Conveyor', image: '/assets/plants/food/dates-gallery/drying_conveyor.webp', desc: 'Continuous hot-air conveyor dryer designed to dry dates uniformly.' },
+      { name: 'Vacuum Sealing Line', image: '/assets/plants/food/dates-gallery/vacuum_sealer.webp', desc: 'Industrial multi-chamber vacuum sealer for plastic pouches and trays.' },
+      { name: 'Grading Conveyor Belt', image: '/assets/plants/food/dates-gallery/grading_conveyor.webp', desc: 'Ergonomic conveyor belt with collection channels for sorted grades.' }
     ],
     applications: [
       { title: 'Premium Retail Dates', desc: 'Cartons, plastic trays, and vacuum pouches for grocery retail.' },
@@ -377,20 +377,20 @@ const CORE_PROJECTS = {
       { title: 'Export Trade Supply', desc: 'Bulk date packs boxed for Middle East and global wholesale.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/6_dates.webp', caption: 'Dates Processing Plant Layout' },
-      { src: '/turnkey-brochures/images/dates-gallery/bubble_washer.webp', caption: 'Bubble Washing System' },
-      { src: '/turnkey-brochures/images/dates-gallery/polishing_drum.webp', caption: 'Polishing & Brushing Drum' },
-      { src: '/turnkey-brochures/images/dates-gallery/pitting_machine.webp', caption: 'Dates Pitting Machine' },
-      { src: '/turnkey-brochures/images/dates-gallery/drying_conveyor.webp', caption: 'Dates Drying Conveyor' },
-      { src: '/turnkey-brochures/images/dates-gallery/vacuum_sealer.webp', caption: 'Vacuum Sealing Line' },
-      { src: '/turnkey-brochures/images/dates-gallery/grading_conveyor.webp', caption: 'Grading Conveyor Belt' }
+      { src: '/assets/plants/food/6_dates.webp', caption: 'Dates Processing Plant Layout' },
+      { src: '/assets/plants/food/dates-gallery/bubble_washer.webp', caption: 'Bubble Washing System' },
+      { src: '/assets/plants/food/dates-gallery/polishing_drum.webp', caption: 'Polishing & Brushing Drum' },
+      { src: '/assets/plants/food/dates-gallery/pitting_machine.webp', caption: 'Dates Pitting Machine' },
+      { src: '/assets/plants/food/dates-gallery/drying_conveyor.webp', caption: 'Dates Drying Conveyor' },
+      { src: '/assets/plants/food/dates-gallery/vacuum_sealer.webp', caption: 'Vacuum Sealing Line' },
+      { src: '/assets/plants/food/dates-gallery/grading_conveyor.webp', caption: 'Grading Conveyor Belt' }
     ]
   },
   'petroleum-jelly-manufacturing-plant': {
     title: 'Petroleum Jelly Manufacturing Plant',
     badge: 'TURNKEY CHEMICAL & PHARMA SOLUTION',
     subtitle: 'Melting, Blending, Micro-filtration And Jar Filling Lines For Cosmetic and Pharmaceutical Grade Petroleum Jelly',
-    heroImage: '/turnkey-brochures/images/petrojelly-gallery/petrojelly_hero.webp',
+    heroImage: '/assets/plants/cosmetics/petrojelly-gallery/petrojelly_hero.webp',
     stats: {
       capacity: '500 Ltr–3,000 Ltr',
       stages: '10 Stage',
@@ -405,8 +405,8 @@ const CORE_PROJECTS = {
         { title: 'Jacketed Piping', desc: 'Steam-heated transfer lines prevent material solidifying.' },
         { title: 'Vacuum Deaeration', desc: 'Removes air bubbles during blending to yield smooth jelly texture.' }
       ],
-      image: '/turnkey-brochures/images/7_petrolium_jelly.webp',
-      photoImage: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.webp',
+      image: '/assets/plants/food/7_petrolium_jelly.webp',
+      photoImage: '/assets/plants/cosmetics/petrojelly-gallery/vacuum_emulsifier.webp',
       features4: [
         { title: 'GMP Compliant', desc: 'Meets FDA and pharmaceutical manufacturing norms' },
         { title: 'Vacuum Deaeration', desc: 'Air-free blending yields perfectly smooth jelly' },
@@ -441,12 +441,12 @@ const CORE_PROJECTS = {
       { id: 10, title: 'Capping & Labeling', desc: 'Automatic capping and labelers apply lids and decals to finished jars.' }
     ],
     machinery: [
-      { name: 'Wax Melting Vessel', image: '/turnkey-brochures/images/petrojelly-gallery/wax_melter.webp', desc: 'Steam-jacketed vessel with slow agitator for melting paraffin block bases.' },
-      { name: 'Vacuum Emulsifier Tank', image: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.webp', desc: 'High-shear homogenizing mixer with vacuum pump and contra-rotation scrapers.' },
-      { name: 'Jacketed Filtration Skid', image: '/turnkey-brochures/images/petrojelly-gallery/filtration_skid.webp', desc: 'Heated cartridge filter housing to clarify raw molten petroleum jelly.' },
-      { name: 'Molten Jelly Filler', image: '/turnkey-brochures/images/petrojelly-gallery/jelly_filler.webp', desc: 'Heat-traced volumetric dosing machine with anti-drip filling nozzles.' },
-      { name: 'Cooling Conveyor Tunnel', image: '/turnkey-brochures/images/petrojelly-gallery/cooling_tunnel.webp', desc: 'Multi-pass insulated tunnel circulating chilled air for jelly setting.' },
-      { name: 'Induction Bottle Sealer', image: '/turnkey-brochures/images/petrojelly-gallery/bottle_sealer.webp', desc: 'Automatic electromagnetic induction sealer applying lids to jars.' }
+      { name: 'Wax Melting Vessel', image: '/assets/plants/cosmetics/petrojelly-gallery/wax_melter.webp', desc: 'Steam-jacketed vessel with slow agitator for melting paraffin block bases.' },
+      { name: 'Vacuum Emulsifier Tank', image: '/assets/plants/cosmetics/petrojelly-gallery/vacuum_emulsifier.webp', desc: 'High-shear homogenizing mixer with vacuum pump and contra-rotation scrapers.' },
+      { name: 'Jacketed Filtration Skid', image: '/assets/plants/cosmetics/petrojelly-gallery/filtration_skid.webp', desc: 'Heated cartridge filter housing to clarify raw molten petroleum jelly.' },
+      { name: 'Molten Jelly Filler', image: '/assets/plants/cosmetics/petrojelly-gallery/jelly_filler.webp', desc: 'Heat-traced volumetric dosing machine with anti-drip filling nozzles.' },
+      { name: 'Cooling Conveyor Tunnel', image: '/assets/plants/cosmetics/petrojelly-gallery/cooling_tunnel.webp', desc: 'Multi-pass insulated tunnel circulating chilled air for jelly setting.' },
+      { name: 'Induction Bottle Sealer', image: '/assets/plants/cosmetics/petrojelly-gallery/bottle_sealer.webp', desc: 'Automatic electromagnetic induction sealer applying lids to jars.' }
     ],
     applications: [
       { title: 'Cosmetic Skin Care', desc: 'Retail personal care skin protectants, lip balms, and baby creams.' },
@@ -457,20 +457,20 @@ const CORE_PROJECTS = {
       { title: 'Veterinary Lubricants', desc: 'Animal skin care protectants and dairy teat ointments.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/7_petrolium_jelly.webp', caption: 'Petroleum Jelly Plant Layout' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/wax_melter.webp', caption: 'Wax Melting Vessel' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/vacuum_emulsifier.webp', caption: 'Vacuum Emulsifier Tank' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/filtration_skid.webp', caption: 'Jacketed Filtration Skid' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/jelly_filler.webp', caption: 'Molten Jelly Filler' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/cooling_tunnel.webp', caption: 'Cooling Conveyor Tunnel' },
-      { src: '/turnkey-brochures/images/petrojelly-gallery/bottle_sealer.webp', caption: 'Induction Bottle Sealer' }
+      { src: '/assets/plants/food/7_petrolium_jelly.webp', caption: 'Petroleum Jelly Plant Layout' },
+      { src: '/assets/plants/cosmetics/petrojelly-gallery/wax_melter.webp', caption: 'Wax Melting Vessel' },
+      { src: '/assets/plants/cosmetics/petrojelly-gallery/vacuum_emulsifier.webp', caption: 'Vacuum Emulsifier Tank' },
+      { src: '/assets/plants/cosmetics/petrojelly-gallery/filtration_skid.webp', caption: 'Jacketed Filtration Skid' },
+      { src: '/assets/plants/cosmetics/petrojelly-gallery/jelly_filler.webp', caption: 'Molten Jelly Filler' },
+      { src: '/assets/plants/cosmetics/petrojelly-gallery/cooling_tunnel.webp', caption: 'Cooling Conveyor Tunnel' },
+      { src: '/assets/plants/cosmetics/petrojelly-gallery/bottle_sealer.webp', caption: 'Induction Bottle Sealer' }
     ]
   },
   'jackfruit-canning-retort-line': {
     title: 'Jackfruit Canning & Retort Line',
     badge: 'TURNKEY FRUIT CANNING SOLUTION',
     subtitle: 'Peeling, Slicing, Syrup Staging, Can Filling, Seaming And Retort Sterilization Lines For Jackfruit',
-    heroImage: '/turnkey-brochures/images/jackfruit-gallery/jackfruit_canning_hero_banner.webp',
+    heroImage: '/assets/plants/food/jackfruit-gallery/jackfruit_canning_hero_banner.webp',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'jecked_fruit_canned_line.pdf',
     stats: {
@@ -487,8 +487,8 @@ const CORE_PROJECTS = {
         { title: 'Retort Sterilization', desc: 'Overpressure autoclaves achieve full sterility for ambient storage.' },
         { title: 'Syrup Dosing', desc: 'Precise syrup dispensers maintain consistent Brix ratios.' }
       ],
-      image: '/turnkey-brochures/images/8_jackfruit.webp',
-      photoImage: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.webp',
+      image: '/assets/plants/food/8_jackfruit.webp',
+      photoImage: '/assets/plants/food/jackfruit-gallery/retort_autoclave.webp',
       features4: [
         { title: 'Hermetic Seaming', desc: 'Double-seam can lids ensure absolute seal integrity' },
         { title: 'Retort Sterilized', desc: 'Autoclave sterilization for ambient shelf storage' },
@@ -524,12 +524,12 @@ const CORE_PROJECTS = {
       { id: 11, title: 'Labeling & Box packing', desc: 'Self-adhesive labels are applied, and cans are packed into shipping boxes.' }
     ],
     machinery: [
-      { name: 'Continuous Belt Blancher', image: '/turnkey-brochures/images/jackfruit-gallery/belt_blancher.webp', desc: 'Hot-water blanching chamber with VFD mesh conveyor belt.' },
-      { name: 'Syrup Prep Vessel', image: '/turnkey-brochures/images/jackfruit-gallery/syrup_vessel.webp', desc: 'Steam-jacketed sugar dissolution tank with high-speed agitator.' },
-      { name: 'Can Rotary Filler', image: '/turnkey-brochures/images/jackfruit-gallery/can_filler.webp', desc: 'Sanitary volumetric bulb and syrup filler for standard tin cans.' },
-      { name: 'Automatic Can Seamer', image: '/turnkey-brochures/images/jackfruit-gallery/can_seamer.webp', desc: 'Heavy-duty can seamer applying double-seam vacuum lids.' },
-      { name: 'Retort Autoclave Sterilizer', image: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.webp', desc: 'Horizontal steam autoclave sterilizer with PLC record loggers.' },
-      { name: 'Latex Spray Washer', image: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.webp', desc: 'Conveyor wash cabin with high-pressure fan sprayers.' }
+      { name: 'Continuous Belt Blancher', image: '/assets/plants/food/jackfruit-gallery/belt_blancher.webp', desc: 'Hot-water blanching chamber with VFD mesh conveyor belt.' },
+      { name: 'Syrup Prep Vessel', image: '/assets/plants/food/jackfruit-gallery/syrup_vessel.webp', desc: 'Steam-jacketed sugar dissolution tank with high-speed agitator.' },
+      { name: 'Can Rotary Filler', image: '/assets/plants/food/jackfruit-gallery/can_filler.webp', desc: 'Sanitary volumetric bulb and syrup filler for standard tin cans.' },
+      { name: 'Automatic Can Seamer', image: '/assets/plants/food/jackfruit-gallery/can_seamer.webp', desc: 'Heavy-duty can seamer applying double-seam vacuum lids.' },
+      { name: 'Retort Autoclave Sterilizer', image: '/assets/plants/food/jackfruit-gallery/retort_autoclave.webp', desc: 'Horizontal steam autoclave sterilizer with PLC record loggers.' },
+      { name: 'Latex Spray Washer', image: '/assets/plants/food/jackfruit-gallery/latex_washer.webp', desc: 'Conveyor wash cabin with high-pressure fan sprayers.' }
     ],
     applications: [
       { title: 'Canned Sweet Jackfruit', desc: 'Sweet canned jackfruit bulbs in heavy sugar syrup for dessert lines.' },
@@ -540,20 +540,20 @@ const CORE_PROJECTS = {
       { title: 'Export Retort Pouches', desc: 'Sterilized retort flexible pouch packaging for export grocery stores.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/8_jackfruit.webp', caption: 'Jackfruit Canning & Retort Plant Layout' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/belt_blancher.webp', caption: 'Continuous Belt Blancher' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/syrup_vessel.webp', caption: 'Syrup Prep Vessel' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/can_filler.webp', caption: 'Can Rotary Filler' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/can_seamer.webp', caption: 'Automatic Can Seamer' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave.webp', caption: 'Retort Autoclave Sterilizer' },
-      { src: '/turnkey-brochures/images/jackfruit-gallery/latex_washer.webp', caption: 'Latex Spray Washer' }
+      { src: '/assets/plants/food/8_jackfruit.webp', caption: 'Jackfruit Canning & Retort Plant Layout' },
+      { src: '/assets/plants/food/jackfruit-gallery/belt_blancher.webp', caption: 'Continuous Belt Blancher' },
+      { src: '/assets/plants/food/jackfruit-gallery/syrup_vessel.webp', caption: 'Syrup Prep Vessel' },
+      { src: '/assets/plants/food/jackfruit-gallery/can_filler.webp', caption: 'Can Rotary Filler' },
+      { src: '/assets/plants/food/jackfruit-gallery/can_seamer.webp', caption: 'Automatic Can Seamer' },
+      { src: '/assets/plants/food/jackfruit-gallery/retort_autoclave.webp', caption: 'Retort Autoclave Sterilizer' },
+      { src: '/assets/plants/food/jackfruit-gallery/latex_washer.webp', caption: 'Latex Spray Washer' }
     ]
   },
   'mayonnaise-processing-plant': {
     title: 'Mayonnaise Processing Plant',
     badge: 'TURNKEY MAYONNAISE PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solutions for Industrial Mayonnaise Manufacturing, Processing & Packaging',
-    heroImage: '/turnkey-brochures/images/mayonnaise_card.webp',
+    heroImage: '/assets/plants/food/mayonnaise_card.webp',
     pdfFile: 'mayonnaise.pdf',
     stats: {
       capacity: '500 Ltr–3,000 Ltr',
@@ -565,8 +565,8 @@ const CORE_PROJECTS = {
       p1: 'High capacity production with hygienic stainless steel design and PLC based automation.',
       p2: 'Ensures consistent emulsion quality, reduced production losses, and food-grade processing standards.',
       highlights: [],
-      image: '/turnkey-brochures/images/mayonnaise_card.webp',
-      photoImage: '/turnkey-brochures/images/mayonnaise_card.webp',
+      image: '/assets/plants/food/mayonnaise_card.webp',
+      photoImage: '/assets/plants/food/mayonnaise_card.webp',
       features4: []
     },
     capacities: [],
@@ -595,8 +595,8 @@ const CORE_PROJECTS = {
         { title: 'Multi-stage Dryers', desc: 'Convective tunnel dryers reduce moisture to 12% without stress fractures.' },
         { title: 'Die Adaptability', desc: 'Quick-change bronze or teflon dies support multiple pasta shapes.' }
       ],
-      image: '/turnkey-brochures/images/9_pasta_making.webp',
-      photoImage: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp',
+      image: '/assets/plants/food/9_pasta_making.webp',
+      photoImage: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp',
       features4: [
         { title: 'Vacuum Extrusion', desc: 'Air-free dough prevents cracking during tunnel drying' },
         { title: 'Die Adaptability', desc: 'Quick-change dies support multiple pasta shapes' },
@@ -631,12 +631,12 @@ const CORE_PROJECTS = {
       { id: 10, title: 'Flow Wrapping', desc: 'Wraps and heat-seals finished pasta in retail-grade film bags.' }
     ],
     machinery: [
-      { name: 'Flour Sifter Conveyor', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Vibratory flour sifting hopper with screw elevator loader.' },
-      { name: 'Vacuum Extruder Press', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'Sanitary extruder with cooled barrel and quick-change dies.' },
-      { name: 'Vibratory Pre-Dryer', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Shaking tray pre-dryer utilizing hot air blast nozzles.' },
-      { name: 'Multi-Pass Tunnel Dryer', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'Enclosed convective tunnel dryer with temperature and humidity control.' },
-      { name: 'Multi-Head Weigher Filler', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: '14-head rotary combination scale with automatic drop chute.' },
-      { name: 'Horizontal Flow Wrapper', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'High-speed pillow bag packaging line with print registration sensors.' }
+      { name: 'Flour Sifter Conveyor', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Vibratory flour sifting hopper with screw elevator loader.' },
+      { name: 'Vacuum Extruder Press', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'Sanitary extruder with cooled barrel and quick-change dies.' },
+      { name: 'Vibratory Pre-Dryer', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Shaking tray pre-dryer utilizing hot air blast nozzles.' },
+      { name: 'Multi-Pass Tunnel Dryer', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'Enclosed convective tunnel dryer with temperature and humidity control.' },
+      { name: 'Multi-Head Weigher Filler', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: '14-head rotary combination scale with automatic drop chute.' },
+      { name: 'Horizontal Flow Wrapper', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'High-speed pillow bag packaging line with print registration sensors.' }
     ],
     applications: [
       { title: 'Dry Short Pasta', desc: 'Penne, fusilli, macaroni, and shell retail boxes and bags.' },
@@ -647,13 +647,13 @@ const CORE_PROJECTS = {
       { title: 'Bulk Institutional Stock', desc: 'Catering and school lunch bulk cardboard carton supplies.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/9_pasta_making.webp', caption: 'Pasta Production Line Overview' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', caption: 'Semolina Flour Intake Elevators' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/silos.webp', caption: 'Vacuum Extruder Head & Dies' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', caption: 'Shaker Pre-Dryer Platform' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', caption: 'Multi-Pass Drying Chambers' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', caption: 'Multi-Head Combination Weighers' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', caption: 'High-Speed Flow Packaging Line' }
+      { src: '/assets/plants/food/9_pasta_making.webp', caption: 'Pasta Production Line Overview' },
+      { src: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', caption: 'Semolina Flour Intake Elevators' },
+      { src: '/assets/plants/beverages/beetroot-gallery/silos.webp', caption: 'Vacuum Extruder Head & Dies' },
+      { src: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', caption: 'Shaker Pre-Dryer Platform' },
+      { src: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', caption: 'Multi-Pass Drying Chambers' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', caption: 'Multi-Head Combination Weighers' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', caption: 'High-Speed Flow Packaging Line' }
     ]
   },
   'peanut-butter-processing-plant': {
@@ -675,8 +675,8 @@ const CORE_PROJECTS = {
         { title: 'Colloid Mill Grinding', desc: 'High-shear micronization achieves ultra-smooth or crunchy textures.' },
         { title: 'Vacuum Deaeration', desc: 'Prevents oil rancidity and extends ambient shelf life.' }
       ],
-      image: '/turnkey-brochures/images/10_peanut_butter.webp',
-      photoImage: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp',
+      image: '/assets/plants/food/10_peanut_butter.webp',
+      photoImage: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp',
       features4: [
         { title: 'Uniform Roasting', desc: 'Consistent heat profile develops rich peanut aroma' },
         { title: 'Colloid Grinding', desc: 'High-shear mill achieves smooth or crunchy texture' },
@@ -712,12 +712,12 @@ const CORE_PROJECTS = {
       { id: 11, title: 'Induction Sealing', desc: 'Seals jar mouths with foil laminate, followed by retail labeling.' }
     ],
     machinery: [
-      { name: 'Rotary Hot-Air Roaster', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Batch or continuous hot-air roaster with temperature profiling.' },
-      { name: 'Conveyor Cooling Bed', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Suction fan mesh conveyor designed to cool peanuts rapidly.' },
-      { name: 'Peanut Skin Blancher', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'Abrasive rubber roller peeler with integrated dust collector.' },
-      { name: 'High-Shear Colloid Mill', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'Water-cooled micronizing mill for producing fine nut pastes.' },
-      { name: 'Jacketed Vacuum Mixer', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'Heated mixing vessel equipped with scraping blades and vacuum pump.' },
-      { name: 'Volumetric Jar Filler', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Volumetric piston filling machine with cut-off nozzle for thick pastes.' }
+      { name: 'Rotary Hot-Air Roaster', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Batch or continuous hot-air roaster with temperature profiling.' },
+      { name: 'Conveyor Cooling Bed', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Suction fan mesh conveyor designed to cool peanuts rapidly.' },
+      { name: 'Peanut Skin Blancher', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'Abrasive rubber roller peeler with integrated dust collector.' },
+      { name: 'High-Shear Colloid Mill', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'Water-cooled micronizing mill for producing fine nut pastes.' },
+      { name: 'Jacketed Vacuum Mixer', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'Heated mixing vessel equipped with scraping blades and vacuum pump.' },
+      { name: 'Volumetric Jar Filler', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: 'Volumetric piston filling machine with cut-off nozzle for thick pastes.' }
     ],
     applications: [
       { title: 'Retail Peanut Butter', desc: 'Smooth, creamy, and crunchy jars for supermarket shelves.' },
@@ -728,20 +728,20 @@ const CORE_PROJECTS = {
       { title: 'Bulk Ingredient Supply', desc: 'Commercial steel buckets and drums for industrial food factories.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/10_peanut_butter.webp', caption: 'Peanut Butter Processing Plant Layout' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', caption: 'Rotary Peanut Roasting Station' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', caption: 'Nuts Air Cooling Bed' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', caption: 'Abrasive Roller Blanchers' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/silos.webp', caption: 'Colloid Grinding Mills' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', caption: 'Jacketed Vacuum Blending Reactor' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', caption: 'Volumetric Glass Jar Bottling' }
+      { src: '/assets/plants/food/10_peanut_butter.webp', caption: 'Peanut Butter Processing Plant Layout' },
+      { src: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', caption: 'Rotary Peanut Roasting Station' },
+      { src: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', caption: 'Nuts Air Cooling Bed' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', caption: 'Abrasive Roller Blanchers' },
+      { src: '/assets/plants/beverages/beetroot-gallery/silos.webp', caption: 'Colloid Grinding Mills' },
+      { src: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', caption: 'Jacketed Vacuum Blending Reactor' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', caption: 'Volumetric Glass Jar Bottling' }
     ]
   },
   'ginger-garlic-paste-plant': {
     title: 'Ginger Garlic Paste Plant',
     badge: 'TURNKEY GINGER GARLIC PASTE SOLUTION',
     subtitle: 'Complete Turnkey Lines For Peeling, Washing, Grinding, Blending, Pasteurization And Packaging Of Ginger Garlic Paste',
-    heroImage: '/turnkey-brochures/images/11_ginger_garlic_plant.webp',
+    heroImage: '/assets/plants/food/11_ginger_garlic_plant.webp',
     pdfFile: 'ginger_garlic_plant.pdf',
     overview: {
       title: 'Complete Ginger Garlic Paste Solution',
@@ -752,8 +752,8 @@ const CORE_PROJECTS = {
         { title: 'OEE Optimised', desc: '85%+ Overall Equipment Effectiveness target' },
         { title: 'Global Standards', desc: 'FSSAI, FDA, CE, ISO 22000 compliant designs' }
       ],
-      image: '/turnkey-brochures/images/11_ginger_garlic_plant.webp',
-      photoImage: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp',
+      image: '/assets/plants/food/11_ginger_garlic_plant.webp',
+      photoImage: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp',
       features4: [
         { title: 'Aroma Preserved', desc: 'Rapid processing retains natural pungency and oils' },
         { title: 'Hygienic Process', desc: 'Food grade SS304/SS316L line with CIP system' },
@@ -771,27 +771,27 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Aseptic Filling & Packaging', desc: 'High-speed piston fillers deposit finished paste into pouches, jars, or tubs under nitrogen-flush conditions.' }
     ],
     machinery: [
-      { name: 'Rotary Root Washer', image: '/turnkey-brochures/images/beetroot-gallery/washing-machine.webp', desc: 'Heavy-duty rotary drum washer with multi-stage high-pressure spray nozzles for thorough root cleaning.' },
-      { name: 'Abrasive Peeler', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Carborundum drum peeler with water spray for continuous high-capacity ginger and garlic skin removal.' },
-      { name: 'Colloid Grinding Mill', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'High-shear water-cooled colloid mill producing uniformly fine paste at controlled temperatures.' },
-      { name: 'Jacketed Blending Vessel', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'SS316L jacketed reactor with contra-rotating agitator for homogeneous paste blending under vacuum.' },
-      { name: 'Plate Pasteurizer', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Sanitary plate heat exchanger skid with PLC temperature and dwell-time monitoring and logging.' },
-      { name: 'Pouch & Jar Filling Line', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Automatic piston filler with nitrogen-flush and sealing station for pouches, jars, and stand-up bags.' }
+      { name: 'Rotary Root Washer', image: '/assets/plants/beverages/beetroot-gallery/washing-machine.webp', desc: 'Heavy-duty rotary drum washer with multi-stage high-pressure spray nozzles for thorough root cleaning.' },
+      { name: 'Abrasive Peeler', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Carborundum drum peeler with water spray for continuous high-capacity ginger and garlic skin removal.' },
+      { name: 'Colloid Grinding Mill', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'High-shear water-cooled colloid mill producing uniformly fine paste at controlled temperatures.' },
+      { name: 'Jacketed Blending Vessel', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'SS316L jacketed reactor with contra-rotating agitator for homogeneous paste blending under vacuum.' },
+      { name: 'Plate Pasteurizer', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Sanitary plate heat exchanger skid with PLC temperature and dwell-time monitoring and logging.' },
+      { name: 'Pouch & Jar Filling Line', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: 'Automatic piston filler with nitrogen-flush and sealing station for pouches, jars, and stand-up bags.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/11_ginger_garlic_plant.webp', caption: 'Ginger Garlic Paste Plant Overview' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/washing-machine.webp', caption: 'Root Washing & Cleaning Station' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', caption: 'Abrasive Drum Peeling Unit' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', caption: 'Jacketed Blending & Mixing Vessels' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', caption: 'Plate Pasteurizer Skid' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', caption: 'Automated Pouch Filling Line' }
+      { src: '/assets/plants/food/11_ginger_garlic_plant.webp', caption: 'Ginger Garlic Paste Plant Overview' },
+      { src: '/assets/plants/beverages/beetroot-gallery/washing-machine.webp', caption: 'Root Washing & Cleaning Station' },
+      { src: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', caption: 'Abrasive Drum Peeling Unit' },
+      { src: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', caption: 'Jacketed Blending & Mixing Vessels' },
+      { src: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', caption: 'Plate Pasteurizer Skid' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', caption: 'Automated Pouch Filling Line' }
     ]
   },
   'black-pepper-powder-line': {
     title: 'Black Pepper Powder Line',
     badge: 'TURNKEY BLACK PEPPER POWDER SOLUTION',
     subtitle: 'Complete Turnkey Line For Cleaning, Drying, Cryogenic Grinding, Sieving And Packaging Of Black Pepper Powder',
-    heroImage: '/turnkey-brochures/images/12_blank_pepper_powder.webp',
+    heroImage: '/assets/plants/food/12_blank_pepper_powder.webp',
     overview: {
       title: 'Complete Black Pepper Processing Solution',
       p1: 'Salvin Industries\' Black Pepper Powder Line is a premium turnkey solution engineered to preserve the volatile piperine content, aroma, and distinctive colour of black pepper throughout the milling process. Our integrated lines take raw cleaned berries through controlled drying, cryogenic grinding, and air-classified sieving.',
@@ -801,8 +801,8 @@ const CORE_PROJECTS = {
         { title: 'OEE Optimised', desc: '85%+ Overall Equipment Effectiveness target' },
         { title: 'Global Standards', desc: 'FSSAI, FDA, CE, ISO 22000 compliant designs' }
       ],
-      image: '/turnkey-brochures/images/12_blank_pepper_powder.webp',
-      photoImage: '/turnkey-brochures/images/turmeric-gallery/impact_crusher.webp',
+      image: '/assets/plants/food/12_blank_pepper_powder.webp',
+      photoImage: '/assets/plants/spices/turmeric-gallery/impact_crusher.webp',
       features4: [
         { title: 'Piperine Preserved', desc: 'Cryogenic grinding protects volatile pepper oils' },
         { title: 'Consistent Mesh', desc: 'Classified sieving for uniform powder particle size' },
@@ -821,27 +821,27 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Metal Detection & Packaging', desc: 'Inline metal detectors scan the powder stream before FFS machines pack it into nitrogen-flushed pouches or bulk sacks.' }
     ],
     machinery: [
-      { name: 'Vibrating Screen Cleaner', image: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp', desc: 'Multi-deck vibrating screen with integrated aspiration hood for cleaning raw pepper berries.' },
-      { name: 'Continuous Belt Dryer', image: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.webp', desc: 'Multi-pass hot air belt dryer with temperature and humidity monitoring sensors.' },
-      { name: 'Impact Pre-Crusher', image: '/turnkey-brochures/images/turmeric-gallery/impact_crusher.webp', desc: 'Heavy-duty impact crusher for reducing dried whole pepper berries into coarse flakes.' },
-      { name: 'Cryogenic Pin Mill', image: '/turnkey-brochures/images/turmeric-gallery/micro_pulverizer.webp', desc: 'Liquid nitrogen-cooled pulveriser maintaining sub-zero grinding temperatures to protect volatile oils.' },
-      { name: 'Multi-Deck Rotary Sifter', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'High-frequency vibratory sifter classifying powder into precisely controlled mesh size bands.' },
-      { name: 'FFS Packaging Machine', image: '/turnkey-brochures/images/turmeric-gallery/ffs_packaging_machine.webp', desc: 'Vertical form-fill-seal packaging line with nitrogen flush and inline checkweigher.' }
+      { name: 'Vibrating Screen Cleaner', image: '/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp', desc: 'Multi-deck vibrating screen with integrated aspiration hood for cleaning raw pepper berries.' },
+      { name: 'Continuous Belt Dryer', image: '/assets/plants/spices/turmeric-gallery/continuous_belt_dryer.webp', desc: 'Multi-pass hot air belt dryer with temperature and humidity monitoring sensors.' },
+      { name: 'Impact Pre-Crusher', image: '/assets/plants/spices/turmeric-gallery/impact_crusher.webp', desc: 'Heavy-duty impact crusher for reducing dried whole pepper berries into coarse flakes.' },
+      { name: 'Cryogenic Pin Mill', image: '/assets/plants/spices/turmeric-gallery/micro_pulverizer.webp', desc: 'Liquid nitrogen-cooled pulveriser maintaining sub-zero grinding temperatures to protect volatile oils.' },
+      { name: 'Multi-Deck Rotary Sifter', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'High-frequency vibratory sifter classifying powder into precisely controlled mesh size bands.' },
+      { name: 'FFS Packaging Machine', image: '/assets/plants/spices/turmeric-gallery/ffs_packaging_machine.webp', desc: 'Vertical form-fill-seal packaging line with nitrogen flush and inline checkweigher.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/12_blank_pepper_powder.webp', caption: 'Black Pepper Powder Line Overview' },
-      { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Pepper Cleaning & Aspiration Station' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.webp', caption: 'Controlled Belt Drying Section' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/impact_crusher.webp', caption: 'Impact Pre-Crusher Unit' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/micro_pulverizer.webp', caption: 'Cryogenic Pin Mill Grinder' },
-      { src: '/turnkey-brochures/images/turmeric-gallery/ffs_packaging_machine.webp', caption: 'FFS Nitrogen-Flush Packaging Line' }
+      { src: '/assets/plants/food/12_blank_pepper_powder.webp', caption: 'Black Pepper Powder Line Overview' },
+      { src: '/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Pepper Cleaning & Aspiration Station' },
+      { src: '/assets/plants/spices/turmeric-gallery/continuous_belt_dryer.webp', caption: 'Controlled Belt Drying Section' },
+      { src: '/assets/plants/spices/turmeric-gallery/impact_crusher.webp', caption: 'Impact Pre-Crusher Unit' },
+      { src: '/assets/plants/spices/turmeric-gallery/micro_pulverizer.webp', caption: 'Cryogenic Pin Mill Grinder' },
+      { src: '/assets/plants/spices/turmeric-gallery/ffs_packaging_machine.webp', caption: 'FFS Nitrogen-Flush Packaging Line' }
     ]
   },
   'seed-cleaning-sorting-line': {
     title: 'Seed Cleaning & Sorting Line',
     badge: 'TURNKEY SEED CLEANING SOLUTION',
     subtitle: 'Complete Turnkey Multi-Stage Aspiration, Destoning, Grading, Optical Sorting And Packaging Lines For Seeds',
-    heroImage: '/turnkey-brochures/images/13_seed_cleaning_sorting.webp',
+    heroImage: '/assets/plants/food/13_seed_cleaning_sorting.webp',
     pdfFile: 'spices_seeds_cleaning_line.pdf',
     overview: {
       title: 'Complete Seed Cleaning Processing Solution',
@@ -852,8 +852,8 @@ const CORE_PROJECTS = {
         { title: 'OEE Optimised', desc: '85%+ Overall Equipment Effectiveness target' },
         { title: 'Global Standards', desc: 'FSSAI, FDA, CE, ISO 22000 compliant designs' }
       ],
-      image: '/turnkey-brochures/images/13_seed_cleaning_sorting.webp',
-      photoImage: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp',
+      image: '/assets/plants/food/13_seed_cleaning_sorting.webp',
+      photoImage: '/assets/plants/spices/red-chilli-gallery/chilli_sorting_optical.webp',
       features4: [
         { title: 'High Purity Output', desc: 'Multi-stage cleaning removes all foreign material' },
         { title: 'Optical Sorting', desc: 'CCD colour sorters reject damaged or off-colour seeds' },
@@ -871,27 +871,27 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Automatic Bagging & Packaging', desc: 'Multi-head combination weighers and FFS machines pack cleaned seeds into retail pouches or 25–50 kg bulk bags.' }
     ],
     machinery: [
-      { name: 'Pre-Cleaner Aspirator', image: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp', desc: 'Centrifugal aspiration unit with adjustable air velocity for removing dust and chaff from raw seeds.' },
-      { name: 'Multi-Deck Vibrating Screen', image: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp', desc: 'Heavy-duty two or three deck vibrating screen for classifying seeds into size fractions.' },
-      { name: 'Gravity Destoner', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Specific gravity table that separates heavy stone or clay particles from the cleaned seed flow.' },
-      { name: 'Optical Colour Sorter', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'High-speed CCD camera sorter with air-jet ejectors for removing off-colour or damaged seeds.' },
-      { name: 'Fluidised Bed Dryer', image: '/turnkey-brochures/images/turmeric-gallery/continuous_belt_dryer.webp', desc: 'Gentle hot-air fluid bed dryer for moisture adjustment without cracking or damaging seeds.' },
-      { name: 'Automatic Bagging Machine', image: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.webp', desc: 'Multi-head weigher and FFS packaging line for retail pouches and bulk bag filling.' }
+      { name: 'Pre-Cleaner Aspirator', image: '/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp', desc: 'Centrifugal aspiration unit with adjustable air velocity for removing dust and chaff from raw seeds.' },
+      { name: 'Multi-Deck Vibrating Screen', image: '/assets/plants/spices/red-chilli-gallery/chilli_sorting_optical.webp', desc: 'Heavy-duty two or three deck vibrating screen for classifying seeds into size fractions.' },
+      { name: 'Gravity Destoner', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Specific gravity table that separates heavy stone or clay particles from the cleaned seed flow.' },
+      { name: 'Optical Colour Sorter', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'High-speed CCD camera sorter with air-jet ejectors for removing off-colour or damaged seeds.' },
+      { name: 'Fluidised Bed Dryer', image: '/assets/plants/spices/turmeric-gallery/continuous_belt_dryer.webp', desc: 'Gentle hot-air fluid bed dryer for moisture adjustment without cracking or damaging seeds.' },
+      { name: 'Automatic Bagging Machine', image: '/assets/plants/spices/red-chilli-gallery/chilli_packaging_station.webp', desc: 'Multi-head weigher and FFS packaging line for retail pouches and bulk bag filling.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/13_seed_cleaning_sorting.webp', caption: 'Seed Cleaning & Sorting Line Overview' },
-      { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Pre-Aspirator Cleaning Station' },
-      { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_sorting_optical.webp', caption: 'Vibrating Screen Separation Deck' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', caption: 'Gravity Destoner Unit' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', caption: 'Optical Colour Sorting Machine' },
-      { src: '/turnkey-brochures/images/red-chilli-gallery/chilli_packaging_station.webp', caption: 'Automated Seed Bagging & Packaging' }
+      { src: '/assets/plants/food/13_seed_cleaning_sorting.webp', caption: 'Seed Cleaning & Sorting Line Overview' },
+      { src: '/assets/plants/spices/red-chilli-gallery/chilli_cleaning_line.webp', caption: 'Pre-Aspirator Cleaning Station' },
+      { src: '/assets/plants/spices/red-chilli-gallery/chilli_sorting_optical.webp', caption: 'Vibrating Screen Separation Deck' },
+      { src: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', caption: 'Gravity Destoner Unit' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', caption: 'Optical Colour Sorting Machine' },
+      { src: '/assets/plants/spices/red-chilli-gallery/chilli_packaging_station.webp', caption: 'Automated Seed Bagging & Packaging' }
     ]
   },
   'automatic-masala-packing-plant': {
     title: 'Automatic Masala Packing Plant',
     badge: 'TURNKEY MASALA PACKING SOLUTION',
     subtitle: 'Complete Turnkey Solution for Masala Processing, Blending & Packaging',
-    heroImage: '/turnkey-brochures/images/hero-banners/automatic_masala_hero.webp',
+    heroImage: '/assets/core/heroes/hero-banners/automatic_masala_hero.webp',
     pdfFile: 'AMC-30_plant.pdf',
     stats: {
       capacity: '500 Kg–3 Ton',
@@ -907,8 +907,8 @@ const CORE_PROJECTS = {
         { title: 'OEE Optimised', desc: 'High operational equipment effectiveness target' },
         { title: 'Global Standards', desc: 'GMP and food safety compliant designs' }
       ],
-      image: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.webp',
-      photoImage: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.webp',
+      image: '/assets/plants/spices/automatic-masala-packing-plant/ribbon_blender.webp',
+      photoImage: '/assets/plants/spices/automatic-masala-packing-plant/ribbon_blender.webp',
       features4: [
         { title: 'Hygienic Design', desc: 'Food-grade stainless steel construction for maximum safety' },
         { title: 'PLC Automation', desc: 'Advanced control systems for seamless and efficient operation' },
@@ -940,12 +940,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Finished Product Dispatch', desc: 'Packaged masala pouches are readied for dispatch and distribution.' }
     ],
     machinery: [
-      { name: 'Ribbon Blender', image: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.webp', desc: 'High-efficiency ribbon blender for precise mixing of various spices and masala powders.' },
-      { name: 'Screw Conveyor', image: '/turnkey-brochures/images/automatic-masala-packing-plant/spice_hopper_screw_conveyor.webp', desc: 'Automated screw conveyor for dust-free and hygienic material transfer between processing stages.' },
-      { name: 'Vibro Sifter', image: '/turnkey-brochures/images/automatic-masala-packing-plant/vibro_sifter.webp', desc: 'High-capacity vibro sifter for screening and removing oversized particles from the blended masala.' },
-      { name: 'Storage Hopper', image: '/turnkey-brochures/images/automatic-masala-packing-plant/transfer_hopper.webp', desc: 'Stainless steel storage hopper designed to safely hold processed powder before final packaging.' },
-      { name: 'Multihead Weigher', image: '/turnkey-brochures/images/automatic-masala-packing-plant/weighing_dosing.webp', desc: 'High-precision multihead weighing system ensuring accurate filling weight for every pouch.' },
-      { name: 'Automatic Packaging Machine', image: '/turnkey-brochures/images/automatic-masala-packing-plant/packaging_machine.webp', desc: 'Fully automated Form-Fill-Seal (FFS) packaging machine for high-speed packing into pouches.' }
+      { name: 'Ribbon Blender', image: '/assets/plants/spices/automatic-masala-packing-plant/ribbon_blender.webp', desc: 'High-efficiency ribbon blender for precise mixing of various spices and masala powders.' },
+      { name: 'Screw Conveyor', image: '/assets/plants/spices/automatic-masala-packing-plant/spice_hopper_screw_conveyor.webp', desc: 'Automated screw conveyor for dust-free and hygienic material transfer between processing stages.' },
+      { name: 'Vibro Sifter', image: '/assets/plants/spices/automatic-masala-packing-plant/vibro_sifter.webp', desc: 'High-capacity vibro sifter for screening and removing oversized particles from the blended masala.' },
+      { name: 'Storage Hopper', image: '/assets/plants/spices/automatic-masala-packing-plant/transfer_hopper.webp', desc: 'Stainless steel storage hopper designed to safely hold processed powder before final packaging.' },
+      { name: 'Multihead Weigher', image: '/assets/plants/spices/automatic-masala-packing-plant/weighing_dosing.webp', desc: 'High-precision multihead weighing system ensuring accurate filling weight for every pouch.' },
+      { name: 'Automatic Packaging Machine', image: '/assets/plants/spices/automatic-masala-packing-plant/packaging_machine.webp', desc: 'Fully automated Form-Fill-Seal (FFS) packaging machine for high-speed packing into pouches.' }
     ],
     applications: [
       { title: 'Blended Masalas', desc: 'Garam masala, chicken masala, chaat masala, etc.' },
@@ -956,19 +956,19 @@ const CORE_PROJECTS = {
       { title: 'Baking Ingredients', desc: 'Baking powder, cocoa powder, and custard powder.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/spice_hopper_screw_conveyor.webp', caption: 'Spice Hopper Bin & Screw Conveyor' },
-      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/transfer_hopper.webp', caption: 'Transfer Hopper' },
-      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/ribbon_blender.webp', caption: 'Ribbon Blender Mixing System' },
-      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/vibro_sifter.webp', caption: 'Vibro Sifter Screening System' },
-      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/weighing_dosing.webp', caption: 'Automatic Weighing & Dosing System' },
-      { src: '/turnkey-brochures/images/automatic-masala-packing-plant/packaging_machine.webp', caption: 'Automatic Masala Packaging Machine' }
+      { src: '/assets/plants/spices/automatic-masala-packing-plant/spice_hopper_screw_conveyor.webp', caption: 'Spice Hopper Bin & Screw Conveyor' },
+      { src: '/assets/plants/spices/automatic-masala-packing-plant/transfer_hopper.webp', caption: 'Transfer Hopper' },
+      { src: '/assets/plants/spices/automatic-masala-packing-plant/ribbon_blender.webp', caption: 'Ribbon Blender Mixing System' },
+      { src: '/assets/plants/spices/automatic-masala-packing-plant/vibro_sifter.webp', caption: 'Vibro Sifter Screening System' },
+      { src: '/assets/plants/spices/automatic-masala-packing-plant/weighing_dosing.webp', caption: 'Automatic Weighing & Dosing System' },
+      { src: '/assets/plants/spices/automatic-masala-packing-plant/packaging_machine.webp', caption: 'Automatic Masala Packaging Machine' }
     ]
   },
   'fully-automated-ors-plant': {
     title: 'ORS Processing Plant',
     badge: 'TURNKEY ORS PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solution for Processing, Blending & Packaging Oral Rehydration Salts',
-    heroImage: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.webp',
+    heroImage: '/assets/plants/pharma/fully-automated-ors-plant/ors_raw_material.webp',
     pdfFile: 'ORS.pdf',
     stats: {
       capacity: '500 Kg–3 Ton',
@@ -984,8 +984,8 @@ const CORE_PROJECTS = {
         { title: 'GMP Certified', desc: 'Pharmaceutical-grade SS316L sanitary construction' },
         { title: 'High Precision', desc: 'Automated dosing and highly accurate sachet filling' }
       ],
-      image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.webp',
-      photoImage: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.webp',
+      image: '/assets/plants/pharma/fully-automated-ors-plant/ors_raw_material.webp',
+      photoImage: '/assets/plants/pharma/fully-automated-ors-plant/ors_raw_material.webp',
       features4: [
         { title: 'Hygienic Design', desc: 'Pharmaceutical-grade stainless steel construction' },
         { title: 'PLC Automation', desc: 'Strict recipe control and batch traceability' },
@@ -1017,12 +1017,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Quality Inspection', desc: 'Checkweighers and metal detectors verify each sachet before final cartoning.' }
     ],
     machinery: [
-      { name: 'Raw Material Receiving & Storage System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.webp', desc: 'Hygienic SS316L bulk receiving and storage tanks for primary ingredients.' },
-      { name: 'Automatic Weighing & Ingredient Dosing System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_dosing.webp', desc: 'Precision load-cell dosing ensures exact WHO formulation ratios.' },
-      { name: 'Ribbon Blender Mixing System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_blender.webp', desc: 'High-efficiency ribbon blender designed for homogeneous mixing of delicate crystals.' },
-      { name: 'Powder Homogenizer', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_homogenizer.webp', desc: 'Advanced homogenizer to maintain uniform particle distribution before packing.' },
-      { name: 'Quality Inspection & Testing System', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_inspection.webp', desc: 'Integrated laboratory and end-of-line inspection to ensure product safety.' },
-      { name: 'Automatic ORS Sachet Packaging Machine', image: '/turnkey-brochures/images/fully-automated-ors-plant/ors_packaging.webp', desc: 'High-speed VFFS machine optimized for 21.8g ORS sachet filling.' }
+      { name: 'Raw Material Receiving & Storage System', image: '/assets/plants/pharma/fully-automated-ors-plant/ors_raw_material.webp', desc: 'Hygienic SS316L bulk receiving and storage tanks for primary ingredients.' },
+      { name: 'Automatic Weighing & Ingredient Dosing System', image: '/assets/plants/pharma/fully-automated-ors-plant/ors_dosing.webp', desc: 'Precision load-cell dosing ensures exact WHO formulation ratios.' },
+      { name: 'Ribbon Blender Mixing System', image: '/assets/plants/pharma/fully-automated-ors-plant/ors_blender.webp', desc: 'High-efficiency ribbon blender designed for homogeneous mixing of delicate crystals.' },
+      { name: 'Powder Homogenizer', image: '/assets/plants/pharma/fully-automated-ors-plant/ors_homogenizer.webp', desc: 'Advanced homogenizer to maintain uniform particle distribution before packing.' },
+      { name: 'Quality Inspection & Testing System', image: '/assets/plants/pharma/fully-automated-ors-plant/ors_inspection.webp', desc: 'Integrated laboratory and end-of-line inspection to ensure product safety.' },
+      { name: 'Automatic ORS Sachet Packaging Machine', image: '/assets/plants/pharma/fully-automated-ors-plant/ors_packaging.webp', desc: 'High-speed VFFS machine optimized for 21.8g ORS sachet filling.' }
     ],
     applications: [
       { title: 'WHO ORS Packets', desc: 'Standard 21.8g powder sachets for 1L water dilution.' },
@@ -1033,19 +1033,19 @@ const CORE_PROJECTS = {
       { title: 'Zinc Enriched', desc: 'ORS formulations fortified with Zinc supplements.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_raw_material.webp', caption: 'Raw Material Receiving & Storage' },
-      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_dosing.webp', caption: 'Automatic Weighing & Dosing System' },
-      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_blender.webp', caption: 'Ribbon Blender Mixing System' },
-      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_homogenizer.webp', caption: 'Powder Homogenizer' },
-      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_inspection.webp', caption: 'Quality Inspection & Testing' },
-      { src: '/turnkey-brochures/images/fully-automated-ors-plant/ors_packaging.webp', caption: 'Automatic ORS Sachet Packaging' }
+      { src: '/assets/plants/pharma/fully-automated-ors-plant/ors_raw_material.webp', caption: 'Raw Material Receiving & Storage' },
+      { src: '/assets/plants/pharma/fully-automated-ors-plant/ors_dosing.webp', caption: 'Automatic Weighing & Dosing System' },
+      { src: '/assets/plants/pharma/fully-automated-ors-plant/ors_blender.webp', caption: 'Ribbon Blender Mixing System' },
+      { src: '/assets/plants/pharma/fully-automated-ors-plant/ors_homogenizer.webp', caption: 'Powder Homogenizer' },
+      { src: '/assets/plants/pharma/fully-automated-ors-plant/ors_inspection.webp', caption: 'Quality Inspection & Testing' },
+      { src: '/assets/plants/pharma/fully-automated-ors-plant/ors_packaging.webp', caption: 'Automatic ORS Sachet Packaging' }
     ]
   },
   'pickle-processing-and-packaging-plant': {
     title: 'Pickle Processing & Packaging Plant',
     badge: 'TURNKEY PICKLE PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Solution for Fruit & Vegetable Pickle Processing, Brining, and Packaging',
-    heroImage: '/turnkey-brochures/images/pickle-processing-plant/pickle_plant_hero.webp',
+    heroImage: '/assets/plants/spices/pickle-processing-plant/pickle_plant_hero.webp',
     pdfFile: 'PICKLE.pdf',
     stats: {
       capacity: '500 Kg–5 Ton/Hr',
@@ -1061,8 +1061,8 @@ const CORE_PROJECTS = {
         { title: 'Fully Automated', desc: 'Continuous processing from washing to packing' },
         { title: 'High Precision', desc: 'Accurate cutting, slicing, and ingredient dosing' }
       ],
-      image: '/turnkey-brochures/images/pickle-processing-plant/pickle_infographic.webp',
-      photoImage: '/turnkey-brochures/images/pickle-processing-plant/pickle_infographic.webp',
+      image: '/assets/plants/spices/pickle-processing-plant/pickle_infographic.webp',
+      photoImage: '/assets/plants/spices/pickle-processing-plant/pickle_infographic.webp',
       features4: [
         { title: 'Hygienic Design', desc: 'Food-grade stainless steel construction' },
         { title: 'PLC Automation', desc: 'Strict recipe control and batch traceability' },
@@ -1098,12 +1098,12 @@ const CORE_PROJECTS = {
       { id: 17, title: 'Palletizing', desc: 'Cartons are stacked on pallets for dispatch.' }
     ],
     machinery: [
-      { name: 'Raw Material Washing Machine', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_washing.webp', desc: 'High-efficiency fruit and vegetable washing system with water jets.' },
-      { name: 'Sorting & Inspection Conveyor', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_sorting.webp', desc: 'Ergonomic conveyor system for manual grading and defect removal.' },
-      { name: 'Automatic Cutting / Slicing Machine', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_cutting.webp', desc: 'High-capacity dicer and slicer for uniform produce preparation.' },
-      { name: 'Spice Mixing & Blending System', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_mixing.webp', desc: 'Ribbon or paddle blenders for homogeneous spice and oil coating.' },
-      { name: 'Pickle Maturation & Brining Tank System', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_brining.webp', desc: 'SS316L tanks for controlled curing and brine maturation.' },
-      { name: 'Automatic Pickle Filling & Packaging Machine', image: '/turnkey-brochures/images/pickle-processing-plant/pickle_packaging.webp', desc: 'Accurate and hygienic filling lines for glass jars or PET bottles.' }
+      { name: 'Raw Material Washing Machine', image: '/assets/plants/spices/pickle-processing-plant/pickle_washing.webp', desc: 'High-efficiency fruit and vegetable washing system with water jets.' },
+      { name: 'Sorting & Inspection Conveyor', image: '/assets/plants/spices/pickle-processing-plant/pickle_sorting.webp', desc: 'Ergonomic conveyor system for manual grading and defect removal.' },
+      { name: 'Automatic Cutting / Slicing Machine', image: '/assets/plants/spices/pickle-processing-plant/pickle_cutting.webp', desc: 'High-capacity dicer and slicer for uniform produce preparation.' },
+      { name: 'Spice Mixing & Blending System', image: '/assets/plants/spices/pickle-processing-plant/pickle_mixing.webp', desc: 'Ribbon or paddle blenders for homogeneous spice and oil coating.' },
+      { name: 'Pickle Maturation & Brining Tank System', image: '/assets/plants/spices/pickle-processing-plant/pickle_brining.webp', desc: 'SS316L tanks for controlled curing and brine maturation.' },
+      { name: 'Automatic Pickle Filling & Packaging Machine', image: '/assets/plants/spices/pickle-processing-plant/pickle_packaging.webp', desc: 'Accurate and hygienic filling lines for glass jars or PET bottles.' }
     ],
     applications: [
       { title: 'Mango Pickle', desc: 'Traditional diced and sliced raw mango pickles.' },
@@ -1114,27 +1114,27 @@ const CORE_PROJECTS = {
       { title: 'Meat & Seafood Pickles', desc: 'Specialized lines for non-veg pickle variants.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_washing.webp', caption: 'Raw Material Washing Machine' },
-      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_sorting.webp', caption: 'Sorting & Inspection Conveyor' },
-      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_cutting.webp', caption: 'Automatic Cutting / Slicing Machine' },
-      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_mixing.webp', caption: 'Spice Mixing & Blending System' },
-      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_brining.webp', caption: 'Pickle Maturation & Brining Tank System' },
-      { src: '/turnkey-brochures/images/pickle-processing-plant/pickle_packaging.webp', caption: 'Automatic Pickle Filling & Packaging Machine' }
+      { src: '/assets/plants/spices/pickle-processing-plant/pickle_washing.webp', caption: 'Raw Material Washing Machine' },
+      { src: '/assets/plants/spices/pickle-processing-plant/pickle_sorting.webp', caption: 'Sorting & Inspection Conveyor' },
+      { src: '/assets/plants/spices/pickle-processing-plant/pickle_cutting.webp', caption: 'Automatic Cutting / Slicing Machine' },
+      { src: '/assets/plants/spices/pickle-processing-plant/pickle_mixing.webp', caption: 'Spice Mixing & Blending System' },
+      { src: '/assets/plants/spices/pickle-processing-plant/pickle_brining.webp', caption: 'Pickle Maturation & Brining Tank System' },
+      { src: '/assets/plants/spices/pickle-processing-plant/pickle_packaging.webp', caption: 'Automatic Pickle Filling & Packaging Machine' }
     ]
   },
   'milk-powder-processing-packaging-plant': {
     title: 'Milk Powder Processing & Packaging Plant',
     badge: 'TURNKEY MILK POWDER SOLUTION',
     subtitle: 'Complete Turnkey Line From Raw Milk Reception To Spray Drying And Powder Packaging',
-    heroImage: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_hero_banner.webp',
+    heroImage: '/assets/plants/dairy/milk-powder-processing-plant/milk_powder_hero_banner.webp',
     heroStyle: { backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'milk powder.pdf',
     overview: {
       title: 'Complete Milk Powder Plant',
       p1: 'Salvin Industries\' Milk Powder Processing & Packaging Plant is an advanced, fully automated turnkey solution engineered for producing high-quality milk powder. Our integrated lines handle everything from raw milk reception and standardization to evaporation, spray drying, and aseptic packaging.',
       p2: 'Built in compliance with international food safety and dairy standards, our systems ensure precise temperature control, optimal moisture content, and high solubility of the final powder while maximizing energy efficiency and product yield.',
-      image: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_infographic.webp',
-      photoImage: '/turnkey-brochures/images/milk-powder-processing-plant/milk_powder_infographic.webp',
+      image: '/assets/plants/dairy/milk-powder-processing-plant/milk_powder_infographic.webp',
+      photoImage: '/assets/plants/dairy/milk-powder-processing-plant/milk_powder_infographic.webp',
       benefits: [
         { title: 'Consistent Quality', desc: 'Advanced evaporation and spray drying ensures uniform particle size and solubility.' },
         { title: 'Hygienic Design', desc: 'Fully CIP-able stainless steel construction meets strict dairy industry standards.' },
@@ -1153,12 +1153,12 @@ const CORE_PROJECTS = {
       { id: 8, title: 'Powder Packing', desc: 'Hygienic filling into bulk bags or retail pouches.' }
     ],
     machinery: [
-      { name: 'Raw Milk Storage Tank', image: '/turnkey-brochures/images/milk-powder-processing-plant/raw_milk_storage.webp', desc: 'Insulated stainless steel silos for maintaining raw milk quality.' },
-      { name: 'Filtration & Clarification System', image: '/turnkey-brochures/images/milk-powder-processing-plant/filtration_clarification.webp', desc: 'Advanced centrifugal clarification to remove physical impurities.' },
-      { name: 'Milk Standardization System', image: '/turnkey-brochures/images/milk-powder-processing-plant/milk_standardization.webp', desc: 'Precise inline fat standardization for consistent product composition.' },
-      { name: 'Pasteurization Unit', image: '/turnkey-brochures/images/milk-powder-processing-plant/pasteurization_system.webp', desc: 'High-Temperature Short-Time (HTST) pasteurizer with heat recovery.' },
-      { name: 'Evaporation & Spray Drying', image: '/turnkey-brochures/images/milk-powder-processing-plant/evaporation_spray_drying.webp', desc: 'Multi-effect falling film evaporator and highly efficient spray dryer.' },
-      { name: 'Automatic Powder Packing Machine', image: '/turnkey-brochures/images/milk-powder-processing-plant/automatic_powder_packing.webp', desc: 'Hygienic and accurate form-fill-seal packaging for milk powder.' }
+      { name: 'Raw Milk Storage Tank', image: '/assets/plants/dairy/milk-powder-processing-plant/raw_milk_storage.webp', desc: 'Insulated stainless steel silos for maintaining raw milk quality.' },
+      { name: 'Filtration & Clarification System', image: '/assets/plants/dairy/milk-powder-processing-plant/filtration_clarification.webp', desc: 'Advanced centrifugal clarification to remove physical impurities.' },
+      { name: 'Milk Standardization System', image: '/assets/plants/dairy/milk-powder-processing-plant/milk_standardization.webp', desc: 'Precise inline fat standardization for consistent product composition.' },
+      { name: 'Pasteurization Unit', image: '/assets/plants/dairy/milk-powder-processing-plant/pasteurization_system.webp', desc: 'High-Temperature Short-Time (HTST) pasteurizer with heat recovery.' },
+      { name: 'Evaporation & Spray Drying', image: '/assets/plants/dairy/milk-powder-processing-plant/evaporation_spray_drying.webp', desc: 'Multi-effect falling film evaporator and highly efficient spray dryer.' },
+      { name: 'Automatic Powder Packing Machine', image: '/assets/plants/dairy/milk-powder-processing-plant/automatic_powder_packing.webp', desc: 'Hygienic and accurate form-fill-seal packaging for milk powder.' }
     ],
     applications: [
       { title: 'Whole Milk Powder', desc: 'Full-fat powder for direct consumption and culinary use.' },
@@ -1167,12 +1167,12 @@ const CORE_PROJECTS = {
       { title: 'Dairy Ingredients', desc: 'Base powders for chocolates, ice creams, and processed foods.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/milk-powder-processing-plant/raw_milk_storage.webp', caption: 'Raw Milk Reception & Storage Tank' },
-      { src: '/turnkey-brochures/images/milk-powder-processing-plant/filtration_clarification.webp', caption: 'Filtration & Clarification Unit' },
-      { src: '/turnkey-brochures/images/milk-powder-processing-plant/milk_standardization.webp', caption: 'Milk Standardization System' },
-      { src: '/turnkey-brochures/images/milk-powder-processing-plant/pasteurization_system.webp', caption: 'Pasteurization System' },
-      { src: '/turnkey-brochures/images/milk-powder-processing-plant/evaporation_spray_drying.webp', caption: 'Multi-Effect Evaporator & Spray Dryer' },
-      { src: '/turnkey-brochures/images/milk-powder-processing-plant/automatic_powder_packing.webp', caption: 'Automatic Powder Packing Machine' }
+      { src: '/assets/plants/dairy/milk-powder-processing-plant/raw_milk_storage.webp', caption: 'Raw Milk Reception & Storage Tank' },
+      { src: '/assets/plants/dairy/milk-powder-processing-plant/filtration_clarification.webp', caption: 'Filtration & Clarification Unit' },
+      { src: '/assets/plants/dairy/milk-powder-processing-plant/milk_standardization.webp', caption: 'Milk Standardization System' },
+      { src: '/assets/plants/dairy/milk-powder-processing-plant/pasteurization_system.webp', caption: 'Pasteurization System' },
+      { src: '/assets/plants/dairy/milk-powder-processing-plant/evaporation_spray_drying.webp', caption: 'Multi-Effect Evaporator & Spray Dryer' },
+      { src: '/assets/plants/dairy/milk-powder-processing-plant/automatic_powder_packing.webp', caption: 'Automatic Powder Packing Machine' }
     ]
   },
   'economical-kurkure-making-plant': {
@@ -1182,7 +1182,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Economical Kurkure Plant',
     workflowAccentTitle: 'Processing Workflow',
     isPdf: true,
-    heroImage: '/turnkey-brochures/images/economical-kurkure-plant/hero_economical_kurkure.webp',
+    heroImage: '/assets/plants/food/economical-kurkure-plant/hero_economical_kurkure.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'kurkure.pdf',
     stats: { capacity: '100 Kg–500 Kg', stages: '7 Stage', efficiency: '98%', support: '24/7' },
@@ -1196,8 +1196,8 @@ const CORE_PROJECTS = {
         { title: 'Hygienic Operation', desc: 'Food-grade stainless steel construction.' }
       ],
       isBrochure: true,
-      image: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.webp',
-      photoImage: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.webp',
+      image: '/assets/plants/food/economical-kurkure-plant/kurkure_hero_overview.webp',
+      photoImage: '/assets/plants/food/economical-kurkure-plant/kurkure_hero_overview.webp',
       features4: [
         { title: 'Food Grade', desc: 'SS304/SS316 material' },
         { title: 'Cost Effective', desc: 'Economical design' },
@@ -1228,12 +1228,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Packaging', desc: 'Automated packing machines weigh and seal the pouches.' }
     ],
     machinery: [
-      { name: 'Raw Material Storage & Feeding System', image: '/turnkey-brochures/images/economical-kurkure-plant/raw_material_feeding.webp', desc: 'Automated silos and feeders for continuous raw material supply.' },
-      { name: 'Continuous Dough Mixer', image: '/turnkey-brochures/images/economical-kurkure-plant/dough_mixer.webp', desc: 'High-speed mixer for uniform hydration of corn meal.' },
-      { name: 'Kurkure Extruder Machine', image: '/turnkey-brochures/images/economical-kurkure-plant/extrusion_forming.webp', desc: 'Precision extruder for shaping and expanding the snack.' },
-      { name: 'Continuous Frying System', image: '/turnkey-brochures/images/economical-kurkure-plant/continuous_fryer.webp', desc: 'Advanced fryer with continuous oil filtration and temperature control.' },
-      { name: 'Flavoring & Seasoning Drum', image: '/turnkey-brochures/images/economical-kurkure-plant/seasoning_drum.webp', desc: 'Rotary drum with automated powder applicator for even coating.' },
-      { name: 'Automatic Pouch Packing Machine', image: '/turnkey-brochures/images/economical-kurkure-plant/packing_machine.webp', desc: 'High-speed vertical FFS machine with multi-head weighers.' }
+      { name: 'Raw Material Storage & Feeding System', image: '/assets/plants/food/economical-kurkure-plant/raw_material_feeding.webp', desc: 'Automated silos and feeders for continuous raw material supply.' },
+      { name: 'Continuous Dough Mixer', image: '/assets/plants/food/economical-kurkure-plant/dough_mixer.webp', desc: 'High-speed mixer for uniform hydration of corn meal.' },
+      { name: 'Kurkure Extruder Machine', image: '/assets/plants/food/economical-kurkure-plant/extrusion_forming.webp', desc: 'Precision extruder for shaping and expanding the snack.' },
+      { name: 'Continuous Frying System', image: '/assets/plants/food/economical-kurkure-plant/continuous_fryer.webp', desc: 'Advanced fryer with continuous oil filtration and temperature control.' },
+      { name: 'Flavoring & Seasoning Drum', image: '/assets/plants/food/economical-kurkure-plant/seasoning_drum.webp', desc: 'Rotary drum with automated powder applicator for even coating.' },
+      { name: 'Automatic Pouch Packing Machine', image: '/assets/plants/food/economical-kurkure-plant/packing_machine.webp', desc: 'High-speed vertical FFS machine with multi-head weighers.' }
     ],
     applications: [
       { title: 'Masala Kurkure', desc: 'Spicy Indian flavored extruded snacks.' },
@@ -1241,20 +1241,20 @@ const CORE_PROJECTS = {
       { title: 'Cheese Puffs', desc: 'Cheese flavored extruded snacks.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/kurkure_hero_overview.webp', caption: 'Economical Kurkure Making Plant' },
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/raw_material_feeding.webp', caption: 'Raw Material Storage & Feeding System' },
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/dough_mixer.webp', caption: 'Continuous Dough Mixer' },
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/extrusion_forming.webp', caption: 'Kurkure Extruder Machine' },
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/continuous_fryer.webp', caption: 'Continuous Frying System' },
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/seasoning_drum.webp', caption: 'Flavoring & Seasoning Drum' },
-      { src: '/turnkey-brochures/images/economical-kurkure-plant/packing_machine.webp', caption: 'Automatic Pouch Packing Machine' }
+      { src: '/assets/plants/food/economical-kurkure-plant/kurkure_hero_overview.webp', caption: 'Economical Kurkure Making Plant' },
+      { src: '/assets/plants/food/economical-kurkure-plant/raw_material_feeding.webp', caption: 'Raw Material Storage & Feeding System' },
+      { src: '/assets/plants/food/economical-kurkure-plant/dough_mixer.webp', caption: 'Continuous Dough Mixer' },
+      { src: '/assets/plants/food/economical-kurkure-plant/extrusion_forming.webp', caption: 'Kurkure Extruder Machine' },
+      { src: '/assets/plants/food/economical-kurkure-plant/continuous_fryer.webp', caption: 'Continuous Frying System' },
+      { src: '/assets/plants/food/economical-kurkure-plant/seasoning_drum.webp', caption: 'Flavoring & Seasoning Drum' },
+      { src: '/assets/plants/food/economical-kurkure-plant/packing_machine.webp', caption: 'Automatic Pouch Packing Machine' }
     ]
   },
   'protein-powder-production-plant': {
     title: 'Protein Powder Production Plant',
     badge: 'TURNKEY POWDER PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Protein Powder Manufacturing',
-    heroImage: '/turnkey-brochures/images/protein-powder-production-plant/protein-powder-hero.webp',
+    heroImage: '/assets/plants/food/protein-powder-production-plant/protein-powder-hero.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     workflowTitle: 'Protein Powder Plant',
     workflowAccentTitle: 'Workflow',
@@ -1270,8 +1270,8 @@ const CORE_PROJECTS = {
         { title: 'High Yield', desc: 'Optimized for maximum product recovery.' }
       ],
       isBrochure: true,
-      image: '/turnkey-brochures/images/protein-powder-production-plant/protein-powder-hero.webp',
-      photoImage: '/turnkey-brochures/images/protein-powder-production-plant/protein-powder-hero.webp',
+      image: '/assets/plants/food/protein-powder-production-plant/protein-powder-hero.webp',
+      photoImage: '/assets/plants/food/protein-powder-production-plant/protein-powder-hero.webp',
       features4: [
         { title: 'Hygienic Design', desc: 'SS304/SS316 food-grade construction' },
         { title: 'Precision Dosing', desc: 'Accurate ingredient measurement' },
@@ -1302,12 +1302,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Filling & Packaging', desc: 'Precision dosing into wide-mouth jars, tubs, or flexible pouches.' }
     ],
     machinery: [
-      { name: 'Raw Material Handling System', image: '/turnkey-brochures/images/protein-powder-production-plant/raw-material-handling-system.webp', desc: 'Automated intake and storage silos equipped with precise load cells.' },
-      { name: 'Vibratory Sifter', image: '/turnkey-brochures/images/protein-powder-production-plant/vibratory-sifter.webp', desc: 'Multi-deck sifting unit to ensure product purity and consistency.' },
-      { name: 'Ribbon Blender', image: '/turnkey-brochures/images/protein-powder-production-plant/ribbon-blender.webp', desc: 'Heavy-duty industrial blender for homogeneous mixing of dry powders.' },
-      { name: 'Homogenization Unit', image: '/turnkey-brochures/images/protein-powder-production-plant/homogenization-unit.webp', desc: 'High-shear mixer designed to eliminate clumps and improve solubility.' },
-      { name: 'Continuous Fluid Bed Dryer', image: '/turnkey-brochures/images/protein-powder-production-plant/continuous-fluid-bed-dryer.webp', desc: 'Advanced drying system for gentle and uniform moisture removal.' },
-      { name: 'Filling Machine', image: '/turnkey-brochures/images/protein-powder-production-plant/filling-machine.webp', desc: 'High-speed auger filler for accurate dosing into jars and pouches.' }
+      { name: 'Raw Material Handling System', image: '/assets/plants/food/protein-powder-production-plant/raw-material-handling-system.webp', desc: 'Automated intake and storage silos equipped with precise load cells.' },
+      { name: 'Vibratory Sifter', image: '/assets/plants/food/protein-powder-production-plant/vibratory-sifter.webp', desc: 'Multi-deck sifting unit to ensure product purity and consistency.' },
+      { name: 'Ribbon Blender', image: '/assets/plants/food/protein-powder-production-plant/ribbon-blender.webp', desc: 'Heavy-duty industrial blender for homogeneous mixing of dry powders.' },
+      { name: 'Homogenization Unit', image: '/assets/plants/food/protein-powder-production-plant/homogenization-unit.webp', desc: 'High-shear mixer designed to eliminate clumps and improve solubility.' },
+      { name: 'Continuous Fluid Bed Dryer', image: '/assets/plants/food/protein-powder-production-plant/continuous-fluid-bed-dryer.webp', desc: 'Advanced drying system for gentle and uniform moisture removal.' },
+      { name: 'Filling Machine', image: '/assets/plants/food/protein-powder-production-plant/filling-machine.webp', desc: 'High-speed auger filler for accurate dosing into jars and pouches.' }
     ],
     applications: [
       { title: 'Whey Protein', desc: 'High-quality whey isolates and concentrates for sports nutrition.' },
@@ -1322,13 +1322,13 @@ const CORE_PROJECTS = {
       { question: 'How do you ensure the powder is easy to mix?', answer: 'Our advanced multi-stage processing includes precision milling and high-shear homogenization to ensure an optimal particle size distribution for excellent solubility and a clump-free texture.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/protein-powder-hero.webp', caption: 'Fully Automated Protein Powder Production Plant' },
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/raw-material-handling-system.webp', caption: 'Raw Material Handling System' },
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/vibratory-sifter.webp', caption: 'Vibratory Sifter' },
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/ribbon-blender.webp', caption: 'Ribbon Blender' },
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/homogenization-unit.webp', caption: 'Homogenization Unit' },
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/continuous-fluid-bed-dryer.webp', caption: 'Continuous Fluid Bed Dryer' },
-      { src: '/turnkey-brochures/images/protein-powder-production-plant/filling-machine.webp', caption: 'Filling Machine' }
+      { src: '/assets/plants/food/protein-powder-production-plant/protein-powder-hero.webp', caption: 'Fully Automated Protein Powder Production Plant' },
+      { src: '/assets/plants/food/protein-powder-production-plant/raw-material-handling-system.webp', caption: 'Raw Material Handling System' },
+      { src: '/assets/plants/food/protein-powder-production-plant/vibratory-sifter.webp', caption: 'Vibratory Sifter' },
+      { src: '/assets/plants/food/protein-powder-production-plant/ribbon-blender.webp', caption: 'Ribbon Blender' },
+      { src: '/assets/plants/food/protein-powder-production-plant/homogenization-unit.webp', caption: 'Homogenization Unit' },
+      { src: '/assets/plants/food/protein-powder-production-plant/continuous-fluid-bed-dryer.webp', caption: 'Continuous Fluid Bed Dryer' },
+      { src: '/assets/plants/food/protein-powder-production-plant/filling-machine.webp', caption: 'Filling Machine' }
     ]
   },
 
@@ -1339,7 +1339,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Biscuit Processing & Packaging Plant',
     workflowAccentTitle: 'Workflow',
 
-    heroImage: '/turnkey-brochures/images/biscuit-baking-turnkey/biscuit-hero-banner.webp',
+    heroImage: '/assets/plants/food/biscuit-baking-turnkey/biscuit-hero-banner.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
       capacity: '500 Kg–5 Ton',
@@ -1357,8 +1357,8 @@ const CORE_PROJECTS = {
         { title: 'Automated Operations', desc: 'Advanced PLCs control the entire baking process.' }
       ],
       isBrochure: true,
-      image: '/turnkey-brochures/images/31_biskuit_plant.webp',
-      photoImage: '/turnkey-brochures/images/31_biskuit_plant.webp',
+      image: '/assets/plants/food/31_biskuit_plant.webp',
+      photoImage: '/assets/plants/food/31_biskuit_plant.webp',
       features4: [
         { title: 'Hygienic Design', desc: 'Food-grade stainless steel construction' },
         { title: 'Energy Efficient', desc: 'Optimized thermal management' },
@@ -1389,12 +1389,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Packaging', desc: 'High-speed automatic flow-wrap machines seal the biscuits for distribution.' }
     ],
     machinery: [
-      { name: 'Raw Material Receiving & Storage System', image: '/turnkey-brochures/images/biscuit-baking-turnkey/raw-material-receiving-storage-system.webp', desc: 'Automated silos and sifters for handling bulk flour and sugar.' },
-      { name: 'Industrial Dough Mixer', image: '/turnkey-brochures/images/biscuit-baking-turnkey/industrial-dough-mixer.webp', desc: 'Heavy-duty mixer for thorough and consistent dough preparation.' },
-      { name: 'Rotary Biscuit Forming Machine', image: '/turnkey-brochures/images/biscuit-baking-turnkey/rotary-biscuit-forming-machine.webp', desc: 'Precision rotary molds for shaping dough into desired biscuit patterns.' },
-      { name: 'Continuous Baking Oven', image: '/turnkey-brochures/images/biscuit-baking-turnkey/continuous-baking-oven.webp', desc: 'Multi-zone traveling oven for even baking and moisture control.' },
-      { name: 'Cooling Conveyor System', image: '/turnkey-brochures/images/biscuit-baking-turnkey/cooling-conveyor-system.webp', desc: 'Extended conveyor belt system for gradual and uniform cooling.' },
-      { name: 'Automatic Flow Wrap Packing Machine', image: '/turnkey-brochures/images/biscuit-baking-turnkey/automatic-flow-wrap-packing-machine.webp', desc: 'High-speed packaging machine for sealing individual or stacked biscuits.' }
+      { name: 'Raw Material Receiving & Storage System', image: '/assets/plants/food/biscuit-baking-turnkey/raw-material-receiving-storage-system.webp', desc: 'Automated silos and sifters for handling bulk flour and sugar.' },
+      { name: 'Industrial Dough Mixer', image: '/assets/plants/food/biscuit-baking-turnkey/industrial-dough-mixer.webp', desc: 'Heavy-duty mixer for thorough and consistent dough preparation.' },
+      { name: 'Rotary Biscuit Forming Machine', image: '/assets/plants/food/biscuit-baking-turnkey/rotary-biscuit-forming-machine.webp', desc: 'Precision rotary molds for shaping dough into desired biscuit patterns.' },
+      { name: 'Continuous Baking Oven', image: '/assets/plants/food/biscuit-baking-turnkey/continuous-baking-oven.webp', desc: 'Multi-zone traveling oven for even baking and moisture control.' },
+      { name: 'Cooling Conveyor System', image: '/assets/plants/food/biscuit-baking-turnkey/cooling-conveyor-system.webp', desc: 'Extended conveyor belt system for gradual and uniform cooling.' },
+      { name: 'Automatic Flow Wrap Packing Machine', image: '/assets/plants/food/biscuit-baking-turnkey/automatic-flow-wrap-packing-machine.webp', desc: 'High-speed packaging machine for sealing individual or stacked biscuits.' }
     ],
     applications: [
       { title: 'Hard Dough Biscuits', desc: 'Crisp and layered biscuits like Marie and crackers.' },
@@ -1402,12 +1402,12 @@ const CORE_PROJECTS = {
       { title: 'Cream Sandwich Biscuits', desc: 'Biscuits with automated cream filling and sandwiching.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/biscuit-baking-turnkey/raw-material-receiving-storage-system.webp', caption: 'Raw Material Receiving & Storage System' },
-      { src: '/turnkey-brochures/images/biscuit-baking-turnkey/industrial-dough-mixer.webp', caption: 'Industrial Dough Mixer' },
-      { src: '/turnkey-brochures/images/biscuit-baking-turnkey/rotary-biscuit-forming-machine.webp', caption: 'Rotary Biscuit Forming Machine' },
-      { src: '/turnkey-brochures/images/biscuit-baking-turnkey/continuous-baking-oven.webp', caption: 'Continuous Baking Oven' },
-      { src: '/turnkey-brochures/images/biscuit-baking-turnkey/cooling-conveyor-system.webp', caption: 'Cooling Conveyor System' },
-      { src: '/turnkey-brochures/images/biscuit-baking-turnkey/automatic-flow-wrap-packing-machine.webp', caption: 'Automatic Flow Wrap Packing Machine' }
+      { src: '/assets/plants/food/biscuit-baking-turnkey/raw-material-receiving-storage-system.webp', caption: 'Raw Material Receiving & Storage System' },
+      { src: '/assets/plants/food/biscuit-baking-turnkey/industrial-dough-mixer.webp', caption: 'Industrial Dough Mixer' },
+      { src: '/assets/plants/food/biscuit-baking-turnkey/rotary-biscuit-forming-machine.webp', caption: 'Rotary Biscuit Forming Machine' },
+      { src: '/assets/plants/food/biscuit-baking-turnkey/continuous-baking-oven.webp', caption: 'Continuous Baking Oven' },
+      { src: '/assets/plants/food/biscuit-baking-turnkey/cooling-conveyor-system.webp', caption: 'Cooling Conveyor System' },
+      { src: '/assets/plants/food/biscuit-baking-turnkey/automatic-flow-wrap-packing-machine.webp', caption: 'Automatic Flow Wrap Packing Machine' }
     ]
   },
   'groundnut-chikki-processing-plant': {
@@ -1417,7 +1417,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Groundnut Chikki Processing Plant',
     workflowAccentTitle: 'Workflow',
 
-    heroImage: '/turnkey-brochures/images/hero-banners/groundnut_chikki_hero.webp',
+    heroImage: '/assets/core/heroes/hero-banners/groundnut_chikki_hero.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
       capacity: '100–500 Kg/Hr',
@@ -1435,8 +1435,8 @@ const CORE_PROJECTS = {
         { title: 'Food-Grade Construction', desc: 'Full SS304/SS316L contact surfaces with CIP-ready design.' }
       ],
       isBrochure: false,
-      image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp',
-      photoImage: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp',
+      image: '/assets/plants/food/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp',
+      photoImage: '/assets/plants/food/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp',
       features4: [
         { title: 'Hygienic Design', desc: 'Food-grade SS304/SS316L enclosed construction throughout' },
         { title: 'Precise Temperature Control', desc: 'Consistent caramelisation for perfect chikki snap and texture' },
@@ -1467,12 +1467,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Packaging', desc: 'Cooled chikki bars are fed into high-speed flow-wrap or pillow-pack machines for airtight sealing, date coding and retail-ready packaging.' }
     ],
     machinery: [
-      { name: 'Groundnut Cleaning & Grading System', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/groundnut-cleaning-grading-system.webp', desc: 'Vibratory cleaning screens and air aspirators remove dust, stones and foreign matter, followed by grading conveyors to size-classify raw groundnuts.' },
-      { name: 'Continuous Groundnut Roaster', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/continuous-groundnut-roaster.webp', desc: 'Multi-zone continuous tunnel roaster with precise hot-air temperature control for uniform roasting, consistent colour development and flavour retention.' },
-      { name: 'Jaggery Melting & Syrup Preparation System', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/jaggery-melting-syrup-preparation-system.webp', desc: 'Steam-jacketed jaggery melting vessels with automated Brix control and filtration to produce clean, consistent syrup for perfect caramelisation.' },
-      { name: 'Chikki Mixing Kettle', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp', desc: 'Heavy-duty tilting mixing kettles with motorised agitators uniformly coat roasted groundnuts with hot jaggery syrup for consistent binding.' },
-      { name: 'Chikki Forming & Cutting Machine', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-forming-cutting-machine.webp', desc: 'Automated slab forming rollers and precision guillotine cutting blades produce uniform chikki bars and squares with consistent dimensions and weight.' },
-      { name: 'Automatic Packaging Machine', image: '/turnkey-brochures/images/groundnut-chikki-processing-plant/automatic-packaging-machine.webp', desc: 'High-speed flow-wrap and pillow-pack machines with automatic date coding for airtight, retail-ready chikki bar packaging at high throughput.' }
+      { name: 'Groundnut Cleaning & Grading System', image: '/assets/plants/food/groundnut-chikki-processing-plant/groundnut-cleaning-grading-system.webp', desc: 'Vibratory cleaning screens and air aspirators remove dust, stones and foreign matter, followed by grading conveyors to size-classify raw groundnuts.' },
+      { name: 'Continuous Groundnut Roaster', image: '/assets/plants/food/groundnut-chikki-processing-plant/continuous-groundnut-roaster.webp', desc: 'Multi-zone continuous tunnel roaster with precise hot-air temperature control for uniform roasting, consistent colour development and flavour retention.' },
+      { name: 'Jaggery Melting & Syrup Preparation System', image: '/assets/plants/food/groundnut-chikki-processing-plant/jaggery-melting-syrup-preparation-system.webp', desc: 'Steam-jacketed jaggery melting vessels with automated Brix control and filtration to produce clean, consistent syrup for perfect caramelisation.' },
+      { name: 'Chikki Mixing Kettle', image: '/assets/plants/food/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp', desc: 'Heavy-duty tilting mixing kettles with motorised agitators uniformly coat roasted groundnuts with hot jaggery syrup for consistent binding.' },
+      { name: 'Chikki Forming & Cutting Machine', image: '/assets/plants/food/groundnut-chikki-processing-plant/chikki-forming-cutting-machine.webp', desc: 'Automated slab forming rollers and precision guillotine cutting blades produce uniform chikki bars and squares with consistent dimensions and weight.' },
+      { name: 'Automatic Packaging Machine', image: '/assets/plants/food/groundnut-chikki-processing-plant/automatic-packaging-machine.webp', desc: 'High-speed flow-wrap and pillow-pack machines with automatic date coding for airtight, retail-ready chikki bar packaging at high throughput.' }
     ],
     applications: [
       { title: 'Groundnut Chikki', desc: 'Traditional hard-brittle groundnut and jaggery bars in various sizes.' },
@@ -1480,12 +1480,12 @@ const CORE_PROJECTS = {
       { title: 'Mixed Nut Brittle', desc: 'Premium mixed nut and seed brittle for retail and export brands.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/groundnut-cleaning-grading-system.webp', caption: 'Groundnut Cleaning & Grading System' },
-      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/continuous-groundnut-roaster.webp', caption: 'Continuous Groundnut Roaster' },
-      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/jaggery-melting-syrup-preparation-system.webp', caption: 'Jaggery Melting & Syrup Preparation System' },
-      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp', caption: 'Chikki Mixing Kettle' },
-      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/chikki-forming-cutting-machine.webp', caption: 'Chikki Forming & Cutting Machine' },
-      { src: '/turnkey-brochures/images/groundnut-chikki-processing-plant/automatic-packaging-machine.webp', caption: 'Automatic Packaging Machine' }
+      { src: '/assets/plants/food/groundnut-chikki-processing-plant/groundnut-cleaning-grading-system.webp', caption: 'Groundnut Cleaning & Grading System' },
+      { src: '/assets/plants/food/groundnut-chikki-processing-plant/continuous-groundnut-roaster.webp', caption: 'Continuous Groundnut Roaster' },
+      { src: '/assets/plants/food/groundnut-chikki-processing-plant/jaggery-melting-syrup-preparation-system.webp', caption: 'Jaggery Melting & Syrup Preparation System' },
+      { src: '/assets/plants/food/groundnut-chikki-processing-plant/chikki-mixing-kettle.webp', caption: 'Chikki Mixing Kettle' },
+      { src: '/assets/plants/food/groundnut-chikki-processing-plant/chikki-forming-cutting-machine.webp', caption: 'Chikki Forming & Cutting Machine' },
+      { src: '/assets/plants/food/groundnut-chikki-processing-plant/automatic-packaging-machine.webp', caption: 'Automatic Packaging Machine' }
     ]
   },
   'cashew-nut-processing-plant': {
@@ -1495,7 +1495,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Cashew Nut Processing Plant',
     workflowAccentTitle: 'Workflow',
 
-    heroImage: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-nut-hero-banner.webp',
+    heroImage: '/assets/plants/food/cashew-nut-processing-plant/cashew-nut-hero-banner.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
       capacity: '200 Kg–2 Ton/Hr',
@@ -1513,8 +1513,8 @@ const CORE_PROJECTS = {
         { title: 'Export-Ready Quality', desc: 'Full SS304/SS316L food-grade construction with HACCP and FSSAI compliant design.' }
       ],
       isBrochure: false,
-      image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.webp',
-      photoImage: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.webp',
+      image: '/assets/plants/food/cashew-nut-processing-plant/cashew-shelling-machine.webp',
+      photoImage: '/assets/plants/food/cashew-nut-processing-plant/cashew-shelling-machine.webp',
       features4: [
         { title: 'High Kernel Recovery', desc: 'Precision shelling for maximum whole kernel yield with minimum breakage' },
         { title: 'Automated Grading', desc: 'Multi-grade separation for W240, W320, W450, W600 and mixed grades' },
@@ -1545,12 +1545,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Automatic Packaging', desc: 'Premium graded cashew kernels are dosed by multi-head weigher and sealed into pouches, stand-up bags or cartons with nitrogen flushing for extended shelf life.' }
     ],
     machinery: [
-      { name: 'Raw Cashew Receiving & Cleaning System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/raw-cashew-receiving-cleaning-system.webp', desc: 'Automated receiving hopper with inclined elevator, vibratory cleaning screens and destoner to remove stones, dust and foreign matter from raw cashews.' },
-      { name: 'Continuous Cashew Roasting / Steam Cooking System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-roasting-steam-cooking-system.webp', desc: 'Multi-zone continuous tunnel roaster or steam retort system with precise temperature and time control for uniform shell softening with minimal kernel browning.' },
-      { name: 'Cashew Shelling Machine', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.webp', desc: 'High-speed automated multi-head shelling machine that cracks and separates cashew shells from kernels with minimal whole kernel breakage and high throughput.' },
-      { name: 'Cashew Kernel Drying System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-kernel-drying-system.webp', desc: 'Continuous belt dryer with precise hot-air temperature control to reduce kernel moisture and make testa skin brittle for efficient automated peeling.' },
-      { name: 'Cashew Peeling & Grading System', image: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-peeling-grading-system.webp', desc: 'Automated peeling machines remove the testa skin to reveal white kernels, followed by motorised grading conveyors that classify kernels into W240–W700 export grades.' },
-      { name: 'Automatic Cashew Packaging Machine', image: '/turnkey-brochures/images/cashew-nut-processing-plant/automatic-cashew-packaging-machine.webp', desc: 'High-speed multi-head weigher and pouch or stand-up bag packing line with nitrogen flushing for airtight, retail-ready export-grade cashew kernel packaging.' }
+      { name: 'Raw Cashew Receiving & Cleaning System', image: '/assets/plants/food/cashew-nut-processing-plant/raw-cashew-receiving-cleaning-system.webp', desc: 'Automated receiving hopper with inclined elevator, vibratory cleaning screens and destoner to remove stones, dust and foreign matter from raw cashews.' },
+      { name: 'Continuous Cashew Roasting / Steam Cooking System', image: '/assets/plants/food/cashew-nut-processing-plant/cashew-roasting-steam-cooking-system.webp', desc: 'Multi-zone continuous tunnel roaster or steam retort system with precise temperature and time control for uniform shell softening with minimal kernel browning.' },
+      { name: 'Cashew Shelling Machine', image: '/assets/plants/food/cashew-nut-processing-plant/cashew-shelling-machine.webp', desc: 'High-speed automated multi-head shelling machine that cracks and separates cashew shells from kernels with minimal whole kernel breakage and high throughput.' },
+      { name: 'Cashew Kernel Drying System', image: '/assets/plants/food/cashew-nut-processing-plant/cashew-kernel-drying-system.webp', desc: 'Continuous belt dryer with precise hot-air temperature control to reduce kernel moisture and make testa skin brittle for efficient automated peeling.' },
+      { name: 'Cashew Peeling & Grading System', image: '/assets/plants/food/cashew-nut-processing-plant/cashew-peeling-grading-system.webp', desc: 'Automated peeling machines remove the testa skin to reveal white kernels, followed by motorised grading conveyors that classify kernels into W240–W700 export grades.' },
+      { name: 'Automatic Cashew Packaging Machine', image: '/assets/plants/food/cashew-nut-processing-plant/automatic-cashew-packaging-machine.webp', desc: 'High-speed multi-head weigher and pouch or stand-up bag packing line with nitrogen flushing for airtight, retail-ready export-grade cashew kernel packaging.' }
     ],
     applications: [
       { title: 'Premium Cashew Kernels', desc: 'Export-grade W240, W320, W450 whole white cashew kernels for retail and bulk markets.' },
@@ -1558,12 +1558,12 @@ const CORE_PROJECTS = {
       { title: 'Roasted & Salted Cashews', desc: 'Value-added flavoured cashew processing for retail snack brands and food service.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/raw-cashew-receiving-cleaning-system.webp', caption: 'Raw Cashew Receiving & Cleaning System' },
-      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-roasting-steam-cooking-system.webp', caption: 'Continuous Cashew Roasting / Steam Cooking System' },
-      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-shelling-machine.webp', caption: 'Cashew Shelling Machine' },
-      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-kernel-drying-system.webp', caption: 'Cashew Kernel Drying System' },
-      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/cashew-peeling-grading-system.webp', caption: 'Cashew Peeling & Grading System' },
-      { src: '/turnkey-brochures/images/cashew-nut-processing-plant/automatic-cashew-packaging-machine.webp', caption: 'Automatic Cashew Packaging Machine' }
+      { src: '/assets/plants/food/cashew-nut-processing-plant/raw-cashew-receiving-cleaning-system.webp', caption: 'Raw Cashew Receiving & Cleaning System' },
+      { src: '/assets/plants/food/cashew-nut-processing-plant/cashew-roasting-steam-cooking-system.webp', caption: 'Continuous Cashew Roasting / Steam Cooking System' },
+      { src: '/assets/plants/food/cashew-nut-processing-plant/cashew-shelling-machine.webp', caption: 'Cashew Shelling Machine' },
+      { src: '/assets/plants/food/cashew-nut-processing-plant/cashew-kernel-drying-system.webp', caption: 'Cashew Kernel Drying System' },
+      { src: '/assets/plants/food/cashew-nut-processing-plant/cashew-peeling-grading-system.webp', caption: 'Cashew Peeling & Grading System' },
+      { src: '/assets/plants/food/cashew-nut-processing-plant/automatic-cashew-packaging-machine.webp', caption: 'Automatic Cashew Packaging Machine' }
     ]
   },
   'industry-4-automation-food-plant': {
@@ -1573,7 +1573,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Industry 4.0 Automation',
     workflowAccentTitle: 'Workflow',
 
-    heroImage: '/turnkey-brochures/images/industry-4-automation-food-plant/industry-4-hero-banner.webp',
+    heroImage: '/assets/plants/food/industry-4-automation-food-plant/industry-4-hero-banner.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
       capacity: 'Any Scale',
@@ -1591,8 +1591,8 @@ const CORE_PROJECTS = {
         { title: 'Full Digital Traceability', desc: 'End-to-end batch and product traceability with QR/barcode and blockchain-ready data.' }
       ],
       isBrochure: false,
-      image: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.webp',
-      photoImage: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.webp',
+      image: '/assets/plants/food/industry-4-automation-food-plant/plc-scada-control-system.webp',
+      photoImage: '/assets/plants/food/industry-4-automation-food-plant/plc-scada-control-system.webp',
       features4: [
         { title: 'PLC & SCADA Control', desc: 'Centralised recipe management and real-time process control across all plant equipment' },
         { title: 'Industrial IoT Monitoring', desc: 'Live OEE, energy and machine health dashboards on web and mobile' },
@@ -1623,12 +1623,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Centralized Data Analytics', desc: 'Cloud or on-premise analytics platform aggregates all plant data for real-time OEE reporting, predictive maintenance alerts, yield analysis and regulatory compliance dashboards.' }
     ],
     machinery: [
-      { name: 'Smart PLC & SCADA Control System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.webp', desc: 'Industrial-grade PLC controllers with colour SCADA HMI panels for centralised recipe management, interlock control, alarm management and remote access across all production equipment.' },
-      { name: 'Industrial IoT Monitoring System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/industrial-iot-monitoring-system.webp', desc: 'IIoT sensors, edge gateways and cloud dashboards delivering real-time OEE, energy, machine health, production counts and alarm notifications on web and mobile platforms.' },
-      { name: 'Robotic Pick & Place System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/robotic-pick-place-system.webp', desc: 'High-speed delta and articulated robots with vision-guided grippers for hygienic, precise product picking, placing, sorting and palletising at line speed.' },
-      { name: 'Vision Inspection & Quality Control System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/vision-inspection-quality-control-system.webp', desc: 'Multi-camera AI-powered vision inspection systems performing 100% in-line product inspection for colour, size, shape, defects and foreign matter with automatic reject.' },
-      { name: 'Automated Material Handling System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/automated-material-handling-system.webp', desc: 'AMR robots, AGVs and smart conveyor networks that autonomously transport raw materials, in-process goods and finished products through the plant with zero manual handling.' },
-      { name: 'Smart Packaging & Traceability System', image: '/turnkey-brochures/images/industry-4-automation-food-plant/smart-packaging-traceability-system.webp', desc: 'Integrated auto-coding, QR/barcode and RFID labelling systems with MES connectivity for complete batch traceability, expiry date coding and retail-ready compliant packaging.' }
+      { name: 'Smart PLC & SCADA Control System', image: '/assets/plants/food/industry-4-automation-food-plant/plc-scada-control-system.webp', desc: 'Industrial-grade PLC controllers with colour SCADA HMI panels for centralised recipe management, interlock control, alarm management and remote access across all production equipment.' },
+      { name: 'Industrial IoT Monitoring System', image: '/assets/plants/food/industry-4-automation-food-plant/industrial-iot-monitoring-system.webp', desc: 'IIoT sensors, edge gateways and cloud dashboards delivering real-time OEE, energy, machine health, production counts and alarm notifications on web and mobile platforms.' },
+      { name: 'Robotic Pick & Place System', image: '/assets/plants/food/industry-4-automation-food-plant/robotic-pick-place-system.webp', desc: 'High-speed delta and articulated robots with vision-guided grippers for hygienic, precise product picking, placing, sorting and palletising at line speed.' },
+      { name: 'Vision Inspection & Quality Control System', image: '/assets/plants/food/industry-4-automation-food-plant/vision-inspection-quality-control-system.webp', desc: 'Multi-camera AI-powered vision inspection systems performing 100% in-line product inspection for colour, size, shape, defects and foreign matter with automatic reject.' },
+      { name: 'Automated Material Handling System', image: '/assets/plants/food/industry-4-automation-food-plant/automated-material-handling-system.webp', desc: 'AMR robots, AGVs and smart conveyor networks that autonomously transport raw materials, in-process goods and finished products through the plant with zero manual handling.' },
+      { name: 'Smart Packaging & Traceability System', image: '/assets/plants/food/industry-4-automation-food-plant/smart-packaging-traceability-system.webp', desc: 'Integrated auto-coding, QR/barcode and RFID labelling systems with MES connectivity for complete batch traceability, expiry date coding and retail-ready compliant packaging.' }
     ],
     applications: [
       { title: 'Food Processing Automation', desc: 'PLC/SCADA and IoT automation for snack, beverage, dairy and packaged food plants.' },
@@ -1636,12 +1636,12 @@ const CORE_PROJECTS = {
       { title: 'Supply Chain Traceability', desc: 'End-to-end digital traceability for FSSAI, HACCP and export regulatory compliance.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/plc-scada-control-system.webp', caption: 'Smart PLC & SCADA Control System' },
-      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/industrial-iot-monitoring-system.webp', caption: 'Industrial IoT Monitoring System' },
-      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/robotic-pick-place-system.webp', caption: 'Robotic Pick & Place System' },
-      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/vision-inspection-quality-control-system.webp', caption: 'Vision Inspection & Quality Control System' },
-      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/automated-material-handling-system.webp', caption: 'Automated Material Handling System' },
-      { src: '/turnkey-brochures/images/industry-4-automation-food-plant/smart-packaging-traceability-system.webp', caption: 'Smart Packaging & Traceability System' }
+      { src: '/assets/plants/food/industry-4-automation-food-plant/plc-scada-control-system.webp', caption: 'Smart PLC & SCADA Control System' },
+      { src: '/assets/plants/food/industry-4-automation-food-plant/industrial-iot-monitoring-system.webp', caption: 'Industrial IoT Monitoring System' },
+      { src: '/assets/plants/food/industry-4-automation-food-plant/robotic-pick-place-system.webp', caption: 'Robotic Pick & Place System' },
+      { src: '/assets/plants/food/industry-4-automation-food-plant/vision-inspection-quality-control-system.webp', caption: 'Vision Inspection & Quality Control System' },
+      { src: '/assets/plants/food/industry-4-automation-food-plant/automated-material-handling-system.webp', caption: 'Automated Material Handling System' },
+      { src: '/assets/plants/food/industry-4-automation-food-plant/smart-packaging-traceability-system.webp', caption: 'Smart Packaging & Traceability System' }
     ]
   },
   'roasted-nuts-snacks-making-plant': {
@@ -1651,7 +1651,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Roasted Nuts Processing',
     workflowAccentTitle: 'Workflow',
 
-    heroImage: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.webp',
+    heroImage: '/assets/plants/food/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     stats: {
       capacity: 'Any Scale',
@@ -1669,8 +1669,8 @@ const CORE_PROJECTS = {
         { title: 'High-Speed Packaging', desc: 'Automated FFS machines with nitrogen flushing preserve freshness and extend shelf life.' }
       ],
       isBrochure: false,
-      image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.webp',
-      photoImage: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.webp',
+      image: '/assets/plants/food/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.webp',
+      photoImage: '/assets/plants/food/roasted-nuts-snacks-making-plant/roasted-nuts-hero-banner.webp',
       features4: [
         { title: 'Automated Cleaning', desc: 'Efficiently removes stones, dust, and foreign materials from raw nuts.' },
         { title: 'Continuous Roasting', desc: 'Precise temperature control for optimal roasting and flavour development.' },
@@ -1700,12 +1700,12 @@ const CORE_PROJECTS = {
       { id: 6, title: 'Automatic Nuts Packaging Machine', desc: 'State-of-the-art packaging systems accurately weigh and seal the roasted snacks into attractive retail pouches, utilizing nitrogen flushing for maximum freshness.' }
     ],
     machinery: [
-      { name: 'Raw Nuts Receiving & Cleaning System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/raw-nuts-receiving-cleaning-system.webp', desc: 'Heavy-duty stainless steel hoppers and vibratory destoners designed for high-capacity, gentle cleaning of delicate raw nuts.' },
-      { name: 'Continuous Nuts Roasting System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/continuous-nuts-roasting-system.webp', desc: 'Advanced continuous roasting ovens featuring multi-zone temperature control and variable speed conveyors for precise thermal processing.' },
-      { name: 'Cooling Conveyor System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/cooling-conveyor-system.webp', desc: 'High-volume cooling conveyors equipped with powerful ambient air fans to rapidly stabilize nut temperatures post-roasting.' },
-      { name: 'Flavoring & Seasoning Drum System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/flavoring-seasoning-drum-system.webp', desc: 'Continuous rotary seasoning drums with integrated liquid sprayers and dry powder dispensers for uniform flavour application.' },
-      { name: 'Quality Inspection & Sorting System', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/quality-inspection-sorting-system.webp', desc: 'Hygienic inspection conveyors providing optimal lighting and ergonomic design for visual quality control and defect removal.' },
-      { name: 'Automatic Nuts Packaging Machine', image: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/automatic-nuts-packaging-machine.webp', desc: 'High-speed VFFS packaging machines with multi-head weighers, date coders, and modified atmosphere packaging (MAP) capabilities.' }
+      { name: 'Raw Nuts Receiving & Cleaning System', image: '/assets/plants/food/roasted-nuts-snacks-making-plant/raw-nuts-receiving-cleaning-system.webp', desc: 'Heavy-duty stainless steel hoppers and vibratory destoners designed for high-capacity, gentle cleaning of delicate raw nuts.' },
+      { name: 'Continuous Nuts Roasting System', image: '/assets/plants/food/roasted-nuts-snacks-making-plant/continuous-nuts-roasting-system.webp', desc: 'Advanced continuous roasting ovens featuring multi-zone temperature control and variable speed conveyors for precise thermal processing.' },
+      { name: 'Cooling Conveyor System', image: '/assets/plants/food/roasted-nuts-snacks-making-plant/cooling-conveyor-system.webp', desc: 'High-volume cooling conveyors equipped with powerful ambient air fans to rapidly stabilize nut temperatures post-roasting.' },
+      { name: 'Flavoring & Seasoning Drum System', image: '/assets/plants/food/roasted-nuts-snacks-making-plant/flavoring-seasoning-drum-system.webp', desc: 'Continuous rotary seasoning drums with integrated liquid sprayers and dry powder dispensers for uniform flavour application.' },
+      { name: 'Quality Inspection & Sorting System', image: '/assets/plants/food/roasted-nuts-snacks-making-plant/quality-inspection-sorting-system.webp', desc: 'Hygienic inspection conveyors providing optimal lighting and ergonomic design for visual quality control and defect removal.' },
+      { name: 'Automatic Nuts Packaging Machine', image: '/assets/plants/food/roasted-nuts-snacks-making-plant/automatic-nuts-packaging-machine.webp', desc: 'High-speed VFFS packaging machines with multi-head weighers, date coders, and modified atmosphere packaging (MAP) capabilities.' }
     ],
     applications: [
       { title: 'Salted & Spiced Peanuts', desc: 'Complete processing for classic roasted and salted or masala-coated peanuts.' },
@@ -1713,12 +1713,12 @@ const CORE_PROJECTS = {
       { title: 'Coated & Glazed Snacks', desc: 'Systems capable of handling honey-roasted or heavily coated nut snacks.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/raw-nuts-receiving-cleaning-system.webp', caption: 'Raw Nuts Receiving & Cleaning System' },
-      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/continuous-nuts-roasting-system.webp', caption: 'Continuous Nuts Roasting System' },
-      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/cooling-conveyor-system.webp', caption: 'Cooling Conveyor System' },
-      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/flavoring-seasoning-drum-system.webp', caption: 'Flavoring & Seasoning Drum System' },
-      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/quality-inspection-sorting-system.webp', caption: 'Quality Inspection & Sorting System' },
-      { src: '/turnkey-brochures/images/roasted-nuts-snacks-making-plant/automatic-nuts-packaging-machine.webp', caption: 'Automatic Nuts Packaging Machine' }
+      { src: '/assets/plants/food/roasted-nuts-snacks-making-plant/raw-nuts-receiving-cleaning-system.webp', caption: 'Raw Nuts Receiving & Cleaning System' },
+      { src: '/assets/plants/food/roasted-nuts-snacks-making-plant/continuous-nuts-roasting-system.webp', caption: 'Continuous Nuts Roasting System' },
+      { src: '/assets/plants/food/roasted-nuts-snacks-making-plant/cooling-conveyor-system.webp', caption: 'Cooling Conveyor System' },
+      { src: '/assets/plants/food/roasted-nuts-snacks-making-plant/flavoring-seasoning-drum-system.webp', caption: 'Flavoring & Seasoning Drum System' },
+      { src: '/assets/plants/food/roasted-nuts-snacks-making-plant/quality-inspection-sorting-system.webp', caption: 'Quality Inspection & Sorting System' },
+      { src: '/assets/plants/food/roasted-nuts-snacks-making-plant/automatic-nuts-packaging-machine.webp', caption: 'Automatic Nuts Packaging Machine' }
     ]
   },
   'fruit-powder-processing-plant': {
@@ -1728,7 +1728,7 @@ const CORE_PROJECTS = {
     workflowTitle: 'Fruit Powder Processing',
     workflowAccentTitle: 'Workflow',
 
-    heroImage: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-hero-banner.webp',
+    heroImage: '/assets/plants/food/fruit-powder-processing-plant/fruit-powder-hero-banner.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'fruit powder.pdf',
     stats: {
@@ -1747,8 +1747,8 @@ const CORE_PROJECTS = {
         { title: 'Hygienic Design', desc: 'Fully enclosed processing lines prevent contamination and ensure food safety.' }
       ],
       isBrochure: false,
-      image: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-brochure.webp',
-      photoImage: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-powder-brochure.webp',
+      image: '/assets/plants/food/fruit-powder-processing-plant/fruit-powder-brochure.webp',
+      photoImage: '/assets/plants/food/fruit-powder-processing-plant/fruit-powder-brochure.webp',
       features4: [
         { title: 'Automated Cleaning', desc: 'Efficiently removes dirt and foreign materials from raw fruits.' },
         { title: 'Precision Pulping', desc: 'High-yield pulping systems for maximum extraction.' },
@@ -1778,12 +1778,12 @@ const CORE_PROJECTS = {
       { id: 6, title: 'Automatic Powder Packaging Machine', desc: 'Auger fillers and VFFS machines accurately dispense and seal the powder into moisture-proof pouches.' }
     ],
     machinery: [
-      { name: 'Raw Fruit Receiving & Washing System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/raw-fruit-receiving-washing-system-new.webp', desc: 'Food-grade stainless steel washing lines designed for high-capacity, gentle cleaning of raw fruits.' },
-      { name: 'Fruit Pulping & Extraction System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-pulping-extraction-system-new.webp', desc: 'High-efficiency pulping machines featuring specialized screens for maximum yield and pure extraction.' },
-      { name: 'Pasteurization System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/pasteurization-system-new.webp', desc: 'Advanced pasteurizers providing precise temperature control for optimal microbial safety.' },
-      { name: 'Spray Drying System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/spray-drying-system-new.webp', desc: 'Industrial spray dryers engineered for continuous operation and superior powder quality.' },
-      { name: 'Milling & Sieving System', image: '/turnkey-brochures/images/fruit-powder-processing-plant/milling-sieving-system-new.webp', desc: 'Hygienic milling systems ensuring consistent particle size distribution for excellent solubility.' },
-      { name: 'Automatic Powder Packaging Machine', image: '/turnkey-brochures/images/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.webp', desc: 'High-speed auger filling packaging machines with modified atmosphere packaging (MAP) capabilities.' }
+      { name: 'Raw Fruit Receiving & Washing System', image: '/assets/plants/food/fruit-powder-processing-plant/raw-fruit-receiving-washing-system-new.webp', desc: 'Food-grade stainless steel washing lines designed for high-capacity, gentle cleaning of raw fruits.' },
+      { name: 'Fruit Pulping & Extraction System', image: '/assets/plants/food/fruit-powder-processing-plant/fruit-pulping-extraction-system-new.webp', desc: 'High-efficiency pulping machines featuring specialized screens for maximum yield and pure extraction.' },
+      { name: 'Pasteurization System', image: '/assets/plants/food/fruit-powder-processing-plant/pasteurization-system-new.webp', desc: 'Advanced pasteurizers providing precise temperature control for optimal microbial safety.' },
+      { name: 'Spray Drying System', image: '/assets/plants/food/fruit-powder-processing-plant/spray-drying-system-new.webp', desc: 'Industrial spray dryers engineered for continuous operation and superior powder quality.' },
+      { name: 'Milling & Sieving System', image: '/assets/plants/food/fruit-powder-processing-plant/milling-sieving-system-new.webp', desc: 'Hygienic milling systems ensuring consistent particle size distribution for excellent solubility.' },
+      { name: 'Automatic Powder Packaging Machine', image: '/assets/plants/food/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.webp', desc: 'High-speed auger filling packaging machines with modified atmosphere packaging (MAP) capabilities.' }
     ],
     applications: [
       { title: 'Beverage Powders', desc: 'Complete processing for instant fruit drinks and smoothies.' },
@@ -1791,12 +1791,12 @@ const CORE_PROJECTS = {
       { title: 'Nutritional Supplements', desc: 'High-nutrient fruit powders for health and wellness products.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/raw-fruit-receiving-washing-system-new.webp', caption: 'Raw Fruit Receiving & Washing System' },
-      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/fruit-pulping-extraction-system-new.webp', caption: 'Fruit Pulping & Extraction System' },
-      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/pasteurization-system-new.webp', caption: 'Pasteurization System' },
-      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/spray-drying-system-new.webp', caption: 'Spray Drying System' },
-      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/milling-sieving-system-new.webp', caption: 'Milling & Sieving System' },
-      { src: '/turnkey-brochures/images/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.webp', caption: 'Automatic Powder Packaging Machine' }
+      { src: '/assets/plants/food/fruit-powder-processing-plant/raw-fruit-receiving-washing-system-new.webp', caption: 'Raw Fruit Receiving & Washing System' },
+      { src: '/assets/plants/food/fruit-powder-processing-plant/fruit-pulping-extraction-system-new.webp', caption: 'Fruit Pulping & Extraction System' },
+      { src: '/assets/plants/food/fruit-powder-processing-plant/pasteurization-system-new.webp', caption: 'Pasteurization System' },
+      { src: '/assets/plants/food/fruit-powder-processing-plant/spray-drying-system-new.webp', caption: 'Spray Drying System' },
+      { src: '/assets/plants/food/fruit-powder-processing-plant/milling-sieving-system-new.webp', caption: 'Milling & Sieving System' },
+      { src: '/assets/plants/food/fruit-powder-processing-plant/automatic-powder-packaging-machine-new.webp', caption: 'Automatic Powder Packaging Machine' }
     ]
   },
   'fry-onions-processing-packaging-plant': {
@@ -1805,7 +1805,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete processing line for peeling, washing, slicing, frying, de-oiling, and packaging of fry onions.',
     workflowTitle: 'Fry Onions Processing',
     workflowAccentTitle: 'Workflow',
-    heroImage: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-hero.webp',
+    heroImage: '/assets/plants/food/fry-onions-processing-plant/fry-onions-hero.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'FRY ONIONS.pdf',
     stats: {
@@ -1824,8 +1824,8 @@ const CORE_PROJECTS = {
         { title: 'Hygienic Design', desc: 'Fully enclosed processing lines prevent contamination and ensure food safety.' }
       ],
       isBrochure: false,
-      image: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-brochure.webp',
-      photoImage: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-brochure.webp',
+      image: '/assets/plants/food/fry-onions-processing-plant/fry-onions-brochure.webp',
+      photoImage: '/assets/plants/food/fry-onions-processing-plant/fry-onions-brochure.webp',
       features4: [
         { title: 'Automated Peeling', desc: 'Efficiently removes skin and roots from raw onions.' },
         { title: 'Precision Slicing', desc: 'High-speed slicers for uniform onion rings or flakes.' },
@@ -1855,12 +1855,12 @@ const CORE_PROJECTS = {
       { id: 6, title: 'Automatic Onion Packaging Machine', desc: 'Multi-head weighers and VFFS machines accurately dispense and seal the fried onions into moisture-proof pouches.' }
     ],
     machinery: [
-      { name: 'Raw Onion Receiving & Peeling System', image: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicing-machine.webp', desc: 'Food-grade stainless steel peeling lines designed for high-capacity, automated skin removal.' },
-      { name: 'Onion Washing & Slicing System', image: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicer-output.webp', desc: 'High-efficiency slicers featuring specialized blades for maximum yield and uniform cuts.' },
-      { name: 'Sliced Onion De-watering System', image: '/turnkey-brochures/images/fry-onions-processing-plant/continuous-frying-system.webp', desc: 'Advanced vibratory and air-blow de-watering systems to prepare onions for the fryer.' },
-      { name: 'Continuous Onion Frying System', image: '/turnkey-brochures/images/fry-onions-processing-plant/de-oiling-cooling-conveyor.webp', desc: 'Industrial continuous fryers engineered for uniform frying and superior product quality.' },
-      { name: 'De-oiling & Cooling System', image: '/turnkey-brochures/images/fry-onions-processing-plant/seasoning-drum-system.webp', desc: 'Hygienic de-oiling centrifuges and cooling tunnels ensuring consistent crispness and texture.' },
-      { name: 'Automatic Onion Packaging Machine', image: '/turnkey-brochures/images/fry-onions-processing-plant/automatic-packaging-machine.webp', desc: 'High-speed weighing and packaging machines with modified atmosphere packaging (MAP) capabilities.' }
+      { name: 'Raw Onion Receiving & Peeling System', image: '/assets/plants/food/fry-onions-processing-plant/fry-onion-slicing-machine.webp', desc: 'Food-grade stainless steel peeling lines designed for high-capacity, automated skin removal.' },
+      { name: 'Onion Washing & Slicing System', image: '/assets/plants/food/fry-onions-processing-plant/fry-onion-slicer-output.webp', desc: 'High-efficiency slicers featuring specialized blades for maximum yield and uniform cuts.' },
+      { name: 'Sliced Onion De-watering System', image: '/assets/plants/food/fry-onions-processing-plant/continuous-frying-system.webp', desc: 'Advanced vibratory and air-blow de-watering systems to prepare onions for the fryer.' },
+      { name: 'Continuous Onion Frying System', image: '/assets/plants/food/fry-onions-processing-plant/de-oiling-cooling-conveyor.webp', desc: 'Industrial continuous fryers engineered for uniform frying and superior product quality.' },
+      { name: 'De-oiling & Cooling System', image: '/assets/plants/food/fry-onions-processing-plant/seasoning-drum-system.webp', desc: 'Hygienic de-oiling centrifuges and cooling tunnels ensuring consistent crispness and texture.' },
+      { name: 'Automatic Onion Packaging Machine', image: '/assets/plants/food/fry-onions-processing-plant/automatic-packaging-machine.webp', desc: 'High-speed weighing and packaging machines with modified atmosphere packaging (MAP) capabilities.' }
     ],
     applications: [
       { title: 'Culinary Ingredients', desc: 'Complete processing for biryani garnishes, curries, and culinary uses.' },
@@ -1868,13 +1868,13 @@ const CORE_PROJECTS = {
       { title: 'Instant Foods', desc: 'High-quality fried onions for instant noodle seasonings and ready-to-eat meals.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onions-hero.webp', caption: 'Fry Onions Processing & Packaging Plant' },
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicing-machine.webp', caption: 'Raw Onion Receiving & Peeling System' },
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/fry-onion-slicer-output.webp', caption: 'Onion Washing & Slicing System' },
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/continuous-frying-system.webp', caption: 'Sliced Onion De-watering System' },
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/de-oiling-cooling-conveyor.webp', caption: 'Continuous Onion Frying System' },
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/seasoning-drum-system.webp', caption: 'De-oiling & Cooling System' },
-      { src: '/turnkey-brochures/images/fry-onions-processing-plant/automatic-packaging-machine.webp', caption: 'Automatic Onion Packaging Machine' }
+      { src: '/assets/plants/food/fry-onions-processing-plant/fry-onions-hero.webp', caption: 'Fry Onions Processing & Packaging Plant' },
+      { src: '/assets/plants/food/fry-onions-processing-plant/fry-onion-slicing-machine.webp', caption: 'Raw Onion Receiving & Peeling System' },
+      { src: '/assets/plants/food/fry-onions-processing-plant/fry-onion-slicer-output.webp', caption: 'Onion Washing & Slicing System' },
+      { src: '/assets/plants/food/fry-onions-processing-plant/continuous-frying-system.webp', caption: 'Sliced Onion De-watering System' },
+      { src: '/assets/plants/food/fry-onions-processing-plant/de-oiling-cooling-conveyor.webp', caption: 'Continuous Onion Frying System' },
+      { src: '/assets/plants/food/fry-onions-processing-plant/seasoning-drum-system.webp', caption: 'De-oiling & Cooling System' },
+      { src: '/assets/plants/food/fry-onions-processing-plant/automatic-packaging-machine.webp', caption: 'Automatic Onion Packaging Machine' }
     ]
   },
 
@@ -1884,7 +1884,7 @@ const CORE_PROJECTS = {
     subtitle: 'Complete Turnkey Solution for Manufacturing Nutrition Powders, Health Supplements, Protein Blends, and Nutraceutical Formulations with Hygienic Processing and Automated Packaging.',
     workflowTitle: 'Nutrition Powder Processing',
     workflowAccentTitle: 'Workflow',
-    heroImage: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-hero.webp',
+    heroImage: '/assets/plants/food/nutrition-powder-making-production-plant/nutrition-powder-hero.webp',
     heroStyle: { width: '100%', height: '100%', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundColor: '#0f172a', animation: 'none', transform: 'none' },
     pdfFile: 'nutrition_powder.pdf',
     stats: {
@@ -1903,8 +1903,8 @@ const CORE_PROJECTS = {
         { title: 'Hygienic Design', desc: 'Fully enclosed dust-free processing lines prevent contamination and ensure food safety compliance.' }
       ],
       isBrochure: true,
-      image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-brochure.webp',
-      photoImage: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-brochure.webp',
+      image: '/assets/plants/food/nutrition-powder-making-production-plant/nutrition-powder-brochure.webp',
+      photoImage: '/assets/plants/food/nutrition-powder-making-production-plant/nutrition-powder-brochure.webp',
       features4: [
         { title: 'SS304/SS316 Construction', desc: 'Food-grade hygienic construction for safe powder manufacturing.' },
         { title: 'Automated Batch Control', desc: 'PLC-controlled processing with recipe management and traceability.' },
@@ -1937,12 +1937,12 @@ const CORE_PROJECTS = {
       { id: 7, title: 'Automated Filling & Packaging', desc: 'High-speed auger fillers accurately dose powder into pouches, sachets, canisters, or jars with nitrogen flushing and sealed dispatch.' }
     ],
     machinery: [
-      { name: 'Raw Material Receiving & Sieving System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/raw-material-sieving-system.webp', desc: 'Automated ingredient intake hoppers with screw conveyor and vibro sifter equipped with precise load cells and dust filters for safe material transfer.' },
-      { name: 'Ribbon Blender Mixing System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/ribbon-blender-mixing-system.webp', desc: 'Heavy-duty SS316 ribbon blender with open-top inspection, pneumatic discharge valve, and motor drive for perfectly homogeneous dry powder blending.' },
-      { name: 'Homogenization & Nutrient Dispersion System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/homogenization-unit.webp', desc: 'High-pressure homogenizer with jacketed vessel, pressure gauges, and PLC touch-screen control panel for nutrient dispersion and clump-free consistency.' },
-      { name: 'Spray Drying & Milling System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/spray-drying-milling-system.webp', desc: 'Industrial spray dryer tower with cyclone separator and pin mill pulveriser for converting concentrated blends into fine, shelf-stable nutrition powder.' },
-      { name: 'Vibro Sifter & Quality Inspection System', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/vibro-sifter-quality-inspection.webp', desc: 'Multi-deck vibro sifter with HMI quality control panel and vision inspection conveyor ensuring powder purity and correct particle size distribution.' },
-      { name: 'Automatic Nutrition Powder Filling & Packaging Machine', image: '/turnkey-brochures/images/nutrition-powder-making-production-plant/automatic-packaging-machine.webp', desc: 'High-speed auger filling and VFFS sealing machine with canister conveyor for accurate powder dosing into pouches, sachets, and nutrition powder containers.' }
+      { name: 'Raw Material Receiving & Sieving System', image: '/assets/plants/food/nutrition-powder-making-production-plant/raw-material-sieving-system.webp', desc: 'Automated ingredient intake hoppers with screw conveyor and vibro sifter equipped with precise load cells and dust filters for safe material transfer.' },
+      { name: 'Ribbon Blender Mixing System', image: '/assets/plants/food/nutrition-powder-making-production-plant/ribbon-blender-mixing-system.webp', desc: 'Heavy-duty SS316 ribbon blender with open-top inspection, pneumatic discharge valve, and motor drive for perfectly homogeneous dry powder blending.' },
+      { name: 'Homogenization & Nutrient Dispersion System', image: '/assets/plants/food/nutrition-powder-making-production-plant/homogenization-unit.webp', desc: 'High-pressure homogenizer with jacketed vessel, pressure gauges, and PLC touch-screen control panel for nutrient dispersion and clump-free consistency.' },
+      { name: 'Spray Drying & Milling System', image: '/assets/plants/food/nutrition-powder-making-production-plant/spray-drying-milling-system.webp', desc: 'Industrial spray dryer tower with cyclone separator and pin mill pulveriser for converting concentrated blends into fine, shelf-stable nutrition powder.' },
+      { name: 'Vibro Sifter & Quality Inspection System', image: '/assets/plants/food/nutrition-powder-making-production-plant/vibro-sifter-quality-inspection.webp', desc: 'Multi-deck vibro sifter with HMI quality control panel and vision inspection conveyor ensuring powder purity and correct particle size distribution.' },
+      { name: 'Automatic Nutrition Powder Filling & Packaging Machine', image: '/assets/plants/food/nutrition-powder-making-production-plant/automatic-packaging-machine.webp', desc: 'High-speed auger filling and VFFS sealing machine with canister conveyor for accurate powder dosing into pouches, sachets, and nutrition powder containers.' }
     ],
     applications: [
       { title: 'Protein Powder', desc: 'Whey, casein, soy, pea, and rice protein blends for sports and clinical nutrition.' },
@@ -1961,13 +1961,13 @@ const CORE_PROJECTS = {
       { question: 'Can the plant handle sensitive micronutrients and probiotics?', answer: 'Yes. Our precision micro-dosing systems and controlled processing environments handle heat-sensitive vitamins, probiotics, and bioactive ingredients while maintaining their potency and stability.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/nutrition-powder-hero.webp', caption: 'Nutrition Powder Making Production Plant' },
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/raw-material-sieving-system.webp', caption: 'Raw Material Receiving & Sieving System' },
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/ribbon-blender-mixing-system.webp', caption: 'Ribbon Blender Mixing System' },
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/homogenization-unit.webp', caption: 'Homogenization & Nutrient Dispersion System' },
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/spray-drying-milling-system.webp', caption: 'Spray Drying & Milling System' },
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/vibro-sifter-quality-inspection.webp', caption: 'Vibro Sifter & Quality Inspection System' },
-      { src: '/turnkey-brochures/images/nutrition-powder-making-production-plant/automatic-packaging-machine.webp', caption: 'Automatic Nutrition Powder Filling & Packaging Machine' }
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/nutrition-powder-hero.webp', caption: 'Nutrition Powder Making Production Plant' },
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/raw-material-sieving-system.webp', caption: 'Raw Material Receiving & Sieving System' },
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/ribbon-blender-mixing-system.webp', caption: 'Ribbon Blender Mixing System' },
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/homogenization-unit.webp', caption: 'Homogenization & Nutrient Dispersion System' },
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/spray-drying-milling-system.webp', caption: 'Spray Drying & Milling System' },
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/vibro-sifter-quality-inspection.webp', caption: 'Vibro Sifter & Quality Inspection System' },
+      { src: '/assets/plants/food/nutrition-powder-making-production-plant/automatic-packaging-machine.webp', caption: 'Automatic Nutrition Powder Filling & Packaging Machine' }
     ]
   }
 };
@@ -2022,12 +2022,12 @@ export function getProjectDetails(slug, title = '') {
       { id: 10, title: 'Dispatch & Storage', desc: 'Secure quarantine and temperature-controlled storage before distribution.' }
     ];
     machinery = [
-      { name: 'Dispensing Booth', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Laminar flow booths for safe and sterile weighing of active ingredients.' },
-      { name: 'High Shear Mixer Granulator', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'Advanced granulator for efficient wet granulation and uniform mixing.' },
-      { name: 'Fluid Bed Dryer', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'Rapid and uniform drying of granules with precise temperature control.' },
-      { name: 'Compression / Filling Machine', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'High-speed rotary tablet press or automated capsule/liquid filling machine.' },
-      { name: 'Auto Coater', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Fully automated coating pan for film or enteric coating.' },
-      { name: 'Blister / Cartoning Line', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Integrated blister packaging and cartoning with serialization.' }
+      { name: 'Dispensing Booth', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Laminar flow booths for safe and sterile weighing of active ingredients.' },
+      { name: 'High Shear Mixer Granulator', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'Advanced granulator for efficient wet granulation and uniform mixing.' },
+      { name: 'Fluid Bed Dryer', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'Rapid and uniform drying of granules with precise temperature control.' },
+      { name: 'Compression / Filling Machine', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'High-speed rotary tablet press or automated capsule/liquid filling machine.' },
+      { name: 'Auto Coater', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Fully automated coating pan for film or enteric coating.' },
+      { name: 'Blister / Cartoning Line', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: 'Integrated blister packaging and cartoning with serialization.' }
     ];
   } else if (isPowder) {
     processSteps = [
@@ -2043,12 +2043,12 @@ export function getProjectDetails(slug, title = '') {
       { id: 10, title: 'Traceability Warehousing', desc: 'Stacking and storage under dry atmosphere with batch codes.' }
     ];
     machinery = [
-      { name: 'Vibrating Screen Cleaner', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Double-deck screen separator with air aspiration hood.' },
-      { name: 'Rotary Destoner', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'Density separation system to eliminate heavy stone contaminants.' },
-      { name: 'Convective Dryer', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Hot air belt dryer with speed and moisture sensors.' },
-      { name: 'Pre-Crusher Breaker', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'High-torque breaker designed to crush raw items into coarse flakes.' },
-      { name: 'Fine Pin Mill Pulverizer', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'Micronizing pin mill featuring water cooling channels.' },
-      { name: 'Pouch Packaging Machine', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Vertical FFS line with auger dosing for dust-free bagging.' }
+      { name: 'Vibrating Screen Cleaner', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Double-deck screen separator with air aspiration hood.' },
+      { name: 'Rotary Destoner', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'Density separation system to eliminate heavy stone contaminants.' },
+      { name: 'Convective Dryer', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Hot air belt dryer with speed and moisture sensors.' },
+      { name: 'Pre-Crusher Breaker', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'High-torque breaker designed to crush raw items into coarse flakes.' },
+      { name: 'Fine Pin Mill Pulverizer', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'Micronizing pin mill featuring water cooling channels.' },
+      { name: 'Pouch Packaging Machine', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: 'Vertical FFS line with auger dosing for dust-free bagging.' }
     ];
   } else if (isLiquidOrPaste) {
     stats = { capacity: '500 Ltr–5,000 Ltr', stages: '10 Stage', retention: 'Brix Controlled' };
@@ -2071,12 +2071,12 @@ export function getProjectDetails(slug, title = '') {
       { id: 10, title: 'Labeling & Warehousing', desc: 'Automatic side labeling, box boxing, and temperature controlled warehousing.' }
     ];
     machinery = [
-      { name: 'Rotary Drum Washer', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'Stainless steel drum washer with high-pressure spray headers.' },
-      { name: 'Pulping Disintegrator', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'High-speed crushing mill for pulping raw feedstocks.' },
-      { name: 'Continuous Screw Extractor', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'High-yield pressing screw extractor for liquid recovery.' },
-      { name: 'Vacuum Concentration Pan', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'Low-temperature vacuum evaporator for liquid concentrates.' },
-      { name: 'Plate Pasteurizer skid', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Thermal sterilization skid with PLC temperature logging.' },
-      { name: 'Volumetric Bottling machine', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Rotary filling, capping, and sealing line for liquids and pastes.' }
+      { name: 'Rotary Drum Washer', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'Stainless steel drum washer with high-pressure spray headers.' },
+      { name: 'Pulping Disintegrator', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'High-speed crushing mill for pulping raw feedstocks.' },
+      { name: 'Continuous Screw Extractor', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'High-yield pressing screw extractor for liquid recovery.' },
+      { name: 'Vacuum Concentration Pan', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'Low-temperature vacuum evaporator for liquid concentrates.' },
+      { name: 'Plate Pasteurizer skid', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Thermal sterilization skid with PLC temperature logging.' },
+      { name: 'Volumetric Bottling machine', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: 'Rotary filling, capping, and sealing line for liquids and pastes.' }
     ];
   } else {
     // General plant fallback
@@ -2093,12 +2093,12 @@ export function getProjectDetails(slug, title = '') {
       { id: 10, title: 'Traceable Warehousing', desc: 'Palletized casing and warehouse logging under FIFO guidelines.' }
     ];
     machinery = [
-      { name: 'Sanitary Feed Elevator', image: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', desc: 'Stainless steel bucket or screw elevator for automatic loading.' },
-      { name: 'Multi-stage Jet Washer', image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', desc: 'High-efficiency wash cabin with water recirculation filters.' },
-      { name: 'Core Processing Vessel', image: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', desc: 'Sanitary jacketed blender or reactor for temperature-controlled mixing.' },
-      { name: 'Refining Extractor Separator', image: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', desc: 'High-torque separator for isolating pure product fractions.' },
-      { name: 'Vibratory mesh Clarifier', image: '/turnkey-brochures/images/beetroot-gallery/silos.webp', desc: 'Vibrating sifting separator with adjustable screening meshes.' },
-      { name: 'FFS Form Fill Sealer', image: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', desc: 'Fully automated filling, capping, bagging, and cartoning line.' }
+      { name: 'Sanitary Feed Elevator', image: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', desc: 'Stainless steel bucket or screw elevator for automatic loading.' },
+      { name: 'Multi-stage Jet Washer', image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', desc: 'High-efficiency wash cabin with water recirculation filters.' },
+      { name: 'Core Processing Vessel', image: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', desc: 'Sanitary jacketed blender or reactor for temperature-controlled mixing.' },
+      { name: 'Refining Extractor Separator', image: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', desc: 'High-torque separator for isolating pure product fractions.' },
+      { name: 'Vibratory mesh Clarifier', image: '/assets/plants/beverages/beetroot-gallery/silos.webp', desc: 'Vibrating sifting separator with adjustable screening meshes.' },
+      { name: 'FFS Form Fill Sealer', image: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', desc: 'Fully automated filling, capping, bagging, and cartoning line.' }
     ];
   }
 
@@ -2127,7 +2127,7 @@ export function getProjectDetails(slug, title = '') {
             { title: 'OEE Optimised', desc: 'Engineered to achieve 85%+ Overall Equipment Effectiveness.' },
             { title: 'Global Compliance', desc: 'Complies with FSSAI, FDA, CE, and GMP sanitary standards.' }
           ],
-      image: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp'
+      image: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp'
     },
     capacities,
     features: [
@@ -2149,12 +2149,12 @@ export function getProjectDetails(slug, title = '') {
       { title: 'Custom Contract Packing', desc: 'White-label and private-label packaging for brand houses.' }
     ],
     gallery: [
-      { src: '/turnkey-brochures/images/beetroot-gallery/industrial_plant.webp', caption: `${cleanTitle} Overview` },
-      { src: '/turnkey-brochures/images/beetroot-gallery/conveyor_machine.webp', caption: 'Raw Intake & Washing Section' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/steel_tanks.webp', caption: 'Refining & Processing Area' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_pipes.webp', caption: 'Piping & Filtration Skids' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/silos.webp', caption: 'Storage & Silo Dosing Systems' },
-      { src: '/turnkey-brochures/images/beetroot-gallery/processing_packaging.webp', caption: 'Automated Packaging & Weighing Line' }
+      { src: '/assets/plants/beverages/beetroot-gallery/industrial_plant.webp', caption: `${cleanTitle} Overview` },
+      { src: '/assets/plants/beverages/beetroot-gallery/conveyor_machine.webp', caption: 'Raw Intake & Washing Section' },
+      { src: '/assets/plants/beverages/beetroot-gallery/steel_tanks.webp', caption: 'Refining & Processing Area' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_pipes.webp', caption: 'Piping & Filtration Skids' },
+      { src: '/assets/plants/beverages/beetroot-gallery/silos.webp', caption: 'Storage & Silo Dosing Systems' },
+      { src: '/assets/plants/beverages/beetroot-gallery/processing_packaging.webp', caption: 'Automated Packaging & Weighing Line' }
     ]
   };
 
@@ -2162,20 +2162,20 @@ export function getProjectDetails(slug, title = '') {
   // Specific dynamic project overrides
   
   if (slug === 'coriander-powder-plant') {
-    project.heroImage = '/turnkey-brochures/images/coriander-powder/coriander_powder_hero.webp';
+    project.heroImage = '/assets/plants/spices/coriander-powder/coriander_powder_hero.webp';
   }
   if (slug === 'banana-chips-processing-plant') {
-    project.heroImage = '/turnkey-brochures/images/banana-chips-processing-plant/banana_chips_hero_banner.webp';
+    project.heroImage = '/assets/plants/food/banana-chips-processing-plant/banana_chips_hero_banner.webp';
   }
   
   if (slug === 'fully-automated-namkeen-plant') {
     project.gallery = [
-      { src: '/turnkey-brochures/images/namkeen/media__1785499273491.webp', caption: 'Automated Pouch Packing & Multi-head Weigher' },
-      { src: '/turnkey-brochures/images/namkeen/media__1785499263214.webp', caption: 'Flavor Coating & Seasoning Drum' },
-      { src: '/turnkey-brochures/images/namkeen/media__1785499254675.webp', caption: 'Raw Material Mixing & Sifting' },
-      { src: '/turnkey-brochures/images/namkeen/media__1785499242760.webp', caption: 'Continuous Frying System' },
-      { src: '/turnkey-brochures/images/namkeen/media__1785499234267.webp', caption: 'Dough Mixing & Extrusion Line' },
-      { src: '/turnkey-brochures/images/namkeen/media__1785499227685.webp', caption: 'Vibratory Grading & Conveying' }
+      { src: '/assets/plants/food/namkeen/media__1785499273491.webp', caption: 'Automated Pouch Packing & Multi-head Weigher' },
+      { src: '/assets/plants/food/namkeen/media__1785499263214.webp', caption: 'Flavor Coating & Seasoning Drum' },
+      { src: '/assets/plants/food/namkeen/media__1785499254675.webp', caption: 'Raw Material Mixing & Sifting' },
+      { src: '/assets/plants/food/namkeen/media__1785499242760.webp', caption: 'Continuous Frying System' },
+      { src: '/assets/plants/food/namkeen/media__1785499234267.webp', caption: 'Dough Mixing & Extrusion Line' },
+      { src: '/assets/plants/food/namkeen/media__1785499227685.webp', caption: 'Vibratory Grading & Conveying' }
     ];
     project.heroImage = project.gallery[0].src;
     if (project.overview) {
@@ -2186,13 +2186,13 @@ export function getProjectDetails(slug, title = '') {
 
   if (slug === 'pharmaceutical-powder-manufacturing-plant') {
     project.gallery = [
-      { src: '/turnkey-brochures/images/pharma_powder_1.webp', caption: 'Pharmaceutical Powder Manufacturing Plant' },
-      { src: '/turnkey-brochures/images/pharma_powder_2.webp', caption: 'Vibro Sifter & Weighing Hopper' },
-      { src: '/turnkey-brochures/images/pharma_powder_3.webp', caption: 'Ribbon Blender' },
-      { src: '/turnkey-brochures/images/pharma_powder_4.webp', caption: 'Multi Mill' },
-      { src: '/turnkey-brochures/images/pharma_powder_5.webp', caption: 'Intermediate Storage Bin' },
-      { src: '/turnkey-brochures/images/pharma_powder_6.webp', caption: 'Automatic Powder Filling & Sealing' },
-      { src: '/turnkey-brochures/images/pharma_powder_7.webp', caption: 'Powder Mixing & Granulation' }
+      { src: '/assets/plants/food/pharma_powder_1.webp', caption: 'Pharmaceutical Powder Manufacturing Plant' },
+      { src: '/assets/plants/food/pharma_powder_2.webp', caption: 'Vibro Sifter & Weighing Hopper' },
+      { src: '/assets/plants/food/pharma_powder_3.webp', caption: 'Ribbon Blender' },
+      { src: '/assets/plants/food/pharma_powder_4.webp', caption: 'Multi Mill' },
+      { src: '/assets/plants/food/pharma_powder_5.webp', caption: 'Intermediate Storage Bin' },
+      { src: '/assets/plants/food/pharma_powder_6.webp', caption: 'Automatic Powder Filling & Sealing' },
+      { src: '/assets/plants/food/pharma_powder_7.webp', caption: 'Powder Mixing & Granulation' }
     ];
     project.heroImage = project.gallery[0].src;
     if (project.overview) {
@@ -2213,12 +2213,12 @@ export function getProjectDetails(slug, title = '') {
 
   if (slug === 'pharmaceutical-packaging-blister-packing-plant') {
     project.gallery = [
-      { src: '/turnkey-brochures/images/pharma_pack_1.webp', caption: 'Pharmaceutical Packaging & Blister Packing Plant' },
-      { src: '/turnkey-brochures/images/pharma_pack_2.webp', caption: 'Capsule Sorting & Feeding System' },
-      { src: '/turnkey-brochures/images/pharma_pack_3.webp', caption: 'Blister Forming & Sealing Machine' },
-      { src: '/turnkey-brochures/images/pharma_pack_4.webp', caption: 'Automatic Cartoning Machine' },
-      { src: '/turnkey-brochures/images/pharma_pack_5.webp', caption: 'Check Weigher & Metal Detector' },
-      { src: '/turnkey-brochures/images/pharma_pack_6.webp', caption: 'Robotic Palletizing System' }
+      { src: '/assets/plants/food/pharma_pack_1.webp', caption: 'Pharmaceutical Packaging & Blister Packing Plant' },
+      { src: '/assets/plants/food/pharma_pack_2.webp', caption: 'Capsule Sorting & Feeding System' },
+      { src: '/assets/plants/food/pharma_pack_3.webp', caption: 'Blister Forming & Sealing Machine' },
+      { src: '/assets/plants/food/pharma_pack_4.webp', caption: 'Automatic Cartoning Machine' },
+      { src: '/assets/plants/food/pharma_pack_5.webp', caption: 'Check Weigher & Metal Detector' },
+      { src: '/assets/plants/food/pharma_pack_6.webp', caption: 'Robotic Palletizing System' }
     ];
     if (project.overview) {
       project.overview.image = project.gallery[1].src;
@@ -2259,8 +2259,8 @@ export function getProjectDetails(slug, title = '') {
 
   if (customGalleries[slug]) {
     const cg = customGalleries[slug];
-    const galleryDir = `/turnkey-brochures/images/${slug.replace('-plant', '')}-gallery`;
-    project.heroImage = `/turnkey-brochures/images/${cg.hero}`;
+    const galleryDir = `/assets/plants/food/${slug.replace('-plant', '')}-gallery`;
+    project.heroImage = `/assets/plants/food/${cg.hero}`;
     project.overview.image = `${galleryDir}/${cg.images[0]}`;
     if (project.overview.photoImage) project.overview.photoImage = `${galleryDir}/${cg.images[0]}`;
     
@@ -2288,7 +2288,7 @@ export function getProjectDetails(slug, title = '') {
   };
 
   if (generatedHeroImages[slug]) {
-    project.heroImage = `/turnkey-brochures/images/${generatedHeroImages[slug]}`;
+    project.heroImage = `/assets/plants/food/${generatedHeroImages[slug]}`;
     project.heroStyle = { backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' };
   }
 

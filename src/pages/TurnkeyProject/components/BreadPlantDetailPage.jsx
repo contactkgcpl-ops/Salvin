@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Spiral Dough Mixer",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/bread-gallery/1_dough_mixer.webp"
+    image: "/assets/plants/food/bread-gallery/1_dough_mixer.webp"
   },
   {
     name: "Dough Divider",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/bread-gallery/2_dough_divider.webp"
+    image: "/assets/plants/food/bread-gallery/2_dough_divider.webp"
   },
   {
     name: "Proofing Chamber",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/bread-gallery/3_bread_moulder.webp"
+    image: "/assets/plants/food/bread-gallery/3_bread_moulder.webp"
   },
   {
     name: "Baking Oven",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/bread-gallery/4_tunnel_oven.webp"
+    image: "/assets/plants/food/bread-gallery/4_tunnel_oven.webp"
   },
   {
     name: "Bread Slicer",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/bread-gallery/5_cooling_slicer.webp"
+    image: "/assets/plants/food/bread-gallery/5_cooling_slicer.webp"
   },
   {
     name: "Bagging Machine",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/bread-gallery/6_carton_packing.webp"
+    image: "/assets/plants/food/bread-gallery/6_carton_packing.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/bread-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/bread-gallery/2_dough_divider.webp', caption: 'Dough Divider' },
-  { src: '/turnkey-brochures/images/bread-gallery/3_bread_moulder.webp', caption: 'Bread Moulder' },
-  { src: '/turnkey-brochures/images/bread-gallery/4_tunnel_oven.webp', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/bread-gallery/5_cooling_slicer.webp', caption: 'Cooling Slicer' },
-  { src: '/turnkey-brochures/images/bread-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
+  { src: '/assets/plants/food/bread-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/assets/plants/food/bread-gallery/2_dough_divider.webp', caption: 'Dough Divider' },
+  { src: '/assets/plants/food/bread-gallery/3_bread_moulder.webp', caption: 'Bread Moulder' },
+  { src: '/assets/plants/food/bread-gallery/4_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/assets/plants/food/bread-gallery/5_cooling_slicer.webp', caption: 'Cooling Slicer' },
+  { src: '/assets/plants/food/bread-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function BreadPlantDetailPage() {
@@ -127,7 +127,7 @@ export default function BreadPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_bread.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_bread.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

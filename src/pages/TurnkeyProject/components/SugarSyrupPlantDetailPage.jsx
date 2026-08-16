@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Raw Sugar Receiving',
-    image: '/turnkey-brochures/images/sugar-syrup-plant/1_raw_sugar_receiving.webp',
+    image: '/assets/plants/pharma/sugar-syrup-plant/1_raw_sugar_receiving.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Sugar Melting Tank',
-    image: '/turnkey-brochures/images/sugar-syrup-plant/2_sugar_melting_tank.webp',
+    image: '/assets/plants/pharma/sugar-syrup-plant/2_sugar_melting_tank.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Clarification Tank',
-    image: '/turnkey-brochures/images/sugar-syrup-plant/3_clarification_tank.webp',
+    image: '/assets/plants/pharma/sugar-syrup-plant/3_clarification_tank.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Syrup Holding Tanks',
-    image: '/turnkey-brochures/images/sugar-syrup-plant/4_syrup_holding_tank.webp',
+    image: '/assets/plants/pharma/sugar-syrup-plant/4_syrup_holding_tank.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Syrup Cooling System',
-    image: '/turnkey-brochures/images/sugar-syrup-plant/5_cooling_system.webp',
+    image: '/assets/plants/pharma/sugar-syrup-plant/5_cooling_system.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Packing Machine',
-    image: '/turnkey-brochures/images/sugar-syrup-plant/6_packing_machine.webp',
+    image: '/assets/plants/pharma/sugar-syrup-plant/6_packing_machine.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/sugar-syrup-plant/1_raw_sugar_receiving.webp', caption: 'Raw Sugar Receiving' },
-  { src: '/turnkey-brochures/images/sugar-syrup-plant/2_sugar_melting_tank.webp', caption: 'Sugar Melting Tank' },
-  { src: '/turnkey-brochures/images/sugar-syrup-plant/3_clarification_tank.webp', caption: 'Clarification Tank' },
-  { src: '/turnkey-brochures/images/sugar-syrup-plant/4_syrup_holding_tank.webp', caption: 'Syrup Holding Tanks' },
-  { src: '/turnkey-brochures/images/sugar-syrup-plant/5_cooling_system.webp', caption: 'Syrup Cooling System' },
-  { src: '/turnkey-brochures/images/sugar-syrup-plant/6_packing_machine.webp', caption: 'Packing Machine' }
+  { src: '/assets/plants/pharma/sugar-syrup-plant/1_raw_sugar_receiving.webp', caption: 'Raw Sugar Receiving' },
+  { src: '/assets/plants/pharma/sugar-syrup-plant/2_sugar_melting_tank.webp', caption: 'Sugar Melting Tank' },
+  { src: '/assets/plants/pharma/sugar-syrup-plant/3_clarification_tank.webp', caption: 'Clarification Tank' },
+  { src: '/assets/plants/pharma/sugar-syrup-plant/4_syrup_holding_tank.webp', caption: 'Syrup Holding Tanks' },
+  { src: '/assets/plants/pharma/sugar-syrup-plant/5_cooling_system.webp', caption: 'Syrup Cooling System' },
+  { src: '/assets/plants/pharma/sugar-syrup-plant/6_packing_machine.webp', caption: 'Packing Machine' }
 ]
 
 export default function SugarSyrupPlantDetailPage() {
@@ -124,7 +124,7 @@ export default function SugarSyrupPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_sugar_syrup_plant.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_sugar_syrup_plant.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge">
             <span className="opp-hero__badge-dot" />
@@ -211,7 +211,7 @@ export default function SugarSyrupPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/sugar-syrup-plant/4_syrup_holding_tank.webp" alt="Sugar Syrup Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/pharma/sugar-syrup-plant/4_syrup_holding_tank.webp" alt="Sugar Syrup Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

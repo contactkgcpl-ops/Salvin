@@ -20,32 +20,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ingredient Weighing & Dosing System',
-    image: '/turnkey-brochures/images/sunscreen-lotion-gallery/1_ingredient_dosing.jpg',
+    image: '/assets/plants/cosmetics/sunscreen-lotion-gallery/1_ingredient_dosing.jpg',
     desc: 'Automatic weighing and dosing system for precise measurement of raw materials, ensuring perfect batch consistency.'
   },
   {
     name: 'Vacuum Emulsifying Mixer',
-    image: '/turnkey-brochures/images/sunscreen-lotion-gallery/2_vacuum_mixer.jpg',
+    image: '/assets/plants/cosmetics/sunscreen-lotion-gallery/2_vacuum_mixer.jpg',
     desc: 'Advanced vacuum mixing vessel for perfectly blending and emulsifying the sunscreen ingredients without air bubbles.'
   },
   {
     name: 'High Shear Homogenizer',
-    image: '/turnkey-brochures/images/sunscreen-lotion-gallery/3_high_shear.jpg',
+    image: '/assets/plants/cosmetics/sunscreen-lotion-gallery/3_high_shear.jpg',
     desc: 'Heavy-duty high shear homogenizer system designed to create an ultra-smooth and stable emulsion.'
   },
   {
     name: 'Storage Holding Tank',
-    image: '/turnkey-brochures/images/sunscreen-lotion-gallery/4_storage_tank.jpg',
+    image: '/assets/plants/cosmetics/sunscreen-lotion-gallery/4_storage_tank.jpg',
     desc: 'High-grade stainless steel holding tank to safely store the prepared sunscreen lotion before the filling process.'
   },
   {
     name: 'Automatic Tube Filling & Sealing Machine',
-    image: '/turnkey-brochures/images/sunscreen-lotion-gallery/5_tube_filling.jpg',
+    image: '/assets/plants/cosmetics/sunscreen-lotion-gallery/5_tube_filling.jpg',
     desc: 'Fully automatic rotary tube filling and sealing station to efficiently and hygienically pack the product into tubes.'
   },
   {
     name: 'Automatic Labeling & Carton Packing Machine',
-    image: '/turnkey-brochures/images/sunscreen-lotion-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/sunscreen-lotion-gallery/6_labeling_packing.jpg',
     desc: 'High-speed labeling and carton packaging system for final dispatch, reducing manual labor and errors.'
   }
 ]
@@ -76,12 +76,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/sunscreen-lotion-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Weighing & Dosing System' },
-  { src: '/turnkey-brochures/images/sunscreen-lotion-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
-  { src: '/turnkey-brochures/images/sunscreen-lotion-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
-  { src: '/turnkey-brochures/images/sunscreen-lotion-gallery/4_storage_tank.jpg', caption: 'Storage Holding Tank' },
-  { src: '/turnkey-brochures/images/sunscreen-lotion-gallery/5_tube_filling.jpg', caption: 'Automatic Tube Filling & Sealing Machine' },
-  { src: '/turnkey-brochures/images/sunscreen-lotion-gallery/6_labeling_packing.jpg', caption: 'Automatic Labeling & Carton Packing Machine' }
+  { src: '/assets/plants/cosmetics/sunscreen-lotion-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Weighing & Dosing System' },
+  { src: '/assets/plants/cosmetics/sunscreen-lotion-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
+  { src: '/assets/plants/cosmetics/sunscreen-lotion-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
+  { src: '/assets/plants/cosmetics/sunscreen-lotion-gallery/4_storage_tank.jpg', caption: 'Storage Holding Tank' },
+  { src: '/assets/plants/cosmetics/sunscreen-lotion-gallery/5_tube_filling.jpg', caption: 'Automatic Tube Filling & Sealing Machine' },
+  { src: '/assets/plants/cosmetics/sunscreen-lotion-gallery/6_labeling_packing.jpg', caption: 'Automatic Labeling & Carton Packing Machine' }
 ]
 
 export default function SunscreenLotionManufacturingDetailPage() {
@@ -133,7 +133,7 @@ export default function SunscreenLotionManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="slm-hero">
         <div className="slm-hero__overlay" />
-        <div className="slm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/sunscreen_lotion_hero.png')` }} />
+        <div className="slm-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/sunscreen_lotion_hero.png')` }} />
         <div className="slm-hero__content">
           <span className="slm-hero__badge">
             <span className="slm-hero__badge-dot" />
@@ -226,7 +226,7 @@ export default function SunscreenLotionManufacturingDetailPage() {
               </div>
             </div>
             <div className="slm-overview__image slm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/turnkey-brochures/images/sunscreen-lotion-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/sunscreen-lotion-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

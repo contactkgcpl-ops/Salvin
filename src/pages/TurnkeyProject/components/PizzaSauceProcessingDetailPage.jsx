@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ingredient Feeding & Inspection Conveyor',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/1_ingredient_feeding.webp',
+    image: '/assets/plants/food/pizza-sauce-processing-gallery/1_ingredient_feeding.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tomato Dicer / Vegetable Chopper',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/2_tomato_dicer.webp',
+    image: '/assets/plants/food/pizza-sauce-processing-gallery/2_tomato_dicer.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Continuous Pulp Refiner',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/3_pulp_refiner.webp',
+    image: '/assets/plants/food/pizza-sauce-processing-gallery/3_pulp_refiner.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Pizza Sauce Homogenizer & Holding Tank',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.webp',
+    image: '/assets/plants/food/pizza-sauce-processing-gallery/4_homogenizer.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Pizza Sauce Blending & Seasoning Tank',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.webp',
+    image: '/assets/plants/food/pizza-sauce-processing-gallery/5_blending_tank.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Pizza Sauce Filling, Capping & Labelling Line',
-    image: '/turnkey-brochures/images/pizza-sauce-processing-gallery/6_filling_line.webp',
+    image: '/assets/plants/food/pizza-sauce-processing-gallery/6_filling_line.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/1_ingredient_feeding.webp', caption: 'Ingredient Feeding & Inspection Conveyor' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/2_tomato_dicer.webp', caption: 'Tomato Dicer / Vegetable Chopper' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/3_pulp_refiner.webp', caption: 'Continuous Pulp Refiner' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/4_homogenizer.webp', caption: 'Pizza Sauce Homogenizer & Holding Tank' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.webp', caption: 'Pizza Sauce Blending & Seasoning Tank' },
-  { src: '/turnkey-brochures/images/pizza-sauce-processing-gallery/6_filling_line.webp', caption: 'Automatic Pizza Sauce Filling, Capping & Labelling Line' },
+  { src: '/assets/plants/food/pizza-sauce-processing-gallery/1_ingredient_feeding.webp', caption: 'Ingredient Feeding & Inspection Conveyor' },
+  { src: '/assets/plants/food/pizza-sauce-processing-gallery/2_tomato_dicer.webp', caption: 'Tomato Dicer / Vegetable Chopper' },
+  { src: '/assets/plants/food/pizza-sauce-processing-gallery/3_pulp_refiner.webp', caption: 'Continuous Pulp Refiner' },
+  { src: '/assets/plants/food/pizza-sauce-processing-gallery/4_homogenizer.webp', caption: 'Pizza Sauce Homogenizer & Holding Tank' },
+  { src: '/assets/plants/food/pizza-sauce-processing-gallery/5_blending_tank.webp', caption: 'Pizza Sauce Blending & Seasoning Tank' },
+  { src: '/assets/plants/food/pizza-sauce-processing-gallery/6_filling_line.webp', caption: 'Automatic Pizza Sauce Filling, Capping & Labelling Line' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function PizzaSauceProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="psp-hero">
         <div className="psp-hero__overlay" />
-        <div className="psp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/pizza_sauce_hero.webp')` }} />
+        <div className="psp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/pizza_sauce_hero.webp')` }} />
         <div className="psp-hero__content">
           <span className="psp-hero__badge">
             <span className="psp-hero__badge-dot" />
@@ -229,7 +229,7 @@ export default function PizzaSauceProcessingDetailPage() {
               </div>
             </div>
             <div className="psp-overview__image psp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pizza-sauce-processing-gallery/5_blending_tank.webp" alt="Pizza Sauce Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/pizza-sauce-processing-gallery/5_blending_tank.webp" alt="Pizza Sauce Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

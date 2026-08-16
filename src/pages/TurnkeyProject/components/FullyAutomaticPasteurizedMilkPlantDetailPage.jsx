@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Milk Reception & Chilling",
     "desc": "Rapid cooling of raw milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.webp"
+    "image": "/assets/plants/dairy/milk-plant-gallery/reception_chilling.webp"
   },
   {
     "name": "Centrifugal Clarifier",
     "desc": "Removes impurities effectively.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.webp"
+    "image": "/assets/plants/dairy/milk-plant-gallery/clarifier_standardization.webp"
   },
   {
     "name": "Homogenizer",
     "desc": "Uniform fat distribution.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.webp"
+    "image": "/assets/plants/dairy/milk-plant-gallery/homogenizer.webp"
   },
   {
     "name": "HTST Pasteurizer",
     "desc": "Highly efficient heat transfer.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.webp"
+    "image": "/assets/plants/dairy/milk-plant-gallery/pasteurization_unit.webp"
   },
   {
     "name": "Storage Silo",
     "desc": "Insulated storage for processed milk.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.webp"
+    "image": "/assets/plants/dairy/milk-plant-gallery/storage_tank.webp"
   },
   {
     "name": "Pouch Packing Machine",
     "desc": "High speed milk pouch filling.",
-    "image": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.webp"
+    "image": "/assets/plants/dairy/milk-plant-gallery/pouch_filling.webp"
   }
 ]
 
@@ -98,27 +98,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/reception_chilling.webp",
+    "src": "/assets/plants/dairy/milk-plant-gallery/reception_chilling.webp",
     "caption": "Milk Reception & Chilling"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/clarifier_standardization.webp",
+    "src": "/assets/plants/dairy/milk-plant-gallery/clarifier_standardization.webp",
     "caption": "Centrifugal Clarifier"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/homogenizer.webp",
+    "src": "/assets/plants/dairy/milk-plant-gallery/homogenizer.webp",
     "caption": "Homogenizer"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pasteurization_unit.webp",
+    "src": "/assets/plants/dairy/milk-plant-gallery/pasteurization_unit.webp",
     "caption": "HTST Pasteurizer"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/storage_tank.webp",
+    "src": "/assets/plants/dairy/milk-plant-gallery/storage_tank.webp",
     "caption": "Storage Silo"
   },
   {
-    "src": "/turnkey-brochures/images/milk-plant-gallery/pouch_filling.webp",
+    "src": "/assets/plants/dairy/milk-plant-gallery/pouch_filling.webp",
     "caption": "Pouch Packing Machine"
   }
 ];
@@ -168,7 +168,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/guava_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -261,7 +261,7 @@ export default function FullyAutomaticPasteurizedMilkPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/pasteurized_milk_overview.webp" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
+              <img src="/assets/plants/food/pasteurized_milk_overview.webp" alt="Fully Automatic Pasteurized Milk Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

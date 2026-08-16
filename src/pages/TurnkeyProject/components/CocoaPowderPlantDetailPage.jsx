@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Cocoa Bean Roaster',
-    image: '/turnkey-brochures/images/cocoa-powder-plant/1_roaster.webp',
+    image: '/assets/plants/food/cocoa-powder-plant/1_roaster.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Cocoa Bean Winnower',
-    image: '/turnkey-brochures/images/cocoa-powder-plant/2_winnower.webp',
+    image: '/assets/plants/food/cocoa-powder-plant/2_winnower.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Cocoa Liquor Grinder',
-    image: '/turnkey-brochures/images/cocoa-powder-plant/3_grinder.webp',
+    image: '/assets/plants/food/cocoa-powder-plant/3_grinder.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cocoa Pulverizer',
-    image: '/turnkey-brochures/images/cocoa-powder-plant/4_pulverizer.webp',
+    image: '/assets/plants/food/cocoa-powder-plant/4_pulverizer.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Vibro Sifter',
-    image: '/turnkey-brochures/images/cocoa-powder-plant/5_sifter.webp',
+    image: '/assets/plants/food/cocoa-powder-plant/5_sifter.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Powder Filling Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-plant/6_packing.webp',
+    image: '/assets/plants/food/cocoa-powder-plant/6_packing.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cocoa-powder-plant/1_roaster.webp', caption: 'Cocoa Bean Roaster' },
-  { src: '/turnkey-brochures/images/cocoa-powder-plant/2_winnower.webp', caption: 'Cocoa Bean Winnower' },
-  { src: '/turnkey-brochures/images/cocoa-powder-plant/3_grinder.webp', caption: 'Cocoa Liquor Grinder' },
-  { src: '/turnkey-brochures/images/cocoa-powder-plant/4_pulverizer.webp', caption: 'Cocoa Pulverizer' },
-  { src: '/turnkey-brochures/images/cocoa-powder-plant/5_sifter.webp', caption: 'Vibro Sifter' },
-  { src: '/turnkey-brochures/images/cocoa-powder-plant/6_packing.webp', caption: 'Automatic Powder Filling Machine' }
+  { src: '/assets/plants/food/cocoa-powder-plant/1_roaster.webp', caption: 'Cocoa Bean Roaster' },
+  { src: '/assets/plants/food/cocoa-powder-plant/2_winnower.webp', caption: 'Cocoa Bean Winnower' },
+  { src: '/assets/plants/food/cocoa-powder-plant/3_grinder.webp', caption: 'Cocoa Liquor Grinder' },
+  { src: '/assets/plants/food/cocoa-powder-plant/4_pulverizer.webp', caption: 'Cocoa Pulverizer' },
+  { src: '/assets/plants/food/cocoa-powder-plant/5_sifter.webp', caption: 'Vibro Sifter' },
+  { src: '/assets/plants/food/cocoa-powder-plant/6_packing.webp', caption: 'Automatic Powder Filling Machine' }
 ]
 
 export default function CocoaPowderPlantDetailPage() {
@@ -106,7 +106,7 @@ export default function CocoaPowderPlantDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cocoa_powder_plant.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_cocoa_powder_plant.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY COCOA POWDER SOLUTION</span>
           <h1 className="opp-hero__title">Cocoa Powder Processing Plant</h1>
@@ -152,7 +152,7 @@ export default function CocoaPowderPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/cocoa-powder-plant/2_winnower.webp" alt="Cocoa Powder Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/cocoa-powder-plant/2_winnower.webp" alt="Cocoa Powder Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

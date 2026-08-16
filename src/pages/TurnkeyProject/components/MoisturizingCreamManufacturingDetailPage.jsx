@@ -19,32 +19,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ingredient Weighing & Dosing System',
-    image: '/turnkey-brochures/images/moisturizing-cream-gallery/1_ingredient_dosing.jpg',
+    image: '/assets/plants/cosmetics/moisturizing-cream-gallery/1_ingredient_dosing.jpg',
     desc: 'Precise automatic weighing and multi-head dosing system for raw materials, ensuring perfect formulation every batch.'
   },
   {
     name: 'Vacuum Emulsifying Mixer',
-    image: '/turnkey-brochures/images/moisturizing-cream-gallery/2_vacuum_mixer.jpg',
+    image: '/assets/plants/cosmetics/moisturizing-cream-gallery/2_vacuum_mixer.jpg',
     desc: 'Advanced vacuum emulsifying mixer that blends oil and water phases to create a perfectly stable and smooth cream emulsion.'
   },
   {
     name: 'High Shear Homogenizer & Cream Processing System',
-    image: '/turnkey-brochures/images/moisturizing-cream-gallery/3_high_shear.jpg',
+    image: '/assets/plants/cosmetics/moisturizing-cream-gallery/3_high_shear.jpg',
     desc: 'High shear homogenizer with inline pump that processes the cream to achieve consistent texture and uniform particle size.'
   },
   {
     name: 'Cream Holding Tank',
-    image: '/turnkey-brochures/images/moisturizing-cream-gallery/4_storage_tank.jpg',
+    image: '/assets/plants/cosmetics/moisturizing-cream-gallery/4_storage_tank.jpg',
     desc: 'Hygienic stainless steel holding tank that stores the finished cream safely before the filling process begins.'
   },
   {
     name: 'Automatic Jar Filling & Capping Machine',
-    image: '/turnkey-brochures/images/moisturizing-cream-gallery/5_jar_filling.jpg',
+    image: '/assets/plants/cosmetics/moisturizing-cream-gallery/5_jar_filling.jpg',
     desc: 'Fully automatic rotary jar filling and capping machine for precise, hygienic, and high-speed packaging of moisturizing cream.'
   },
   {
     name: 'Labeling & Carton Packing Machine',
-    image: '/turnkey-brochures/images/moisturizing-cream-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/moisturizing-cream-gallery/6_labeling_packing.jpg',
     desc: 'High-speed automated labeling, carton packing, and palletizing line for efficient final dispatch of finished product.'
   }
 ]
@@ -71,12 +71,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/moisturizing-cream-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Weighing & Dosing System' },
-  { src: '/turnkey-brochures/images/moisturizing-cream-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
-  { src: '/turnkey-brochures/images/moisturizing-cream-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
-  { src: '/turnkey-brochures/images/moisturizing-cream-gallery/4_storage_tank.jpg', caption: 'Cream Holding Tank' },
-  { src: '/turnkey-brochures/images/moisturizing-cream-gallery/5_jar_filling.jpg', caption: 'Automatic Jar Filling & Capping Machine' },
-  { src: '/turnkey-brochures/images/moisturizing-cream-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Machine' }
+  { src: '/assets/plants/cosmetics/moisturizing-cream-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Weighing & Dosing System' },
+  { src: '/assets/plants/cosmetics/moisturizing-cream-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
+  { src: '/assets/plants/cosmetics/moisturizing-cream-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
+  { src: '/assets/plants/cosmetics/moisturizing-cream-gallery/4_storage_tank.jpg', caption: 'Cream Holding Tank' },
+  { src: '/assets/plants/cosmetics/moisturizing-cream-gallery/5_jar_filling.jpg', caption: 'Automatic Jar Filling & Capping Machine' },
+  { src: '/assets/plants/cosmetics/moisturizing-cream-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Machine' }
 ]
 
 export default function MoisturizingCreamManufacturingDetailPage() {
@@ -128,7 +128,7 @@ export default function MoisturizingCreamManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="mcm-hero">
         <div className="mcm-hero__overlay" />
-        <div className="mcm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/face_cream_hero.png')` }} />
+        <div className="mcm-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/face_cream_hero.png')` }} />
         <div className="mcm-hero__content">
           <span className="mcm-hero__badge">
             <span className="mcm-hero__badge-dot" />
@@ -221,7 +221,7 @@ export default function MoisturizingCreamManufacturingDetailPage() {
               </div>
             </div>
             <div className="mcm-overview__image mcm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/turnkey-brochures/images/moisturizing-cream-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/moisturizing-cream-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

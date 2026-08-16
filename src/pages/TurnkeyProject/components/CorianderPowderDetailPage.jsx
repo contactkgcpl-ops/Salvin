@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Coriander Seed Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/1_cleaning.webp',
+    image: '/assets/plants/spices/coriander-powder-gallery/1_cleaning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Coriander Seed Roasting System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/2_roasting.webp',
+    image: '/assets/plants/spices/coriander-powder-gallery/2_roasting.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Coriander Seed Pulverizing System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/3_pulverizing.webp',
+    image: '/assets/plants/spices/coriander-powder-gallery/3_pulverizing.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Coriander Powder Sieving System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/4_sieving.webp',
+    image: '/assets/plants/spices/coriander-powder-gallery/4_sieving.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Coriander Powder Storage & Blending System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/5_storage.webp',
+    image: '/assets/plants/spices/coriander-powder-gallery/5_storage.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Coriander Powder Packaging System',
-    image: '/turnkey-brochures/images/coriander-powder-gallery/6_packaging.webp',
+    image: '/assets/plants/spices/coriander-powder-gallery/6_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/1_cleaning.webp', caption: 'Coriander Seed Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/2_roasting.webp', caption: 'Coriander Seed Roasting System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/3_pulverizing.webp', caption: 'Coriander Seed Pulverizing System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/4_sieving.webp', caption: 'Coriander Powder Sieving System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/5_storage.webp', caption: 'Coriander Powder Storage & Blending System' },
-  { src: '/turnkey-brochures/images/coriander-powder-gallery/6_packaging.webp', caption: 'Coriander Powder Packaging System' },
+  { src: '/assets/plants/spices/coriander-powder-gallery/1_cleaning.webp', caption: 'Coriander Seed Cleaning & Destoning System' },
+  { src: '/assets/plants/spices/coriander-powder-gallery/2_roasting.webp', caption: 'Coriander Seed Roasting System' },
+  { src: '/assets/plants/spices/coriander-powder-gallery/3_pulverizing.webp', caption: 'Coriander Seed Pulverizing System' },
+  { src: '/assets/plants/spices/coriander-powder-gallery/4_sieving.webp', caption: 'Coriander Powder Sieving System' },
+  { src: '/assets/plants/spices/coriander-powder-gallery/5_storage.webp', caption: 'Coriander Powder Storage & Blending System' },
+  { src: '/assets/plants/spices/coriander-powder-gallery/6_packaging.webp', caption: 'Coriander Powder Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function CorianderPowderDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coriander-powder/coriander_powder_hero.webp')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/assets/plants/spices/coriander-powder/coriander_powder_hero.webp')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />
@@ -227,7 +227,7 @@ export default function CorianderPowderDetailPage() {
               </div>
             </div>
             <div className="cpp-overview__image cpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/coriander-powder-gallery/6_packaging.webp" alt="Coriander Powder Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/spices/coriander-powder-gallery/6_packaging.webp" alt="Coriander Powder Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

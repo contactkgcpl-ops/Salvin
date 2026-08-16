@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Material Melting Tank",
     "desc": "High-efficiency jacketed melting tank.",
-    "image": "/turnkey-brochures/images/petrojelly-gallery/melting_tank.webp"
+    "image": "/assets/plants/cosmetics/petrojelly-gallery/melting_tank.webp"
   },
   {
     "name": "Vacuum Mixing Kettle",
     "desc": "Advanced vacuum kettle for precise blending.",
-    "image": "/turnkey-brochures/images/petrojelly-gallery/vacuum_mixing.webp"
+    "image": "/assets/plants/cosmetics/petrojelly-gallery/vacuum_mixing.webp"
   },
   {
     "name": "Filtration System",
     "desc": "Precision filtration for maximum purity.",
-    "image": "/turnkey-brochures/images/petrojelly-gallery/filtration_system.webp"
+    "image": "/assets/plants/cosmetics/petrojelly-gallery/filtration_system.webp"
   },
   {
     "name": "Cooling & Holding Tank",
     "desc": "Temperature-controlled holding and cooling.",
-    "image": "/turnkey-brochures/images/petrojelly-gallery/cooling_holding.webp"
+    "image": "/assets/plants/cosmetics/petrojelly-gallery/cooling_holding.webp"
   },
   {
     "name": "Automatic Jar Filling",
     "desc": "High-speed volumetric filling and sealing.",
-    "image": "/turnkey-brochures/images/petrojelly-gallery/jar_filling.webp"
+    "image": "/assets/plants/cosmetics/petrojelly-gallery/jar_filling.webp"
   },
   {
     "name": "Robotic Packaging",
     "desc": "Automated robotic arm for case packing.",
-    "image": "/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.webp"
+    "image": "/assets/plants/cosmetics/petrojelly-gallery/robotic_packaging.webp"
   }
 ]
 
@@ -98,27 +98,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/petrojelly-gallery/melting_tank.webp",
+    "src": "/assets/plants/cosmetics/petrojelly-gallery/melting_tank.webp",
     "caption": "Raw Material Melting Tank"
   },
   {
-    "src": "/turnkey-brochures/images/petrojelly-gallery/vacuum_mixing.webp",
+    "src": "/assets/plants/cosmetics/petrojelly-gallery/vacuum_mixing.webp",
     "caption": "Vacuum Mixing Kettle"
   },
   {
-    "src": "/turnkey-brochures/images/petrojelly-gallery/filtration_system.webp",
+    "src": "/assets/plants/cosmetics/petrojelly-gallery/filtration_system.webp",
     "caption": "Filtration System"
   },
   {
-    "src": "/turnkey-brochures/images/petrojelly-gallery/cooling_holding.webp",
+    "src": "/assets/plants/cosmetics/petrojelly-gallery/cooling_holding.webp",
     "caption": "Cooling & Holding Tank"
   },
   {
-    "src": "/turnkey-brochures/images/petrojelly-gallery/jar_filling.webp",
+    "src": "/assets/plants/cosmetics/petrojelly-gallery/jar_filling.webp",
     "caption": "Automatic Jar Filling"
   },
   {
-    "src": "/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.webp",
+    "src": "/assets/plants/cosmetics/petrojelly-gallery/robotic_packaging.webp",
     "caption": "Robotic Packaging"
   }
 ];
@@ -168,7 +168,7 @@ export default function PetroleumJellyProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/petroleum_jelly_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/petroleum_jelly_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -261,7 +261,7 @@ export default function PetroleumJellyProcessingDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/petrojelly-gallery/robotic_packaging.webp" alt="Petroleum Jelly Processing Plant Overview" loading="lazy" />
+              <img src="/assets/plants/cosmetics/petrojelly-gallery/robotic_packaging.webp" alt="Petroleum Jelly Processing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

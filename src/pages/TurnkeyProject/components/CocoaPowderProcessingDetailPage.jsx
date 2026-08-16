@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Cocoa Bean Roasting Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.webp',
+    image: '/assets/plants/food/cocoa-powder-processing-gallery/machine4.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Cocoa Bean Winnowing Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine3.webp',
+    image: '/assets/plants/food/cocoa-powder-processing-gallery/machine3.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Cocoa Grinding Machine (Cocoa Liquor Mill)',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.webp',
+    image: '/assets/plants/food/cocoa-powder-processing-gallery/machine2.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cocoa Powder Pulverizer',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.webp',
+    image: '/assets/plants/food/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Vibro Sifter',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/vibro-sifter.webp',
+    image: '/assets/plants/food/cocoa-powder-processing-gallery/vibro-sifter.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Cocoa Powder Packaging Machine',
-    image: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine1.webp',
+    image: '/assets/plants/food/cocoa-powder-processing-gallery/machine1.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine1.webp', caption: 'Cocoa Powder Packaging Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.webp', caption: 'Cocoa Bean Roasting Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine3.webp', caption: 'Cocoa Bean Winnowing Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/machine2.webp', caption: 'Cocoa Grinding Machine' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.webp', caption: 'Cocoa Powder Pulverizer' },
-  { src: '/turnkey-brochures/images/cocoa-powder-processing-gallery/vibro-sifter.webp', caption: 'Vibro Sifter' },
+  { src: '/assets/plants/food/cocoa-powder-processing-gallery/machine1.webp', caption: 'Cocoa Powder Packaging Machine' },
+  { src: '/assets/plants/food/cocoa-powder-processing-gallery/machine4.webp', caption: 'Cocoa Bean Roasting Machine' },
+  { src: '/assets/plants/food/cocoa-powder-processing-gallery/machine3.webp', caption: 'Cocoa Bean Winnowing Machine' },
+  { src: '/assets/plants/food/cocoa-powder-processing-gallery/machine2.webp', caption: 'Cocoa Grinding Machine' },
+  { src: '/assets/plants/food/cocoa-powder-processing-gallery/cocoa-powder-pulverizer.webp', caption: 'Cocoa Powder Pulverizer' },
+  { src: '/assets/plants/food/cocoa-powder-processing-gallery/vibro-sifter.webp', caption: 'Vibro Sifter' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function CocoaPowderProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/cocoa_powder_hero.webp')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/cocoa_powder_hero.webp')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />
@@ -229,7 +229,7 @@ export default function CocoaPowderProcessingDetailPage() {
               </div>
             </div>
             <div className="cpp-overview__image cpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/cocoa-powder-processing-gallery/machine4.webp" alt="Cocoa Powder Processing System Plant" loading="lazy" />
+              <img src="/assets/plants/food/cocoa-powder-processing-gallery/machine4.webp" alt="Cocoa Powder Processing System Plant" loading="lazy" />
             </div>
           </div>
         </div>

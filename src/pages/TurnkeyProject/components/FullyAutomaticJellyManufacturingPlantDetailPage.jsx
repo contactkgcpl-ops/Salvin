@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
 
   {
     "name": "Ingredient Mixing & Preparation Tank",
-    "image": "/turnkey-brochures/images/jelly-gallery/ingredient_mixing.webp",
+    "image": "/assets/plants/food/jelly-gallery/ingredient_mixing.webp",
     "desc": "Advanced vacuum cooking technology that boils jelly syrup at low temperatures to preserve natural flavors and colors."
   },
   {
     "name": "Vacuum Cooking System",
-    "image": "/turnkey-brochures/images/jelly-gallery/vacuum_cooking.webp",
+    "image": "/assets/plants/food/jelly-gallery/vacuum_cooking.webp",
     "desc": "High-precision servo-driven depositor that accurately fills jelly into custom moulds with zero wastage."
   },
   {
     "name": "Automatic Jelly Depositing & Moulding Machine",
-    "image": "/turnkey-brochures/images/jelly-gallery/jelly_depositing.webp",
+    "image": "/assets/plants/food/jelly-gallery/jelly_depositing.webp",
     "desc": "Multi-tier cooling tunnel that rapidly sets the jelly, followed by automatic demoulding for continuous production."
   },
   {
     "name": "Cooling Tunnel & Demoulding Conveyor",
-    "image": "/turnkey-brochures/images/jelly-gallery/cooling_tunnel.webp",
+    "image": "/assets/plants/food/jelly-gallery/cooling_tunnel.webp",
     "desc": "Evenly coats the finished jelly with sugar crystals or anti-sticking oil to prevent clumping and enhance texture."
   },
   {
     "name": "Sugar & Oil Coating / Polishing Machine",
-    "image": "/turnkey-brochures/images/jelly-gallery/sugar_coating.webp",
+    "image": "/assets/plants/food/jelly-gallery/sugar_coating.webp",
     "desc": "Rotating polishing drum that gives the jelly a smooth, glossy finish for a premium retail appearance."
   },
   {
     "name": "Automatic Jelly Pouch Filling & Packing Machine",
-    "image": "/turnkey-brochures/images/jelly-gallery/pouch_packing.webp",
+    "image": "/assets/plants/food/jelly-gallery/pouch_packing.webp",
     "desc": "High-speed vertical form-fill-seal (VFFS) machine for hygienic and efficient pouch packaging of the final product."
   }
 ]
@@ -97,12 +97,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/jelly-gallery/ingredient_mixing.webp", caption: "Ingredient Mixing & Preparation Tank" },
-  { src: "/turnkey-brochures/images/jelly-gallery/vacuum_cooking.webp", caption: "Vacuum Cooking System" },
-  { src: "/turnkey-brochures/images/jelly-gallery/jelly_depositing.webp", caption: "Automatic Jelly Depositing & Moulding Machine" },
-  { src: "/turnkey-brochures/images/jelly-gallery/cooling_tunnel.webp", caption: "Cooling Tunnel & Demoulding Conveyor" },
-  { src: "/turnkey-brochures/images/jelly-gallery/sugar_coating.webp", caption: "Sugar & Oil Coating / Polishing Machine" },
-  { src: "/turnkey-brochures/images/jelly-gallery/pouch_packing.webp", caption: "Automatic Jelly Pouch Filling & Packing Machine" }
+  { src: "/assets/plants/food/jelly-gallery/ingredient_mixing.webp", caption: "Ingredient Mixing & Preparation Tank" },
+  { src: "/assets/plants/food/jelly-gallery/vacuum_cooking.webp", caption: "Vacuum Cooking System" },
+  { src: "/assets/plants/food/jelly-gallery/jelly_depositing.webp", caption: "Automatic Jelly Depositing & Moulding Machine" },
+  { src: "/assets/plants/food/jelly-gallery/cooling_tunnel.webp", caption: "Cooling Tunnel & Demoulding Conveyor" },
+  { src: "/assets/plants/food/jelly-gallery/sugar_coating.webp", caption: "Sugar & Oil Coating / Polishing Machine" },
+  { src: "/assets/plants/food/jelly-gallery/pouch_packing.webp", caption: "Automatic Jelly Pouch Filling & Packing Machine" }
 ];
 
 export default function FullyAutomaticJellyManufacturingPlantDetailPage() {
@@ -147,7 +147,7 @@ export default function FullyAutomaticJellyManufacturingPlantDetailPage() {
     <div className="rcp-page">
                   <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_jelly.webp')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/assets/plants/food/hero_jelly.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Jelly Manufacturing Plant</h1>
@@ -198,7 +198,7 @@ export default function FullyAutomaticJellyManufacturingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/hero_jelly.webp" alt="Fully Automatic Jelly Manufacturing Plant Overview" loading="lazy" />
+              <img src="/assets/plants/food/hero_jelly.webp" alt="Fully Automatic Jelly Manufacturing Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

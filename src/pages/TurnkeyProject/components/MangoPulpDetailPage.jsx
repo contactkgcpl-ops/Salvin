@@ -18,32 +18,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Mango Washing Machine',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp',
+    image: '/assets/plants/food/mango-pulp-gallery/mango_pulp_1.webp',
     desc: 'Salvin Industries builds this automatic washing system. It thoroughly cleans the raw mangoes with water to remove any dirt or chemicals before processing begins.'
   },
   {
     name: 'Mango Destoner & Pulper',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.webp',
+    image: '/assets/plants/food/mango-pulp-gallery/mango_pulp_2.webp',
     desc: 'Our heavy-duty Mango Pulper easily separates the mango skin and hard seeds from the fruit, extracting fresh, pure mango pulp automatically.'
   },
   {
     name: 'Refining & Heating Tank',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.webp',
+    image: '/assets/plants/food/mango-pulp-gallery/mango_pulp_3.webp',
     desc: 'This machine gently heats the pulp and passes it through fine screens. It makes sure the final mango pulp is completely smooth without any lumps.'
   },
   {
     name: 'Vacuum Evaporator',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.webp',
+    image: '/assets/plants/food/mango-pulp-gallery/mango_pulp_4.webp',
     desc: 'We manufacture this machine to remove extra water from the pulp. It makes the mango pulp thicker (higher Brix) while keeping its natural taste and smell safe.'
   },
   {
     name: 'Pulp Sterilizer Unit',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.webp',
+    image: '/assets/plants/food/mango-pulp-gallery/mango_pulp_5.webp',
     desc: 'This is a very important machine. It quickly heats and cools the pulp to kill any bad bacteria. This gives your mango pulp a long shelf life.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.webp',
+    image: '/assets/plants/food/mango-pulp-gallery/mango_pulp_6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill the ready mango pulp into pouches, bottles, or big cans without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp', caption: 'Mango Washing & Sorting Machine' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_2.webp', caption: 'Mango Pulper' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_3.webp', caption: 'Pulp Preheating Tank & Refiner' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_5.webp', caption: 'Mango Pulp Sterilization Unit' },
-  { src: '/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_6.webp', caption: 'Automatic Mango Pulp Filling & Sealing Machine' }
+  { src: '/assets/plants/food/mango-pulp-gallery/mango_pulp_1.webp', caption: 'Mango Washing & Sorting Machine' },
+  { src: '/assets/plants/food/mango-pulp-gallery/mango_pulp_2.webp', caption: 'Mango Pulper' },
+  { src: '/assets/plants/food/mango-pulp-gallery/mango_pulp_3.webp', caption: 'Pulp Preheating Tank & Refiner' },
+  { src: '/assets/plants/food/mango-pulp-gallery/mango_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
+  { src: '/assets/plants/food/mango-pulp-gallery/mango_pulp_5.webp', caption: 'Mango Pulp Sterilization Unit' },
+  { src: '/assets/plants/food/mango-pulp-gallery/mango_pulp_6.webp', caption: 'Automatic Mango Pulp Filling & Sealing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function MangoPulpDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/mango_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/mango_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function MangoPulpDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/mango-pulp-gallery/mango_pulp_1.webp" alt="Fully Automatic Mango Pulp Plant" loading="lazy" />
+              <img src="/assets/plants/food/mango-pulp-gallery/mango_pulp_1.webp" alt="Fully Automatic Mango Pulp Plant" loading="lazy" />
             </div>
           </div>
         </div>

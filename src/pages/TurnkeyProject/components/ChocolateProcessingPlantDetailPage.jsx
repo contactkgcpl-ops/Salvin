@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Cocoa Bean Roaster",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/chocolate-gallery/1_cocoa_roaster.webp"
+    image: "/assets/plants/food/chocolate-gallery/1_cocoa_roaster.webp"
   },
   {
     name: "Cocoa Grinder & Liquor Tank",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/chocolate-gallery/2_cocoa_grinder.webp"
+    image: "/assets/plants/food/chocolate-gallery/2_cocoa_grinder.webp"
   },
   {
     name: "Chocolate Conche",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/chocolate-gallery/3_chocolate_conche.webp"
+    image: "/assets/plants/food/chocolate-gallery/3_chocolate_conche.webp"
   },
   {
     name: "Tempering Machine",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/chocolate-gallery/4_chocolate_mixer.webp"
+    image: "/assets/plants/food/chocolate-gallery/4_chocolate_mixer.webp"
   },
   {
     name: "Chocolate Molding Line",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/chocolate-gallery/5_chocolate_moulding.webp"
+    image: "/assets/plants/food/chocolate-gallery/5_chocolate_moulding.webp"
   },
   {
     name: "Foil Wrapping Machine",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/chocolate-gallery/6_chocolate_wrapping.webp"
+    image: "/assets/plants/food/chocolate-gallery/6_chocolate_wrapping.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,13 +73,13 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/chocolate-gallery/1_cocoa_roaster.webp', caption: 'Cocoa Roaster' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/2_cocoa_grinder.webp', caption: 'Cocoa Grinder' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/3_chocolate_conche.webp', caption: 'Chocolate Conche' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/4_chocolate_mixer.webp', caption: 'Chocolate Mixer' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/5_chocolate_moulding.webp', caption: 'Chocolate Moulding' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/6_chocolate_wrapping.webp', caption: 'Chocolate Wrapping' },
-  { src: '/turnkey-brochures/images/chocolate-gallery/6_packaging_system.webp', caption: 'Packaging System' }
+  { src: '/assets/plants/food/chocolate-gallery/1_cocoa_roaster.webp', caption: 'Cocoa Roaster' },
+  { src: '/assets/plants/food/chocolate-gallery/2_cocoa_grinder.webp', caption: 'Cocoa Grinder' },
+  { src: '/assets/plants/food/chocolate-gallery/3_chocolate_conche.webp', caption: 'Chocolate Conche' },
+  { src: '/assets/plants/food/chocolate-gallery/4_chocolate_mixer.webp', caption: 'Chocolate Mixer' },
+  { src: '/assets/plants/food/chocolate-gallery/5_chocolate_moulding.webp', caption: 'Chocolate Moulding' },
+  { src: '/assets/plants/food/chocolate-gallery/6_chocolate_wrapping.webp', caption: 'Chocolate Wrapping' },
+  { src: '/assets/plants/food/chocolate-gallery/6_packaging_system.webp', caption: 'Packaging System' }
 ];
 
 export default function ChocolateProcessingPlantDetailPage() {
@@ -128,7 +128,7 @@ export default function ChocolateProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_chocolate.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_chocolate.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

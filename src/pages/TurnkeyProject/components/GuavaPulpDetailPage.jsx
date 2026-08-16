@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Guava Washing Machine',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.webp',
+    image: '/assets/plants/food/guava-pulp-gallery/guava_pulp_1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Guava Pulper',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_2.webp',
+    image: '/assets/plants/food/guava-pulp-gallery/guava_pulp_2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Guava Pulp Preheating & Refining',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_3.webp',
+    image: '/assets/plants/food/guava-pulp-gallery/guava_pulp_3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Vacuum Evaporation Concentration System',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_4.webp',
+    image: '/assets/plants/food/guava-pulp-gallery/guava_pulp_4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Guava Pulp Sterilization Unit',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_5.webp',
+    image: '/assets/plants/food/guava-pulp-gallery/guava_pulp_5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Guava Pulp Filling Machine',
-    image: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_6.webp',
+    image: '/assets/plants/food/guava-pulp-gallery/guava_pulp_6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.webp', caption: 'Guava Washing Machine' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_2.webp', caption: 'Guava Pulper' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_3.webp', caption: 'Guava Pulp Preheating & Refining' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_5.webp', caption: 'Guava Pulp Sterilization Unit' },
-  { src: '/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_6.webp', caption: 'Automatic Guava Pulp Filling Machine' }
+  { src: '/assets/plants/food/guava-pulp-gallery/guava_pulp_1.webp', caption: 'Guava Washing Machine' },
+  { src: '/assets/plants/food/guava-pulp-gallery/guava_pulp_2.webp', caption: 'Guava Pulper' },
+  { src: '/assets/plants/food/guava-pulp-gallery/guava_pulp_3.webp', caption: 'Guava Pulp Preheating & Refining' },
+  { src: '/assets/plants/food/guava-pulp-gallery/guava_pulp_4.webp', caption: 'Vacuum Evaporation Concentration System' },
+  { src: '/assets/plants/food/guava-pulp-gallery/guava_pulp_5.webp', caption: 'Guava Pulp Sterilization Unit' },
+  { src: '/assets/plants/food/guava-pulp-gallery/guava_pulp_6.webp', caption: 'Automatic Guava Pulp Filling Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function GuavaPulpDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/guava_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/guava_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function GuavaPulpDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/guava-pulp-gallery/guava_pulp_1.webp" alt="Fully Automatic Guava Pulp Plant" loading="lazy" />
+              <img src="/assets/plants/food/guava-pulp-gallery/guava_pulp_1.webp" alt="Fully Automatic Guava Pulp Plant" loading="lazy" />
             </div>
           </div>
         </div>

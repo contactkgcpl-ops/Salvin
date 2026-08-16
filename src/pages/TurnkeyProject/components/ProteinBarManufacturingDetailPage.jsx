@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ingredient Dosing & Mixing System',
-    image: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp',
+    image: '/assets/plants/food/protein-bar-gallery/1_ingredient_dosing.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Syrup Preparation System',
-    image: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.webp',
+    image: '/assets/plants/food/protein-bar-gallery/2_syrup_preparation.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Protein Bar Mass Mixer',
-    image: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.webp',
+    image: '/assets/plants/food/protein-bar-gallery/3_mass_mixer.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Protein Bar Forming Machine',
-    image: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp',
+    image: '/assets/plants/food/protein-bar-gallery/4_forming_machine.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Protein Bar Cutting Machine',
-    image: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.webp',
+    image: '/assets/plants/food/protein-bar-gallery/5_cutting_machine.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Flow Wrapping & Packaging Machine',
-    image: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.webp',
+    image: '/assets/plants/food/protein-bar-gallery/6_flow_wrapping.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp', caption: 'Ingredient Dosing & Mixing System' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/2_syrup_preparation.webp', caption: 'Syrup Preparation System' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/3_mass_mixer.webp', caption: 'Protein Bar Mass Mixer' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp', caption: 'Protein Bar Forming Machine' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/5_cutting_machine.webp', caption: 'Protein Bar Cutting Machine' },
-  { src: '/turnkey-brochures/images/protein-bar-gallery/6_flow_wrapping.webp', caption: 'Flow Wrapping Machine' },
+  { src: '/assets/plants/food/protein-bar-gallery/1_ingredient_dosing.webp', caption: 'Ingredient Dosing & Mixing System' },
+  { src: '/assets/plants/food/protein-bar-gallery/2_syrup_preparation.webp', caption: 'Syrup Preparation System' },
+  { src: '/assets/plants/food/protein-bar-gallery/3_mass_mixer.webp', caption: 'Protein Bar Mass Mixer' },
+  { src: '/assets/plants/food/protein-bar-gallery/4_forming_machine.webp', caption: 'Protein Bar Forming Machine' },
+  { src: '/assets/plants/food/protein-bar-gallery/5_cutting_machine.webp', caption: 'Protein Bar Cutting Machine' },
+  { src: '/assets/plants/food/protein-bar-gallery/6_flow_wrapping.webp', caption: 'Flow Wrapping Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ export default function ProteinBarManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pbm-hero">
         <div className="pbm-hero__overlay" />
-        <div className="pbm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/protein-bar-gallery/1_ingredient_dosing.webp')` }} />
+        <div className="pbm-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/protein-bar-gallery/1_ingredient_dosing.webp')` }} />
         <div className="pbm-hero__content">
           <span className="pbm-hero__badge">
             <span className="pbm-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function ProteinBarManufacturingDetailPage() {
               </div>
             </div>
             <div className="pbm-overview__image pbm-overview__image--photo">
-              <img src="/turnkey-brochures/images/protein-bar-gallery/4_forming_machine.webp" alt="Protein Bar Manufacturing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/protein-bar-gallery/4_forming_machine.webp" alt="Protein Bar Manufacturing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

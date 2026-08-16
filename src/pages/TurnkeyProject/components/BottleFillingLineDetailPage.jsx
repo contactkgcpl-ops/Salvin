@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Bottle Unscrambler',
-    image: '/turnkey-brochures/images/bottle-filling-line/1_unscrambler.webp',
+    image: '/assets/plants/food/bottle-filling-line/1_unscrambler.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Air Rinsing Machine',
-    image: '/turnkey-brochures/images/bottle-filling-line/2_rinsing.webp',
+    image: '/assets/plants/food/bottle-filling-line/2_rinsing.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Automatic Liquid Filling Machine',
-    image: '/turnkey-brochures/images/bottle-filling-line/3_filling.webp',
+    image: '/assets/plants/food/bottle-filling-line/3_filling.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Cap Sorting & Feeding System',
-    image: '/turnkey-brochures/images/bottle-filling-line/4_cap_sorting.webp',
+    image: '/assets/plants/food/bottle-filling-line/4_cap_sorting.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Automatic Capping Machine',
-    image: '/turnkey-brochures/images/bottle-filling-line/5_capping.webp',
+    image: '/assets/plants/food/bottle-filling-line/5_capping.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Labeling Machine',
-    image: '/turnkey-brochures/images/bottle-filling-line/6_labeling.webp',
+    image: '/assets/plants/food/bottle-filling-line/6_labeling.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/bottle-filling-line/1_unscrambler.webp', caption: 'Bottle Unscrambler' },
-  { src: '/turnkey-brochures/images/bottle-filling-line/2_rinsing.webp', caption: 'Air Rinsing Machine' },
-  { src: '/turnkey-brochures/images/bottle-filling-line/3_filling.webp', caption: 'Automatic Liquid Filling Machine' },
-  { src: '/turnkey-brochures/images/bottle-filling-line/4_cap_sorting.webp', caption: 'Cap Sorting & Feeding System' },
-  { src: '/turnkey-brochures/images/bottle-filling-line/5_capping.webp', caption: 'Automatic Capping Machine' },
-  { src: '/turnkey-brochures/images/bottle-filling-line/6_labeling.webp', caption: 'Automatic Labeling Machine' }
+  { src: '/assets/plants/food/bottle-filling-line/1_unscrambler.webp', caption: 'Bottle Unscrambler' },
+  { src: '/assets/plants/food/bottle-filling-line/2_rinsing.webp', caption: 'Air Rinsing Machine' },
+  { src: '/assets/plants/food/bottle-filling-line/3_filling.webp', caption: 'Automatic Liquid Filling Machine' },
+  { src: '/assets/plants/food/bottle-filling-line/4_cap_sorting.webp', caption: 'Cap Sorting & Feeding System' },
+  { src: '/assets/plants/food/bottle-filling-line/5_capping.webp', caption: 'Automatic Capping Machine' },
+  { src: '/assets/plants/food/bottle-filling-line/6_labeling.webp', caption: 'Automatic Labeling Machine' }
 ]
 
 export default function BottleFillingLineDetailPage() {
@@ -106,7 +106,7 @@ export default function BottleFillingLineDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_bottle_filling_line.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_bottle_filling_line.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY BOTTLE FILLING SOLUTION</span>
           <h1 className="opp-hero__title">Bottle Filling Line</h1>
@@ -152,7 +152,7 @@ export default function BottleFillingLineDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/bottle-filling-line/3_filling.webp" alt="Bottle Filling Line by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/bottle-filling-line/3_filling.webp" alt="Bottle Filling Line by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

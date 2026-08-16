@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Milk Reception System",
     "desc": "For weighing and receiving raw milk.",
-    "image": "/turnkey-brochures/images/pasteurized-milk-gallery/1.webp"
+    "image": "/assets/plants/dairy/pasteurized-milk-gallery/1.webp"
   },
   {
     "name": "Milk Clarifier",
     "desc": "Removes impurities and somatic cells.",
-    "image": "/turnkey-brochures/images/pasteurized-milk-gallery/2.webp"
+    "image": "/assets/plants/dairy/pasteurized-milk-gallery/2.webp"
   },
   {
     "name": "Cream Separator",
     "desc": "Standardizes fat content in milk.",
-    "image": "/turnkey-brochures/images/pasteurized-milk-gallery/3.webp"
+    "image": "/assets/plants/dairy/pasteurized-milk-gallery/3.webp"
   },
   {
     "name": "High-Pressure Homogenizer",
     "desc": "Prevents cream separation for smooth texture.",
-    "image": "/turnkey-brochures/images/pasteurized-milk-gallery/4.webp"
+    "image": "/assets/plants/dairy/pasteurized-milk-gallery/4.webp"
   },
   {
     "name": "Pasteurizer (HTST)",
     "desc": "Heat treats milk to eliminate pathogens.",
-    "image": "/turnkey-brochures/images/pasteurized-milk-gallery/5.webp"
+    "image": "/assets/plants/dairy/pasteurized-milk-gallery/5.webp"
   },
   {
     "name": "Automatic Pouch Packing",
     "desc": "High-speed hygienic pouch filling.",
-    "image": "/turnkey-brochures/images/pasteurized-milk-gallery/6.webp"
+    "image": "/assets/plants/dairy/pasteurized-milk-gallery/6.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -96,31 +96,31 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/1.webp",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/1.webp",
     "caption": "Milk Reception & Chilling"
   },
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/2.webp",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/2.webp",
     "caption": "Standardization & Pasteurization"
   },
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/3.webp",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/3.webp",
     "caption": "Milk Homogenization"
   },
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/4.webp",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/4.webp",
     "caption": "Pasteurized Milk Storage"
   },
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/5.webp",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/5.webp",
     "caption": "Automatic Milk Filling"
   },
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/6.webp",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/6.webp",
     "caption": "Crate Packing & Dispatch"
   },
   {
-    "src": "/turnkey-brochures/images/pasteurized-milk-gallery/7.jpg",
+    "src": "/assets/plants/dairy/pasteurized-milk-gallery/7.jpg",
     "caption": "Quality Control & Cold Chain"
   }
 ]

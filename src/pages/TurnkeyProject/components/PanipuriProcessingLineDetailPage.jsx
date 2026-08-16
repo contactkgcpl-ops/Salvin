@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Dough Mixer',
-    image: '/turnkey-brochures/images/panipuri-line/1_mixer.webp',
+    image: '/assets/plants/food/panipuri-line/1_mixer.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Dough Sheeting Machine',
-    image: '/turnkey-brochures/images/panipuri-line/2_sheeter.webp',
+    image: '/assets/plants/food/panipuri-line/2_sheeter.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Panipuri Cutting Machine',
-    image: '/turnkey-brochures/images/panipuri-line/3_cutter.webp',
+    image: '/assets/plants/food/panipuri-line/3_cutter.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Continuous Frying Machine',
-    image: '/turnkey-brochures/images/panipuri-line/4_fryer.webp',
+    image: '/assets/plants/food/panipuri-line/4_fryer.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Cooling & De-oiling Conveyor',
-    image: '/turnkey-brochures/images/panipuri-line/5_cooler.webp',
+    image: '/assets/plants/food/panipuri-line/5_cooler.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Weighing & Packing Machine',
-    image: '/turnkey-brochures/images/panipuri-line/6_packing.webp',
+    image: '/assets/plants/food/panipuri-line/6_packing.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/panipuri-line/1_mixer.webp', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/panipuri-line/2_sheeter.webp', caption: 'Dough Sheeting Machine' },
-  { src: '/turnkey-brochures/images/panipuri-line/3_cutter.webp', caption: 'Panipuri Cutting Machine' },
-  { src: '/turnkey-brochures/images/panipuri-line/4_fryer.webp', caption: 'Continuous Frying Machine' },
-  { src: '/turnkey-brochures/images/panipuri-line/5_cooler.webp', caption: 'Cooling & De-oiling Conveyor' },
-  { src: '/turnkey-brochures/images/panipuri-line/6_packing.webp', caption: 'Weighing & Packing Machine' }
+  { src: '/assets/plants/food/panipuri-line/1_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/assets/plants/food/panipuri-line/2_sheeter.webp', caption: 'Dough Sheeting Machine' },
+  { src: '/assets/plants/food/panipuri-line/3_cutter.webp', caption: 'Panipuri Cutting Machine' },
+  { src: '/assets/plants/food/panipuri-line/4_fryer.webp', caption: 'Continuous Frying Machine' },
+  { src: '/assets/plants/food/panipuri-line/5_cooler.webp', caption: 'Cooling & De-oiling Conveyor' },
+  { src: '/assets/plants/food/panipuri-line/6_packing.webp', caption: 'Weighing & Packing Machine' }
 ]
 
 export default function PanipuriProcessingLineDetailPage() {
@@ -106,7 +106,7 @@ export default function PanipuriProcessingLineDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_panipuri_line.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_panipuri_line.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY PANIPURI PROCESSING SOLUTION</span>
           <h1 className="opp-hero__title">Panipuri Processing Line</h1>
@@ -152,7 +152,7 @@ export default function PanipuriProcessingLineDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/panipuri-line/4_fryer.webp" alt="Panipuri Processing Line by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/panipuri-line/4_fryer.webp" alt="Panipuri Processing Line by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

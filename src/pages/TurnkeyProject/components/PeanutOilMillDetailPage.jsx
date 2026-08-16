@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Peanut Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/peanut-oil-mill-gallery/1_cleaning_destoning.webp',
+    image: '/assets/plants/food/peanut-oil-mill-gallery/1_cleaning_destoning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Peanut Shelling & Separation System',
-    image: '/turnkey-brochures/images/peanut-oil-mill-gallery/2_shelling_separation.webp',
+    image: '/assets/plants/food/peanut-oil-mill-gallery/2_shelling_separation.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Continuous Peanut Roaster',
-    image: '/turnkey-brochures/images/peanut-oil-mill-gallery/3_peanut_roaster.webp',
+    image: '/assets/plants/food/peanut-oil-mill-gallery/3_peanut_roaster.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Oil Expeller Machine',
-    image: '/turnkey-brochures/images/peanut-oil-mill-gallery/4_oil_expeller.webp',
+    image: '/assets/plants/food/peanut-oil-mill-gallery/4_oil_expeller.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Peanut Oil Filtration System',
-    image: '/turnkey-brochures/images/peanut-oil-mill-gallery/5_oil_filtration.webp',
+    image: '/assets/plants/food/peanut-oil-mill-gallery/5_oil_filtration.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Peanut Oil Packaging Machine',
-    image: '/turnkey-brochures/images/peanut-oil-mill-gallery/6_oil_packaging.webp',
+    image: '/assets/plants/food/peanut-oil-mill-gallery/6_oil_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/peanut-oil-mill-gallery/1_cleaning_destoning.webp', caption: 'Peanut Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/peanut-oil-mill-gallery/2_shelling_separation.webp', caption: 'Peanut Shelling & Separation System' },
-  { src: '/turnkey-brochures/images/peanut-oil-mill-gallery/3_peanut_roaster.webp', caption: 'Continuous Peanut Roaster' },
-  { src: '/turnkey-brochures/images/peanut-oil-mill-gallery/4_oil_expeller.webp', caption: 'Oil Expeller Machine' },
-  { src: '/turnkey-brochures/images/peanut-oil-mill-gallery/5_oil_filtration.webp', caption: 'Peanut Oil Filtration System' },
-  { src: '/turnkey-brochures/images/peanut-oil-mill-gallery/6_oil_packaging.webp', caption: 'Automatic Peanut Oil Packaging Machine' },
+  { src: '/assets/plants/food/peanut-oil-mill-gallery/1_cleaning_destoning.webp', caption: 'Peanut Cleaning & Destoning System' },
+  { src: '/assets/plants/food/peanut-oil-mill-gallery/2_shelling_separation.webp', caption: 'Peanut Shelling & Separation System' },
+  { src: '/assets/plants/food/peanut-oil-mill-gallery/3_peanut_roaster.webp', caption: 'Continuous Peanut Roaster' },
+  { src: '/assets/plants/food/peanut-oil-mill-gallery/4_oil_expeller.webp', caption: 'Oil Expeller Machine' },
+  { src: '/assets/plants/food/peanut-oil-mill-gallery/5_oil_filtration.webp', caption: 'Peanut Oil Filtration System' },
+  { src: '/assets/plants/food/peanut-oil-mill-gallery/6_oil_packaging.webp', caption: 'Automatic Peanut Oil Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function PeanutOilMillDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="pom-hero">
         <div className="pom-hero__overlay" />
-        <div className="pom-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/peanut_oil_hero.webp')` }} />
+        <div className="pom-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/peanut_oil_hero.webp')` }} />
         <div className="pom-hero__content">
           <span className="pom-hero__badge">
             <span className="pom-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function PeanutOilMillDetailPage() {
               </div>
             </div>
             <div className="pom-overview__image pom-overview__image--photo">
-              <img src="/turnkey-brochures/images/peanut-oil-mill-gallery/6_oil_packaging.webp" alt="Peanut Oil Mill Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/peanut-oil-mill-gallery/6_oil_packaging.webp" alt="Peanut Oil Mill Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

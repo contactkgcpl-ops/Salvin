@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Flour Sifter',
-    image: '/turnkey-brochures/images/chapati-line/1_sifter.webp',
+    image: '/assets/plants/food/chapati-line/1_sifter.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Dough Mixer',
-    image: '/turnkey-brochures/images/chapati-line/2_mixer.webp',
+    image: '/assets/plants/food/chapati-line/2_mixer.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Dough Kneader',
-    image: '/turnkey-brochures/images/chapati-line/3_kneader.webp',
+    image: '/assets/plants/food/chapati-line/3_kneader.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Dough Divider & Portioning Machine',
-    image: '/turnkey-brochures/images/chapati-line/4_divider.webp',
+    image: '/assets/plants/food/chapati-line/4_divider.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Continuous Baking Oven',
-    image: '/turnkey-brochures/images/chapati-line/5_oven.webp',
+    image: '/assets/plants/food/chapati-line/5_oven.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Chapati Packing Machine',
-    image: '/turnkey-brochures/images/chapati-line/6_packing.webp',
+    image: '/assets/plants/food/chapati-line/6_packing.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/chapati-line/1_sifter.webp', caption: 'Flour Sifter' },
-  { src: '/turnkey-brochures/images/chapati-line/2_mixer.webp', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/chapati-line/3_kneader.webp', caption: 'Dough Kneader' },
-  { src: '/turnkey-brochures/images/chapati-line/4_divider.webp', caption: 'Dough Divider & Portioning Machine' },
-  { src: '/turnkey-brochures/images/chapati-line/5_oven.webp', caption: 'Continuous Baking Oven' },
-  { src: '/turnkey-brochures/images/chapati-line/6_packing.webp', caption: 'Chapati Packing Machine' }
+  { src: '/assets/plants/food/chapati-line/1_sifter.webp', caption: 'Flour Sifter' },
+  { src: '/assets/plants/food/chapati-line/2_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/assets/plants/food/chapati-line/3_kneader.webp', caption: 'Dough Kneader' },
+  { src: '/assets/plants/food/chapati-line/4_divider.webp', caption: 'Dough Divider & Portioning Machine' },
+  { src: '/assets/plants/food/chapati-line/5_oven.webp', caption: 'Continuous Baking Oven' },
+  { src: '/assets/plants/food/chapati-line/6_packing.webp', caption: 'Chapati Packing Machine' }
 ]
 
 export default function ChapatiProcessingLineDetailPage() {
@@ -106,7 +106,7 @@ export default function ChapatiProcessingLineDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_chapati_line.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_chapati_line.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY CHAPATI PROCESSING SOLUTION</span>
           <h1 className="opp-hero__title">Chapati Processing Line</h1>
@@ -152,7 +152,7 @@ export default function ChapatiProcessingLineDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/chapati-line/5_oven.webp" alt="Chapati Processing Line by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/chapati-line/5_oven.webp" alt="Chapati Processing Line by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

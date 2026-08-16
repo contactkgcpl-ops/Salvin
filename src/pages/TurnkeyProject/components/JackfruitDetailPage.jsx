@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Latex Spray Washer',
-    image: '/turnkey-brochures/images/jackfruit-gallery/latex_spray_washer.webp',
+    image: '/assets/plants/food/jackfruit-gallery/latex_spray_washer.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Retort Autoclave Sterilizer',
-    image: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp',
+    image: '/assets/plants/food/jackfruit-gallery/retort_autoclave_sterilizer.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Automatic Can Seamer',
-    image: '/turnkey-brochures/images/jackfruit-gallery/automatic_can_seamer.webp',
+    image: '/assets/plants/food/jackfruit-gallery/automatic_can_seamer.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Can Rotary Filler',
-    image: '/turnkey-brochures/images/jackfruit-gallery/can_rotary_filler.webp',
+    image: '/assets/plants/food/jackfruit-gallery/can_rotary_filler.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Syrup Prep Vessel',
-    image: '/turnkey-brochures/images/jackfruit-gallery/syrup_prep_vessel.webp',
+    image: '/assets/plants/food/jackfruit-gallery/syrup_prep_vessel.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Continuous Belt Blancher',
-    image: '/turnkey-brochures/images/jackfruit-gallery/continuous_belt_blancher.webp',
+    image: '/assets/plants/food/jackfruit-gallery/continuous_belt_blancher.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/jackfruit-gallery/latex_spray_washer.webp', caption: 'Latex Spray Washer' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp', caption: 'Retort Autoclave Sterilizer' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/automatic_can_seamer.webp', caption: 'Automatic Can Seamer' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/can_rotary_filler.webp', caption: 'Can Rotary Filler' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/syrup_prep_vessel.webp', caption: 'Syrup Prep Vessel' },
-  { src: '/turnkey-brochures/images/jackfruit-gallery/continuous_belt_blancher.webp', caption: 'Continuous Belt Blancher' }
+  { src: '/assets/plants/food/jackfruit-gallery/latex_spray_washer.webp', caption: 'Latex Spray Washer' },
+  { src: '/assets/plants/food/jackfruit-gallery/retort_autoclave_sterilizer.webp', caption: 'Retort Autoclave Sterilizer' },
+  { src: '/assets/plants/food/jackfruit-gallery/automatic_can_seamer.webp', caption: 'Automatic Can Seamer' },
+  { src: '/assets/plants/food/jackfruit-gallery/can_rotary_filler.webp', caption: 'Can Rotary Filler' },
+  { src: '/assets/plants/food/jackfruit-gallery/syrup_prep_vessel.webp', caption: 'Syrup Prep Vessel' },
+  { src: '/assets/plants/food/jackfruit-gallery/continuous_belt_blancher.webp', caption: 'Continuous Belt Blancher' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function JackfruitDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="jcp-hero">
         <div className="jcp-hero__overlay" />
-        <div className="jcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp')` }} />
+        <div className="jcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/jackfruit-gallery/retort_autoclave_sterilizer.webp')` }} />
         <div className="jcp-hero__content">
           <span className="jcp-hero__badge">
             <span className="jcp-hero__badge-dot" />
@@ -234,7 +234,7 @@ export default function JackfruitDetailPage() {
               </div>
             </div>
             <div className="jcp-overview__image jcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/jackfruit-gallery/retort_autoclave_sterilizer.webp" alt="Jackfruit Canning Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/jackfruit-gallery/retort_autoclave_sterilizer.webp" alt="Jackfruit Canning Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

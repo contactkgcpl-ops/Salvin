@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Batter Mixer",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/wafer-gallery/1_batter_mixer.webp"
+    image: "/assets/plants/food/wafer-gallery/1_batter_mixer.webp"
   },
   {
     name: "Wafer Baking Oven",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/wafer-gallery/2_wafer_baking.webp"
+    image: "/assets/plants/food/wafer-gallery/2_wafer_baking.webp"
   },
   {
     name: "Cream Spreader",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/wafer-gallery/3_cream_spreading.webp"
+    image: "/assets/plants/food/wafer-gallery/3_cream_spreading.webp"
   },
   {
     name: "Cooling Tunnel",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/wafer-gallery/4_block_laminating.webp"
+    image: "/assets/plants/food/wafer-gallery/4_block_laminating.webp"
   },
   {
     name: "Wire Cutting Machine",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.webp"
+    image: "/assets/plants/food/wafer-gallery/5_flow_wrapper.webp"
   },
   {
     name: "Automatic Packaging",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/wafer-gallery/6_carton_packing.webp"
+    image: "/assets/plants/food/wafer-gallery/6_carton_packing.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/wafer-gallery/1_batter_mixer.webp', caption: 'Batter Mixer' },
-  { src: '/turnkey-brochures/images/wafer-gallery/2_wafer_baking.webp', caption: 'Wafer Baking' },
-  { src: '/turnkey-brochures/images/wafer-gallery/3_cream_spreading.webp', caption: 'Cream Spreading' },
-  { src: '/turnkey-brochures/images/wafer-gallery/4_block_laminating.webp', caption: 'Block Laminating' },
-  { src: '/turnkey-brochures/images/wafer-gallery/5_flow_wrapper.webp', caption: 'Flow Wrapper' },
-  { src: '/turnkey-brochures/images/wafer-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
+  { src: '/assets/plants/food/wafer-gallery/1_batter_mixer.webp', caption: 'Batter Mixer' },
+  { src: '/assets/plants/food/wafer-gallery/2_wafer_baking.webp', caption: 'Wafer Baking' },
+  { src: '/assets/plants/food/wafer-gallery/3_cream_spreading.webp', caption: 'Cream Spreading' },
+  { src: '/assets/plants/food/wafer-gallery/4_block_laminating.webp', caption: 'Block Laminating' },
+  { src: '/assets/plants/food/wafer-gallery/5_flow_wrapper.webp', caption: 'Flow Wrapper' },
+  { src: '/assets/plants/food/wafer-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function WaferPlantDetailPage() {
@@ -127,7 +127,7 @@ export default function WaferPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_wafer.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_wafer.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

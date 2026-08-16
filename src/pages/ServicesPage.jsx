@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
-import consultantHero from "../assets/hero/salvinhero2.webp";
-import foodPlant from "../assets/food-processing-plant.webp";
-import turnkeyProj from "../assets/hero/turkey_proj.webp";
+const consultantHero = "/assets/core/heroes/salvinhero2.webp";
+const foodPlant = "/assets/core/icons/food-processing-plant.webp";
+const turnkeyProj = "/assets/core/heroes/turkey_proj.webp";
 // Imported local advisory images
-import adv1 from "../assets/advisory/tech_advisory.webp";
-import adv2 from "../assets/advisory/engineering.webp";
-import adv3 from "../assets/advisory/marketing.webp";
-import adv4 from "../assets/advisory/merger.webp";
-import adv5 from "../assets/advisory/regulatory.webp";
-import customMachineImg from "../assets/turnkey_custom_machine.webp";
-import largePlantImg from "../assets/large_industrial_plant.webp";
-import equipmentCollageImg from "../assets/equipment_collage.webp";
-import expertiseFactoryImg from "../assets/expertise_factory.webp";
+const adv1 = "/assets/company/advisory/tech_advisory.webp";
+const adv2 = "/assets/company/advisory/engineering.webp";
+const adv3 = "/assets/company/advisory/marketing.webp";
+const adv4 = "/assets/company/advisory/merger.webp";
+const adv5 = "/assets/company/advisory/regulatory.webp";
+const customMachineImg = "/assets/core/icons/turnkey_custom_machine.webp";
+const largePlantImg = "/assets/core/icons/large_industrial_plant.webp";
+const equipmentCollageImg = "/assets/core/icons/equipment_collage.webp";
+const expertiseFactoryImg = "/assets/core/icons/expertise_factory.webp";
 
 const slides = [
   {

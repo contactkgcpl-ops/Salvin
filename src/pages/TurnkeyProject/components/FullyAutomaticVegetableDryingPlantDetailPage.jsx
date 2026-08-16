@@ -40,32 +40,32 @@ const MACHINERY_LIST = [
 
   {
     "name": "Industrial Vegetable Washing System",
-    "image": "/turnkey-brochures/images/veg-drying-gallery/veg_washing.webp",
+    "image": "/assets/plants/food/veg-drying-gallery/veg_washing.webp",
     "desc": "Multi-stage bubble washing flume that effectively removes dirt, pesticides, and surface impurities from fresh vegetables."
   },
   {
     "name": "Automatic Cutting & Slicing Machine",
-    "image": "/turnkey-brochures/images/veg-drying-gallery/veg_slicer.webp",
+    "image": "/assets/plants/food/veg-drying-gallery/veg_slicer.webp",
     "desc": "High-speed, adjustable slicing unit that precisely cuts vegetables into uniform shapes for consistent dehydration."
   },
   {
     "name": "Blanching Tank & Dewatering System",
-    "image": "/turnkey-brochures/images/veg-drying-gallery/blanching_dewatering.webp",
+    "image": "/assets/plants/food/veg-drying-gallery/blanching_dewatering.webp",
     "desc": "Continuous blanching system that deactivates enzymes to preserve color, followed by vibration dewatering to remove excess moisture."
   },
   {
     "name": "Continuous Hot Air Dryer",
-    "image": "/turnkey-brochures/images/veg-drying-gallery/hot_air_dryer.webp",
+    "image": "/assets/plants/food/veg-drying-gallery/hot_air_dryer.webp",
     "desc": "Energy-efficient multi-layer belt dryer that uses controlled hot air circulation to perfectly dehydrate vegetables."
   },
   {
     "name": "Cooling & Inspection Conveyor",
-    "image": "/turnkey-brochures/images/veg-drying-gallery/inspection_conveyor.webp",
+    "image": "/assets/plants/food/veg-drying-gallery/inspection_conveyor.webp",
     "desc": "Integrated cooling line and visual inspection conveyor to ensure only premium dehydrated vegetables proceed to packaging."
   },
   {
     "name": "Automatic Dried Vegetable Packaging Machine",
-    "image": "/turnkey-brochures/images/veg-drying-gallery/veg_packaging.webp",
+    "image": "/assets/plants/food/veg-drying-gallery/veg_packaging.webp",
     "desc": "Hygienic, automated packaging solution that seals dried vegetables in airtight pouches to maximize shelf life."
   }
 ]
@@ -97,12 +97,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/veg-drying-gallery/veg_washing.webp", caption: "Industrial Vegetable Washing System" },
-  { src: "/turnkey-brochures/images/veg-drying-gallery/veg_slicer.webp", caption: "Automatic Cutting & Slicing Machine" },
-  { src: "/turnkey-brochures/images/veg-drying-gallery/blanching_dewatering.webp", caption: "Blanching Tank & Dewatering System" },
-  { src: "/turnkey-brochures/images/veg-drying-gallery/hot_air_dryer.webp", caption: "Continuous Hot Air Dryer" },
-  { src: "/turnkey-brochures/images/veg-drying-gallery/inspection_conveyor.webp", caption: "Cooling & Inspection Conveyor" },
-  { src: "/turnkey-brochures/images/veg-drying-gallery/veg_packaging.webp", caption: "Automatic Dried Vegetable Packaging Machine" }
+  { src: "/assets/plants/food/veg-drying-gallery/veg_washing.webp", caption: "Industrial Vegetable Washing System" },
+  { src: "/assets/plants/food/veg-drying-gallery/veg_slicer.webp", caption: "Automatic Cutting & Slicing Machine" },
+  { src: "/assets/plants/food/veg-drying-gallery/blanching_dewatering.webp", caption: "Blanching Tank & Dewatering System" },
+  { src: "/assets/plants/food/veg-drying-gallery/hot_air_dryer.webp", caption: "Continuous Hot Air Dryer" },
+  { src: "/assets/plants/food/veg-drying-gallery/inspection_conveyor.webp", caption: "Cooling & Inspection Conveyor" },
+  { src: "/assets/plants/food/veg-drying-gallery/veg_packaging.webp", caption: "Automatic Dried Vegetable Packaging Machine" }
 ];
 
 export default function FullyAutomaticVegetableDryingPlantDetailPage() {
@@ -147,7 +147,7 @@ export default function FullyAutomaticVegetableDryingPlantDetailPage() {
     <div className="rcp-page">
                   <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_veg_drying.webp')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/assets/plants/food/hero_veg_drying.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Vegetable Drying Plant</h1>
@@ -198,7 +198,7 @@ export default function FullyAutomaticVegetableDryingPlantDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/veg-drying-gallery/veg_slicer.webp" alt="Fully Automatic Vegetable Drying Plant Overview" loading="lazy" />
+              <img src="/assets/plants/food/veg-drying-gallery/veg_slicer.webp" alt="Fully Automatic Vegetable Drying Plant Overview" loading="lazy" />
             </div>
           </div>
         </div>

@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Raw Material Mixer',
-    image: '/turnkey-brochures/images/corn-puff/media__1785501336428.webp',
+    image: '/assets/plants/food/corn-puff/media__1785501336428.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Bucket Elevator & Hopper',
-    image: '/turnkey-brochures/images/corn-puff/media__1785501327895.webp',
+    image: '/assets/plants/food/corn-puff/media__1785501327895.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Twin Screw Extruder',
-    image: '/turnkey-brochures/images/corn-puff/media__1785501349393.webp',
+    image: '/assets/plants/food/corn-puff/media__1785501349393.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Continuous Roaster & Dryer',
-    image: '/turnkey-brochures/images/corn-puff/media__1785501357486.webp',
+    image: '/assets/plants/food/corn-puff/media__1785501357486.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Rotary Seasoning Drum',
-    image: '/turnkey-brochures/images/corn-puff/media__1785501378513.webp',
+    image: '/assets/plants/food/corn-puff/media__1785501378513.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/corn-puff/media__1785501402561.webp',
+    image: '/assets/plants/food/corn-puff/media__1785501402561.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Corn Puff Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/corn-puff/media__1785501336428.webp', caption: 'Corn Meal Ribbon Mixer' },
-  { src: '/turnkey-brochures/images/corn-puff/media__1785501327895.webp', caption: 'Material Feeding Elevator' },
-  { src: '/turnkey-brochures/images/corn-puff/media__1785501349393.webp', caption: 'Twin Screw Extruder Unit' },
-  { src: '/turnkey-brochures/images/corn-puff/media__1785501357486.webp', caption: 'Continuous Tunnel Roaster & Dryer' },
-  { src: '/turnkey-brochures/images/corn-puff/media__1785501378513.webp', caption: 'Rotary Seasoning Drum' },
-  { src: '/turnkey-brochures/images/corn-puff/media__1785501402561.webp', caption: 'Automatic Pouch Packing Machine' }
+  { src: '/assets/plants/food/corn-puff/media__1785501336428.webp', caption: 'Corn Meal Ribbon Mixer' },
+  { src: '/assets/plants/food/corn-puff/media__1785501327895.webp', caption: 'Material Feeding Elevator' },
+  { src: '/assets/plants/food/corn-puff/media__1785501349393.webp', caption: 'Twin Screw Extruder Unit' },
+  { src: '/assets/plants/food/corn-puff/media__1785501357486.webp', caption: 'Continuous Tunnel Roaster & Dryer' },
+  { src: '/assets/plants/food/corn-puff/media__1785501378513.webp', caption: 'Rotary Seasoning Drum' },
+  { src: '/assets/plants/food/corn-puff/media__1785501402561.webp', caption: 'Automatic Pouch Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function CornPuffPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cpp-hero">
         <div className="cpp-hero__overlay" />
-        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_corn_puff.webp')` }} />
+        <div className="cpp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_corn_puff.webp')` }} />
         <div className="cpp-hero__content">
           <span className="cpp-hero__badge">
             <span className="cpp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function CornPuffPlantDetailPage() {
               </div>
             </div>
             <div className="cpp-overview__image cpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/corn-puff/media__1785501349393.webp" alt="Corn Puff Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/corn-puff/media__1785501349393.webp" alt="Corn Puff Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

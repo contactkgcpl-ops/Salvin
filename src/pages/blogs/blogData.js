@@ -1,4 +1,4 @@
-import blogBannerImg from "../../assets/how-to-start-food-processing-business.jpg";
+const blogBannerImg = "/assets/core/icons/how-to-start-food-processing-business.jpg";
 
 export const blogPosts = [
   {

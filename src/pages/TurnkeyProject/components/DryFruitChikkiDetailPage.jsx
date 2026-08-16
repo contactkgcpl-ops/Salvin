@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Automatic Dry Fruit Roasting Machine',
-    image: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_1.webp',
+    image: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Jaggery Syrup Preparation Kettle',
-    image: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_2.webp',
+    image: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Dry Fruit & Jaggery Mixing Machine',
-    image: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_3.webp',
+    image: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Automatic Chikki Slab Forming & Thickness Control Machine',
-    image: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_4.webp',
+    image: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Cooling Conveyor System',
-    image: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_5.webp',
+    image: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Chikki Cutting & Collection Machine',
-    image: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_6.webp',
+    image: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_1.webp', caption: 'Automatic Dry Fruit Roasting Machine' },
-  { src: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_2.webp', caption: 'Jaggery Syrup Preparation Kettle' },
-  { src: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_3.webp', caption: 'Dry Fruit & Jaggery Mixing Machine' },
-  { src: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_4.webp', caption: 'Automatic Chikki Slab Forming Machine' },
-  { src: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_5.webp', caption: 'Cooling Conveyor System' },
-  { src: '/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_6.webp', caption: 'Automatic Chikki Cutting & Collection' }
+  { src: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_1.webp', caption: 'Automatic Dry Fruit Roasting Machine' },
+  { src: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_2.webp', caption: 'Jaggery Syrup Preparation Kettle' },
+  { src: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_3.webp', caption: 'Dry Fruit & Jaggery Mixing Machine' },
+  { src: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_4.webp', caption: 'Automatic Chikki Slab Forming Machine' },
+  { src: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_5.webp', caption: 'Cooling Conveyor System' },
+  { src: '/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_6.webp', caption: 'Automatic Chikki Cutting & Collection' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function DryFruitChikkiDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/dry_fruit_chikki_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/dry_fruit_chikki_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function DryFruitChikkiDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/dry-fruit-chikki-gallery/dry_fruit_4.webp" alt="Dry Fruit Chikki Making Plant" loading="lazy" />
+              <img src="/assets/plants/food/dry-fruit-chikki-gallery/dry_fruit_4.webp" alt="Dry Fruit Chikki Making Plant" loading="lazy" />
             </div>
           </div>
         </div>

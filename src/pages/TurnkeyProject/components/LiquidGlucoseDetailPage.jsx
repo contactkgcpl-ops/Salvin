@@ -21,32 +21,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Starch Slurry Preparation System',
-    image: '/turnkey-brochures/images/liquid-glucose-gallery/1_starch_slurry.webp',
+    image: '/assets/plants/food/liquid-glucose-gallery/1_starch_slurry.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Liquefaction Reactor System',
-    image: '/turnkey-brochures/images/liquid-glucose-gallery/2_liquefaction.webp',
+    image: '/assets/plants/food/liquid-glucose-gallery/2_liquefaction.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Saccharification Tank',
-    image: '/turnkey-brochures/images/liquid-glucose-gallery/3_saccharification.webp',
+    image: '/assets/plants/food/liquid-glucose-gallery/3_saccharification.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Filtration System',
-    image: '/turnkey-brochures/images/liquid-glucose-gallery/4_filtration.webp',
+    image: '/assets/plants/food/liquid-glucose-gallery/4_filtration.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Evaporation System',
-    image: '/turnkey-brochures/images/liquid-glucose-gallery/5_evaporation.webp',
+    image: '/assets/plants/food/liquid-glucose-gallery/5_evaporation.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Packaging System',
-    image: '/turnkey-brochures/images/liquid-glucose-gallery/6_packaging.webp',
+    image: '/assets/plants/food/liquid-glucose-gallery/6_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -76,13 +76,13 @@ const FAQS = [
 
 /* ─── Gallery Images (Complete Liquid Glucose Manufacturing Solution only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/15_liquid_glucose.webp', caption: 'Liquid Glucose Manufacturing Plant — Complete Overview' },
-  { src: '/turnkey-brochures/images/liquid-glucose-gallery/1_starch_slurry.webp', caption: 'Starch Slurry Preparation System' },
-  { src: '/turnkey-brochures/images/liquid-glucose-gallery/2_liquefaction.webp', caption: 'Liquefaction Reactor System' },
-  { src: '/turnkey-brochures/images/liquid-glucose-gallery/3_saccharification.webp', caption: 'Saccharification Tank' },
-  { src: '/turnkey-brochures/images/liquid-glucose-gallery/4_filtration.webp', caption: 'Filtration System' },
-  { src: '/turnkey-brochures/images/liquid-glucose-gallery/5_evaporation.webp', caption: 'Evaporation System' },
-  { src: '/turnkey-brochures/images/liquid-glucose-gallery/6_packaging.webp', caption: 'Packaging System' },
+  { src: '/assets/plants/food/15_liquid_glucose.webp', caption: 'Liquid Glucose Manufacturing Plant — Complete Overview' },
+  { src: '/assets/plants/food/liquid-glucose-gallery/1_starch_slurry.webp', caption: 'Starch Slurry Preparation System' },
+  { src: '/assets/plants/food/liquid-glucose-gallery/2_liquefaction.webp', caption: 'Liquefaction Reactor System' },
+  { src: '/assets/plants/food/liquid-glucose-gallery/3_saccharification.webp', caption: 'Saccharification Tank' },
+  { src: '/assets/plants/food/liquid-glucose-gallery/4_filtration.webp', caption: 'Filtration System' },
+  { src: '/assets/plants/food/liquid-glucose-gallery/5_evaporation.webp', caption: 'Evaporation System' },
+  { src: '/assets/plants/food/liquid-glucose-gallery/6_packaging.webp', caption: 'Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function LiquidGlucoseDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="lgp-hero">
         <div className="lgp-hero__overlay" />
-        <div className="lgp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/liquid_glucose_hero.webp')` }} />
+        <div className="lgp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/liquid_glucose_hero.webp')` }} />
         <div className="lgp-hero__content">
           <span className="lgp-hero__badge">
             <span className="lgp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function LiquidGlucoseDetailPage() {
               </div>
             </div>
             <div className="lgp-overview__image lgp-overview__image--photo">
-              <img src="/turnkey-brochures/images/liquid-glucose-gallery/1_starch_slurry.webp" alt="Complete Liquid Glucose Manufacturing Solution by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/liquid-glucose-gallery/1_starch_slurry.webp" alt="Complete Liquid Glucose Manufacturing Solution by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

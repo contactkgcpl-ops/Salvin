@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ingredient Weighing & Batching System',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504316135.webp',
+    image: '/assets/plants/food/oat-plant/media__1785504316135.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Sigma / Z-Blade Mixer',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504355145.webp',
+    image: '/assets/plants/food/oat-plant/media__1785504355145.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Slab Roller & Extrusion System',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504447423.webp',
+    image: '/assets/plants/food/oat-plant/media__1785504447423.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Chocolate Enrober & Coating Machine',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504578350.webp',
+    image: '/assets/plants/food/oat-plant/media__1785504578350.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Stainless Steel Cooling Tunnel',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504738661.webp',
+    image: '/assets/plants/food/oat-plant/media__1785504738661.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Flow-Wrap Packaging Machine',
-    image: '/turnkey-brochures/images/oat-plant/media__1785504774919.webp',
+    image: '/assets/plants/food/oat-plant/media__1785504774919.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504316135.webp', caption: 'Ingredient Weighing & Batching System' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504355145.webp', caption: 'Sigma / Z-Blade Mixer' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504447423.webp', caption: 'Slab Roller & Extrusion System' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504578350.webp', caption: 'Chocolate Enrober & Coating Machine' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504738661.webp', caption: 'Stainless Steel Cooling Tunnel' },
-  { src: '/turnkey-brochures/images/oat-plant/media__1785504774919.webp', caption: 'Automatic Flow-Wrap Packaging Machine' }
+  { src: '/assets/plants/food/oat-plant/media__1785504316135.webp', caption: 'Ingredient Weighing & Batching System' },
+  { src: '/assets/plants/food/oat-plant/media__1785504355145.webp', caption: 'Sigma / Z-Blade Mixer' },
+  { src: '/assets/plants/food/oat-plant/media__1785504447423.webp', caption: 'Slab Roller & Extrusion System' },
+  { src: '/assets/plants/food/oat-plant/media__1785504578350.webp', caption: 'Chocolate Enrober & Coating Machine' },
+  { src: '/assets/plants/food/oat-plant/media__1785504738661.webp', caption: 'Stainless Steel Cooling Tunnel' },
+  { src: '/assets/plants/food/oat-plant/media__1785504774919.webp', caption: 'Automatic Flow-Wrap Packaging Machine' }
 ]
 
 export default function ProteinBarPlantDetailPage() {
@@ -106,7 +106,7 @@ export default function ProteinBarPlantDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_oat.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_oat.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY PROTEIN BAR SOLUTION</span>
           <h1 className="opp-hero__title">Protein Bar Manufacturing Plant</h1>
@@ -152,7 +152,7 @@ export default function ProteinBarPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/oat-plant/media__1785504578350.webp" alt="Protein Bar Manufacturing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/oat-plant/media__1785504578350.webp" alt="Protein Bar Manufacturing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

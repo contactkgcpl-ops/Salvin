@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Corn Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503799034.webp',
+    image: '/assets/plants/food/corn-flour-plant/media__1785503799034.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Corn Degerminator & Conditioner',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503810943.webp',
+    image: '/assets/plants/food/corn-flour-plant/media__1785503810943.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Grinding Machine / Roller Mill',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503823693.webp',
+    image: '/assets/plants/food/corn-flour-plant/media__1785503823693.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Plansifter / Corn Flour Purifier',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503833080.webp',
+    image: '/assets/plants/food/corn-flour-plant/media__1785503833080.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Corn Flour Blending Machine & Silo',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503843891.webp',
+    image: '/assets/plants/food/corn-flour-plant/media__1785503843891.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Bag Filling Machine',
-    image: '/turnkey-brochures/images/corn-flour-plant/media__1785503854931.webp',
+    image: '/assets/plants/food/corn-flour-plant/media__1785503854931.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Corn Flour Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503799034.webp', caption: 'Corn Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503810943.webp', caption: 'Corn Degerminator & Conditioner' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503823693.webp', caption: 'Grinding Machine / Roller Mill' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503833080.webp', caption: 'Plansifter / Corn Flour Purifier' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503843891.webp', caption: 'Corn Flour Blending Machine & Silo' },
-  { src: '/turnkey-brochures/images/corn-flour-plant/media__1785503854931.webp', caption: 'Automatic Bag Filling Machine' }
+  { src: '/assets/plants/food/corn-flour-plant/media__1785503799034.webp', caption: 'Corn Cleaning & Destoning System' },
+  { src: '/assets/plants/food/corn-flour-plant/media__1785503810943.webp', caption: 'Corn Degerminator & Conditioner' },
+  { src: '/assets/plants/food/corn-flour-plant/media__1785503823693.webp', caption: 'Grinding Machine / Roller Mill' },
+  { src: '/assets/plants/food/corn-flour-plant/media__1785503833080.webp', caption: 'Plansifter / Corn Flour Purifier' },
+  { src: '/assets/plants/food/corn-flour-plant/media__1785503843891.webp', caption: 'Corn Flour Blending Machine & Silo' },
+  { src: '/assets/plants/food/corn-flour-plant/media__1785503854931.webp', caption: 'Automatic Bag Filling Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedCornFlourPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="facfp-hero">
         <div className="facfp-hero__overlay" />
-        <div className="facfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_corn_flour.webp')` }} />
+        <div className="facfp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_corn_flour.webp')` }} />
         <div className="facfp-hero__content">
           <span className="facfp-hero__badge">
             <span className="facfp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function FullyAutomatedCornFlourPlantDetailPage() {
               </div>
             </div>
             <div className="facfp-overview__image facfp-overview__image--photo">
-              <img src="/turnkey-brochures/images/corn-flour-plant/media__1785503810943.webp" alt="Fully Automated Corn Flour Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/corn-flour-plant/media__1785503810943.webp" alt="Fully Automated Corn Flour Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

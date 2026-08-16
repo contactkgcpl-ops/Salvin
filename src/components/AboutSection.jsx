@@ -9,24 +9,24 @@ import "../assets/team.css";
 import "../assets/why_us.css";
 import "../assets/md_section.css";
 import { FaUserTie, FaBuilding, FaVial } from "react-icons/fa";
-import mdImage from "../assets/contact/kevalgandhi.webp"; // Placeholder, user to provide keval_gandhi.jpg
+const mdImage = "/assets/company/contact/kevalgandhi.webp"; // Placeholder, user to provide keval_gandhi.jpg
 
-import aboutImg from "../assets/Industrial.webp";
-import journeyHeroImage from "../assets/food-processing-plant.webp";
-import journey1 from "../assets/journey/d1-1.webp";
-import journey2 from "../assets/journey/d1-2.webp";
-import journey3 from "../assets/journey/d1-3.webp";
-import journey4 from "../assets/journey/d1-4.webp";
-import journey5 from "../assets/journey/d1-5.webp";
-import journey6 from "../assets/journey/d1-6.webp";
-import journey7 from "../assets/journey/d1-7.webp";
-import journey8 from "../assets/journey/d1-8.webp";
-import journey9 from "../assets/journey/d1-9.webp";
+const aboutImg = "/assets/core/icons/Industrial.webp";
+const journeyHeroImage = "/assets/core/icons/food-processing-plant.webp";
+const journey1 = "/assets/company/journey/d1-1.webp";
+const journey2 = "/assets/company/journey/d1-2.webp";
+const journey3 = "/assets/company/journey/d1-3.webp";
+const journey4 = "/assets/company/journey/d1-4.webp";
+const journey5 = "/assets/company/journey/d1-5.webp";
+const journey6 = "/assets/company/journey/d1-6.webp";
+const journey7 = "/assets/company/journey/d1-7.webp";
+const journey8 = "/assets/company/journey/d1-8.webp";
+const journey9 = "/assets/company/journey/d1-9.webp";
 
-import team1 from "../assets/team1.webp";
-import team2 from "../assets/team2.webp";
-import team3 from "../assets/team3.webp";
-import team4 from "../assets/team4.webp";
+const team1 = "/assets/company/team/team1.webp";
+const team2 = "/assets/company/team/team2.webp";
+const team3 = "/assets/company/team/team3.webp";
+const team4 = "/assets/company/team/team4.webp";
 
 const data2 = [
   {

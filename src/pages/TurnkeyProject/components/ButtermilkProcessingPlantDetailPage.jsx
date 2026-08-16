@@ -41,32 +41,32 @@ const MACHINERY_LIST = [
   {
     "name": "Raw Milk Reception & Filtration",
     "desc": "For receiving, chilling, and filtering raw milk.",
-    "image": "/turnkey-brochures/images/buttermilk-gallery/1.webp"
+    "image": "/assets/plants/dairy/buttermilk-gallery/1.webp"
   },
   {
     "name": "Cream Separator Unit",
     "desc": "Precision separation and preparation of buttermilk.",
-    "image": "/turnkey-brochures/images/buttermilk-gallery/2.webp"
+    "image": "/assets/plants/dairy/buttermilk-gallery/2.webp"
   },
   {
     "name": "Pasteurization & Homogenization",
     "desc": "Ensures uniform texture and thermal processing.",
-    "image": "/turnkey-brochures/images/buttermilk-gallery/3.webp"
+    "image": "/assets/plants/dairy/buttermilk-gallery/3.webp"
   },
   {
     "name": "Mixing & Flavoring Tank",
     "desc": "Automated mixing of buttermilk and spices/flavors.",
-    "image": "/turnkey-brochures/images/buttermilk-gallery/4.webp"
+    "image": "/assets/plants/dairy/buttermilk-gallery/4.webp"
   },
   {
     "name": "Automatic Pouch Packing Line",
     "desc": "High-speed filling and packaging of buttermilk.",
-    "image": "/turnkey-brochures/images/buttermilk-gallery/5.webp"
+    "image": "/assets/plants/dairy/buttermilk-gallery/5.webp"
   },
   {
     "name": "Cold Storage & Dispatch",
     "desc": "Temperature-controlled storage for final dispatch.",
-    "image": "/turnkey-brochures/images/buttermilk-gallery/6.webp"
+    "image": "/assets/plants/dairy/buttermilk-gallery/6.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -96,27 +96,27 @@ const FAQS = [
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/buttermilk-gallery/1.webp",
+    "src": "/assets/plants/dairy/buttermilk-gallery/1.webp",
     "caption": "Raw Milk Reception & Filtration"
   },
   {
-    "src": "/turnkey-brochures/images/buttermilk-gallery/2.webp",
+    "src": "/assets/plants/dairy/buttermilk-gallery/2.webp",
     "caption": "Cream Separator Unit"
   },
   {
-    "src": "/turnkey-brochures/images/buttermilk-gallery/3.webp",
+    "src": "/assets/plants/dairy/buttermilk-gallery/3.webp",
     "caption": "Pasteurization & Homogenization System"
   },
   {
-    "src": "/turnkey-brochures/images/buttermilk-gallery/4.webp",
+    "src": "/assets/plants/dairy/buttermilk-gallery/4.webp",
     "caption": "Buttermilk Mixing & Flavoring Tank"
   },
   {
-    "src": "/turnkey-brochures/images/buttermilk-gallery/5.webp",
+    "src": "/assets/plants/dairy/buttermilk-gallery/5.webp",
     "caption": "Automatic Pouch Packing Line"
   },
   {
-    "src": "/turnkey-brochures/images/buttermilk-gallery/6.webp",
+    "src": "/assets/plants/dairy/buttermilk-gallery/6.webp",
     "caption": "Cold Storage & Dispatch Area"
   }
 ]
@@ -165,7 +165,7 @@ export default function ButtermilkProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/dairy-heroes/buttermilk.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/dairy-heroes/buttermilk.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

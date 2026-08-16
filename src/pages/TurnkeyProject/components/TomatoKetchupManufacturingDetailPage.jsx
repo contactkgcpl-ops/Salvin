@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Tomato Washing Machine',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/1_tomato_washing.webp',
+    image: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/1_tomato_washing.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Tomato Inspection & Sorting Conveyor',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.webp',
+    image: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Tomato Crusher Pulper',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.webp',
+    image: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Steam Jacketed Sauce Cooking Kettle',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.webp',
+    image: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Tomato Ketchup Homogenizer & Balance Tank',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.webp',
+    image: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Tomato Ketchup Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp',
+    image: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/1_tomato_washing.webp', caption: 'Tomato Washing Machine' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.webp', caption: 'Tomato Inspection & Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.webp', caption: 'Tomato Crusher Pulper' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.webp', caption: 'Steam Jacketed Sauce Cooking Kettle' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.webp', caption: 'Tomato Ketchup Homogenizer & Balance Tank' },
-  { src: '/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp', caption: 'Tomato Ketchup Filling & Packaging Machine' },
+  { src: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/1_tomato_washing.webp', caption: 'Tomato Washing Machine' },
+  { src: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/2_inspection_sorting.webp', caption: 'Tomato Inspection & Sorting Conveyor' },
+  { src: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/3_crusher_pulper.webp', caption: 'Tomato Crusher Pulper' },
+  { src: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/4_sauce_cooking.webp', caption: 'Steam Jacketed Sauce Cooking Kettle' },
+  { src: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/5_homogenizer_balance.webp', caption: 'Tomato Ketchup Homogenizer & Balance Tank' },
+  { src: '/assets/plants/food/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp', caption: 'Tomato Ketchup Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="tkm-hero">
         <div className="tkm-hero__overlay" />
-        <div className="tkm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/tomato_ketchup_hero.webp')` }} />
+        <div className="tkm-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/tomato_ketchup_hero.webp')` }} />
         <div className="tkm-hero__content">
           <span className="tkm-hero__badge">
             <span className="tkm-hero__badge-dot" />
@@ -229,7 +229,7 @@ export default function TomatoKetchupManufacturingDetailPage() {
               </div>
             </div>
             <div className="tkm-overview__image tkm-overview__image--photo">
-              <img src="/turnkey-brochures/images/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp" alt="Tomato Ketchup Manufacturing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/tomato-ketchup-manufacturing-gallery/6_filling_packaging.webp" alt="Tomato Ketchup Manufacturing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

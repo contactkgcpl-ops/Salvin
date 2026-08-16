@@ -39,32 +39,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     "name": "Weighing & Dosing System",
-    "image": "/turnkey-brochures/images/hair-conditioner-gallery/1_weighing_dosing.jpg",
+    "image": "/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg",
     "desc": "Automatic weighing and dosing system for precise measurement of raw materials, ensuring perfect batch consistency."
   },
   {
     "name": "Vacuum Emulsifying Mixer",
-    "image": "/turnkey-brochures/images/hair-conditioner-gallery/2_vacuum_mixer.jpg",
+    "image": "/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg",
     "desc": "Advanced vacuum mixing vessel for perfectly blending and emulsifying the conditioner ingredients without air bubbles."
   },
   {
     "name": "High Shear Homogenizer",
-    "image": "/turnkey-brochures/images/hair-conditioner-gallery/3_high_shear.jpg",
+    "image": "/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg",
     "desc": "Heavy-duty high shear homogenizer system designed to create an ultra-smooth and stable emulsion."
   },
   {
     "name": "Storage Holding Tank",
-    "image": "/turnkey-brochures/images/hair-conditioner-gallery/4_storage_tank.jpg",
+    "image": "/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg",
     "desc": "High-grade stainless steel holding tank to safely store the prepared conditioner before the filling process."
   },
   {
     "name": "Automatic Bottle Filling & Capping Machine",
-    "image": "/turnkey-brochures/images/hair-conditioner-gallery/5_filling_capping.jpg",
+    "image": "/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg",
     "desc": "Fully automatic rotary filling and capping station to efficiently and hygienically pack the product into bottles."
   },
   {
     "name": "Automatic Labeling & Carton Packing Machine",
-    "image": "/turnkey-brochures/images/hair-conditioner-gallery/6_labeling_packing.jpg",
+    "image": "/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg",
     "desc": "High-speed labeling and carton packaging system for final dispatch, reducing manual labor and errors."
   }
 ]
@@ -95,12 +95,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/1_weighing_dosing.jpg', caption: 'Weighing & Dosing System' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/4_storage_tank.jpg', caption: 'Storage Holding Tank' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/5_filling_capping.jpg', caption: 'Automatic Bottle Filling & Capping Machine' },
-  { src: '/turnkey-brochures/images/hair-conditioner-gallery/6_labeling_packing.jpg', caption: 'Automatic Labeling & Carton Packing Machine' }
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg', caption: 'Weighing & Dosing System' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg', caption: 'Storage Holding Tank' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg', caption: 'Automatic Bottle Filling & Capping Machine' },
+  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg', caption: 'Automatic Labeling & Carton Packing Machine' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -150,7 +150,7 @@ export default function HairConditionerManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="hcm-hero">
         <div className="hcm-hero__overlay" />
-        <div className="hcm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/hair_conditioner_hero.png')` }} />
+        <div className="hcm-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/hair_conditioner_hero.png')` }} />
         <div className="hcm-hero__content">
           <span className="hcm-hero__badge">
             <span className="hcm-hero__badge-dot" />
@@ -217,7 +217,7 @@ export default function HairConditionerManufacturingDetailPage() {
               </div>
             </div>
             <div className="hcm-overview__image hcm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src="/turnkey-brochures/images/hair-conditioner-gallery/2_vacuum_mixer.jpg" alt="Hair Conditioner Manufacturing Plant" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src="/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg" alt="Hair Conditioner Manufacturing Plant" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

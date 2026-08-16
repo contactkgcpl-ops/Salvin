@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
-import logo from '../assets/salvin_logo.webp';
+const logo = "/assets/core/logo/salvin_logo.webp";
 import LanguageSelector from './LanguageSelector';
 
 export default function Header({ isAdminAuthenticated, onAdminLogout }) {

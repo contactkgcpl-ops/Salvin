@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Wheat Cleaning & Destoning System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.webp',
+    image: '/assets/plants/food/wheat-flour-gallery/1_cleaning.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Wheat Conditioning & Tempering System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.webp',
+    image: '/assets/plants/food/wheat-flour-gallery/2_conditioning.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Roller Flour Milling System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.webp',
+    image: '/assets/plants/food/wheat-flour-gallery/3_milling.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Plansifter & Flour Grading System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.webp',
+    image: '/assets/plants/food/wheat-flour-gallery/4_plansifter.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Flour Storage & Blending System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.webp',
+    image: '/assets/plants/food/wheat-flour-gallery/5_storage.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Flour Packaging System',
-    image: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp',
+    image: '/assets/plants/food/wheat-flour-gallery/6_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/1_cleaning.webp', caption: 'Wheat Cleaning & Destoning System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/2_conditioning.webp', caption: 'Wheat Conditioning & Tempering System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/3_milling.webp', caption: 'Roller Flour Milling System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/4_plansifter.webp', caption: 'Plansifter & Flour Grading System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/5_storage.webp', caption: 'Flour Storage & Blending System' },
-  { src: '/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp', caption: 'Automatic Flour Packaging System' },
+  { src: '/assets/plants/food/wheat-flour-gallery/1_cleaning.webp', caption: 'Wheat Cleaning & Destoning System' },
+  { src: '/assets/plants/food/wheat-flour-gallery/2_conditioning.webp', caption: 'Wheat Conditioning & Tempering System' },
+  { src: '/assets/plants/food/wheat-flour-gallery/3_milling.webp', caption: 'Roller Flour Milling System' },
+  { src: '/assets/plants/food/wheat-flour-gallery/4_plansifter.webp', caption: 'Plansifter & Flour Grading System' },
+  { src: '/assets/plants/food/wheat-flour-gallery/5_storage.webp', caption: 'Flour Storage & Blending System' },
+  { src: '/assets/plants/food/wheat-flour-gallery/6_packaging.webp', caption: 'Automatic Flour Packaging System' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function WheatFlourProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="wfp-hero">
         <div className="wfp-hero__overlay" />
-        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/wheat_flour_hero.webp')` }} />
+        <div className="wfp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/wheat_flour_hero.webp')` }} />
         <div className="wfp-hero__content">
           <span className="wfp-hero__badge">
             <span className="wfp-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function WheatFlourProcessingDetailPage() {
               </div>
             </div>
             <div className="wfp-overview__image wfp-overview__image--photo">
-              <img src="/turnkey-brochures/images/wheat-flour-gallery/6_packaging.webp" alt="Wheat Flour Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/wheat-flour-gallery/6_packaging.webp" alt="Wheat Flour Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

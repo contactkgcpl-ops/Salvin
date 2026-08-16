@@ -3,14 +3,14 @@ import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchPara
 import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
 import "./App.css";
 import Cropper from "react-easy-crop";
-import machineryLayoutImage from "./assets/machinery-layout.webp";
-import blueMachinesImage from "./assets/blue-machines.webp";
+const machineryLayoutImage = "/assets/core/icons/machinery-layout.webp";
+const blueMachinesImage = "/assets/core/icons/blue-machines.webp";
 import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingContact from "./components/FloatingContact";
 // import IntroOverlay from "./components/IntroOverlay";
-import searchIcon from './assets/search.webp'
+const searchIcon = "/assets/core/icons/search.webp";
 
 const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
 const ADMIN_USERNAME = import.meta.env.VITE_ADMIN_USERNAME || "admin";
@@ -197,25 +197,26 @@ import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPa
 import ConsultantPage from "./pages/ConsultantPage";
 import ServicesPage from "./pages/ServicesPage";
 import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
-import Decade from "./assets/home_extra/decade_experties.webp";
-import global from "./assets/home_extra/globalsupport.webp";
-import innovation from "./assets/home_extra/innovation.webp";
-import quality from "./assets/home_extra/quality.webp";
-import industryTurnkey from "./assets/industry-divisions/turnkey-projects.webp";
-import projproteinbar from "./assets/industry-divisions/proteinbar.webp";
-import industryAutomation from "./assets/industry-divisions/automation-robotics.webp";
-import industryProcessing from "./assets/industry-divisions/processing-packaging.webp";
-import industryConsultancy from "./assets/industry-divisions/food_consultant.webp";
-import industryMaintenance from "./assets/industry-divisions/machine-maintenance.webp";
-import projHoney from "./assets/home_projects/honey processing plant.webp";
-import projSpices from "./assets/home_projects/spices_processing.webp";
-import projApi from "./assets/home_projects/APi_Plant.webp";
-import projChilli from "./assets/home_projects/1000_ton_red_chilli_plant.webp";
-import projRice from "./assets/home_projects/puffed_rice.webp";
-import projectHeroImage from "./assets/hero/turkey_proj.webp";
-import machineHeroImage from "./assets/hero/salvinhero2.webp";
-import sparesHeroImage from "./assets/hero/sparse02.webp";
-import salvinLogo from "./assets/salvin_logo.webp";
+const Decade = "/assets/core/icons/decade_experties.webp";
+const global = "/assets/core/icons/globalsupport.webp";
+const innovation = "/assets/core/icons/innovation.webp";
+const quality = "/assets/core/icons/quality.webp";
+const industryTurnkey = "/assets/categories/turnkey-projects.webp";
+const projproteinbar = "/assets/categories/proteinbar.webp";
+const industryAutomation = "/assets/categories/automation-robotics.webp";
+const industryProcessing = "/assets/categories/processing-packaging.webp";
+const industryConsultancy = "/assets/core/icons/food_consultant.webp";
+const industryMaintenance = "/assets/categories/machine-maintenance.webp";
+const projHoney = "/assets/company/projects/honey processing plant.webp";
+const projSpices = "/assets/company/projects/spices_processing.webp";
+const projApi = "/assets/company/projects/APi_Plant.webp";
+const projChilli = "/assets/company/projects/1000_ton_red_chilli_plant.webp";
+const projRice = "/assets/company/projects/puffed_rice.webp";
+const spicesHeroImage = "/assets/core/heroes/spices_hero.webp";
+const snacksHeroImage = "/assets/core/heroes/snacks_hero.webp";
+const beveragesHeroImage = "/assets/core/heroes/beverages_hero.webp";
+const consultantHeroImage = "/assets/core/heroes/consultant_hero.webp";
+const salvinLogo = "/assets/core/logo/salvin_logo.webp";
 
 
 const serviceCards = [
@@ -1361,7 +1362,7 @@ function AdminPage({
                 </div>
               </div>
               <label>Existing Image Path
-                <input placeholder="/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} />
+                <input placeholder="/assets/assets/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} />
                 <small>Use this when the image is already uploaded or hosted externally.</small>
               </label>
             </div>
@@ -1611,32 +1612,36 @@ function HomePage() {
   const [isHeroPreviewOpen, setIsHeroPreviewOpen] = useState(false);
   const heroSlides = [
     {
-      key: "machine",
+      key: "spices",
       eyebrow: "Salvin Industries",
-      title: "Food Processing Plant & Packaging Machinery",
-      text: "Leading manufacturer of high-performance food processing plants, packaging machinery, industrial automation, and turnkey projects in India & worldwide.",
-      cta: "Explore Turnkey Projects",
-      to: "/turnkey-project",
-      image: machineHeroImage
+      title: "Spices Processing Line",
+      text: "Leading manufacturer of high-performance spice processing plants, grinding lines, blending, and automated packaging machinery.",
+      cta: "Explore Spices Line",
+      to: "/turnkey-project/red-chilli-processing-plant",
+      image: spicesHeroImage,
+      showText: true
     },
     {
-      key: "project",
-      eyebrow: "Turnkey Projects",
-      title: "Achieve Beyond Expectations",
-      subtitle: "From Vision to Victory",
-      text: "End-to-end project execution from plant planning and engineering to commissioning and support.",
-      cta: "Start Your Project",
-      to: "/turnkey-project",
-      image: projectHeroImage
+      key: "snacks",
+      title: "Snacks Processing Line",
+      image: snacksHeroImage,
+      showText: false
     },
     {
-      key: "spares",
-      eyebrow: "Industrial Spares",
-      title: "Trusted Partner for Industrial & Machine Spares",
-      text: "Premium quality industrial components and machine spares ensuring zero downtime for your production lines.",
-      cta: "Enquire Spares",
-      to: "/contact",
-      image: sparesHeroImage
+      key: "beverages",
+      eyebrow: "Beverage Projects",
+      title: "Beverages Projects",
+      text: "Complete automated bottling, filling, and packaging lines for fruit juices, soft drinks, energy beverages & liquid plants.",
+      cta: "Explore Beverage Projects",
+      to: "/turnkey-project",
+      image: beveragesHeroImage,
+      showText: true
+    },
+    {
+      key: "consultant",
+      title: "Supply Chain & Product Placement Consultant",
+      image: consultantHeroImage,
+      showText: false
     }
   ];
 
@@ -1801,33 +1806,55 @@ function HomePage() {
         id="home"
         style={{ "--hero-home-bg": `url(${activeHero.image})` }}
       >
-        <div className="overlay" />
-        <div className="hero-content" key={activeHero.key}>
-          <span className="hero-tag">{activeHero.eyebrow}</span>
-          <h1>{activeHero.title}</h1>
-          {activeHero.subtitle && <h2>{activeHero.subtitle}</h2>}
-          <p>{activeHero.text}</p>
-        </div>
-        <div className={`hero-preview-dock${isHeroPreviewOpen ? " open" : ""}`} aria-label="Hero image selector">
-          <div className="hero-preview-track">
-            {heroSlides.map((slide, index) => (
-              <button
-                type="button"
-                key={slide.key}
-                className={`hero-preview-card${index === activeHeroIndex ? " active" : ""}${index === nextHeroIndex ? " next" : ""}`}
-                onClick={() => goToHeroSlide(index)}
-                aria-label={`Show ${slide.eyebrow}`}
-              >
-                <img src={slide.image} alt="" />
-                <span>{slide.eyebrow}</span>
-              </button>
-            ))}
+        {activeHero.showText !== false && <div className="overlay" />}
+        {activeHero.showText !== false && (
+          <div className="hero-content" key={activeHero.key}>
+            <span className="hero-tag">{activeHero.eyebrow}</span>
+            <h1>{activeHero.title}</h1>
+            {activeHero.subtitle && <h2>{activeHero.subtitle}</h2>}
+            <p>{activeHero.text}</p>
+            {activeHero.cta && (
+              <div className="hero-actions" style={{ marginTop: "22px" }}>
+                <NavLink to={activeHero.to || "/turnkey-project"} className="primary">
+                  {activeHero.cta} &rarr;
+                </NavLink>
+              </div>
+            )}
           </div>
-          <div className="hero-controls">
-            <button type="button" onClick={() => goToHeroSlide(activeHeroIndex - 1)} aria-label="Previous hero">
+        )}
+        {/* Simple Slider Controls */}
+        <div className="hero-simple-nav" aria-label="Hero slider navigation">
+          <div className="hero-simple-controls">
+            <button
+              type="button"
+              className="hero-arrow-btn"
+              onClick={() => goToHeroSlide(activeHeroIndex - 1)}
+              aria-label="Previous slide"
+            >
               <span aria-hidden="true">&lsaquo;</span>
             </button>
-            <button type="button" onClick={() => goToHeroSlide(activeHeroIndex + 1)} aria-label="Next hero">
+
+            <div className="hero-dots">
+              {heroSlides.map((slide, index) => (
+                <button
+                  type="button"
+                  key={slide.key}
+                  className={`hero-dot${index === activeHeroIndex ? " active" : ""}`}
+                  onClick={() => goToHeroSlide(index)}
+                  aria-label={`Go to slide ${index + 1}: ${slide.title}`}
+                >
+                  <span className="dot-line" />
+                  <span className="dot-label">{`0${index + 1}`}</span>
+                </button>
+              ))}
+            </div>
+
+            <button
+              type="button"
+              className="hero-arrow-btn"
+              onClick={() => goToHeroSlide(activeHeroIndex + 1)}
+              aria-label="Next slide"
+            >
               <span aria-hidden="true">&rsaquo;</span>
             </button>
           </div>

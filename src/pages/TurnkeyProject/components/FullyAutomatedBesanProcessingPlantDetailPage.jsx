@@ -22,32 +22,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Chana Dal Cleaning Machine',
-    image: '/turnkey-brochures/images/besan-plant/media__1785503129106.webp',
+    image: '/assets/plants/food/besan-plant/media__1785503129106.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Destoner / Pre-cleaner',
-    image: '/turnkey-brochures/images/besan-plant/media__1785503207619.webp',
+    image: '/assets/plants/food/besan-plant/media__1785503207619.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Gram / Chana Dal Scourer',
-    image: '/turnkey-brochures/images/besan-plant/media__1785503235685.webp',
+    image: '/assets/plants/food/besan-plant/media__1785503235685.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Pulverizer / Grinding Unit',
-    image: '/turnkey-brochures/images/besan-plant/media__1785503280931.webp',
+    image: '/assets/plants/food/besan-plant/media__1785503280931.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Plansifter',
-    image: '/turnkey-brochures/images/besan-plant/media__1785503318739.webp',
+    image: '/assets/plants/food/besan-plant/media__1785503318739.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Besan Packaging Station',
-    image: '/turnkey-brochures/images/besan-plant/media__1785503338365.webp',
+    image: '/assets/plants/food/besan-plant/media__1785503338365.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -77,12 +77,12 @@ const FAQS = [
 
 /* ─── Gallery Images (Fully Automated Besan Processing Plant only) ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/besan-plant/media__1785503129106.webp', caption: 'Chana Dal Cleaning Machine' },
-  { src: '/turnkey-brochures/images/besan-plant/media__1785503207619.webp', caption: 'Destoner / Pre-cleaner' },
-  { src: '/turnkey-brochures/images/besan-plant/media__1785503235685.webp', caption: 'Gram / Chana Dal Scourer' },
-  { src: '/turnkey-brochures/images/besan-plant/media__1785503280931.webp', caption: 'Pulverizer / Grinding Unit' },
-  { src: '/turnkey-brochures/images/besan-plant/media__1785503318739.webp', caption: 'Plansifter' },
-  { src: '/turnkey-brochures/images/besan-plant/media__1785503338365.webp', caption: 'Besan Packaging Station' }
+  { src: '/assets/plants/food/besan-plant/media__1785503129106.webp', caption: 'Chana Dal Cleaning Machine' },
+  { src: '/assets/plants/food/besan-plant/media__1785503207619.webp', caption: 'Destoner / Pre-cleaner' },
+  { src: '/assets/plants/food/besan-plant/media__1785503235685.webp', caption: 'Gram / Chana Dal Scourer' },
+  { src: '/assets/plants/food/besan-plant/media__1785503280931.webp', caption: 'Pulverizer / Grinding Unit' },
+  { src: '/assets/plants/food/besan-plant/media__1785503318739.webp', caption: 'Plansifter' },
+  { src: '/assets/plants/food/besan-plant/media__1785503338365.webp', caption: 'Besan Packaging Station' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -137,7 +137,7 @@ export default function FullyAutomatedBesanProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="fabpp-hero">
         <div className="fabpp-hero__overlay" />
-        <div className="fabpp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_besan.webp')` }} />
+        <div className="fabpp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_besan.webp')` }} />
         <div className="fabpp-hero__content">
           <span className="fabpp-hero__badge">
             <span className="fabpp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function FullyAutomatedBesanProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="fabpp-overview__image fabpp-overview__image--photo">
-              <img src="/turnkey-brochures/images/besan-plant/media__1785503280931.webp" alt="Fully Automated Besan Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/besan-plant/media__1785503280931.webp" alt="Fully Automated Besan Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

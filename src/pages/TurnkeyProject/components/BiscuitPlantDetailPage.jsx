@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Heavy Duty Dough Mixer",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.webp"
+    image: "/assets/plants/food/biscuit-gallery/1_dough_mixer.webp"
   },
   {
     name: "Rotary Moulder",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.webp"
+    image: "/assets/plants/food/biscuit-gallery/2_rotary_moulding.webp"
   },
   {
     name: "Tunnel Baking Oven",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.webp"
+    image: "/assets/plants/food/biscuit-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Cooling Conveyor",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.webp"
+    image: "/assets/plants/food/biscuit-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Flow Wrap Machine",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.webp"
+    image: "/assets/plants/food/biscuit-gallery/5_flow_wrap_packaging.webp"
   },
   {
     name: "Carton Packing System",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/biscuit-gallery/6_carton_packing.webp"
+    image: "/assets/plants/food/biscuit-gallery/6_carton_packing.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/biscuit-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/2_rotary_moulding.webp', caption: 'Rotary Moulding' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/5_flow_wrap_packaging.webp', caption: 'Flow Wrap Packaging' },
-  { src: '/turnkey-brochures/images/biscuit-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
+  { src: '/assets/plants/food/biscuit-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/assets/plants/food/biscuit-gallery/2_rotary_moulding.webp', caption: 'Rotary Moulding' },
+  { src: '/assets/plants/food/biscuit-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/assets/plants/food/biscuit-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/assets/plants/food/biscuit-gallery/5_flow_wrap_packaging.webp', caption: 'Flow Wrap Packaging' },
+  { src: '/assets/plants/food/biscuit-gallery/6_carton_packing.webp', caption: 'Carton Packing' }
 ];
 
 export default function BiscuitPlantDetailPage() {
@@ -127,7 +127,7 @@ export default function BiscuitPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_biscuit.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_biscuit.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

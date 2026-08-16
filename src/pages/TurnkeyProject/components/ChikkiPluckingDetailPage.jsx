@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Cooling Tunnel Conveyor',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.webp',
+    image: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Automatic Chikki Processing Machine',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_2.webp',
+    image: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Chikki Separation Conveyor',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_3.webp',
+    image: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Inspection & Sorting Table',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_4.webp',
+    image: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Transfer Conveyor System',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_5.webp',
+    image: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Packing & Collection Conveyor',
-    image: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_6.webp',
+    image: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.webp', caption: 'Cooling Tunnel Conveyor' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_2.webp', caption: 'Automatic Chikki Processing Machine' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_3.webp', caption: 'Chikki Separation Conveyor' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_4.webp', caption: 'Inspection & Sorting Table' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_5.webp', caption: 'Transfer Conveyor System' },
-  { src: '/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_6.webp', caption: 'Packing & Collection Station' }
+  { src: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_1.webp', caption: 'Cooling Tunnel Conveyor' },
+  { src: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_2.webp', caption: 'Automatic Chikki Processing Machine' },
+  { src: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_3.webp', caption: 'Chikki Separation Conveyor' },
+  { src: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_4.webp', caption: 'Inspection & Sorting Table' },
+  { src: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_5.webp', caption: 'Transfer Conveyor System' },
+  { src: '/assets/plants/food/chikki-plucking-gallery/chikki_plucking_6.webp', caption: 'Packing & Collection Station' }
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -127,7 +127,7 @@ export default function ChikkiPluckingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/chikki_plucking_hero.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/chikki_plucking_hero.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />
@@ -220,7 +220,7 @@ export default function ChikkiPluckingDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/chikki-plucking-gallery/chikki_plucking_1.webp" alt="Fully Automated Brittle Chikki Processing Plant" loading="lazy" />
+              <img src="/assets/plants/food/chikki-plucking-gallery/chikki_plucking_1.webp" alt="Fully Automated Brittle Chikki Processing Plant" loading="lazy" />
             </div>
           </div>
         </div>

@@ -17,32 +17,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Vibratory Screener & Destoner',
-    image: '/turnkey-brochures/images/millet-plant/1_destoner.webp',
+    image: '/assets/plants/food/millet-plant/1_destoner.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Millet Huller Machine',
-    image: '/turnkey-brochures/images/millet-plant/3_huller.webp',
+    image: '/assets/plants/food/millet-plant/3_huller.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Millet Polisher',
-    image: '/turnkey-brochures/images/millet-plant/2_polisher.webp',
+    image: '/assets/plants/food/millet-plant/2_polisher.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Aspirator Air Separator',
-    image: '/turnkey-brochures/images/millet-plant/5_aspirator.webp',
+    image: '/assets/plants/food/millet-plant/5_aspirator.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Optical Color Sorter',
-    image: '/turnkey-brochures/images/millet-plant/4_sorter.webp',
+    image: '/assets/plants/food/millet-plant/4_sorter.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Automatic Packaging Machine',
-    image: '/turnkey-brochures/images/millet-plant/6_packing.webp',
+    image: '/assets/plants/food/millet-plant/6_packing.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -70,12 +70,12 @@ const FAQS = [
 ]
 
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/millet-plant/1_destoner.webp', caption: 'Vibratory Screener & Destoner' },
-  { src: '/turnkey-brochures/images/millet-plant/3_huller.webp', caption: 'Millet Huller Machine' },
-  { src: '/turnkey-brochures/images/millet-plant/2_polisher.webp', caption: 'Millet Polisher' },
-  { src: '/turnkey-brochures/images/millet-plant/5_aspirator.webp', caption: 'Aspirator Air Separator' },
-  { src: '/turnkey-brochures/images/millet-plant/4_sorter.webp', caption: 'Optical Color Sorter' },
-  { src: '/turnkey-brochures/images/millet-plant/6_packing.webp', caption: 'Automatic Packaging Machine' }
+  { src: '/assets/plants/food/millet-plant/1_destoner.webp', caption: 'Vibratory Screener & Destoner' },
+  { src: '/assets/plants/food/millet-plant/3_huller.webp', caption: 'Millet Huller Machine' },
+  { src: '/assets/plants/food/millet-plant/2_polisher.webp', caption: 'Millet Polisher' },
+  { src: '/assets/plants/food/millet-plant/5_aspirator.webp', caption: 'Aspirator Air Separator' },
+  { src: '/assets/plants/food/millet-plant/4_sorter.webp', caption: 'Optical Color Sorter' },
+  { src: '/assets/plants/food/millet-plant/6_packing.webp', caption: 'Automatic Packaging Machine' }
 ]
 
 export default function MilletProcessingPlantDetailPage() {
@@ -106,7 +106,7 @@ export default function MilletProcessingPlantDetailPage() {
     <div className="opp-page">
       <section className="opp-hero">
         <div className="opp-hero__overlay" />
-        <div className="opp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_millet_plant.webp')` }} />
+        <div className="opp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_millet_plant.webp')` }} />
         <div className="opp-hero__content">
           <span className="opp-hero__badge"><span className="opp-hero__badge-dot" />TURNKEY MILLET PROCESSING SOLUTION</span>
           <h1 className="opp-hero__title">Millet Processing Plant</h1>
@@ -152,7 +152,7 @@ export default function MilletProcessingPlantDetailPage() {
               </div>
             </div>
             <div className="opp-overview__image opp-overview__image--photo">
-              <img src="/turnkey-brochures/images/millet-plant/4_sorter.webp" alt="Millet Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/food/millet-plant/4_sorter.webp" alt="Millet Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

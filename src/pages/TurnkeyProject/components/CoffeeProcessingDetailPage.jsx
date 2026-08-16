@@ -18,32 +18,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Coffee Bean Cleaning Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/1_cleaning_machine.webp',
+    image: '/assets/plants/beverages/coffee-processing-gallery/1_cleaning_machine.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Coffee Bean Roasting Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.webp',
+    image: '/assets/plants/beverages/coffee-processing-gallery/2_roasting_machine.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Coffee Bean Cooling Conveyor',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/3_cooling_conveyor.webp',
+    image: '/assets/plants/beverages/coffee-processing-gallery/3_cooling_conveyor.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Coffee Powder Grinding Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/4_grinding_machine.webp',
+    image: '/assets/plants/beverages/coffee-processing-gallery/4_grinding_machine.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Coffee Powder Blending Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/5_blending_machine.webp',
+    image: '/assets/plants/beverages/coffee-processing-gallery/5_blending_machine.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Coffee Powder Filling & Packaging Machine',
-    image: '/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.webp',
+    image: '/assets/plants/beverages/coffee-processing-gallery/6_filling_packaging.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/1_cleaning_machine.webp', caption: 'Coffee Bean Cleaning Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.webp', caption: 'Coffee Bean Roasting Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/3_cooling_conveyor.webp', caption: 'Coffee Bean Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/4_grinding_machine.webp', caption: 'Coffee Powder Grinding Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/5_blending_machine.webp', caption: 'Coffee Powder Blending Machine' },
-  { src: '/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.webp', caption: 'Coffee Powder Filling & Packaging Machine' },
+  { src: '/assets/plants/beverages/coffee-processing-gallery/1_cleaning_machine.webp', caption: 'Coffee Bean Cleaning Machine' },
+  { src: '/assets/plants/beverages/coffee-processing-gallery/2_roasting_machine.webp', caption: 'Coffee Bean Roasting Machine' },
+  { src: '/assets/plants/beverages/coffee-processing-gallery/3_cooling_conveyor.webp', caption: 'Coffee Bean Cooling Conveyor' },
+  { src: '/assets/plants/beverages/coffee-processing-gallery/4_grinding_machine.webp', caption: 'Coffee Powder Grinding Machine' },
+  { src: '/assets/plants/beverages/coffee-processing-gallery/5_blending_machine.webp', caption: 'Coffee Powder Blending Machine' },
+  { src: '/assets/plants/beverages/coffee-processing-gallery/6_filling_packaging.webp', caption: 'Coffee Powder Filling & Packaging Machine' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -133,7 +133,7 @@ export default function CoffeeProcessingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="cp-hero">
         <div className="cp-hero__overlay" />
-        <div className="cp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/coffee-processing-gallery/2_roasting_machine.webp')` }} />
+        <div className="cp-hero__bg" style={{ backgroundImage: `url('/assets/plants/beverages/coffee-processing-gallery/2_roasting_machine.webp')` }} />
         <div className="cp-hero__content">
           <span className="cp-hero__badge">
             <span className="cp-hero__badge-dot" />
@@ -231,7 +231,7 @@ export default function CoffeeProcessingDetailPage() {
               </div>
             </div>
             <div className="cp-overview__image cp-overview__image--photo">
-              <img src="/turnkey-brochures/images/coffee-processing-gallery/6_filling_packaging.webp" alt="Coffee Processing Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/beverages/coffee-processing-gallery/6_filling_packaging.webp" alt="Coffee Processing Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

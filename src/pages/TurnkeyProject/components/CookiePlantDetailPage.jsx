@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Planetary Mixer",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/cookie-gallery/1_dough_mixer.webp"
+    image: "/assets/plants/food/cookie-gallery/1_dough_mixer.webp"
   },
   {
     name: "Wire Cut / Drop Machine",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.webp"
+    image: "/assets/plants/food/cookie-gallery/2_cookie_extruder.webp"
   },
   {
     name: "Tunnel Oven",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.webp"
+    image: "/assets/plants/food/cookie-gallery/3_tunnel_oven.webp"
   },
   {
     name: "Cooling Belt",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.webp"
+    image: "/assets/plants/food/cookie-gallery/4_cooling_conveyor.webp"
   },
   {
     name: "Automatic Flow Wrapper",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.webp"
+    image: "/assets/plants/food/cookie-gallery/5_flow_wrapper.webp"
   },
   {
     name: "Carton Packer",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/cookie-gallery/6_carton_sealer.webp"
+    image: "/assets/plants/food/cookie-gallery/6_carton_sealer.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/cookie-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
-  { src: '/turnkey-brochures/images/cookie-gallery/2_cookie_extruder.webp', caption: 'Cookie Extruder' },
-  { src: '/turnkey-brochures/images/cookie-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
-  { src: '/turnkey-brochures/images/cookie-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
-  { src: '/turnkey-brochures/images/cookie-gallery/5_flow_wrapper.webp', caption: 'Flow Wrapper' },
-  { src: '/turnkey-brochures/images/cookie-gallery/6_carton_sealer.webp', caption: 'Carton Sealer' }
+  { src: '/assets/plants/food/cookie-gallery/1_dough_mixer.webp', caption: 'Dough Mixer' },
+  { src: '/assets/plants/food/cookie-gallery/2_cookie_extruder.webp', caption: 'Cookie Extruder' },
+  { src: '/assets/plants/food/cookie-gallery/3_tunnel_oven.webp', caption: 'Tunnel Oven' },
+  { src: '/assets/plants/food/cookie-gallery/4_cooling_conveyor.webp', caption: 'Cooling Conveyor' },
+  { src: '/assets/plants/food/cookie-gallery/5_flow_wrapper.webp', caption: 'Flow Wrapper' },
+  { src: '/assets/plants/food/cookie-gallery/6_carton_sealer.webp', caption: 'Carton Sealer' }
 ];
 
 export default function CookiePlantDetailPage() {
@@ -127,7 +127,7 @@ export default function CookiePlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_cookie.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_cookie.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

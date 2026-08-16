@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ginger & Garlic Washing Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine1.webp',
+    image: '/assets/plants/spices/ginger-garlic-gallery/machine1.webp',
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Manual Sorting Conveyor',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine2.webp',
+    image: '/assets/plants/spices/ginger-garlic-gallery/machine2.webp',
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Ginger & Garlic Peeling Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine3.webp',
+    image: '/assets/plants/spices/ginger-garlic-gallery/machine3.webp',
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Ginger Garlic Crushing Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine4.webp',
+    image: '/assets/plants/spices/ginger-garlic-gallery/machine4.webp',
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Ginger Garlic Colloid Mill',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine5.webp',
+    image: '/assets/plants/spices/ginger-garlic-gallery/machine5.webp',
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Ginger Garlic Jar Filling & Capping Machine',
-    image: '/turnkey-brochures/images/ginger-garlic-gallery/machine6.webp',
+    image: '/assets/plants/spices/ginger-garlic-gallery/machine6.webp',
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +74,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine6.webp', caption: 'Ginger Garlic Jar Filling & Capping Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine1.webp', caption: 'Ginger & Garlic Washing Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine2.webp', caption: 'Manual Sorting Conveyor' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine3.webp', caption: 'Ginger & Garlic Peeling Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine4.webp', caption: 'Ginger Garlic Crushing Machine' },
-  { src: '/turnkey-brochures/images/ginger-garlic-gallery/machine5.webp', caption: 'Ginger Garlic Colloid Mill' },
+  { src: '/assets/plants/spices/ginger-garlic-gallery/machine6.webp', caption: 'Ginger Garlic Jar Filling & Capping Machine' },
+  { src: '/assets/plants/spices/ginger-garlic-gallery/machine1.webp', caption: 'Ginger & Garlic Washing Machine' },
+  { src: '/assets/plants/spices/ginger-garlic-gallery/machine2.webp', caption: 'Manual Sorting Conveyor' },
+  { src: '/assets/plants/spices/ginger-garlic-gallery/machine3.webp', caption: 'Ginger & Garlic Peeling Machine' },
+  { src: '/assets/plants/spices/ginger-garlic-gallery/machine4.webp', caption: 'Ginger Garlic Crushing Machine' },
+  { src: '/assets/plants/spices/ginger-garlic-gallery/machine5.webp', caption: 'Ginger Garlic Colloid Mill' },
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -134,7 +134,7 @@ export default function GingerGarlicPasteDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="ggp-hero">
         <div className="ggp-hero__overlay" />
-        <div className="ggp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero-banners/ginger_garlic_hero.webp')` }} />
+        <div className="ggp-hero__bg" style={{ backgroundImage: `url('/assets/core/heroes/hero-banners/ginger_garlic_hero.webp')` }} />
         <div className="ggp-hero__content">
           <span className="ggp-hero__badge">
             <span className="ggp-hero__badge-dot" />
@@ -230,7 +230,7 @@ export default function GingerGarlicPasteDetailPage() {
               </div>
             </div>
             <div className="ggp-overview__image ggp-overview__image--photo">
-              <img src="/turnkey-brochures/images/ginger-garlic-gallery/machine1.webp" alt="Ginger Garlic Paste Plant by Salvin Industries" loading="lazy" />
+              <img src="/assets/plants/spices/ginger-garlic-gallery/machine1.webp" alt="Ginger Garlic Paste Plant by Salvin Industries" loading="lazy" />
             </div>
           </div>
         </div>

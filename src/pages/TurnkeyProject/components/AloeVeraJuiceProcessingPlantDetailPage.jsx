@@ -19,32 +19,32 @@ const MACHINERY_LIST = [
   {
     name: "Washing Conveyor",
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.',
-    image: "/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.webp"
+    image: "/assets/plants/beverages/aloe-vera-gallery/1_leaf_washing.webp"
   },
   {
     name: "Sorting Belt",
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.',
-    image: "/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.webp"
+    image: "/assets/plants/beverages/aloe-vera-gallery/2_manual_sorting.webp"
   },
   {
     name: "Automatic Slicer",
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.',
-    image: "/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.webp"
+    image: "/assets/plants/beverages/aloe-vera-gallery/3_automatic_slicing.webp"
   },
   {
     name: "Gel Filleting Machine",
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.',
-    image: "/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.webp"
+    image: "/assets/plants/beverages/aloe-vera-gallery/4_gel_filleting.webp"
   },
   {
     name: "Juice Extractor",
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.',
-    image: "/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.webp"
+    image: "/assets/plants/beverages/aloe-vera-gallery/5_juice_extraction.webp"
   },
   {
     name: "Pasteurizer & Filler",
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.',
-    image: "/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.webp"
+    image: "/assets/plants/beverages/aloe-vera-gallery/6_incline_conveyor.webp"
   }
 ]
 /* ─── FAQs ─── */
@@ -73,12 +73,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/1_leaf_washing.webp', caption: 'Leaf Washing' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/2_manual_sorting.webp', caption: 'Manual Sorting' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/3_automatic_slicing.webp', caption: 'Automatic Slicing' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/4_gel_filleting.webp', caption: 'Gel Filleting' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/5_juice_extraction.webp', caption: 'Juice Extraction' },
-  { src: '/turnkey-brochures/images/aloe-vera-gallery/6_incline_conveyor.webp', caption: 'Incline Conveyor' }
+  { src: '/assets/plants/beverages/aloe-vera-gallery/1_leaf_washing.webp', caption: 'Leaf Washing' },
+  { src: '/assets/plants/beverages/aloe-vera-gallery/2_manual_sorting.webp', caption: 'Manual Sorting' },
+  { src: '/assets/plants/beverages/aloe-vera-gallery/3_automatic_slicing.webp', caption: 'Automatic Slicing' },
+  { src: '/assets/plants/beverages/aloe-vera-gallery/4_gel_filleting.webp', caption: 'Gel Filleting' },
+  { src: '/assets/plants/beverages/aloe-vera-gallery/5_juice_extraction.webp', caption: 'Juice Extraction' },
+  { src: '/assets/plants/beverages/aloe-vera-gallery/6_incline_conveyor.webp', caption: 'Incline Conveyor' }
 ];
 
 export default function AloeVeraJuiceProcessingPlantDetailPage() {
@@ -127,7 +127,7 @@ export default function AloeVeraJuiceProcessingPlantDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/hero_aloe_vera.webp')`, backgroundColor: '#333' }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/food/hero_aloe_vera.webp')`, backgroundColor: '#333' }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

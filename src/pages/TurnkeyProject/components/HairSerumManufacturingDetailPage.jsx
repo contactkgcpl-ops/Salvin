@@ -19,32 +19,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Raw Material Dispensing System',
-    image: '/turnkey-brochures/images/hair-serum-gallery/1_raw_material_tank.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/1_raw_material_tank.jpg',
     desc: 'Precision raw material dispensing tank system with automated controls for accurately measuring and transferring active serum ingredients.'
   },
   {
     name: 'Serum Mixing & Blending Tank',
-    image: '/turnkey-brochures/images/hair-serum-gallery/2_serum_mixing_tank.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/2_serum_mixing_tank.jpg',
     desc: 'Stainless steel serum mixing tank with agitator and PLC control panel for consistent blending of all serum formulation ingredients.'
   },
   {
     name: 'Inline High Shear Homogenizer',
-    image: '/turnkey-brochures/images/hair-serum-gallery/3_inline_homogenizer.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/3_inline_homogenizer.jpg',
     desc: 'Industrial inline homogenizer that processes the serum blend to achieve a perfectly smooth, transparent, and particle-free final product.'
   },
   {
     name: 'Serum Holding Tank',
-    image: '/turnkey-brochures/images/hair-serum-gallery/4_holding_tank.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/4_holding_tank.jpg',
     desc: 'Large-capacity polished stainless steel holding tank that stores the finished serum batch under hygienic conditions before filling.'
   },
   {
     name: 'Automatic Bottle Filling & Capping Machine',
-    image: '/turnkey-brochures/images/hair-serum-gallery/5_bottle_filling_capping.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/5_bottle_filling_capping.jpg',
     desc: 'High-speed automatic serum bottle filling and capping machine that accurately fills dropper bottles and seals them at production speed.'
   },
   {
     name: 'Labeling & Carton Packing Line',
-    image: '/turnkey-brochures/images/hair-serum-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/6_labeling_packing.jpg',
     desc: 'Automated high-speed labeling, carton packing, and conveyor dispatch line for efficiently preparing the finished product for shipping.'
   }
 ]
@@ -71,12 +71,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/hair-serum-gallery/1_raw_material_tank.jpg', caption: 'Raw Material Dispensing System' },
-  { src: '/turnkey-brochures/images/hair-serum-gallery/2_serum_mixing_tank.jpg', caption: 'Serum Mixing & Blending Tank' },
-  { src: '/turnkey-brochures/images/hair-serum-gallery/3_inline_homogenizer.jpg', caption: 'Inline High Shear Homogenizer' },
-  { src: '/turnkey-brochures/images/hair-serum-gallery/4_holding_tank.jpg', caption: 'Serum Holding Tank' },
-  { src: '/turnkey-brochures/images/hair-serum-gallery/5_bottle_filling_capping.jpg', caption: 'Automatic Bottle Filling & Capping Machine' },
-  { src: '/turnkey-brochures/images/hair-serum-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Line' }
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/1_raw_material_tank.jpg', caption: 'Raw Material Dispensing System' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/2_serum_mixing_tank.jpg', caption: 'Serum Mixing & Blending Tank' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/3_inline_homogenizer.jpg', caption: 'Inline High Shear Homogenizer' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/4_holding_tank.jpg', caption: 'Serum Holding Tank' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/5_bottle_filling_capping.jpg', caption: 'Automatic Bottle Filling & Capping Machine' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Line' }
 ]
 
 export default function HairSerumManufacturingDetailPage() {
@@ -128,7 +128,7 @@ export default function HairSerumManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="hsm-hero">
         <div className="hsm-hero__overlay" />
-        <div className="hsm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/hair_serum_hero.png')` }} />
+        <div className="hsm-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/hair_serum_hero.png')` }} />
         <div className="hsm-hero__content">
           <span className="hsm-hero__badge">
             <span className="hsm-hero__badge-dot" />
@@ -225,7 +225,7 @@ export default function HairSerumManufacturingDetailPage() {
               </div>
             </div>
             <div className="hsm-overview__image hsm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/turnkey-brochures/images/hair-serum-gallery/2_serum_mixing_tank.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/hair-serum-gallery/2_serum_mixing_tank.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

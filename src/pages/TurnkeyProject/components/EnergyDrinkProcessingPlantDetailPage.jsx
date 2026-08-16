@@ -20,32 +20,32 @@ const MACHINERY_LIST = [
   {
     "name": "Water Treatment & Ingredient Prep",
     "desc": "RO system and tanks for preparing sugar, caffeine, and vitamins.",
-    "image": "/turnkey-brochures/images/energy-drink-gallery/1.webp"
+    "image": "/assets/plants/beverages/energy-drink-gallery/1.webp"
   },
   {
     "name": "Mixing & Batch Preparation",
     "desc": "Blends ingredients accurately for consistent energy drink batches.",
-    "image": "/turnkey-brochures/images/energy-drink-gallery/2.webp"
+    "image": "/assets/plants/beverages/energy-drink-gallery/2.webp"
   },
   {
     "name": "Homogenization & Carbonation Unit",
     "desc": "Ensures uniform texture, removes air, and injects CO2.",
-    "image": "/turnkey-brochures/images/energy-drink-gallery/3.webp"
+    "image": "/assets/plants/beverages/energy-drink-gallery/3.webp"
   },
   {
     "name": "Auto Filling & Seaming Machine",
     "desc": "High-speed filling and seaming for cans or bottles.",
-    "image": "/turnkey-brochures/images/energy-drink-gallery/4.webp"
+    "image": "/assets/plants/beverages/energy-drink-gallery/4.webp"
   },
   {
     "name": "Sleeve Labeling & Shrink Tunnel",
     "desc": "Automatically applies wrap-around labels or shrink sleeves.",
-    "image": "/turnkey-brochures/images/energy-drink-gallery/5.webp"
+    "image": "/assets/plants/beverages/energy-drink-gallery/5.webp"
   },
   {
     "name": "Carton Packing & Robotic Palletizer",
     "desc": "Automated packing into cartons and robotic palletizing.",
-    "image": "/turnkey-brochures/images/energy-drink-gallery/6.webp"
+    "image": "/assets/plants/beverages/energy-drink-gallery/6.webp"
   }
 ]
 /* â”€â”€â”€ FAQs â”€â”€â”€ */
@@ -75,27 +75,27 @@ const FAQS = [
 /* â”€â”€â”€ Gallery Images â”€â”€â”€ */
 const GALLERY_IMAGES = [
   {
-    "src": "/turnkey-brochures/images/energy-drink-gallery/1.webp",
+    "src": "/assets/plants/beverages/energy-drink-gallery/1.webp",
     "caption": "Water Treatment & Ingredient Preparation System"
   },
   {
-    "src": "/turnkey-brochures/images/energy-drink-gallery/2.webp",
+    "src": "/assets/plants/beverages/energy-drink-gallery/2.webp",
     "caption": "Energy Drink Mixing & Batch Preparation Tank"
   },
   {
-    "src": "/turnkey-brochures/images/energy-drink-gallery/3.webp",
+    "src": "/assets/plants/beverages/energy-drink-gallery/3.webp",
     "caption": "Homogenization, Deaeration & Carbonation Unit"
   },
   {
-    "src": "/turnkey-brochures/images/energy-drink-gallery/4.webp",
+    "src": "/assets/plants/beverages/energy-drink-gallery/4.webp",
     "caption": "Automatic Filling & Seaming Machine"
   },
   {
-    "src": "/turnkey-brochures/images/energy-drink-gallery/5.webp",
+    "src": "/assets/plants/beverages/energy-drink-gallery/5.webp",
     "caption": "Sleeve Labeling Machine & Shrink Tunnel"
   },
   {
-    "src": "/turnkey-brochures/images/energy-drink-gallery/6.webp",
+    "src": "/assets/plants/beverages/energy-drink-gallery/6.webp",
     "caption": "Carton Packing Machine & Robotic Palletizer"
   }
 ]
@@ -144,7 +144,7 @@ export default function EnergyDrinkProcessingPlantDetailPage() {
       {/* â•â•â• HERO BANNER â•â•â• */}
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/beverage-heroes/hero_energy_drink.webp')` }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: `url('/assets/plants/beverages/beverage-heroes/hero_energy_drink.webp')` }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge">
             <span className="rcp-hero__badge-dot" />

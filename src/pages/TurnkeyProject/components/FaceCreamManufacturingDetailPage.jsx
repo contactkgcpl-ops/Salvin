@@ -19,32 +19,32 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Ingredient Weighing & Dosing System',
-    image: '/turnkey-brochures/images/face-cream-gallery/1_ingredient_dosing.jpg',
+    image: '/assets/plants/cosmetics/face-cream-gallery/1_ingredient_dosing.jpg',
     desc: 'Multi-tank automatic dosing system with precision digital weighing for accurate formulation of all face cream ingredients.'
   },
   {
     name: 'Vacuum Emulsifying Mixer',
-    image: '/turnkey-brochures/images/face-cream-gallery/2_vacuum_mixer.jpg',
+    image: '/assets/plants/cosmetics/face-cream-gallery/2_vacuum_mixer.jpg',
     desc: 'Industrial-grade vacuum emulsifying mixer that combines oil and water phases under vacuum to create a smooth, stable face cream emulsion.'
   },
   {
     name: 'High Shear Homogenizer',
-    image: '/turnkey-brochures/images/face-cream-gallery/3_high_shear.jpg',
+    image: '/assets/plants/cosmetics/face-cream-gallery/3_high_shear.jpg',
     desc: 'Powerful high shear homogenizer with cream processing tank that refines the emulsion to a perfectly uniform and smooth texture.'
   },
   {
     name: 'Cream Holding Tank',
-    image: '/turnkey-brochures/images/face-cream-gallery/4_holding_tank.jpg',
+    image: '/assets/plants/cosmetics/face-cream-gallery/4_holding_tank.jpg',
     desc: 'Large-capacity hygienic SS holding tank that stores the finished face cream batch safely at controlled temperature before filling.'
   },
   {
     name: 'Automatic Cream Filling & Sealing Machine',
-    image: '/turnkey-brochures/images/face-cream-gallery/5_filling_sealing.jpg',
+    image: '/assets/plants/cosmetics/face-cream-gallery/5_filling_sealing.jpg',
     desc: 'High-speed automatic cream filling and sealing machine that precisely fills face cream jars and seals them at production-line speed.'
   },
   {
     name: 'Labeling & Carton Packing Line',
-    image: '/turnkey-brochures/images/face-cream-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/face-cream-gallery/6_labeling_packing.jpg',
     desc: 'Fully automated labeling machine, carton packing station, and case sealer that prepares the finished product for dispatch.'
   }
 ]
@@ -71,12 +71,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/turnkey-brochures/images/face-cream-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Weighing & Dosing System' },
-  { src: '/turnkey-brochures/images/face-cream-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
-  { src: '/turnkey-brochures/images/face-cream-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
-  { src: '/turnkey-brochures/images/face-cream-gallery/4_holding_tank.jpg', caption: 'Cream Holding Tank' },
-  { src: '/turnkey-brochures/images/face-cream-gallery/5_filling_sealing.jpg', caption: 'Automatic Cream Filling & Sealing Machine' },
-  { src: '/turnkey-brochures/images/face-cream-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Line' }
+  { src: '/assets/plants/cosmetics/face-cream-gallery/1_ingredient_dosing.jpg', caption: 'Ingredient Weighing & Dosing System' },
+  { src: '/assets/plants/cosmetics/face-cream-gallery/2_vacuum_mixer.jpg', caption: 'Vacuum Emulsifying Mixer' },
+  { src: '/assets/plants/cosmetics/face-cream-gallery/3_high_shear.jpg', caption: 'High Shear Homogenizer' },
+  { src: '/assets/plants/cosmetics/face-cream-gallery/4_holding_tank.jpg', caption: 'Cream Holding Tank' },
+  { src: '/assets/plants/cosmetics/face-cream-gallery/5_filling_sealing.jpg', caption: 'Automatic Cream Filling & Sealing Machine' },
+  { src: '/assets/plants/cosmetics/face-cream-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Line' }
 ]
 
 export default function FaceCreamManufacturingDetailPage() {
@@ -128,7 +128,7 @@ export default function FaceCreamManufacturingDetailPage() {
       {/* ═══ HERO BANNER ═══ */}
       <section className="fcm-hero">
         <div className="fcm-hero__overlay" />
-        <div className="fcm-hero__bg" style={{ backgroundImage: `url('/turnkey-brochures/images/cosmetic/face_cream_hero.png')` }} />
+        <div className="fcm-hero__bg" style={{ backgroundImage: `url('/assets/plants/cosmetics/cosmetic/face_cream_hero.png')` }} />
         <div className="fcm-hero__content">
           <span className="fcm-hero__badge">
             <span className="fcm-hero__badge-dot" />
@@ -221,7 +221,7 @@ export default function FaceCreamManufacturingDetailPage() {
               </div>
             </div>
             <div className="fcm-overview__image fcm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/turnkey-brochures/images/face-cream-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/face-cream-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
             </div>
           </div>
         </div>

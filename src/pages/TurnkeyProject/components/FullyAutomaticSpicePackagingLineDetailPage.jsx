@@ -31,12 +31,12 @@ const PROCESS_STEPS = [
 /* ─── Machinery Used ─── */
 const MACHINERY_LIST = [
 
-  { name: "Bulk Storage & Feeding", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/turnkey-brochures/images/spice-packaging-gallery/silo_feeder.webp" },
-  { name: "Auger Filling Machine", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/turnkey-brochures/images/spice-packaging-gallery/auger_filler.webp" },
-  { name: "VFFS Pouch Packing", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/turnkey-brochures/images/spice-packaging-gallery/vffs_pouch.webp" },
-  { name: "Check Weigher & Metal Detector", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/turnkey-brochures/images/spice-packaging-gallery/check_weigher.webp" },
-  { name: "Carton Sealing Machine", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/turnkey-brochures/images/spice-packaging-gallery/carton_sealing.webp" },
-  { name: "Robotic Palletizing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/turnkey-brochures/images/spice-packaging-gallery/robotic_palletizer.webp" }
+  { name: "Bulk Storage & Feeding", desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.', image: "/assets/plants/spices/spice-packaging-gallery/silo_feeder.webp" },
+  { name: "Auger Filling Machine", desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.', image: "/assets/plants/spices/spice-packaging-gallery/auger_filler.webp" },
+  { name: "VFFS Pouch Packing", desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.', image: "/assets/plants/spices/spice-packaging-gallery/vffs_pouch.webp" },
+  { name: "Check Weigher & Metal Detector", desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.', image: "/assets/plants/spices/spice-packaging-gallery/check_weigher.webp" },
+  { name: "Carton Sealing Machine", desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.', image: "/assets/plants/spices/spice-packaging-gallery/carton_sealing.webp" },
+  { name: "Robotic Palletizing", desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.', image: "/assets/plants/spices/spice-packaging-gallery/robotic_palletizer.webp" }
 ]
 
 
@@ -66,12 +66,12 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: "/turnkey-brochures/images/spice-packaging-gallery/silo_feeder.webp", caption: "Bulk Storage Silo & Screw Feeder System" },
-  { src: "/turnkey-brochures/images/spice-packaging-gallery/auger_filler.webp", caption: "Automatic Auger Filling Machine for Jars" },
-  { src: "/turnkey-brochures/images/spice-packaging-gallery/vffs_pouch.webp", caption: "High-Speed VFFS Pouch Packing Machine" },
-  { src: "/turnkey-brochures/images/spice-packaging-gallery/check_weigher.webp", caption: "Integrated Check Weigher & Metal Detector" },
-  { src: "/turnkey-brochures/images/spice-packaging-gallery/carton_sealing.webp", caption: "Automatic Carton Packing & Sealing Machine" },
-  { src: "/turnkey-brochures/images/spice-packaging-gallery/robotic_palletizer.webp", caption: "Robotic Palletizing System" }
+  { src: "/assets/plants/spices/spice-packaging-gallery/silo_feeder.webp", caption: "Bulk Storage Silo & Screw Feeder System" },
+  { src: "/assets/plants/spices/spice-packaging-gallery/auger_filler.webp", caption: "Automatic Auger Filling Machine for Jars" },
+  { src: "/assets/plants/spices/spice-packaging-gallery/vffs_pouch.webp", caption: "High-Speed VFFS Pouch Packing Machine" },
+  { src: "/assets/plants/spices/spice-packaging-gallery/check_weigher.webp", caption: "Integrated Check Weigher & Metal Detector" },
+  { src: "/assets/plants/spices/spice-packaging-gallery/carton_sealing.webp", caption: "Automatic Carton Packing & Sealing Machine" },
+  { src: "/assets/plants/spices/spice-packaging-gallery/robotic_palletizer.webp", caption: "Robotic Palletizing System" }
 ];
 
 export default function FullyAutomaticSpicePackagingLineDetailPage() {
@@ -116,7 +116,7 @@ export default function FullyAutomaticSpicePackagingLineDetailPage() {
     <div className="rcp-page">
       <section className="rcp-hero">
         <div className="rcp-hero__overlay" />
-        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/turnkey-brochures/images/hero_garam_masala.webp')" }} />
+        <div className="rcp-hero__bg" style={{ backgroundImage: "url('/assets/plants/food/hero_garam_masala.webp')" }} />
         <div className="rcp-hero__content">
           <span className="rcp-hero__badge"><span className="rcp-hero__badge-dot" />TURNKEY SOLUTION</span>
           <h1 className="rcp-hero__title">Fully Automatic Spice Packaging Line</h1>
@@ -167,7 +167,7 @@ export default function FullyAutomaticSpicePackagingLineDetailPage() {
               </div>
             </div>
             <div className="rcp-overview__image rcp-overview__image--photo">
-              <img src="/turnkey-brochures/images/spice-packaging-gallery/vffs_pouch.webp" alt="Fully Automatic Spice Packaging Line Overview" loading="lazy" />
+              <img src="/assets/plants/spices/spice-packaging-gallery/vffs_pouch.webp" alt="Fully Automatic Spice Packaging Line Overview" loading="lazy" />
             </div>
           </div>
         </div>
