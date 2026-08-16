@@ -7,7 +7,7 @@ const FloatingContact = () => {
       {/* Phone Button */}
       <a
         href="tel:+919898727796"
-        className="group relative flex items-center justify-center w-12 h-14 bg-[#334266] rounded-tr-3xl transition-colors hover:bg-[#253250]"
+        className="group relative flex items-center justify-center w-10 h-10 bg-[#334266] rounded-tr-2xl transition-colors hover:bg-[#253250]"
         aria-label="Call Us"
       >
         <Phone className="w-4 h-4 text-white" />
@@ -23,7 +23,7 @@ const FloatingContact = () => {
         href="https://wa.me/919898727796"
         target="_blank"
         rel="noopener noreferrer"
-        className="group relative flex items-center justify-center w-12 h-14 bg-[#f47c20] rounded-br-3xl transition-colors hover:bg-[#e06b18]"
+        className="group relative flex items-center justify-center w-10 h-10 bg-[#f47c20] rounded-br-2xl transition-colors hover:bg-[#e06b18]"
         aria-label="WhatsApp Us"
       >
         {/* WhatsApp SVG */}

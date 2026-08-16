@@ -16,7 +16,8 @@ const CATEGORIES = [
   { name: 'Health & Nutrition', keywords: ['protein', 'nutrition', 'ors', 'bar'] },
   { name: 'Edible Oils', keywords: ['oil', 'seed', 'cleaning', 'sorting'] },
   { name: 'Pharmaceuticals', keywords: ['pharmaceutical', 'pharma', 'tablet', 'capsule', 'syrup', 'suspension', 'ointment', 'injection', 'eye', 'ear', 'blister'] },
-  { name: 'Cosmetics & Personal Care', keywords: ['cosmetic', 'face wash', 'shampoo', 'hair oil', 'body lotion', 'hand wash', 'liquid soap', 'sanitizer'] },
+  { name: 'Cosmetics', keywords: ['cosmetic', 'face wash', 'shampoo', 'hair oil', 'body lotion', 'face cream', 'moisturizing cream', 'sunscreen', 'hair conditioner', 'hair serum', 'baby lotion', 'baby shampoo', 'body butter', 'facial serum', 'body wash'] },
+  { name: 'Toiletry', keywords: ['toiletry', 'hand wash', 'liquid soap', 'sanitizer', 'hand sanitizer', 'surface cleaner', 'detergent powder', 'mouthwash'] },
   { name: 'Automation & Specialty', keywords: ['automation', 'petroleum', 'glucose'] }
 ]
 
@@ -128,7 +129,7 @@ export default function ProjectsSection() {
             <span className="h-1.5 w-1.5 rounded-full bg-[#f47c20] animate-pulse" aria-hidden />
             Project Portfolio
           </span>
-          <h2 className="mt-6 text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          <h2 className="mt-6 text-3xl font-black tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
             Our Turnkey <span className="text-[#f47c20]">Plants</span>
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-slate-600 text-center">
@@ -152,7 +153,7 @@ export default function ProjectsSection() {
             />
           </div>
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 max-w-4xl">
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3 max-w-5xl">
             {CATEGORIES.map((cat) => (
               <button
                 key={cat.name}
@@ -160,10 +161,11 @@ export default function ProjectsSection() {
                   setActiveCategory(cat.name)
                   setCurrentPage(1)
                 }}
-                className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 ${activeCategory === cat.name
-                    ? 'bg-[#f47c20] text-white shadow-md'
-                    : 'bg-white text-slate-600 border border-slate-200 hover:border-[#f47c20] hover:text-[#f47c20]'
-                  }`}
+                className={`rounded-full px-5 py-2.5 text-sm font-semibold transition-all duration-300 hover:scale-105 ${
+                  activeCategory === cat.name
+                    ? 'bg-gradient-to-r from-[#f47c20] to-[#ff984a] text-white shadow-lg shadow-[#f47c20]/30 border-transparent'
+                    : 'bg-white text-slate-600 border border-slate-200 hover:border-[#f47c20] hover:text-[#f47c20] hover:bg-orange-50/50 hover:shadow-sm'
+                }`}
               >
                 {cat.name}
               </button>

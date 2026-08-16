@@ -180,6 +180,10 @@ import ShampooManufacturingPlantDetailPage from "./pages/TurnkeyProject/componen
 import HairOilManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HairOilManufacturingPlantDetailPage";
 import BodyLotionManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/BodyLotionManufacturingPlantDetailPage";
 import HandWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandWashManufacturingPlantDetailPage";
+import SurfaceCleanerManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/SurfaceCleanerManufacturingPlantDetailPage";
+import DetergentPowderManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/DetergentPowderManufacturingPlantDetailPage";
+import BodyWashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/BodyWashManufacturingPlantDetailPage";
+import MouthwashManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/MouthwashManufacturingPlantDetailPage";
 import LiquidSoapManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/LiquidSoapManufacturingPlantDetailPage";
 import HandSanitizerManufacturingPlantDetailPage from "./pages/TurnkeyProject/components/HandSanitizerManufacturingPlantDetailPage";
 import FaceCreamManufacturingDetailPage from "./pages/TurnkeyProject/components/FaceCreamManufacturingDetailPage";
@@ -2862,6 +2866,10 @@ export default function App() {
           <Route path="/turnkey-project/hair-oil-manufacturing-plant" element={<HairOilManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/body-lotion-manufacturing-plant" element={<BodyLotionManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/hand-wash-manufacturing-plant" element={<HandWashManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/surface-cleaner-manufacturing-plant" element={<SurfaceCleanerManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/detergent-powder-manufacturing-plant" element={<DetergentPowderManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/body-wash-manufacturing-plant" element={<BodyWashManufacturingPlantDetailPage />} />
+          <Route path="/turnkey-project/mouthwash-manufacturing-plant" element={<MouthwashManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/liquid-soap-manufacturing-plant" element={<LiquidSoapManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/hand-sanitizer-manufacturing-plant" element={<HandSanitizerManufacturingPlantDetailPage />} />
           <Route path="/turnkey-project/face-cream-manufacturing-plant" element={<FaceCreamManufacturingDetailPage />} />

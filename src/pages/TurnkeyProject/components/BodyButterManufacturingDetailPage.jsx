@@ -1,6 +1,6 @@
-import WhyChooseSalvin from './WhyChooseSalvin';
 import React, { useState, useEffect } from 'react'
 import { NavLink } from 'react-router-dom'
+import WhyChooseSalvin from './WhyChooseSalvin';
 import './BodyButterManufacturingDetailPage.css'
 
 /* ─── Process Flow Steps ─── */
@@ -19,32 +19,38 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ingredient Dosing & Mixing System',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg',
+    image: '/assets/plants/cosmetics/body-butter-gallery/1_weighing_dosing.png',
+
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Syrup Preparation System',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg',
+    image: '/assets/plants/cosmetics/body-butter-gallery/2_vacuum_mixer.jpg',
+
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Body Butter Mass Mixer',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg',
+    image: '/assets/plants/cosmetics/body-butter-gallery/3_high_shear.png',
+
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Body Butter Forming Machine',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg',
+    image: '/assets/plants/cosmetics/body-butter-gallery/4_storage_tank.png',
+
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Body Butter Cutting Machine',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg',
+    image: '/assets/plants/cosmetics/body-butter-gallery/5_filling_capping.png',
+
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Flow Wrapping & Packaging Machine',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/body-butter-gallery/6_labeling_packing.png',
+
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +80,13 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg', caption: 'Ingredient Dosing & Mixing System' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg', caption: 'Syrup Preparation System' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg', caption: 'Body Butter Mass Mixer' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg', caption: 'Body Butter Forming Machine' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg', caption: 'Body Butter Cutting Machine' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg', caption: 'Flow Wrapping Machine' },
+  { src: '/assets/plants/cosmetics/body-butter-gallery/1_weighing_dosing.png', caption: 'Ingredient Dosing & Mixing System' },
+  { src: '/assets/plants/cosmetics/body-butter-gallery/2_vacuum_mixer.jpg', caption: 'Syrup Preparation System' },
+  { src: '/assets/plants/cosmetics/body-butter-gallery/3_high_shear.png', caption: 'Body Butter Mass Mixer' },
+  { src: '/assets/plants/cosmetics/body-butter-gallery/4_storage_tank.png', caption: 'Body Butter Forming Machine' },
+  { src: '/assets/plants/cosmetics/body-butter-gallery/5_filling_capping.png', caption: 'Body Butter Cutting Machine' },
+  { src: '/assets/plants/cosmetics/body-butter-gallery/6_labeling_packing.png', caption: 'Flow Wrapping Machine' },
+
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -227,7 +234,8 @@ export default function BodyButterManufacturingDetailPage() {
               </div>
             </div>
             <div className="bbm-overview__image bbm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/body-butter-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+
             </div>
           </div>
         </div>

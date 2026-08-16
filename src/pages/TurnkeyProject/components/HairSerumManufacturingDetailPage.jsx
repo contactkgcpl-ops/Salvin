@@ -19,33 +19,35 @@ const PROCESS_STEPS = [
 const MACHINERY_LIST = [
   {
     name: 'Raw Material Dispensing System',
-    image: '/assets/plants/cosmetics/hair-serum-gallery/1_raw_material_tank.jpg',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/1_raw_material_tank_new.jpg',
+
     desc: 'Precision raw material dispensing tank system with automated controls for accurately measuring and transferring active serum ingredients.'
   },
   {
     name: 'Serum Mixing & Blending Tank',
     image: '/assets/plants/cosmetics/hair-serum-gallery/2_serum_mixing_tank.jpg',
-    desc: 'Stainless steel serum mixing tank with agitator and PLC control panel for consistent blending of all serum formulation ingredients.'
+    desc: 'Advanced jacketed mixing vessel with slow and high-speed agitation for perfect blending of serum formulations without aeration.'
   },
   {
     name: 'Inline High Shear Homogenizer',
     image: '/assets/plants/cosmetics/hair-serum-gallery/3_inline_homogenizer.jpg',
-    desc: 'Industrial inline homogenizer that processes the serum blend to achieve a perfectly smooth, transparent, and particle-free final product.'
+    desc: 'High-performance homogenizer ensuring ultra-fine droplet size and perfect stability of hair serum emulsions.'
   },
   {
     name: 'Serum Holding Tank',
     image: '/assets/plants/cosmetics/hair-serum-gallery/4_holding_tank.jpg',
-    desc: 'Large-capacity polished stainless steel holding tank that stores the finished serum batch under hygienic conditions before filling.'
+    desc: 'Stainless steel 316L holding tank to store the finished serum safely before it is pumped to the filling line.'
   },
   {
-    name: 'Automatic Bottle Filling & Capping Machine',
-    image: '/assets/plants/cosmetics/hair-serum-gallery/5_bottle_filling_capping.jpg',
-    desc: 'High-speed automatic serum bottle filling and capping machine that accurately fills dropper bottles and seals them at production speed.'
+    name: 'Precision Liquid Filling Machine',
+    image: '/assets/plants/cosmetics/hair-serum-gallery/5_filling_capping.jpg',
+    desc: 'Highly accurate automatic liquid filling machine specifically designed to handle viscous hair serums and fill into small bottles.'
   },
   {
-    name: 'Labeling & Carton Packing Line',
+    name: 'Automatic Capping & Labeling',
     image: '/assets/plants/cosmetics/hair-serum-gallery/6_labeling_packing.jpg',
-    desc: 'Automated high-speed labeling, carton packing, and conveyor dispatch line for efficiently preparing the finished product for shipping.'
+    desc: 'Integrated system for automatic placement of dropper caps, secure tightening, and precise application of wrap-around labels.'
+
   }
 ]
 
@@ -71,12 +73,13 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/assets/plants/cosmetics/hair-serum-gallery/1_raw_material_tank.jpg', caption: 'Raw Material Dispensing System' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/1_raw_material_tank_new.jpg', caption: 'Raw Material Dispensing System' },
   { src: '/assets/plants/cosmetics/hair-serum-gallery/2_serum_mixing_tank.jpg', caption: 'Serum Mixing & Blending Tank' },
   { src: '/assets/plants/cosmetics/hair-serum-gallery/3_inline_homogenizer.jpg', caption: 'Inline High Shear Homogenizer' },
   { src: '/assets/plants/cosmetics/hair-serum-gallery/4_holding_tank.jpg', caption: 'Serum Holding Tank' },
-  { src: '/assets/plants/cosmetics/hair-serum-gallery/5_bottle_filling_capping.jpg', caption: 'Automatic Bottle Filling & Capping Machine' },
-  { src: '/assets/plants/cosmetics/hair-serum-gallery/6_labeling_packing.jpg', caption: 'Labeling & Carton Packing Line' }
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/5_filling_capping.jpg', caption: 'Precision Liquid Filling Machine' },
+  { src: '/assets/plants/cosmetics/hair-serum-gallery/6_labeling_packing.jpg', caption: 'Automatic Capping & Labeling' }
+
 ]
 
 export default function HairSerumManufacturingDetailPage() {

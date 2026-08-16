@@ -19,32 +19,38 @@ const MACHINERY_LIST = [
 
   {
     name: 'Ingredient Dosing & Mixing System',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg',
+    image: '/assets/plants/cosmetics/baby-lotion-gallery/1_weighing_dosing.png',
+
     desc: 'Salvin Industries builds this automatic system. It handles the initial processing stage with high efficiency before moving to the next machine.'
   },
   {
     name: 'Syrup Preparation System',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg',
+    image: '/assets/plants/cosmetics/baby-lotion-gallery/2_vacuum_mixer.png',
+
     desc: 'Our heavy-duty machine is designed for maximum yield and perfect product quality automatically.'
   },
   {
     name: 'Baby Lotion Mass Mixer',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg',
+    image: '/assets/plants/cosmetics/baby-lotion-gallery/3_high_shear.png',
+
     desc: 'This machine processes your product smoothly. It makes sure the final output is completely consistent without any human touch.'
   },
   {
     name: 'Baby Lotion Forming Machine',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg',
+    image: '/assets/plants/cosmetics/baby-lotion-gallery/4_storage_tank.png',
+
     desc: 'We manufacture this machine to handle the core processing. It works continuously while keeping the natural taste and quality safe.'
   },
   {
     name: 'Baby Lotion Cutting Machine',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg',
+    image: '/assets/plants/cosmetics/baby-lotion-gallery/5_filling_capping.png',
+
     desc: 'This is a very important machine in the line. It ensures your product is processed hygienically for a long shelf life.'
   },
   {
     name: 'Flow Wrapping & Packaging Machine',
-    image: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg',
+    image: '/assets/plants/cosmetics/baby-lotion-gallery/6_labeling_packing.jpg',
+
     desc: 'Salvin Industries provides fully automatic packing machines. They fill your ready product into pouches, bottles, or boxes without any human touch.'
   }
 ]
@@ -74,12 +80,13 @@ const FAQS = [
 
 /* ─── Gallery Images ─── */
 const GALLERY_IMAGES = [
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/1_weighing_dosing.jpg', caption: 'Ingredient Dosing & Mixing System' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg', caption: 'Syrup Preparation System' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/3_high_shear.jpg', caption: 'Baby Lotion Mass Mixer' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/4_storage_tank.jpg', caption: 'Baby Lotion Forming Machine' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/5_filling_capping.jpg', caption: 'Baby Lotion Cutting Machine' },
-  { src: '/assets/plants/cosmetics/hair-conditioner-gallery/6_labeling_packing.jpg', caption: 'Flow Wrapping Machine' },
+  { src: '/assets/plants/cosmetics/baby-lotion-gallery/1_weighing_dosing.png', caption: 'Ingredient Dosing & Mixing System' },
+  { src: '/assets/plants/cosmetics/baby-lotion-gallery/2_vacuum_mixer.png', caption: 'Syrup Preparation System' },
+  { src: '/assets/plants/cosmetics/baby-lotion-gallery/3_high_shear.png', caption: 'Baby Lotion Mass Mixer' },
+  { src: '/assets/plants/cosmetics/baby-lotion-gallery/4_storage_tank.png', caption: 'Baby Lotion Forming Machine' },
+  { src: '/assets/plants/cosmetics/baby-lotion-gallery/5_filling_capping.png', caption: 'Baby Lotion Cutting Machine' },
+  { src: '/assets/plants/cosmetics/baby-lotion-gallery/6_labeling_packing.jpg', caption: 'Flow Wrapping Machine' },
+
 ]
 
 /* ════════════════════════════════════════════════════════════════════
@@ -227,7 +234,8 @@ export default function BabyLotionManufacturingDetailPage() {
               </div>
             </div>
             <div className="blm-overview__image blm-overview__image--photo" style={{ backgroundColor: '#fff', padding: '10px', display: 'flex', justifyContent: 'center' }}>
-              <img src={'/assets/plants/cosmetics/hair-conditioner-gallery/2_vacuum_mixer.jpg'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+              <img src={'/assets/plants/cosmetics/baby-lotion-gallery/2_vacuum_mixer.png'} alt="Plant Overview" loading="lazy" style={{ objectFit: 'contain', width: '100%', height: '100%', maxHeight: '600px', borderRadius: '8px' }} />
+
             </div>
           </div>
         </div>
