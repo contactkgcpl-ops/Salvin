@@ -26,7 +26,7 @@
   --mcm-shadow: 0 2px 16px rgba(0, 0, 0, .05);
   --mcm-shadow-lg: 0 8px 32px rgba(0, 0, 0, .08);
   --mcm-transition: 0.35s cubic-bezier(.4, 0, .2, 1);
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--mcm-slate-900);
   background: #fff;
   min-width: 0;

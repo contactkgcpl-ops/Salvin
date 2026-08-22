@@ -14,7 +14,6 @@ const STATIC_PATHS = [
   "/about",
   "/contact",
   "/food-consultant",
-  "/consultant",
   "/turnkey",
   "/turnkey-project",
   "/blogs",
@@ -78,10 +77,6 @@ const META_MAP = {
   "/food-consultant": {
     title: "Food Processing Plant & Project Consultant | Salvin Industries",
     desc: "Top food processing plant consultants in India by Salvin Industries. Complete turnkey solutions, factory layouts, DPR reports, and FSSAI guidance.",
-  },
-  "/consultant": {
-    title: "Food & Industrial Project Consultancy | Salvin Industries",
-    desc: "Get expert industrial planning, plant layout design, feasibility analysis, and technical guidance for greenfield & brownfield food processing setups.",
   },
   "/turnkey": {
     title: "Turnkey Plant Architectural & Commissioning | Salvin Industries",

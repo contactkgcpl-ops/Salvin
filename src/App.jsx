@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from "react-router-dom";
-import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt } from "react-icons/fa";
+import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt, FaDraftingCompass, FaPencilRuler, FaHandshake, FaCogs, FaTruck, FaChartLine, FaTools } from "react-icons/fa";
 import "./App.css";
 import Cropper from "react-easy-crop";
 const machineryLayoutImage = "/assets/core/icons/machinery-layout.webp";
@@ -9,6 +9,7 @@ import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingContact from "./components/FloatingContact";
+import ExpertConsultationModal from "./components/ExpertConsultationModal";
 // import IntroOverlay from "./components/IntroOverlay";
 const searchIcon = "/assets/core/icons/search.webp";
 
@@ -83,6 +84,15 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 };
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
+import CoreServiceDetailPage from "./pages/CoreServiceDetailPage";
+import IndustrialConsultancyPage from "./pages/services/IndustrialConsultancyPage";
+import PlantDesignEngineeringPage from "./pages/services/PlantDesignEngineeringPage";
+import TurnkeyExecutionPage from "./pages/services/TurnkeyExecutionPage";
+import MachineryEquipmentPage from "./pages/services/MachineryEquipmentPage";
+import ProcessingPackagingPage from "./pages/services/ProcessingPackagingPage";
+import SupplyChainProcurementPage from "./pages/services/SupplyChainProcurementPage";
+import ProductionOptimizationPage from "./pages/services/ProductionOptimizationPage";
+import ContractManufacturingPage from "./pages/services/ContractManufacturingPage";
 import RedChilliDetailPage from "./pages/TurnkeyProject/components/RedChilliDetailPage";
 import PizzaSauceProcessingDetailPage from "./pages/TurnkeyProject/components/PizzaSauceProcessingDetailPage";
 import TomatoKetchupManufacturingDetailPage from "./pages/TurnkeyProject/components/TomatoKetchupManufacturingDetailPage";
@@ -198,19 +208,18 @@ import FacialSerumManufacturingDetailPage from "./pages/TurnkeyProject/component
 
 
 import TurnkeyDetailPage from "./pages/TurnkeyProject/components/TurnkeyDetailPage";
-import ConsultantPage from "./pages/ConsultantPage";
 import ServicesPage from "./pages/ServicesPage";
-import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
+// import SalvinChatbot from "./chatbot/SalvinChatbot.jsx";
 const Decade = "/assets/core/icons/decade_experties.webp";
 const global = "/assets/core/icons/globalsupport.webp";
 const innovation = "/assets/core/icons/innovation.webp";
 const quality = "/assets/core/icons/quality.webp";
-const industryTurnkey = "/assets/categories/turnkey-projects.webp";
+const _industryTurnkey = "/assets/categories/turnkey-projects.webp";
 const projproteinbar = "/assets/categories/proteinbar.webp";
-const industryAutomation = "/assets/categories/automation-robotics.webp";
-const industryProcessing = "/assets/categories/processing-packaging.webp";
-const industryConsultancy = "/assets/core/icons/food_consultant.webp";
-const industryMaintenance = "/assets/categories/machine-maintenance.webp";
+const _industryAutomation = "/assets/categories/automation-robotics.webp";
+const _industryProcessing = "/assets/categories/processing-packaging.webp";
+const _industryConsultancy = "/assets/core/icons/food_consultant.webp";
+const _industryMaintenance = "/assets/categories/machine-maintenance.webp";
 const projHoney = "/assets/company/projects/honey processing plant.webp";
 const projSpices = "/assets/company/projects/spices_processing.webp";
 const projApi = "/assets/company/projects/APi_Plant.webp";
@@ -219,11 +228,11 @@ const projRice = "/assets/company/projects/puffed_rice.webp";
 const spicesHeroImage = "/assets/core/heroes/spices_hero.webp";
 const snacksHeroImage = "/assets/core/heroes/snacks_hero.webp";
 const beveragesHeroImage = "/assets/core/heroes/beverages_hero.webp";
-const consultantHeroImage = "/assets/core/heroes/consultant_hero.webp";
+const _consultantHeroImage = "/assets/core/heroes/consultant_hero.webp";
 const salvinLogo = "/assets/core/logo/salvin_logo.webp";
 
 
-const serviceCards = [
+const _serviceCards = [
   {
     title: "Turnkey Projects",
     text: "Complete end-to-end plant architecture, from conceptual blueprinting to installation and final commissioning.",
@@ -268,7 +277,7 @@ const serviceCards = [
   }
 ];
 
-const testimonialCards = [
+const _testimonialCards = [
   {
     text: "\"Salvin's turnkey solution for our packaging line reduced downtime by 40% within the first quarter. Their engineering precision is truly unmatched in the industry.\"",
     name: "Rohan Mehta",
@@ -1610,6 +1619,14 @@ function ImageCropModal({ src, crop, zoom, setCrop, setZoom, onCropComplete, onC
 }
 
 function HomePage() {
+  const projectScrollRef = React.useRef(null);
+
+  const scrollProjects = (direction) => {
+    if (projectScrollRef.current) {
+      const scrollAmount = direction === "left" ? -380 : 380;
+      projectScrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
   const [openFaq, setOpenFaq] = useState(0);
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
@@ -1627,13 +1644,17 @@ function HomePage() {
     },
     {
       key: "snacks",
+      eyebrow: "Salvin Industries",
       title: "Snacks Processing Line",
+      text: "Complete turnkey processing lines for snack foods, potato chips, extruded snacks, fryers, and automated flavor coating systems.",
+      cta: "Explore Snacks Line",
+      to: "/turnkey-project",
       image: snacksHeroImage,
-      showText: false
+      showText: true
     },
     {
       key: "beverages",
-      eyebrow: "Beverage Projects",
+      eyebrow: "Salvin Industries",
       title: "Beverages Projects",
       text: "Complete automated bottling, filling, and packaging lines for fruit juices, soft drinks, energy beverages & liquid plants.",
       cta: "Explore Beverage Projects",
@@ -1643,9 +1664,13 @@ function HomePage() {
     },
     {
       key: "consultant",
-      title: "Supply Chain & Product Placement Consultant",
-      image: consultantHeroImage,
-      showText: false
+      eyebrow: "Salvin Consultancy",
+      title: "Supply Chain & Industrial Consultancy",
+      text: "End-to-end industrial consultancy, supply chain optimization, plant layout design, and strategic product placement for food & processing plants.",
+      cta: "Explore Consultancy",
+      to: "/industrial-consultancy-services",
+      image: spicesHeroImage,
+      showText: true
     }
   ];
 
@@ -1669,59 +1694,77 @@ function HomePage() {
 
   const activeHero = heroSlides[activeHeroIndex];
   const nextHeroIndex = (activeHeroIndex + 1) % heroSlides.length;
+
   const latestProjectsNews = [
     {
       title: "Honey Processing Plant in Rajkot",
+      location: "Rajkot, Gujarat",
+      category: "Food & Beverage",
       description: "Fully automated honey filtration, moisture reduction, and bottling line for premium organic honey production.",
       image: projHoney,
+      link: "/turnkey-project",
     },
     {
-      title: "Spices processing and packaging in Rajkot",
+      title: "Spices Processing & Packaging Line",
+      location: "Rajkot, Gujarat",
+      category: "Agro & Spices",
       description: "Comprehensive cleaning, grinding, and multi-track pouch packaging system for diverse spice blends.",
       image: projSpices,
+      link: "/turnkey-project",
     },
     {
-      title: "API manufacturing plant in Vadodara",
-      description: "C-GMP compliant API reactor systems and solvent recovery modules for a leading pharmaceutical house.",
+      title: "API Manufacturing Plant",
+      location: "Vadodara, Gujarat",
+      category: "Pharmaceuticals",
+      description: "cGMP compliant API reactor systems and solvent recovery modules for a leading pharmaceutical house.",
       image: projApi,
+      link: "/turnkey-project",
     },
     {
-      title: "1000 ton per hour red chilli processing plant in Mexico",
+      title: "1000 TPH Red Chilli Processing Plant",
+      location: "Mexico",
+      category: "International Turnkey",
       description: "Massive-scale industrial cleaning, deseeded, and grinding plant with integrated climate-controlled storage.",
       image: projChilli,
+      link: "/turnkey-project/red-chilli-processing-plant",
     },
     {
-      title: "Puffed rice processing plant in Dakor",
+      title: "Puffed Rice Processing Plant",
+      location: "Dakor, Gujarat",
+      category: "Food Processing",
       description: "Energy-efficient continuous puffing and roasting line with automatic seasoning and moisture control.",
       image: projRice,
+      link: "/turnkey-project",
     },
     {
       title: "Protein Bar Processing Line",
+      location: "Gujarat, India",
+      category: "Nutraceuticals & FMCG",
       description: "Integrated mixing, slab forming, cooling, cutting, and flow-wrap packaging line for high-output protein bar production.",
       image: projproteinbar,
+      link: "/turnkey-project",
     },
   ];
 
+  const [isProjectHovered, setIsProjectHovered] = useState(false);
+
   React.useEffect(() => {
+    if (isProjectHovered) return;
     const projectTimer = window.setInterval(() => {
       setActiveProjectIndex((current) => (current + 1) % latestProjectsNews.length);
-    }, 4200);
+    }, 4000);
     return () => window.clearInterval(projectTimer);
-  }, [latestProjectsNews.length]);
+  }, [isProjectHovered, latestProjectsNews.length]);
 
   const goToProjectSlide = (index) => {
     setActiveProjectIndex((index + latestProjectsNews.length) % latestProjectsNews.length);
   };
 
-  const getProjectSlideClass = (index) => {
-    const previousIndex = (activeProjectIndex - 1 + latestProjectsNews.length) % latestProjectsNews.length;
-    const nextIndex = (activeProjectIndex + 1) % latestProjectsNews.length;
-
-    if (index === activeProjectIndex) return "active";
-    if (index === previousIndex) return "prev";
-    if (index === nextIndex) return "next";
-    return "hidden";
-  };
+  const mainProject = latestProjectsNews[activeProjectIndex] || latestProjectsNews[0];
+  const sideProject1Index = (activeProjectIndex + 1) % latestProjectsNews.length;
+  const sideProject1 = latestProjectsNews[sideProject1Index];
+  const sideProject2Index = (activeProjectIndex + 2) % latestProjectsNews.length;
+  const sideProject2 = latestProjectsNews[sideProject2Index];
 
   const faqItems = [
     {
@@ -1751,32 +1794,134 @@ function HomePage() {
     }
   ];
 
-  const industryDivisions = [
+  const coreServicesData = [
     {
-      title: "Turnkey Projects",
-      text: "Complete end-to-end plant architecture, from conceptual blueprinting to installation and final commissioning.",
-      image: industryTurnkey,
+      id: "01",
+      title: "Industrial Consultancy",
+      image: "/assets/core/services/service_consultancy.jpg",
+      to: "/industrial-consultancy-services",
+      icon: <FaDraftingCompass className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Project Feasibility & Planning",
+        "Product & Process Consultancy",
+        "Plant Concept & Strategy",
+        "Capacity Planning",
+        "Cost & Investment Planning"
+      ]
     },
     {
-      title: "Process Optimization",
-      text: "Optimize food production workflows to improve efficiency, reduce waste, and maintain consistent product quality.We help food industries streamline operations with smart process planning, automation, and performance-focused solutions.",
-      image: industryAutomation,
+      id: "02",
+      title: "Plant Design & Engineering",
+      image: "/assets/core/services/service_plant_design.jpg",
+      to: "/plant-design-engineering-services",
+      icon: <FaPencilRuler className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Plant Layout & Process Flow",
+        "Utility Planning",
+        "Production Line Design",
+        "Material Flow Planning",
+        "Engineering & Documentation"
+      ]
     },
     {
-      title: "Processing & Packaging Machinery",
-      text: "Hygienic, turnkey stainless steel processing lines engineered for dairy, beverage, and solid food manufacturing.",
-      image: industryProcessing,
+      id: "03",
+      title: "Turnkey Project Execution",
+      image: "/assets/core/services/service_turnkey.jpg",
+      to: "/turnkey-project-execution-services",
+      icon: <FaHandshake className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Greenfield & Brownfield Projects",
+        "Civil & Infrastructure Coordination",
+        "Plant Installation",
+        "Project Management",
+        "Commissioning & Handover"
+      ]
     },
     {
-      title: "Consultancy",
-      text: "Expert engineering consultation, project feasibility studies, process design, plant layout planning, and step-by-step guidance for setting up new manufacturing units.",
-      image: industryConsultancy,
+      id: "04",
+      title: "Machinery & Equipment",
+      image: "/assets/core/services/service_machinery.jpg",
+      to: "/machinery-equipment-solutions",
+      icon: <FaTools className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Machinery Selection",
+        "Processing Machinery",
+        "Filling & Packaging Machinery",
+        "Complete Production Lines",
+        "Equipment Integration & Installation"
+      ]
     },
     {
-      title: "After Sales Support",
-      text: "Proactive annual maintenance contracts and 24/7 technical support to ensure zero-downtime production cycles.",
-      image: industryMaintenance,
+      id: "05",
+      title: "Processing & Packaging Solutions",
+      image: "/assets/core/services/service_processing_packaging.jpg",
+      to: "/processing-packaging-solutions",
+      icon: <FaCogs className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Powder Processing",
+        "Liquid Processing",
+        "Granule Processing",
+        "Filling & Packaging",
+        "Automated Production Lines"
+      ]
     },
+    {
+      id: "06",
+      title: "Supply Chain & Procurement",
+      image: "/assets/core/services/service_supply_chain.jpg",
+      to: "/supply-chain-procurement-services",
+      icon: <FaTruck className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Raw Material Sourcing",
+        "Vendor Development",
+        "Equipment Procurement",
+        "Packaging Material Coordination",
+        "Logistics & Material Flow Planning"
+      ]
+    },
+    {
+      id: "07",
+      title: "Production & Process Optimization",
+      image: "/assets/core/services/service_optimization.jpg",
+      to: "/production-process-optimization",
+      icon: <FaChartLine className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Production Line Optimization",
+        "Process Improvement",
+        "Capacity Enhancement",
+        "Automation & Efficiency",
+        "Cost Optimization"
+      ]
+    },
+    {
+      id: "08",
+      title: "Contract Manufacturing & Packaging",
+      image: "/assets/core/services/service_contract_manufacturing.jpg",
+      to: "/contract-manufacturing-packaging",
+      icon: <FaBoxOpen className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Third-Party Manufacturing",
+        "Contract Packaging",
+        "Pouch / Sachet / Jar / Bottle Packaging",
+        "Product Scale-up",
+        "Commercial Production Support"
+      ]
+    }
+  ];
+
+  const testimonialCards = [
+    {
+      name: "Rajesh Sharma",
+      role: "Operations Director, FoodCorp India",
+      image: "/assets/company/advisory/tech_advisory.webp",
+      text: "Salvin Industries delivered an outstanding turnkey spices processing facility for us. Their team managed everything from layout design to final commissioning flawlessly."
+    },
+    {
+      name: "Amit Patel",
+      role: "Managing Director, Apex Agro Foods",
+      image: "/assets/company/advisory/engineering.webp",
+      text: "Exceptional machinery quality and professional engineering consultancy. The automated packaging line increased our daily output by 40%."
+    }
   ];
 
   const whyUsFeatures = [
@@ -1802,103 +1947,157 @@ function HomePage() {
     }
   ];
 
+  const industriesServedData = [
+    {
+      id: "food-beverage",
+      name: "Food & Beverage",
+      image: "/assets/industries/food_beverages.webp?v=prod3",
+      description: "End-to-end turnkey processing lines, liquid bottling plants, automated powder blenders, thermal processing, and sanitary stainless steel conveying systems designed to FSSAI and FDA hygiene standards."
+    },
+    {
+      id: "pharmaceuticals",
+      name: "Pharmaceuticals",
+      image: "/assets/industries/pharma.jpg?v=prod2",
+      description: "cGMP and WHO-GMP compliant cleanroom processing setups, SS316L reactors, granulators, sterile fluid handling, and automated blister/vial packaging solutions engineered for precision dosage and compliance."
+    },
+    {
+      id: "nutraceuticals",
+      name: "Nutraceuticals",
+      image: "/assets/industries/nutraceuticals.jpg?v=prod3",
+      description: "Advanced encapsulation lines, dietary supplement blending, effervescent tablet press integration, and pouching systems optimized for maximum ingredient purity and active compound protection."
+    },
+    {
+      id: "chemicals",
+      name: "Chemicals",
+      image: "/assets/industries/chemicals.webp?v=prod3",
+      description: "Heavy-duty chemical synthesis reactors, heat exchangers, distillation columns, hazardous material handling systems, and automated bulk liquid transfer units engineered to ASME standards."
+    },
+    {
+      id: "agro-processing",
+      name: "Agro Processing",
+      image: "/assets/industries/agro.avif?v=prod3",
+      description: "High-capacity grain milling, spice pulverization, pulse processing, seed cleaning, and optical sorting infrastructure designed for high yield and minimal wastage."
+    },
+    {
+      id: "cosmetics",
+      name: "Cosmetics & Personal Care",
+      image: "/assets/industries/cosmetics.jpg?v=prod2",
+      description: "Vacuum homogenizers, cream & lotion emulsifiers, tube filling, shampoo compounding tanks, and perfume filtration lines providing ultra-smooth texture and seamless packaging."
+    },
+    {
+      id: "packaging",
+      name: "Packaging",
+      image: "/assets/industries/packaging.jpg?v=prod2",
+      description: "High-speed vertical form-fill-seal (VFFS), pouch packing, multi-head weighers, automated cartooning, shrink wrapping, and robotic palletizing systems."
+    },
+    {
+      id: "aerospace-defence",
+      name: "Aerospace & Defence",
+      image: "/assets/industries/aerospace.jpg?v=prod3",
+      description: "Precision CNC machining setups, alloy heat treatment furnaces, high-tolerance component assembly lines, and rigorous quality inspection rigs for critical aerospace components."
+    },
+    {
+      id: "plastics-polymers",
+      name: "Plastics & Polymers",
+      image: "/assets/industries/polymer.jpg?v=prod3",
+      description: "Heavy plastic extrusion lines, blow molding plants, polymer compounding extruders, and automated scrap recycling systems engineered for continuous 24/7 operation."
+    },
+    {
+      id: "fmcg-consumer",
+      name: "FMCG & Consumer Goods",
+      image: "/assets/industries/fmcg.jpg?v=prod3",
+      description: "High-throughput manufacturing, liquid filling, bar soap finishing, detergent powder processing, and high-speed end-of-line secondary packaging automation."
+    },
+    {
+      id: "renewable-energy",
+      name: "Renewable Energy",
+      image: "/assets/industries/renewable_energy.jpg?v=prod2",
+      description: "Solar panel assembly lines, wind turbine structural component fabrication, battery module packing lines, and green energy infrastructure utility integration."
+    },
+    {
+      id: "water-wastewater",
+      name: "Water & Wastewater",
+      image: "/assets/industries/water.jpg?v=prod2",
+      description: "Industrial Reverse Osmosis (RO) plants, Effluent Treatment Plants (ETP), Sewage Treatment Plants (STP), and zero liquid discharge (ZLD) systems engineered for complete environmental compliance."
+    }
+  ];
+
+  const [activeIndustryId, setActiveIndustryId] = useState("food-beverage");
+  const activeIndustry = industriesServedData.find(item => item.id === activeIndustryId) || industriesServedData[0];
+
   return (
     <div className="home-template min-w-0 overflow-x-hidden">
       {/* HERO */}
       <section
         className="hero"
         id="home"
-        style={{ "--hero-home-bg": `url(${activeHero.image})` }}
       >
-        {activeHero.showText !== false && <div className="overlay" />}
-        {activeHero.showText !== false && (
-          <div className="hero-content" key={activeHero.key}>
-            <span className="hero-tag">{activeHero.eyebrow}</span>
-            <h1>{activeHero.title}</h1>
-            {activeHero.subtitle && <h2>{activeHero.subtitle}</h2>}
-            <p>{activeHero.text}</p>
-            {activeHero.cta && (
-              <div className="hero-actions" style={{ marginTop: "22px" }}>
-                <NavLink to={activeHero.to || "/turnkey-project"} className="primary">
-                  {activeHero.cta} &rarr;
-                </NavLink>
-              </div>
-            )}
-          </div>
-        )}
-        {/* Simple Slider Controls */}
-        <div className="hero-simple-nav" aria-label="Hero slider navigation">
-          <div className="hero-simple-controls">
-            <button
-              type="button"
-              className="hero-arrow-btn"
-              onClick={() => goToHeroSlide(activeHeroIndex - 1)}
-              aria-label="Previous slide"
-            >
-              <span aria-hidden="true">&lsaquo;</span>
-            </button>
-
-            <div className="hero-dots">
-              {heroSlides.map((slide, index) => (
-                <button
-                  type="button"
-                  key={slide.key}
-                  className={`hero-dot${index === activeHeroIndex ? " active" : ""}`}
-                  onClick={() => goToHeroSlide(index)}
-                  aria-label={`Go to slide ${index + 1}: ${slide.title}`}
-                >
-                  <span className="dot-line" />
-                  <span className="dot-label">{`0${index + 1}`}</span>
-                </button>
-              ))}
-            </div>
-
-            <button
-              type="button"
-              className="hero-arrow-btn"
-              onClick={() => goToHeroSlide(activeHeroIndex + 1)}
-              aria-label="Next slide"
-            >
-              <span aria-hidden="true">&rsaquo;</span>
-            </button>
-          </div>
-        </div>
+        <video
+          className="hero-bg-video"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+        >
+          <source src="/assets/videos/hero_video.mp4" type="video/mp4" />
+          <source src="/assets/videos/WhatsApp Video 2026-08-21 at 4.57.13 PM.mp4" type="video/mp4" />
+        </video>
       </section>
 
-      {/* INDUSTRY */}
+      {/* CORE SERVICES */}
       <section className="industry" id="services">
         <div className="content-container">
-          <div className="industry-header">
-            <div>
-              <span className="tag">SPECIALIZED VERTICALS</span>
-              <h2 className="text-blue-950">Core Service</h2>
-            </div>
-            <p className="desc">
-              Targeted engineering expertise across sectors with a relentless focus on operational efficiency and
-              scalable architecture.
-            </p>
+          <div className="section-header">
+            <h2>Our <span>Services</span></h2>
           </div>
-          <div className="industry-divisions-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {industryDivisions.map((item) => (
+
+          <div className="core-services-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-7">
+            {coreServicesData.map((item) => (
               <article
-                key={item.title}
-                className="group flex h-full flex-col overflow-hidden rounded-xl bg-white shadow-md transition-shadow duration-300 hover:shadow-lg"
+                key={item.id}
+                className="group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.05)] border border-slate-100 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.1)] hover:-translate-y-1"
               >
-                <div className="overflow-hidden">
+                {/* Image & Overlay Badge */}
+                <div className="relative h-44 sm:h-48 overflow-hidden bg-slate-100">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="h-48 w-full object-cover transition-transform duration-300 ease-out group-hover:scale-[1.03]"
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
+                  {/* Circular Icon Badge */}
+                  <div className="absolute -bottom-5 left-6 w-12 h-12 rounded-full bg-white shadow-md border border-slate-100 flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110">
+                    {item.icon}
+                  </div>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h3 className="text-lg font-bold leading-snug text-slate-900">{item.title}</h3>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-slate-600">{item.text}</p>
+
+                {/* Card Content */}
+                <div className="flex flex-1 flex-col pt-8 pb-6 px-6">
+                  {/* Number tag */}
+                  <span className="text-xs font-bold text-[#ff7a00] tracking-wider mb-1">
+                    {item.id}
+                  </span>
+
+                  <h3 className="text-base sm:text-lg font-bold leading-snug text-[#091938] mb-4 group-hover:text-[#ff7a00] transition-colors">
+                    {item.title}
+                  </h3>
+
+                  {/* Bullet points */}
+                  <ul className="space-y-2.5 mb-6 flex-1 text-sm text-slate-700 font-medium">
+                    {item.bullets.map((bullet, idx) => (
+                      <li key={idx} className="flex items-start gap-2">
+                        <span className="text-[#ff7a00] font-bold text-xs select-none mt-0.5">•</span>
+                        <span className="leading-snug">{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* CTA link */}
                   <NavLink
-                    to="/food-consultant"
-                    className="mt-4 inline-flex text-xs font-bold uppercase tracking-wide text-[#ff7a00] transition hover:text-[#e56d00]"
+                    to={item.to}
+                    className="inline-flex items-center gap-1.5 text-xs font-extrabold uppercase tracking-wider text-[#ff7a00] hover:text-[#e56d00] transition-colors mt-auto pt-2 border-t border-slate-100"
                   >
-                    VIEW SOLUTIONS →
+                    VIEW SOLUTIONS <span className="transition-transform group-hover:translate-x-1">→</span>
                   </NavLink>
                 </div>
               </article>
@@ -1910,24 +2109,104 @@ function HomePage() {
       {/* ABOUT */}
       <section className="about" id="about">
         <div className="content-container">
-          <div className="about-wrapper">
-            <div className="about-left">
-              <span className="tag">ABOUT THE COMPANY</span>
-              <h2>
-                Engineering <span>India's Industrial</span><br />
-                Future Since 2008
-              </h2>
-              <p className="desc">
-                Salvin Industries is a trusted name in providing turnkey solutions and technical consultancy for the food and pharmaceutical industries. We specialize in delivering end-to-end services that cover every stage of your project—from concept design and planning to execution and commissioning.
+          <div className="section-header">
+            <h2>About <span>The Company</span></h2>
+          </div>
 
-              </p>
-              <p className="desc">
-                With a strong focus on quality, innovation, and efficiency, we help businesses build and optimize their production facilities to meet modern industry standards. Our expertise ensures smooth project execution, cost-effective solutions, and reliable performance.
+          <div className="space-y-4 text-[#555555] text-base leading-relaxed mb-8">
+            <p>
+              Salvin Industries is a trusted leader in providing comprehensive turnkey solutions and technical consultancy for the food &amp; beverage, pharmaceutical, chemical, aerospace, energy, cosmetic, and specialty manufacturing industries.
+            </p>
+            <p>
+              We specialize in delivering end-to-end engineering services that cover every stage of your industrial project—from concept design and 3D plant layout planning to custom machinery fabrication, installation, and final commissioning. Our multidisciplinary team ensures seamless project execution, cost-effective capital deployment, and dependable long-term performance.
+            </p>
+            <p>
+              Backed by over 15+ years of engineering mastery and 120+ successfully commissioned turnkey projects across India and international markets, Salvin Industries combines advanced manufacturing technologies, high-grade SS304/SS316L fabrication, and strict compliance with ISO 9001, WHO-GMP, FSSAI, and ASME benchmarks to help manufacturers scale with complete confidence.
+            </p>
+          </div>
 
-              </p>
-              <p className="desc">
-                At Salvin Industries, we believe in building long-term partnerships by offering customized solutions, technical excellence, and dedicated support. Whether it’s a new plant setup or upgrading an existing facility, we are committed to delivering results that drive growth and success.
-              </p>
+          {/* 4 METRIC STAT CARDS ROW */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-6">
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+              <span className="text-3xl sm:text-4xl font-extrabold text-[#ff7a00] block mb-1">15+</span>
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0b1c2c]">Years Mastery</span>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+              <span className="text-3xl sm:text-4xl font-extrabold text-[#ff7a00] block mb-1">120+</span>
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0b1c2c]">Turnkey Plants</span>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+              <span className="text-3xl sm:text-4xl font-extrabold text-[#ff7a00] block mb-1">5+</span>
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0b1c2c]">Nations Reached</span>
+            </div>
+            <div className="bg-white p-6 rounded-2xl border border-slate-200/80 shadow-sm text-center">
+              <span className="text-3xl sm:text-4xl font-extrabold text-[#ff7a00] block mb-1">100%</span>
+              <span className="text-xs sm:text-sm font-bold uppercase tracking-wider text-[#0b1c2c]">ISO &amp; cGMP</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TATVASOFT-STYLE HORIZONTAL EXPANDABLE ACCORDION SECTION */}
+      <section className="industries-accordion-section py-16 bg-[#eef3f8]">
+        <div className="content-container max-w-[1400px] mx-auto px-4">
+          <div className="section-header mb-8">
+            <h2>Industries <span>We Serve</span></h2>
+            <p className="desc">
+              Tailored turnkey engineering and automation solutions engineered for maximum throughput across 12 core verticals.
+            </p>
+          </div>
+
+          <div className="bg-[#e9f0f8] rounded-3xl p-3 sm:p-5 shadow-sm border border-slate-200/80 overflow-hidden">
+            <div className="tatvasoft-accordion-wrapper">
+              
+              {industriesServedData.map((ind) => {
+                const isActive = ind.id === activeIndustryId;
+
+                if (isActive) {
+                  return (
+                    <div
+                      key={ind.id}
+                      className="tatvasoft-active-card flex-1 min-w-[300px] sm:min-w-[650px] bg-white rounded-2xl border border-slate-200/90 shadow-lg flex flex-col md:flex-row overflow-hidden transition-all duration-500"
+                    >
+                      {/* Left Image Square */}
+                      <div className="md:w-5/12 relative h-64 md:h-auto overflow-hidden bg-slate-200">
+                        <img
+                          src={ind.image}
+                          alt={ind.name}
+                          className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+                        />
+                      </div>
+
+                      {/* Right Detail Panel */}
+                      <div className="md:w-7/12 p-6 sm:p-10 flex flex-col justify-center bg-[#f8fafc]">
+                        <h3 className="text-2xl sm:text-3xl font-extrabold text-[#0b1c2c] mb-4">
+                          {ind.name}
+                        </h3>
+                        <p className="text-[#555555] text-base sm:text-lg leading-relaxed">
+                          {ind.description}
+                        </p>
+                      </div>
+                    </div>
+                  );
+                }
+
+                return (
+                  <div
+                    key={ind.id}
+                    onClick={() => setActiveIndustryId(ind.id)}
+                    className="tatvasoft-collapsed-tab group"
+                    title={ind.name}
+                  >
+                    <span className="tatvasoft-vertical-title group-hover:text-[#ff7a00] transition-colors">
+                      {ind.name}
+                    </span>
+                    <div className="tatvasoft-plus-icon group-hover:scale-110">
+                      +
+                    </div>
+                  </div>
+                );
+              })}
 
             </div>
           </div>
@@ -1938,7 +2217,6 @@ function HomePage() {
       <section className="client-container">
         <section className="content-container">
           <div className="section-header">
-            <span className="tag">CLIENT VOICE</span>
             <div className="header-row">
               <h2>What Our <span>Clients</span> Say</h2>
               <p className="rating">4.6+ Rating<br /><small>Based on 120+ verified reviews</small></p>
@@ -1969,15 +2247,12 @@ function HomePage() {
       {/* WHY CHOOSE */}
       <section className="why-us-container">
         <section className="content-container">
-          <div className="section-header mt">
-            <span className="tag">OUR COMPETITIVE EDGE</span>
-            <div className="header-row">
-              <h2>Why Leading Industries <span>Choose Salvin</span></h2>
-              <p className="desc">
-                For over two decades, Salvin Industries has been the trusted automation partner
-                for plants across 30+ nations—delivering precision, reliability, and performance at scale.
-              </p>
-            </div>
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-10">
+            <h2 className="!m-0">Why Leading Industries <span>Choose Salvin</span></h2>
+            <p className="desc !max-w-xl !m-0">
+              For over two decades, Salvin Industries has been the trusted automation partner
+              for plants across 30+ nations—delivering precision, reliability, and performance at scale.
+            </p>
           </div>
           <div className="features">
             {whyUsFeatures.map((item) => (
@@ -1994,8 +2269,7 @@ function HomePage() {
       {/* FAQ */}
       <section className="faq-container">
         <section className="content-container">
-          <div className="faq-header">
-            <span className="tag">FAQ</span>
+          <div className="section-header">
             <h2>Frequently Asked <span>Questions</span></h2>
           </div>
           <div className="faq">
@@ -2012,85 +2286,106 @@ function HomePage() {
         </section>
       </section>
 
-      {/* PROJECTS */}
-      <section className="projects-container" id="projects">
-        <section className="content-container">
-          <div className="projects-header">
+      {/* PROJECTS & NEWS HORIZONTAL SCROLLBAR CAROUSEL */}
+      <section className="industry py-14 bg-slate-50/70" id="projects">
+        <div className="content-container">
+          
+          {/* Header & Scroll Arrow Buttons */}
+          <div className="flex flex-col lg:flex-row lg:items-center justify-between mb-8 gap-6 border-b border-slate-200/60 pb-6">
             <div>
-              <span className="tag">SPECIALIZED VERTICALS</span>
-              <h2>Latest <span>Projects &amp; News</span></h2>
+              <div className="section-header !mb-0 !text-left">
+                <h2 className="!text-left">Latest <span>Projects &amp; News</span></h2>
+              </div>
             </div>
-            <p className="desc">
-              Targeted engineering expertise across sectors with a relentless focus on operational efficiency and
-              scalable architecture.
-            </p>
-          </div>
-          <div className="projects-slider" aria-label="Latest projects carousel">
-            <div className="projects-slider-stage">
-              {latestProjectsNews.map((item, index) => (
-                <article
-                  className={`project-card project-slide ${getProjectSlideClass(index)}`}
-                  key={item.title}
-                  aria-hidden={index !== activeProjectIndex}
+
+            {/* Right side: Description text + Navigation Arrows */}
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 lg:max-w-2xl flex-1 justify-end">
+              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-medium max-w-md text-left lg:text-right">
+                Targeted engineering expertise across sectors with a relentless focus on operational efficiency and scalable architecture.
+              </p>
+              <div className="flex items-center gap-3 flex-shrink-0">
+                <button
+                  type="button"
+                  onClick={() => scrollProjects("left")}
+                  className="w-11 h-11 rounded-full border border-slate-200 bg-white text-[#091938] hover:bg-[#ff7a00] hover:text-white hover:border-[#ff7a00] flex items-center justify-center text-xl font-bold shadow-sm transition-all hover:scale-105"
+                  aria-label="Scroll Left"
                 >
-                  <div className="project-card-image-wrap">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      decoding="async"
-                    />
-                  </div>
-                  <div className="content">
-                    <h4>{item.title}</h4>
-                    <p>{item.description}</p>
-                    <a href="#projects">READ MORE →</a>
-                  </div>
-                </article>
-              ))}
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  onClick={() => scrollProjects("right")}
+                  className="w-11 h-11 rounded-full border border-slate-200 bg-white text-[#091938] hover:bg-[#ff7a00] hover:text-white hover:border-[#ff7a00] flex items-center justify-center text-xl font-bold shadow-sm transition-all hover:scale-105"
+                  aria-label="Scroll Right"
+                >
+                  ›
+                </button>
+              </div>
             </div>
-            <div className="projects-slider-nav" aria-label="Project slider controls">
-              <button type="button" onClick={() => goToProjectSlide(activeProjectIndex - 1)} aria-label="Previous project">
-                ‹
-              </button>
-              <div className="projects-slider-dots">
-                {latestProjectsNews.map((item, index) => (
-                  <button
-                    type="button"
-                    key={item.title}
-                    className={index === activeProjectIndex ? "active" : ""}
-                    onClick={() => goToProjectSlide(index)}
-                    aria-label={`Show ${item.title}`}
+          </div>
+
+          {/* Horizontal Scroll Track */}
+          <div
+            ref={projectScrollRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 pt-2 px-1 focus:outline-none"
+            style={{ scrollbarWidth: "thin", scrollbarColor: "#ff7a00 #e2e8f0" }}
+          >
+            {latestProjectsNews.map((item) => (
+              <article
+                key={item.title}
+                className="snap-start flex-shrink-0 w-[280px] sm:w-[320px] md:w-[360px] group flex flex-col overflow-hidden rounded-2xl bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border border-slate-100 transition-all duration-300 hover:shadow-[0_12px_30px_rgba(0,0,0,0.14)] hover:-translate-y-1.5"
+              >
+                {/* Big Image Container */}
+                <div className="relative h-64 sm:h-72 md:h-80 overflow-hidden bg-slate-900">
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   />
-                ))}
-              </div>
-              <button type="button" onClick={() => goToProjectSlide(activeProjectIndex + 1)} aria-label="Next project">
-                ›
-              </button>
-            </div>
+                  {/* Location Badge */}
+                  <span className="absolute bottom-3 right-3 bg-[#091938]/85 backdrop-blur-sm text-white text-[11px] font-semibold px-2.5 py-1 rounded-md flex items-center gap-1.5 shadow-md border border-white/10">
+                    <svg className="w-3.5 h-3.5 text-[#ff7a00]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                    </svg>
+                    {item.location}
+                  </span>
+                </div>
+
+                {/* Only Title below */}
+                <div className="p-4 sm:p-5 bg-white flex items-center justify-center text-center">
+                  <h3 className="text-base sm:text-lg font-bold text-[#091938] leading-snug group-hover:text-[#ff7a00] transition-colors line-clamp-2">
+                    {item.title}
+                  </h3>
+                </div>
+              </article>
+            ))}
           </div>
-          <div className="projects-action-row">
-            <div className="cta-box">
-              <div className="cta-box-icon" aria-hidden>
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-                </svg>
-              </div>
-              <h3>Let&apos;s Build the Future Together</h3>
-              <p>Have a project in mind? Our experts are ready to help you.</p>
-              <NavLink to="/contact"><button type="button">CONTACT US</button></NavLink>
+
+          {/* Bottom CTA Banner */}
+          <div className="mt-8 rounded-2xl bg-gradient-to-r from-[#091938] via-[#112a55] to-[#091938] p-8 md:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left">
+              <span className="text-[#ff7a00] text-xs font-bold uppercase tracking-widest">Tailored Industrial Engineering</span>
+              <h3 className="text-xl md:text-2xl font-bold">Have a Custom Project in Mind?</h3>
+              <p className="text-slate-300 text-sm max-w-xl">
+                Our multidisciplinary engineering team is ready to design, fabricate, and commission your next turnkey plant.
+              </p>
             </div>
+            <NavLink
+              to="/contact"
+              className="inline-flex items-center justify-center gap-2 bg-[#ff7a00] hover:bg-[#e56d00] text-white text-sm font-bold px-7 py-3.5 rounded-xl shadow-lg transition-all hover:scale-105 whitespace-nowrap"
+            >
+              DISCUSS YOUR PROJECT <span className="text-lg">→</span>
+            </NavLink>
           </div>
-        </section>
+        </div>
       </section>
 
       {/* GLOBAL PRESENCE SECTION */}
       <section className="global-presence-section">
         <div className="content-container">
-          <div className="global-header">
-            <span className="tag">GLOBAL FOOTPRINT</span>
+          <div className="section-header">
             <h2>Our Global <span>Presence</span></h2>
-            <p>
+            <p className="desc">
               Engineering excellence knows no borders. From our headquarters in India, we have expanded our reach
               to deliver turnkey solutions and specialized machinery across 30+ nations.
             </p>
@@ -2535,12 +2830,6 @@ export default function App() {
         "Top food processing plant consultants in India by Salvin Industries. Complete turnkey solutions, factory layouts, DPR reports, and FSSAI guidance.",
         path
       );
-    } else if (path === "/consultant") {
-      updateMetaTags(
-        "Food & Industrial Project Consultancy",
-        "Get expert industrial planning, plant layout design, feasibility analysis, and technical guidance for greenfield & brownfield food processing setups.",
-        path
-      );
     } else if (path === "/turnkey") {
       updateMetaTags(
         "Turnkey Plant Architectural & Commissioning",
@@ -2765,7 +3054,15 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/food-consultant" element={<ServicesPage />} />
           <Route path="/services" element={<Navigate to="/food-consultant" replace />} />
-          <Route path="/consultant" element={<ConsultantPage />} />
+          <Route path="/industrial-consultancy-services" element={<IndustrialConsultancyPage />} />
+          <Route path="/plant-design-engineering-services" element={<PlantDesignEngineeringPage />} />
+          <Route path="/turnkey-project-execution-services" element={<TurnkeyExecutionPage />} />
+          <Route path="/machinery-equipment-solutions" element={<MachineryEquipmentPage />} />
+          <Route path="/processing-packaging-solutions" element={<ProcessingPackagingPage />} />
+          <Route path="/supply-chain-procurement-services" element={<SupplyChainProcurementPage />} />
+          <Route path="/production-process-optimization" element={<ProductionOptimizationPage />} />
+          <Route path="/contract-manufacturing-packaging" element={<ContractManufacturingPage />} />
+          <Route path="/services/:serviceSlug" element={<CoreServiceDetailPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:slug" element={<BlogPostPage />} />
           <Route path="/blog" element={<Navigate to="/blogs" replace />} />
@@ -2806,11 +3103,11 @@ export default function App() {
           <Route path="/turnkey-project/fully-automatic-dehydrated-garlic-processing-plant" element={<FullyAutomaticDehydratedGarlicPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-vegetable-drying-plant" element={<FullyAutomaticVegetableDryingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-garam-masala-processing-plant" element={<FullyAutomatedGaramMasalaProcessingPlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automatic-mixed-spice-plant" element={<FullyAutomaticMixedSpicePlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-mixed-spice-plant" element={<FullyAutomaticMixedSpicePlantDetailPage />} />
 
-        <Route path="/turnkey-project/fully-automatic-spice-packaging-line" element={<FullyAutomaticSpicePackagingLineDetailPage />} />
-        <Route path="/turnkey-project/spice-blending-plant" element={<SpiceBlendingPlantDetailPage />} />
-        <Route path="/turnkey-project/fully-automated-curry-powder-processing-plant" element={<FullyAutomatedCurryPowderProcessingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automatic-spice-packaging-line" element={<FullyAutomaticSpicePackagingLineDetailPage />} />
+          <Route path="/turnkey-project/spice-blending-plant" element={<SpiceBlendingPlantDetailPage />} />
+          <Route path="/turnkey-project/fully-automated-curry-powder-processing-plant" element={<FullyAutomatedCurryPowderProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/fully-automated-frozen-vegetable-processing-plant" element={<FullyAutomatedFrozenVegetableProcessingPlantDetailPage />} />
           <Route path="/turnkey-project/petroleum-jelly-processing" element={<PetroleumJellyProcessingDetailPage />} />
           <Route path="/turnkey-project/fully-automatic-yogurt" element={<FullyAutomaticYogurtPlantDetailPage />} />
@@ -2918,7 +3215,7 @@ export default function App() {
         <Footer />
       </div>
       <FloatingContact />
-      <SalvinChatbot machines={machines} subcategories={subcategories} />
+      <ExpertConsultationModal />
     </>
   );
 }

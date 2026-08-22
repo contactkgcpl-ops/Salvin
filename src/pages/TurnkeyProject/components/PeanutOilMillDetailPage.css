@@ -26,7 +26,7 @@
   --pom-shadow: 0 2px 16px rgba(0, 0, 0, .05);
   --pom-shadow-lg: 0 8px 32px rgba(0, 0, 0, .08);
   --pom-transition: 0.35s cubic-bezier(.4, 0, .2, 1);
-  font-family: 'Segoe UI', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: var(--pom-slate-900);
   background: #fff;
   min-width: 0;
