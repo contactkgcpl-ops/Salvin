@@ -9,6 +9,17 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://salvinindia.com/$1 [R=301,L]
 
+# Enable MP4 / WebM Video MIME Types & Streaming Headers for Live Hosting
+<IfModule mod_mime.c>
+  AddType video/mp4 .mp4 .m4v
+  AddType video/webm .webm
+  AddType video/ogg .ogv
+</IfModule>
+
+<IfModule mod_headers.c>
+  Header set Accept-Ranges bytes
+</IfModule>
+
 RewriteRule ^index\.html$ - [L]
 
 # Serve pre-rendered subfolder index.html if it exists

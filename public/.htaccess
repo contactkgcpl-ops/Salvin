@@ -1,41 +1,31 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine On
-  Options -Indexes
-  DirectoryIndex index.html index.php
+RewriteEngine On
+RewriteBase /
 
-  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+# Force HTTPS and canonicalize non-WWW (except on localhost / development hosts)
+RewriteCond %{HTTP_HOST} !^localhost [NC]
+RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
+RewriteCond %{HTTP_HOST} !^192\.168\. [NC]
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://salvinindia.com/$1 [R=301,L]
 
-  # Force HTTPS and canonicalize non-WWW (except on localhost / development hosts)
-  RewriteCond %{HTTP_HOST} !^localhost [NC]
-  RewriteCond %{HTTP_HOST} !^127\.0\.0\.1 [NC]
-  RewriteCond %{HTTP_HOST} !^192\.168\. [NC]
-  RewriteCond %{HTTPS} off [OR]
-  RewriteCond %{HTTP_HOST} ^www\. [NC]
-  RewriteRule ^(.*)$ https://salvinindia.com/$1 [R=301,L]
-
-  # Redirect legacy /index.html to root /
-  RewriteCond %{THE_REQUEST} \s/index\.html[\s?] [NC]
-  RewriteRule ^index\.html$ https://salvinindia.com/ [R=301,L]
-
-  # Redirect legacy *.html requests to clean URLs
-  RewriteCond %{THE_REQUEST} \s/([^.\s]+)\.html[\s?] [NC]
-  RewriteRule ^([^.]+)\.html$ https://salvinindia.com/$1 [R=301,L]
-
-  # Route API requests to PHP backend
-  RewriteRule ^api(/.*)?$ api/index.php [L,QSA]
-
-  # Serve existing file directly
-  RewriteCond %{REQUEST_FILENAME} -f
-  RewriteRule ^ - [L]
-
-  # Serve existing directory directly (mod_dir and DirectoryIndex will handle index.html)
-  RewriteCond %{REQUEST_FILENAME} -d
-  RewriteRule ^ - [L]
-
-  # Serve pre-rendered static HTML directly if a matching index.html exists in a subfolder
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
-  RewriteRule ^(.*)$ /$1/index.html [L]
-
-  # Single Page Application fallback
-  RewriteRule ^ /index.html [L]
+# Enable MP4 / WebM Video MIME Types & Streaming Headers for Live Hosting
+<IfModule mod_mime.c>
+  AddType video/mp4 .mp4 .m4v
+  AddType video/webm .webm
+  AddType video/ogg .ogv
 </IfModule>
+
+<IfModule mod_headers.c>
+  Header set Accept-Ranges bytes
+</IfModule>
+
+RewriteRule ^index\.html$ - [L]
+
+# Serve pre-rendered subfolder index.html if it exists
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.*)$ $1/index.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]

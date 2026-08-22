@@ -1620,6 +1620,14 @@ function ImageCropModal({ src, crop, zoom, setCrop, setZoom, onCropComplete, onC
 
 function HomePage() {
   const projectScrollRef = React.useRef(null);
+  const heroVideoRef = React.useRef(null);
+
+  React.useEffect(() => {
+    if (heroVideoRef.current) {
+      heroVideoRef.current.muted = true;
+      heroVideoRef.current.play().catch(() => {});
+    }
+  }, []);
 
   const scrollProjects = (direction) => {
     if (projectScrollRef.current) {
@@ -1627,10 +1635,12 @@ function HomePage() {
       projectScrollRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
     }
   };
+
   const [openFaq, setOpenFaq] = useState(0);
   const [activeHeroIndex, setActiveHeroIndex] = useState(0);
   const [activeProjectIndex, setActiveProjectIndex] = useState(0);
   const [isHeroPreviewOpen, setIsHeroPreviewOpen] = useState(false);
+
   const heroSlides = [
     {
       key: "spices",
@@ -1675,7 +1685,6 @@ function HomePage() {
   ];
 
   React.useEffect(() => {
-    setIsHeroPreviewOpen(false);
     const previewTimer = window.setTimeout(() => setIsHeroPreviewOpen(true), 3000);
     const slideTimer = window.setTimeout(() => {
       setActiveHeroIndex((current) => (current + 1) % heroSlides.length);
@@ -2033,6 +2042,7 @@ function HomePage() {
         id="home"
       >
         <video
+          ref={heroVideoRef}
           className="hero-bg-video"
           autoPlay
           loop
@@ -2041,7 +2051,6 @@ function HomePage() {
           preload="auto"
         >
           <source src="/assets/videos/hero_video.mp4" type="video/mp4" />
-          <source src="/assets/videos/WhatsApp Video 2026-08-21 at 4.57.13 PM.mp4" type="video/mp4" />
         </video>
       </section>
 
