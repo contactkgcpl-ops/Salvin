@@ -9,7 +9,6 @@ import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingContact from "./components/FloatingContact";
-import ExpertConsultationModal from "./components/ExpertConsultationModal";
 // import IntroOverlay from "./components/IntroOverlay";
 const searchIcon = "/assets/core/icons/search.webp";
 
@@ -1618,6 +1617,29 @@ function ImageCropModal({ src, crop, zoom, setCrop, setZoom, onCropComplete, onC
   );
 }
 
+const whyUsFeatures = [
+  {
+    icon: <FaCogs className="w-8 h-8 text-[#ff7a00]" />,
+    title: "Decades of Expertise",
+    text: "Over 15+ years of hands-on engineering mastery delivering high-capacity industrial plant solutions."
+  },
+  {
+    icon: <FaRobot className="w-8 h-8 text-[#ff7a00]" />,
+    title: "End-to-End Automation",
+    text: "Fully integrated PLC, SCADA, and IoT-driven automation for maximum operational efficiency."
+  },
+  {
+    icon: <FaTools className="w-8 h-8 text-[#ff7a00]" />,
+    title: "Turnkey Execution",
+    text: "Complete project execution from layout design, 3D modeling, fabrication, to final commissioning."
+  },
+  {
+    icon: <FaHandshake className="w-8 h-8 text-[#ff7a00]" />,
+    title: "Global Standards & Support",
+    text: "Strict compliance with ISO, WHO-GMP, and FSSAI benchmarks with 24/7 global support."
+  }
+];
+
 function HomePage() {
   const projectScrollRef = React.useRef(null);
   const heroVideoRef = React.useRef(null);
@@ -1792,129 +1814,6 @@ function HomePage() {
     {
       question: "Do you provide after-sales service and maintenance support?",
       answer: "Yes, we offer 24/7 support and AMC services for all installed systems."
-    },
-    {
-      question: "Can your machine be integrated with existing plant systems?",
-      answer: "Yes, our systems are designed for seamless integration with existing infrastructure."
-    },
-    {
-      question: "Do you export machines internationally? What standards do you comply with?",
-      answer: "Yes, we export globally and comply with ISO, CE, and other international standards."
-    }
-  ];
-
-  const coreServicesData = [
-    {
-      id: "01",
-      title: "Industrial Consultancy",
-      image: "/assets/core/services/service_consultancy.jpg",
-      to: "/industrial-consultancy-services",
-      icon: <FaDraftingCompass className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Project Feasibility & Planning",
-        "Product & Process Consultancy",
-        "Plant Concept & Strategy",
-        "Capacity Planning",
-        "Cost & Investment Planning"
-      ]
-    },
-    {
-      id: "02",
-      title: "Plant Design & Engineering",
-      image: "/assets/core/services/service_plant_design.jpg",
-      to: "/plant-design-engineering-services",
-      icon: <FaPencilRuler className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Plant Layout & Process Flow",
-        "Utility Planning",
-        "Production Line Design",
-        "Material Flow Planning",
-        "Engineering & Documentation"
-      ]
-    },
-    {
-      id: "03",
-      title: "Turnkey Project Execution",
-      image: "/assets/core/services/service_turnkey.jpg",
-      to: "/turnkey-project-execution-services",
-      icon: <FaHandshake className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Greenfield & Brownfield Projects",
-        "Civil & Infrastructure Coordination",
-        "Plant Installation",
-        "Project Management",
-        "Commissioning & Handover"
-      ]
-    },
-    {
-      id: "04",
-      title: "Machinery & Equipment",
-      image: "/assets/core/services/service_machinery.jpg",
-      to: "/machinery-equipment-solutions",
-      icon: <FaTools className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Machinery Selection",
-        "Processing Machinery",
-        "Filling & Packaging Machinery",
-        "Complete Production Lines",
-        "Equipment Integration & Installation"
-      ]
-    },
-    {
-      id: "05",
-      title: "Processing & Packaging Solutions",
-      image: "/assets/core/services/service_processing_packaging.jpg",
-      to: "/processing-packaging-solutions",
-      icon: <FaCogs className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Powder Processing",
-        "Liquid Processing",
-        "Granule Processing",
-        "Filling & Packaging",
-        "Automated Production Lines"
-      ]
-    },
-    {
-      id: "06",
-      title: "Supply Chain & Procurement",
-      image: "/assets/core/services/service_supply_chain.jpg",
-      to: "/supply-chain-procurement-services",
-      icon: <FaTruck className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Raw Material Sourcing",
-        "Vendor Development",
-        "Equipment Procurement",
-        "Packaging Material Coordination",
-        "Logistics & Material Flow Planning"
-      ]
-    },
-    {
-      id: "07",
-      title: "Production & Process Optimization",
-      image: "/assets/core/services/service_optimization.jpg",
-      to: "/production-process-optimization",
-      icon: <FaChartLine className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Production Line Optimization",
-        "Process Improvement",
-        "Capacity Enhancement",
-        "Automation & Efficiency",
-        "Cost Optimization"
-      ]
-    },
-    {
-      id: "08",
-      title: "Contract Manufacturing & Packaging",
-      image: "/assets/core/services/service_contract_manufacturing.jpg",
-      to: "/contract-manufacturing-packaging",
-      icon: <FaBoxOpen className="w-5 h-5 text-[#ff7a00]" />,
-      bullets: [
-        "Third-Party Manufacturing",
-        "Contract Packaging",
-        "Pouch / Sachet / Jar / Bottle Packaging",
-        "Product Scale-up",
-        "Commercial Production Support"
-      ]
     }
   ];
 
@@ -1933,26 +1832,118 @@ function HomePage() {
     }
   ];
 
-  const whyUsFeatures = [
+  const coreServicesData = [
     {
-      icon: <img src={Decade} alt="Decade of Expertise" className="mx-auto w-16 h-16 object-contain" />,
-      title: <h3 className="text-lg font-bold">Decades of Expertise</h3>,
-      text: "Over 25 years of hands-on experience delivering complex industrial engineering and automation solutions."
+      id: "01",
+      title: "Industrial Consultancy",
+      image: "/assets/core/services/service_consultancy.webp?v=webp1",
+      to: "/industrial-consultancy-services",
+      icon: <FaDraftingCompass className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Project Feasibility & Planning",
+        "Product & Process Consultancy",
+        "Plant Concept & Strategy",
+        "Capacity Planning",
+        "Cost & Investment Planning"
+      ]
     },
     {
-      icon: <img src={innovation} alt="Innovative Technology" className="mx-auto w-16 h-16 object-contain" />,
-      title: <h3 className="text-lg font-bold">Innovative Technology</h3>,
-      text: "Utilizing AI-driven robotics and cutting-edge IoT frameworks to build future-ready manufacturing operations."
+      id: "02",
+      title: "Plant Design & Engineering",
+      image: "/assets/core/services/service_plant_design.webp?v=webp1",
+      to: "/plant-design-engineering-services",
+      icon: <FaPencilRuler className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Plant Layout & Process Flow",
+        "Utility Planning",
+        "Production Line Design",
+        "Material Flow Planning",
+        "Engineering & Documentation"
+      ]
     },
     {
-      icon: <img src={global} alt="Global Support" className="mx-auto w-16 h-16 object-contain" />,
-      title: <h3 className="text-lg font-bold">Global Support</h3>,
-      text: "Our dedicated 24/7 technical support network and regional headquarters serve clients across 15+ countries."
+      id: "03",
+      title: "Turnkey Project Execution",
+      image: "/assets/core/services/service_turnkey.webp?v=webp1",
+      to: "/turnkey-project-execution-services",
+      icon: <FaHandshake className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Greenfield & Brownfield Projects",
+        "Civil & Infrastructure Coordination",
+        "Plant Installation",
+        "Project Management",
+        "Commissioning & Handover"
+      ]
     },
     {
-      icon: <img src={quality} alt="Quality Assurance" className="mx-auto w-16 h-16 object-contain" />,
-      title: <h3 className="text-lg font-bold">Quality Assurance</h3>,
-      text: "ISO 9001:2015 certified manufacturing processes ensuring the highest standards of precision and safety."
+      id: "04",
+      title: "Machinery & Equipment",
+      image: "/assets/core/services/service_machinery.webp?v=webp1",
+      to: "/machinery-equipment-solutions",
+      icon: <FaTools className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Machinery Selection",
+        "Processing Machinery",
+        "Filling & Packaging Machinery",
+        "Complete Production Lines",
+        "Equipment Integration & Installation"
+      ]
+    },
+    {
+      id: "05",
+      title: "Processing & Packaging Solutions",
+      image: "/assets/core/services/service_processing_packaging.webp?v=webp1",
+      to: "/processing-packaging-solutions",
+      icon: <FaCogs className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Powder Processing",
+        "Liquid Processing",
+        "Granule Processing",
+        "Filling & Packaging",
+        "Automated Production Lines"
+      ]
+    },
+    {
+      id: "06",
+      title: "Supply Chain & Procurement",
+      image: "/assets/core/services/service_supply_chain.webp?v=webp1",
+      to: "/supply-chain-procurement-services",
+      icon: <FaTruck className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Raw Material Sourcing",
+        "Vendor Development",
+        "Equipment Procurement",
+        "Packaging Material Coordination",
+        "Logistics & Material Flow Planning"
+      ]
+    },
+    {
+      id: "07",
+      title: "Production & Process Optimization",
+      image: "/assets/core/services/service_optimization.webp?v=webp1",
+      to: "/production-process-optimization",
+      icon: <FaChartLine className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Production Line Optimization",
+        "Process Improvement",
+        "Capacity Enhancement",
+        "Automation & Efficiency",
+        "Cost Optimization"
+      ]
+    },
+    {
+      id: "08",
+      title: "Contract Manufacturing & Packaging",
+      image: "/assets/core/services/service_contract_manufacturing.webp?v=webp1",
+      to: "/contract-manufacturing-packaging",
+      icon: <FaBoxOpen className="w-5 h-5 text-[#ff7a00]" />,
+      bullets: [
+        "Third-Party Manufacturing",
+        "Contract Packaging",
+        "Pouch / Sachet / Jar / Bottle Packaging",
+        "Product Scale-up",
+        "Commercial Production Support"
+      ]
     }
   ];
 
@@ -2526,7 +2517,7 @@ const journeyData = [
     title: "International Projects",
     desc: "Executing large-scale international turnkey projects, establishing a global engineering footprint.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=600&q=80",
-    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>,
+    icon: <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1-4-10z"></path></svg>,
     side: "right"
   },
   {
@@ -3224,7 +3215,6 @@ export default function App() {
         <Footer />
       </div>
       <FloatingContact />
-      <ExpertConsultationModal />
     </>
   );
 }
