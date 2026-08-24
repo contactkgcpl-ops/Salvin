@@ -31,24 +31,15 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Deploy to Hostinger
-        continue-on-error: true
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
-          port: 21
-          security: loose
-          local-dir: ./dist/
-          server-dir: ./
-          delete-orphaned-files: false
-          dangerous-clean-slate: false
-          log-level: minimal
-          timeout: 3600000
-          state-name: .ftp-deploy-sync-state-v2.json
-          exclude: |
-            **/services/**
-            services
-            **/*.map
+      - name: Install LFTP
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Incremental Deploy (Only Updated Files via LFTP)
+        run: |
+          lftp -c "
+          set ftp:ssl-allow true;
+          set ftp:ssl-force true;
+          set ssl:verify-certificate false;
+          open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ftps://${{ secrets.FTP_HOST }}:21;
+          mirror --reverse --only-newer --parallel=10 --verbose ./dist/ ./;
+          "
