@@ -39,7 +39,12 @@ jobs:
           lftp -c "
           set ftp:ssl-allow true;
           set ftp:ssl-force true;
+          set ftp:ssl-protect-data true;
+          set ftp:ssl-protect-list true;
+          set ftp:passive-mode true;
           set ssl:verify-certificate false;
-          open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ftps://${{ secrets.FTP_HOST }}:21;
-          mirror --reverse --only-newer --parallel=10 --verbose ./dist/ ./;
+          set net:max-retries 3;
+          open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ftp://${{ secrets.FTP_HOST }}:21;
+          mirror --reverse --only-newer --parallel=2 --verbose ./dist/ ./;
           "
+
