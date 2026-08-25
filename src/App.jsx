@@ -1836,7 +1836,7 @@ function HomePage() {
     {
       id: "01",
       title: "Industrial Consultancy",
-      image: "/assets/core/services/service_consultancy.webp?v=webp1",
+      image: "/assets/core/services/service_consultancy.jpg",
       to: "/industrial-consultancy-services",
       icon: <FaDraftingCompass className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1850,7 +1850,7 @@ function HomePage() {
     {
       id: "02",
       title: "Plant Design & Engineering",
-      image: "/assets/core/services/service_plant_design.webp?v=webp1",
+      image: "/assets/core/services/service_plant_design.jpg",
       to: "/plant-design-engineering-services",
       icon: <FaPencilRuler className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1864,7 +1864,7 @@ function HomePage() {
     {
       id: "03",
       title: "Turnkey Project Execution",
-      image: "/assets/core/services/service_turnkey.webp?v=webp1",
+      image: "/assets/core/services/service_turnkey.jpg",
       to: "/turnkey-project-execution-services",
       icon: <FaHandshake className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1878,7 +1878,7 @@ function HomePage() {
     {
       id: "04",
       title: "Machinery & Equipment",
-      image: "/assets/core/services/service_machinery.webp?v=webp1",
+      image: "/assets/core/services/service_machinery.jpg",
       to: "/machinery-equipment-solutions",
       icon: <FaTools className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1892,7 +1892,7 @@ function HomePage() {
     {
       id: "05",
       title: "Processing & Packaging Solutions",
-      image: "/assets/core/services/service_processing_packaging.webp?v=webp1",
+      image: "/assets/core/services/service_processing_packaging.jpg",
       to: "/processing-packaging-solutions",
       icon: <FaCogs className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1906,7 +1906,7 @@ function HomePage() {
     {
       id: "06",
       title: "Supply Chain & Procurement",
-      image: "/assets/core/services/service_supply_chain.webp?v=webp1",
+      image: "/assets/core/services/service_supply_chain.jpg",
       to: "/supply-chain-procurement-services",
       icon: <FaTruck className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1920,7 +1920,7 @@ function HomePage() {
     {
       id: "07",
       title: "Production & Process Optimization",
-      image: "/assets/core/services/service_optimization.webp?v=webp1",
+      image: "/assets/core/services/service_optimization.jpg",
       to: "/production-process-optimization",
       icon: <FaChartLine className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -1934,7 +1934,7 @@ function HomePage() {
     {
       id: "08",
       title: "Contract Manufacturing & Packaging",
-      image: "/assets/core/services/service_contract_manufacturing.webp?v=webp1",
+      image: "/assets/core/services/service_contract_manufacturing.jpg",
       to: "/contract-manufacturing-packaging",
       icon: <FaBoxOpen className="w-5 h-5 text-[#ff7a00]" />,
       bullets: [
@@ -2064,6 +2064,13 @@ function HomePage() {
                     src={item.image}
                     alt={item.title}
                     className="h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                    onError={(e) => {
+                      if (e.currentTarget.src.includes('.jpg')) {
+                        e.currentTarget.src = item.image.replace('.jpg', '.webp');
+                      } else if (e.currentTarget.src.includes('.webp')) {
+                        e.currentTarget.src = item.image.replace('.webp', '.jpg');
+                      }
+                    }}
                   />
                   {/* Circular Icon Badge */}
                   <div className="absolute -bottom-5 left-6 w-12 h-12 rounded-full bg-white shadow-md border border-slate-100 flex items-center justify-center z-10 transition-transform duration-300 group-hover:scale-110">
