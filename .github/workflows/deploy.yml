@@ -31,11 +31,9 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Install LFTP
-        run: sudo apt-get update && sudo apt-get install -y lftp
-
-      - name: Incremental Deploy (Only Updated Files via LFTP)
+      - name: Deploy to Hostinger via LFTP
         run: |
+          which lftp || sudo apt-get install -y lftp || (sudo apt-get update && sudo apt-get install -y lftp)
           lftp -c "
           set ftp:ssl-allow true;
           set ftp:ssl-force true;
@@ -43,8 +41,10 @@ jobs:
           set ftp:ssl-protect-list true;
           set ftp:passive-mode true;
           set ssl:verify-certificate false;
-          set net:max-retries 3;
+          set net:timeout 15;
+          set net:max-retries 2;
+          set net:reconnect-interval-base 2;
           open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ftp://${{ secrets.FTP_HOST }}:21;
-          mirror --reverse --only-newer --parallel=2 --verbose ./dist/ ./;
+          mirror --reverse --only-newer --parallel=5 --verbose ./dist/ ./;
           "
 
