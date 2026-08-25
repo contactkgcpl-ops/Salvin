@@ -41,10 +41,11 @@ jobs:
           set ftp:ssl-protect-list true;
           set ftp:passive-mode true;
           set ssl:verify-certificate false;
+          set ftp:use-site-utime true;
           set net:timeout 15;
           set net:max-retries 2;
           set net:reconnect-interval-base 2;
           open -u '${{ secrets.FTP_USERNAME }}','${{ secrets.FTP_PASSWORD }}' ftp://${{ secrets.FTP_HOST }}:21;
-          mirror --reverse --only-newer --parallel=5 --verbose ./dist/ ./;
+          mirror --reverse --only-newer --ignore-time --parallel=5 --verbose ./dist/ ./;
           "
 

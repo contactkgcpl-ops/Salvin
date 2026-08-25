@@ -9,6 +9,9 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]
 RewriteRule ^(.*)$ https://salvinindia.com/$1 [R=301,L]
 
+# Route /api requests to PHP API backend router
+RewriteRule ^api(?:/(.*))?$ api/index.php [QSA,L]
+
 # Enable MP4 / WebM Video MIME Types & Streaming Headers for Live Hosting
 <IfModule mod_mime.c>
   AddType video/mp4 .mp4 .m4v
