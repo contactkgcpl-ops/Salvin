@@ -10,14 +10,14 @@ const WELCOME =
 const CONTACT_LINES = [
   "Phone/WhatsApp: +91 9898727796",
   "Email: info.salvinindustries@gmail.com",
-  "Managing Director: Thomas Richardson (md.salvinindustries@gmail.com)",
+  "Managing Director: Keval Gandhi (md.salvinindustries@gmail.com)",
 ];
 
 const COMPANY_INFO = {
   company:
     "Salvin Industries is a turnkey automation and packaging machinery group headquartered in Ahmedabad, Gujarat. The company designs, manufactures, and deploys high-performance production lines for food, pharma, cosmetics, chemical/API, agriculture, and export industries.",
   founder:
-    "Thomas Richardson is the Founder and Managing Director of Salvin Industries. He established Salvin Industries and has led the company since 2008.",
+    "Keval Gandhi is the Founder and Managing Director of Salvin Industries. He established Salvin Industries and has led the company since 2008.",
   services:
     "Salvin services include turnkey projects, machineries, food and pharma consultancy, automation and robotics, supply chain support, maintenance and AMC, contract packaging, pneumatic equipment, processing lines, and export-industry solutions.",
   journey:

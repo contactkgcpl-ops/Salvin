@@ -2705,7 +2705,7 @@ function ContactPage() {
             <div className="dept-card">
               <div className="dept-info">
                 <strong>Managing Director</strong>
-                <span>Thomas Richardson</span>
+                <span>Keval Gandhi</span>
                 <a href="mailto:md.salvinindustries@gmail.com">md.salvinindustries@gmail.com</a>
               </div>
             </div>

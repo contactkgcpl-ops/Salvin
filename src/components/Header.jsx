@@ -91,7 +91,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
             </button>
             <div className="nav-dropdown-menu">
               <NavLink to="/food-consultant" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Food Consultant
+                Technical Consultant
               </NavLink>
               <NavLink to="/industrial-consultancy-services" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
                 Industrial Consultancy

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 export default function TurnkeyExecutionPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
 
-  const heroImage = "/assets/core/services/service_turnkey.jpg";
+  const heroImage = "/assets/core/heroes/turnkey_hiro.jpg";
 
   const subServices = [
     {
@@ -70,11 +70,11 @@ export default function TurnkeyExecutionPage() {
 
         <div className="relative z-20 h-full flex flex-col justify-center items-center text-center px-4 max-w-5xl mx-auto">
           <span className="tag mb-4">SALVIN TURNKEY PROJECTS</span>
-          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white mb-6 drop-shadow-2xl leading-tight">
-            Turnkey Project Execution Services
+          <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white mb-4 drop-shadow-2xl leading-tight">
+            Turnkey Projects
           </h1>
-          <p className="text-base md:text-lg text-gray-200 max-w-3xl drop-shadow-lg leading-relaxed mb-8">
-            Complete A-to-Z industrial plant execution, civil infrastructure coordination, precision machinery installation, single-point project management, and commissioning.
+          <p className="text-base md:text-xl font-semibold text-gray-200 max-w-4xl drop-shadow-lg leading-relaxed mb-8">
+            Food | Pharmaceutical | API | Cosmetics | Oil | Confectionery | Snacks
           </p>
 
           <div>

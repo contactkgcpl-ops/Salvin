@@ -1,54 +1,39 @@
-// src/components/HeroSection.jsx
-import { useState, useEffect } from "react";
-const Slide1 = "/assets/core/heroes/user-wide-slide-5.webp"; // Red Chilli
-const Slide4 = "/assets/core/heroes/final-slide-3.webp";
-const Slide5 = "/assets/core/heroes/final-slide-4.webp";
+import React from "react";
+import { NavLink } from "react-router-dom";
 
-const IMAGES = [Slide1, Slide4, Slide5];
+const turnkeyHeroBg = "/assets/core/heroes/turnkey_hiro.jpg";
 
 function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(true);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setIsTransitioning(true);
-      setCurrentSlide((prev) => prev + 1);
-    }, 4000); // Change image every 4 seconds
-    return () => clearInterval(timer);
-  }, []);
-
-  useEffect(() => {
-    if (currentSlide === IMAGES.length) {
-      const timeout = setTimeout(() => {
-        setIsTransitioning(false); // disable transition
-        setCurrentSlide(0); // snap back to real first slide
-      }, 1500); // match transition duration
-      return () => clearTimeout(timeout);
-    }
-  }, [currentSlide]);
-
   return (
-    <section className="relative w-full overflow-hidden bg-white">
-
-      {/* Image Slider */}
+    <section className="relative w-full h-[55vh] md:h-[65vh] overflow-hidden bg-slate-900 pt-16 flex items-center justify-center">
+      {/* Background Image with Dark Overlay */}
       <div
-        className={`flex w-full ${isTransitioning ? "transition-transform duration-[1500ms] ease-in-out" : ""}`}
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+        className="absolute inset-0 w-full h-full bg-cover bg-center transition-transform duration-[6000ms] ease-out scale-105"
+        style={{ backgroundImage: `url('${turnkeyHeroBg}')` }}
       >
-        {[...IMAGES, IMAGES[0]].map((imgSrc, index) => (
-          <img
-            key={index}
-            src={imgSrc}
-            alt={`Salvin Turnkey Plant ${index + 1}`}
-            className="w-full shrink-0 h-auto object-contain block bg-[#f4f4f4]"
-          />
-        ))}
+        <div className="absolute inset-0 bg-black/65"></div>
       </div>
 
-      {/* Content Removed - Using Image Banners Only */}
-      <div className="absolute inset-0 z-10 flex flex-col items-center justify-end pb-4 sm:pb-8 lg:pb-12">
-        {/* If buttons are needed later, they can be placed here at the bottom */}
+      {/* Content Container */}
+      <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-5xl mx-auto my-auto">
+        <span className="bg-[#ff7a00] text-white text-xs md:text-sm font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-4 shadow-md">
+          SALVIN TURNKEY PROJECTS
+        </span>
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-4 drop-shadow-2xl leading-tight tracking-tight">
+          Turnkey Projects
+        </h1>
+        <p className="text-base md:text-xl lg:text-2xl font-semibold text-gray-200 max-w-4xl drop-shadow-lg leading-relaxed mb-8 tracking-wide">
+          Food | Pharmaceutical | API | Cosmetics | Oil | Confectionery | Snacks
+        </p>
+
+        <div>
+          <NavLink
+            to="/contact"
+            className="bg-[#ff7a00] hover:bg-[#e56d00] text-white font-bold py-3.5 px-8 md:py-4 md:px-10 rounded-full shadow-xl transition-all text-sm md:text-base uppercase tracking-wide inline-block"
+          >
+            Get Consultation
+          </NavLink>
+        </div>
       </div>
     </section>
   );

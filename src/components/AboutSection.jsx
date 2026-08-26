@@ -9,7 +9,7 @@ import "../assets/team.css";
 import "../assets/why_us.css";
 import "../assets/md_section.css";
 import { FaUserTie, FaBuilding, FaVial } from "react-icons/fa";
-const mdImage = "/assets/company/contact/kevalgandhi.webp"; // Placeholder, user to provide keval_gandhi.jpg
+const mdImage = "/assets/core/heroes/keval_gandhi.png";
 
 const aboutImg = "/assets/core/icons/Industrial.webp";
 const journeyHeroImage = "/assets/core/icons/food-processing-plant.webp";
@@ -119,7 +119,7 @@ const journeyMilestones = [
 
 const team = [
   {
-    name: "Thomas Richardson",
+    name: "Keval Gandhi",
     role: "MANAGING DIRECTOR",
     desc: "Founder and visionary leader with extensive expertise in turnkey industrial solutions.",
     img: mdImage
@@ -175,31 +175,41 @@ export default function About() {
             <span className="tag">ABOUT THE COMPANY</span>
 
             <h1>
-              Engineering <span>India's Industrial</span> <br />
-              Future Since 2008
+              About <span>The Company</span>
             </h1>
 
             <p>
-              Salvin Industries is a leading turnkey automation and packaging machinery group
-              headquartered in Ahmedabad, Gujarat, India. We specialize in designing,
-              manufacturing, and deploying high-performance production lines.
+              Salvin Industries is a trusted leader in providing comprehensive turnkey solutions and technical consultancy for the food &amp; beverage, pharmaceutical, chemical, aerospace, energy, cosmetic, and specialty manufacturing industries.
             </p>
 
             <p>
-              Our team of 200+ engineers brings together expertise in mechanical design,
-              robotics, PLC programming, and process automation.
+              We specialize in delivering end-to-end engineering services that cover every stage of your industrial project—from concept design and 3D plant layout planning to custom machinery fabrication, installation, and final commissioning. Our multidisciplinary team ensures seamless project execution, cost-effective capital deployment, and dependable long-term performance.
             </p>
 
-          </div>
+            <p>
+              Backed by over 15+ years of engineering mastery and 120+ successfully commissioned turnkey projects across India and international markets, Salvin Industries combines advanced manufacturing technologies, high-grade SS304/SS316L fabrication, and strict compliance with ISO 9001, WHO-GMP, FSSAI, and ASME benchmarks to help manufacturers scale with complete confidence.
+            </p>
 
-          {/* RIGHT IMAGE */}
-          <div className="right">
-            <img src={aboutImg} alt="about" />
-
-            <div className="badge">
-              <h2>25+</h2>
-              <p>Years of Excellence</p>
+            {/* 4 METRIC STAT CARDS ROW */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6">
+              <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#ff7a00] block mb-1">15+</span>
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0b1c2c]">Years Mastery</span>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#ff7a00] block mb-1">120+</span>
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0b1c2c]">Turnkey Plants</span>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#ff7a00] block mb-1">5+</span>
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0b1c2c]">Nations Reached</span>
+              </div>
+              <div className="bg-white p-4 rounded-xl border border-slate-200/80 shadow-sm text-center">
+                <span className="text-2xl sm:text-3xl font-extrabold text-[#ff7a00] block mb-1">100%</span>
+                <span className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-[#0b1c2c]">ISO &amp; cGMP</span>
+              </div>
             </div>
+
           </div>
 
         </div>
@@ -272,13 +282,17 @@ export default function About() {
       {/* MANAGING DIRECTOR SECTION */}
       <section className="md-section">
         <div className="md-container">
+          <div className="md-image-box">
+            <img src={mdImage} alt="Keval Gandhi - Managing Director" />
+          </div>
+
           <div className="md-content">
             <h2>Managing Director</h2>
             <p className="bio">
-              Thomas Richardson is the Founder and Managing Director of Salvin Industries,
-              a leading engineering and consulting firm based in Ahmedabad, Gujarat.
-              Under his leadership since 2008, the company has grown into a global
-              provider of turnkey plant solutions and industrial consulting.
+              Keval Gandhi is the Founder and Managing Director of Salvin Industries,
+              a leading engineering and consulting firm based in Gujarat, India.
+              Under his visionary leadership since 2008, the company has grown into a global
+              provider of turnkey plant solutions, automated machinery, and industrial consulting.
             </p>
 
             <div className="md-expertise-title">Professional Roles & Expertise</div>
