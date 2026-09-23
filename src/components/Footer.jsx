@@ -22,7 +22,7 @@ export default function Footer() {
             </li>
             <li>
               <svg className="footer-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.243-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-              <span>210, Arved Transcube Mall,<br />Bandhu Nagar, Vijay Nagar,<br />Ranip, Ahmedabad, Gujarat 382480</span>
+              <span>210, Bandhu Nagar,<br />Vijay Nagar, Ranip,<br />Ahmedabad, Gujarat 382480</span>
             </li>
           </ul>
           <div className="footer-socials">
@@ -65,7 +65,7 @@ export default function Footer() {
           <NavLink to="/blogs">Resources & Blog</NavLink>
           <NavLink to="/contact">Contact Us</NavLink>
           <NavLink to="/contact">International Offices</NavLink>
-          <NavLink to="/contact">Careers</NavLink>
+          <NavLink to="/careers">Careers</NavLink>
         </div>
       </div>
 

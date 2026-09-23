@@ -115,6 +115,7 @@ import ProteinBarManufacturingDetailPage from "./pages/TurnkeyProject/components
 import MayonnaiseProcessingDetailPage from "./pages/TurnkeyProject/components/MayonnaiseProcessingDetailPage";
 import BlogsPage from "./pages/blogs/BlogsPage";
 import BlogPostPage from "./pages/blogs/BlogPostPage";
+import CareersPage from "./pages/CareersPage";
 import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/InstantMixFrozenFoodDetailPage";
 import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
 import ChikkiPluckingDetailPage from "./pages/TurnkeyProject/components/ChikkiPluckingDetailPage";
@@ -3189,6 +3190,8 @@ export default function App() {
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
+          <Route path="/careers" element={<CareersPage />} />
+          <Route path="/carrier" element={<CareersPage />} />
           <Route
             path="/admin-login"
             element={<AdminLoginPage onAdminLogin={handleAdminLogin} isAdminAuthenticated={isAdminAuthenticated} />}

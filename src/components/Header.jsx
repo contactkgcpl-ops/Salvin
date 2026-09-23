@@ -124,6 +124,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
           <NavLink to="/machineries" style={navLinkStyle} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
 
           <NavLink to="/blogs" style={navLinkStyle} onClick={() => setMenuOpen(false)}>BLOGS</NavLink>
+          <NavLink to="/careers" style={navLinkStyle} onClick={() => setMenuOpen(false)}>CAREERS</NavLink>
 
           <NavLink to="/contact" style={navLinkStyle} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
           <LanguageSelector />
