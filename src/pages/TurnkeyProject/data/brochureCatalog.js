@@ -2028,9 +2028,9 @@ function pdfHref(filename) {
 
 /** @type {readonly { imageFile: string, pdfFile: string, title: string, lines: [string, string] }[]} */
 const RAW = [
-  ['1_red_chilli.webp', null, 'Red Chilli Processing Plant', ['High-volume cleaning, grinding, and controlled-atmosphere packaging for chilli commodities.', 'Built for food-grade hygiene, energy efficiency, and dependable OEE on your line.'], '/turnkey-project/red-chilli-processing-plant'],
+  ['1_red_chilli.webp', '1_Salvin_Spices_Processing.pdf', 'Red Chilli Processing Plant', ['High-volume cleaning, grinding, and controlled-atmosphere packaging for chilli commodities.', 'Built for food-grade hygiene, energy efficiency, and dependable OEE on your line.'], '/turnkey-project/red-chilli-processing-plant'],
   ['3_beetroot.webp', 'fruit_juice_salvin.pdf', 'Beetroot Juice Processing Plant', ['Cold extraction, clarification, and aseptic-ready packaging for vibrant juices.', 'Supports nutrient retention while scaling to industrial filling speeds you can commission fast.'], '/turnkey-project/beetroot-juice-processing-plant'],
-  ['4_turmeric.webp', null, 'Turmeric Powder Processing Plant', ['Cleaning, pulverisation, and sterilisation paths suited for premium powders.', 'Metal detection–friendly layouts help you ship audit-ready batches every shift.']],
+  ['4_turmeric.webp', '1_Salvin_Spices_Processing.pdf', 'Turmeric Powder Processing Plant', ['Cleaning, pulverisation, and sterilisation paths suited for premium powders.', 'Metal detection–friendly layouts help you ship audit-ready batches every shift.'], '/turnkey-project/turmeric-powder-processing-plant'],
   ['5_honey.webp', 'honey_processing.pdf', 'Honey Processing & Bottling Plant', ['Filtration, warming, and precision dosing across jars and retail packs.', 'Preserves intrinsic viscosity and clarity while meeting export-ready sanitary design.']],
   ['6_dates.webp', null, 'Dates Processing & Packing Plant', ['Wash, grade, pitting options, and vacuum-ready sealing for premium fruit.', 'Ideal where shelf-life extension must pair with gentle handling of fragile produce.']],
 

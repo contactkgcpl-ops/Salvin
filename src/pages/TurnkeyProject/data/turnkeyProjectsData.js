@@ -148,6 +148,7 @@ const CORE_PROJECTS = {
     badge: 'TURNKEY TURMERIC POWDER PROCESSING SOLUTION',
     subtitle: 'Complete Turnkey Line For Washing, Boiling, Drying, Cryogenic Grinding, Sieving And Packaging Of Turmeric',
     heroImage: '/assets/core/heroes/hero-banners/turmeric_powder_hero.webp',
+    pdfFile: '1_Salvin_Spices_Processing.pdf',
     stats: {
       capacity: '500 Kg–5 Ton',
       stages: '11 Stage',
