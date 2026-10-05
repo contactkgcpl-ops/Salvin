@@ -1,5 +1,4 @@
 import React from "react";
-import { LANGUAGES, LANGUAGE_CHANGE_EVENT } from "./LanguageSelector";
 
 const particles = [
   ["12%", "22%", "5px", "0s", "5.6s"],
@@ -57,7 +56,6 @@ function BlueprintIcon({ type }) {
 function IntroOverlay({ onComplete }) {
   const [isClosing, setIsClosing] = React.useState(false);
   const [activeScreen, setActiveScreen] = React.useState(0);
-  const [selectedLanguageCode, setSelectedLanguageCode] = React.useState("");
 
   React.useEffect(() => {
     const timer = window.setInterval(() => {
@@ -77,12 +75,6 @@ function IntroOverlay({ onComplete }) {
       </React.Fragment>
     ),
   ];
-
-  const selectLanguage = (code) => {
-    setSelectedLanguageCode(code);
-    window.dispatchEvent(new CustomEvent(LANGUAGE_CHANGE_EVENT, { detail: { code } }));
-    setActiveScreen(5);
-  };
 
   const openCorporatePortal = () => {
     window.location.href = "https://www.salvinindustires.com/";
@@ -128,25 +120,6 @@ function IntroOverlay({ onComplete }) {
       </div>
 
       {activeScreen === 4 && (
-        <div className="intro-language-panel">
-          <span className="intro-language-kicker">Choose your language</span>
-          <h2>Continue in your preferred language</h2>
-          <div className="intro-language-grid">
-            {LANGUAGES.slice(0, 10).map((language) => (
-              <button
-                className="intro-language-option"
-                type="button"
-                key={language.code}
-                onClick={() => selectLanguage(language.code)}
-              >
-                {language.name}
-              </button>
-            ))}
-          </div>
-        </div>
-      )}
-
-      {activeScreen === 5 && (
         <div className="intro-role-panel">
           <span className="intro-language-kicker">Select your role</span>
           <h2>How would you like to continue?</h2>
@@ -164,7 +137,6 @@ function IntroOverlay({ onComplete }) {
               <small>Open vendor portal</small>
             </button>
           </div>
-          {selectedLanguageCode && <p className="intro-role-note">Language selected. Continue as visitor, vendor, or corporate.</p>}
         </div>
       )}
     </div>

@@ -54,6 +54,18 @@
       if (ogUrl) {
         ogUrl.setAttribute('content', cleanUrl);
       }
+
+      // Clear legacy google translate cookies
+      try {
+        var hostParts = window.location.hostname.split('.');
+        var domains = ['', window.location.hostname];
+        for (var i = 0; i < hostParts.length - 1; i++) {
+          domains.push('.' + hostParts.slice(i).join('.'));
+        }
+        domains.forEach(function(d) {
+          document.cookie = 'googtrans=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/' + (d ? ';domain=' + d : '');
+        });
+      } catch (e) {}
     })();
   </script>
 

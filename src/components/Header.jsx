@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 const logo = "/assets/core/logo/salvin_logo.webp";
-import LanguageSelector from './LanguageSelector';
 
 export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -121,13 +120,13 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
           </div>
 
           <NavLink to="/turnkey-project" style={navLinkStyle} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
+          <NavLink to="/automation-technology" style={navLinkStyle} onClick={() => setMenuOpen(false)}>AUTOMATION &amp; TECH</NavLink>
           <NavLink to="/machineries" style={navLinkStyle} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
 
           <NavLink to="/blogs" style={navLinkStyle} onClick={() => setMenuOpen(false)}>BLOGS</NavLink>
           <NavLink to="/careers" style={navLinkStyle} onClick={() => setMenuOpen(false)}>CAREERS</NavLink>
 
           <NavLink to="/contact" style={navLinkStyle} onClick={() => setMenuOpen(false)}>CONTACT US</NavLink>
-          <LanguageSelector />
         </nav>
       </div>
     </header>

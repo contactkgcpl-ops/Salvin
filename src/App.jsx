@@ -115,6 +115,8 @@ import ProteinBarManufacturingDetailPage from "./pages/TurnkeyProject/components
 import MayonnaiseProcessingDetailPage from "./pages/TurnkeyProject/components/MayonnaiseProcessingDetailPage";
 import BlogsPage from "./pages/blogs/BlogsPage";
 import BlogPostPage from "./pages/blogs/BlogPostPage";
+import AutomationTechnologyPage from "./pages/automation/AutomationTechnologyPage";
+import AIGrindingTechnologyDetailPage from "./pages/automation/AIGrindingTechnologyDetailPage";
 import CareersPage from "./pages/CareersPage";
 import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/InstantMixFrozenFoodDetailPage";
 import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
@@ -3074,6 +3076,8 @@ export default function App() {
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:slug" element={<BlogPostPage />} />
           <Route path="/blog" element={<Navigate to="/blogs" replace />} />
+          <Route path="/automation-technology" element={<AutomationTechnologyPage />} />
+          <Route path="/automation-technology/ai-grinding-technology" element={<AIGrindingTechnologyDetailPage />} />
           <Route path="/turnkey" element={<TurnkeyPage />} />
           <Route path="/turnkey-project" element={<TurnkeyProjectPage />} />
           <Route path="/turnkey-project/red-chilli-processing-plant" element={<RedChilliDetailPage />} />
