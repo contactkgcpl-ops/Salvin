@@ -14,11 +14,11 @@ export default function AutomationTechnologyPage() {
       <section 
         className="automation-hero"
         style={{
-          backgroundImage: `linear-gradient(rgba(9, 25, 56, 0.75), rgba(9, 25, 56, 0.85)), url('/assets/core/heroes/automation-banner.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('/assets/core/heroes/automation-banner.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
-          padding: "135px 24px 95px"
+          padding: "160px 24px"
         }}
       >
         <div className="automation-hero-content">
