@@ -84,8 +84,16 @@ const resolveMachineImage = (image, sessionCache = {}) => {
 import TurnkeyPage from "./pages/TurnkeyPage";
 import TurnkeyProjectPage from "./pages/TurnkeyProject/TurnkeyProjectPage";
 import CoreServiceDetailPage from "./pages/CoreServiceDetailPage";
+import FoodBusinessPlanningPage from "./pages/services/FoodBusinessPlanningPage";
 import IndustrialConsultancyPage from "./pages/services/IndustrialConsultancyPage";
 import PlantDesignEngineeringPage from "./pages/services/PlantDesignEngineeringPage";
+import MachineryTechnologyPage from "./pages/services/MachineryTechnologyPage";
+import FoodProductDevelopmentPage from "./pages/services/FoodProductDevelopmentPage";
+import FoodSafetyQualityPage from "./pages/services/FoodSafetyQualityPage";
+import ProductionOperationalExcellencePage from "./pages/services/ProductionOperationalExcellencePage";
+import SupplyChainConsultancyPage from "./pages/services/SupplyChainConsultancyPage";
+import AutomationIndustry40Page from "./pages/services/AutomationIndustry40Page";
+import ContractManufacturingConsultancyPage from "./pages/services/ContractManufacturingConsultancyPage";
 import TurnkeyExecutionPage from "./pages/services/TurnkeyExecutionPage";
 import MachineryEquipmentPage from "./pages/services/MachineryEquipmentPage";
 import ProcessingPackagingPage from "./pages/services/ProcessingPackagingPage";
@@ -3063,15 +3071,24 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/food-consultant" element={<ServicesPage />} />
+          <Route path="/food-business-planning-consultancy" element={<FoodBusinessPlanningPage />} />
+          <Route path="/food-plant-design-engineering" element={<PlantDesignEngineeringPage />} />
+          <Route path="/machinery-technology-consultancy" element={<MachineryTechnologyPage />} />
+          <Route path="/food-product-development" element={<FoodProductDevelopmentPage />} />
+          <Route path="/food-safety-quality-consultancy" element={<FoodSafetyQualityPage />} />
+          <Route path="/production-operational-excellence" element={<ProductionOperationalExcellencePage />} />
+          <Route path="/supply-chain-consultancy" element={<SupplyChainConsultancyPage />} />
+          <Route path="/automation-industry-4-0" element={<AutomationIndustry40Page />} />
+          <Route path="/contract-manufacturing-consultancy" element={<ContractManufacturingConsultancyPage />} />
           <Route path="/services" element={<Navigate to="/food-consultant" replace />} />
-          <Route path="/industrial-consultancy-services" element={<IndustrialConsultancyPage />} />
-          <Route path="/plant-design-engineering-services" element={<PlantDesignEngineeringPage />} />
-          <Route path="/turnkey-project-execution-services" element={<TurnkeyExecutionPage />} />
-          <Route path="/machinery-equipment-solutions" element={<MachineryEquipmentPage />} />
-          <Route path="/processing-packaging-solutions" element={<ProcessingPackagingPage />} />
-          <Route path="/supply-chain-procurement-services" element={<SupplyChainProcurementPage />} />
-          <Route path="/production-process-optimization" element={<ProductionOptimizationPage />} />
-          <Route path="/contract-manufacturing-packaging" element={<ContractManufacturingPage />} />
+          <Route path="/technical-consultant" element={<Navigate to="/food-consultant" replace />} />
+          <Route path="/industrial-consultancy-services" element={<Navigate to="/food-consultant" replace />} />
+          <Route path="/plant-design-engineering-services" element={<Navigate to="/food-plant-design-engineering" replace />} />
+          <Route path="/machinery-equipment-solutions" element={<Navigate to="/machinery-technology-consultancy" replace />} />
+          <Route path="/processing-packaging-solutions" element={<Navigate to="/food-product-development" replace />} />
+          <Route path="/production-process-optimization" element={<Navigate to="/production-operational-excellence" replace />} />
+          <Route path="/supply-chain-procurement-services" element={<Navigate to="/supply-chain-consultancy" replace />} />
+          <Route path="/contract-manufacturing-packaging" element={<Navigate to="/contract-manufacturing-consultancy" replace />} />
           <Route path="/services/:serviceSlug" element={<CoreServiceDetailPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:slug" element={<BlogPostPage />} />

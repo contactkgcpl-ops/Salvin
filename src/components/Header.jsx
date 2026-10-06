@@ -79,7 +79,11 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
           <NavLink to="/about" style={navLinkStyle} onClick={() => setMenuOpen(false)}>JOURNEY</NavLink>
 
           {/* SERVICES DROPDOWN */}
-          <div className={`nav-dropdown${servicesOpen ? " open" : ""}`}>
+          <div 
+            className={`nav-dropdown${servicesOpen ? " open" : ""}`}
+            onMouseEnter={() => setServicesOpen(true)}
+            onMouseLeave={() => setServicesOpen(false)}
+          >
             <button
               type="button"
               className="nav-dropdown-trigger"
@@ -90,31 +94,34 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
             </button>
             <div className="nav-dropdown-menu">
               <NavLink to="/food-consultant" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Technical Consultant
+                Food Consultant
               </NavLink>
-              <NavLink to="/industrial-consultancy-services" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Industrial Consultancy
+              <NavLink to="/food-business-planning-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Food Business Planning &amp; Consultancy
               </NavLink>
-              <NavLink to="/plant-design-engineering-services" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Plant Design &amp; Engineering
+              <NavLink to="/food-plant-design-engineering" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Food Plant Design &amp; Engineering
               </NavLink>
-              <NavLink to="/turnkey-project-execution-services" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Turnkey Project Execution
+              <NavLink to="/machinery-technology-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Machinery &amp; Technology Consultancy
               </NavLink>
-              <NavLink to="/machinery-equipment-solutions" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Machinery &amp; Equipment
+              <NavLink to="/food-product-development" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Food Product Development
               </NavLink>
-              <NavLink to="/processing-packaging-solutions" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Processing &amp; Packaging Solutions
+              <NavLink to="/food-safety-quality-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Food Safety &amp; Quality Consultancy
               </NavLink>
-              <NavLink to="/supply-chain-procurement-services" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Supply Chain &amp; Procurement
+              <NavLink to="/production-operational-excellence" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Production &amp; Operational Excellence
               </NavLink>
-              <NavLink to="/production-process-optimization" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Production &amp; Process Optimization
+              <NavLink to="/supply-chain-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Supply Chain Consultancy
               </NavLink>
-              <NavLink to="/contract-manufacturing-packaging" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Contract Manufacturing &amp; Packaging
+              <NavLink to="/automation-industry-4-0" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Automation &amp; Industry 4.0
+              </NavLink>
+              <NavLink to="/contract-manufacturing-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+                Contract Manufacturing Consultancy
               </NavLink>
             </div>
           </div>
