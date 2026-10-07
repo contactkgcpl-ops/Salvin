@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { 
   Search, 
@@ -16,6 +16,11 @@ import {
 
 export default function ContractManufacturingConsultancyPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
+
+  useEffect(() => {
+    document.title = "Contract Manufacturing & Co-Packing Consultancy | Salvin Industries";
+    window.scrollTo(0, 0);
+  }, []);
 
   const heroImage = "/assets/core/heroes/salvinhero2.webp";
   const introImage = "/assets/core/services/contract_manufacturing.jpg";

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { 
   Layout, 
@@ -18,6 +18,11 @@ import {
 
 export default function PlantDesignEngineeringPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
+
+  useEffect(() => {
+    document.title = "Food Plant Design & Process Engineering Services | Salvin Industries";
+    window.scrollTo(0, 0);
+  }, []);
 
   const heroImage = "/assets/core/heroes/salvinhero2.webp";
   const introImage = "/assets/core/services/service_plant_design.webp";

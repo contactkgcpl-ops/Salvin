@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { 
   FileText, 
@@ -20,6 +20,11 @@ import {
 
 export default function FoodBusinessPlanningPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
+
+  useEffect(() => {
+    document.title = "Food Business Planning & Feasibility Consultancy | Salvin Industries";
+    window.scrollTo(0, 0);
+  }, []);
 
   const heroImage = "/assets/core/heroes/salvinhero2.webp";
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { 
   TrendingUp, 
@@ -20,6 +20,11 @@ import {
 
 export default function ProductionOperationalExcellencePage() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
+
+  useEffect(() => {
+    document.title = "Production & Operational Excellence Consultancy | Salvin Industries";
+    window.scrollTo(0, 0);
+  }, []);
 
   const heroImage = "/assets/core/heroes/salvinhero2.webp";
   const introImage = "/assets/core/services/Production Process Optimisation Wheel.png";

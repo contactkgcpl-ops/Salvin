@@ -9,6 +9,7 @@ import About from "./components/AboutSection";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FloatingContact from "./components/FloatingContact";
+import VendorRegistrationPage from "./pages/VendorRegistrationPage";
 // import IntroOverlay from "./components/IntroOverlay";
 const searchIcon = "/assets/core/icons/search.webp";
 
@@ -1584,10 +1585,270 @@ function AdminPage({
                 {!visibleMachines.length && <p className="admin-empty-state">No machines match your search.</p>}
               </div>
             </div>
+
+            <VendorRegistrationsAdminCard />
           </aside>
         </div>
       </div>
     </section>
+  );
+}
+
+function VendorRegistrationsAdminCard() {
+  const [vendors, setVendors] = React.useState([]);
+  const [search, setSearch] = React.useState("");
+  const [statusFilter, setStatusFilter] = React.useState("All");
+  const [selectedVendor, setSelectedVendor] = React.useState(null);
+
+  React.useEffect(() => {
+    try {
+      const data = JSON.parse(localStorage.getItem("salvin_vendor_registrations") || "[]");
+      setVendors(Array.isArray(data) ? data : []);
+    } catch (e) {
+      setVendors([]);
+    }
+  }, []);
+
+  const updateStatus = (id, newStatus) => {
+    const updated = vendors.map((v) => (v.id === id ? { ...v, status: newStatus } : v));
+    setVendors(updated);
+    localStorage.setItem("salvin_vendor_registrations", JSON.stringify(updated));
+    if (selectedVendor && selectedVendor.id === id) {
+      setSelectedVendor((prev) => ({ ...prev, status: newStatus }));
+    }
+  };
+
+  const deleteVendor = (id) => {
+    if (!window.confirm("Are you sure you want to delete this vendor registration?")) return;
+    const updated = vendors.filter((v) => v.id !== id);
+    setVendors(updated);
+    localStorage.setItem("salvin_vendor_registrations", JSON.stringify(updated));
+    if (selectedVendor && selectedVendor.id === id) {
+      setSelectedVendor(null);
+    }
+  };
+
+  const filteredVendors = vendors.filter((v) => {
+    const matchesSearch =
+      !search.trim() ||
+      [v.companyName, v.vendorType, v.gstNumber, v.contactPersonName, v.companyEmail, v.city, v.state]
+        .filter(Boolean)
+        .join(" ")
+        .toLowerCase()
+        .includes(search.trim().toLowerCase());
+    const matchesStatus = statusFilter === "All" || (v.status || "Pending") === statusFilter;
+    return matchesSearch && matchesStatus;
+  });
+
+  return (
+    <div className="admin-card vendor-admin-card" style={{ marginTop: "24px" }}>
+      <div className="admin-panel-header compact" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+        <div>
+          <span className="admin-eyebrow">Supplier Network</span>
+          <h2>Vendor Registrations ({vendors.length})</h2>
+        </div>
+        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
+          {["All", "Pending", "Approved", "Rejected"].map((st) => (
+            <button
+              key={st}
+              type="button"
+              className={`admin-secondary-btn ${statusFilter === st ? "active-filter" : ""}`}
+              style={{
+                padding: "3px 10px",
+                fontSize: "11px",
+                borderRadius: "4px",
+                background: statusFilter === st ? "#f58220" : "#f1f5f9",
+                color: statusFilter === st ? "#fff" : "#475569",
+                border: "none",
+                cursor: "pointer"
+              }}
+              onClick={() => setStatusFilter(st)}
+            >
+              {st}
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <label className="admin-search-field" style={{ margin: "14px 0" }}>
+        <FaSearch aria-hidden="true" />
+        <input
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search vendors by name, GSTIN, type, city..."
+        />
+      </label>
+
+      <div className="admin-list vendor-list">
+        {filteredVendors.map((v) => (
+          <div key={v.id} className="admin-list-row" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px", borderBottom: "1px solid #e2e8f0" }}>
+            <div>
+              <strong style={{ fontSize: "14px", color: "#0b1a2c" }}>{v.companyName}</strong>
+              <span className="vr-badge" style={{ marginLeft: "8px", background: "#e2e8f0", color: "#334155", fontSize: "11px", padding: "2px 6px", borderRadius: "4px" }}>{v.vendorType}</span>
+              <p style={{ margin: "3px 0 0 0", fontSize: "12px", color: "#64748b" }}>
+                Contact: {v.contactPersonName} ({v.mobileNumber}) • GST: {v.gstNumber || "N/A"} • {v.city || "N/A"}, {v.state || ""}
+              </p>
+            </div>
+            <div className="admin-row-actions" style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+              <span
+                style={{
+                  padding: "3px 8px",
+                  borderRadius: "10px",
+                  fontSize: "11px",
+                  fontWeight: "700",
+                  background: v.status === "Approved" ? "#dcfce7" : v.status === "Rejected" ? "#fee2e2" : "#fef3c7",
+                  color: v.status === "Approved" ? "#16a34a" : v.status === "Rejected" ? "#dc2626" : "#d97706"
+                }}
+              >
+                {v.status || "Pending"}
+              </span>
+              <button
+                type="button"
+                className="admin-secondary-btn"
+                style={{ padding: "4px 8px", fontSize: "11px" }}
+                onClick={() => setSelectedVendor(v)}
+              >
+                View
+              </button>
+              <button
+                type="button"
+                className="admin-icon-btn danger"
+                onClick={() => deleteVendor(v.id)}
+                title="Delete Vendor"
+              >
+                <FaTrashAlt aria-hidden="true" />
+              </button>
+            </div>
+          </div>
+        ))}
+        {!filteredVendors.length && (
+          <p className="admin-empty-state">No vendor registrations match your search filter.</p>
+        )}
+      </div>
+
+      {/* Modal Dialog for Full Registration View */}
+      {selectedVendor && (
+        <div className="modal-overlay" onClick={() => setSelectedVendor(null)} style={{ position: "fixed", inset: 0, background: "rgba(0,0,0,0.6)", zIndex: 10000, display: "flex", alignItems: "center", justifyContent: "center", padding: "20px" }}>
+          <div className="modal-container vendor-modal-content" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "800px", width: "100%", maxHeight: "85vh", overflowY: "auto", padding: "28px", background: "#fff", borderRadius: "14px", boxShadow: "0 20px 40px rgba(0,0,0,0.2)" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "2px solid #e2e8f0", paddingBottom: "14px", marginBottom: "20px" }}>
+              <div>
+                <span style={{ fontSize: "12px", color: "#f58220", fontWeight: "700" }}>Ref: {selectedVendor.refNumber}</span>
+                <h2 style={{ margin: "4px 0 0 0", fontSize: "20px", color: "#0b1a2c" }}>{selectedVendor.companyName}</h2>
+              </div>
+              <button type="button" className="admin-secondary-btn" onClick={() => setSelectedVendor(null)} style={{ padding: "6px 14px", cursor: "pointer" }}>✕ Close</button>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "20px", background: "#f1f5f9", padding: "12px 16px", borderRadius: "8px" }}>
+              <strong style={{ fontSize: "14px", color: "#334155" }}>Approval Status:</strong>
+              <select
+                value={selectedVendor.status || "Pending"}
+                onChange={(e) => updateStatus(selectedVendor.id, e.target.value)}
+                style={{ padding: "6px 14px", borderRadius: "6px", border: "1.5px solid #cbd5e1", fontWeight: "600", color: "#0b1a2c" }}
+              >
+                <option value="Pending">⏳ Pending</option>
+                <option value="Approved">✓ Approved</option>
+                <option value="Rejected">✕ Rejected</option>
+              </select>
+            </div>
+
+            {/* Section 1 */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>1. Company Details</h3>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", fontSize: "13px" }}>
+                <div><strong>Vendor Type:</strong> {selectedVendor.vendorType}</div>
+                <div><strong>Website:</strong> {selectedVendor.companyWebsite || "N/A"}</div>
+                <div><strong>Email:</strong> {selectedVendor.companyEmail}</div>
+                <div><strong>Phone:</strong> {selectedVendor.companyPhone}</div>
+                <div><strong>GSTIN:</strong> {selectedVendor.gstNumber}</div>
+                <div><strong>PAN:</strong> {selectedVendor.panNumber}</div>
+                <div><strong>Pincode:</strong> {selectedVendor.pincode || "N/A"}</div>
+                <div><strong>City/State:</strong> {selectedVendor.city || "N/A"}, {selectedVendor.state || "N/A"}</div>
+                <div style={{ gridColumn: "span 2" }}><strong>Registered Address:</strong> {selectedVendor.registeredAddress}</div>
+              </div>
+            </div>
+
+            {/* Section 2 */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>2. Contact Person</h3>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", fontSize: "13px" }}>
+                <div><strong>Contact Name:</strong> {selectedVendor.contactPersonName}</div>
+                <div><strong>Designation:</strong> {selectedVendor.designation || "N/A"}</div>
+                <div><strong>Mobile:</strong> {selectedVendor.mobileNumber}</div>
+                <div><strong>WhatsApp:</strong> {selectedVendor.whatsappNumber || "N/A"}</div>
+                <div><strong>Email ID:</strong> {selectedVendor.emailId}</div>
+                <div><strong>Alternate Contact:</strong> {selectedVendor.alternateContactPerson || "N/A"}</div>
+              </div>
+            </div>
+
+            {/* Section 3 */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>3. Products / Services</h3>
+              <div style={{ fontSize: "13px" }}>
+                <p style={{ margin: "0 0 8px 0" }}><strong>Category:</strong> {selectedVendor.productServiceCategory}</p>
+                {selectedVendor.catalogueFileBase64 ? (
+                  <p style={{ margin: 0 }}><a href={selectedVendor.catalogueFileBase64} download={selectedVendor.catalogueFileName || "Catalogue"} className="support-link">📄 Download Catalogue ({selectedVendor.catalogueFileName})</a></p>
+                ) : <p style={{ color: "#94a3b8", margin: 0 }}>No Catalogue uploaded.</p>}
+              </div>
+            </div>
+
+            {/* Section 4 */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>4. Commercial Details</h3>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", fontSize: "13px" }}>
+                <div><strong>Payment Terms:</strong> {selectedVendor.paymentTerms}</div>
+                <div><strong>Credit Period:</strong> {selectedVendor.creditPeriod || "N/A"}</div>
+                <div><strong>Quotation Validity:</strong> {selectedVendor.quotationValidity || "N/A"}</div>
+                <div><strong>MOQ:</strong> {selectedVendor.moq || "N/A"}</div>
+                <div><strong>Delivery Lead Time:</strong> {selectedVendor.deliveryLeadTime || "N/A"}</div>
+                <div><strong>Pricing Basis:</strong> {selectedVendor.pricingBasis || "N/A"}</div>
+                <div><strong>GST Applicable:</strong> {selectedVendor.gstApplicable}</div>
+                <div><strong>Transportation Terms:</strong> {selectedVendor.transportationTerms || "N/A"}</div>
+              </div>
+            </div>
+
+            {/* Section 6: Documents */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>6. Documents Uploaded</h3>
+              <div style={{ display: "flex", gap: "20px", fontSize: "13px", flexWrap: "wrap" }}>
+                {selectedVendor.gstCertFileBase64 ? (
+                  <a href={selectedVendor.gstCertFileBase64} download={selectedVendor.gstCertFileName || "GST_Certificate"} className="support-link">📄 GST Certificate ({selectedVendor.gstCertFileName})</a>
+                ) : <span>GST Certificate: Not attached</span>}
+                {selectedVendor.panCardFileBase64 ? (
+                  <a href={selectedVendor.panCardFileBase64} download={selectedVendor.panCardFileName || "PAN_Card"} className="support-link">📄 PAN Card ({selectedVendor.panCardFileName})</a>
+                ) : <span>PAN Card: Not attached</span>}
+              </div>
+            </div>
+
+            {/* Section 7 */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>7. Business References</h3>
+              <div style={{ fontSize: "13px" }}>
+                <p style={{ margin: "0 0 6px 0" }}><strong>Major Clients:</strong> {selectedVendor.majorClients || "N/A"}</p>
+                <p style={{ margin: "0 0 6px 0" }}><strong>Existing Industries:</strong> {selectedVendor.existingIndustries || "N/A"}</p>
+                <p style={{ margin: "0 0 6px 0" }}><strong>Previous Projects:</strong> {selectedVendor.previousProjects || "N/A"}</p>
+                <p style={{ margin: 0 }}><strong>Client Reference:</strong> {selectedVendor.clientReference || "N/A"}</p>
+              </div>
+            </div>
+
+            {/* Section 8 */}
+            <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>8. Declaration & Approval</h3>
+              <div style={{ fontSize: "13px" }}>
+                <p style={{ margin: "0 0 6px 0" }}><strong>Authorized Person:</strong> {selectedVendor.authorizedPersonName} ({selectedVendor.authorizedDesignation})</p>
+                <p style={{ margin: "0 0 6px 0" }}><strong>Date:</strong> {selectedVendor.declarationDate}</p>
+                {selectedVendor.signatureFileBase64 && (
+                  <div style={{ marginTop: "10px" }}>
+                    <strong>Signature:</strong><br />
+                    <img src={selectedVendor.signatureFileBase64} alt="Signature" style={{ maxHeight: "70px", marginTop: "6px", border: "1px solid #cbd5e1", borderRadius: "4px" }} />
+                  </div>
+                )}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -2693,66 +2954,14 @@ function ContactPage() {
                   <span>info.salvinindustries@gmail.com</span>
                 </div>
               </div>
-              <div className="help-card">
-                <strong>Need Quick Help?</strong>
-                <p>Talk directly with our support team</p>
-                <a href="#" className="support-link">Contact Support &rarr;</a>
-                <div style={{ marginTop: "1rem" }}>
-                  <a href="https://www.salvinindustires.com/" target="_blank" rel="noopener noreferrer" className="support-link" style={{ color: "#666", fontSize: "0.85rem" }}>for corporate Use Only &rarr;</a>
-                </div>
+              <div className="vendor-reg-card">
+                <h3>Vendor Registration</h3>
+                <p>Supplier, Manufacturer or Contractor? Join Salvin Industries approved vendor network.</p>
+                <NavLink to="/vendor-registration" className="vendor-reg-btn">
+                  Vendor Registration &rarr;
+                </NavLink>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Department Section */}
-      <section className="contact-dept-section">
-        <div className="contact-container">
-          <h2 className="section-title text-center">Salvin Family</h2>
-          <div className="dept-grid">
-
-            {/* Dept Cards */}
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>Managing Director</strong>
-                <span>Keval Gandhi</span>
-                <a href="mailto:md.salvinindustries@gmail.com">md.salvinindustries@gmail.com</a>
-              </div>
-            </div>
-
-            {/* <div className="dept-card">
-              <div className="dept-info">
-                <strong>CEO</strong>
-                <span>Priya Rajput</span>
-                <a href="mailto:ceo.salvin@gmail.com">ceo.salvin@gmail.com</a>
-              </div>
-            </div> */}
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>General Manager</strong>
-                <span>Nidhi Shah</span>
-                <a href="mailto:gm.salvinindustrirs@outlook.com">gm.salvinindustrirs@outlook.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>Automation Head</strong>
-                <span>Mansi Gajera </span>
-                <a href="mailto:info.salvinindustries@gmail.com">info.salvinindustries@gmail.com</a>
-              </div>
-            </div>
-
-            <div className="dept-card">
-              <div className="dept-info">
-                <strong>IT Support</strong>
-                <span>Digesh Prajapati</span>
-                <a href="mailto:it.salvinindustries@gmail.com">it.salvinindustries@gmail.com</a>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>
@@ -3059,17 +3268,20 @@ export default function App() {
     setIsAdminAuthenticated(false);
   };
 
+  const isVendorRegRoute = location.pathname === "/vendor-registration";
+  const hideHeaderFooter = isAdminRoute || isVendorRegRoute;
   const isIntroVisible = showIntro && !isAdminRoute;
 
   return (
     <>
       <div className={`app${isIntroVisible ? " app-intro-active" : ""}`}>
-        <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />
+        {!hideHeaderFooter && <Header isAdminAuthenticated={isAdminAuthenticated} onAdminLogout={handleAdminLogout} />}
         {/* Public paths: also list in scripts/generate-sitemap.mjs (sitemap + SEO) */}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/vendor-registration" element={<VendorRegistrationPage />} />
           <Route path="/food-consultant" element={<ServicesPage />} />
           <Route path="/food-business-planning-consultancy" element={<FoodBusinessPlanningPage />} />
           <Route path="/food-plant-design-engineering" element={<PlantDesignEngineeringPage />} />
@@ -3243,9 +3455,9 @@ export default function App() {
           />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
-        <Footer />
+        {!hideHeaderFooter && <Footer />}
       </div>
-      <FloatingContact />
+      {!hideHeaderFooter && <FloatingContact />}
     </>
   );
 }

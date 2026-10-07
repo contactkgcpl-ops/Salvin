@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { 
   ShoppingBag, 
@@ -17,6 +17,11 @@ import {
 
 export default function SupplyChainConsultancyPage() {
   const [openFAQIndex, setOpenFAQIndex] = useState(null);
+
+  useEffect(() => {
+    document.title = "Food Supply Chain & Procurement Consultancy | Salvin Industries";
+    window.scrollTo(0, 0);
+  }, []);
 
   const heroImage = "/assets/core/heroes/salvinhero2.webp";
   const introImage = "/assets/core/services/supply_chain_consultancy.jpg";

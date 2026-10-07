@@ -20,6 +20,7 @@ const STATIC_PATHS = [
   "/",
   "/about",
   "/contact",
+  "/vendor-registration",
   "/food-consultant",
   "/food-business-planning-consultancy",
   "/food-plant-design-engineering",

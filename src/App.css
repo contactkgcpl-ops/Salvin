@@ -7323,9 +7323,13 @@ p {
 
 /* Inquiry Section */
 .contact-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
+  max-width: 1560px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(12px, 1.8vw, 24px);
+  padding-right: clamp(12px, 1.8vw, 24px);
+  box-sizing: border-box;
 }
 
 .contact-inquiry-section {
@@ -7487,7 +7491,7 @@ p {
   color: #475569;
 }
 
-.help-card {
+.help-card, .vendor-reg-card {
   background: #0f172a;
   color: white;
   padding: 32px 24px;
@@ -7495,16 +7499,20 @@ p {
   display: flex;
   flex-direction: column;
   gap: 12px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.2);
 }
 
-.help-card strong {
+.help-card strong, .vendor-reg-card h3 {
   font-size: 18px;
+  margin: 0;
+  color: #ffffff;
 }
 
-.help-card p {
-  font-size: 14px;
+.help-card p, .vendor-reg-card p {
+  font-size: 13px;
   color: #94a3b8;
   margin: 0;
+  line-height: 1.5;
 }
 
 .support-link {
@@ -7513,6 +7521,28 @@ p {
   font-size: 14px;
   font-weight: 600;
   margin-top: 8px;
+}
+
+.vendor-reg-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #f58220;
+  color: #ffffff !important;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  margin-top: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(245, 130, 32, 0.3);
+}
+
+.vendor-reg-btn:hover {
+  background: #e07010;
+  transform: translateY(-1px);
 }
 
 /* Department Section */
