@@ -967,7 +967,7 @@ function AdminPage({
   machines,
   onDeleteMachine
 }) {
-  const [activeTab, setActiveTab] = useState("vendors");
+  const [activeTab, setActiveTab] = useState("machines");
   const firstCategoryId = categories[0]?.id || "";
   const firstSubcategoryId = subcategories.find((item) => sameId(item.category_id, firstCategoryId))?.id || "";
   const [machineForm, setMachineForm] = useState({
@@ -1296,11 +1296,29 @@ function AdminPage({
           <div>
             <span className="admin-eyebrow">Salvin Industries • Control Center</span>
             <h1 style={{ margin: "4px 0 6px 0", fontSize: "28px" }}>Admin Portal</h1>
-            <p style={{ margin: 0, fontSize: "14px", color: "#64748b" }}>Manage vendor onboardings, supplier registrations, and platform analytics.</p>
+            <p style={{ margin: 0, fontSize: "14px", color: "#64748b" }}>Manage machines, vendor registrations, supplier network, and system analytics.</p>
           </div>
 
           {/* Right Side Navigation Menu */}
           <div className="admin-right-menu" style={{ display: "flex", gap: "10px", background: "#f1f5f9", padding: "6px", borderRadius: "10px", border: "1px solid #cbd5e1" }}>
+            <button
+              type="button"
+              onClick={() => setActiveTab("machines")}
+              style={{
+                padding: "10px 18px",
+                borderRadius: "8px",
+                border: "none",
+                fontWeight: "700",
+                fontSize: "13px",
+                cursor: "pointer",
+                background: activeTab === "machines" ? "#f58220" : "transparent",
+                color: activeTab === "machines" ? "#ffffff" : "#475569",
+                boxShadow: activeTab === "machines" ? "0 4px 12px rgba(245, 130, 32, 0.3)" : "none",
+                transition: "all 0.2s ease"
+              }}
+            >
+              ⚙️ Machine Management
+            </button>
             <button
               type="button"
               onClick={() => setActiveTab("vendors")}
@@ -1340,12 +1358,198 @@ function AdminPage({
           </div>
         </header>
 
+        {/* TAB 1: MACHINE MANAGEMENT */}
+        {activeTab === "machines" && (
+          <div style={{ marginTop: "24px" }}>
+            <div className="admin-stat-grid" aria-label="Dashboard summary">
+              <div className="admin-stat-card">
+                <FaBoxOpen aria-hidden="true" />
+                <div><span>Machines</span><strong>{dashboard?.total_machines ?? machines.length}</strong></div>
+              </div>
+              <div className="admin-stat-card">
+                <FaLayerGroup aria-hidden="true" />
+                <div><span>Categories</span><strong>{dashboard?.total_categories ?? categories.length}</strong></div>
+              </div>
+              <div className="admin-stat-card">
+                <FaSitemap aria-hidden="true" />
+                <div><span>Subcategories</span><strong>{dashboard?.total_subcategories ?? subcategories.length}</strong></div>
+              </div>
+              <div className="admin-stat-card">
+                <FaRobot aria-hidden="true" />
+                <div><span>Top Chat Question</span><strong>{topQuestionCount}</strong></div>
+              </div>
+            </div>
+
+            <div className="admin-layout">
+              <form className="admin-form-panel" onSubmit={handleMachineSubmit}>
+                <div className="admin-panel-header">
+                  <div>
+                    <span className="admin-eyebrow">{machineForm.id ? "Update Entry" : "New Entry"}</span>
+                    <h2>{machineForm.id ? "Edit Machine" : "Add New Machine"}</h2>
+                  </div>
+                  {machineForm.id && <button className="admin-secondary-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
+                </div>
+
+                <div className="admin-form-section">
+                  <div className="admin-section-title">
+                    <FaRegEdit aria-hidden="true" />
+                    <div><h3>Basic Information</h3><p>Name, category, URL, and customer-facing description.</p></div>
+                  </div>
+                  <div className="admin-field-grid">
+                    <label>Machine Name
+                      <input value={machineForm.machine_name} onChange={(e) => handleMachineNameChange(e.target.value)} placeholder="Example: Automatic Bottle Filling Machine" required />
+                    </label>
+                    <label>Category
+                      <select value={machineForm.category_id} onChange={(e) => {
+                        const categoryId = e.target.value;
+                        const nextSubcategory = subcategories.find((item) => sameId(item.category_id, categoryId));
+                        setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
+                      }} required>
+                        <option value="">Select category</option>
+                        {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+                      </select>
+                    </label>
+                    <label>Subcategory
+                      <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
+                        <option value="">No subcategory</option>
+                        {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
+                      </select>
+                    </label>
+                    <label>URL Slug
+                      <input value={machineSlug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: createSlug(e.target.value) }))} placeholder="auto-generated-from-machine-name" />
+                      <small>Auto-created from the machine name. You can edit it if needed.</small>
+                    </label>
+                  </div>
+                  <label>Description
+                    <textarea rows="4" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} placeholder="Briefly describe what this machine does and where it is used." required />
+                  </label>
+                </div>
+
+                <div className="admin-form-section">
+                  <div className="admin-section-title">
+                    <FaImage aria-hidden="true" />
+                    <div><h3>Images</h3><p>Upload a new image or keep an existing path/URL.</p></div>
+                  </div>
+                  <div className="admin-image-grid">
+                    <label className="admin-upload-box">Upload Machine Image
+                      <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
+                      <span>PNG, JPG, or WEBP</span>
+                    </label>
+                    <div className="admin-preview-box">
+                      {(imagePreview || machineForm.image_url) ? (
+                        <img src={imagePreview || machineForm.image_url} alt="Machine preview" loading="lazy" />
+                      ) : (
+                        <span>No image selected</span>
+                      )}
+                    </div>
+                  </div>
+                  <label>Existing Image Path
+                    <input placeholder="/assets/assets/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} />
+                    <small>Use this when the image is already uploaded or hosted externally.</small>
+                  </label>
+                </div>
+
+                <div className="admin-form-section">
+                  <div className="admin-section-title">
+                    <FaTags aria-hidden="true" />
+                    <div><h3>Specifications & Additional Details</h3><p>Add any technical specs, features, capacity details, or custom metadata.</p></div>
+                  </div>
+                  <div className="admin-spec-list">
+                    {machineForm.specifications.map((spec, index) => (
+                      <div key={index} className="admin-spec-row">
+                        <input placeholder="Specification title, e.g. Capacity" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
+                        <input placeholder="Value, e.g. 500 kg/hr" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
+                        <button className="admin-icon-btn danger" type="button" onClick={() => removeSpecificationRow(index)} aria-label="Remove specification"><FaTrashAlt aria-hidden="true" /></button>
+                      </div>
+                    ))}
+                  </div>
+                  <button className="admin-secondary-btn" type="button" onClick={addSpecificationRow}><FaPlus aria-hidden="true" /> Add Specification</button>
+                  <label>Machine JSON (Optional)
+                    <textarea
+                      rows="10"
+                      value={machineForm.machine_json}
+                      onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_json: e.target.value }))}
+                      placeholder={`{\n  "Machine Overview": { "brand": "SALVIN", "name": "Machine Name" },\n  "specifications": { "Voltage": "220 V" },\n  "data": { "Driven Type": "Electric" }\n}`}
+                    />
+                    <small>If provided, JSON `meta/specifications/data` overrides spec rows and appears in machine detail card.</small>
+                  </label>
+                </div>
+
+                <div className="admin-form-section">
+                  <div className="admin-section-title">
+                    <FaSearch aria-hidden="true" />
+                    <div><h3>SEO Information</h3><p>Search preview title and description for this machine page.</p></div>
+                  </div>
+                  <label>Meta Title
+                    <input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} placeholder="SEO title for search results" />
+                  </label>
+                  <label>Meta Description
+                    <textarea rows="3" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} placeholder="Short summary shown in search results." />
+                  </label>
+                </div>
+
+                {(machineSubmitError || draftMessage || adminActionError) && (
+                  <p className={(machineSubmitError || adminActionError) ? "admin-error-text" : "admin-success-text"}>
+                    {machineSubmitError || adminActionError || draftMessage}
+                  </p>
+                )}
+                <div className="admin-form-actions">
+                  <button className="admin-secondary-btn" type="button" onClick={saveMachineDraft}><FaRegSave aria-hidden="true" /> Save Draft</button>
+                  <button className="admin-primary-btn" type="submit" disabled={isBusy}>{machineForm.id ? "Update Machine" : "Publish Machine"}</button>
+                </div>
+              </form>
+
+              <aside className="admin-sidebar">
+                <div className="admin-card">
+                  <div className="admin-panel-header compact">
+                    <div>
+                      <span className="admin-eyebrow">Newest First</span>
+                      <h2>All Machines ({visibleMachines.length})</h2>
+                    </div>
+                  </div>
+                  <label className="admin-search-field">
+                    <FaSearch aria-hidden="true" />
+                    <input value={machineSearch} onChange={(e) => setMachineSearch(e.target.value)} placeholder="Search machines..." />
+                  </label>
+                  <div className="admin-list machine-list">
+                    {visibleMachines.map((machine) => (
+                      <div key={machine.id || machine.machine_id} className="admin-list-row">
+                        <div>
+                          <strong>{machine.machine_name}</strong>
+                          <p>{machine.category_id} | {machine.subcategory}</p>
+                        </div>
+                        <div className="admin-row-actions">
+                          <button className="admin-icon-btn" type="button" onClick={() => editMachine(machine)} aria-label={`Edit ${machine.machine_name}`}><FaRegEdit aria-hidden="true" /></button>
+                          <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                            setAdminActionError("");
+                            try {
+                              setIsBusy(true);
+                              await onDeleteMachine(machine.id || machine.machine_id);
+                            } catch (err) {
+                              setAdminActionError(err?.message || "Machine could not be deleted.");
+                            } finally {
+                              setIsBusy(false);
+                            }
+                          }} aria-label={`Remove ${machine.machine_name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                        </div>
+                      </div>
+                    ))}
+                    {!visibleMachines.length && <p className="admin-empty-state">No machines match your search.</p>}
+                  </div>
+                </div>
+              </aside>
+            </div>
+          </div>
+        )}
+
+        {/* TAB 2: VENDOR REGISTRATIONS */}
         {activeTab === "vendors" && (
           <div style={{ marginTop: "24px" }}>
             <VendorRegistrationsAdminCard />
           </div>
         )}
 
+        {/* TAB 3: SYSTEM OVERVIEW & ANALYTICS */}
         {activeTab === "overview" && (
           <div style={{ marginTop: "24px" }}>
             <div className="admin-stat-grid" aria-label="Dashboard summary">
@@ -1671,14 +1875,37 @@ function VendorRegistrationsAdminCard() {
 
             {/* Section 6: Documents */}
             <div className="admin-form-section" style={{ marginBottom: "16px", background: "#f8fafc", padding: "16px", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
-              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>6. Documents Uploaded</h3>
-              <div style={{ display: "flex", gap: "20px", fontSize: "13px", flexWrap: "wrap" }}>
+              <h3 style={{ fontSize: "15px", margin: "0 0 10px 0", color: "#0b1a2c" }}>6. Attached Documents (Click to Download)</h3>
+              <div style={{ display: "flex", gap: "12px", fontSize: "13px", flexWrap: "wrap" }}>
                 {selectedVendor.gstCertFileBase64 ? (
-                  <a href={selectedVendor.gstCertFileBase64} download={selectedVendor.gstCertFileName || "GST_Certificate"} className="support-link">📄 GST Certificate ({selectedVendor.gstCertFileName})</a>
-                ) : <span>GST Certificate: Not attached</span>}
+                  <a
+                    href={selectedVendor.gstCertFileBase64}
+                    download={selectedVendor.gstCertFileName || "GST_Certificate.pdf"}
+                    style={{ background: "#0f4c81", color: "#fff", padding: "8px 14px", borderRadius: "6px", textDecoration: "none", fontWeight: "600", display: "inline-flex", alignItems: "center", gap: "6px" }}
+                  >
+                    📥 Download GST Certificate ({selectedVendor.gstCertFileName})
+                  </a>
+                ) : <span style={{ color: "#64748b" }}>GST Certificate: Not attached</span>}
+
                 {selectedVendor.panCardFileBase64 ? (
-                  <a href={selectedVendor.panCardFileBase64} download={selectedVendor.panCardFileName || "PAN_Card"} className="support-link">📄 PAN Card ({selectedVendor.panCardFileName})</a>
-                ) : <span>PAN Card: Not attached</span>}
+                  <a
+                    href={selectedVendor.panCardFileBase64}
+                    download={selectedVendor.panCardFileName || "PAN_Card.pdf"}
+                    style={{ background: "#0f4c81", color: "#fff", padding: "8px 14px", borderRadius: "6px", textDecoration: "none", fontWeight: "600", display: "inline-flex", alignItems: "center", gap: "6px" }}
+                  >
+                    📥 Download PAN Card ({selectedVendor.panCardFileName})
+                  </a>
+                ) : <span style={{ color: "#64748b" }}>PAN Card: Not attached</span>}
+
+                {selectedVendor.catalogueFileBase64 && (
+                  <a
+                    href={selectedVendor.catalogueFileBase64}
+                    download={selectedVendor.catalogueFileName || "Product_Catalogue.pdf"}
+                    style={{ background: "#f58220", color: "#fff", padding: "8px 14px", borderRadius: "6px", textDecoration: "none", fontWeight: "600", display: "inline-flex", alignItems: "center", gap: "6px" }}
+                  >
+                    📁 Download Product Catalogue ({selectedVendor.catalogueFileName})
+                  </a>
+                )}
               </div>
             </div>
 
@@ -1702,7 +1929,14 @@ function VendorRegistrationsAdminCard() {
                 {selectedVendor.signatureFileBase64 && (
                   <div style={{ marginTop: "10px" }}>
                     <strong>Signature:</strong><br />
-                    <img src={selectedVendor.signatureFileBase64} alt="Signature" style={{ maxHeight: "70px", marginTop: "6px", border: "1px solid #cbd5e1", borderRadius: "4px" }} />
+                    <img src={selectedVendor.signatureFileBase64} alt="Signature" style={{ maxHeight: "70px", marginTop: "6px", border: "1px solid #cbd5e1", borderRadius: "4px" }} /><br />
+                    <a
+                      href={selectedVendor.signatureFileBase64}
+                      download={selectedVendor.signatureFileName || "Signature.png"}
+                      style={{ background: "#475569", color: "#fff", padding: "4px 10px", borderRadius: "4px", textDecoration: "none", fontSize: "11px", fontWeight: "600", marginTop: "6px", display: "inline-block" }}
+                    >
+                      📥 Download Signature
+                    </a>
                   </div>
                 )}
               </div>
