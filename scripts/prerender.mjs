@@ -20,6 +20,8 @@ const STATIC_PATHS = [
   "/blogs/how-to-start-food-processing-business-in-india",
   ...brochureProjects.map((p) => p.detailsPath),
   "/machineries",
+  "/admin-panel",
+  "/vendor-registration",
 ];
 
 const MACHINES_FETCH_URL = process.env.SITEMAP_MACHINES_JSON_URL || `${SITE_URL}/api/machines`;
