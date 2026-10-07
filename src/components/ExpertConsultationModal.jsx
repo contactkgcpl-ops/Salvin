@@ -39,12 +39,31 @@ export default function ExpertConsultationModal({ isOpenOverride, onCloseOverrid
     }));
   };
 
+  const [errorMsg, setErrorMsg] = useState('');
+
+  const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const PHONE_REGEX = /^(\+91[\-\s]?)?[6-9]\d{9}$/;
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name.trim() || !formData.phone.trim()) {
-      alert('Please fill in your Name and Mobile Number.');
+    setErrorMsg('');
+
+    if (!formData.name.trim()) {
+      setErrorMsg('Please enter your Name.');
       return;
     }
+
+    const cleanPhone = (formData.phone || '').trim().replace(/[\s\-]/g, '');
+    if (!formData.phone.trim() || !PHONE_REGEX.test(cleanPhone)) {
+      setErrorMsg('Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9.');
+      return;
+    }
+
+    if (formData.email.trim() && !EMAIL_REGEX.test(formData.email.trim())) {
+      setErrorMsg('Please enter a valid email address (e.g. name@company.com).');
+      return;
+    }
+
     setIsSubmitting(true);
 
     // Save Lead data to localStorage
@@ -167,6 +186,12 @@ export default function ExpertConsultationModal({ isOpenOverride, onCloseOverrid
                 />
               </div>
             </div>
+
+            {errorMsg && (
+              <div style={{ color: '#ef4444', backgroundColor: '#fef2f2', border: '1px solid #fca5a5', padding: '8px 12px', borderRadius: '6px', fontSize: '0.85rem', marginBottom: '12px', fontWeight: 500 }}>
+                ⚠️ {errorMsg}
+              </div>
+            )}
 
             {/* Actions Row */}
             <div className="ec-actions-row">

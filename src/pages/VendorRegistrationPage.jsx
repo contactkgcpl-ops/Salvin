@@ -101,7 +101,15 @@ export default function VendorRegistrationPage() {
     J: "Artificial Juridical Person"
   };
 
-  // Handle Input Changes
+  // Validation Helpers
+  const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const PHONE_REGEX = /^(\+91[\-\s]?)?[6-9]\d{9}$/;
+  const URL_REGEX = /^(https?:\/\/)?([\w\d\-_]+\.)+[\w\d\-_]+(\/.*)?$/i;
+
+  const isValidEmail = (email) => EMAIL_REGEX.test((email || "").trim());
+  const isValidPhone = (phone) => PHONE_REGEX.test((phone || "").trim().replace(/[\s\-]/g, ''));
+
+  // Handle Input Changes with Real-time Validation
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
     const val = type === "checkbox" ? checked : value;
@@ -126,215 +134,28 @@ export default function VendorRegistrationPage() {
     }
   };
 
-  // GST Format & Live Verification
-  const validateGST = (gst) => {
-    if (!gst) {
-      setGstValidationMsg(null);
-      setGstDetailsCard(null);
-      return;
-    }
-    const gstRegex = /^\d{2}[A-Z]{5}\d{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
-    if (!gstRegex.test(gst)) {
-      setGstValidationMsg({ valid: false, message: "Invalid GSTIN format (e.g. 24ABCDE1234F1Z5)" });
-      setGstDetailsCard(null);
-    } else {
-      const stateCode = gst.substring(0, 2);
-      const stateName = GST_STATE_CODES[stateCode] || "India";
-      const entityChar = gst.charAt(3);
-      const entityType = ENTITY_TYPES[entityChar] || "Registered Business Entity";
-      const extractedPan = gst.substring(2, 12);
+  // Blur Handler for Instant Email/Phone Validation
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    const val = (value || "").trim();
 
-      setGstValidationMsg({
-        valid: true,
-        message: `Valid GSTIN Format • State: ${stateName} (${stateCode})`
-      });
-
-      const details = {
-        gstin: gst,
-        stateCode,
-        stateName,
-        entityType,
-        pan: extractedPan,
-        companyName: formData.companyName || "",
-        address: formData.registeredAddress || ""
-      };
-
-      setGstDetailsCard(details);
-
-      // Auto fill extracted PAN if empty or invalid length
-      setFormData((prev) => {
-        if (!prev.panNumber || prev.panNumber.length !== 10) {
-          return { ...prev, panNumber: extractedPan };
-        }
-        return prev;
-      });
-      validatePAN(extractedPan);
-
-      // Live fetch from Open GST API lookup
-      fetchLiveGSTDetails(gst, stateName);
-    }
-  };
-
-  // GST Checksum Algorithm Helper (Section 22/25 CGST Act)
-  const verifyGSTChecksum = (gstin) => {
-    if (!gstin || gstin.length !== 15) return false;
-    const chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let factor = 1;
-    let sum = 0;
-
-    for (let i = 0; i < 14; i++) {
-      const char = gstin[i];
-      const codePoint = chars.indexOf(char);
-      if (codePoint === -1) return false;
-
-      let digit = codePoint * factor;
-      factor = factor === 1 ? 2 : 1;
-      sum += Math.floor(digit / 36) + (digit % 36);
-    }
-
-    const checkDigitIndex = (36 - (sum % 36)) % 36;
-    return gstin[14] === chars[checkDigitIndex];
-  };
-
-  // Live GST Verification Engine (sheet.gstincheck.co.in API)
-  const fetchLiveGSTDetails = async (gst, defaultState) => {
-    try {
-      const apiKey = import.meta.env.VITE_GST_API_KEY || "8fff1df37f2ecec1a68496b40326073d";
-      setGstValidationMsg({ valid: true, message: `Searching official GST database for ${gst}...` });
-
-      const res = await fetch(`https://sheet.gstincheck.co.in/check/${apiKey}/${gst}`).catch(() => null);
-
-      if (res && res.ok) {
-        const json = await res.json();
-        if (json && json.flag && json.data) {
-          const d = json.data;
-          const companyName = d.tradeNam || d.lgnm || "";
-          const legalName = d.lgnm || d.tradeNam || "";
-          const status = (d.sts || "Active").toString();
-          const isActive = /active/i.test(status) && !/inactive|cancelled|suspended/i.test(status);
-          const entityType = d.ctb || "";
-
-          const addrObj = d.pradr?.addr || {};
-          const addrParts = [
-            addrObj.bno,
-            addrObj.bnm,
-            addrObj.st,
-            addrObj.loc
-          ].filter(Boolean).join(", ");
-
-          const pincode = addrObj.pncd || "";
-          const city = addrObj.dst || "";
-          const state = addrObj.stcd || defaultState;
-
-          setGstDetailsCard((prev) => ({
-            ...prev,
-            companyName: companyName || legalName,
-            address: addrParts,
-            city,
-            state,
-            pincode,
-            status: isActive ? "ACTIVE" : status.toUpperCase(),
-            isActive,
-            entityType: entityType || prev?.entityType
-          }));
-
-          setFormData((prev) => ({
-            ...prev,
-            companyName: companyName || legalName || prev.companyName,
-            registeredAddress: addrParts || prev.registeredAddress,
-            city: city || prev.city,
-            state: state || prev.state,
-            pincode: pincode || prev.pincode
-          }));
-
-          setGstValidationMsg({
-            valid: isActive,
-            message: isActive
-              ? `✓ Official GST Record Found: ${companyName || legalName}`
-              : `⚠️ GST Status: ${status} (Inactive / Cancelled)`
-          });
-          return;
-        } else if (json && json.message) {
-          setGstValidationMsg({
-            valid: false,
-            message: `⚠️ ${json.message}`
-          });
-        }
+    if (name === "companyEmail" || name === "emailId") {
+      if (val && !isValidEmail(val)) {
+        setErrors((prev) => ({ ...prev, [name]: "Enter a valid email address (e.g. name@company.com)" }));
       }
-
-      // Checksum & Smart Verification Fallback if network fails
-      const isChecksumValid = verifyGSTChecksum(gst);
-      setGstValidationMsg({
-        valid: true,
-        message: `✓ Valid GSTIN Format • State: ${defaultState}${isChecksumValid ? " • Checksum Validated" : ""}`
-      });
-
-    } catch (err) {
-      console.log("GST Verification info:", err);
     }
-  };
 
-  // PAN Validation
-  const validatePAN = (pan) => {
-    if (!pan) {
-      setPanValidationMsg(null);
-      return;
-    }
-    const panRegex = /^[A-Z]{5}\d{4}[A-Z]{1}$/;
-    if (!panRegex.test(pan)) {
-      setPanValidationMsg({ valid: false, message: "Invalid PAN format (e.g. ABCDE1234F)" });
-    } else {
-      setPanValidationMsg({ valid: true, message: "Valid PAN format" });
-    }
-  };
-
-  // Pincode API Lookup (api.postalpincode.in)
-  const fetchPincodeDetails = async (pin) => {
-    setPincodeLoading(true);
-    setPincodeMsg("Fetching location details...");
-    try {
-      const res = await fetch(`https://api.postalpincode.in/pincode/${pin}`);
-      const data = await res.json();
-      if (data && data[0] && data[0].Status === "Success" && data[0].PostOffice?.length > 0) {
-        const po = data[0].PostOffice[0];
-        setFormData((prev) => ({
-          ...prev,
-          city: po.District || po.Block || po.Name,
-          state: po.State
-        }));
-        setPincodeMsg(`Auto-detected: ${po.District}, ${po.State}`);
-      } else {
-        setPincodeMsg("Pincode not found. Please enter City & State manually.");
+    if (name === "companyPhone" || name === "mobileNumber" || name === "whatsappNumber") {
+      if (val && !isValidPhone(val)) {
+        setErrors((prev) => ({ ...prev, [name]: "Enter a valid 10-digit mobile number starting with 6-9" }));
       }
-    } catch (err) {
-      setPincodeMsg("Could not auto-fetch location. Enter City & State manually.");
-    } finally {
-      setPincodeLoading(false);
-    }
-  };
-
-  // File to Base64 Converter
-  const handleFileUpload = (e, fileField, nameField) => {
-    const file = e.target.files[0];
-    if (!file) return;
-
-    if (file.size > 5 * 1024 * 1024) {
-      alert("File size must be less than 5MB.");
-      return;
     }
 
-    const reader = new FileReader();
-    reader.onloadend = () => {
-      setFormData((prev) => ({
-        ...prev,
-        [nameField]: file.name,
-        [fileField]: reader.result
-      }));
-      if (errors[nameField] || errors[fileField]) {
-        setErrors((prev) => ({ ...prev, [nameField]: null, [fileField]: null }));
+    if (name === "companyWebsite") {
+      if (val && !URL_REGEX.test(val)) {
+        setErrors((prev) => ({ ...prev, [name]: "Enter a valid website URL (e.g. https://www.example.com)" }));
       }
-    };
-    reader.readAsDataURL(file);
+    }
   };
 
   // Form Validation
@@ -342,34 +163,86 @@ export default function VendorRegistrationPage() {
     const newErrors = {};
 
     // 1. Company Details
-    if (!formData.companyName.trim()) newErrors.companyName = "Company/Firm Name is required";
-    if (!formData.vendorType) newErrors.vendorType = "Select Vendor Type";
-    if (!formData.companyEmail.trim()) newErrors.companyEmail = "Company Email is required";
-    if (!formData.companyPhone.trim()) newErrors.companyPhone = "Company Phone is required";
-    if (!formData.gstNumber.trim()) newErrors.gstNumber = "GST Number is required";
-    else if (gstValidationMsg && !gstValidationMsg.valid) newErrors.gstNumber = "Enter a valid GSTIN";
+    if (!formData.companyName.trim()) {
+      newErrors.companyName = "Company/Firm Name is required";
+    }
+
+    if (!formData.vendorType) {
+      newErrors.vendorType = "Select Vendor Type";
+    }
+
+    if (!formData.companyEmail.trim()) {
+      newErrors.companyEmail = "Company Email is required";
+    } else if (!isValidEmail(formData.companyEmail)) {
+      newErrors.companyEmail = "Enter a valid email address (e.g. info@company.com)";
+    }
+
+    if (!formData.companyPhone.trim()) {
+      newErrors.companyPhone = "Company Phone is required";
+    } else if (!isValidPhone(formData.companyPhone)) {
+      newErrors.companyPhone = "Enter a valid 10-digit mobile/phone number starting with 6-9";
+    }
+
+    if (formData.companyWebsite.trim() && !URL_REGEX.test(formData.companyWebsite.trim())) {
+      newErrors.companyWebsite = "Enter a valid website URL (e.g. https://www.example.com)";
+    }
+
+    if (!formData.gstNumber.trim()) {
+      newErrors.gstNumber = "GST Number is required";
+    } else if (gstValidationMsg && !gstValidationMsg.valid) {
+      newErrors.gstNumber = "Enter a valid 15-digit GSTIN";
+    }
+
     if (formData.panNumber.trim() && panValidationMsg && !panValidationMsg.valid) {
-      newErrors.panNumber = "Enter a valid PAN Number";
+      newErrors.panNumber = "Enter a valid 10-digit PAN Number";
     }
 
     // 2. Contact Person
-    if (!formData.contactPersonName.trim()) newErrors.contactPersonName = "Contact Person Name is required";
-    if (!formData.mobileNumber.trim()) newErrors.mobileNumber = "Mobile Number is required";
-    if (!formData.emailId.trim()) newErrors.emailId = "Email ID is required";
+    if (!formData.contactPersonName.trim()) {
+      newErrors.contactPersonName = "Contact Person Name is required";
+    }
+
+    if (!formData.mobileNumber.trim()) {
+      newErrors.mobileNumber = "Mobile Number is required";
+    } else if (!isValidPhone(formData.mobileNumber)) {
+      newErrors.mobileNumber = "Enter a valid 10-digit mobile number starting with 6-9";
+    }
+
+    if (formData.whatsappNumber.trim() && !isValidPhone(formData.whatsappNumber)) {
+      newErrors.whatsappNumber = "Enter a valid 10-digit WhatsApp number starting with 6-9";
+    }
+
+    if (!formData.emailId.trim()) {
+      newErrors.emailId = "Email ID is required";
+    } else if (!isValidEmail(formData.emailId)) {
+      newErrors.emailId = "Enter a valid email address (e.g. person@company.com)";
+    }
 
     // 3. Products/Services
-    if (!formData.productServiceCategory.trim()) newErrors.productServiceCategory = "Product/Service Category is required";
+    if (!formData.productServiceCategory.trim()) {
+      newErrors.productServiceCategory = "Product/Service Category is required";
+    }
 
     // 4. Commercial Details
-    if (!formData.paymentTerms.trim()) newErrors.paymentTerms = "Payment Terms are required";
+    if (!formData.paymentTerms.trim()) {
+      newErrors.paymentTerms = "Payment Terms are required";
+    }
 
     // 6. Documents
-    if (!formData.gstCertFileName) newErrors.gstCertFileName = "GST Certificate upload is required";
+    if (!formData.gstCertFileName) {
+      newErrors.gstCertFileName = "GST Certificate upload is required";
+    }
 
     // 8. Declaration
-    if (!formData.declarationConfirmed) newErrors.declarationConfirmed = "You must accept the declaration";
-    if (!formData.authorizedPersonName.trim()) newErrors.authorizedPersonName = "Authorized Person Name is required";
-    if (!formData.authorizedDesignation.trim()) newErrors.authorizedDesignation = "Authorized Person Designation is required";
+    if (!formData.declarationConfirmed) {
+      newErrors.declarationConfirmed = "You must accept the declaration";
+    }
+    if (!formData.authorizedPersonName.trim()) {
+      newErrors.authorizedPersonName = "Authorized Person Name is required";
+    }
+    if (!formData.authorizedDesignation.trim()) {
+      newErrors.authorizedDesignation = "Authorized Person Designation is required";
+    }
 
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
@@ -530,8 +403,11 @@ export default function VendorRegistrationPage() {
                       name="companyWebsite"
                       value={formData.companyWebsite}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="https://www.example.com"
+                      className={errors.companyWebsite ? "vr-input-error" : ""}
                     />
+                    {errors.companyWebsite && <span className="vr-error-msg">{errors.companyWebsite}</span>}
                   </div>
 
                   <div className="vr-field">
@@ -541,6 +417,7 @@ export default function VendorRegistrationPage() {
                       name="companyEmail"
                       value={formData.companyEmail}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="info@company.com"
                       className={errors.companyEmail ? "vr-input-error" : ""}
                     />
@@ -554,6 +431,7 @@ export default function VendorRegistrationPage() {
                       name="companyPhone"
                       value={formData.companyPhone}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="+91 9876543210"
                       className={errors.companyPhone ? "vr-input-error" : ""}
                     />
@@ -718,6 +596,7 @@ export default function VendorRegistrationPage() {
                       name="mobileNumber"
                       value={formData.mobileNumber}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="+91 9876543210"
                       className={errors.mobileNumber ? "vr-input-error" : ""}
                     />
@@ -731,8 +610,11 @@ export default function VendorRegistrationPage() {
                       name="whatsappNumber"
                       value={formData.whatsappNumber}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="+91 9876543210"
+                      className={errors.whatsappNumber ? "vr-input-error" : ""}
                     />
+                    {errors.whatsappNumber && <span className="vr-error-msg">{errors.whatsappNumber}</span>}
                   </div>
 
                   <div className="vr-field">
@@ -742,6 +624,7 @@ export default function VendorRegistrationPage() {
                       name="emailId"
                       value={formData.emailId}
                       onChange={handleChange}
+                      onBlur={handleBlur}
                       placeholder="person@company.com"
                       className={errors.emailId ? "vr-input-error" : ""}
                     />

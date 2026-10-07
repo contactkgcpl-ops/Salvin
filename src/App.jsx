@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { Navigate, NavLink, Route, Routes, useLocation, useParams, useSearchParams } from "react-router-dom";
-import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt, FaDraftingCompass, FaPencilRuler, FaHandshake, FaCogs, FaTruck, FaChartLine, FaTools } from "react-icons/fa";
+import { FaBoxOpen, FaImage, FaLayerGroup, FaPlus, FaRegEdit, FaRegSave, FaRobot, FaSearch, FaSitemap, FaTags, FaTrashAlt, FaDraftingCompass, FaPencilRuler, FaHandshake, FaCogs, FaTruck, FaChartLine, FaTools, FaBuilding, FaHourglassHalf, FaCheckCircle, FaTimesCircle } from "react-icons/fa";
 import "./App.css";
 import Cropper from "react-easy-crop";
 const machineryLayoutImage = "/assets/core/icons/machinery-layout.webp";
@@ -967,6 +967,7 @@ function AdminPage({
   machines,
   onDeleteMachine
 }) {
+  const [activeTab, setActiveTab] = useState("vendors");
   const firstCategoryId = categories[0]?.id || "";
   const firstSubcategoryId = subcategories.find((item) => sameId(item.category_id, firstCategoryId))?.id || "";
   const [machineForm, setMachineForm] = useState({
@@ -1291,304 +1292,145 @@ function AdminPage({
         />
       )}
       <div className="admin-shell">
-        <header className="admin-hero">
+        <header className="admin-hero" style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "20px" }}>
           <div>
-            <span className="admin-eyebrow">Admin Panel</span>
-            <h1>Machine Management</h1>
-            <p>Manage machines, media, categories, specifications, and SEO metadata from one clean workspace.</p>
+            <span className="admin-eyebrow">Salvin Industries • Control Center</span>
+            <h1 style={{ margin: "4px 0 6px 0", fontSize: "28px" }}>Admin Portal</h1>
+            <p style={{ margin: 0, fontSize: "14px", color: "#64748b" }}>Manage vendor onboardings, supplier registrations, and platform analytics.</p>
           </div>
-          <div className="admin-hero-count">
-            <strong>{dashboard?.total_machines ?? machines.length}</strong>
-            <span>Total Machines</span>
+
+          {/* Right Side Navigation Menu */}
+          <div className="admin-right-menu" style={{ display: "flex", gap: "10px", background: "#f1f5f9", padding: "6px", borderRadius: "10px", border: "1px solid #cbd5e1" }}>
+            <button
+              type="button"
+              onClick={() => setActiveTab("vendors")}
+              style={{
+                padding: "10px 18px",
+                borderRadius: "8px",
+                border: "none",
+                fontWeight: "700",
+                fontSize: "13px",
+                cursor: "pointer",
+                background: activeTab === "vendors" ? "#f58220" : "transparent",
+                color: activeTab === "vendors" ? "#ffffff" : "#475569",
+                boxShadow: activeTab === "vendors" ? "0 4px 12px rgba(245, 130, 32, 0.3)" : "none",
+                transition: "all 0.2s ease"
+              }}
+            >
+              🤝 Vendor Registrations
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab("overview")}
+              style={{
+                padding: "10px 18px",
+                borderRadius: "8px",
+                border: "none",
+                fontWeight: "700",
+                fontSize: "13px",
+                cursor: "pointer",
+                background: activeTab === "overview" ? "#f58220" : "transparent",
+                color: activeTab === "overview" ? "#ffffff" : "#475569",
+                boxShadow: activeTab === "overview" ? "0 4px 12px rgba(245, 130, 32, 0.3)" : "none",
+                transition: "all 0.2s ease"
+              }}
+            >
+              📊 System Overview
+            </button>
           </div>
         </header>
 
-        <div className="admin-stat-grid" aria-label="Dashboard summary">
-          <div className="admin-stat-card">
-            <FaBoxOpen aria-hidden="true" />
-            <div><span>Machines</span><strong>{dashboard?.total_machines ?? machines.length}</strong></div>
-          </div>
-          <div className="admin-stat-card">
-            <FaLayerGroup aria-hidden="true" />
-            <div><span>Categories</span><strong>{dashboard?.total_categories ?? categories.length}</strong></div>
-          </div>
-          <div className="admin-stat-card">
-            <FaSitemap aria-hidden="true" />
-            <div><span>Subcategories</span><strong>{dashboard?.total_subcategories ?? subcategories.length}</strong></div>
-          </div>
-          <div className="admin-stat-card">
-            <FaRobot aria-hidden="true" />
-            <div><span>Top Chat Question</span><strong>{topQuestionCount}</strong></div>
-          </div>
-        </div>
-
-        <div className="admin-layout">
-          <form className="admin-form-panel" onSubmit={handleMachineSubmit}>
-            <div className="admin-panel-header">
-              <div>
-                <span className="admin-eyebrow">{machineForm.id ? "Update Entry" : "New Entry"}</span>
-                <h2>{machineForm.id ? "Edit Machine" : "Add New Machine"}</h2>
-              </div>
-              {machineForm.id && <button className="admin-secondary-btn" type="button" onClick={resetMachineForm}>Cancel Edit</button>}
-            </div>
-
-            <div className="admin-form-section">
-              <div className="admin-section-title">
-                <FaRegEdit aria-hidden="true" />
-                <div><h3>Basic Information</h3><p>Name, category, URL, and customer-facing description.</p></div>
-              </div>
-              <div className="admin-field-grid">
-                <label>Machine Name
-                  <input value={machineForm.machine_name} onChange={(e) => handleMachineNameChange(e.target.value)} placeholder="Example: Automatic Bottle Filling Machine" required />
-                </label>
-                <label>Category
-                  <select value={machineForm.category_id} onChange={(e) => {
-                    const categoryId = e.target.value;
-                    const nextSubcategory = subcategories.find((item) => sameId(item.category_id, categoryId));
-                    setMachineForm((prev) => ({ ...prev, category_id: categoryId, subcategory_id: nextSubcategory?.id || "" }));
-                  }} required>
-                    <option value="">Select category</option>
-                    {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
-                  </select>
-                </label>
-                <label>Subcategory
-                  <select value={machineForm.subcategory_id} onChange={(e) => setMachineForm((prev) => ({ ...prev, subcategory_id: e.target.value }))}>
-                    <option value="">No subcategory</option>
-                    {filteredSubcategories.map((subcategory) => <option key={subcategory.id} value={subcategory.id}>{subcategory.name}</option>)}
-                  </select>
-                </label>
-                <label>URL Slug
-                  <input value={machineSlug} onChange={(e) => setMachineForm((prev) => ({ ...prev, slug: createSlug(e.target.value) }))} placeholder="auto-generated-from-machine-name" />
-                  <small>Auto-created from the machine name. You can edit it if needed.</small>
-                </label>
-              </div>
-              <label>Description
-                <textarea rows="4" value={machineForm.description} onChange={(e) => setMachineForm((prev) => ({ ...prev, description: e.target.value }))} placeholder="Briefly describe what this machine does and where it is used." required />
-              </label>
-            </div>
-
-            <div className="admin-form-section">
-              <div className="admin-section-title">
-                <FaImage aria-hidden="true" />
-                <div><h3>Images</h3><p>Upload a new image or keep an existing path/URL.</p></div>
-              </div>
-              <div className="admin-image-grid">
-                <label className="admin-upload-box">Upload Machine Image
-                  <input type="file" accept="image/png,image/jpeg,image/webp" onChange={handleImageChange} />
-                  <span>PNG, JPG, or WEBP</span>
-                </label>
-                <div className="admin-preview-box">
-                  {(imagePreview || machineForm.image_url) ? (
-                    <img src={imagePreview || machineForm.image_url} alt="Machine preview" loading="lazy" />
-                  ) : (
-                    <span>No image selected</span>
-                  )}
-                </div>
-              </div>
-              <label>Existing Image Path
-                <input placeholder="/assets/assets/uploads/machines/your-file.jpg or https://..." value={machineForm.image_url} onChange={(e) => setMachineForm((prev) => ({ ...prev, image_url: e.target.value }))} />
-                <small>Use this when the image is already uploaded or hosted externally.</small>
-              </label>
-            </div>
-
-            <div className="admin-form-section">
-              <div className="admin-section-title">
-                <FaTags aria-hidden="true" />
-                <div><h3>Specifications & Additional Details</h3><p>Add any technical specs, features, capacity details, or custom metadata.</p></div>
-              </div>
-              <div className="admin-spec-list">
-                {machineForm.specifications.map((spec, index) => (
-                  <div key={index} className="admin-spec-row">
-                    <input placeholder="Specification title, e.g. Capacity" value={spec.title} onChange={(e) => updateSpecification(index, "title", e.target.value)} />
-                    <input placeholder="Value, e.g. 500 kg/hr" value={spec.value} onChange={(e) => updateSpecification(index, "value", e.target.value)} />
-                    <button className="admin-icon-btn danger" type="button" onClick={() => removeSpecificationRow(index)} aria-label="Remove specification"><FaTrashAlt aria-hidden="true" /></button>
-                  </div>
-                ))}
-              </div>
-              <button className="admin-secondary-btn" type="button" onClick={addSpecificationRow}><FaPlus aria-hidden="true" /> Add Specification</button>
-              <label>Machine JSON (Optional)
-                <textarea
-                  rows="10"
-                  value={machineForm.machine_json}
-                  onChange={(e) => setMachineForm((prev) => ({ ...prev, machine_json: e.target.value }))}
-                  placeholder={`{\n  "Machine Overview": { "brand": "SALVIN", "name": "Machine Name" },\n  "specifications": { "Voltage": "220 V" },\n  "data": { "Driven Type": "Electric" }\n}`}
-                />
-                <small>If provided, JSON `meta/specifications/data` overrides spec rows and appears in machine detail card.</small>
-              </label>
-            </div>
-
-            <div className="admin-form-section">
-              <div className="admin-section-title">
-                <FaSearch aria-hidden="true" />
-                <div><h3>SEO Information</h3><p>Search preview title and description for this machine page.</p></div>
-              </div>
-              <label>Meta Title
-                <input value={machineForm.meta_title} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_title: e.target.value }))} placeholder="SEO title for search results" />
-              </label>
-              <label>Meta Description
-                <textarea rows="3" value={machineForm.meta_description} onChange={(e) => setMachineForm((prev) => ({ ...prev, meta_description: e.target.value }))} placeholder="Short summary shown in search results." />
-              </label>
-            </div>
-
-            {(machineSubmitError || draftMessage || adminActionError) && (
-              <p className={(machineSubmitError || adminActionError) ? "admin-error-text" : "admin-success-text"}>
-                {machineSubmitError || adminActionError || draftMessage}
-              </p>
-            )}
-            <div className="admin-form-actions">
-              <button className="admin-secondary-btn" type="button" onClick={saveMachineDraft}><FaRegSave aria-hidden="true" /> Save Draft</button>
-              <button className="admin-primary-btn" type="submit" disabled={isBusy}>{machineForm.id ? "Update Machine" : "Publish Machine"}</button>
-            </div>
-          </form>
-
-          <aside className="admin-sidebar">
-            <div className="admin-card">
-              <div className="admin-panel-header compact">
-                <div>
-                  <span className="admin-eyebrow">Categories</span>
-                  <h2>Structure</h2>
-                </div>
-              </div>
-              <form onSubmit={handleCategorySubmit}>
-                <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
-                <button className="admin-primary-btn" type="submit" disabled={isBusy}>{categoryForm.id ? "Update Category" : "Add Category"}</button>
-              </form>
-              <form onSubmit={handleSubcategorySubmit}>
-                <label>Parent Category
-                  <select value={subcategoryForm.category_id} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, category_id: e.target.value }))}>
-                    {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
-                  </select>
-                </label>
-                <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
-                <button className="admin-secondary-btn" type="submit" disabled={isBusy}>{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
-              </form>
-              {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
-              <div className="admin-list compact-list">
-                {categories.map((category) => (
-                  <div key={category.id} className="admin-list-row">
-                    <div><strong>{category.name}</strong><p>{category.slug}</p></div>
-                    <div className="admin-row-actions">
-                      <button className="admin-icon-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })} aria-label={`Edit ${category.name}`}><FaRegEdit aria-hidden="true" /></button>
-                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
-                        setAdminActionError("");
-                        try {
-                          setIsBusy(true);
-                          await onDeleteCategory(category.id);
-                        } catch (err) {
-                          setAdminActionError(err?.message || "Category could not be deleted.");
-                        } finally {
-                          setIsBusy(false);
-                        }
-                      }} aria-label={`Remove ${category.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
-                    </div>
-                  </div>
-                ))}
-                {subcategoryFormOptions.map((subcategory) => (
-                  <div key={subcategory.id} className="admin-list-row">
-                    <div><strong>{subcategory.name}</strong><p>{subcategory.category_name}</p></div>
-                    <div className="admin-row-actions">
-                      <button className="admin-icon-btn" type="button" onClick={() => setSubcategoryForm({ id: subcategory.id, category_id: subcategory.category_id, name: subcategory.name })} aria-label={`Edit ${subcategory.name}`}><FaRegEdit aria-hidden="true" /></button>
-                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
-                        setAdminActionError("");
-                        try {
-                          setIsBusy(true);
-                          await onDeleteSubcategory(subcategory.id);
-                        } catch (err) {
-                          setAdminActionError(err?.message || "Subcategory could not be deleted.");
-                        } finally {
-                          setIsBusy(false);
-                        }
-                      }} aria-label={`Remove ${subcategory.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="admin-card">
-              <div className="admin-panel-header compact">
-                <div>
-                  <span className="admin-eyebrow">Chatbot Analytics</span>
-                  <h2>Question Counts</h2>
-                </div>
-              </div>
-              <div className="admin-analytics-list">
-                {questionAnalytics.map((item) => (
-                  <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
-                    <div>
-                      <strong>{item.label}</strong>
-                      <p>{item.target_id}</p>
-                    </div>
-                    <span>{item.count}</span>
-                  </div>
-                ))}
-                {!questionAnalytics.length && <p className="admin-empty-state">No chatbot question clicks yet.</p>}
-              </div>
-              {!!machineAnalytics.length && (
-                <>
-                  <div className="admin-panel-header compact analytics-subhead">
-                    <div>
-                      <span className="admin-eyebrow">Machine Interest</span>
-                      <h2>Machine Searches</h2>
-                    </div>
-                  </div>
-                  <div className="admin-analytics-list">
-                    {machineAnalytics.map((item) => (
-                      <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
-                        <div>
-                          <strong>{item.label}</strong>
-                          <p>{item.target_id}</p>
-                        </div>
-                        <span>{item.count}</span>
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-
-            <div className="admin-card">
-              <div className="admin-panel-header compact">
-                <div>
-                  <span className="admin-eyebrow">Newest First</span>
-                  <h2>All Machines</h2>
-                </div>
-                <strong>{visibleMachines.length}</strong>
-              </div>
-              <label className="admin-search-field">
-                <FaSearch aria-hidden="true" />
-                <input value={machineSearch} onChange={(e) => setMachineSearch(e.target.value)} placeholder="Search machines..." />
-              </label>
-              <div className="admin-list machine-list">
-                {visibleMachines.map((machine) => (
-                  <div key={machine.id || machine.machine_id} className="admin-list-row">
-                    <div>
-                      <strong>{machine.machine_name}</strong>
-                      <p>{machine.category_id} | {machine.subcategory}</p>
-                    </div>
-                    <div className="admin-row-actions">
-                      <button className="admin-icon-btn" type="button" onClick={() => editMachine(machine)} aria-label={`Edit ${machine.machine_name}`}><FaRegEdit aria-hidden="true" /></button>
-                      <button className="admin-icon-btn danger" type="button" onClick={async () => {
-                        setAdminActionError("");
-                        try {
-                          setIsBusy(true);
-                          await onDeleteMachine(machine.id || machine.machine_id);
-                        } catch (err) {
-                          setAdminActionError(err?.message || "Machine could not be deleted.");
-                        } finally {
-                          setIsBusy(false);
-                        }
-                      }} aria-label={`Remove ${machine.machine_name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
-                    </div>
-                  </div>
-                ))}
-                {!visibleMachines.length && <p className="admin-empty-state">No machines match your search.</p>}
-              </div>
-            </div>
-
+        {activeTab === "vendors" && (
+          <div style={{ marginTop: "24px" }}>
             <VendorRegistrationsAdminCard />
-          </aside>
-        </div>
+          </div>
+        )}
+
+        {activeTab === "overview" && (
+          <div style={{ marginTop: "24px" }}>
+            <div className="admin-stat-grid" aria-label="Dashboard summary">
+              <div className="admin-stat-card">
+                <FaLayerGroup aria-hidden="true" />
+                <div><span>Categories</span><strong>{dashboard?.total_categories ?? categories.length}</strong></div>
+              </div>
+              <div className="admin-stat-card">
+                <FaSitemap aria-hidden="true" />
+                <div><span>Subcategories</span><strong>{dashboard?.total_subcategories ?? subcategories.length}</strong></div>
+              </div>
+              <div className="admin-stat-card">
+                <FaRobot aria-hidden="true" />
+                <div><span>Top Chat Question</span><strong>{topQuestionCount}</strong></div>
+              </div>
+            </div>
+
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+              <div className="admin-card">
+                <div className="admin-panel-header compact">
+                  <div>
+                    <span className="admin-eyebrow">Categories</span>
+                    <h2>Structure</h2>
+                  </div>
+                </div>
+                <form onSubmit={handleCategorySubmit}>
+                  <label>Category<input value={categoryForm.name} onChange={(e) => setCategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
+                  <button className="admin-primary-btn" type="submit" disabled={isBusy}>{categoryForm.id ? "Update Category" : "Add Category"}</button>
+                </form>
+                <form onSubmit={handleSubcategorySubmit}>
+                  <label>Parent Category
+                    <select value={subcategoryForm.category_id} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, category_id: e.target.value }))}>
+                      {categories.map((category) => <option key={category.id} value={category.id}>{category.name}</option>)}
+                    </select>
+                  </label>
+                  <label>Subcategory<input value={subcategoryForm.name} onChange={(e) => setSubcategoryForm((prev) => ({ ...prev, name: e.target.value }))} required /></label>
+                  <button className="admin-secondary-btn" type="submit" disabled={isBusy}>{subcategoryForm.id ? "Update Subcategory" : "Add Subcategory"}</button>
+                </form>
+                {categorySubmitError && <p className="admin-error-text">{categorySubmitError}</p>}
+                <div className="admin-list compact-list">
+                  {categories.map((category) => (
+                    <div key={category.id} className="admin-list-row">
+                      <div><strong>{category.name}</strong><p>{category.slug}</p></div>
+                      <div className="admin-row-actions">
+                        <button className="admin-icon-btn" type="button" onClick={() => setCategoryForm({ id: category.id, name: category.name })} aria-label={`Edit ${category.name}`}><FaRegEdit aria-hidden="true" /></button>
+                        <button className="admin-icon-btn danger" type="button" onClick={async () => {
+                          setAdminActionError("");
+                          try {
+                            setIsBusy(true);
+                            await onDeleteCategory(category.id);
+                          } catch (err) {
+                            setAdminActionError(err?.message || "Category could not be deleted.");
+                          } finally {
+                            setIsBusy(false);
+                          }
+                        }} aria-label={`Remove ${category.name}`} disabled={isBusy}><FaTrashAlt aria-hidden="true" /></button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div className="admin-card">
+                <div className="admin-panel-header compact">
+                  <div>
+                    <span className="admin-eyebrow">Chatbot Analytics</span>
+                    <h2>Question Counts</h2>
+                  </div>
+                </div>
+                <div className="admin-analytics-list">
+                  {questionAnalytics.map((item) => (
+                    <div key={`${item.event_type}-${item.target_id}`} className="admin-analytics-row">
+                      <div>
+                        <strong>{item.label}</strong>
+                        <p>{item.target_id}</p>
+                      </div>
+                      <span>{item.count}</span>
+                    </div>
+                  ))}
+                  {!questionAnalytics.length && <p className="admin-empty-state">No chatbot question clicks yet.</p>}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );
@@ -1641,11 +1483,31 @@ function VendorRegistrationsAdminCard() {
   });
 
   return (
-    <div className="admin-card vendor-admin-card" style={{ marginTop: "24px" }}>
+    <div className="admin-card vendor-admin-card" style={{ marginTop: "0" }}>
+      {/* Stat indicators */}
+      <div className="admin-stat-grid" style={{ marginBottom: "20px" }}>
+        <div className="admin-stat-card">
+          <FaBuilding aria-hidden="true" style={{ color: "#0f4c81" }} />
+          <div><span>Total Registrations</span><strong>{vendors.length}</strong></div>
+        </div>
+        <div className="admin-stat-card">
+          <FaHourglassHalf aria-hidden="true" style={{ color: "#d97706" }} />
+          <div><span>Pending Action</span><strong>{vendors.filter((v) => (v.status || "Pending") === "Pending").length}</strong></div>
+        </div>
+        <div className="admin-stat-card">
+          <FaCheckCircle aria-hidden="true" style={{ color: "#16a34a" }} />
+          <div><span>Approved Vendors</span><strong>{vendors.filter((v) => v.status === "Approved").length}</strong></div>
+        </div>
+        <div className="admin-stat-card">
+          <FaTimesCircle aria-hidden="true" style={{ color: "#dc2626" }} />
+          <div><span>Rejected</span><strong>{vendors.filter((v) => v.status === "Rejected").length}</strong></div>
+        </div>
+      </div>
+
       <div className="admin-panel-header compact" style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
         <div>
-          <span className="admin-eyebrow">Supplier Network</span>
-          <h2>Vendor Registrations ({vendors.length})</h2>
+          <span className="admin-eyebrow">Supplier Network Database</span>
+          <h2>Vendor Registrations ({filteredVendors.length} Shown)</h2>
         </div>
         <div style={{ display: "flex", gap: "6px", flexWrap: "wrap" }}>
           {["All", "Pending", "Approved", "Rejected"].map((st) => (
@@ -1654,9 +1516,10 @@ function VendorRegistrationsAdminCard() {
               type="button"
               className={`admin-secondary-btn ${statusFilter === st ? "active-filter" : ""}`}
               style={{
-                padding: "3px 10px",
-                fontSize: "11px",
-                borderRadius: "4px",
+                padding: "5px 12px",
+                fontSize: "12px",
+                fontWeight: "600",
+                borderRadius: "6px",
                 background: statusFilter === st ? "#f58220" : "#f1f5f9",
                 color: statusFilter === st ? "#fff" : "#475569",
                 border: "none",
@@ -1664,18 +1527,18 @@ function VendorRegistrationsAdminCard() {
               }}
               onClick={() => setStatusFilter(st)}
             >
-              {st}
+              {st} ({st === "All" ? vendors.length : vendors.filter((v) => (v.status || "Pending") === st).length})
             </button>
           ))}
         </div>
       </div>
 
-      <label className="admin-search-field" style={{ margin: "14px 0" }}>
+      <label className="admin-search-field" style={{ margin: "16px 0" }}>
         <FaSearch aria-hidden="true" />
         <input
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search vendors by name, GSTIN, type, city..."
+          placeholder="Search vendors by company name, GSTIN, contact person, mobile, city..."
         />
       </label>
 
@@ -2858,9 +2721,24 @@ function ContactPage() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setState({ submitting: true, succeeded: false, error: null });
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData.entries());
+
+    const EMAIL_REGEX = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    const PHONE_REGEX = /^(\+91[\-\s]?)?[6-9]\d{9}$/;
+
+    if (!data.email || !EMAIL_REGEX.test(data.email.trim())) {
+      setState({ submitting: false, succeeded: false, error: "Please enter a valid email address (e.g. name@domain.com)." });
+      return;
+    }
+
+    const cleanPhone = (data.phone || "").trim().replace(/[\s\-]/g, '');
+    if (!data.phone || !PHONE_REGEX.test(cleanPhone)) {
+      setState({ submitting: false, succeeded: false, error: "Please enter a valid 10-digit mobile number starting with 6, 7, 8, or 9." });
+      return;
+    }
+
+    setState({ submitting: true, succeeded: false, error: null });
 
     try {
       const response = await fetch("https://formspree.io/f/mlgpkkjj", {
