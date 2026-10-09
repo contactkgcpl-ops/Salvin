@@ -109,6 +109,133 @@ export default function VendorRegistrationPage() {
   const isValidEmail = (email) => EMAIL_REGEX.test((email || "").trim());
   const isValidPhone = (phone) => PHONE_REGEX.test((phone || "").trim().replace(/[\s\-]/g, ''));
 
+  const GST_REGEX = /^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/;
+  const PAN_REGEX = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+
+  // Validate GST
+  const validateGST = (gstin) => {
+    const trimmed = (gstin || "").trim();
+    if (!trimmed) {
+      setGstValidationMsg(null);
+      setGstDetailsCard(null);
+      return;
+    }
+    if (GST_REGEX.test(trimmed)) {
+      const stateCode = trimmed.slice(0, 2);
+      const pan = trimmed.slice(2, 12);
+      const entityChar = trimmed[5];
+      const stateName = GST_STATE_CODES[stateCode] || "Valid State";
+      const entityType = ENTITY_TYPES[entityChar] || "Registered Entity";
+
+      setGstValidationMsg({ valid: true, message: `✓ Valid 15-digit GSTIN (${stateName})` });
+      setGstDetailsCard({
+        stateCode,
+        stateName,
+        pan,
+        entityType,
+        status: "Valid Format"
+      });
+
+      // Auto-populate PAN number from GSTIN if empty
+      setFormData((prev) => ({
+        ...prev,
+        panNumber: prev.panNumber || pan
+      }));
+      setPanValidationMsg({ valid: true, message: "✓ Valid 10-digit PAN Number (Extracted from GSTIN)" });
+
+      setErrors((prev) => ({ ...prev, gstNumber: null, panNumber: null }));
+    } else {
+      setGstValidationMsg({ valid: false, message: "Invalid GSTIN format (e.g. 24AAAAA0000A1Z5)" });
+      setGstDetailsCard(null);
+    }
+  };
+
+  // Validate PAN
+  const validatePAN = (pan) => {
+    const trimmed = (pan || "").trim();
+    if (!trimmed) {
+      setPanValidationMsg(null);
+      return;
+    }
+    if (PAN_REGEX.test(trimmed)) {
+      setPanValidationMsg({ valid: true, message: "✓ Valid 10-digit PAN Number" });
+      setErrors((prev) => ({ ...prev, panNumber: null }));
+    } else {
+      setPanValidationMsg({ valid: false, message: "Invalid PAN format (e.g. ABCDE1234F)" });
+    }
+  };
+
+  // Fetch Pincode Details
+  const fetchPincodeDetails = async (pin) => {
+    try {
+      setPincodeLoading(true);
+      setPincodeMsg("");
+      const res = await fetch(`https://api.postalpincode.in/pincode/${pin}`);
+      const data = await res.json();
+      if (data && data[0] && data[0].Status === "Success" && data[0].PostOffice && data[0].PostOffice.length > 0) {
+        const po = data[0].PostOffice[0];
+        setFormData((prev) => ({
+          ...prev,
+          city: po.District || po.Block || "",
+          state: po.State || ""
+        }));
+        setPincodeMsg(`✓ Auto-filled: ${po.District}, ${po.State}`);
+      } else {
+        setPincodeMsg("Pincode details not found");
+      }
+    } catch (err) {
+      console.error(err);
+      setPincodeMsg("");
+    } finally {
+      setPincodeLoading(false);
+    }
+  };
+
+  // Handle File Upload with Fail-Safe format validation
+  const handleFileUpload = (e, base64Key, nameKey, allowedExts = ["pdf", "jpg", "jpeg", "png"]) => {
+    try {
+      const file = e.target && e.target.files && e.target.files[0];
+      if (!file) return;
+
+      const fileName = file.name || "";
+      const ext = fileName.includes(".") ? fileName.split(".").pop().toLowerCase() : "";
+
+      if (allowedExts && allowedExts.length > 0 && ext) {
+        const isAllowed = allowedExts.some((x) => x.toLowerCase() === ext || (ext === "pdf" && x.toLowerCase() === "pdf"));
+        if (!isAllowed) {
+          setErrors((prev) => ({ ...prev, [nameKey]: `Only ${allowedExts.join(", ").toUpperCase()} files are allowed` }));
+          e.target.value = "";
+          setFormData((prev) => ({ ...prev, [nameKey]: "", [base64Key]: "" }));
+          return;
+        }
+      }
+
+      // Synchronously set file name in formData and clear errors
+      setFormData((prev) => ({
+        ...prev,
+        [nameKey]: fileName
+      }));
+      setErrors((prev) => ({
+        ...prev,
+        [nameKey]: null
+      }));
+
+      // Asynchronously read Base64
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        if (event && event.target && event.target.result) {
+          setFormData((prev) => ({
+            ...prev,
+            [base64Key]: event.target.result
+          }));
+        }
+      };
+      reader.readAsDataURL(file);
+    } catch (err) {
+      console.error("handleFileUpload error:", err);
+    }
+  };
+
   // Handle Input Changes with Real-time Validation
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -273,7 +400,7 @@ export default function VendorRegistrationPage() {
       localStorage.setItem("salvin_vendor_registrations", JSON.stringify([submissionPayload, ...existingVendors]));
 
       // 2. Send email via Formspree API (or mail server endpoint)
-      await fetch("https://formspree.io/f/mlgpkkjj", {
+      await fetch("https://formspree.io/f/mkjorybz", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
         body: JSON.stringify({
@@ -505,38 +632,7 @@ export default function VendorRegistrationPage() {
                     )}
                     {errors.gstNumber && <span className="vr-error-msg">{errors.gstNumber}</span>}
 
-                    {/* GST Live Details Card */}
-                    {gstDetailsCard && (
-                      <div className={`vr-gst-details-box ${gstDetailsCard.isActive === false ? "vr-gst-inactive-box" : ""}`}>
-                        <div className="vr-gst-box-header">
-                          <span className={`vr-gst-status-badge ${gstDetailsCard.isActive === false ? "vr-gst-status-danger" : ""}`}>
-                            {gstDetailsCard.isActive === false ? "❌ GSTIN Inactive / Cancelled" : "✓ Active GSTIN Verified"}
-                          </span>
-                          <span className="vr-gst-state-badge">📍 {gstDetailsCard.stateName} (State Code: {gstDetailsCard.stateCode})</span>
-                        </div>
-                        {gstDetailsCard.companyName && (
-                          <div style={{ marginBottom: "8px", fontSize: "14px", color: "#0b1a2c" }}>
-                            <span className="vr-gst-label">Official Registered Name:</span> <strong style={{ color: "#0b1a2c", fontSize: "15px" }}>{gstDetailsCard.companyName}</strong>
-                          </div>
-                        )}
-                        <div className="vr-gst-box-grid">
-                          <div><span className="vr-gst-label">Embedded PAN:</span> <code className="vr-gst-code">{gstDetailsCard.pan}</code></div>
-                          <div><span className="vr-gst-label">Entity Constitution:</span> <strong>{gstDetailsCard.entityType}</strong></div>
-                          <div><span className="vr-gst-label">State Jurisdiction:</span> <strong>{gstDetailsCard.stateName}</strong></div>
-                          <div>
-                            <span className="vr-gst-label">Real GST Status:</span>{" "}
-                            <strong style={{ color: gstDetailsCard.isActive === false ? "#dc2626" : "#16a34a" }}>
-                              {gstDetailsCard.status || "Active"}
-                            </strong>
-                          </div>
-                        </div>
-                        {gstDetailsCard.address && (
-                          <div style={{ marginTop: "8px", fontSize: "12px", color: "#334155" }}>
-                            <span className="vr-gst-label">Registered Address:</span> {gstDetailsCard.address}
-                          </div>
-                        )}
-                      </div>
-                    )}
+
                   </div>
 
                   <div className="vr-field">
@@ -780,12 +876,14 @@ export default function VendorRegistrationPage() {
                     <label>GST Certificate * (PDF/Image)</label>
                     <input
                       type="file"
-                      accept=".pdf,.png,.jpg,.jpeg"
-                      onChange={(e) => handleFileUpload(e, "gstCertFileBase64", "gstCertFileName")}
+                      accept=".pdf,.png,.jpg,.jpeg,application/pdf,image/*"
+                      onChange={(e) => handleFileUpload(e, "gstCertFileBase64", "gstCertFileName", ["pdf", "jpg", "jpeg", "png"])}
                       className={errors.gstCertFileName ? "vr-input-error" : ""}
                     />
                     {formData.gstCertFileName && (
-                      <span className="vr-file-name">Selected: {formData.gstCertFileName}</span>
+                      <span className="vr-file-name" style={{ color: "#16a34a", fontWeight: "600", marginTop: "6px", display: "block" }}>
+                        ✓ Selected: {formData.gstCertFileName}
+                      </span>
                     )}
                     {errors.gstCertFileName && <span className="vr-error-msg">{errors.gstCertFileName}</span>}
                   </div>
