@@ -452,7 +452,7 @@ export default function CornPuffPlantDetailPage() {
             </p>
             <div className="cpp-cta__actions">
               <a
-                href="https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Red%20Corn Puff%20Processing%20Plant.%20Please%20share%20details."
+                href="https://wa.me/919023979663?text=I%20am%20interested%20in%20the%20Red%20Corn Puff%20Processing%20Plant.%20Please%20share%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="cpp-btn cpp-btn--primary cpp-btn--lg"
@@ -471,7 +471,7 @@ export default function CornPuffPlantDetailPage() {
               </NavLink>
             </div>
             <p className="cpp-cta__phone">
-              Or call directly: <a href="tel:+919898727796"><strong>+91 98987 27796</strong></a>
+              Or call directly: <a href="tel:+919023979663"><strong>+91 90239 79663</strong></a>
             </p>
           </div>
         </div>

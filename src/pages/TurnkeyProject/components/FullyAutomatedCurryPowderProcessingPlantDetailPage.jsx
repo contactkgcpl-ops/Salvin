@@ -339,7 +339,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
             <h2>Ready to Build Your Plant?</h2>
             <p>Get a customised project proposal with capacity recommendations, plant layout, equipment list, timeline, and investment estimate.</p>
             <div className="rcp-cta__actions">
-              <a href={"https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Fully%20Automated%20Garam%20Masala%20Processing%20Plant.%20Please%20share%20details."} target="_blank" rel="noopener noreferrer" className="rcp-btn rcp-btn--primary rcp-btn--lg">
+              <a href={"https://wa.me/919023979663?text=I%20am%20interested%20in%20the%20Fully%20Automated%20Garam%20Masala%20Processing%20Plant.%20Please%20share%20details."} target="_blank" rel="noopener noreferrer" className="rcp-btn rcp-btn--primary rcp-btn--lg">
                 <svg className="rcp-cta-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ width: "16px", height: "16px", marginRight: "8px" }}><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" /></svg>
                 WhatsApp Enquiry
               </a>
@@ -348,7 +348,7 @@ export default function FullyAutomatedCurryPowderProcessingPlantDetailPage() {
                 Contact Us
               </NavLink>
             </div>
-            <p className="rcp-cta__phone">Or call directly: <a href="tel:+919898727796"><strong>+91 98987 27796</strong></a></p>
+            <p className="rcp-cta__phone">Or call directly: <a href="tel:+919023979663"><strong>+91 90239 79663</strong></a></p>
           </div>
         </div>
       </section>

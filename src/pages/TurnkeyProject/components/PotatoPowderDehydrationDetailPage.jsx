@@ -438,7 +438,7 @@ export default function PotatoPowderDehydrationDetailPage() {
             </p>
             <div className="ppd-cta__actions">
               <a
-                href="https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Potato%20Powder%20Dehydration%20Plant.%20Please%20share%20complete%20details,%20specifications,%20capacity%20options%20and%20quotation."
+                href="https://wa.me/919023979663?text=I%20am%20interested%20in%20the%20Potato%20Powder%20Dehydration%20Plant.%20Please%20share%20complete%20details,%20specifications,%20capacity%20options%20and%20quotation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ppd-btn ppd-btn--primary ppd-btn--lg"
@@ -457,7 +457,7 @@ export default function PotatoPowderDehydrationDetailPage() {
               </NavLink>
             </div>
             <p className="ppd-cta__phone">
-              Or call directly: <a href="tel:+919898727796"><strong>+91 98987 27796</strong></a>
+              Or call directly: <a href="tel:+919023979663"><strong>+91 90239 79663</strong></a>
             </p>
           </div>
         </div>

@@ -458,7 +458,7 @@ export default function CoreServiceDetailPage() {
 
                 <div className="space-y-3 mb-6">
                   <a
-                    href="tel:+919825206680"
+                    href="tel:+91 9023979663"
                     className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 hover:bg-[#fff5eb] border border-slate-200 hover:border-[#ffecd6] transition group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-[#ff7a00] text-white flex items-center justify-center shrink-0">
@@ -466,7 +466,7 @@ export default function CoreServiceDetailPage() {
                     </div>
                     <div>
                       <span className="block text-xs font-semibold text-slate-500 uppercase tracking-wider">Direct Hotline</span>
-                      <span className="text-sm font-bold text-[#091938] group-hover:text-[#ff7a00] transition-colors">+91 98252 06680</span>
+                      <span className="text-sm font-bold text-[#091938] group-hover:text-[#ff7a00] transition-colors">+91 9023979663</span>
                     </div>
                   </a>
                 </div>

@@ -443,7 +443,7 @@ export default function GingerGarlicPasteDetailPage() {
             </p>
             <div className="ggp-cta__actions">
               <a
-                href="https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Ginger%20Garlic%20Paste%20Processing%20Plant.%20Please%20share%20complete%20details."
+                href="https://wa.me/919023979663?text=I%20am%20interested%20in%20the%20Ginger%20Garlic%20Paste%20Processing%20Plant.%20Please%20share%20complete%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="ggp-btn ggp-btn--primary ggp-btn--lg"
@@ -462,7 +462,7 @@ export default function GingerGarlicPasteDetailPage() {
               </NavLink>
             </div>
             <p className="ggp-cta__phone">
-              Or call directly: <a href="tel:+919898727796"><strong>+91 98987 27796</strong></a>
+              Or call directly: <a href="tel:+919023979663"><strong>+91 90239 79663</strong></a>
             </p>
           </div>
         </div>

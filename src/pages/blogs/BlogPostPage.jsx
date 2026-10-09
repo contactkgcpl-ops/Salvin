@@ -254,7 +254,7 @@ export default function BlogPostPage() {
                 
                 <div className="foodsure-cta-buttons">
                   <a
-                    href="https://wa.me/919898727796?text=Hi%20Salvin%20Industries,%20I%20want%20information%20on%20starting%20a%20food%20processing%20business."
+                    href="https://wa.me/919023979663?text=Hi%20Salvin%20Industries,%20I%20want%20information%20on%20starting%20a%20food%20processing%20business."
                     target="_blank"
                     rel="noopener noreferrer"
                     className="foodsure-btn-whatsapp"

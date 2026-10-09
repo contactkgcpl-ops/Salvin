@@ -454,7 +454,7 @@ export default function JackfruitDetailPage() {
             </p>
             <div className="jcp-cta__actions">
               <a
-                href="https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Jackfruit%20Canning%20and%20Retort%20Line.%20Please%20share%20details."
+                href="https://wa.me/919023979663?text=I%20am%20interested%20in%20the%20Jackfruit%20Canning%20and%20Retort%20Line.%20Please%20share%20details."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="jcp-btn jcp-btn--primary jcp-btn--lg"
@@ -473,7 +473,7 @@ export default function JackfruitDetailPage() {
               </NavLink>
             </div>
             <p className="jcp-cta__phone">
-              Or call directly: <a href="tel:+919898727796"><strong>+91 98987 27796</strong></a>
+              Or call directly: <a href="tel:+919023979663"><strong>+91 90239 79663</strong></a>
             </p>
           </div>
         </div>

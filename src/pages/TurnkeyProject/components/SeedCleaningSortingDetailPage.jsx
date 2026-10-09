@@ -436,7 +436,7 @@ export default function SeedCleaningSortingDetailPage() {
             </p>
             <div className="scs-cta__actions">
               <a
-                href="https://wa.me/919898727796?text=I%20am%20interested%20in%20the%20Seed%20Cleaning%20&%20Sorting%20Line%20Plant.%20Please%20share%20complete%20details,%20specifications,%20capacity%20options%20and%20quotation."
+                href="https://wa.me/919023979663?text=I%20am%20interested%20in%20the%20Seed%20Cleaning%20&%20Sorting%20Line%20Plant.%20Please%20share%20complete%20details,%20specifications,%20capacity%20options%20and%20quotation."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="scs-btn scs-btn--primary scs-btn--lg"
@@ -455,7 +455,7 @@ export default function SeedCleaningSortingDetailPage() {
               </NavLink>
             </div>
             <p className="scs-cta__phone">
-              Or call directly: <a href="tel:+919898727796"><strong>+91 98987 27796</strong></a>
+              Or call directly: <a href="tel:+919023979663"><strong>+91 90239 79663</strong></a>
             </p>
           </div>
         </div>
