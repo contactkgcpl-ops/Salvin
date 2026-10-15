@@ -5,6 +5,7 @@ const logo = "/assets/core/logo/salvin_logo.webp";
 export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [verticalOpen, setVerticalOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
 
@@ -26,6 +27,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   useEffect(() => {
     setMenuOpen(false);
     setServicesOpen(false);
+    setVerticalOpen(false);
   }, [location.pathname]);
 
   // Prevent body scroll when menu is open
@@ -59,7 +61,13 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
         {/* Hamburger Button - visible only on mobile */}
         <button
           className={`hamburger-btn${menuOpen ? " active" : ""}`}
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => {
+            setMenuOpen(!menuOpen);
+            if (menuOpen) {
+              setServicesOpen(false);
+              setVerticalOpen(false);
+            }
+          }}
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
         >
@@ -70,7 +78,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
 
         {/* Mobile overlay */}
         {menuOpen && (
-          <div className="nav-overlay" onClick={() => setMenuOpen(false)} />
+          <div className="nav-overlay" onClick={() => { setMenuOpen(false); setServicesOpen(false); setVerticalOpen(false); }} />
         )}
 
         {/* Navigation links */}
@@ -78,24 +86,54 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
           <NavLink to="/" end style={navLinkStyle} onClick={() => setMenuOpen(false)}>HOME</NavLink>
           <NavLink to="/about" style={navLinkStyle} onClick={() => setMenuOpen(false)}>JOURNEY</NavLink>
 
+          {/* VERTICAL DROPDOWN */}
+          <div 
+            className={`nav-dropdown${verticalOpen ? " open" : ""}`}
+            onMouseEnter={() => { setVerticalOpen(true); setServicesOpen(false); }}
+            onMouseLeave={() => setVerticalOpen(false)}
+          >
+            <button
+              type="button"
+              className="nav-dropdown-trigger"
+              style={{ ...navLinkStyle, fontSize: "14px", textTransform: "uppercase", letterSpacing: "0.05em", padding: "0 10px", display: "inline-flex", alignItems: "center", gap: "4px" }}
+              onClick={() => { setVerticalOpen(!verticalOpen); setServicesOpen(false); }}
+            >
+              VERTICAL <span style={{ fontSize: "9px" }}>▼</span>
+            </button>
+            <div className="nav-dropdown-menu">
+              <NavLink to="/food-consultant" onClick={() => { setVerticalOpen(false); setMenuOpen(false); }}>
+                Food Consultant
+              </NavLink>
+              <NavLink to="/turnkey-project" onClick={() => { setVerticalOpen(false); setMenuOpen(false); }}>
+                Turnkey Project
+              </NavLink>
+              <NavLink to="/supply-chain-consultant" onClick={() => { setVerticalOpen(false); setMenuOpen(false); }}>
+                Supply Chain Consultant
+              </NavLink>
+              <NavLink to="/contract-manufacturing-consultancy" onClick={() => { setVerticalOpen(false); setMenuOpen(false); }}>
+                Contract Manufacturing
+              </NavLink>
+              <NavLink to="/automation-industry-4-0" onClick={() => { setVerticalOpen(false); setMenuOpen(false); }}>
+                Automation 4.0
+              </NavLink>
+            </div>
+          </div>
+
           {/* SERVICES DROPDOWN */}
           <div 
             className={`nav-dropdown${servicesOpen ? " open" : ""}`}
-            onMouseEnter={() => setServicesOpen(true)}
+            onMouseEnter={() => { setServicesOpen(true); setVerticalOpen(false); }}
             onMouseLeave={() => setServicesOpen(false)}
           >
             <button
               type="button"
               className="nav-dropdown-trigger"
               style={{ ...navLinkStyle, fontSize: "14px", textTransform: "uppercase", letterSpacing: "0.05em", padding: "0 10px", display: "inline-flex", alignItems: "center", gap: "4px" }}
-              onClick={() => setServicesOpen(!servicesOpen)}
+              onClick={() => { setServicesOpen(!servicesOpen); setVerticalOpen(false); }}
             >
               SERVICES <span style={{ fontSize: "9px" }}>▼</span>
             </button>
             <div className="nav-dropdown-menu">
-              <NavLink to="/food-consultant" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
-                Food Consultant
-              </NavLink>
               <NavLink to="/food-business-planning-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
                 Food Business Planning &amp; Consultancy
               </NavLink>
@@ -114,7 +152,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
               <NavLink to="/production-operational-excellence" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
                 Production &amp; Operational Excellence
               </NavLink>
-              <NavLink to="/supply-chain-consultancy" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
+              <NavLink to="/supply-chain-consultant" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
                 Supply Chain Consultancy
               </NavLink>
               <NavLink to="/automation-industry-4-0" onClick={() => { setServicesOpen(false); setMenuOpen(false); }}>
@@ -126,7 +164,6 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
             </div>
           </div>
 
-          <NavLink to="/turnkey-project" style={navLinkStyle} onClick={() => setMenuOpen(false)}>TURNKEY PROJECT</NavLink>
           <NavLink to="/automation-technology" style={navLinkStyle} onClick={() => setMenuOpen(false)}>AUTOMATION &amp; TECH</NavLink>
           <NavLink to="/machineries" style={navLinkStyle} onClick={() => setMenuOpen(false)}>MACHINERIES</NavLink>
 

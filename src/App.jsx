@@ -93,6 +93,7 @@ import FoodProductDevelopmentPage from "./pages/services/FoodProductDevelopmentP
 import FoodSafetyQualityPage from "./pages/services/FoodSafetyQualityPage";
 import ProductionOperationalExcellencePage from "./pages/services/ProductionOperationalExcellencePage";
 import SupplyChainConsultancyPage from "./pages/services/SupplyChainConsultancyPage";
+import SupplyChainConsultantPage from "./pages/SupplyChainConsultantPage";
 import AutomationIndustry40Page from "./pages/services/AutomationIndustry40Page";
 import ContractManufacturingConsultancyPage from "./pages/services/ContractManufacturingConsultancyPage";
 import TurnkeyExecutionPage from "./pages/services/TurnkeyExecutionPage";
@@ -126,7 +127,6 @@ import BlogsPage from "./pages/blogs/BlogsPage";
 import BlogPostPage from "./pages/blogs/BlogPostPage";
 import AutomationTechnologyPage from "./pages/automation/AutomationTechnologyPage";
 import AIGrindingTechnologyDetailPage from "./pages/automation/AIGrindingTechnologyDetailPage";
-import CareersPage from "./pages/CareersPage";
 import InstantMixFrozenFoodDetailPage from "./pages/TurnkeyProject/components/InstantMixFrozenFoodDetailPage";
 import InstantNoodlesDetailPage from "./pages/TurnkeyProject/components/InstantNoodlesDetailPage";
 import ChikkiPluckingDetailPage from "./pages/TurnkeyProject/components/ChikkiPluckingDetailPage";
@@ -1647,30 +1647,62 @@ function VendorRegistrationsAdminCard() {
   const [selectedVendor, setSelectedVendor] = React.useState(null);
 
   React.useEffect(() => {
-    try {
-      const data = JSON.parse(localStorage.getItem("salvin_vendor_registrations") || "[]");
-      setVendors(Array.isArray(data) ? data : []);
-    } catch (e) {
-      setVendors([]);
-    }
+    const fetchVendors = async () => {
+      try {
+        const res = await fetch(`${API_BASE_URL}/api/vendor-registrations`);
+        if (res.ok) {
+          const data = await res.json();
+          if (Array.isArray(data)) {
+            setVendors(data);
+            localStorage.setItem("salvin_vendor_registrations", JSON.stringify(data));
+            return;
+          }
+        }
+      } catch (e) {
+        // DB API unavailable or offline fallback
+      }
+      try {
+        const data = JSON.parse(localStorage.getItem("salvin_vendor_registrations") || "[]");
+        setVendors(Array.isArray(data) ? data : []);
+      } catch (e) {
+        setVendors([]);
+      }
+    };
+    fetchVendors();
   }, []);
 
-  const updateStatus = (id, newStatus) => {
+  const updateStatus = async (id, newStatus) => {
     const updated = vendors.map((v) => (v.id === id ? { ...v, status: newStatus } : v));
     setVendors(updated);
     localStorage.setItem("salvin_vendor_registrations", JSON.stringify(updated));
     if (selectedVendor && selectedVendor.id === id) {
       setSelectedVendor((prev) => ({ ...prev, status: newStatus }));
     }
+    try {
+      await fetch(`${API_BASE_URL}/api/vendor-registrations/${id}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ status: newStatus })
+      });
+    } catch (e) {
+      console.warn("Backend update warning:", e);
+    }
   };
 
-  const deleteVendor = (id) => {
+  const deleteVendor = async (id) => {
     if (!window.confirm("Are you sure you want to delete this vendor registration?")) return;
     const updated = vendors.filter((v) => v.id !== id);
     setVendors(updated);
     localStorage.setItem("salvin_vendor_registrations", JSON.stringify(updated));
     if (selectedVendor && selectedVendor.id === id) {
       setSelectedVendor(null);
+    }
+    try {
+      await fetch(`${API_BASE_URL}/api/vendor-registrations/${id}`, {
+        method: "DELETE"
+      });
+    } catch (e) {
+      console.warn("Backend delete warning:", e);
     }
   };
 
@@ -2950,8 +2982,138 @@ function ContactJourneySection() {
   );
 }
 
-function ContactPage() {
+const GOOGLE_RECRUITMENT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSf1phQaTHk9XxqrAPpq39A7DgDYowobQu7leXb64pyt8mb5ow/viewform?usp=header";
+
+const jobListingsData = [
+  {
+    id: "assistant-md",
+    title: "Assistant to Managing Director",
+    type: "Full-Time",
+    summary: "Work directly alongside executive leadership to coordinate strategic business operations, high-level client relations, and inter-departmental execution.",
+    responsibilities: [
+      "Assist the Managing Director in daily operational tracking and priority task execution.",
+      "Draft strategic business proposals, meeting summaries, and performance reports.",
+      "Coordinate executive communication with clients, vendor partners, and project teams."
+    ],
+    requirements: [
+      "Degree in Business Administration, Management, or Engineering.",
+      "Exceptional English communication and presentation skills.",
+      "Proficiency in MS Office (Excel, Word, PowerPoint)."
+    ]
+  },
+  {
+    id: "purchase-executive",
+    title: "Purchase Executive",
+    type: "Full-Time",
+    summary: "Manage industrial equipment procurement, raw material sourcing, vendor negotiations, and purchase orders for turnkey manufacturing projects.",
+    responsibilities: [
+      "Source and evaluate vendors for food machinery, stainless steel components, and pneumatic parts.",
+      "Negotiate pricing, quality standards, and delivery schedules with equipment suppliers.",
+      "Issue Purchase Orders (POs) and track material inwarding with project teams."
+    ],
+    requirements: [
+      "Degree or Diploma in Engineering or Commerce / Supply Chain.",
+      "Good negotiation skills and familiarity with ERP/Excel procurement workflows.",
+      "Strong technical aptitude for industrial machinery specs."
+    ]
+  },
+  {
+    id: "project-coordinator",
+    title: "Project Coordinator",
+    type: "Full-Time",
+    summary: "Oversee and coordinate complete turnkey plant projects from technical design approval through fabrication and final site commissioning.",
+    responsibilities: [
+      "Act as technical point of contact between clients, design engineers, and site engineers.",
+      "Maintain project schedules, fabrication progress reports, and milestone tracking.",
+      "Coordinate factory acceptance testing (FAT) and dispatch logistics."
+    ],
+    requirements: [
+      "B.E. / B.Tech / Diploma in Mechanical, Electrical, Chemical, or Industrial Engineering.",
+      "Strong understanding of turnkey manufacturing project life cycles.",
+      "Excellent multitasking and communication abilities."
+    ]
+  },
+  {
+    id: "back-office-executive",
+    title: "Back Office Executive",
+    type: "Full-Time",
+    summary: "Handle core administrative workflows, client query routing, documentation management, and internal operational coordination.",
+    responsibilities: [
+      "Manage incoming sales & technical inquiries and assign leads into CRM.",
+      "Prepare formal commercial quotations, proforma invoices, and business correspondence.",
+      "Maintain centralized digital archives, project files, and office records."
+    ],
+    requirements: [
+      "Bachelor's degree in any discipline (B.Com, BBA, B.Sc, BA, BCA).",
+      "Good command over English, Gujarati, and Hindi.",
+      "Proficiency in MS Excel, Word, and email management."
+    ]
+  },
+  {
+    id: "data-analyst",
+    title: "Data Analyst",
+    type: "Full-Time",
+    summary: "Turn complex industrial operational data, sales metrics, supply chain analytics, and plant efficiency metrics into intuitive business dashboards.",
+    responsibilities: [
+      "Analyze operational data across machinery manufacturing and sales funnels.",
+      "Build and maintain interactive analytics dashboards (Excel / Power BI / Python).",
+      "Perform trend analysis, cost variance modeling, and inventory forecasting."
+    ],
+    requirements: [
+      "Degree in Data Science, Statistics, Computer Science, or Engineering.",
+      "Strong skills in SQL, Excel (Advanced), and Data Visualization.",
+      "Structured problem-solving approach and analytical mindset."
+    ]
+  },
+  {
+    id: "software-developer",
+    title: "Software Developer",
+    type: "Full-Time",
+    summary: "Develop and maintain next-generation web applications, internal automation software, AI integration modules, and client platforms.",
+    responsibilities: [
+      "Build modern, responsive web user interfaces using React.js and modern CSS.",
+      "Develop and integrate REST APIs, backend services, and internal automation tools.",
+      "Maintain high code quality and optimize application performance."
+    ],
+    requirements: [
+      "B.E. / B.Tech in CS / IT, BCA / MCA, or equivalent software experience.",
+      "Proficiency in JavaScript / TypeScript, React.js, and HTML/CSS.",
+      "Eagerness to build real-world industrial software applications."
+    ]
+  }
+];
+
+function ContactPage({ scrollSection }) {
+  const location = useLocation();
   const [state, setState] = useState({ submitting: false, succeeded: false, error: null });
+  const [activeJobModal, setActiveJobModal] = useState(null);
+
+  React.useEffect(() => {
+    if (
+      scrollSection === "careers" ||
+      location.hash === "#careers" ||
+      location.pathname === "/careers" ||
+      location.pathname === "/carrier"
+    ) {
+      setTimeout(() => {
+        const careersElem = document.getElementById("careers");
+        if (careersElem) {
+          careersElem.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location, scrollSection]);
+
+  React.useEffect(() => {
+    if (activeJobModal) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [activeJobModal]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -3078,8 +3240,129 @@ function ContactPage() {
         </div>
       </section>
 
-      {/* Our Journey Section */}
-      {/* <ContactJourneySection /> */}
+      {/* Careers & Job Openings Section */}
+      <section id="careers" className="contact-careers-section py-16 px-4 bg-slate-50 border-t border-slate-200">
+        <div className="contact-container max-w-7xl mx-auto">
+          <div className="mb-8">
+            <span className="contact-tag">★ CAREERS AT SALVIN INDUSTRIES</span>
+            <h2 className="section-title text-left mt-2 mb-3">Join Our Engineering Team</h2>
+            <p className="text-slate-600 text-sm sm:text-base max-w-3xl leading-relaxed">
+              Explore current job openings, work directly with industry leaders, and advance your career in industrial automation and turnkey plant engineering.
+            </p>
+          </div>
+
+          {/* Online Recruitment Drive Banner */}
+          <div className="bg-blue-50 border border-blue-200 text-blue-950 rounded-xl p-5 shadow-xs mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div>
+              <h3 className="text-base sm:text-lg font-extrabold text-blue-950">Online Recruitment Drive is Live</h3>
+              <p className="text-xs sm:text-sm text-blue-800 mt-1 font-medium">
+                Direct candidate selection &amp; online interviews. 1-click easy application.
+              </p>
+            </div>
+            <a
+              href={GOOGLE_RECRUITMENT_FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-5 py-2.5 rounded-lg transition text-xs sm:text-sm flex-shrink-0 shadow-xs"
+            >
+              <span>Apply Online (Google Form)</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+
+          {/* Job Listings Grid */}
+          <div className="space-y-4">
+            {jobListingsData.map((job) => (
+              <div
+                key={job.id}
+                className="bg-white rounded-xl border border-slate-200 p-5 shadow-xs hover:border-blue-400 transition flex flex-col md:flex-row items-start md:items-center justify-between gap-4"
+              >
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1.5">
+                    <h3 className="text-lg sm:text-xl font-bold text-slate-900 leading-snug">{job.title}</h3>
+                    <span className="text-[11px] font-semibold bg-blue-100 text-blue-800 px-2.5 py-0.5 rounded-full">{job.type}</span>
+                  </div>
+                  <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">{job.summary}</p>
+                </div>
+
+                <div className="w-full md:w-auto flex-shrink-0 pt-2 md:pt-0">
+                  <button
+                    onClick={() => setActiveJobModal(job)}
+                    className="w-full md:w-auto py-2.5 px-6 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs sm:text-sm font-bold transition flex items-center justify-center gap-2 shadow-xs"
+                  >
+                    <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" strokeWidth="2" fill="none"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    <span>Apply Now</span>
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Application Modal */}
+        {activeJobModal && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-3 bg-slate-950/60 backdrop-blur-xs">
+            <div
+              className="bg-white w-full max-w-lg rounded-xl shadow-2xl border border-slate-200 overflow-hidden relative"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="p-5 bg-slate-100 border-b border-slate-200 text-slate-900 relative">
+                <button
+                  onClick={() => setActiveJobModal(null)}
+                  className="absolute top-4 right-4 p-1.5 rounded-full bg-slate-200 hover:bg-slate-300 text-slate-700 transition"
+                  aria-label="Close"
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
+                <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">{activeJobModal.title}</h2>
+              </div>
+              <div className="p-5 space-y-4 max-h-[60vh] overflow-y-auto">
+                <div>
+                  <h4 className="text-xs font-bold text-slate-500 uppercase mb-1">Overview</h4>
+                  <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">{activeJobModal.summary}</p>
+                </div>
+
+                <div>
+                  <h4 className="text-xs font-bold text-slate-500 uppercase mb-2">Key Responsibilities</h4>
+                  <ul className="space-y-1.5">
+                    {activeJobModal.responsibilities.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                        <span className="text-blue-600 font-bold">✓</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div>
+                  <h4 className="text-xs font-bold text-slate-500 uppercase mb-2">Requirements</h4>
+                  <ul className="space-y-1.5">
+                    {activeJobModal.requirements.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-xs text-slate-700">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full flex-shrink-0 mt-1.5" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              <div className="p-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3">
+                <span className="text-xs text-slate-500 font-medium">Official Google Form</span>
+                <a
+                  href={GOOGLE_RECRUITMENT_FORM_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-bold px-6 py-2.5 rounded-lg transition text-xs sm:text-sm shadow-xs"
+                >
+                  <span>Open Google Form</span>
+                  <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" strokeWidth="2" fill="none"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
     </div>
   );
 }
@@ -3161,6 +3444,12 @@ export default function App() {
       updateMetaTags(
         "Contact Us for Turnkey Projects & Machinery",
         "Get in touch with Salvin Industries for quotes, consultation, and support on industrial machineries, turnkey projects, and spares.",
+        path
+      );
+    } else if (path === "/supply-chain-consultant" || path === "/supply-chain-consultancy") {
+      updateMetaTags(
+        "Supply Chain Consultant | Food & Industrial Logistics | Salvin Industries",
+        "Top supply chain consultants in India by Salvin Industries. Raw material sourcing, cold chain engineering, warehouse automation, and logistics optimization.",
         path
       );
     } else if (path === "/food-consultant" || path === "/services") {
@@ -3395,13 +3684,14 @@ export default function App() {
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/vendor-registration" element={<VendorRegistrationPage />} />
           <Route path="/food-consultant" element={<ServicesPage />} />
+          <Route path="/supply-chain-consultant" element={<SupplyChainConsultantPage />} />
           <Route path="/food-business-planning-consultancy" element={<FoodBusinessPlanningPage />} />
           <Route path="/food-plant-design-engineering" element={<PlantDesignEngineeringPage />} />
           <Route path="/machinery-technology-consultancy" element={<MachineryTechnologyPage />} />
           <Route path="/food-product-development" element={<FoodProductDevelopmentPage />} />
           <Route path="/food-safety-quality-consultancy" element={<FoodSafetyQualityPage />} />
           <Route path="/production-operational-excellence" element={<ProductionOperationalExcellencePage />} />
-          <Route path="/supply-chain-consultancy" element={<SupplyChainConsultancyPage />} />
+          <Route path="/supply-chain-consultancy" element={<SupplyChainConsultantPage />} />
           <Route path="/automation-industry-4-0" element={<AutomationIndustry40Page />} />
           <Route path="/contract-manufacturing-consultancy" element={<ContractManufacturingConsultancyPage />} />
           <Route path="/services" element={<Navigate to="/food-consultant" replace />} />
@@ -3413,6 +3703,8 @@ export default function App() {
           <Route path="/production-process-optimization" element={<Navigate to="/production-operational-excellence" replace />} />
           <Route path="/supply-chain-procurement-services" element={<Navigate to="/supply-chain-consultancy" replace />} />
           <Route path="/contract-manufacturing-packaging" element={<Navigate to="/contract-manufacturing-consultancy" replace />} />
+          <Route path="/contract-manufacturing" element={<Navigate to="/contract-manufacturing-consultancy" replace />} />
+          <Route path="/automation-4-0" element={<Navigate to="/automation-industry-4-0" replace />} />
           <Route path="/services/:serviceSlug" element={<CoreServiceDetailPage />} />
           <Route path="/blogs" element={<BlogsPage />} />
           <Route path="/blogs/:slug" element={<BlogPostPage />} />
@@ -3535,8 +3827,8 @@ export default function App() {
           <Route path="/turnkey-project/:projectSlug" element={<TurnkeyDetailPage />} />
           <Route path="/machineries" element={<MachineriesPage machines={machines} categories={categories} subcategories={subcategories} sessionCache={sessionImageCache} loadError={machineLoadError} />} />
           <Route path="/machineries/:machineSlug" element={<MachineDetailPage machines={machines} sessionCache={sessionImageCache} />} />
-          <Route path="/careers" element={<CareersPage />} />
-          <Route path="/carrier" element={<CareersPage />} />
+          <Route path="/careers" element={<ContactPage scrollSection="careers" />} />
+          <Route path="/carrier" element={<ContactPage scrollSection="careers" />} />
           <Route
             path="/admin-login"
             element={<AdminLoginPage onAdminLogin={handleAdminLogin} isAdminAuthenticated={isAdminAuthenticated} />}

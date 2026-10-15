@@ -395,11 +395,23 @@ export default function VendorRegistrationPage() {
     };
 
     try {
-      // 1. Save to Database / localStorage
+      // 1. Save to Local Storage (Instant fallback & browser admin cache)
       const existingVendors = JSON.parse(localStorage.getItem("salvin_vendor_registrations") || "[]");
       localStorage.setItem("salvin_vendor_registrations", JSON.stringify([submissionPayload, ...existingVendors]));
 
-      // 2. Send email via Formspree API (or mail server endpoint)
+      // 2. Save to Backend Database API (if API server is active)
+      const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "";
+      try {
+        await fetch(`${API_BASE_URL}/api/vendor-registrations`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(submissionPayload)
+        });
+      } catch (dbErr) {
+        console.warn("Backend DB sync warning:", dbErr);
+      }
+
+      // 3. Send email via Formspree API
       await fetch("https://formspree.io/f/mkjorybz", {
         method: "POST",
         headers: { "Content-Type": "application/json", "Accept": "application/json" },
