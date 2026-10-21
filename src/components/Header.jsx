@@ -42,6 +42,8 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
     };
   }, [menuOpen]);
 
+  const isBlogPost = location.pathname.startsWith("/blogs/") && location.pathname !== "/blogs";
+
   const navLinkStyle = {
     color: isScrolled || menuOpen ? "#000000" : "#ffffff",
     fontWeight: "bold",
@@ -50,7 +52,7 @@ export default function Header({ isAdminAuthenticated, onAdminLogout }) {
   };
 
   return (
-    <header className={`navbar ${isScrolled ? "navbar-scrolled" : "navbar-transparent"}`}>
+    <header className={`navbar ${isScrolled ? "navbar-scrolled" : isBlogPost ? "navbar-blog-header" : "navbar-transparent"}`}>
       <div className="navbar-inner content-container">
         <div className="logo-container">
           <Link to="/">

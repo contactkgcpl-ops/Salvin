@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { blogPosts } from "./blogData";
 import "./Blogs.css";
 
@@ -36,23 +36,19 @@ export default function BlogsPage() {
                 </div>
                 <div className="blog-card-body">
                   <h2 className="blog-card-title">{post.title}</h2>
+                  {post.excerpt && (
+                    <p className="blog-card-excerpt">
+                      {post.excerpt.length > 140 ? `${post.excerpt.slice(0, 140)}...` : post.excerpt}
+                    </p>
+                  )}
+                  <div className="blog-card-footer">
+                    <span className="read-more-btn">Read Article →</span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Turnkey Consultancy Callout */}
-          <div className="blogs-cta-banner">
-            <div className="blogs-cta-text">
-              <h3>Planning to Start Your Food Processing Business?</h3>
-              <p>
-                Salvin Industries delivers complete turnkey food processing plant solutions — from factory layout, DPR & FSSAI guidance to customized high-performance machinery and commissioning.
-              </p>
-            </div>
-            <NavLink to="/contact" className="blogs-cta-btn">
-              Get Turnkey Consultation
-            </NavLink>
-          </div>
 
         </div>
       </section>

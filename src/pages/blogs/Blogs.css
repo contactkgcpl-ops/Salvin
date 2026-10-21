@@ -13,13 +13,50 @@
   --foodsure-border: #e2e8f0;
 }
 
+.foodsure-blog-wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  color: var(--foodsure-text-main);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  padding-top: 105px;
+}
+
 .foodsure-blog-wrapper,
+.foodsure-blog-wrapper *,
+.blog-card,
+.blog-card * {
+  border-radius: 0 !important;
+}
+
 .blogs-page-container {
   width: 100%;
   background-color: #f8fafc;
   color: var(--foodsure-text-main);
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
+}
+
+.foodsure-article-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+  color: var(--foodsure-navy);
+}
+
+.foodsure-author-line {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 768px) {
+  .foodsure-article-title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+  }
 }
 
 /* --------------------------------------------------------------------------
@@ -122,37 +159,106 @@
 }
 
 .foodsure-grid-layout {
-  display: grid;
-  grid-template-columns: 1fr 350px;
-  gap: 28px;
-}
-
-@media (max-width: 1024px) {
-  .foodsure-grid-layout {
-    grid-template-columns: 1fr;
-  }
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
 }
 
 /* --------------------------------------------------------------------------
-   ARTICLE MAIN CONTENT
+   ARTICLE MAIN CONTENT (UNBOXED FULL-WIDTH LAYOUT)
    -------------------------------------------------------------------------- */
 .foodsure-article-main {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 32px;
+  background: transparent;
+  border-radius: 0 !important;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+/* Top 2-Column Hero Split: Left Image, Right Content */
+.foodsure-hero-split {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 40px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid var(--foodsure-border);
+}
+
+@media (max-width: 992px) {
+  .foodsure-hero-split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.foodsure-hero-img-col {
+  width: 100%;
   border: 1px solid var(--foodsure-border);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 0 !important;
+}
+
+.foodsure-hero-img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: contain;
+  display: block;
+  border-radius: 0 !important;
+}
+
+.foodsure-hero-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.foodsure-hero-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 20px;
 }
 
 @media (max-width: 640px) {
-  .foodsure-article-main {
-    padding: 18px;
+  .foodsure-hero-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
+}
+
+.foodsure-hero-stat-box {
+  background: #f8fafc;
+  border: 1px solid var(--foodsure-border);
+  padding: 14px 16px;
+  border-left: 3px solid var(--foodsure-orange);
+  border-radius: 0 !important;
+}
+
+.foodsure-hero-stat-box .stat-val {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--foodsure-navy);
+  margin-bottom: 4px;
+}
+
+.foodsure-hero-stat-box .stat-lbl {
+  font-size: 0.82rem;
+  color: #475569;
+  font-weight: 600;
+  line-height: 1.3;
 }
 
 .foodsure-featured-img-box {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 0 !important;
   overflow: hidden;
   margin-bottom: 24px;
   background: #ffffff;
@@ -168,6 +274,7 @@
   max-height: none;
   object-fit: contain;
   display: block;
+  border-radius: 0 !important;
 }
 
 .foodsure-intro-lead {
@@ -177,8 +284,8 @@
   background: #f1f5f9;
   border-left: 4px solid var(--foodsure-orange);
   padding: 18px 22px;
-  border-radius: 6px;
-  margin-bottom: 32px;
+  border-radius: 0 !important;
+  margin-bottom: 0;
 }
 
 .foodsure-section-block {
@@ -758,7 +865,7 @@
 
 .blog-card {
   background: #ffffff;
-  border-radius: 12px;
+  border-radius: 0;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   border: 1px solid var(--foodsure-border);
@@ -814,7 +921,7 @@
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.35;
-  margin: 0;
+  margin: 0 0 12px 0;
   color: var(--foodsure-navy);
   transition: color 0.2s;
 }
@@ -857,7 +964,7 @@
 .blog-card-footer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   border-top: 1px solid #f1f5f9;
   padding-top: 16px;
   margin-top: auto;
